@@ -1,0 +1,18 @@
+Objective: Ensure controllable milestones to avoid delays in NFT and Token launch.
+Stage                            | Timeline  | Deliverables                                          | Responsible 
+- NFT Test Contract Completion   | T+5 days  | Testnet contract deployment & verification            | Contract Development
+- NFT Mainnet Deployment         | T+10 days | Mainnet contract deployment & minting function online | Contract Development + Audit 
+- Tokenomics Contract Completion | T+15 days | Full GVT & rGGP logic online                          | Contract Development 
+- Security Audit                 | T+20 days | Audit report & fixes                                  | Auditing Team 
+- Full Mainnet Launch            | T+25 days | NFT minting + Token trading                           | Full Technical Team
+
+AGV Airdrop Task Deployment Plan for TaskOn
+ Round   | Start Date | End Date   | Airdrop Type          | Eligibility | Reward Content | Quantity Limit | Core Objective
+ Round 1 | 2025/08/01 | 2025/08/06 | Warm-up Airdrop       | Open participation, task submission | Random rGGP Airdrop + Lottery Entry | Unlimited NFTs | Trigger pre-launch hype + data collection
+ Round 2 | 2025/08/06 | 2025/08/20 | NFT Binding Airdrop   | NFT holders (Tree/Solar) | Fixed airdrop quota (based on NFT level) + Second lottery chance | Total 20,000 rGGP | Promote NFT sales + initial ecosystem binding
+ Round 3 | 2025/08/20 | 2025/09/05 | Staking Airdrop       | Hold NFT and stake | High-tier rGGP + DAO voting rights + NFT badge | Total 30,000 rGGP | Convert high-retention users + DAO pre-activation
+ Round 4 | 2025/09/05 | 2025/09/12 | Minting Incentives    | Complete NFT→Token minting | rGGP + Minting Points | Total 10,000 rGGP | Strengthen final retention & incentives before mainnet
+ Round 5 | 2025/09/12 | 2025/09/30 | On-chain Task Airdrop | Complete on-chain staking/trading/liquidity tasks | rGGP + “AGV Pioneer” NFT commemorative badge | Limited to  first 3000 users | Activate on-chain ecosystem & liquidity
+ - Suggested Usage: Each round set as a separate Quest (task set), deployed in phases- Reward types: Token + NFT + Points- Combine: Lucky Draw, FCFS (First Come First Serve), Ranking modes
+ - Contact Email: contact@agvprotocol.org
+ - Official Airdrop Channel: @AGV_Airdrop_Official
