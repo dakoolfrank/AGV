@@ -22,6 +22,9 @@ coverage-report/
 coverage/
 lcov.info
 
+# VS Code
+.vscode/
+
 # OS files
 .DS_Store
 Thumbs.db
