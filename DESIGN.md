@@ -1,17 +1,39 @@
-# AGV Protocol — 代码审计与架构设计备忘录（可交付版）
+# AGV Protocol — 全生命周期 Agent 驱动的 RWA 协议设计文档
 
-> **文档版本**: v1.0  
-> **审计日期**: 2026-02-23  
+> **文档版本**: v2.0  
+> **初版审计日期**: 2026-02-23 | **v2.0 升级日期**: 2026-03-04  
 > **适用仓库**:  
 > - `agvprotocol-contracts-main` — NFT 资产凭证层  
 > - `onchainverification-main` — 链上验证 / 结算锚点层  
 > - `tokencontracts-main` — 代币经济 / 治理层  
+>
+> **关联文档**:  
+> - `AGV-Agent-Architecture.md` — Agent 系统架构设计  
+> - `Shared-Platform-Design.md` — nexrur × AGV × WQ-YI 三包平台设计  
+> - `AGV-vs-WQYI-Complexity-Compare.md` — 多维度复杂度对比  
+> - `VScode-Workspace-Guide.md` / `VAcode-Codespace-Guide.md` — 开发环境指南  
 >
 > **⚠ 交付注意**: 请在最终交付稿中补充每个仓库的 `git rev-parse HEAD`，让审计/开发能复现同一版本。
 
 ---
 
 ## 目录
+
+### 第一部分：战略定位与降维架构（v2.0 新增）
+
+- [Σ. 战略定位：从量化 Agent 到区块链 Agent 的降维打击](#σ-战略定位从量化-agent-到区块链-agent-的降维打击)
+  - [Σ.1 核心命题](#σ1-核心命题)
+  - [Σ.2 当前 Agent 开发热潮的本质缺陷](#σ2-当前-agent-开发热潮的本质缺陷)
+  - [Σ.3 WQ-YI 已经解决的问题——nexrur 底座能力清单](#σ3-wq-yi-已经解决的问题nexrur-底座能力清单)
+  - [Σ.4 降维打击的三层坐标](#σ4-降维打击的三层坐标)
+  - [Σ.5 AGV 全生命周期闭环](#σ5-agv-全生命周期闭环)
+  - [Σ.6 RWA 多电站 Campaign 模型](#σ6-rwa-多电站-campaign-模型)
+  - [Σ.7 人机协作结构](#σ7-人机协作结构)
+  - [Σ.8 nexrur 引擎 → AGV 合约的映射全景](#σ8-nexrur-引擎--agv-合约的映射全景)
+  - [Σ.9 风险与清醒认知](#σ9-风险与清醒认知)
+  - [Σ.10 三包架构总览](#σ10-三包架构总览)
+
+### 第二部分：协议审计与工程分析（v1.0 原有内容）
 
 - [A. 结论摘要](#a-结论摘要)
 - [B. 协议架构总览](#b-协议架构总览)
@@ -54,6 +76,302 @@
 - [附录 A：合约参数速查表](#附录-a合约参数速查表)
 - [附录 B：角色与权限矩阵](#附录-b角色与权限矩阵)
 - [附录 C：硬编码地址清单](#附录-c硬编码地址清单)
+
+---
+
+## Σ. 战略定位：从量化 Agent 到区块链 Agent 的降维打击
+
+### Σ.1 核心命题
+
+AGV Protocol 不只是一组 Solidity 合约。它是**全球第一个由全生命周期 Agent 自开发、自维护、自审计的 RWA 区块链协议**。
+
+这句话的关键不在"区块链"，在"全生命周期"。
+
+```
+市面上 99% 的 "Agent" 项目:
+
+  用户 → prompt → LLM → 调一个 API → 返回结果
+  │
+  └─ 本质: 精装版 API wrapper
+     能力边界: 单次调用、无状态、无回退、出错就停
+
+AGV Agent (nexrur 驱动):
+
+  监测变更 → 分析影响 → 规划方案 → 编写合约 → 编译测试
+     │                                           │
+     │         ┌── 失败 → 诊断原因 → 回退 → 重写 ──┘
+     │         │
+     └── 成功 → 安全审查 → 部署脚本 → 链上监控
+                                        │
+                              异常 → 诊断 → 升级合约
+                                        │
+                              全程 JSONL 审计 → 证据链
+                                        │
+                              审计报告 → 财务法务专家
+```
+
+**写代码只是 8 步流水线里的第 4 步。** 前面有 detect、analyze、plan，后面有 test、review、deploy、monitor。市面上所有 Coding Agent 都在比谁的 Step 4 写得更好，但从没人问"写完之后呢？"
+
+### Σ.2 当前 Agent 开发热潮的本质缺陷
+
+| 维度 | 普通 Coding Agent | nexrur 驱动的 AGV Agent |
+|---|---|---|
+| **状态** | 无状态，每次对话从零开始 | RunContext 跨步骤持久状态 |
+| **失败处理** | 出错就停，等人来修 | Fail → Diagnose → Pivot，26 种原因码自动回退 |
+| **编排** | 单轮 prompt → response | 8 步 Pipeline + CampaignRunner 多轮批量 |
+| **审计** | 无 | AuditBus 全程 JSONL + EvidenceStore 双层证据 |
+| **治理** | 无 | PlatformPolicy 四层策略（底座/领域/步骤/Asset） |
+| **工具使用** | 硬编码 function calling | ToolLoopRunner + ToolExecutor Protocol（工具可插拔） |
+| **不可逆操作** | 不区分 | StepRisk 注解 + multisig Gate（链上交易不可撤销） |
+| **批量运行** | 不支持 | CampaignRunner：N 个电站 × M 个合约 × T 个周期 |
+
+**结论：不是"好一点"的 Agent，是结构性不同。**
+
+### Σ.3 WQ-YI 已经解决的问题——nexrur 底座能力清单
+
+nexrur 从 WQ-YI 的 `_shared/` 抽离而来（43 个 Python 文件，~12,000 行，版本 2.2.1），在量化场景跑了上千次 fail→diagnose→pivot 循环，打磨出以下引擎：
+
+| 引擎 | 行数 | 量化场景验证 | AGV 场景复用 |
+|---|---|---|---|
+| **Orchestrator** | ~2,300 | 8 步 Alpha 发现流水线 | 8 步合约管理流水线（换 PipelineDescriptor） |
+| **ToolLoopRunner** | ~1,800 | MCP 工具调用（get_datafields, check_correlation, submit_alpha） | Foundry 工具调用（forge_build, forge_test, cast_send） |
+| **CampaignRunner** | ~1,600 | 批量回测 1000 个 Alpha | 批量审计 50 个电站的 RWA Token |
+| **DiagnosisEngine** | ~1,500 | 26 个 reason_code 自动回退 | 合约编译/测试/部署失败诊断 |
+| **RunContext** | ~800 | 量化运行上下文 | 合约运行上下文（domain="agv"） |
+| **AuditBus** | ~600 | Alpha 发现审计轨迹 | 合约变更审计轨迹 |
+| **EvidenceStore** | ~500 | Alpha 表达式证据 | Solidity 源码 + 测试结果证据 |
+| **PlatformPolicy** | ~400 | 量化策略治理 | 合约部署/升级策略治理 |
+| **合计** | **~9,500** | 850+ 测试验证 | **零修改复用**（通过 adapter 注入领域知识） |
+
+**关键：这 9,500 行引擎代码已经被 850+ 个 WQ-YI 测试验证过。AGV 不需要重写，只需要写 adapter 层。**
+
+### Σ.4 降维打击的三层坐标
+
+#### 第一层：经验降维——从量化迁移到区块链
+
+```
+量化 Alpha 发现 (WQ-YI)              区块链合约管理 (AGV)
+━━━━━━━━━━━━━━━━━━━━━━━━━━           ━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8 步流水线                            8 步流水线（换领域知识）
+失败 → 诊断 → 回退到正确的步骤        失败 → 诊断 → 回退到正确的步骤
+850+ 测试验证过的引擎                  同一套引擎，零修改复用
+BRAIN API / MCP 工具链                Foundry / Cast 工具链
+Alpha 表达式                          Solidity 合约
+```
+
+引擎一样，血肉不同。
+
+#### 第二层：生命周期降维——自开发 → 自维护 → 自审计
+
+```
+普通 Coding Agent:
+  写代码 → 结束
+
+AGV Agent (nexrur):
+  Step 1 detect   → 监测到 Oracle 合约需更新
+  Step 2 analyze   → 分析影响范围：AGVOracle + PowerToMint + 3 个下游
+  Step 3 plan      → 生成变更方案 + 风险评估
+  Step 4 write     → 编写 Solidity 代码         ← 普通 Agent 只做这一步
+  Step 5 test      → forge test → 失败
+                     → DiagnosisEngine: reason_code="COMPILE_ERROR"
+                     → backtrack to Step 4 → 重写 → 重测 → 通过
+  Step 6 review    → AI 安全审查 + slither 静态分析
+  Step 7 deploy    → StepRisk="irreversible" → 需要 multisig Gate 人工审批
+  Step 8 monitor   → 部署后监控：铸造量、Oracle 上报率、异常检测
+                     → 异常 → 回到 Step 1
+
+  全程审计: AuditBus JSONL → EvidenceStore → 审计报告 → 财务法务
+```
+
+#### 第三层：RWA 业务降维——多电站持续运营
+
+```
+电站 A → 电表数据 ──┐
+电站 B → 电表数据 ──┤
+电站 C → 电表数据 ──┼──► CampaignRunner ──► 链上验证 ──► RWA Token
+电站 D → 电表数据 ──┤                       审计报告 ──► 财务法务
+电站 E → 电表数据 ──┘
+
+不是一个合约。是 N 个电站 × M 个合约 × 持续时间 的 Campaign。
+```
+
+量化场景的"批量回测 1000 个 Alpha"经验，直接映射到"批量审计 50 个电站的 RWA Token"。普通 Coding Agent 写一个 ERC-20 没问题，让它**持续维护 50 个电站的合约升级、每季度自动审计、出问题自动诊断回退**——它连概念都没有。
+
+### Σ.5 AGV 全生命周期闭环
+
+```
+┌─────────────────────────────────────────────────────────────────────┐
+│                    AGV Agent 全生命周期闭环                          │
+│                                                                     │
+│  ┌─────────┐  ┌─────────┐  ┌─────────┐  ┌─────────┐              │
+│  │ detect  │→│ analyze │→│  plan   │→│  write  │              │
+│  │ 监测变更 │  │ 分析影响 │  │ 规划方案 │  │ 编写合约 │              │
+│  └─────────┘  └─────────┘  └─────────┘  └────┬────┘              │
+│       ▲                                       │                    │
+│       │                                       ▼                    │
+│       │                               ┌─────────────┐             │
+│       │                               │    test     │             │
+│       │                               │  forge test │             │
+│       │                               └──────┬──────┘             │
+│       │                                      │                    │
+│       │                          ┌───────────┴───────────┐       │
+│       │                          │                       │       │
+│       │                       成功 ▼                  失败 ▼       │
+│       │                  ┌─────────────┐      ┌──────────────┐   │
+│       │                  │   review    │      │  diagnose    │   │
+│       │                  │  安全审查    │      │ 诊断原因码    │   │
+│       │                  └──────┬──────┘      │ → backtrack  │   │
+│       │                        │              │   to write   │   │
+│       │                        ▼              └──────────────┘   │
+│       │                  ┌─────────────┐                         │
+│       │                  │   deploy    │ ← StepRisk=irreversible │
+│       │                  │ multisig ✋  │    需要人工审批           │
+│       │                  └──────┬──────┘                         │
+│       │                        │                                 │
+│       │                        ▼                                 │
+│       │                  ┌─────────────┐                         │
+│       │                  │   monitor   │                         │
+│       │                  │  链上监控    │                         │
+│       │                  └──────┬──────┘                         │
+│       │                        │ 异常                            │
+│       └────────────────────────┘                                 │
+│                                                                   │
+│  ═══════════════════════════════════════════════════════════════  │
+│  AuditBus (JSONL)   EvidenceStore (双层)   PlatformPolicy (四层)  │
+│  ════════ 全程审计 ════════ 证据链 ════════ 策略治理 ═══════════  │
+└─────────────────────────────────────────────────────────────────────┘
+```
+
+### Σ.6 RWA 多电站 Campaign 模型
+
+AGV 的核心业务不是"写一个合约"，而是**持续管理 N 个电站的 RWA 生命周期**。
+
+```
+CampaignRunner 配置:
+  goal: "月度结算审计 — 2026年Q1"
+  stations: [电站A, 电站B, 电站C, ..., 电站N]
+  contracts:
+    - onchainverification-main/AGVOracle (per station)
+    - tokencontracts-main/PowerToMint (shared)
+    - tokencontracts-main/rGGP (shared)
+
+每个电站执行一轮完整 Orchestrator:
+  detect  → 读取电表数据 + AGVOracle 月结算
+  analyze → 对比链上结算 vs 电网账单 vs 银行回单
+  plan    → 差异 > 阈值？→ 需要 amendMonthlySettlement
+  write   → 生成修正交易参数
+  test    → 在 fork 网络上模拟执行
+  review  → 审查修正影响
+  deploy  → multisig Gate → 提交链上
+  monitor → 确认铸造量与结算一致
+
+失败处理:
+  电站 C 的 Oracle 数据缺失
+  → DiagnosisEngine: reason_code="ORACLE_STALE"
+  → 跳过该电站，标记 WARNING
+  → 进入下一电站
+  → Campaign 结束后汇总报告
+
+审计产出:
+  campaign_report_2026Q1.jsonl     → 每步决策审计轨迹
+  evidence/station_A_settlement/   → 电网账单 + 银行回单 hash
+  evidence/station_C_warning/      → Oracle 缺失证据
+  summary.pdf                      → 财务法务可读报告
+```
+
+**这就是为什么 CampaignRunner 是 nexrur 的杀手级引擎——没有它，多电站场景就只能手动一个一个跑。**
+
+### Σ.7 人机协作结构
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│                          内部开发团队                         │
+│                                                             │
+│  你（全栈开发者）              AI（GitHub Copilot Agent）     │
+│  ├─ WQ-YI：技能开发、底座      ├─ AGV：合约编写、测试         │
+│  ├─ nexrur：底座抽离维护        ├─ nexrur：辅助改动           │
+│  ├─ AGV：架构决策、审查          └─ WQ-YI：辅助分析           │
+│  └─ 全局：设计文档、CI                                       │
+│                                                             │
+│  量化研究员（经济专家）                                       │
+│  └─ WQ-YI：Alpha 策略、论文研究                              │
+│     不碰代码 / 不碰 Git / 不碰 Agent                         │
+│                                                             │
+├─────────────────────────────────────────────────────────────┤
+│                     外部专家（消费者）                        │
+│                                                             │
+│  财务法务专家                                                │
+│  └─ 接收 onchainverification-main 的审计产出                 │
+│     不碰代码 / 不碰 repo / 不碰 Agent                        │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
+```
+
+**关键认知**：
+- AI 完全替代 Solidity 工程师角色，通过你的 VS Code / Codespace 终端工作
+- 量化研究员是领域专家，输出策略和论文，不接触技术栈
+- 财务法务专家接收 Agent 生成的审计报告，不接触代码
+- 你是唯一的人类开发者，同时是 AI 的审查者和 Gate 审批者
+
+### Σ.8 nexrur 引擎 → AGV 合约的映射全景
+
+| nexrur 引擎 | AGV 注入的领域知识 | 具体映射 |
+|---|---|---|
+| **Orchestrator** | `AGV_PIPELINE` (PipelineDescriptor) | 8 步：detect → analyze → plan → write → test → review → deploy → monitor |
+| **ToolLoopRunner** | `ForgeExecutor` (ToolExecutor) | 工具：forge_build, forge_test, forge_script, cast_send, slither_analyze |
+| **CampaignRunner** | `AGV_CAMPAIGN` (CampaignConfig) | 目标：N 个电站 × M 个合约 × T 个结算周期 |
+| **DiagnosisEngine** | `AGV_DIAGNOSIS` (DiagnosisProfile) | 原因码：COMPILE_ERROR, TEST_FAIL, DEPLOY_REVERT, ORACLE_STALE, GAS_LIMIT |
+| **RunContext** | `domain="agv"` + extensions | 扩展：forge_client, cast_client, slither_runner |
+| **AuditBus** | `domain="agv"` 字段 | 事件：合约变更、测试结果、部署交易、链上异常 |
+| **EvidenceStore** | 合约源码 + 测试日志 | 层级：L1=Solidity 源码、L2=forge test output |
+| **PlatformPolicy** | `agv/policy.yml` | 规则：max_gas_per_deploy, require_slither_clean, multisig_threshold |
+| **AssetRegistry** | `AGV_LIFECYCLE` (LifecycleGraph) | 状态机：draft → compiled → tested → audited → deployed → monitoring |
+
+**零修改复用的引擎（AGV 完全不碰）**：Orchestrator, ToolLoopRunner, CampaignRunner, DiagnosisEngine, AuditBus, EvidenceStore
+
+**AGV 需要写的 adapter 层（~500 行）**：AGV_PIPELINE, AGV_LIFECYCLE, AGV_CAMPAIGN, AGV_DIAGNOSIS, ForgeExecutor
+
+### Σ.9 风险与清醒认知
+
+降维打击不代表没有风险。需要清醒认识以下四点：
+
+| 风险 | 说明 | 应对 |
+|---|---|---|
+| **nexrur 抽离质量** | 从 WQ-YI `_shared/` 到 nexrur 的抽象化是最关键一步。如果抽象不干净，AGV 会变成"硬贴"而不是"自然生长" | 严格遵循 §20 的四层洋葱模型（L0 Core → L1 Engines → L2 Adapters → L3 Skills） |
+| **链上不可逆** | 量化里失败了重跑就行；链上交易一旦发出不可撤销 | StepRisk 注解 + multisig Gate + fork 网络预演 |
+| **审计报告法律效力** | Agent 生成的审计报告能否被财务法务接受 | EvidenceStore 证据链完整性 + 哈希可验证 + 人类最终签字 |
+| **电表数据可信源** | 链上合约再完美，电表到链上的 Oracle 通路不可信则 RWA 不可信 | AGVOracle 双层架构（日快照=证据层 + 月结算=锚点层 + 电网账单 PDF hash） |
+
+### Σ.10 三包架构总览
+
+```
+┌──────────┐          ┌──────────┐
+│   AGV    │          │  WQ-YI   │
+│  (合约)   │          │  (量化)   │
+└────┬─────┘          └────┬─────┘
+     │   depends on        │   depends on
+     └────────┬────────────┘
+              ▼
+       ┌────────────┐
+       │   nexrur   │
+       │   (底座)    │
+       └────────────┘
+```
+
+| 包 | 定位 | 代码量 | 状态 |
+|---|---|---|---|
+| **nexrur** | Agent 编排运行时底座（L0 Core + L1 Engines） | ~12,000 行（从 WQ-YI `_shared/` 抽离） | 待抽离 |
+| **AGV** | 智能合约领域包（L2 Adapters + L3 Skills） | ~500 行 adapter + 14 个 Solidity 合约 | 合约已有，adapter 待写 |
+| **WQ-YI** | 量化 Alpha 领域包（L2 Adapters + L3 Skills） | ~15,000+ 行 + 850+ tests | 运行中 |
+
+> 详细三包设计见 `Shared-Platform-Design.md` §20。
+
+---
+
+## 第二部分：协议审计与工程分析
+
+> 以下为 v1.0 原有内容，保持完整。在 v2.0 语境下，这些审计发现即是 AGV Agent 的**首轮工作清单**——Agent 将按 Σ.5 的 8 步流水线，从 P0 风险开始，逐项自动修复。
 
 ---
 

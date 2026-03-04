@@ -25,6 +25,9 @@ lcov.info
 # VS Code
 .vscode/
 
+# Build outputs
+.build/
+
 # OS files
 .DS_Store
 Thumbs.db

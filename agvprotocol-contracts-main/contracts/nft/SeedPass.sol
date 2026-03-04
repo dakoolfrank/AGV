@@ -10,7 +10,7 @@ import "openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 import "openzeppelin-contracts/contracts/utils/cryptography/MerkleProof.sol";
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 import "openzeppelin-contracts-upgradeable/contracts/utils/PausableUpgradeable.sol";
-import "openzeppelin-contracts-upgradeable/contracts/utils/ReentrancyGuardUpgradeable.sol";
+import "openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol";
 
 /**
  * @title SeedPass
@@ -22,7 +22,7 @@ contract SeedPass is
     OwnableUpgradeable,
     ERC2981Upgradeable,
     AccessControlUpgradeable,
-    ReentrancyGuardUpgradeable,
+    ReentrancyGuard,
     PausableUpgradeable
 {
     using SafeERC20 for IERC20;
@@ -78,10 +78,8 @@ contract SeedPass is
     ) public initializerERC721A initializer {
         __ERC721A_init(name, symbol);
         __Ownable_init(owner);
-        __UUPSUpgradeable_init();
         __ERC2981_init();
         __AccessControl_init();
-        __ReentrancyGuard_init();
         __Pausable_init();
 
         require(usdtAddress != address(0) && treasury != address(0) && owner != address(0), "ZeroAddress");

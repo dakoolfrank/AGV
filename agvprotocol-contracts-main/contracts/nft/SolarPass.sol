@@ -10,7 +10,8 @@ import "openzeppelin-contracts/contracts/token/ERC20/IERC20.sol";
 import "openzeppelin-contracts/contracts/utils/cryptography/MerkleProof.sol";
 import "@openzeppelin/contracts-upgradeable/access/AccessControlUpgradeable.sol";
 import "openzeppelin-contracts-upgradeable/contracts/utils/PausableUpgradeable.sol";
-import "openzeppelin-contracts-upgradeable/contracts/utils/ReentrancyGuardUpgradeable.sol";
+import "openzeppelin-contracts/contracts/utils/ReentrancyGuard.sol";
+import "../interfaces/IAgentRegistry.sol";
 
 /**
  * @title SolarPass
@@ -22,7 +23,7 @@ contract SolarPass is
     OwnableUpgradeable,
     ERC2981Upgradeable,
     AccessControlUpgradeable,
-    ReentrancyGuardUpgradeable,
+    ReentrancyGuard,
     PausableUpgradeable
 {
     using SafeERC20 for IERC20;
@@ -58,6 +59,9 @@ contract SolarPass is
     address public treasuryReceiver;
     string private _baseTokenURI;
 
+    /// @notice AgentRegistry for per-agent quota tracking (optional, backward-compatible)
+    IAgentRegistry public agentRegistry;
+
     // ----- Events -----
     event PublicMint(address indexed minter, uint256 quantity, uint256 payment);
     event WhitelistMint(address indexed minter, uint256 quantity, uint256 payment);
@@ -82,10 +86,8 @@ contract SolarPass is
     ) public initializerERC721A initializer {
         __ERC721A_init(name, symbol);
         __Ownable_init(owner);
-        __UUPSUpgradeable_init();
         __ERC2981_init();
         __AccessControl_init();
-        __ReentrancyGuard_init();
         __Pausable_init();
 
         require(usdtAddress != address(0) && treasury != address(0) && owner != address(0), "ZeroAddress");
@@ -174,6 +176,11 @@ contract SolarPass is
         require(totalSupply() + total <= MAX_SUPPLY, "ExceedsMaxSupply");
         require(config.reservedMinted + total <= RESERVED_ALLOCATION, "ExceedsReservedAllocation");
 
+        // Per-agent quota deduction (if AgentRegistry is configured)
+        if (address(agentRegistry) != address(0)) {
+            agentRegistry.deductQuota(msg.sender, total);
+        }
+
         config.reservedMinted += total;
 
         //Agent pays for minting at agent price
@@ -215,6 +222,14 @@ contract SolarPass is
     function revokeAgentRole(address agent) external onlyRole(ADMIN_ROLE) {
         _revokeRole(AGENT_MINTER_ROLE, agent);
         emit AgentUpdated(agent, false);
+    }
+
+    /**
+     * @notice Set the AgentRegistry for per-agent quota tracking
+     * @param registry Address of the AgentRegistry contract (address(0) to disable)
+     */
+    function setAgentRegistry(address registry) external onlyRole(ADMIN_ROLE) {
+        agentRegistry = IAgentRegistry(registry);
     }
 
     function setTreasuryReceiver(address newTreasury) external onlyRole(ADMIN_ROLE) {
