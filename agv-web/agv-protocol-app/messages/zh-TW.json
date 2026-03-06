@@ -1,0 +1,1407 @@
+{
+  "common": {
+    "loading": "載入中...",
+    "error": "錯誤",
+    "success": "成功",
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "節省",
+    "edit": "編輯",
+    "delete": "刪除",
+    "back": "後退",
+    "next": "下一個",
+    "previous": "以前的",
+    "close": "關閉",
+    "confirm": "確認",
+    "required": "必需的",
+    "optional": "選修的",
+    "readMore": "閱讀更多"
+  },
+  "nav": {
+    "home": "家",
+    "about": "關於",
+    "career": "職業",
+    "blog": "資源",
+    "investors": "投資人關係"
+  },
+  "header": {
+    "nav": {
+      "home": "家",
+      "about": "關於",
+      "products": "產品",
+      "research": "研究",
+      "investorRelations": "投資人關係",
+      "dashboard": "儀表板",
+      "staking": "質押",
+      "mint": "薄荷"
+    },
+    "connectWallet": "連接錢包",
+    "disconnect": "斷開"
+  },
+  "hero": {
+    "description": "解鎖專屬 SeedPass、TreePass、SolarPass 和 ComputePass NFT，開啟您獲得永續獎勵的大門。立即質押，無鎖定期，並開始在 BSC、Polygon 和 Arbitrum 網路上賺取每日獎勵。",
+    "startMinting": "開始鑄造",
+    "viewStaking": "查看 Staking",
+    "blockchains": "區塊鏈",
+    "nftCollections": "NFT 收藏品",
+    "dailyRewards": "每日獎勵",
+    "title1": "領先的風險加權資產",
+    "title2": "AI Power 協議"
+  },
+  "whatisagv": {
+    "title": "什麼是 AGV？",
+    "description": "AGV（AgriVolt 協議）是一個基於真實資產的 Web3 協議，它將果園、太陽能農場和去中心化節點連接到區塊鏈。每個資產單位都能產生現實世界的收益，涵蓋水果收成、太陽能和邊緣運算等許多領域。"
+  },
+  "whyagv": {
+    "title": "為什麼AGV是真正收益基礎設施的藍圖？",
+    "description": "AGV 並非一次性專案。它是一個可複製的協議，將真實土地轉化為數位化的收益基礎設施。根據實際果園產量和區域太陽能性能數據，預計每台 AGV 單元每年可創造 18 萬至 28 萬美元的收入，內部收益率 (IRR) 在 18% 至 26% 之間。"
+  },
+  "fixing": {
+    "title": "修復現實世界標記化中的問題",
+    "description1": "AGV 透過將果園和太陽能農場轉化為 NFT 和代幣，連接數位世界和現實世界。每項資產都與智慧合約掛鉤，從而實現收益共享、所有權和治理的自動化，從而解決資料碎片化、產量無法驗證以及土地權不透明等問題。",
+    "description2": "AGV 的核心是採用標準化資產單位：100 英畝高產量蘋果園搭配 6 兆瓦太陽能發電。該模式每單位年收入可達 18 萬至 28 萬美元，內部收益率 (IRR) 為 18% 至 26%，並由基於物聯網的績效數據和預測模型提供支援。",
+    "description3": "與難以複製的傳統農業專案不同，AGV 單元採用 SPV 封裝、相容 DeFi 且全球模組化，可快速部署和跨境可重複擴展。"
+  },
+  "exploreagv": {
+    "title": "探索 AGV 的鏈上基礎設施",
+    "description": "歡迎參觀我們的實際專案現場，了解果園、太陽能板和區塊鏈如何融合。從中國的綠色區域到未來的國際樞紐，AGV 正在建立鏈上陸基 RWA 的未來。"
+  },
+  "blockchain": {
+    "title": "利用區塊鏈徹底改變基礎設施",
+    "realAssets": "真實資產。真實收入。",
+    "eachUnit": "每個 AGV 單元包括：",
+    "item1": "100畝高產量蘋果園",
+    "item2": "6MW太陽能電池陣列併網",
+    "item3": "用於即時監控的物聯網感測器",
+    "item4": "自動收益共享的智能合約",
+    "item5": "透明的所有權和治理",
+    "item6": "與 DeFi 相容的代幣化",
+    "assetsDescription": "資產是基於土地的、能產生收益的、能抗通膨的——而不是合成代幣或投機性的 DeFi 實驗。",
+    "onChainData": "鏈上資料基礎設施",
+    "onChainDataDesc": "每個單位都配備：",
+    "onChainItem1": "用於即時產量和能源數據的物聯網感測器",
+    "onChainItem2": "智能合約與 NFT 映射",
+    "onChainItem3": "儀表板與衛星資訊同步",
+    "onChainItem4": "代幣發行與已驗證的輸出掛鉤",
+    "onChainDataDesc2": "用戶可以監控成長、發電量和代幣累積——所有這些都透明地記錄並可在鏈上存取。",
+    "builtToScale": "在全球範圍內擴大規模",
+    "builtToScaleDesc": "每個 AGV 單元都透過 SPV 進行標準化和標記化：",
+    "builtItem1": "可透過電池儲存和邊緣運算進行擴展",
+    "builtItem2": "模組化設計支持灌溉、AI節點或碳追蹤",
+    "builtItem3": "適用於亞洲、拉丁美洲、非洲及中東及北非地區",
+    "builtToScaleDesc2": "支援 CEX、相容 DeFi 且符合 ESG 要求 — AGV 專為全球整合而建置。"
+  },
+  "threelayer": {
+    "title": "現實世界報酬率的三個層次",
+    "fruit": {
+      "title": "水果支持的NFT",
+      "description": "AGV 將蘋果園轉化為代幣化資產。每個 NFT 對應一棵真實的樹，在鏈上產出果實、產生效益並進行可驗證的效益。"
+    },
+    "solar": {
+      "title": "太陽能驅動的獎勵",
+      "description": "每個單元都包含 6MW 的太陽能容量，不僅為農場供電，還為邊緣節點和能源支持的代幣鑄造供電——「陽光作為收入」。"
+    },
+    "depin": {
+      "title": "DePIN 就緒基礎設施",
+      "description": "AGV 結合感測器、智慧合約和即時數據，為邊緣節點供電、記錄碳排放並在全球範圍內提供 Web3 服務。"
+    }
+  },
+  "testimonials": {
+    "title1": "基礎設施的未來是真實的、綠色的、鏈上的",
+    "description": "頂級機構一致認為：實體資產、永續能源和區塊鏈融合正在塑造下一個萬億美元的機會。 AGV 正處於這些宏觀趨勢的交匯點。",
+    "quote1": "到 2030 年，現實世界資產的代幣化可能會開啟一個價值 10 兆美元的市場。",
+    "source1": "波士頓顧問集團",
+    "quote2": "ESG 和能源相關基礎設施將在未來十年主導機構流動。",
+    "source2": "貝萊德2024年展望",
+    "quote3": "分散式綠色能源是長期經濟復原力的基礎。",
+    "source3": "世界銀行",
+    "title2": "未來由土地、陽光和程式碼驅動",
+    "investNow": "立即投資"
+  },
+  "maincontent": {
+    "platformOverview": "平台概述",
+    "coreFeatures": "核心功能",
+    "getStarted": "開始",
+    "community": "社群",
+    "latestUpdates": "最新更新",
+    "features": {
+      "multichain": {
+        "title": "多鏈支援",
+        "description": "在 BSC、Polygon 和 Arbitrum 網路上部署和管理 NFT"
+      },
+      "secure": {
+        "title": "安全鑄造",
+        "description": "先進的安全措施和智慧合約審計"
+      },
+      "rewards": {
+        "title": "即時獎勵",
+        "description": "使用我們的權益系統鑄造後立即獲得獎勵"
+      }
+    },
+    "stats": {
+      "totalSupply": "總供應量",
+      "nftsMinted": "NFT 鑄造",
+      "rewardRate": "獎勵率",
+      "dailyRewards": "每日獎勵",
+      "securityScore": "安全評分",
+      "auditRating": "審計評級",
+      "upto50rggp": "高達 50 rGGP",
+      "nftCount": "1,234"
+    },
+    "social": {
+      "github": "GitHub",
+      "twitter": "嘰嘰喳喳",
+      "discord": "不和諧",
+      "telegram": "電報",
+      "follow": "跟隨",
+      "stars": "星星",
+      "followers": "追隨者",
+      "members": "成員"
+    },
+    "articles": {
+      "introducing": {
+        "title": "AGV協議介紹",
+        "description": "了解如何鑄造您的第一個 NFT 並開始賺取獎勵"
+      },
+      "multichain": {
+        "title": "了解多鏈質押",
+        "description": "跨不同網路質押的綜合指南"
+      },
+      "security": {
+        "title": "安全最佳實踐",
+        "description": "如何保障你的 NFT 和獎勵安全"
+      },
+      "readMore": "閱讀更多"
+    }
+  },
+  "footer": {
+    "copyright": " AGV 協定。保留所有權利。",
+    "privacy": "隱私權政策",
+    "terms": "服務條款",
+    "contact": "聯絡我們",
+    "description": "透過創新的 NFT 技術，實現去中心化運算的未來。加入成千上萬的用戶，在多個區塊鏈網路上鑄造專屬的 AGV NFT。",
+    "secure": "安全可靠",
+    "fast": "閃電般快速",
+    "multichain": "多鏈",
+    "resources": "資源",
+    "nftMinting": "NFT鑄造",
+    "nftStaking": "NFT 質押",
+    "kolProgram": "KOL計劃",
+    "company": "公司",
+    "aboutUs": "關於我們",
+    "careers": "職涯發展",
+    "blogs": "部落格",
+    "support": "支援",
+    "helpCenter": "幫助中心",
+    "documentation": "文件",
+    "contactSupport": "聯繫支持",
+    "legal": "合法的",
+    "cookiePolicy": "Cookie 政策",
+    "gdpr": "GDPR",
+    "headquarters": "總部位於亞洲，業務遍及全球，並由頂級公司審計。",
+    "legalText": "所有現實世界資產均由授權的中國特殊目的公司持有，並透過法律授權映射到JLL Asset Ltd.（英屬維京群島公司編號：2182436）。 NFT的發行和營運由iJET Limited（NZBN：9429049576290）負責。目前，AGV DAO的治理過渡正在進行中。"
+  },
+  "staking": {
+    "title": "AGV 協議質押",
+    "description": "質押您的 NFT 並賺取獎勵",
+    "protocolTitle": "AGV 協議質押",
+    "stakeYour": "質押你的",
+    "nftsOn": "NFT 上",
+    "toEarnRewards": "獲得獎勵",
+    "stake": "賭注",
+    "unstake": "取消質押",
+    "rewards": "獎勵",
+    "totalStaked": "總質押量",
+    "availableRewards": "可用獎勵",
+    "overview": "質押概覽",
+    "stakedNFTs": "質押 NFT",
+    "currentlyStaked": "目前質押",
+    "rggpReadyToClaim": "rGGP 已準備好領取",
+    "dailyRewards": "每日獎勵",
+    "perNFTStaked": "每個 NFT 質押",
+    "selectNetwork": "選擇網路",
+    "selectNFTCollection": "選擇 NFT 收藏",
+    "selectNftCollection": "選擇 NFT 收藏",
+    "selectStakingDuration": "選擇質押期限",
+    "quickSelect": "快速選擇",
+    "day": "天",
+    "days": "天",
+    "durationDays": "持續時間（天）",
+    "lockPeriod": "鎖定期",
+    "yourNftsWillBeLocked": "您的 NFT 將被鎖定",
+    "youCannotWithdraw": "在此期限結束之前您不能提款",
+    "lockPeriodDescription": "您的 NFT 將被鎖定 {duration} 天{plural}。鎖定期結束前，您無法提現。最短質押期限為 7 天。",
+    "currentWalletChain": "當前錢包鏈",
+    "notConnected": "未連接",
+    "connectWalletFirst": "首先連接錢包",
+    "selectAtLeastOne": "請選擇至少一個 tokenId",
+    "selectAtLeastOneToken": "至少選擇一個令牌",
+    "durationMustBeAtLeastOneDay": "持續時間必須至少為一天",
+    "minimumDuration": "質押時長必須至少 7 天",
+    "approving": "批准（如果需要）...",
+    "approvingIfNeeded": "批准（如果需要）...",
+    "stakingOnChain": "鏈上質押…",
+    "recordingStake": "記錄股份…",
+    "stakeSuccess": "已質押 {duration} 天{plural}！",
+    "stakeFailed": "質押失敗",
+    "selectAtLeastOneWithdraw": "選擇至少一個 NFT 進行擷取",
+    "withdrawingOnChain": "鏈上提現…",
+    "updatingRecords": "正在更新記錄...",
+    "withdrawSuccess": "撤回！",
+    "withdrawFailed": "提現失敗",
+    "selectNftsToStake": "選擇要質押的 NFT",
+    "detectedInWallet": "在錢包中檢測到",
+    "available": "可用的",
+    "connectYourWallet": "連接你的錢包",
+    "connectToView": "看看你的 NFT",
+    "connect": "連接",
+    "selected": "選定",
+    "clear": "清除",
+    "withdrawStakedNfts": "提取質押的 NFT",
+    "selectStakedNftsDescription": "選擇要提取的質押 NFT",
+    "connectWalletToSeeStakedNfts": "連接錢包查看已質押的 NFT",
+    "whitelistRequired": "需要白名單",
+    "rewardsDashboard": {
+      "title": "rGGP 獎勵儀表板",
+      "subtitle": "賺取 rGGP 積分",
+      "available": "rGGP 可用",
+      "remaining": "剩餘",
+      "collection": "收藏",
+      "baseRate": "基礎費率",
+      "bonusMultiplier": "獎勵倍數",
+      "activeStakes": "活躍質押",
+      "readyToClaim": "準備領取",
+      "claimAllRewards": "領取所有獎勵",
+      "claiming": "領取中...",
+      "activeStakesTitle": "活躍質押",
+      "withdrawnStakesTitle": "已提取質押",
+      "noActiveStakes": "無活躍質押",
+      "noWithdrawnStakes": "無已提取質押"
+    },
+    "legacyRewards": {
+      "title": "傳統獎勵預覽",
+      "selection": "選擇",
+      "baseDailyPerNft": "每日基礎（每個 NFT）",
+      "bonusMultiplier": "獎勵倍數",
+      "perNftDaily": "每個 NFT 每日",
+      "totalDailyAllSelected": "每日總計（所有選中）",
+      "duration": "持續時間",
+      "scheduledTotal": "計劃總計（選擇 × 天數）",
+      "description": "這是基於當前選擇和時間鎖定的傳統獎勵估算。"
+    },
+    "yourStakes": {
+      "title": "您的質押",
+      "connectWalletToView": "連接錢包查看您的質押",
+      "loadingStakes": "載入您的質押中...",
+      "noStakesFound": "未找到此網路和收藏的質押。",
+      "staked": "質押",
+      "unlocks": "解鎖",
+      "unlocked": "已解鎖",
+      "left": "剩餘",
+      "accrued": "已累積",
+      "rate": "費率",
+      "counted": "已計算"
+    },
+    "nftSelection": {
+      "noNftsFound": "未找到 AGV NFT",
+      "noNftsDescription": "您在 {network} 上連接的錢包中沒有 {collection} NFT。",
+      "mintFirstNft": "鑄造您的第一個 NFT",
+      "selected": "已選擇",
+      "clear": "清除",
+      "stake": "質押",
+      "staking": "質押中…"
+    },
+    "loadingStakedNfts": "載入質押的 NFT 中…",
+    "noStakesFoundForNetwork": "未找到此網路和收藏的質押。",
+    "durationMustBeAtLeastSevenDays": "質押期限必須至少為 7 天。"
+  },
+  "minting": {
+    "title": "AGV 協議鑄造",
+    "description": "Mint 跨多個區塊鏈網路的獨家 AGV 協議 NFT。",
+    "collections": "從 SeedPass、TreePass、SolarPass 和 ComputePass 集合中進行選擇。",
+    "liveMinting": "即時鑄造",
+    "multiChain": "多鏈",
+    "usdtPayment": "USDT支付",
+    "selectNetwork": "選擇網路",
+    "mintingMode": "鑄幣模式",
+    "mintingModeDescription": "選擇您的鑄造模式",
+    "publicMint": "公共鑄幣廠",
+    "agentMint": "特工薄荷",
+    "selectNftToMint": "選擇要鑄造的 NFT",
+    "chooseQuantity": "選擇數量",
+    "nft": {
+      "seed": {
+        "name": "SeedPass NFT",
+        "description": "獲得永續農業獎勵和專屬福利"
+      },
+      "tree": {
+        "name": "TreePass NFT",
+        "description": "優質樹木領養，獎勵更豐厚"
+      },
+      "solar": {
+        "name": "SolarPass NFT",
+        "description": "太陽能獎勵和綠色基礎設施使用"
+      },
+      "compute": {
+        "name": "ComputePass NFT",
+        "description": "邊緣運算獎勵和 DePIN 基礎設施訪問"
+      }
+    },
+    "referralId": "推薦人 ID",
+    "input6DigitId": "輸入6位ID",
+    "referralIdPlaceholder": "輸入推薦人ID",
+    "summary": "概括",
+    "noItemsSelected": "未選擇任何商品",
+    "connectAndMint": "連接並鑄造",
+    "connectWallet": "連接錢包",
+    "walletNotConnected": "錢包未連接",
+    "insufficientGasBalance": "瓦斯平衡不足",
+    "insufficientGas": "氣體不足",
+    "mint": "薄荷",
+    "minting": "正在鑄造...",
+    "mintNfts": "Mint NFT",
+    "referralLinkCopied": "推薦連結已複製",
+    "whitelistRequired": "需要白名單",
+    "price": "價格",
+    "supply": "供應",
+    "remaining": "其餘的",
+    "loading": "正在加載鑄造介面..."
+  },
+  "dashboard": {
+    "title": "儀表板",
+    "description": "AGV 協議活動和性能概述",
+    "overview": "概述",
+    "analytics": "分析",
+    "performance": "表現",
+    "activity": "活動"
+  },
+  "landing": {
+    "hero": {
+      "title": "AGV 協議 NFT 生態系統",
+      "description": "解鎖專屬 SeedPass、TreePass、SolarPass 和 ComputePass NFT，開啟您獲得永續獎勵的大門。立即質押，無鎖定期，並開始在 BSC、Polygon 和 Arbitrum 網路上賺取每日獎勵。",
+      "startMinting": "開始鑄造",
+      "viewStaking": "查看 Staking",
+      "stats": {
+        "blockchains": "區塊鏈",
+        "nftCollections": "NFT 收藏品",
+        "dailyRewards": "rGGP 每日獎勵"
+      }
+    },
+    "platformOverview": {
+      "title": "平台概述",
+      "totalSupply": "總供應量",
+      "nftsMinted": "NFT 鑄造",
+      "rewardRate": "獎勵率",
+      "dailyRewards": "每日獎勵",
+      "auditRating": "審計評級",
+      "securityScore": "安全評分"
+    },
+    "coreFeatures": {
+      "title": "核心功能",
+      "multiChain": {
+        "title": "多鏈支援",
+        "description": "在 BSC、Polygon 和 Arbitrum 網路上部署和管理 NFT"
+      },
+      "secureMinting": {
+        "title": "安全鑄造",
+        "description": "先進的安全措施和智慧合約審計"
+      },
+      "instantRewards": {
+        "title": "即時獎勵",
+        "description": "使用我們的權益系統鑄造後立即獲得獎勵"
+      }
+    },
+    "getStarted": {
+      "title": "開始",
+      "mintNFTs": {
+        "title": "Mint NFT",
+        "description": "跨多鏈鑄造 AGV 協定 NFT",
+        "button": "開始鑄造"
+      },
+      "stakeEarn": {
+        "title": "質押並賺取",
+        "description": "質押您的 NFT 來賺取每日獎勵",
+        "button": "開始質押"
+      },
+      "learnMore": {
+        "title": "了解更多",
+        "description": "探索代幣資訊和文檔",
+        "button": "看詳情"
+      }
+    },
+    "community": {
+      "title": "社群",
+      "github": "GitHub",
+      "twitter": "嘰嘰喳喳",
+      "discord": "不和諧",
+      "telegram": "電報",
+      "follow": "跟隨",
+      "members": "成員",
+      "followers": "追隨者",
+      "stars": "星星"
+    },
+    "latestUpdates": {
+      "title": "最新更新",
+      "readMore": "閱讀更多",
+      "articles": {
+        "introducing": {
+          "title": "AGV協議介紹",
+          "description": "AGV協議簡介：解鎖現實世界資產的未來"
+        },
+        "rggpExplained": {
+          "title": "rGGP 解釋",
+          "description": "AGV 協議如何將現實世界的收益轉化為鏈上獎勵"
+        }
+      }
+    },
+    "whatIsAGV": {
+      "title": "什麼是 AGV？",
+      "description": "AGV（AgriVolt 協議）是一個基於真實資產的 Web3 協議，它將果園、太陽能農場和去中心化節點連接到區塊鏈。每個資產單元都能產生現實世界的收益，涵蓋水果收成、太陽能發電和邊緣運算。用戶可以認養果樹、參與太陽能項目，並獲得代幣化獎勵，收益透明。 AGV 紮根於中國領先的農業和太陽能地區，使永續性變得可投資、可驗證，並在全球範圍內具有可擴展性。"
+    },
+    "threeLayer": {
+      "title": "現實世界報酬率的三個層次",
+      "fruitBacked": {
+        "title": "水果支持的NFT",
+        "description": "AGV 將蘋果園轉變為代幣化資產。每個 NFT 都映射到一棵真實的樹上，在鏈上產生果實、收入和可驗證的收益。"
+      },
+      "solarDriven": {
+        "title": "太陽能驅動的獎勵",
+        "description": "每個單元包括 6MW 的太陽能容量，不僅為農場供電，還為邊緣節點和能源支持的代幣鑄造供電——「陽光作為收入」。"
+      },
+      "depinReady": {
+        "title": "DePIN 就緒基礎設施",
+        "description": "AGV 結合感測器、智慧合約和即時數據，為邊緣節點供電、記錄碳排放並在全球範圍內提供 Web3 服務。"
+      }
+    },
+    "fixing": {
+      "title": "修復現實世界標記化中的問題",
+      "description1": "AGV 透過將果園和太陽能農場轉化為 NFT 和代幣，連接數位世界和現實世界。每項資產都與智慧合約掛鉤，從而實現收益共享、所有權和治理的自動化，從而解決資料碎片化、產量無法驗證以及土地權不透明等問題。",
+      "description2": "AGV 的核心是採用標準化資產單位：100 英畝高產量蘋果園搭配 6 兆瓦太陽能發電。該模式每單位年收入可達 18 萬至 28 萬美元，內部收益率 (IRR) 為 18% 至 26%，並由基於物聯網的績效數據和預測模型提供支援。",
+      "description3": "與難以複製的傳統農業專案不同，AGV 單元採用 SPV 封裝、相容 DeFi 且全球模組化，可快速部署和跨境可重複擴展。"
+    },
+    "exploreAGV": {
+      "title": "探索 AGV 的鏈上基礎設施",
+      "description": "歡迎參觀我們的實際專案現場，了解果園、太陽能板和區塊鏈如何融合。從中國的綠色區域到未來的國際樞紐，AGV 正在建立鏈上陸基 RWA 的未來。"
+    },
+    "whyAGV": {
+      "title": "為什麼AGV是真正收益基礎設施的藍圖？",
+      "description1": "AGV 並非一次性專案。它是一種可複製的協議，將真實土地轉化為數位化收益基礎設施。",
+      "description2": "根據實際果園產量和區域太陽能性能數據，每個 AGV 單元預計每年可產生 18 萬至 28 萬美元的收入，內部收益率在 18% 至 26% 之間。",
+      "description3": "我們將中國世界領先的農業和太陽能資產與模組化 SPV 代幣化和鏈上資料架構相結合，使每個實體單元都具有數位可驗證性、收益性和 DeFi 相容性。"
+    },
+    "blockchainInfrastructure": {
+      "title": "利用區塊鏈徹底改變基礎設施",
+      "realAssets": {
+        "title": "真實資產。真實收入。",
+        "description": "每個 AGV 單元包括：",
+        "features": [
+          "100畝高密度蘋果園",
+          "6MW公用事業級太陽能發電場",
+          "年收入：18萬至28萬美元",
+          "內部報酬率目標：18% - 26%"
+        ],
+        "conclusion": "資產是基於土地的、能產生收益的、能抗通膨的——而不是合成代幣或投機性的 DeFi 實驗。"
+      },
+      "onChainData": {
+        "title": "鏈上資料基礎設施",
+        "subtitle": "鏈上資料基礎設施",
+        "description": "每個單位都配備：",
+        "features": [
+          "用於即時產量和能源數據的物聯網感測器",
+          "智能合約與 NFT 映射",
+          "儀表板與衛星資訊同步",
+          "代幣發行與已驗證的輸出掛鉤"
+        ],
+        "conclusion": "用戶可以監控成長、發電量和代幣累積——所有這些都透明地記錄並可在鏈上存取。"
+      },
+      "builtToScale": {
+        "title": "在全球範圍內擴大規模",
+        "description": "每個 AGV 單元都透過 SPV 進行標準化和標記化：",
+        "features": [
+          "可透過電池儲存和邊緣運算進行擴展",
+          "模組化設計支援灌溉、AI節點或碳追蹤",
+          "適用於亞洲、拉丁美洲、非洲及中東及北非地區"
+        ],
+        "conclusion": "支援 CEX、相容 DeFi 且符合 ESG 要求 — AGV 專為全球整合而建置。"
+      }
+    },
+    "testimonials": {
+      "title": "基礎設施的未來是真實的、綠色的、鏈上的",
+      "description": "頂級機構一致認為：實體資產、永續能源和區塊鏈融合正在塑造下一個萬億美元的機會。 AGV 正處於這些宏觀趨勢的交匯點。",
+      "quotes": [
+        {
+          "text": "Tokenization of real-world assets could unlock a $10T market by 2030.",
+          "source": "Boston Consulting Group"
+        },
+        {
+          "text": "ESG and energy-linked infrastructure are set to dominate institutional flows over the next decade.",
+          "source": "BlackRock 2024 Outlook"
+        },
+        {
+          "text": "Distributed green energy is the foundation of long-term economic resilience.",
+          "source": "World Bank"
+        }
+      ],
+      "cta": {
+        "title": "未來由土地、陽光和程式碼驅動",
+        "button": "立即投資",
+        "backToTop": "回到頂部"
+      }
+    },
+    "footer": {
+      "companyName": "AGRIVOLT 協議",
+      "tagline": "NFT鑄造平台",
+      "description": "透過創新的 NFT 技術，實現去中心化運算的未來。加入成千上萬的用戶，在多個區塊鏈網路上鑄造專屬的 AGV NFT。",
+      "features": {
+        "secure": "安全可靠",
+        "fast": "閃電般快速",
+        "multiChain": "多鏈"
+      },
+      "navigation": {
+        "product": {
+          "title": "產品",
+          "nftMinting": "NFT鑄造",
+          "dashboard": "儀表板",
+          "kolProgram": "KOL計劃",
+          "analytics": "分析"
+        },
+        "company": {
+          "title": "公司",
+          "aboutUs": "關於我們",
+          "careers": "職涯發展",
+          "press": "按",
+          "blog": "部落格"
+        },
+        "support": {
+          "title": "支援",
+          "helpCenter": "幫助中心",
+          "documentation": "文件",
+          "apiReference": "API 參考",
+          "contactSupport": "聯繫支持"
+        },
+        "legal": {
+          "title": "合法的",
+          "privacyPolicy": "隱私權政策",
+          "termsOfService": "服務條款",
+          "cookiePolicy": "Cookie 政策",
+          "gdpr": "GDPR"
+        }
+      },
+      "legal": {
+        "headquarters": "總部位於亞洲，業務遍及全球，並由頂級公司審計。",
+        "description": "所有現實世界資產均由授權的中國特殊目的公司持有，並透過法律授權映射到JLL Asset Ltd.（英屬維京群島公司編號：2182436）。 NFT的發行和營運由iJET Limited（NZBN：9429049576290）負責。目前，AGV DAO的治理過渡正在進行中。"
+      },
+      "copyright": "© 2025 AgriVolt Protocol. 保留所有權利"
+    },
+    "admin": {
+      "hero": {
+        "title": "系統儀表板",
+        "description": "監控並追蹤所有 AGV 協定功能。即時分析、性能指標和系統健康監控。"
+      },
+      "status": {
+        "online": "系統在線",
+        "secure": "安全訪問",
+        "adminOnly": "限管理員"
+      },
+      "sections": {
+        "systemOverview": {
+          "title": "系統概述"
+        },
+        "functionalityMonitoring": {
+          "title": "功能監控"
+        },
+        "quickAccess": {
+          "title": "快速存取"
+        }
+      },
+      "features": {
+        "userAnalytics": {
+          "title": "使用者分析",
+          "description": "追蹤用戶參與度、成長指標和平台採用率"
+        },
+        "performanceAnalytics": {
+          "title": "性能分析",
+          "description": "監控平台效能、反應時間和系統健康狀況"
+        },
+        "kolTracking": {
+          "title": "KOL追蹤",
+          "description": "監控關鍵意見領袖的表現和推薦指標"
+        },
+        "activityMonitoring": {
+          "title": "活動監控",
+          "description": "即時追蹤用戶活動和系統事件"
+        },
+        "performanceMetrics": {
+          "title": "績效指標",
+          "description": "追蹤所有鏈上的鑄造、質押和代幣表現"
+        },
+        "systemMonitoring": {
+          "title": "系統監控",
+          "description": "監控系統配置和操作參數"
+        }
+      },
+      "stats": {
+        "activeUsers": {
+          "title": "活躍用戶",
+          "value": "2,847",
+          "change": "+12％"
+        },
+        "mintingActivity": {
+          "title": "鑄幣活動",
+          "value": "1,234",
+          "change": "+8%"
+        },
+        "stakingVolume": {
+          "title": "質押量",
+          "value": "5,678",
+          "change": "+15％"
+        },
+        "systemUptime": {
+          "title": "系統正常運作時間",
+          "value": "99.8%",
+          "change": "+0.2%"
+        }
+      },
+      "quickAccess": {
+        "dashboard": {
+          "title": "儀表板",
+          "description": "查看主儀表板"
+        },
+        "users": {
+          "title": "使用者",
+          "description": "管理用戶"
+        },
+        "analytics": {
+          "title": "分析",
+          "description": "查看分析"
+        },
+        "settings": {
+          "title": "設定",
+          "description": "配置系統"
+        }
+      },
+      "buttons": {
+        "viewMetrics": "查看指標"
+      },
+      "systemStatus": {
+        "title": "系統狀態",
+        "description": "此儀表板提供所有 AGV 協定功能的即時監控。所有指標均自動更新，並提供有關平台效能、使用者活動以及所有功能係統運作狀況的洞察。"
+      }
+    },
+    "comingSoon": {
+      "logo": "AGRIVOLT 協議",
+      "title": "即將推出",
+      "subtitle": "我們正在努力為您帶來精彩內容。\n請關注最新動態！",
+      "features": {
+        "lightningFast": "閃電般快速",
+        "multiChain": "多鏈",
+        "community": "社群",
+        "secure": "安全的"
+      },
+      "backButton": "回首頁",
+      "footer": "關注我們，了解我們革新現實世界資產代幣化的最新進展"
+    },
+    "token": {
+      "copySuccess": "{label} 已複製到剪貼簿",
+      "hero": {
+        "title": "AGV協議代幣",
+        "description": "探索 GVT（治理代幣）和 rGGP（獎勵代幣）— AGV 協議的雙代幣生態系統。透過質押賺取 rGGP 獎勵，並透過 GVT 參與治理。"
+      },
+      "status": {
+        "liveEcosystem": "活生態系統",
+        "multiChain": "多鏈",
+        "secure": "安全的"
+      },
+      "sections": {
+        "ecosystemOverview": {
+          "title": "生態系概述"
+        }
+      },
+      "stats": {
+        "tokenHolders": {
+          "title": "GVT持有者",
+          "value": "2,847",
+          "label": "代幣持有者"
+        },
+        "activeStakers": {
+          "title": "rGGP 收入者",
+          "value": "1,234",
+          "label": "活躍質押者"
+        },
+        "dailyEmission": {
+          "title": "rGGP獎勵",
+          "value": "5萬",
+          "label": "每日排放量"
+        },
+        "networks": {
+          "title": "多鏈",
+          "value": "3",
+          "label": "網路"
+        }
+      },
+      "tabs": {
+        "overview": "概述",
+        "contracts": "合約",
+        "staking": "質押",
+        "resources": "資源"
+      },
+      "overview": {
+        "aboutTokens": {
+          "title": "關於GVT和rGGP",
+          "description": "AGV 協議採用雙代幣系統，旨在分離治理機制和獎勵機制。 GVT 作為治理代幣，rGGP 作為生態系統參與的獎勵代幣。",
+          "tokenRoles": {
+            "title": "令牌角色：",
+            "gvt": "GVT：協議治理與投票權",
+            "rggp": "rGGP：權益獎勵與生態系激勵",
+            "multiChain": "跨主要網路的多鏈部署",
+            "decentralized": "去中心化、社區驅動的生態系統"
+          }
+        },
+        "tokenEconomics": {
+          "title": "代幣經濟學",
+          "gvt": {
+            "title": "GVT（治理代幣）",
+            "totalSupply": "總供應量",
+            "totalSupplyValue": "1,000,000",
+            "circulating": "循環",
+            "circulatingValue": "75萬",
+            "useCase": "用例",
+            "useCaseValue": "治理"
+          },
+          "rggp": {
+            "title": "rGGP（獎勵代幣）",
+            "dailyEmission": "每日排放量",
+            "dailyEmissionValue": "5萬",
+            "perStakeReward": "每筆權益獎勵",
+            "perStakeRewardValue": "50 rGGP/天",
+            "useCase": "用例",
+            "useCaseValue": "質押獎勵"
+          }
+        },
+        "benefits": {
+          "title": "雙代幣生態系統優勢",
+          "earnRewards": {
+            "title": "賺取 rGGP 獎勵",
+            "description": "質押代幣即可每天賺取 rGGP 獎勵，無需鎖定期。"
+          },
+          "governance": {
+            "title": "GVT治理",
+            "description": "使用 GVT 代幣對協議提案進行投票並塑造 AGV 的未來。"
+          },
+          "exclusiveAccess": {
+            "title": "獨家訪問",
+            "description": "搶先體驗新功能、空投和生態系統更新。"
+          },
+          "multiChainSupport": {
+            "title": "多鏈支援",
+            "description": "透過 BSC、Arbitrum 和 Polygon 網路存取這兩個令牌。"
+          }
+        }
+      },
+      "contracts": {
+        "title": "合約地址",
+        "description": "不同網路的 GVT 和 rGGP 代幣官方合約地址",
+        "networks": "{network} 網路",
+        "gvtToken": "GVT代幣",
+        "rggpToken": "rGGP代幣",
+        "stakingContract": "質押合約"
+      },
+      "staking": {
+        "howToStake": {
+          "title": "如何質押代幣",
+          "step1": {
+            "title": "連接錢包",
+            "description": "連接包含 GVT 或 rGGP 代幣的錢包"
+          },
+          "step2": {
+            "title": "選擇網路",
+            "description": "選擇 BSC、Arbitrum 或 Polygon 網絡"
+          },
+          "step3": {
+            "title": "權益代幣",
+            "description": "選擇並質押您的代幣以開始賺取獎勵"
+          }
+        },
+        "startStaking": "開始質押",
+        "dualTokenRewards": {
+          "title": "雙代幣獎勵"
+        },
+        "rewards": {
+          "rggp": {
+            "title": "rGGP獎勵",
+            "dailyRate": "日費率",
+            "dailyRateValue": "每份股份 50 rGGP",
+            "compounding": "複合",
+            "compoundingValue": "自動的",
+            "withdrawal": "提款",
+            "withdrawalValue": "任何時間"
+          },
+          "gvt": {
+            "title": "GVT治理",
+            "votingPower": "投票權",
+            "votingPowerValue": "1 GVT = 1 票",
+            "proposalRights": "提案權",
+            "proposalRightsValue": "10,000 GVT",
+            "minimumStake": "最低投注額",
+            "minimumStakeValue": "100個代幣"
+          }
+        },
+        "exampleCalculation": {
+          "title": "範例計算",
+          "description": "質押 1000 個代幣，期限為 30 天 = 1000 × 0.05 × 30 = 1,500 rGGP 獎勵",
+          "note": "加上 GVT 代幣的治理投票權"
+        }
+      },
+      "resources": {
+        "socialMedia": {
+          "title": "社群媒體",
+          "platforms": "{平台}"
+        },
+        "documentation": {
+          "title": "文件",
+          "tokenHandbook": "代幣手冊",
+          "stakingGuide": "質押指南",
+          "securityAudit": "安全審計"
+        },
+        "latestArticles": {
+          "title": "最新文章",
+          "readMore": "閱讀更多"
+        }
+      },
+      "articles": {
+        "dualTokenStaking": {
+          "title": "雙幣質押指南",
+          "description": "了解如何質押 GVT 和 rGGP 代幣以最大化您的獎勵"
+        },
+        "rggpRewards": {
+          "title": "了解 rGGP 獎勵",
+          "description": "關於 rGGP 獎勵機制和分配你需要知道的一切"
+        },
+        "gvtGovernance": {
+          "title": "GVT治理指南",
+          "description": "如何使用 GVT 代幣參與協議治理"
+        },
+        "multiChainStrategy": {
+          "title": "多鏈代幣策略",
+          "description": "在 BSC、Arbitrum 和 Polygon 網路上最大化您的獎勵"
+        }
+      }
+    }
+  },
+  "career": {
+    "hero": {
+      "title": "加入我們的團隊",
+      "description": "成為現實世界資產代幣化未來的一部分。加入 AGV 協議，幫助構建連接傳統資產與區塊鏈技術的基礎設施。"
+    },
+    "values": {
+      "title": "我們的公司價值觀",
+      "subtitle": "我們正在構建永續區塊鏈基礎設施的未來。加入一個熱衷於通過創新技術創造現實世界影響的團隊。",
+      "passion": {
+        "title": "對創新的熱情",
+        "description": "我們相信區塊鏈技術可以解決現實世界的問題，為全球社區創造永續價值。"
+      },
+      "collaboration": {
+        "title": "協作精神",
+        "description": "我們相信團隊合作和多元化觀點的力量，能夠創造惠及生態系統中每個人的解決方案。"
+      },
+      "learning": {
+        "title": "持續學習",
+        "description": "區塊鏈領域發展迅速，我們致力於通過持續學習和適應保持領先地位。"
+      },
+      "sustainability": {
+        "title": "永續性",
+        "description": "我們致力於長期管理資源。從果園到太陽能和運算資源，我們協調激勵措施，確保鏈上成長能反映現實世界的生產力和環境責任。"
+      },
+      "innovation": {
+        "title": "創新",
+        "description": "我們安全地推進一切可能。我們務實地應用區塊鏈：物聯網驗證的收益、雙代幣經濟以及合規的結構，讓真實資產無需炒作即可觸達。"
+      }
+    },
+    "perks": {
+      "title": "福利與津貼",
+      "subtitle": "我們提供有競爭力的福利和支持性的工作環境，幫助團隊成員在個人和職業方面都能茁壯成長。",
+      "health": {
+        "title": "健康與福祉",
+        "description": "全面的健康保險、心理健康支持和健康計劃，讓我們的團隊保持健康和快樂。"
+      },
+      "flexible": {
+        "title": "彈性工作",
+        "description": "遠程優先文化，工作時間彈性，可以在世界任何地方自由工作。"
+      },
+      "impact": {
+        "title": "真實影響",
+        "description": "從事具有現實世界影響的專案，從永續農業到再生能源基礎設施。"
+      },
+      "remote": {
+        "title": "遠端優先工作環境",
+        "description": "靈活的全球團隊結構。"
+      },
+      "growth": {
+        "title": "專業成長",
+        "description": "允許指導、培訓和學習。"
+      },
+      "mission": {
+        "title": "任務協調",
+        "description": "成為將現實世界的基礎設施與 Web3 連接起來的影響力驅動專案的一部分。"
+      }
+    },
+    "roles": {
+      "title": "開放職位",
+      "subtitle": "我們一直在尋找與我們構建永續區塊鏈基礎設施願景一致的優秀人才。",
+      "seeMore": "查看更多機會",
+      "noOpenings": "暫無空缺職位",
+      "noOpenings1": "目前沒有空缺。"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "AGV 協議部落格",
+      "subtitle": "了解現實世界資產代幣化和永續區塊鏈基礎設施領域的最新新聞、見解和發展。"
+    },
+    "tabs": {
+      "all": "全部",
+      "announcements": "公告",
+      "tech": "技術",
+      "community": "社區"
+    },
+    "featured": {
+      "title": "精選文章"
+    },
+    "search": {
+      "title": "搜尋文章"
+    },
+    "searchPlaceholder": "搜尋文章...",
+    "newsletter": {
+      "title": "保持更新",
+      "description": "獲取最新新聞和更新，直接發送到您的收件箱。",
+      "emailPlaceholder": "輸入您的電子郵件",
+      "send": "傳送"
+    },
+    "main": {
+      "title": "最新文章",
+      "articlesFound": "找到的文章",
+      "inCategory": "在 {category} 中",
+      "forQuery": "搜尋 \"{query}\"",
+      "noResultsForQuery": "未找到 \"{query}\" 的文章",
+      "noResultsInCategory": "在 {category} 中未找到文章",
+      "viewAllPosts": "查看所有文章"
+    },
+    "featuredArticle": {
+      "title": "AGV協議簡介：解鎖現實世界資產的未來",
+      "description": "2025年，世界金融格局瞬息萬變。因此，一個問題不斷浮現…"
+    },
+    "articles": {
+      "sustainableWeb3": {
+        "title": "永續 Web3 的未來",
+        "description": "探索區塊鏈技術如何推動環境永續發展並對現實世界產生影響。"
+      },
+      "nftStaking": {
+        "title": "NFT 質押革命",
+        "description": "了解我們創新的權益機制，該機制在支持現實世界資產的同時獎勵用戶。"
+      },
+      "multiChain": {
+        "title": "多鏈集成",
+        "description": "了解 AGV 協議如何在多個區塊鏈網路之間無縫運行以實現最大程度的可訪問性。"
+      },
+      "governance": {
+        "title": "社區治理",
+        "description": "了解社區在塑造去中心化金融和資產管理的未來中的作用。"
+      },
+      "tokenization": {
+        "title": "現實世界資產代幣化",
+        "description": "我們如何彌合傳統資產與區塊鏈技術之間的差距以實現永續成長。"
+      },
+      "security": {
+        "title": "安全性和透明度",
+        "description": "我們致力於維持最高的安全標準，同時確保完全透明。"
+      },
+      "developer": {
+        "title": "開發者生態系統",
+        "description": "建置工具和基礎設施來支援開發人員創建下一代 Web3 應用程式。"
+      },
+      "expansion": {
+        "title": "全球擴張",
+        "description": "AGV Protocol 成為永續區塊鏈解決方案全球領導者的歷程。"
+      },
+      "ama": {
+        "title": "社區 AMA 會議",
+        "description": "加入我們與 AGV 協議團隊每月的「問我任何問題」會議並獲得問題的答案。"
+      },
+      "partnership": {
+        "title": "合作公告",
+        "description": "我們很高興宣布與領先的區塊鏈基礎設施供應商建立新的合作夥伴關係。"
+      },
+      "smartContracts": {
+        "title": "科技深入探討：智能合約",
+        "description": "全面了解我們的智能合約架構和安全措施。"
+      },
+      "spotlight": {
+        "title": "社區焦點：成功案例",
+        "description": "聽聽我們的社群成員關於他們使用 AGV 協議的經驗。"
+      },
+      "introducingAGVProtocol": {
+        "title": "AGV協議介紹：",
+        "description": "解鎖現實世界資產的未來"
+      },
+      "rGGPExplained": {
+        "title": "rGGP 解釋",
+        "description": "AGV 協議如何將現實世界的收益轉化為回報"
+      },
+      "turningEveryUser": {
+        "title": "AGV協議",
+        "description": "讓每個用戶都成為AI發電者"
+      }
+    }
+  },
+  "whatWeBuilding": {
+    "assetBackedNFT": {
+      "title": "資產支持的 NFT",
+      "description": "SeedPass、TreePass、SolarPass 和 ComputePass 代表著果園、太陽能發電裝置和運算能力的部分所有權。持有者透過按比例分配的產出份額獲得實際收益。"
+    },
+    "powerToMint": {
+      "title": "Power-to-Mint",
+      "description": "只有在物聯網驗證電力和計算之後才會鑄造代幣，以確保現實世界的支持並防止通貨膨脹。"
+    },
+    "dualTokenSystem": {
+      "title": "雙代幣系統",
+      "description": "GVT（綠色價值代幣）由已驗證的收益鑄造；rGGP（獎勵代幣）用於激勵採用，並可兌換為 GVT。空投和分配是基於績效的社群獎勵，並非保證回報。"
+    },
+    "daoCompliance": {
+      "title": "DAO 與合規性",
+      "description": "AGV 透過具有多重簽名和評分投票治理的跨境 DAO 進行運作。"
+    },
+    "title": "我們正在建立什麼"
+  },
+  "howWeDiffer": {
+    "realAssets": {
+      "title": "實體資產",
+      "description": "AGV 的底層果園、太陽能容量和邊緣運算群聚提供了切實可衡量的收益。"
+    },
+    "tokenization": {
+      "title": "標記化",
+      "description": "輸出資料由物聯網設備測量並在鏈上提交；只有這樣才能鑄造代幣（Power-to-Mint），確保無需信任的 1:1 關係。"
+    },
+    "yieldDistribution": {
+      "title": "收益分佈",
+      "description": "投資者根據其NFT持有量，獲得果園、太陽能和計算資源的收益。目標混合內部報酬率為18-26%，優於許多傳統的再生能源基金。"
+    },
+    "scalableSustainability": {
+      "title": "可擴展的可持續性",
+      "description": "分散式微電網架構可在整個亞洲/中東和北非地區擴展，從而減輕電網壓力，降低人工智慧工作負載的延遲，並推動永續發展目標。每個新的資產單元都會提升收益率和估值。"
+    },
+    "title": "我們的不同之處"
+  },
+  "executionProofs": {
+    "solarPlantOnline": {
+      "title": "太陽能發電廠在線",
+      "description": "第一座 6 MWp CdTe 光電站已投入使用並接入當地電網。"
+    },
+    "ppaInProgress": {
+      "title": "電力採購協議正在進行中",
+      "description": "正在與區域電網營運商敲定長期購電協議；合約草案已經過審查。"
+    },
+    "computeNodeRunning": {
+      "title": "計算節點正在運行",
+      "description": "最初的 1.5 MW 邊緣運算叢集已經安裝並正在積極處理試點工作負載；物聯網遙測已在鏈上記錄。"
+    },
+    "title": "執行證明"
+  },
+  "about": {
+    "hero": {
+      "title": "真正的能量。真正的收益。",
+      "subtitle": "真實資產 — 鏈上。"
+    },
+    "mission": {
+      "title": "使命",
+      "description": "我們的使命是將經過驗證的現實世界輸出轉化為透明的鏈上資產，讓每個人都可以投資電力和運算。"
+    },
+    "story": {
+      "title": "我們的故事",
+      "description": "在人工智慧時代，電力和運算需求呈指數級增長。 AGV 協議透過將果園、太陽能發電場和邊緣運算微電網與物聯網遙測和鏈上驗證相結合，打造可持續的、以收益為支撐的代幣，從而應對這一挑戰。我們的初始資產位於中國陝西，並計劃在亞洲及其他地區擴張。"
+    },
+    "whatWeBuild": {
+      "cleanEnergy": {
+        "title": "清潔能源資產",
+        "description": "首批6MWp CdTe光電站，預計年發電量7.3GWh。其他太陽能裝置正在開發中。"
+      },
+      "orchards": {
+        "title": "高產果園",
+        "description": "每 100 畝每年可產出約 10 萬公斤蘋果，並融入 NFT 收入流，並透過物聯網感測器進行監控。"
+      },
+      "compute": {
+        "title": "邊緣運算微網格",
+        "description": "初始 1.5 MW 叢集（~1 PFLOPS）為 AI 工作負載提供 ~1.31 GWh/年的運算負載；計畫部署更多節點。"
+      },
+      "verification": {
+        "title": "物聯網驗證和鏈上證明",
+        "description": "在代幣鑄造之前，每一瓦的電力和每一輪計算都會經過驗證並錨定在鏈上（Power-to-Mint）。這確保了問責制和透明度。"
+      },
+      "title": "我們建構什麼"
+    },
+    "howItWorks": {
+      "acquire": {
+        "title": "收購與整合",
+        "description": "AGV 收購或與果園、太陽能發電場和運算集群合作，安裝物聯網感測器和安全遙測。"
+      },
+      "verify": {
+        "title": "核實",
+        "description": "能源和計算輸出數據是即時收集的，由審計員驗證並錨定在鏈上。"
+      },
+      "mint": {
+        "title": "薄荷",
+        "description": "代幣僅在產出驗證後才會鑄造。 GVT 由已驗證的收益鑄造；rGGP 作為基於績效的激勵機制進行分配，並可轉換為 GVT。投資者可以準確地了解每個代幣背後有多少現實世界產出作為支撐。"
+      },
+      "title": "工作原理 - POWER-TO-MINT"
+    },
+    "team": {
+      "susan": {
+        "name": "蘇珊",
+        "role": "總經理"
+      },
+      "tyler": {
+        "name": "泰勒",
+        "role": "首席技術長（CTO）"
+      },
+      "yasir": {
+        "name": "亞西爾",
+        "role": "技術主管"
+      },
+      "winnie": {
+        "name": "溫妮",
+        "role": "資本/DAO 負責人"
+      },
+      "yatogami": {
+        "name": "夜刀神",
+        "role": "業務發展主管"
+      },
+      "frank": {
+        "name": "坦白",
+        "role": "行銷與公關"
+      },
+      "title": "核心團隊成員"
+    },
+    "cta": {
+      "title": "加入我們，共同建立一個可持續的、代幣化的未來。",
+      "button": "閱讀白皮書"
+    }
+  },
+  "team": {
+    "section": {
+      "title": "認識團隊",
+      "description": "AGV 由一支遍布全球的團隊提供支持，該團隊由執行力驅動的建造者、工程師和營運商組成，他們在 RWA、可再生能源、計算、標記化和 DePIN 網路方面擁有專業知識"
+    },
+    "members": {
+      "susan": {
+        "name": "蘇珊",
+        "role": "總經理"
+      },
+      "tyler": {
+        "name": "泰勒",
+        "role": "首席技術長"
+      },
+      "yasir": {
+        "name": "亞西爾",
+        "role": "技術主管"
+      },
+      "winnie": {
+        "name": "溫妮",
+        "role": "資本/DAO 負責人"
+      },
+      "yatogami": {
+        "name": "夜刀神",
+        "role": "業務發展主管"
+      },
+      "frank": {
+        "name": "坦白",
+        "role": "行銷與公關"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "聯絡我們",
+      "subtitle": "我們隨時為您提供協助"
+    },
+    "section": {
+      "title": "聯絡資訊",
+      "description": "聯絡我們的專業團隊，以獲得最相關的協助。點擊任何電子郵件即可將其複製到剪貼簿。"
+    },
+    "general": {
+      "title": "一般聯絡方式",
+      "description": "用於一般查詢和協調。"
+    },
+    "investor": {
+      "title": "投資者關係（IR）",
+      "description": "適用於 VC/FO/機構通訊和資料室。"
+    },
+    "business": {
+      "title": "業務發展/社區",
+      "description": "適用於 KOL、合作夥伴、活動（TaskOn/Zealy）和社區運作。"
+    },
+    "technology": {
+      "title": "科技",
+      "description": "適用於產品、網站、整合、部署和支援。"
+    },
+    "onchain": {
+      "title": "鏈上/智能合約",
+      "description": "對於鏈上事務、審計、驗證和合約。"
+    },
+    "external": {
+      "title": "對外關係",
+      "description": "適用於交易所、做市商、啟動平台和媒體合作夥伴。"
+    },
+    "additional": {
+      "title": "需要更多資訊嗎？",
+      "description": "如果您有一般性問題，或不確定該聯絡哪個團隊，請聯絡我們的常規聯絡信箱。我們會確保您的諮詢聯繫到合適的人員。"
+    }
+  },
+  "vault": {
+    "connectWallet": {
+      "features": {
+        "title": "連接後，您將能夠：",
+        "liveEarnings": "查看您的即時 rGGP 收入",
+        "stakedPositions": "查看您的質押 NFT 部位",
+        "trackXp": "追蹤您的 XP 和獎勵",
+        "leaderboard": "在排行榜上比較你的表現"
+      },
+      "title": "連接你的錢包",
+      "description": "連接您的錢包以查看您的 rGGP 保險庫、質押的 NFT 和盈利潛力。"
+    },
+    "header": {
+      "wallet": "錢包：",
+      "network": "網路：",
+      "lockTier": "鎖定層級："
+    },
+    "liveCounter": {
+      "title": "活體rGGP計數器",
+      "accrued": "應計",
+      "dailyYield": "每日收益",
+      "perSecond": "每秒",
+      "lockTierCta": "鎖定層級以獲得更高的年利率",
+      "lockTierDescription": "鎖定您的 NFT 即可賺取高達 490% 的年利率",
+      "unlockAll": "解鎖所有 NFT",
+      "unlockAllDescription": "這將停止所有保險庫獎勵"
+    },
+    "aprBars": {
+      "title": "年利率明細",
+      "real": "真實的",
+      "boost": "促進",
+      "social": "社會的",
+      "total": "總年利率"
+    },
+    "positions": {
+      "title": "您鎖定的 NFT",
+      "noNfts": "未質押 NFT",
+      "noNftsDescription": "從您的錢包中選擇 NFT 開始賺取保險庫獎勵",
+      "claimRewards": "領取獎勵（即將推出）",
+      "unlockNft": "解鎖 NFT",
+      "multiplier": "乘數",
+      "daysStaked": "質押天數：",
+      "lockTier": "鎖定層級："
+    },
+    "xpPanel": {
+      "title": "XP 和社交獎勵",
+      "currentXp": "目前 XP",
+      "lastUpdate": "最後更新",
+      "earnMore": "獲得更多經驗值",
+      "zealy": "完成 Zealy 上的任務",
+      "taskon": "加入 TaskOn 社區",
+      "noXpData": "沒有 XP 數據",
+      "noXpDescription": "完成社群任務來獲得 XP 並提升你的獎勵",
+      "xpBoostActive": "XP 提升激活",
+      "xpBoostDescription": "您的 XP 可增加您每日的 rGGP 產量",
+      "updatePending": "更新待定",
+      "upToDate": "最新"
+    },
+    "leaderboard": {
+      "title": "前 100 名排行榜",
+      "rank": "秩",
+      "wallet": "錢包",
+      "rggp": "重組GGP",
+      "xp": "經驗值",
+      "loading": "正在加載排行榜...",
+      "noData": "沒有可用的排行榜數據",
+      "updated": "已更新",
+      "realTimeActive": "即時更新活躍",
+      "showingTop100": "顯示所有參與者的前 100 名"
+    },
+    "nftSelector": {
+      "title": "選擇要鎖定的 NFT",
+      "selected": "已選擇",
+      "connectWallet": "連接你的錢包",
+      "connectDescription": "連接您的錢包以查看並選擇要鎖定的 NFT",
+      "loading": "加載你的 NFT",
+      "error": "載入 NFT 時出錯",
+      "tryAgain": "再試一次",
+      "noNfts": "未找到 NFT",
+      "noNftsDescription": "您的錢包中沒有任何 AGV NFT。鑄造您的第一個 NFT，開始賺取金庫獎勵！",
+      "goToMint": "前往 Mint 頁面",
+      "lockNfts": "鎖定 NFT（即將推出）",
+      "selectedForLocking": "已選擇鎖定"
+    },
+    "warning": {
+      "title": "NFT 被鎖在保險庫中",
+      "important": "重要的：",
+      "description": "NFT 已鎖定在保管庫中。請勿轉移，否則獎勵將停止。請先使用「解鎖」功能將其安全移除。",
+      "lastValidation": "最後驗證：",
+      "validateNow": "立即驗證"
+    },
+    "footer": {
+      "dataUpdates": "數據每 60 秒更新一次。 XP 在任務完成後 1 小時內更新。"
+    },
+    "refresh": {
+      "refreshing": "令人耳目一新…",
+      "refreshData": "重新整理數據",
+      "refresh": "重新整理",
+      "updating": "正在更新...",
+      "updatingLeaderboard": "正在更新排行榜..."
+    },
+    "unlock": {
+      "confirmSingle": "您確定要解鎖此 NFT 嗎？解鎖後您將無法獲得獎勵。",
+      "confirmAll": "您確定要解鎖全部 {count} 個 NFT 嗎？這將停止所有獎勵。",
+      "lockedUntil": "鎖定至",
+      "cannotUnlockYet": "尚無法解鎖",
+      "timeRemaining": "剩餘時間"
+    },
+    "tierSelection": {
+      "tierBenefits": {
+        "flex": {
+          "title": "靈活鎖",
+          "description": "無鎖定期，隨時解鎖",
+          "apr": "基本年利率",
+          "duration": "無鎖"
+        },
+        "1m": {
+          "title": "1個月鎖定",
+          "description": "鎖定30天，更高獎勵",
+          "apr": "增強型年利率",
+          "duration": "30天"
+        },
+        "3m": {
+          "title": "3個月鎖定",
+          "description": "鎖定90天，最高獎勵",
+          "apr": "最高年利率",
+          "duration": "90天"
+        },
+        "6m": {
+          "title": "6個月鎖定",
+          "description": "鎖定180天，尊享獎勵",
+          "apr": "保費年利率",
+          "duration": "180天"
+        },
+        "12m": {
+          "title": "12個月鎖定",
+          "description": "鎖定365天，終極獎勵",
+          "apr": "最終年利率",
+          "duration": "365天"
+        }
+      },
+      "title": "首先選擇鎖定層級",
+      "description": "在選擇要鎖定的 NFT 之前，請選擇您的鎖定等級",
+      "selectTier": "選擇鎖定等級以繼續",
+      "tierDescription": "鎖定期越長，年利率獎勵越高。請謹慎選擇，因為一旦 NFT 鎖定，您將無法更改等級。"
+    },
+    "title": "rGGP庫",
+    "subtitle": "透過鎖定 NFT 並完成社群任務來獲得獎勵"
+  }
+}

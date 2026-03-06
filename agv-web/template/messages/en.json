@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About"
+  },
+  "about": {
+    "title": "About AGV",
+    "whatIsAGV": {
+      "title": "What is AGV?",
+      "description": "AGV (AGRIVOLTS) is a revolutionary platform that bridges the gap between traditional finance and decentralized systems. We are pioneering the future of Real World Assets (RWA) tokenization, enabling seamless integration of physical assets into the blockchain ecosystem."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "description": "Our mission is to democratize access to real-world assets through blockchain technology, making investment opportunities more accessible, transparent, and efficient. We aim to create a sustainable ecosystem where traditional assets can be tokenized, traded, and managed on-chain while maintaining regulatory compliance and security."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "description": "We envision a world where any real-world asset can be seamlessly represented on the blockchain, enabling global access, fractional ownership, and transparent governance. AGV strives to be the leading platform for RWA tokenization, setting industry standards for security, compliance, and innovation."
+    },
+    "values": {
+      "title": "Our Core Values",
+      "transparency": "Transparency: We believe in open, honest communication and transparent processes.",
+      "innovation": "Innovation: We continuously push the boundaries of what's possible with blockchain technology.",
+      "community": "Community: Our community is at the heart of everything we do.",
+      "sustainability": "Sustainability: We are committed to building long-term, sustainable solutions."
+    },
+    "technology": {
+      "title": "Technology",
+      "description": "AGV leverages cutting-edge blockchain technology, smart contracts, and decentralized infrastructure to provide secure, scalable, and efficient solutions for asset tokenization. Our platform integrates advanced security measures, compliance frameworks, and user-friendly interfaces to ensure a seamless experience for all participants."
+    }
+  }
+}

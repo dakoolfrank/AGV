@@ -1,0 +1,742 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "close": "Cerca",
+    "save": "Ahorrar",
+    "delete": "Borrar",
+    "edit": "Editar",
+    "back": "Atrás",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "submit": "Entregar",
+    "connect": "Conectar",
+    "disconnect": "Desconectar",
+    "wallet": "Billetera",
+    "address": "DIRECCIÓN",
+    "balance": "Balance",
+    "amount": "Cantidad",
+    "price": "Precio",
+    "total": "Total",
+    "status": "Estado",
+    "date": "Fecha",
+    "time": "Tiempo",
+    "search": "Buscar",
+    "filter": "Filtrar",
+    "sort": "Clasificar",
+    "view": "Vista",
+    "copy": "Copiar",
+    "copied": "Copiado!",
+    "share": "Compartir",
+    "learnMore": "Más información",
+    "joinNow": "Únete ahora",
+    "claim": "Afirmar",
+    "buy": "Comprar",
+    "sell": "Vender",
+    "approve": "Aprobar",
+    "reject": "Rechazar",
+    "retry": "Rever"
+  },
+  "header": {
+    "nav": {
+      "home": "Hogar",
+      "claim": "Afirmar",
+      "buy": "Comprar",
+      "balance": "Balance",
+      "staking": "Estaca",
+      "about": "Acerca de",
+      "whitepaper": "Libro blanco"
+    },
+    "language": "Idioma",
+    "selectLanguage": "Seleccionar idioma"
+  },
+  "footer": {
+    "brand": {
+      "name": "Protocolo PreGVT",
+      "tagline": "Plataforma de tokens digitales",
+      "description": "El primer token digital PreGVT compatible del mundo, un producto financiero innovador basado en la tecnología blockchain."
+    },
+    "features": {
+      "secure": "Seguro",
+      "fast": "Rápido",
+      "multichain": "Multicadena"
+    },
+    "links": {
+      "products": "Productos",
+      "company": "Compañía",
+      "support": "Apoyo",
+      "legal": "Legal",
+      "nftMinting": "Acuñación de NFT",
+      "kolProgram": "Programa KOL",
+      "analytics": "Analítica",
+      "aboutUs": "Sobre nosotros",
+      "careers": "Carreras",
+      "press": "Prensa",
+      "blogs": "Blogs",
+      "helpCenter": "Centro de ayuda",
+      "documentation": "Documentación",
+      "apiReference": "Referencia de API",
+      "contactSupport": "Contactar con soporte técnico",
+      "privacyPolicy": "política de privacidad",
+      "termsOfService": "Condiciones de servicio",
+      "cookiePolicy": "Política de cookies",
+      "gdpr": "RGPD"
+    }
+  },
+  "hero": {
+    "title": "El primer token ETF de IA verde del mundo respaldado por",
+    "realAssets": "Activos reales",
+    "subtitle": "La energía solar certificada por la UE y la infraestructura de computación de IA ahora están tokenizadas y verificadas en cadena a través del Protocolo Green Garden (GGP).",
+    "tagline": "Electricidad real. Rendimiento real. Crecimiento real.",
+    "joinPresale": "Únase a la preventa",
+    "learnMore": "Más información",
+    "ticker": {
+      "sold": "{vendido} / {máximo} vendido ({porcentaje}%)",
+      "nextPrice": "Próximo precio {price} en {time}",
+      "walletsJoined": "{count} billeteras unidas"
+    }
+  },
+  "countdown": {
+    "title": "Cuenta regresiva para la preventa",
+    "joinNow": "Únete ahora"
+  },
+  "realAsset": {
+    "title": "Poder real. Activos reales.",
+    "onChain": "En cadena.",
+    "liveFeed": "Transmisión en vivo desde la estación agrovoltaica de Jinglong, Shaanxi: granja solar híbrida de 14,5 MW que cumple con las normas de la UE y alimenta nodos de computación de IA.",
+    "dataFlowArchitecture": "Arquitectura de flujo de datos",
+    "steps": {
+      "solarPower": {
+        "title": "Energía solar",
+        "description": "Generación fotovoltaica de parques con certificación UE"
+      },
+      "energyNode": {
+        "title": "Nodo de energía",
+        "description": "Captura y conversión de energía en tiempo real"
+      },
+      "depinNetwork": {
+        "title": "Red DePIN",
+        "description": "Verificación y distribución en cadena"
+      },
+      "aiCompute": {
+        "title": "Computación de IA",
+        "description": "Impulsando nodos de infraestructura de IA"
+      },
+      "tokenYield": {
+        "title": "Rendimiento del token",
+        "description": "Rendimiento real distribuido a los poseedores de tokens"
+      }
+    }
+  },
+  "about": {
+    "valueTitle": "El valor de",
+    "valueTitleHighlight": "Token PreGVT",
+    "valueDescription": "PreGVT es el primer token digital del mundo con doble cotización que conecta las finanzas tradicionales con la tecnología blockchain. Emitido por el Grupo PreGVT (clasificación A- de Fitch), está basado en Ethereum, abierto a la recaudación de fondos públicos y respaldado por crédito financiero regulado, lo que marca un hito en los activos tokenizados.",
+    "steps": {
+      "step1": {
+        "title": "Paso 1: Crear una cuenta",
+        "description": "Registre su cuenta PreGVT, complete la verificación de identidad y la configuración de seguridad"
+      },
+      "step2": {
+        "title": "Paso 2: Depositar tokens de Ethereum Chain (compatibles con ETH y USDT)",
+        "description": "Conecte su billetera y deposite tokens compatibles para la compra"
+      },
+      "step3": {
+        "title": "Paso 3: Participa en la preventa y compra PreGVT",
+        "description": "Seleccione el importe de la compra, confirme la transacción y complete el proceso de compra."
+      },
+      "step4": {
+        "title": "Paso 4: Finaliza la venta privada, cotización en bolsa",
+        "description": "Espere a que finalice la venta privada, los tokens se incluirán en los principales intercambios."
+      }
+    },
+    "newEraTitle": "Una nueva era de",
+    "newEraTitleHighlight": "DeFi regulado",
+    "newEraDescription": "A medida que el mercado de criptomonedas evoluciona rápidamente, la volatilidad y el riesgo suelen generar cautela en los inversores, convirtiendo este mercado en lo que muchos llaman el \"salvaje oeste\" de las finanzas. PreGVT Token cambia esta narrativa al presentar un token digital regulado, respaldado por activos y con alto crédito, diseñado para la estabilidad a largo plazo y la confianza de los inversores. Basado en la transparencia y el valor real, marca una nueva era de inversión digital segura, conforme y creíble.",
+    "features": {
+      "regulated": {
+        "title": "Regulated & Compliant",
+        "description": "Issued by PreGVT Group with Fitch A- rating, ensuring regulatory compliance and financial credibility"
+      },
+      "backed": {
+        "title": "Asset-Backed",
+        "description": "Backed by real-world assets including EU-certified solar farms and AI compute infrastructure"
+      },
+      "transparent": {
+        "title": "Transparent & Verifiable",
+        "description": "All assets and transactions are verified on-chain, providing full transparency and traceability"
+      },
+      "realAssetAnchoring": {
+        "title": "Anclaje de activos reales",
+        "description": "Cada PreGVT corresponde a activos reales subyacentes, no a monedas estables algorítmicas sin valor, con un valor claro."
+      },
+      "strongCreditBacking": {
+        "title": "Fuerte respaldo crediticio",
+        "description": "El emisor es una empresa totalmente estatal con alta calificación crediticia y capacidad de reembolso garantizada."
+      },
+      "compliantInnovative": {
+        "title": "100% compatible e innovador",
+        "description": "Emitidos y cotizados públicamente de acuerdo con las leyes y regulaciones internacionales, reflejando la innovación en tecnología financiera dentro del marco regulatorio."
+      }
+    },
+    "buyNow": "Comprar ahora"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "titleHighlight": "Preguntas frecuentes",
+    "subtitle": "Hemos recopilado las preguntas que más le interesan para ayudarlo a comprender rápidamente los detalles y el proceso de preventa de PreGVT.",
+    "questions": [
+      {
+        "question": "What is PreGVT?",
+        "answer": "The world's first financial product that combines \"public offering\", \"exchange listing\" and \"RWA digital token\" features. Token name: PreGVT  (PreGVT Coin), issued on the Ethereum public chain."
+      },
+      {
+        "question": "How do I buy PreGVT?",
+        "answer": "PreGVT is currently in presale stage and can only be purchased through the official PreGVT001.com website. Note: Please do not attempt to purchase from Uniswap, Pancakeswap, Raydium or any other platform, as these are unofficial platforms and may involve fraudulent activities."
+      },
+      {
+        "question": "How do I check my purchased token quantity?",
+        "answer": "You can view your purchased token quantity and balance in your created account."
+      },
+      {
+        "question": "How do I claim my tokens?",
+        "answer": "After participating in the purchase, tokens will be displayed in your account balance. After PreGVT is sold out, you can claim your tokens."
+      },
+      {
+        "question": "Does the presale support fiat currency? What are the minimum/maximum purchase amounts?",
+        "answer": "Currently, PreGVT presale does not support fiat currency, only Ethereum (ERC-20) assets. Minimum purchase amount per account is 100 USD, maximum purchase amount is 5000 USD."
+      },
+      {
+        "question": "How to contact the official PreGVT team?",
+        "answer": "You can contact the official email PreGVT001@proton.me or join the official Telegram community to contact administrators."
+      }
+    ]
+  },
+  "buy": {
+    "title": "Comprar PreGVT",
+    "subtitle": "Únete a la preventa y asegura tus tokens",
+    "connectWallet": "Conectar billetera",
+    "enterAmount": "Ingrese el monto",
+    "selectAmount": "Seleccione Cantidad",
+    "review": "Revisar",
+    "confirmPurchase": "Confirmar compra",
+    "purchasing": "Adquisitivo...",
+    "pricePerToken": "Precio por token",
+    "minimumReceived": "Mínimo recibido",
+    "youWillReceive": "Usted recibirá",
+    "tokens": "fichas",
+    "approveToken": "Aprobar token",
+    "approving": "Aprobatorio...",
+    "approved": "Aprobado",
+    "buyNow": "Comprar ahora",
+    "buying": "Comprar...",
+    "switchChain": "Cambiar a Binance Smart Chain (BSC)",
+    "insufficientBalance": "Saldo insuficiente",
+    "enterValidAmount": "Por favor, introduzca un importe válido",
+    "connectWalletFirst": "Por favor, conecta tu billetera primero",
+    "selfReferralError": "No puedes referirte a ti mismo usando tu propio {type}. Elimina el ID de referencia o usa uno diferente.",
+    "kolId": "Identificación de KOL",
+    "referralWallet": "Monedero de referencia",
+    "optional": "Opcional",
+    "reviewPurchase": "Revisar Compra",
+    "purchaseAmount": "Monto de la compra",
+    "youWillPay": "Pagarás",
+    "transactionFee": "Tarifa de transacción",
+    "estimatedGas": "Gas estimado",
+    "confirmTransaction": "Confirmar transacción",
+    "transactionPending": "Transacción pendiente",
+    "transactionSuccess": "Transacción exitosa",
+    "transactionFailed": "Transacción fallida",
+    "checkWallet": "Por favor revise su billetera para confirmar la transacción.",
+    "approvalSuccess": "¡Aprobación de token exitosa!",
+    "approvalFailed": "Aprobación fallida",
+    "approvalRejected": "Se rechazó la aprobación. Inténtelo de nuevo y apruebe la transacción.",
+    "transactionClosed": "La ventana de transacción se cerró. Inténtalo de nuevo.",
+    "purchaseSuccess": "¡Compra exitosa!",
+    "purchaseFailed": "Compra fallida",
+    "kolLocked": "La referencia de KOL está bloqueada. No puedes cambiarla después de iniciar una compra.",
+    "purchaseSuccessDesc": "Has comprado tokens exitosamente.",
+    "referralId": "ID de referencia",
+    "locked": "Bloqueado",
+    "copyLink": "Copiar enlace",
+    "walletAddress": "Dirección de billetera",
+    "enterReferralId": "Ingrese el ID de referencia de 6 dígitos o la dirección de billetera",
+    "lockedWalletReferral": "Bloqueado: Referencia de billetera detectada",
+    "lockedKolReferral": "Bloqueado: Se detectó una referencia de KOL",
+    "walletReferral": "Referencia de billetera",
+    "youreBuying": "Estás comprando",
+    "pricePerTokenLabel": "Precio por token:",
+    "gasFee": "Tarifa de gas",
+    "slippageUnit": "Unidad de deslizamiento",
+    "minimumReceivedLabel": "Mínimo recibido:",
+    "back": "Atrás",
+    "processing": "Tratamiento...",
+    "contractPaused": "El contrato está en pausa. Inténtalo de nuevo más tarde.",
+    "presaleInactive": "La preventa no está activa actualmente. Inténtalo de nuevo más tarde.",
+    "invalidPrice": "Precio de token no válido. Actualice y vuelva a intentarlo.",
+    "amountTooSmall": "El monto del token es demasiado pequeño. Ingrese un monto mayor.",
+    "paymentTokenError": "No se pudo obtener la dirección del token de pago. Inténtalo de nuevo.",
+    "approvalRequired": "Se requiere aprobación de USDT. MetaMask se abrirá automáticamente.",
+    "selfReferralWarning": "No puedes recomendarte a ti mismo. Esta recomendación no se contabilizará para tus recompensas.",
+    "referralNotRecorded": "Referencia no registrada",
+    "walletLinkCopied": "¡Enlace de referencia de billetera copiado al portapapeles!",
+    "kolLinkCopied": "¡Enlace de referencia de KOL copiado al portapapeles!",
+    "noReferralToCopy": "No hay identificación de referencia para copiar",
+    "noticeTitle": "Aviso: token no negociable",
+    "noticeMessage": "Este token no es actualmente negociable ni transferible ni vendido hasta su inclusión oficial en la lista. Al comprarlo, acepta que el token está bloqueado y destinado únicamente para su uso en cadena y distribución futura. Revise el cronograma de inclusión del token y las condiciones de adquisición en la documentación antes de comprarlo.",
+    "usdt": "USDT"
+  },
+  "claim": {
+    "title": "Reclama tus tokens",
+    "subtitle": "Sigue los pasos para reclamar tus tokens asignados",
+    "step1": {
+      "title": "Únase a nuestras redes sociales",
+      "description": "Únete a nuestra comunidad de Discord y síguenos en X para comenzar.",
+      "fullTitle": "Paso 1: Únete a nuestras redes sociales",
+      "shortDescription": "Únete a Discord y sigue a X",
+      "joinDiscord": "Únete a la comunidad de Discord",
+      "followX": "Sigue a X para actualizaciones",
+      "afterJoining": "Después de unirse, haga clic en los botones de arriba para proceder a la verificación."
+    },
+    "step2": {
+      "title": "Paso 2: Verificar la unión",
+      "description": "Verifica que te has unido a nuestro Discord y nos has seguido en X",
+      "shortDescription": "Verificación completa"
+    },
+    "step3": {
+      "title": "Reclamar insignia",
+      "description": "Reclama tu insignia de airdrop para pasar al siguiente paso.",
+      "shortDescription": "Consigue tu insignia de airdrop"
+    },
+    "step4": {
+      "title": "Paso 4: Canjear asignación",
+      "description": "Reclama tus tokens preGVT asignados.",
+      "shortDescription": "Reclama tus tokens preGVT"
+    },
+    "step5": {
+      "title": "Canjear insignia",
+      "description": "Completa el proceso canjeando tu insignia.",
+      "shortDescription": "Completar el proceso"
+    },
+    "connectWallet": "Conectar billetera",
+    "verificationComplete": "✓ ¡Verificación completa! Ya puedes reclamar tu insignia.",
+    "completeVerifications": "Por favor complete ambas verificaciones para continuar",
+    "claimBadge": "Reclamar insignia",
+    "claimingBadge": "Reclamando insignia...",
+    "badgeClaimed": "Insignia reclamada",
+    "checking": "De cheques...",
+    "claimPrice": "Precio de reclamación: {cantidad} BNB",
+    "yourAllocation": "Su asignación: {cantidad} preGVT",
+    "claimAllocation": "Asignación de reclamaciones",
+    "claiming": "Reclamando...",
+    "allocationClaimed": "Asignación reclamada",
+    "balanceCheckFailed": "Error en la comprobación de saldo",
+    "insufficientBnbBalance": "Saldo BNB insuficiente",
+    "noAllocation": "Sin asignación",
+    "allocationAvailable": "Asignación disponible: {cantidad} preGVT",
+    "noAllocationFound": "No se encontró ninguna asignación",
+    "checkingAllocation": "Comprobando asignación...",
+    "gasFeeRequired": "Tarifa de gas requerida: mínimo 0,00005",
+    "redeemBadge": "Canjear insignia",
+    "redeemingBadge": "Insignia canjeable...",
+    "badgeRedeemed": "Insignia canjeada",
+    "congratulations": "¡Felicidades!",
+    "claimSuccess": "¡Has reclamado tus tokens exitosamente!",
+    "error": "Se ha producido un error. Inténtalo de nuevo.",
+    "totalClaimed": "Total reclamado",
+    "remainingSupply": "Suministro restante"
+  },
+  "balance": {
+    "title": "Tu saldo",
+    "subtitle": "Vea el saldo de su token PreGVT y el historial de transacciones",
+    "connectWallet": "Conecta tu Billetera para ver tu saldo",
+    "preGVTBalance": "Saldo PreGVT",
+    "pricePerToken": "Precio por token",
+    "totalValue": "Valor total",
+    "transactionHistory": "Historial de transacciones",
+    "noTransactions": "No se encontraron transacciones",
+    "leaderboard": "Tabla de clasificación",
+    "yourRank": "Rango",
+    "redeemed": "Redimido",
+    "accrued": "Acumulado",
+    "migration": {
+      "supportTicket": {
+        "title": "Ticket de soporte de migración",
+        "processTitle": "Proceso de migración:",
+        "step1": "Crea un ticket de soporte con la dirección de tu billetera y el saldo de tokens anterior",
+        "step2": "Descargar el resumen del ticket",
+        "step3": "Comparte el ID del ticket en el canal #support en Discord",
+        "step4": "Espere el procesamiento manual por parte del equipo",
+        "checkingBalance": "Comprobando saldo de tokens antiguos...",
+        "oldPreGVTBalance": "Saldo anterior a GVT",
+        "walletAddress": "Dirección de billetera",
+        "ticketId": "Identificación del ticket",
+        "ticketIdPlaceholder": "Se generará al enviar el pedido",
+        "createTicket": "Crear un ticket de soporte",
+        "creatingTicket": "Creando Ticket...",
+        "ticketCreated": "¡Ticket creado exitosamente!",
+        "nextSteps": "Próximos pasos:",
+        "nextStep1": "Publica este mensaje en el canal #support:",
+        "nextStep2": "Adjunte una captura de pantalla de esta página",
+        "nextStep3": "Espere a que el equipo procese",
+        "postInSupport": "Publicar en el canal #support",
+        "migrationRequest": "Solicitud de migración: {ticketId} | Monedero: {address}",
+        "noOldTokensFound": "No se encontraron tokens antiguos preGVT en su billetera."
+      },
+      "title": "Migración de tokens",
+      "subtitle": "Migra tus tokens antiguos al nuevo token",
+      "oldTokenBalance": "Saldo de tokens antiguos",
+      "newTokenBalance": "Nuevo saldo de tokens",
+      "migrateButton": "Migrar tokens",
+      "migrating": "Migrando...",
+      "checkingStatus": "Comprobando el estado de la migración...",
+      "checkingBalances": "Comprobando saldos...",
+      "migrationEnabled": "La migración está habilitada",
+      "migrationDisabled": "La migración aún no está habilitada",
+      "alreadyMigrated": "Ya has migrado tus tokens",
+      "noOldTokens": "No tienes ningún token antiguo para migrar",
+      "migrationSuccess": "¡Migración exitosa! Tus tokens se han migrado.",
+      "migrationError": "Error en la migración. Inténtalo de nuevo.",
+      "insufficientGas": "No hay suficiente gasolina. Asegúrate de tener suficiente BNB para la transacción.",
+      "wrongNetwork": "Cambie a Binance Smart Chain (BSC) para migrar.",
+      "contractNotConfigured": "El contrato de migración no está configurado. Contacta con el servicio de asistencia.",
+      "migrationInProgress": "Migración en curso. Espere...",
+      "checkWallet": "Por favor revise su billetera para confirmar la transacción.",
+      "migrationComplete": "Migración completada",
+      "oldToken": "Ficha antigua",
+      "newToken": "Nuevo token"
+    },
+    "stakingCTA": {
+      "title": "Comience a apostar su preGVT",
+      "description": "Obtén recompensas pasivas apostando tus tokens preGVT. Elige entre planes de staking flexibles o a plazo fijo con tasas de rendimiento anual (APY) competitivas.",
+      "goToStaking": "Ir a la página de staking"
+    },
+    "balanceFromContract": "Saldo cargado desde el contrato",
+    "loadingBalance": "Cargando saldo..."
+  },
+  "staking": {
+    "title": "Estaca",
+    "subtitle": "Apuesta tus tokens y gana recompensas",
+    "connectWallet": "Conectar billetera",
+    "selectPlan": "Seleccionar plan de staking",
+    "stakeAmount": "Monto de la apuesta",
+    "enterAmount": "Introduzca el monto a apostar",
+    "max": "Máximo",
+    "approveToken": "Aprobar token",
+    "approving": "Aprobatorio...",
+    "stake": "Apostar",
+    "staking": "Estaca...",
+    "yourStakes": "Tus apuestas",
+    "pendingRewards": "Recompensas pendientes",
+    "claimRewards": "Reclama recompensas",
+    "unstake": "Deshacer apuesta",
+    "unstaking": "...Desreplanteando...",
+    "lockPeriod": "Período de bloqueo",
+    "apy": "Tasa de rendimiento anual (APY)",
+    "minStake": "Apuesta mínima",
+    "connectWalletDesc": "Conecta tu billetera para comenzar a apostar tokens",
+    "stakeTokens": "Tokens de participación",
+    "tokenBalance": "Saldo de tokens",
+    "staked": "Estacado",
+    "stakedAmount": "Cantidad apostada",
+    "totalEarned": "Total ganado",
+    "days": "Días",
+    "available": "Disponible",
+    "rewardsReady": "Tienes",
+    "readyToClaim": "listo para reclamar",
+    "claimingDisabled": "Las reclamaciones están deshabilitadas hasta que se lance rGGP",
+    "claimDisabled": "Reclamación deshabilitada",
+    "loadingPositions": "Cargando posiciones...",
+    "positionId": "Identificación de posición",
+    "lockStatus": "Estado de bloqueo",
+    "unlocked": "Desbloqueado",
+    "locked": "Bloqueado",
+    "lockEnds": "El bloqueo termina",
+    "noActivePositions": "No hay posiciones de staking activas",
+    "earlyExiting": "Salida anticipada...",
+    "earlyExit": "Salida anticipada",
+    "unstakeWarning": "Advertencia: Deshacer el staking",
+    "unstakeWarningDesc": "Estás a punto de deshacerte del stake de tus tokens.",
+    "youWillReceive": "Usted recibirá",
+    "unstakeConfirm": "¿Seguro que desea continuar? Esta acción no se puede deshacer.",
+    "confirmUnstake": "Confirmar la anulación de la participación",
+    "earlyExitWarning": "Advertencia: Penalización por salida anticipada",
+    "earlyExitWarningDesc": "Estás a punto de liberar tus tokens antes de que finalice el periodo de bloqueo. Ten en cuenta lo siguiente:",
+    "penalty": "Penalización (10%)",
+    "penaltyToTreasury": "Esta sanción será enviada al fisco.",
+    "earlyExitConfirm": "¿Seguro que desea continuar? Esta acción no se puede deshacer.",
+    "confirmEarlyExit": "Confirmar salida anticipada",
+    "cancel": "Cancelar",
+    "loadStakingDataFailed": "No se pudieron cargar los datos de staking",
+    "connectWalletFirst": "Por favor, conecta tu billetera primero",
+    "enterValidAmount": "Por favor, introduzca un importe válido",
+    "switchChain": "Cambie a Binance Smart Chain (BSC) en su billetera para continuar.",
+    "approvalSuccess": "¡Tokens aprobados exitosamente!",
+    "connectWalletAndSelectPlan": "Conecte su billetera y seleccione un plan de staking",
+    "minStakeError": "El monto mínimo de apuesta es",
+    "approveTokensFirst": "Por favor, apruebe los tokens primero",
+    "stakingFailed": "Staking fallido",
+    "rewardsClaimed": "¡Recompensas reclamadas!",
+    "rewardsClaimedDesc": "Sus recompensas de staking se han reclamado con éxito y se han agregado a su billetera.",
+    "claimFailed": "Reclamación fallida",
+    "positionLocked": "La posición sigue bloqueada. No puedes deshacerte del stake hasta que finalice el periodo de bloqueo.",
+    "unstakingSuccess": "¡Desapuesta exitosa!",
+    "unstakingSuccessDesc": "Sus tokens han sido desvinculados exitosamente y devueltos a su billetera.",
+    "unstakingFailed": "Falló la desrepartición",
+    "earlyExitSuccess": "¡Salida anticipada exitosa!",
+    "earlyExitSuccessDesc": "Tus tokens se han desdoblado anticipadamente. Se ha aplicado una penalización del 10 % y se ha enviado a la tesorería.",
+    "earlyExitFailed": "Salida anticipada fallida"
+  },
+  "campaign": {
+    "title": "Campaña",
+    "subtitle": "Información y estadísticas de la campaña"
+  },
+  "disclaimer": {
+    "title": "Descargo de responsabilidad",
+    "message": "Este es un aviso legal. Por favor, léalo detenidamente antes de continuar."
+  },
+  "info": {
+    "buyTokens": "Comprar tokens",
+    "valueTitle": "El valor de",
+    "valueTitleHighlight": "Token PreGVT",
+    "valueDescription": "Tradicionalmente, estos tokens de crédito estatal de alta calidad están monopolizados por grandes instituciones, lo que dificulta el acceso de los inversores individuales. Mediante la tokenización, dividimos este activo de primer nivel en unidades accesibles, lo que le permite convertirse en accionista de activos principales con un umbral más bajo y participar en los dividendos de desarrollo. ¡Debut global! Comienza la preventa de tokens PreGVT; plazas limitadas; esta oportunidad no se abrirá de nuevo. ¡Actúe ahora para asegurar futuras rentabilidades!",
+    "learnMore": "Más información",
+    "financialDisclaimer": "Descargo de responsabilidad financiera",
+    "financialDisclaimerDesc": "Esta página describe los objetivos clave para el crecimiento del producto y la comunidad. No constituye asesoramiento financiero ni una promesa de rentabilidad.",
+    "investmentWarning": "Advertencia de inversión",
+    "investmentWarningDesc": "Esta página describe los objetivos clave para el crecimiento del producto y la comunidad. No constituye asesoramiento financiero ni una promesa de rentabilidad.",
+    "targetBands": "Bandas objetivo y métricas",
+    "targetBandsDesc": "Las bandas de precios objetivo son indicativas y pueden ajustarse según el cumplimiento de los hitos y las condiciones del mercado. Todas las métricas se basan en datos en cadena y en paneles/auditorías de terceros.",
+    "publicPriceRoute": "Ruta de Precio Público",
+    "tableHeaders": {
+      "stage": "Escenario",
+      "coreEvent": "Evento principal",
+      "targetBand": "Banda objetivo (USD)",
+      "rationale": "Razón fundamental"
+    },
+    "currentPhase": "Fase actual",
+    "genesisSeed": "Semilla de Génesis",
+    "communityEarly": "Comunidad Temprana",
+    "publicFlashSale": "Venta flash pública",
+    "phase1Title": "Preventa de tres niveles de la fase 1",
+    "phase1Subtitle": "(Baja flotabilidad, alta elasticidad)",
+    "progress": "Progreso",
+    "loading": "Cargando...",
+    "sold": "vendido",
+    "remaining": "restante",
+    "activations": "activaciones",
+    "status": "Estado",
+    "presaleActive": "Preventa activa",
+    "presaleInactive": "Preventa inactiva",
+    "price": "Precio",
+    "amount": "Cantidad",
+    "raise": "Aumentar",
+    "purpose": "Objetivo",
+    "totals": "Totales",
+    "target": "objetivo",
+    "mainTokenPreview": "Vista previa del token principal",
+    "fixedPreviewPrice": "Precio de vista previa fijo · No negociable",
+    "mainTokenPreviewDesc": "Este precio de vista previa ayuda a los primeros agentes e inversores a comprender el valor objetivo del token principal antes del Evento de Generación de Tokens (TGE). No proviene del fondo de liquidez (LP), ni de DexScreener, ni está vinculado al precio de mercado previo al GVT. Esta vista previa es solo para la interfaz de usuario, con el fin de fomentar la confianza de los inversores y la comunicación con los agentes.",
+    "leaderboards": "Tablas de clasificación",
+    "kolReferrals": "Referencias de KOL",
+    "buyer": "Comprador",
+    "claimReferrals": "Referencias de reclamaciones",
+    "activation": "Activación"
+  },
+  "aiYield": {
+    "title": "Ahora estás más cerca que nunca de",
+    "titleHighlight": "Ingresos por poder de IA",
+    "subtitle": "Deje que la electricidad generada por IA se convierta en su verdadero rendimiento",
+    "description": "En 2025, los ETF de potencia de IA de EE. UU. generaron una rentabilidad anualizada superior al 48 %. Ahora, por primera vez, puedes ser dueño de la fuente: nodos de potencia de IA reales tokenizados en cadena.",
+    "yieldLoop": "El ciclo del rendimiento",
+    "step1": "Comprar preGVT",
+    "step2": "Apostar",
+    "step3": "Ganar rGGP",
+    "step4": "Impulso de NFT",
+    "step5": "Canjea 1:1 por GVT",
+    "step6": "Re-estaca",
+    "step7": "Repetir"
+  },
+  "community": {
+    "title": "Comunidad global impulsada por IA y energía verde",
+    "activeWallets": "2,351 billeteras activas",
+    "fromCountries": "de 47 países",
+    "missions": "Misiones de Zealy/Galxe",
+    "missionsDesc": "Completa tareas para obtener preGVT",
+    "topReferrers": "Los 100 principales referentes",
+    "topReferrersDesc": "Obtén NFT exclusivos + bonificaciones de airdrop de rGGP"
+  },
+  "roadmap": {
+    "title": "Hoja de ruta de PreGVT",
+    "titleHighlight": "PreGVT",
+    "description": "Esta hoja de ruta muestra la magnífica trayectoria de PreGVT, desde su financiación inicial, su crecimiento gradual y su integración total en los principales mercados financieros. La etapa de pre-token está destinada a la inversión en GVT (Global Value Token), mientras que rGGP sigue siendo el token de recompensa del ecosistema para los poseedores de NFT y los incentivos comunitarios. Cuanto antes participe, mayor será el potencial de retorno. La oferta pública se realizará en las principales plataformas de intercambio de criptomonedas globales (Binance, Coinbase, OKX, Bybit), garantizando al mismo tiempo que el fondo de activos RWA subyacente esté plenamente establecido y comience a generar retornos estables.",
+    "q3Title": "Lanzamiento del token digital RWA PreGVT",
+    "q3Desc": "El protocolo AGV lanzó con éxito una preventa de tokens digitales en la cadena BSC de Hong Kong. Nombre del token: preGVT. Este pretoken representa la ruta de inversión directa a GVT (Token de Valor Verde).",
+    "q4Title": "Preventa pública de PreGVT",
+    "q4Desc": "La preventa comienza con una ronda semilla de $0.005 y alcanza un precio de lanzamiento de $0.15 en el cuarto trimestre de 2025. Esta es una clara ruta de descubrimiento de valor para la ruta de inversión preGVT → GVT. La decisión que tome ahora determinará su punto de partida en este camino.",
+    "q1Title": "Lanzamiento de PreGVT y más allá",
+    "q1Desc": "El primer trimestre de 2026 será el hito más glorioso de nuestra trayectoria, ya que completaremos el salto definitivo de la venta privada a la cotización pública, comenzaremos a operar y abriremos un nuevo capítulo. Los tokens PreGVT se convertirán a GVT, mientras que rGGP seguirá siendo el token de recompensa del ecosistema para los poseedores de NFT y los incentivos de la comunidad."
+  },
+  "institutionalProof": {
+    "title": "Grado institucional",
+    "titleHighlight": "Transparencia",
+    "metric": "Métrico",
+    "rmb": "RMB (¥)",
+    "usd": "USD ($)",
+    "notes": "Notas",
+    "fixedAssets": "Activos fijos",
+    "netAssets": "Activos netos",
+    "netProfitYTD": "Beneficio neto hasta la fecha"
+  },
+  "stakingPlans": {
+    "title": "Planes de staking: nodos Flex y Vault",
+    "subtitle": "Elige tu estrategia de staking y comienza a obtener un rendimiento real de la infraestructura de potencia de IA",
+    "table": {
+      "type": "Tipo",
+      "lockPeriod": "Período de bloqueo",
+      "apyReturnMode": "APY / Modo de retorno",
+      "rewardsPerks": "Recompensas y beneficios"
+    },
+    "plans": {
+      "standard": {
+        "type": "Nodo estándar",
+        "lockPeriod": "30 días",
+        "returnMode": "al vencimiento",
+        "rewards": "Prioridad de lanzamiento aéreo"
+      },
+      "threeMonth": {
+        "type": "Bóveda de 3 meses",
+        "lockPeriod": "90 días",
+        "returnMode": "Lineal mensual",
+        "rewards": "Acceso a roles OG"
+      },
+      "sixMonth": {
+        "type": "Bóveda de 6 meses",
+        "lockPeriod": "180 días",
+        "returnMode": "Lineal mensual",
+        "rewards": "Lanzamiento aéreo adicional de rGGP"
+      },
+      "twelveMonth": {
+        "type": "Bóveda de 12 meses (lista blanca)",
+        "lockPeriod": "360 días",
+        "returnMode": "Fases + Reinversión automática",
+        "rewards": "Acceso exclusivo a la bóveda",
+        "perks": "Beneficios de la lista prioritaria"
+      }
+    },
+    "smallPrint": "Todos los contratos de staking auditados | Recompensas distribuidas en rGGP | La lista blanca de Vault se abre después de completar el nivel 1.",
+    "cta": "Únase ahora: no se pierda la última ventana de preventa"
+  },
+  "claimFOMOBanner": {
+    "title": "Se han aplicado 20 000 monederos: ¡Reclama tu Airdrop ahora! (Solo 48 horas)",
+    "description": "Solo las billeteras verificadas pueden reclamar. Sigue los pasos a continuación."
+  },
+  "discordVerificationModal": {
+    "title": "Verificación de Discord",
+    "description": "Antes de verificar, asegúrate de haberte unido a nuestro servidor de Discord.",
+    "proceed": "Proceder con la verificación",
+    "joinCommunity": "Únase a Community First",
+    "cancel": "Cancelar"
+  },
+  "socialVerification": {
+    "title": "Verificación social",
+    "followX": "Seguir X",
+    "joinDiscord": "Únete a Discord",
+    "verified": "✓ Verificado",
+    "notVerified": "No verificado",
+    "checking": "De cheques...",
+    "joinDiscordButton": "Únete a Discord",
+    "followingX": "✓ Siguiendo en X",
+    "followNow": "Sigue ahora",
+    "verifyAgain": "Verificar de nuevo"
+  },
+  "walletConnect": {
+    "addressCopied": "Dirección copiada al portapapeles",
+    "openingMetaMask": "Abriendo MetaMask...",
+    "openingTrustWallet": "Abriendo Trust Wallet...",
+    "openingCoinbase": "Abriendo la billetera Coinbase...",
+    "quickConnect": "Conexión rápida (móvil)",
+    "openInMetaMask": "Abrir en MetaMask",
+    "openInTrustWallet": "Abrir en Trust Wallet",
+    "openInCoinbase": "Abrir en Coinbase Wallet",
+    "orUseWalletConnect": "O utiliza WalletConnect",
+    "useWalletConnect": "Utilice WalletConnect",
+    "connectWallet": "Conectar billetera",
+    "connectViaWalletConnect": "Conectarse a través de WalletConnect",
+    "connectYourWallet": "Conecta tu billetera",
+    "scanWithWallet": "Escanee con su billetera",
+    "useWalletConnectScan": "Utilice WalletConnect para escanear el código QR",
+    "connectToPreGVT": "Conéctese a PreGVT",
+    "choosePreferredWallet": "Elige tu billetera preferida",
+    "walletNotConnected": "Billetera no conectada",
+    "connectWalletToStart": "Conecta tu billetera para comenzar a usar PreGVT",
+    "walletConnected": "Billetera conectada",
+    "on": "en"
+  },
+  "stickyDisclaimer": {
+    "top": {
+      "title": "Aviso de acceso anticipado",
+      "description": "Este es un acceso anticipado basado en hitos. Los rangos objetivo se ajustan a medida que se desbloquean las métricas. Por favor, DYOR."
+    },
+    "bottom": {
+      "title": "Sistema transparente",
+      "description": "Utilizamos un sistema de hitos transparente y verificable. Aviso de 72 horas antes de los cambios."
+    }
+  },
+  "disclaimerBanner": {
+    "top": {
+      "title": "Acceso anticipado basado en hitos",
+      "description": "Este es un acceso anticipado basado en hitos. Los rangos objetivo se ajustan a medida que se desbloquean las métricas públicas; por favor, DYOR. Los rangos mostrados son rangos objetivo. Los niveles se desbloquean y pueden ajustarse según los datos en cadena y los paneles de terceros. Cualquier cantidad no vendida puede transferirse al siguiente nivel."
+    },
+    "bottom": {
+      "title": "Sistema de hitos transparente",
+      "description": "Utilizamos un sistema de hitos transparente y verificable. Al alcanzar los umbrales preestablecidos (billeteras, tareas, colaboraciones, auditoría, etc.), se desbloquea el siguiente nivel y se avanza a la banda objetivo. Para mayor claridad, avisamos con 72 horas de antelación a los cambios."
+    },
+    "showMore": "Mostrar más",
+    "showLess": "Mostrar menos"
+  },
+  "leaderboard": {
+    "buyerLeaderboard": "Tabla de clasificación de compradores",
+    "referralLeaderboard": "Tabla de clasificación de referencias",
+    "activationLeaderboard": "Tabla de clasificación de activación",
+    "kolReferralLeaderboard": "Tabla de clasificación de referencias de KOL",
+    "claimReferralLeaderboard": "Tabla de clasificación de referencias de reclamos",
+    "leaderboard": "Tabla de clasificación",
+    "rank": "Rango",
+    "wallet": "Billetera",
+    "address": "DIRECCIÓN",
+    "totalPurchased": "Total comprado",
+    "purchases": "Compras",
+    "referralTime": "Tiempo de referencia",
+    "totalEarned": "Total ganado",
+    "redeemed": "Redimido",
+    "accrued": "Acumulado",
+    "activated": "Activado",
+    "numberOfReferrals": "Número de referencias",
+    "totalAmount": "Importe total",
+    "referrals": "Referencias",
+    "loading": "Cargando tabla de clasificación...",
+    "noEntries": "No hay entradas todavía"
+  },
+  "fomoSection": {
+    "title": "Oferta limitada. Se acerca el siguiente nivel de precio.",
+    "soldProgress": "{vendido} / {máximo} Vendido ({porcentaje}%)",
+    "nextRound": "Próxima ronda → {precio} en {horas}h {minutos}m",
+    "ctaButton": "Únase ahora: no se pierda la última ventana de preventa",
+    "livePurchaseFeed": "Feed de compras en vivo",
+    "purchaseNotification": "La billetera {wallet} acaba de comprar {amount} preGVT",
+    "waitingForPurchases": "Esperando compras..."
+  },
+  "newsletterSection": {
+    "title": "Nuestro boletín informativo",
+    "subtitle": "Manténgase actualizado con nuestras últimas noticias",
+    "description": "¿No quieres perderte el momento histórico de la innovación financiera global? Deja tu correo electrónico para suscribirte a las actualizaciones exclusivas de PreGVT TOKEN.",
+    "signupTitle": "Suscríbete al boletín informativo",
+    "emailPlaceholder": "Introduzca su dirección de correo electrónico",
+    "subscribeButton": "Suscríbete ahora",
+    "subscriptionSuccess": "¡Suscripción exitosa! Gracias por su atención."
+  }
+}

@@ -1,0 +1,874 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "submit": "Einreichen",
+    "cancel": "Stornieren",
+    "save": "Speichern",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "back": "Zurück",
+    "next": "Nächste",
+    "previous": "Vorherige",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "required": "Erforderlich",
+    "optional": "Optional"
+  },
+  "navigation": {
+    "home": "Heim",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "community": "Gemeinschaft",
+    "fund": "Fonds",
+    "applications": "Anwendungen",
+    "admin": "Administrator"
+  },
+  "contributor": {
+    "title": "Mitwirkendenantrag",
+    "subtitle": "Treten Sie dem G3 Fund als Spender bei und helfen Sie beim Aufbau der RWA-Community",
+    "tier": {
+      "airdrop_hunter": {
+        "name": "Airdrop-Jäger",
+        "description": "Einstiegsebene für Community-Mitglieder",
+        "requirements": "Keine Mindestanforderungen",
+        "benefits": "Grundlegender Community-Zugriff, Airdrop-Benachrichtigungen"
+      },
+      "contributor": {
+        "name": "Mitwirkender",
+        "description": "Aktiver Community-Mitwirkender",
+        "requirements": "1.000–10.000 Follower auf mindestens einem Kanal",
+        "benefits": "Provisionen, Schulungen, inhaltliche Betreuung"
+      },
+      "micro_kol": {
+        "name": "Mikro-KOL",
+        "description": "Einflussreiches Community-Mitglied",
+        "requirements": "10.000–100.000 Follower + konstante Leistung",
+        "benefits": "Höhere Provisionen, Token-Anreize, Partnerschaftsmöglichkeiten"
+      },
+      "fund_partner": {
+        "name": "Fondspartner",
+        "description": "Strategischer Partner mit maßgeblichem Einfluss",
+        "requirements": "Über 100.000 Follower + außergewöhnliche Leistung + strategischer Wert",
+        "benefits": "Maximale Belohnungen, potenzielle Kapitalbeteiligung, strategischer Input"
+      }
+    },
+    "steps": {
+      "identity": {
+        "title": "Identität & Kontakt",
+        "description": "Grundlegende Informationen und Kontaktdaten"
+      },
+      "channels": {
+        "title": "Kanäle und Kennzahlen",
+        "description": "Social Media und Content-Kanäle"
+      },
+      "role": {
+        "title": "Rolle und Verfügbarkeit",
+        "description": "Ihre Rolle und Verfügbarkeit"
+      },
+      "performance": {
+        "title": "Leistungskennzahlen",
+        "description": "Leistungsziele und Kennzahlen"
+      },
+      "rewards": {
+        "title": "Belohnungen und Vergütung",
+        "description": "Zahlungspräferenzen und -details"
+      },
+      "portfolio": {
+        "title": "Portfolio und Erfolgsbilanz",
+        "description": "Bisherige Tätigkeiten und Erfahrungen"
+      },
+      "wallets": {
+        "title": "Wallets & Verifizierung",
+        "description": "Wallet-Adressen und Verifizierung"
+      },
+      "compliance": {
+        "title": "Gemeinschaft und Compliance",
+        "description": "Vereinbarungen und Einhaltung"
+      }
+    },
+    "form": {
+      "displayName": "Anzeigename",
+      "email": "E-Mail",
+      "countryRegion": "Land/Region",
+      "languages": "Sprachen",
+      "riskTermsConsent": "Zustimmung zu Risiken/Bedingungen",
+      "riskTermsText": "Ich erkenne an, dass es keine garantierten Renditen gibt, dass es sich hierbei um eine Gemeinschaftsinitiative handelt und dass ich die Betrugsbekämpfungsrichtlinien und regionalen Beschränkungen verstehe.",
+      "platform": "Plattform",
+      "url": "URL",
+      "followers": "Anhänger",
+      "avgViews30d": "Durchschnittliche Aufrufe (30 Tage)",
+      "audienceTop3Geos": "Top 3 der Zielgruppenregionen",
+      "contentFocus": "Inhaltlicher Fokus",
+      "addChannel": "Kanal hinzufügen",
+      "removeChannel": "Entfernen",
+      "channelNumber": "Kanal {Nummer}",
+      "noChannels": "Es wurden noch keine Kanäle hinzugefügt. Klicken Sie auf „Kanal hinzufügen“, um zu beginnen.",
+      "manualVerification": "Manuelle Überprüfung: Ihre Social-Media-Kanäle werden nach der Übermittlung manuell von unserem Admin-Team überprüft.",
+      "manualVerificationRequired": "Manuelle Überprüfung erforderlich",
+      "manualVerificationText": "Für die Stufe {tier} werden Ihre Social-Media-Kanäle nach der Übermittlung manuell von unserem Admin-Team überprüft. Bitte stellen Sie sicher, dass alle Kanalinformationen korrekt und vollständig sind.",
+      "stepValidation": "Bitte füllen Sie alle erforderlichen Felder in „{step}“ aus, bevor Sie fortfahren.",
+      "stepValidationWarning": "⚠️ Bitte füllen Sie alle mit * gekennzeichneten Pflichtfelder aus, bevor Sie fortfahren",
+      "submitting": "Senden...",
+      "submitApplication": "Bewerbung einreichen",
+      "applicationSubmitted": "Bewerbung erfolgreich abgeschickt!",
+      "applicationError": "Die Bewerbung konnte nicht übermittelt werden. Bitte versuchen Sie es erneut.",
+      "validationWarning": "⚠️ Bitte füllen Sie alle mit * gekennzeichneten Pflichtfelder aus, bevor Sie fortfahren",
+      "stepValidationError": "Bitte füllen Sie alle erforderlichen Felder in „{step}“ aus, bevor Sie fortfahren.",
+      "allStepsValidationError": "Bitte füllen Sie alle erforderlichen Felder in „{step}“ aus, bevor Sie fortfahren.",
+      "fileUploadText": "Zum Hochladen klicken oder per Drag & Drop verschieben",
+      "fileUploadTypes": ".pdf, .png, .jpg, .jpeg (jeweils max. 20 MB, bis zu 5 Dateien)",
+      "websitePlaceholder": "https://example.com"
+    }
+  },
+  "institutional": {
+    "title": "Institutionelle Bewerbung",
+    "subtitle": "Werden Sie institutioneller Partner beim G3 Fund",
+    "steps": {
+      "purpose": {
+        "title": "Zweck und Passform",
+        "description": "Erzählen Sie uns von Ihren Partnerschaftszielen"
+      },
+      "organization": {
+        "title": "Unternehmensprofil",
+        "description": "Firmeninformationen und KYB-Details"
+      },
+      "contacts": {
+        "title": "Kontakte",
+        "description": "Wichtiges Personal und Kontaktinformationen"
+      },
+      "partnership": {
+        "title": "Partnerschaftsmodus",
+        "description": "Spezifische Details der Partnerschaft"
+      },
+      "geography": {
+        "title": "Geografie und Publikum",
+        "description": "Zielmärkte und Publikum"
+      },
+      "wallets": {
+        "title": "Geldbörsen & Zahlung",
+        "description": "Zahlungspräferenzen und -details"
+      },
+      "data": {
+        "title": "Daten und Compliance",
+        "description": "Berichts- und Compliance-Anforderungen"
+      },
+      "brand": {
+        "title": "Marke & Rechtliches",
+        "description": "Markennutzung und rechtliche Hinweise"
+      }
+    },
+    "form": {
+      "submitting": "Senden...",
+      "submitApplication": "Bewerbung einreichen",
+      "primaryIntent": "Primäre Absicht (Wählen Sie alle zutreffenden aus)",
+      "whatYouWantToGain": "Was Sie erreichen möchten (Wählen Sie alle zutreffenden Antworten aus)",
+      "howOrgSupportsRWA": "Wie unterstützt Ihre Organisation RWA heute?",
+      "howOrgSupportsRWAPlaceholder": "Beschreiben Sie Ihre aktuellen RWA-Initiativen, Investitionen oder Partnerschaften …",
+      "rwaVerticals": "Welche RWA-Vertikalen treffen auf Ihre Organisation zu?",
+      "otherVertical": "Bitte geben Sie eine andere RWA-Vertikale an",
+      "otherVerticalPlaceholder": "Beschreiben Sie Ihre andere RWA-Vertikale ...",
+      "legalEntityName": "Name der juristischen Person",
+      "jurisdiction": "Gerichtsstand der Gründung",
+      "jurisdictionPlaceholder": "z. B. Delaware, Singapur usw.",
+      "registrationNumber": "Registrierungs-/Firmennummer",
+      "website": "Webseite",
+      "registeredAddress": "Registrierte Adresse",
+      "organizationType": "Organisationstyp",
+      "otherOrganizationType": "Bitte geben Sie den Organisationstyp an",
+      "otherOrganizationTypePlaceholder": "Beschreiben Sie Ihren Organisationstyp ...",
+      "regulatoryPermissions": "Behördliche Genehmigungen/Lizenzen",
+      "regulatoryPermissionsPlaceholder": "Beschreiben Sie alle behördlichen Genehmigungen oder Lizenzen …",
+      "briefHistory": "Kurze Geschichte & AUM/Ressourcen",
+      "briefHistoryPlaceholder": "Geben Sie eine kurze Geschichte Ihrer Organisation und Ihres verwalteten Vermögens/Ihrer Ressourcen an …",
+      "regulatoryDocuments": "Regulatorische Dokumente",
+      "primaryContactName": "Name des primären Ansprechpartners",
+      "primaryContactTitle": "Titel des primären Ansprechpartners",
+      "primaryContactEmail": "E-Mail-Adresse des primären Kontakts",
+      "primaryContactPhone": "Primäre Kontakttelefonnummer",
+      "complianceContactName": "Name des Compliance-Kontakts",
+      "complianceContactEmail": "E-Mail-Adresse des Compliance-Kontakts",
+      "brandPrContactName": "Name des Marken-/PR-Kontakts",
+      "brandPrContactEmail": "E-Mail-Adresse für Marken-/PR-Kontakt",
+      "options": {
+        "advocacyPartner": "Advocacy-Partner",
+        "financialSupport": "Finanzielle Unterstützung",
+        "tokenContribution": "Token-Beitrag",
+        "strategicPartner": "Strategischer Partner",
+        "userGrowth": "Benutzerwachstum",
+        "resourceAccess": "Ressourcenzugriff",
+        "educationNarrative": "Bildung & Erzählung",
+        "brandReputation": "Marke und Ruf",
+        "longTermLeverage": "Langfristige Hebelwirkung",
+        "energy": "Energie",
+        "agriculture": "Landwirtschaft",
+        "realEstate": "Immobilie",
+        "carbonEsg": "Kohlenstoff/ESG",
+        "supplyChain": "Lieferkette",
+        "other": "Andere",
+        "exchange": "Austausch",
+        "fund": "Fonds",
+        "assetOwnerOriginator": "Eigentümer/Urheber des Vermögenswerts",
+        "technologyProvider": "Technologieanbieter",
+        "ngoAlliance": "NGO/Allianz",
+        "corporate": "Unternehmen"
+      },
+      "validationWarning": "⚠️ Bitte füllen Sie alle mit * gekennzeichneten Pflichtfelder aus, bevor Sie fortfahren",
+      "stepValidationError": "Bitte füllen Sie alle erforderlichen Felder in „{step}“ aus, bevor Sie fortfahren.",
+      "allStepsValidationError": "Bitte füllen Sie alle erforderlichen Felder in „{step}“ aus, bevor Sie fortfahren.",
+      "fileUploadText": "Zum Hochladen klicken oder per Drag & Drop verschieben",
+      "fileUploadTypes": ".pdf, .png, .jpg, .jpeg (jeweils max. 20 MB, bis zu 5 Dateien)",
+      "websitePlaceholder": "https://example.com",
+      "settlementPreference": "Siedlungspräferenz",
+      "bank": "Bank",
+      "crypto": "Krypto",
+      "walletAddresses": "Wallet-Adressen",
+      "addWallet": "Wallet hinzufügen",
+      "chainPlaceholder": "Kette (z. B. Ethereum, BSC)",
+      "addressPlaceholder": "Wallet-Adresse",
+      "removeWallet": "Entfernen",
+      "complianceConstraints": "Compliance-Einschränkungen",
+      "complianceConstraintsPlaceholder": "Gibt es spezielle Compliance-Anforderungen oder -Einschränkungen ...",
+      "consentToOnChainVerification": "Zustimmung zur On-Chain-Verifizierung",
+      "consentToOnChainVerificationText": "Ich stimme der On-Chain-Verifizierung der Anmeldeinformationen und Aktivitäten meiner Organisation zu.",
+      "preferredReportingCadence": "Bevorzugter Berichtsrhythmus",
+      "monthly": "Monatlich",
+      "quarterly": "Vierteljährlich",
+      "confidentialityLevel": "Vertraulichkeitsstufe",
+      "public": "Öffentlich",
+      "partnersOnly": "Nur für Partner",
+      "ndaRequired": "Geheimhaltungsvereinbarung erforderlich",
+      "riskDisclosureAcknowledged": "Risikooffenlegung anerkannt",
+      "riskDisclosureAcknowledgedText": "Ich bestätige, dass ich das Risikoaufklärungsdokument gelesen und verstanden habe.",
+      "termsPrivacyConsent": "Nutzungsbedingungen und Datenschutzeinwilligung",
+      "termsPrivacyConsentText": "Ich stimme den Servicebedingungen und der Datenschutzrichtlinie zu."
+    }
+  },
+  "footer": {
+    "companyName": "G3 FUND",
+    "tagline": "RWA KOL Inkubationsplattform",
+    "description": "Der erste RWA-native KOL-Inkubationsfonds. Transformieren Sie die Community durch tokenisierte Partnerschaften und langfristige Anreize in eine vermögenswerte Wachstumsmaschine.",
+    "features": {
+      "secure": "Sicher & Vertrauenswürdig",
+      "fast": "Blitzschnell",
+      "multichain": "Multi-Chain"
+    },
+    "sections": {
+      "platform": {
+        "title": "Plattform",
+        "fundStructure": "Fondsstruktur",
+        "community": "Community",
+        "kolProgram": "KOL-Programm",
+        "referralSystem": "Empfehlungssystem"
+      },
+      "resources": {
+        "title": "Ressourcen",
+        "aboutG3": "Über G3 Fund",
+        "rwaEducation": "RWA-Bildung",
+        "trainingPrograms": "Schulungsprogramme",
+        "blog": "Blog"
+      },
+      "support": {
+        "title": "Support",
+        "helpCenter": "Hilfezentrum",
+        "kolGuidelines": "KOL-Richtlinien",
+        "communityRules": "Community-Regeln",
+        "contactSupport": "Support kontaktieren"
+      },
+      "legal": {
+        "title": "Rechtliches",
+        "privacyPolicy": "Datenschutzrichtlinie",
+        "termsOfService": "Nutzungsbedingungen",
+        "cookiePolicy": "Cookie-Richtlinie",
+        "gdpr": "DSGVO"
+      }
+    },
+    "disclaimer": {
+      "operational": "G3 Fund operiert als Community-Entwicklungsinitiative, die sich auf RWA-Bildung und KOL-Inkubation konzentriert.",
+      "risk": "Keine Investitionsrenditen sind garantiert. Alle Teilnehmer sollten die mit Kryptowährung und Community-Teilnahme verbundenen Risiken verstehen. Bitte überprüfen Sie unsere Nutzungsbedingungen und Risikohinweise vor der Teilnahme an Programmen."
+    },
+    "copyright": "© 2024 G3 Fund. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Servicebedingungen"
+  },
+  "home": {
+    "valuePillars": {
+      "educate": {
+        "title": "Bildung & Verstärkung",
+        "description": "Schaffen Sie durch umfassende Aufklärung Bewusstsein und Verständnis für RWA"
+      },
+      "growth": {
+        "title": "Nachhaltiges Wachstum",
+        "description": "Machen Sie aus Airdrop-Jägern langfristige KOLs und Botschafter"
+      },
+      "institutional": {
+        "title": "Institutionelle Ausrichtung",
+        "description": "Bereitstellung echter Adoption und verifizierbarer Nutzer-Traktion für Börsen, Fonds und Asset-Besitzer"
+      }
+    },
+    "mission": {
+      "title": "Die Mission",
+      "subtitle": "Die nächste Billionen-Dollar-Welle im Kryptobereich sind Real World Assets (RWA).",
+      "description": "Die Wall Street bringt bereits RWA-Anlageprodukte auf den Markt. Hongkong und Singapur haben regulatorische Fenster für RWA geöffnet. Nutzer weltweit verlangen nach asset-backed Produkten statt Hype-getriebenen Coins.",
+      "role": {
+        "title": "Unsere Rolle",
+        "description": "G3 Fund ist die einzige Plattform, die RWA-Bildung, Gemeinschaftswachstum und institutionelle Unterstützung in einem nachhaltigen Rahmen vereint."
+      }
+    },
+    "valueProposition": {
+      "title": "Wertversprechen",
+      "description": "Drei Kernpfeiler, die G3 Fund zur führenden RWA-Beitragsplattform machen"
+    },
+    "responsibility": {
+      "title": "Ein Aufruf zur Verantwortung",
+      "subtitle": "Jede Ära der Finanzinnovation hat Führer benötigt, die bereit waren, Verantwortung für die Zukunft zu übernehmen, nicht nur davon zu profitieren.",
+      "description": "Heute sind Real-World Assets (RWA) keine Idee mehr – sie sind die nächste Billionen-Dollar-Transformation:",
+      "points": {
+        "wallStreet": {
+          "title": "Anerkennung an der Wall Street",
+          "description": "Wall Street hat RWA zur neuen Anlageklasse erklärt"
+        },
+        "tokenization": {
+          "title": "Globale Tokenisierung",
+          "description": "Weltweit tokenisieren Vermögenseigentümer Energie, Kohlenstoff, Immobilien und Lieferketten"
+        },
+        "regulatory": {
+          "title": "Regulatorischer Fortschritt",
+          "description": "Hongkong und Singapur haben regulatorische Türen geöffnet"
+        },
+        "demand": {
+          "title": "Benutzernachfrage",
+          "description": "Nutzer verlangen Sicherheit und Glaubwürdigkeit: Krypto unterstützt von echten Assets, nicht leere Versprechen"
+        }
+      }
+    },
+    "institutions": {
+      "title": "Warum Institutionen das nicht ignorieren können?",
+      "subtitle": "Ohne Führung wird die Einführung von RWA langsam, fragmentiert und missverstanden sein. Institutionen stehen heute vor folgenden Problemen:",
+      "points": {
+        "compliance": {
+          "title": "Compliance-Risiko",
+          "description": "Die Branche braucht vertrauenswürdige Frameworks, nicht Lärm"
+        },
+        "voice": {
+          "title": "Stimmen-Lücke",
+          "description": "Vermögen und Kapital fehlt es an den nötigen Netzwerken, um die Menschen zu erreichen"
+        },
+        "marketing": {
+          "title": "Ineffizientes Marketing",
+          "description": "Einmalige Aktionen ohne Zinseszinseffekt"
+        },
+        "proof": {
+          "title": "Mangelnde Beweise",
+          "description": "Keine glaubwürdigen Daten, um Regulatoren oder LPs zu präsentieren"
+        }
+      }
+    },
+    "g3Mission": {
+      "title": "Die Mission des G3-Fonds",
+      "subtitle": "Der G3-Fonds wurde nicht für ein einzelnes Projekt geschaffen. Er wurde für den gesamten RWA-Sektor geschaffen.",
+      "points": {
+        "influence": {
+          "title": "Verantwortungsvoller Einfluss",
+          "description": "Befähigung der Top-KOLs, ihren Einfluss verantwortlich zu nutzen, Wahrheit zu verstärken, nicht Hype"
+        },
+        "education": {
+          "title": "Bildungsnetzwerk",
+          "description": "Aufbau eines weltweiten Bildungs- und Verstärkungsnetzwerks"
+        },
+        "incubation": {
+          "title": "Globale RWA-Inkubation",
+          "description": "Der erste globale RWA Contributor Incubator Fund"
+        },
+        "growth": {
+          "title": "Nachweisbares Wachstum",
+          "description": "Bereitstellung verifizierbarer Adoptionsdaten und nachhaltigen Wachstums für Institutionen"
+        },
+        "community": {
+          "title": "Gemeinschaftstransformation",
+          "description": "Respektieren und transformieren Sie Basisgemeinschaften (Airdrop Hunters, OGs) in Partner und Mikro-KOLs"
+        }
+      }
+    },
+    "operatingPrinciples": {
+      "title": "Unsere Geschäftsprinzipien",
+      "dualPathways": {
+        "title": "Duale Wege",
+        "description": "Basisbewegung → Mitwirkende; Einflussnehmer → Partner"
+      },
+      "compliance": {
+        "title": "Transparenz und Compliance",
+        "description": "On-Chain-Verifizierung, öffentliche Dashboards, regelmäßige Berichte"
+      },
+      "incentive": {
+        "title": "Anreiz & Wertebindung",
+        "description": "Strukturiert, langfristig und leistungsorientiert"
+      },
+      "noOneLeft": {
+        "title": "Niemand wird zurückgelassen",
+        "description": "Jeder Akteur, vom kleinen Beitragszahler bis zum großen Fonds, hat eine Rolle und Verantwortung"
+      }
+    },
+    "participants": {
+      "title": "Aktuelle Teilnehmer",
+      "technology": {
+        "title": "Technologiepartner",
+        "description": "IoT-, Oracle- und Blockchain-Teams"
+      },
+      "governance": {
+        "title": "Führung",
+        "description": "New Zealand Sustainable Initiative Trust"
+      },
+      "agv": {
+        "title": "AGV-Protokoll",
+        "description": "DePIN + RWA-Backbone"
+      },
+      "community": {
+        "title": "Community-Builder",
+        "description": "OGs, Whitelist, TaskOn- und Zealy-Mitwirkende"
+      },
+      "assets": {
+        "title": "Vermögenspartner",
+        "description": "Energie- und Landwirtschaftsunternehmen im asiatisch-pazifischen Raum"
+      }
+    },
+    "expansion": {
+      "title": "Strategische Expansion",
+      "greenFunds": {
+        "title": "Globale Grüne Fonds",
+        "description": "ESG-orientiertes Kapital"
+      },
+      "exchanges": {
+        "title": "Internationale Börsen",
+        "description": "Liquidität + Marktzugang"
+      },
+      "projects": {
+        "title": "Weitere RWA-Projekte",
+        "description": "Branchenübergreifende Allianzen"
+      },
+      "footer": "Kein einmaliges Marketing – sondern der Super-Wachstumsmotor der RWA-Branche."
+    },
+    "institutionsJoin": {
+      "title": "Wie Institutionen beitreten können",
+      "advocacy": {
+        "title": "Advocacy-Partner",
+        "description": "Stehen Sie mit uns als Co-Champions der RWA"
+      },
+      "financial": {
+        "title": "Finanzielle Unterstützung",
+        "description": "Kleine Sponsorings in USD/USDT"
+      },
+      "token": {
+        "title": "Token-Beitrag",
+        "description": "Projekt-Token dem Fondspool zuordnen"
+      },
+      "strategic": {
+        "title": "Strategischer Partner",
+        "description": "Branding, Prioritätsdaten und Netzwerkzugang"
+      }
+    },
+    "institutionsGain": {
+      "title": "Was Institutionen gewinnen",
+      "left": {
+        "userGrowth": {
+          "title": "Benutzerwachstum",
+          "description": "Wallets, Staking und echte Akzeptanz"
+        },
+        "resourceAccess": {
+          "title": "Ressourcenzugriff",
+          "description": "Prioritätsverbindungen zu Assets, Fonds und Börsen"
+        }
+      },
+      "right": {
+        "education": {
+          "title": "Bildung & Erzählung",
+          "description": "Ihre Geschichte, erzählt von einer ausgebildeten KOL-Armee"
+        },
+        "brand": {
+          "title": "Marke und Ruf",
+          "description": "Schließen Sie sich dem ersten globalen RWA-Fonds an und erlangen Sie Führungsstatus"
+        },
+        "leverage": {
+          "title": "Langfristige Hebelwirkung",
+          "description": "Verbundenes Netzwerk, keine einmalige Exposition"
+        }
+      }
+    },
+    "leadership": {
+      "title": "Führung oder Abdankung",
+      "subtitle": "Die RWA-Welle ist unvermeidlich. Die Welt wird nicht fragen, ob sie stattfindet, sondern wer die Verantwortung dafür übernommen hat, sie anzuführen.",
+      "points": {
+        "transform": {
+          "title": "Transform-Mitwirkende",
+          "description": "Wir entlassen Mitwirkende an der Basis nicht – wir machen sie zu Partnern"
+        },
+        "align": {
+          "title": "Stimmen ausrichten",
+          "description": "Wir lassen KOLs ihre Stimmen nicht verschwenden — wir richten sie mit Wahrheit und Bildung aus"
+        },
+        "enable": {
+          "title": "Handeln ermöglichen",
+          "description": "Wir lassen Institutionen nicht beiseite stehen — wir bieten ihnen das Vehikel, verantwortlich zu handeln"
+        }
+      }
+    },
+    "cta": {
+      "title": "Bereit, die Zukunft von RWA zu verstärken?",
+      "description": "Werden Sie Teil des weltweit ersten RWA-Spendenfonds. Egal, ob Sie KOL, Institution oder Community-Mitglied sind – im G3 Fund-Ökosystem ist Platz für Sie.",
+      "contributor": "Als Mitwirkender bewerben",
+      "institution": "Als Institution bewerben"
+    },
+    "compliance": {
+      "title": "Wichtiger Compliance-Hinweis",
+      "description": "G3 Fund ist eine Initiative zur Gemeinschaftsentwicklung. Es werden keine Anlagerenditen garantiert. Alle Teilnehmer sollten sich der Risiken bewusst sein, die mit Kryptowährungen und der Teilnahme an der Gemeinschaft verbunden sind. Bitte lesen Sie vor der Teilnahme unsere Nutzungsbedingungen und Risikohinweise."
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "Heim",
+      "fund": "Fonds",
+      "community": "Gemeinschaft",
+      "institutions": "Institutionen"
+    },
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "hero": {
+    "buttons": {
+      "contributor": "Als Mitwirkender beitreten",
+      "institutions": "Für Institutionen"
+    },
+    "features": {
+      "educate": {
+        "title": "Informieren und verstärken",
+        "description": "Schaffen Sie durch umfassende Aufklärung Bewusstsein und Verständnis für RWA"
+      },
+      "growth": {
+        "title": "Nachhaltiges Wachstum",
+        "description": "Machen Sie aus Airdrop-Jägern langfristige KOLs und Botschafter"
+      },
+      "institutional": {
+        "title": "Institutionelle Ausrichtung",
+        "description": "Sorgen Sie für echte Akzeptanz und nachweisbare Benutzerakzeptanz für Institutionen"
+      }
+    },
+    "stats": {
+      "partnerKols": "Partner-KOLs",
+      "partnerKolsDesc": "Top-Influencer",
+      "smallKols": "Kleine KOLs",
+      "smallKolsDesc": "Wachsende Influencer",
+      "activeUsers": "Aktive Benutzer",
+      "activeUsersDesc": "Community-Mitglieder"
+    },
+    "badge": "Der weltweit erste RWA-Beitragsfonds",
+    "title": "G3 FONDS",
+    "subtitle": "Der weltweit erste RWA-Beitragsfonds",
+    "description": "Befähigung von KOLs, Mitwirkenden und Partnern, die Zukunft von Real World Assets zu stärken."
+  },
+  "community": {
+    "title": "Als Mitwirkender beitreten",
+    "heroButton": "Als Mitwirkender bewerben",
+    "identityGrowthPath": {
+      "title": "Identitätswachstumspfad",
+      "subtitle": "Airdrop Hunter → Mitwirkender → Micro-KOL → Fondspartner",
+      "earlyBuilders": "Frühe Mitglieder werden in der Geschichte der RWA dauerhaft als „First Builders“ anerkannt."
+    },
+    "steps": {
+      "airdropHunter": {
+        "title": "Airdrop-Jäger",
+        "description": "Beginnen Sie Ihre Reise im Krypto-Bereich",
+        "requirements": [
+          "Frühzeitig mitmachen",
+          "Vollständige Überprüfung",
+          "Beteiligen Sie sich an der Community"
+        ],
+        "rewards": [
+          "Früher Zugriff",
+          "Exklusive Events",
+          "Direkte Betreuung"
+        ]
+      },
+      "contributor": {
+        "title": "Mitwirkender",
+        "description": "Werden Sie ein aktiver Community-Mitwirkender",
+        "requirements": [
+          "1.000–10.000 Follower",
+          "Inhalte erstellen",
+          "Community einbeziehen"
+        ],
+        "rewards": [
+          "Provisionsprämien",
+          "Trainingsprogramme",
+          "Inhaltsunterstützung"
+        ]
+      },
+      "microKol": {
+        "title": "Mikro-KOL",
+        "description": "Steigern Sie Ihren Einfluss und Ihre Reichweite",
+        "requirements": [
+          "10.000–100.000 Follower",
+          "Konstante Leistung",
+          "Hochwertiger Inhalt"
+        ],
+        "rewards": [
+          "Höhere Provisionen",
+          "Token-Anreize",
+          "Partnerschaftsmöglichkeiten"
+        ]
+      },
+      "fundPartner": {
+        "title": "Fondspartner",
+        "description": "Werden Sie ein Top-Partner",
+        "requirements": [
+          "Über 100.000 Follower",
+          "Außergewöhnliche Leistung",
+          "Strategischer Wert"
+        ],
+        "rewards": [
+          "Maximale Belohnungen",
+          "Kapitalbeteiligung",
+          "Strategischer Input"
+        ]
+      }
+    },
+    "labels": {
+      "step": "Schritt",
+      "requirements": "Anforderungen:",
+      "rewards": "Belohnungen:"
+    },
+    "incentiveMechanism": {
+      "title": "Anreizmechanismus",
+      "subtitle": "Hochwertige Anreizstruktur für langfristiges Community-Wachstum und nachhaltige Belohnungen",
+      "postToEarn": {
+        "title": "Posten, um zu verdienen",
+        "description": "Jeder Inhalt generiert Belohnungen",
+        "features": [
+          "Belohnungen für die Inhaltserstellung",
+          "Qualitätsbasierte Boni",
+          "Leistungsmetriken"
+        ]
+      },
+      "inviteToEarn": {
+        "title": "Zum Verdienen einladen",
+        "description": "Empfehlungen schaffen langfristige Umsatzbeteiligung",
+        "features": [
+          "2-stufige Provisionsstruktur",
+          "Lebenslange Umsatzbeteiligung",
+          "Netzwerkeffekte"
+        ]
+      },
+      "promotionPath": {
+        "title": "Beförderungspfad",
+        "description": "Ein höherer Status bringt größere, wiederkehrende Belohnungen",
+        "features": [
+          "Stufenbasierte Belohnungen",
+          "Wiederkehrende Einnahmen",
+          "Exklusive Möglichkeiten"
+        ]
+      },
+      "performanceBased": {
+        "title": "Leistungsbasiert",
+        "description": "Alle Anreize sind leistungsbezogen und langfristig gebunden",
+        "features": [
+          "Kein kurzfristiges Dumping",
+          "Langfristige Ausrichtung",
+          "Nachhaltiges Wachstum"
+        ]
+      }
+    },
+    "futureOpportunities": {
+      "title": "Zukünftige Möglichkeiten",
+      "subtitle": "Das G3 Fund-Ökosystem wird durch strategische Partnerschaften und Integrationen erweitert",
+      "phase2": {
+        "phase": "Phase 2",
+        "title": "Grüne Fonds an Bord",
+        "description": "ESG-Erzählung + globales Kapital"
+      },
+      "phase3": {
+        "phase": "Phase 3",
+        "title": "Integrieren Sie internationale Börsen",
+        "description": "Liquidität und Exposure"
+      },
+      "phase4": {
+        "phase": "Phase 4",
+        "title": "Bringen Sie mehr RWA-Projekte ein",
+        "description": "Endlose Belohnungen fließen in das Netzwerk"
+      }
+    },
+    "cta": {
+      "title": "Bereit, ein Erstbauer zu werden?",
+      "description": "Treten Sie noch heute der G3 Fund-Community bei und werden Sie dauerhaft als „First Builder“ in der Geschichte der RWA anerkannt.",
+      "startContributor": "Als Mitwirkender beginnen",
+      "applyInstitution": "Als Institution bewerben"
+    },
+    "complianceNotice": {
+      "title": "Wichtiger Hinweis",
+      "description": "Empfehlungsprämien sind leistungsbezogen und unterliegen den Community-Richtlinien. Alle Teilnehmer müssen Betrugsbekämpfungsmaßnahmen und regionale Beschränkungen einhalten. Es werden keine garantierten Erträge versprochen. Bitte lesen Sie unsere Servicebedingungen vor der Teilnahme."
+    }
+  },
+  "institutions": {
+    "title": "Für Institutionen",
+    "subtitle": "Die Partnerschaft",
+    "description": "Arbeiten Sie mit dem G3 Fund zusammen, um institutionelle Herausforderungen bei der Einführung von RWA, dem Aufbau von Communities und der nachweisbaren Benutzerakzeptanz zu lösen.",
+    "heroButton": "Werden Sie Partner des G3 Fund",
+    "challenges": {
+      "title": "Die institutionelle Herausforderung",
+      "subtitle": "Institutionen stehen bei der Einführung von RWA und dem Aufbau von Communities vor erheblichen Herausforderungen",
+      "userEducation": {
+        "title": "Lücke in der Benutzerschulung",
+        "description": "RWA ist komplex; Benutzer verstehen es nicht → schlechte Konvertierung"
+      },
+      "insufficientVoice": {
+        "title": "Unzureichende Stimme",
+        "description": "Institutionen verfügen über Vermögenswerte, aber es fehlt ihnen an einem starken Gemeinschaftsnetzwerk"
+      },
+      "inefficientMarketing": {
+        "title": "Ineffizientes Marketing",
+        "description": "Einmalige KOL-Posts sind teuer, bringen aber keinen Zinseszinseffekt"
+      },
+      "lackOfData": {
+        "title": "Mangelnde Daten",
+        "description": "Es ist schwierig, Regulierungsbehörden, LPs oder Partnern überprüfbare Akzeptanzkennzahlen vorzulegen"
+      },
+      "complianceRisks": {
+        "title": "Compliance- und Vertrauensrisiken",
+        "description": "Die Branche ist voller Lärm, Institutionen brauchen Glaubwürdigkeit"
+      }
+    },
+    "solution": {
+      "title": "Die G3-Fondslösung",
+      "subtitle": "Umfassende Lösungen zur Bewältigung institutioneller Herausforderungen bei der Einführung von RWA",
+      "educationNetwork": {
+        "title": "Spezielles RWA-Bildungsnetzwerk",
+        "description": "Bauen Sie ein umfassendes Bildungs- und Fördernetzwerk für RWA auf",
+        "features": [
+          "Bildungsinhalte",
+          "Gemeinschaftsengagement",
+          "Expertenwissen"
+        ]
+      },
+      "longTermAmbassadors": {
+        "title": "Langjährige Botschafter",
+        "description": "Machen Sie aus einmaligen Teilnehmern langfristige Botschafter",
+        "features": [
+          "Nachhaltiges Engagement",
+          "Markentreue",
+          "Kontinuierliche Förderung"
+        ]
+      },
+      "verifiableData": {
+        "title": "Überprüfbare Adoptionsdaten",
+        "description": "Bereitstellung von On-Chain- und Community-Daten als Nachweis der Akzeptanz",
+        "features": [
+          "On-Chain-Metriken",
+          "Community-Analysen",
+          "Leistungsverfolgung"
+        ]
+      },
+      "governance": {
+        "title": "Governance und Compliance",
+        "description": "Betrieb unter dem New Zealand Sustainable Initiative Trust",
+        "features": [
+          "Einhaltung gesetzlicher Vorschriften",
+          "Vertrauensrahmen",
+          "Governance-Struktur"
+        ]
+      }
+    },
+    "corePartners": {
+      "title": "Aktuelle Kernpartner",
+      "subtitle": "Strategische Partnerschaften in den Bereichen Technologie, Community, Governance und Asset Management",
+      "technologyTeams": {
+        "title": "Technologieteams",
+        "description": "IoT-, Oracle- und Blockchain-Ingenieure"
+      },
+      "communityBuilders": {
+        "title": "Community-Builder",
+        "description": "OG-Benutzer, TaskOn- und Zealy-Mitwirkende"
+      },
+      "governance": {
+        "title": "Führung",
+        "description": "New Zealand Sustainable Initiative Trust"
+      },
+      "assetPartners": {
+        "title": "Vermögenspartner",
+        "description": "Energie- und CO2-Reduktionsunternehmen in der APAC-Region"
+      },
+      "coreSponsor": {
+        "title": "Hauptsponsor",
+        "description": "AGV-Protokoll"
+      }
+    },
+    "participation": {
+      "title": "Möglichkeiten zur Teilnahme",
+      "subtitle": "Flexible Partnerschaftsoptionen für unterschiedliche institutionelle Bedürfnisse und Engagementstufen",
+      "lightSupport": {
+        "title": "Leichte Unterstützung",
+        "description": "Markenpräsenz, symbolisches Sponsoring",
+        "benefits": [
+          "Markensichtbarkeit",
+          "Anerkennung durch die Gemeinschaft",
+          "Basisunterstützung"
+        ]
+      },
+      "mediumSupport": {
+        "title": "Mittlere Unterstützung",
+        "description": "Token/USDT-Beiträge zum Fondspool",
+        "benefits": [
+          "Fondsbeteiligung",
+          "Umsatzbeteiligung",
+          "Vorrangiger Zugang"
+        ]
+      },
+      "strategicPartner": {
+        "title": "Strategischer Partner",
+        "description": "Markensichtbarkeit + Zugang zum Netzwerk + Priorität bei Adoptionsdaten",
+        "benefits": [
+          "Vollständiger Netzwerkzugriff",
+          "Priorität der Adoptionsdaten",
+          "Strategischer Input"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Bereit für eine Partnerschaft mit G3 Fund?",
+      "description": "Schließen Sie sich führenden Institutionen an und lösen Sie die Herausforderungen bei der Einführung von RWA mithilfe unseres umfassenden Partnerschaftsrahmens",
+      "button": "Werden Sie Partner des G3 Fund"
+    },
+    "complianceNotice": {
+      "title": "Wichtiger Compliance-Hinweis",
+      "description": "G3 Fund ist eine Initiative zur Gemeinschaftsentwicklung. Es werden keine Anlagerenditen garantiert. Alle Teilnehmer sollten sich der Risiken bewusst sein, die mit Kryptowährungen und der Teilnahme an der Gemeinschaft verbunden sind. Bitte lesen Sie vor der Teilnahme unsere Nutzungsbedingungen und Risikohinweise."
+    }
+  },
+  "fund": {
+    "title": "G3-Fondsstruktur",
+    "subtitle": "Demnächst verfügbar",
+    "description": "Wir bauen etwas Revolutionäres. Die Struktur des G3-Fonds und detaillierte Informationen werden in Kürze verfügbar sein.",
+    "viewInstitutions": "Institutionen anzeigen",
+    "joinCommunity": "Community beitreten",
+    "whatsComingTitle": "Was kommt",
+    "whatsComingSubtitle": "Erhalten Sie eine Vorschau auf die Struktur des G3-Fonds",
+    "preview": {
+      "tokenAllocation": {
+        "title": "Token-Zuteilung",
+        "description": "Transparentes Vertriebsmodell"
+      },
+      "fundBudget": {
+        "title": "Fondsbudget",
+        "description": "Details zur operativen Finanzierung"
+      },
+      "kolTargets": {
+        "title": "KOL-Ziele",
+        "description": "Partner-KOL-Spezifikationen"
+      },
+      "growthMetrics": {
+        "title": "Wachstumsmetriken",
+        "description": "Gemeindegrößenziele"
+      }
+    },
+    "stayUpdated": {
+      "title": "Bleiben Sie auf dem Laufenden",
+      "description": "Erfahren Sie als Erster, wann die G3-Fondsstruktur veröffentlicht wird. Werden Sie Mitglied unserer Community und erhalten Sie frühzeitigen Zugriff."
+    }
+  }
+}

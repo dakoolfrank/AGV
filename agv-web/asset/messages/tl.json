@@ -1,0 +1,190 @@
+{
+  "common": {
+    "loading": "Naglo-load...",
+    "error": "Error",
+    "success": "Tagumpay",
+    "submit": "Isumite",
+    "cancel": "Kanselahin",
+    "save": "I-save",
+    "edit": "I-edit",
+    "delete": "Tanggalin",
+    "back": "Bumalik",
+    "next": "Susunod",
+    "previous": "Nakaraang",
+    "close": "Isara",
+    "confirm": "Kumpirmahin",
+    "required": "Kinakailangan",
+    "optional": "Opsyonal",
+    "readMore": "Magbasa pa",
+    "yes": "Oo",
+    "no": "Hindi",
+    "review": "Balik-aral",
+    "submitting": "Isinusumite..."
+  },
+  "header": {
+    "title": "TUNAY NA MUNDO NA ASSET",
+    "alt": "Protokol ng AGV"
+  },
+  "form": {
+    "title": "FORM SA PAGRErehistro ng ASSET",
+    "steps": {
+      "basicData": "Pangunahing Datos",
+      "financialRevenue": "Pinansyal at Kita",
+      "operationsCompliance": "Mga Operasyon at Pagsunod",
+      "tierData": "Data ng Tier"
+    },
+    "basicData": {
+      "title": "BATAYANG DATOS",
+      "projectName": "Pangalan ng Proyekto",
+      "landParcelId": "Land Parcel ID",
+      "county": "County",
+      "city": "lungsod",
+      "province": "Lalawigan",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "landType": "Uri ng Lupa",
+      "landTypeOptions": {
+        "orchard": "Orchard",
+        "farmland": "Lupang sinasaka",
+        "facilityAgriculture": "Agrikultura ng Pasilidad"
+      },
+      "leaseContractId": "ID ng Kontrata sa Pag-upa",
+      "duration": "Tagal",
+      "owner": "May-ari"
+    },
+    "financialData": {
+      "title": "Data ng Pananalapi at Kita",
+      "unitInvestmentCost": "Gastos ng Unit Investment (CNY bawat mu o bawat MW)",
+      "annualCashFlowBreakdown": "Taunang Cash Flow Breakdown",
+      "otherSubsidies": "Iba pang Subsidy / Green Certificate Income",
+      "annualizedIRR": "Annualized IRR / ROI Calculation"
+    },
+    "operationsCompliance": {
+      "title": "Mga Operasyon at Pagsunod",
+      "companyName": "Pangalan ng Kumpanya",
+      "businessLicense": "Lisensya sa Negosyo / Credit Code",
+      "epcContractorName": "Pangalan ng Kontratista ng EPC / O&M",
+      "governmentFiling": "Mga ID ng Dokumento sa Pag-file / Pag-apruba ng Pamahalaan",
+      "governmentFilingOptions": {
+        "ndrc": "NDRC",
+        "energyBureau": "Kawanihan ng Enerhiya",
+        "agricultureBureau": "Kawanihan ng Agrikultura"
+      },
+      "operatingEntity": "Operating Entity",
+      "operatingEntityOptions": {
+        "agricultureInsurance": "Seguro sa Agrikultura",
+        "solarPlantInsurance": "Seguro sa Solar Plant"
+      },
+      "tier": "Piliin ang Tier",
+      "tierOptions": {
+        "orchardData": "Data ng Orchard",
+        "solarData": "Solar Data"
+      }
+    },
+    "orchardData": {
+      "title": "Data ng Orchard",
+      "plantingArea": "Lugar ng Pagtatanim (mu / ektarya)",
+      "numberOfTrees": "Bilang ng Puno",
+      "age": "Edad",
+      "variety": "Iba't-ibang",
+      "plantingDensity": "Densidad ng pagtatanim",
+      "rowSpacing": "Row Spacing",
+      "treeDensity": "Densidad ng Puno",
+      "annualYield": "Taunang ani (tonelada)",
+      "lastThreeYearsYield": "Huling 3 taon na ani",
+      "monitoringSystem": "Monitoring System (IoT device para sa pest/climate control)",
+      "deviceId": "Device ID kung available",
+      "orchardProductSalesRevenue": "Kita sa Benta ng Produkto ng Orchard"
+    },
+    "solarData": {
+      "title": "Solar Data",
+      "installedCapacity": "Naka-install na Kapasidad (MWp)",
+      "pvModuleModel": "Modelo ng PV Module",
+      "manufacturer": "Manufacturer",
+      "installationDate": "Petsa ng Pag-install",
+      "gridConnectionPermitId": "Grid Connection Permit ID",
+      "gridCompany": "Grid Company",
+      "averageAnnualPowerGeneration": "Average na Taunang Pagbuo ng Power (nakaraang 12 buwan, kWh)",
+      "tariffPpaContractId": "Tariff / PPA Contract ID",
+      "solarElectricitySalesRevenue": "Kita sa Benta ng Solar Electricity"
+    },
+    "review": {
+      "title": "Suriin ang Iyong Pagsusumite",
+      "basicData": "Pangunahing Datos",
+      "financialData": "Data ng Pananalapi at Kita",
+      "operationsCompliance": "Mga Operasyon at Pagsunod",
+      "orchardData": "Data ng Orchard",
+      "solarData": "Solar Data",
+      "backToEdit": "Bumalik sa Edit",
+      "submitRegistration": "Isumite ang Pagpaparehistro",
+      "noFileUploaded": "Walang na-upload na file"
+    },
+    "validation": {
+      "required": "Kinakailangan ang field na ito",
+      "fillAllRequired": "Mangyaring punan ang lahat ng kinakailangang field sa seksyong {section}.",
+      "selectTier": "Mangyaring pumili ng isang antas bago magpatuloy sa pagsusuri.",
+      "fieldRequired": "Kinakailangan ang field na ito"
+    },
+    "success": {
+      "submitted": "Matagumpay na naisumite ang pagpaparehistro ng asset!",
+      "failed": "Nabigong isumite ang pagpaparehistro ng asset. Pakisubukang muli."
+    }
+  },
+  "footer": {
+    "title": "RWA ASSETS",
+    "description": "Pagbabago ng agrikultura sa pamamagitan ng blockchain technology at real-world asset tokenization.",
+    "features": {
+      "secure": "Secure",
+      "fast": "Mabilis",
+      "multichain": "Multichain"
+    },
+    "sections": {
+      "resources": "Mga mapagkukunan",
+      "company": "kumpanya",
+      "support": "Suporta",
+      "legal": "Legal"
+    },
+    "links": {
+      "assetRegistration": "Pagpaparehistro ng Asset",
+      "documentation": "Dokumentasyon",
+      "support": "Suporta",
+      "aboutUs": "Tungkol sa Amin",
+      "careers": "Mga karera",
+      "blog": "Blog",
+      "helpCenter": "Help Center",
+      "contactSupport": "Makipag-ugnayan sa Suporta",
+      "faq": "FAQ",
+      "privacy": "Pagkapribado",
+      "terms": "Mga tuntunin",
+      "cookiePolicy": "Patakaran sa Cookie"
+    },
+    "legal": {
+      "headquarters": "Punong-tanggapan: Global",
+      "description": "Lahat ng karapatan ay nakalaan. Ang AGV Protocol ay isang desentralisadong platform para sa real-world na asset tokenization."
+    },
+    "copyright": "© 2024 AGV Protocol. Lahat ng karapatan ay nakalaan."
+  },
+  "locationPicker": {
+    "noLocationSelected": "Walang napiling lokasyon",
+    "changeLocation": "Baguhin ang Lokasyon",
+    "selectLocation": "Piliin ang Lokasyon",
+    "selectLocationTitle": "Piliin ang Lokasyon",
+    "searchLocation": "Maghanap ng Lokasyon",
+    "searchPlaceholder": "Ilagay ang address, lungsod, o landmark...",
+    "useCurrentLocation": "Gamitin ang Kasalukuyang Lokasyon",
+    "detecting": "Tinutukoy...",
+    "searchResults": "Mga Resulta ng Paghahanap",
+    "selectedLocation": "Napiling Lokasyon",
+    "address": "Address",
+    "province": "Lalawigan",
+    "city": "lungsod",
+    "county": "County",
+    "coordinates": "Mga coordinate",
+    "mapNotConfigured": "Hindi na-configure ang mga Map API. Mangyaring ipasok ang mga coordinate nang manu-mano o i-configure ang mga API key.",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "setCoordinates": "Itakda ang mga Coordinate",
+    "cancel": "Kanselahin",
+    "confirmLocation": "Kumpirmahin ang Lokasyon"
+  }
+}

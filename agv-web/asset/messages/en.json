@@ -1,0 +1,190 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "confirm": "Confirm",
+    "required": "Required",
+    "optional": "Optional",
+    "readMore": "Read More",
+    "yes": "Yes",
+    "no": "No",
+    "review": "Review",
+    "submitting": "Submitting..."
+  },
+  "header": {
+    "title": "REAL WORLD ASSETS",
+    "alt": "AGV Protocol"
+  },
+  "form": {
+    "title": "ASSET REGISTRATION FORM",
+    "steps": {
+      "basicData": "Basic Data",
+      "financialRevenue": "Financial & Revenue",
+      "operationsCompliance": "Operations & Compliance",
+      "tierData": "Tier Data"
+    },
+    "basicData": {
+      "title": "BASIC DATA",
+      "projectName": "Project Name",
+      "landParcelId": "Land Parcel ID",
+      "county": "County",
+      "city": "City",
+      "province": "Province",
+      "latitude": "Latitude",
+      "longitude": "Longitude",
+      "landType": "Land Type",
+      "landTypeOptions": {
+        "orchard": "Orchard",
+        "farmland": "Farmland",
+        "facilityAgriculture": "Facility Agriculture"
+      },
+      "leaseContractId": "Lease Contract ID",
+      "duration": "Duration",
+      "owner": "Owner"
+    },
+    "financialData": {
+      "title": "Financial & Revenue Data",
+      "unitInvestmentCost": "Unit Investment Cost (CNY per mu or per MW)",
+      "annualCashFlowBreakdown": "Annual Cash Flow Breakdown",
+      "otherSubsidies": "Other Subsidies / Green Certificate Income",
+      "annualizedIRR": "Annualized IRR / ROI Calculation"
+    },
+    "operationsCompliance": {
+      "title": "Operations & Compliance",
+      "companyName": "Company Name",
+      "businessLicense": "Business License / Credit Code",
+      "epcContractorName": "EPC / O&M Contractor Name",
+      "governmentFiling": "Government Filing / Approval Document IDs",
+      "governmentFilingOptions": {
+        "ndrc": "NDRC",
+        "energyBureau": "Energy Bureau",
+        "agricultureBureau": "Agriculture Bureau"
+      },
+      "operatingEntity": "Operating Entity",
+      "operatingEntityOptions": {
+        "agricultureInsurance": "Agriculture Insurance",
+        "solarPlantInsurance": "Solar Plant Insurance"
+      },
+      "tier": "Select Tier",
+      "tierOptions": {
+        "orchardData": "Orchard Data",
+        "solarData": "Solar Data"
+      }
+    },
+    "orchardData": {
+      "title": "Orchard Data",
+      "plantingArea": "Planting Area (mu / hectares)",
+      "numberOfTrees": "Number of Trees",
+      "age": "Age",
+      "variety": "Variety",
+      "plantingDensity": "Planting Density",
+      "rowSpacing": "Row Spacing",
+      "treeDensity": "Tree Density",
+      "annualYield": "Annual Yield (tons)",
+      "lastThreeYearsYield": "Last 3 years yield",
+      "monitoringSystem": "Monitoring System (IoT devices for pest/climate control)",
+      "deviceId": "Device ID if available",
+      "orchardProductSalesRevenue": "Orchard Product Sales Revenue"
+    },
+    "solarData": {
+      "title": "Solar Data",
+      "installedCapacity": "Installed Capacity (MWp)",
+      "pvModuleModel": "PV Module Model",
+      "manufacturer": "Manufacturer",
+      "installationDate": "Installation Date",
+      "gridConnectionPermitId": "Grid Connection Permit ID",
+      "gridCompany": "Grid Company",
+      "averageAnnualPowerGeneration": "Average Annual Power Generation (last 12 months, kWh)",
+      "tariffPpaContractId": "Tariff / PPA Contract ID",
+      "solarElectricitySalesRevenue": "Solar Electricity Sales Revenue"
+    },
+    "review": {
+      "title": "Review Your Submission",
+      "basicData": "Basic Data",
+      "financialData": "Financial & Revenue Data",
+      "operationsCompliance": "Operations & Compliance",
+      "orchardData": "Orchard Data",
+      "solarData": "Solar Data",
+      "backToEdit": "Back to Edit",
+      "submitRegistration": "Submit Registration",
+      "noFileUploaded": "No file uploaded"
+    },
+    "validation": {
+      "required": "This field is required",
+      "fillAllRequired": "Please fill in all required fields in the {section} section",
+      "selectTier": "Please select a tier before proceeding to review.",
+      "fieldRequired": "This field is required"
+    },
+    "success": {
+      "submitted": "Asset registration submitted successfully!",
+      "failed": "Failed to submit asset registration. Please try again."
+    }
+  },
+  "footer": {
+    "title": "RWA ASSETS",
+    "description": "Transforming agriculture through blockchain technology and real-world asset tokenization.",
+    "features": {
+      "secure": "Secure",
+      "fast": "Fast",
+      "multichain": "Multichain"
+    },
+    "sections": {
+      "resources": "Resources",
+      "company": "Company",
+      "support": "Support",
+      "legal": "Legal"
+    },
+    "links": {
+      "assetRegistration": "Asset Registration",
+      "documentation": "Documentation",
+      "support": "Support",
+      "aboutUs": "About Us",
+      "careers": "Careers",
+      "blog": "Blog",
+      "helpCenter": "Help Center",
+      "contactSupport": "Contact Support",
+      "faq": "FAQ",
+      "privacy": "Privacy",
+      "terms": "Terms",
+      "cookiePolicy": "Cookie Policy"
+    },
+    "legal": {
+      "headquarters": "Headquarters: Global",
+      "description": "All rights reserved. AGV Protocol is a decentralized platform for real-world asset tokenization."
+    },
+    "copyright": "© 2024 AGV Protocol. All rights reserved."
+  },
+  "locationPicker": {
+    "noLocationSelected": "No location selected",
+    "changeLocation": "Change Location",
+    "selectLocation": "Select Location",
+    "selectLocationTitle": "Select Location",
+    "searchLocation": "Search Location",
+    "searchPlaceholder": "Enter address, city, or landmark...",
+    "useCurrentLocation": "Use Current Location",
+    "detecting": "Detecting...",
+    "searchResults": "Search Results",
+    "selectedLocation": "Selected Location",
+    "address": "Address",
+    "province": "Province",
+    "city": "City",
+    "county": "County",
+    "coordinates": "Coordinates",
+    "mapNotConfigured": "Map APIs not configured. Please enter coordinates manually or configure API keys.",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "setCoordinates": "Set Coordinates",
+    "cancel": "Cancel",
+    "confirmLocation": "Confirm Location"
+  }
+}

@@ -1,0 +1,190 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "submit": "Einreichen",
+    "cancel": "Stornieren",
+    "save": "Speichern",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "back": "Zurück",
+    "next": "Nächste",
+    "previous": "Vorherige",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "required": "Erforderlich",
+    "optional": "Optional",
+    "readMore": "Mehr lesen",
+    "yes": "Ja",
+    "no": "NEIN",
+    "review": "Rezension",
+    "submitting": "Senden..."
+  },
+  "header": {
+    "title": "REALE WELTVERMÖGENSWERTE",
+    "alt": "AGV-Protokoll"
+  },
+  "form": {
+    "title": "Formular zur Vermögensregistrierung",
+    "steps": {
+      "basicData": "Basisdaten",
+      "financialRevenue": "Finanzen & Einnahmen",
+      "operationsCompliance": "Betrieb und Compliance",
+      "tierData": "Tierdaten"
+    },
+    "basicData": {
+      "title": "GRUNDDATEN",
+      "projectName": "Projektname",
+      "landParcelId": "Flurstücks-ID",
+      "county": "County",
+      "city": "Stadt",
+      "province": "Provinz",
+      "latitude": "Breite",
+      "longitude": "Länge",
+      "landType": "Grundstückstyp",
+      "landTypeOptions": {
+        "orchard": "Obstgarten",
+        "farmland": "Ackerland",
+        "facilityAgriculture": "Anlage Landwirtschaft"
+      },
+      "leaseContractId": "Leasingvertrags-ID",
+      "duration": "Dauer",
+      "owner": "Eigentümer"
+    },
+    "financialData": {
+      "title": "Finanz- und Umsatzdaten",
+      "unitInvestmentCost": "Einheitliche Investitionskosten (CNY pro mu oder pro MW)",
+      "annualCashFlowBreakdown": "Jährliche Cashflow-Aufschlüsselung",
+      "otherSubsidies": "Sonstige Subventionen / Einnahmen aus Grünen Zertifikaten",
+      "annualizedIRR": "Annualisierte IRR/ROI-Berechnung"
+    },
+    "operationsCompliance": {
+      "title": "Betrieb und Compliance",
+      "companyName": "Name der Firma",
+      "businessLicense": "Geschäftslizenz/Kreditcode",
+      "epcContractorName": "Name des EPC-/O&M-Auftragnehmers",
+      "governmentFiling": "IDs für amtliche Einreichungs-/Genehmigungsdokumente",
+      "governmentFilingOptions": {
+        "ndrc": "NDRC",
+        "energyBureau": "Energiebüro",
+        "agricultureBureau": "Landwirtschaftsbüro"
+      },
+      "operatingEntity": "Betreibergesellschaft",
+      "operatingEntityOptions": {
+        "agricultureInsurance": "Landwirtschaftsversicherung",
+        "solarPlantInsurance": "Solaranlagenversicherung"
+      },
+      "tier": "Stufe auswählen",
+      "tierOptions": {
+        "orchardData": "Obstgartendaten",
+        "solarData": "Solardaten"
+      }
+    },
+    "orchardData": {
+      "title": "Obstgartendaten",
+      "plantingArea": "Pflanzfläche (mu / Hektar)",
+      "numberOfTrees": "Anzahl der Bäume",
+      "age": "Alter",
+      "variety": "Vielfalt",
+      "plantingDensity": "Pflanzdichte",
+      "rowSpacing": "Zeilenabstand",
+      "treeDensity": "Baumdichte",
+      "annualYield": "Jährlicher Ertrag (Tonnen)",
+      "lastThreeYearsYield": "Rendite der letzten 3 Jahre",
+      "monitoringSystem": "Überwachungssystem (IoT-Geräte zur Schädlings-/Klimakontrolle)",
+      "deviceId": "Geräte-ID, falls verfügbar",
+      "orchardProductSalesRevenue": "Umsatzerlöse aus dem Verkauf von Obstgartenprodukten"
+    },
+    "solarData": {
+      "title": "Solardaten",
+      "installedCapacity": "Installierte Leistung (MWp)",
+      "pvModuleModel": "PV-Modulmodell",
+      "manufacturer": "Hersteller",
+      "installationDate": "Installationsdatum",
+      "gridConnectionPermitId": "Netzanschlussgenehmigungs-ID",
+      "gridCompany": "Netzgesellschaft",
+      "averageAnnualPowerGeneration": "Durchschnittliche jährliche Stromerzeugung (letzte 12 Monate, kWh)",
+      "tariffPpaContractId": "Tarif-/PPA-Vertrags-ID",
+      "solarElectricitySalesRevenue": "Umsatz mit Solarstrom"
+    },
+    "review": {
+      "title": "Überprüfen Sie Ihre Einreichung",
+      "basicData": "Basisdaten",
+      "financialData": "Finanz- und Umsatzdaten",
+      "operationsCompliance": "Betrieb und Compliance",
+      "orchardData": "Obstgartendaten",
+      "solarData": "Solardaten",
+      "backToEdit": "Zurück zur Bearbeitung",
+      "submitRegistration": "Registrierung absenden",
+      "noFileUploaded": "Keine Datei hochgeladen"
+    },
+    "validation": {
+      "required": "Dieses Feld ist erforderlich",
+      "fillAllRequired": "Bitte füllen Sie alle erforderlichen Felder im Abschnitt {section} aus",
+      "selectTier": "Bitte wählen Sie eine Stufe aus, bevor Sie mit der Überprüfung fortfahren.",
+      "fieldRequired": "Dieses Feld ist erforderlich"
+    },
+    "success": {
+      "submitted": "Die Asset-Registrierung wurde erfolgreich übermittelt!",
+      "failed": "Die Asset-Registrierung konnte nicht übermittelt werden. Bitte versuchen Sie es erneut."
+    }
+  },
+  "footer": {
+    "title": "RWA ASSETS",
+    "description": "Transformation der Landwirtschaft durch Blockchain-Technologie und Tokenisierung realer Vermögenswerte.",
+    "features": {
+      "secure": "Sicher",
+      "fast": "Schnell",
+      "multichain": "Mehrketten"
+    },
+    "sections": {
+      "resources": "Ressourcen",
+      "company": "Unternehmen",
+      "support": "Unterstützung",
+      "legal": "Rechtliches"
+    },
+    "links": {
+      "assetRegistration": "Anlagenregistrierung",
+      "documentation": "Dokumentation",
+      "support": "Unterstützung",
+      "aboutUs": "Über uns",
+      "careers": "Karriere",
+      "blog": "Der Blog",
+      "helpCenter": "Hilfecenter",
+      "contactSupport": "Support kontaktieren",
+      "faq": "Häufig gestellte Fragen",
+      "privacy": "Datenschutz",
+      "terms": "Bedingungen",
+      "cookiePolicy": "Cookie-Richtlinie"
+    },
+    "legal": {
+      "headquarters": "Hauptsitz: Global",
+      "description": "Alle Rechte vorbehalten. AGV Protocol ist eine dezentrale Plattform für die Tokenisierung realer Vermögenswerte."
+    },
+    "copyright": "© 2024 AGV Protocol. Alle Rechte vorbehalten."
+  },
+  "locationPicker": {
+    "noLocationSelected": "Kein Standort ausgewählt",
+    "changeLocation": "Standort ändern",
+    "selectLocation": "Standort auswählen",
+    "selectLocationTitle": "Standort auswählen",
+    "searchLocation": "Ort suchen",
+    "searchPlaceholder": "Geben Sie Adresse, Stadt oder Sehenswürdigkeit ein ...",
+    "useCurrentLocation": "Aktuellen Standort verwenden",
+    "detecting": "Erkennen...",
+    "searchResults": "Suchergebnisse",
+    "selectedLocation": "Ausgewählter Standort",
+    "address": "Adresse",
+    "province": "Provinz",
+    "city": "Stadt",
+    "county": "County",
+    "coordinates": "Koordinaten",
+    "mapNotConfigured": "Karten-APIs nicht konfiguriert. Bitte geben Sie die Koordinaten manuell ein oder konfigurieren Sie die API-Schlüssel.",
+    "latitude": "Breite",
+    "longitude": "Länge",
+    "setCoordinates": "Koordinaten festlegen",
+    "cancel": "Stornieren",
+    "confirmLocation": "Standort bestätigen"
+  }
+}

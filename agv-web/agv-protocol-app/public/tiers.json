@@ -1,0 +1,10 @@
+{
+  "tiers": {
+    "flex": {"apr": 100, "split": {"real": 0.25, "boost": 0.60, "social": 0.15}},
+    "1m": {"apr": 350, "split": {"real": 0.25, "boost": 0.60, "social": 0.15}},
+    "3m": {"apr": 400, "split": {"real": 0.25, "boost": 0.60, "social": 0.15}},
+    "6m": {"apr": 480, "split": {"real": 0.25, "boost": 0.60, "social": 0.15}},
+    "12m": {"apr": 490, "split": {"real": 0.30, "boost": 0.60, "social": 0.10}}
+  },
+  "nftMultipliers": {"Seed": 1.0, "Tree": 1.5, "Solar": 3.0}
+}

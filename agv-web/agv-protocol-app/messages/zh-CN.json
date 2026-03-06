@@ -1,0 +1,1408 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "节省",
+    "edit": "编辑",
+    "delete": "删除",
+    "back": "后退",
+    "next": "下一个",
+    "previous": "以前的",
+    "close": "关闭",
+    "confirm": "确认",
+    "required": "必需的",
+    "optional": "选修的",
+    "readMore": "阅读更多"
+  },
+  "nav": {
+    "home": "家",
+    "about": "关于",
+    "career": "职业",
+    "blog": "资源",
+    "investors": "投资者关系",
+    "dashboard": "仪表板"
+  },
+  "header": {
+    "nav": {
+      "home": "家",
+      "about": "关于",
+      "products": "产品",
+      "research": "研究",
+      "investorRelations": "投资者关系",
+      "dashboard": "仪表板",
+      "staking": "质押",
+      "mint": "薄荷"
+    },
+    "connectWallet": "连接钱包",
+    "disconnect": "断开"
+  },
+  "hero": {
+    "description": "解锁专属 SeedPass、TreePass、SolarPass 和 ComputePass NFT，开启您获得可持续奖励的大门。立即质押，无锁定期，并开始在 BSC、Polygon 和 Arbitrum 网络上赚取每日奖励。",
+    "startMinting": "开始铸造",
+    "viewStaking": "查看 Staking",
+    "blockchains": "区块链",
+    "nftCollections": "NFT 收藏品",
+    "dailyRewards": "每日奖励",
+    "title1": "领先的风险加权资产",
+    "title2": "AI Power 协议"
+  },
+  "whatisagv": {
+    "title": "什么是 AGV？",
+    "description": "AGV（AgriVolt 协议）是一个基于真实资产的 Web3 协议，它将果园、太阳能农场和去中心化节点接入区块链。每个资产单位都能产生现实世界的收益，涵盖水果收成、太阳能和边缘计算等诸多领域。"
+  },
+  "whyagv": {
+    "title": "为什么AGV是真正收益基础设施的蓝图？",
+    "description": "AGV 并非一次性项目。它是一个可复制的协议，将真实土地转化为数字化的收益基础设施。根据实际果园产量和区域太阳能性能数据，预计每台 AGV 单元每年可创造 18 万至 28 万美元的收入，内部收益率 (IRR) 在 18% 至 26% 之间。"
+  },
+  "fixing": {
+    "title": "修复现实世界标记化中的问题",
+    "description1": "AGV 通过将果园和太阳能农场转化为 NFT 和代币，连接数字世界和现实世界。每项资产都与智能合约挂钩，从而实现收益共享、所有权和治理的自动化，从而解决数据碎片化、产量无法验证以及土地权不透明等问题。",
+    "description2": "AGV 的核心是采用标准化资产单位：100 亩高产苹果园搭配 6 兆瓦太阳能发电。该模式每单位年收入可达 18 万至 28 万美元，内部收益率 (IRR) 为 18% 至 26%，并由基于物联网的绩效数据和预测模型提供支持。",
+    "description3": "与难以复制的传统农业项目不同，AGV 单元采用 SPV 封装、兼容 DeFi 且全球模块化，从而实现快速部署和跨境可重复扩展。"
+  },
+  "exploreagv": {
+    "title": "探索 AGV 的链上基础设施",
+    "description": "欢迎参观我们的实际项目现场，了解果园、太阳能电池板和区块链如何融合。从中国的绿色区域到未来的国际枢纽，AGV 正在构建链上陆基 RWA 的未来。"
+  },
+  "blockchain": {
+    "title": "利用区块链彻底改变基础设施",
+    "realAssets": "真实资产。真实收入。",
+    "eachUnit": "每个 AGV 单元包括：",
+    "item1": "100亩高产苹果园",
+    "item2": "6MW太阳能电池阵列并网",
+    "item3": "用于实时监控的物联网传感器",
+    "item4": "自动收益共享的智能合约",
+    "item5": "透明的所有权和治理",
+    "item6": "与 DeFi 兼容的代币化",
+    "assetsDescription": "资产是基于土地的、能产生收益的、能抗通胀的——而不是合成代币或投机性的 DeFi 实验。",
+    "onChainData": "链上数据基础设施",
+    "onChainDataDesc": "每个单位都配备：",
+    "onChainItem1": "用于实时产量和能源数据的物联网传感器",
+    "onChainItem2": "智能合约和 NFT 映射",
+    "onChainItem3": "仪表板与卫星信息同步",
+    "onChainItem4": "代币发行与已验证的输出挂钩",
+    "onChainDataDesc2": "用户可以监控增长、发电量和代币累积——所有这些都透明地记录并可在链上访问。",
+    "builtToScale": "在全球范围内扩大规模",
+    "builtToScaleDesc": "每个 AGV 单元都通过 SPV 进行标准化和标记化：",
+    "builtItem1": "可通过电池存储和边缘计算进行扩展",
+    "builtItem2": "模块化设计支持灌溉、AI节点或碳追踪",
+    "builtItem3": "适用于亚洲、拉丁美洲、非洲和中东及北非地区",
+    "builtToScaleDesc2": "支持 CEX、兼容 DeFi 且符合 ESG 要求 — AGV 专为全球整合而构建。"
+  },
+  "threelayer": {
+    "title": "现实世界收益率的三个层次",
+    "fruit": {
+      "title": "水果支持的NFT",
+      "description": "AGV 将苹果园转化为代币化资产。每个 NFT 都对应一棵真实的树，在链上产出果实、产生收益并进行可验证的收益。"
+    },
+    "solar": {
+      "title": "太阳能驱动的奖励",
+      "description": "每个单元都包含 6MW 的太阳能容量，不仅为农场供电，还为边缘节点和能源支持的代币铸造供电——“阳光作为收入”。"
+    },
+    "depin": {
+      "title": "DePIN 就绪基础设施",
+      "description": "AGV 结合传感器、智能合约和实时数据，为边缘节点供电、记录碳排放并在全球范围内提供 Web3 服务。"
+    }
+  },
+  "testimonials": {
+    "title1": "基础设施的未来是真实的、绿色的、链上的",
+    "description": "顶级机构一致认为：实体资产、可持续能源和区块链融合正在塑造下一个万亿美元的机遇。AGV 正处于这些宏观趋势的交汇点。",
+    "quote1": "到 2030 年，现实世界资产的代币化可能会开启一个价值 10 万亿美元的市场。",
+    "source1": "波士顿咨询集团",
+    "quote2": "ESG 和能源相关基础设施将在未来十年主导机构流动。",
+    "source2": "贝莱德2024年展望",
+    "quote3": "分布式绿色能源是长期经济复原力的基础。",
+    "source3": "世界银行",
+    "title2": "未来由土地、阳光和代码驱动",
+    "investNow": "立即投资"
+  },
+  "maincontent": {
+    "platformOverview": "平台概述",
+    "coreFeatures": "核心功能",
+    "getStarted": "开始",
+    "community": "社区",
+    "latestUpdates": "最新更新",
+    "features": {
+      "multichain": {
+        "title": "多链支持",
+        "description": "在 BSC、Polygon 和 Arbitrum 网络上部署和管理 NFT"
+      },
+      "secure": {
+        "title": "安全铸造",
+        "description": "先进的安全措施和智能合约审计"
+      },
+      "rewards": {
+        "title": "即时奖励",
+        "description": "使用我们的权益系统铸造后立即获得奖励"
+      }
+    },
+    "stats": {
+      "totalSupply": "总供应量",
+      "nftsMinted": "NFT 铸造",
+      "rewardRate": "奖励率",
+      "dailyRewards": "每日奖励",
+      "securityScore": "安全评分",
+      "auditRating": "审计评级",
+      "upto50rggp": "高达 50 rGGP",
+      "nftCount": "1,234"
+    },
+    "social": {
+      "github": "GitHub",
+      "twitter": "叽叽喳喳",
+      "discord": "不和谐",
+      "telegram": "电报",
+      "follow": "跟随",
+      "stars": "星星",
+      "followers": "追随者",
+      "members": "成员"
+    },
+    "articles": {
+      "introducing": {
+        "title": "AGV协议介绍",
+        "description": "了解如何铸造您的第一个 NFT 并开始赚取奖励"
+      },
+      "multichain": {
+        "title": "了解多链质押",
+        "description": "跨不同网络质押的综合指南"
+      },
+      "security": {
+        "title": "安全最佳实践",
+        "description": "如何保障你的 NFT 和奖励安全"
+      },
+      "readMore": "阅读更多"
+    }
+  },
+  "footer": {
+    "copyright": " AGV 协议。保留所有权利。",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "contact": "联系我们",
+    "description": "通过创新的 NFT 技术，实现去中心化计算的未来。加入成千上万的用户，在多个区块链网络上铸造专属的 AGV NFT。",
+    "secure": "安全可靠",
+    "fast": "闪电般快速",
+    "multichain": "多链",
+    "resources": "资源",
+    "nftMinting": "NFT铸造",
+    "nftStaking": "NFT 质押",
+    "kolProgram": "KOL计划",
+    "company": "公司",
+    "aboutUs": "关于我们",
+    "careers": "职业发展",
+    "blogs": "博客",
+    "support": "支持",
+    "helpCenter": "帮助中心",
+    "documentation": "文档",
+    "contactSupport": "联系支持",
+    "legal": "合法的",
+    "cookiePolicy": "Cookie 政策",
+    "gdpr": "GDPR",
+    "headquarters": "总部位于亚洲，业务遍及全球，并由顶级公司审计。",
+    "legalText": "所有现实世界资产均由授权的中国特殊目的公司持有，并通过法律授权映射到JLL Asset Ltd.（英属维尔京群岛公司编号：2182436）。NFT的发行和运营由iJET Limited（NZBN：9429049576290）负责。目前，AGV DAO的治理过渡正在进行中。"
+  },
+  "staking": {
+    "title": "AGV 协议质押",
+    "description": "质押您的 NFT 并赚取奖励",
+    "protocolTitle": "AGV 协议质押",
+    "stakeYour": "质押你的",
+    "nftsOn": "NFT 上",
+    "toEarnRewards": "获得奖励",
+    "stake": "赌注",
+    "unstake": "取消质押",
+    "rewards": "奖励",
+    "totalStaked": "总质押量",
+    "availableRewards": "可用奖励",
+    "overview": "质押概览",
+    "stakedNFTs": "质押 NFT",
+    "currentlyStaked": "目前质押",
+    "rggpReadyToClaim": "rGGP 已准备好领取",
+    "dailyRewards": "每日奖励",
+    "perNFTStaked": "每个 NFT 质押",
+    "selectNetwork": "选择网络",
+    "selectNFTCollection": "选择 NFT 收藏",
+    "selectNftCollection": "选择 NFT 收藏",
+    "selectStakingDuration": "选择质押期限",
+    "quickSelect": "快速选择",
+    "day": "天",
+    "days": "天",
+    "durationDays": "持续时间（天）",
+    "lockPeriod": "锁定期",
+    "yourNftsWillBeLocked": "您的 NFT 将被锁定",
+    "youCannotWithdraw": "在此期限结束之前您不能提款",
+    "lockPeriodDescription": "您的 NFT 将被锁定 {duration} 天{plural}。锁定期结束前，您无法提现。最短质押期限为 7 天。",
+    "currentWalletChain": "当前钱包链",
+    "notConnected": "未连接",
+    "connectWalletFirst": "首先连接钱包",
+    "selectAtLeastOne": "请选择至少一个 tokenId",
+    "selectAtLeastOneToken": "至少选择一个令牌",
+    "durationMustBeAtLeastOneDay": "持续时间必须至少为一天",
+    "minimumDuration": "质押时长必须至少为 7 天",
+    "approving": "批准（如果需要）...",
+    "approvingIfNeeded": "批准（如果需要）...",
+    "stakingOnChain": "链上质押……",
+    "recordingStake": "记录股份…",
+    "stakeSuccess": "已质押 {duration} 天{plural}！",
+    "stakeFailed": "质押失败",
+    "selectAtLeastOneWithdraw": "选择至少一个 NFT 进行提取",
+    "withdrawingOnChain": "链上提现……",
+    "updatingRecords": "正在更新记录...",
+    "withdrawSuccess": "撤回！",
+    "withdrawFailed": "提现失败",
+    "selectNftsToStake": "选择要质押的 NFT",
+    "detectedInWallet": "在钱包中检测到",
+    "available": "可用的",
+    "connectYourWallet": "连接你的钱包",
+    "connectToView": "查看你的 NFT",
+    "connect": "连接",
+    "selected": "选定",
+    "clear": "清除",
+    "withdrawStakedNfts": "提取质押的 NFT",
+    "selectStakedNftsDescription": "选择要提取的质押 NFT",
+    "connectWalletToSeeStakedNfts": "连接钱包查看已质押的 NFT",
+    "whitelistRequired": "需要白名单",
+    "rewardsDashboard": {
+      "title": "rGGP 奖励仪表板",
+      "subtitle": "赚取 rGGP 积分",
+      "available": "rGGP 可用",
+      "remaining": "剩余",
+      "collection": "收藏",
+      "baseRate": "基础费率",
+      "bonusMultiplier": "奖励倍数",
+      "activeStakes": "活跃质押",
+      "readyToClaim": "准备领取",
+      "claimAllRewards": "领取所有奖励",
+      "claiming": "领取中...",
+      "activeStakesTitle": "活跃质押",
+      "withdrawnStakesTitle": "已提取质押",
+      "noActiveStakes": "无活跃质押",
+      "noWithdrawnStakes": "无已提取质押"
+    },
+    "legacyRewards": {
+      "title": "传统奖励预览",
+      "selection": "选择",
+      "baseDailyPerNft": "每日基础（每个 NFT）",
+      "bonusMultiplier": "奖励倍数",
+      "perNftDaily": "每个 NFT 每日",
+      "totalDailyAllSelected": "每日总计（所有选中）",
+      "duration": "持续时间",
+      "scheduledTotal": "计划总计（选择 × 天数）",
+      "description": "这是基于当前选择和时间锁定的传统奖励估算。"
+    },
+    "yourStakes": {
+      "title": "您的质押",
+      "connectWalletToView": "连接钱包查看您的质押",
+      "loadingStakes": "加载您的质押中...",
+      "noStakesFound": "未找到此网络和收藏的质押。",
+      "staked": "质押",
+      "unlocks": "解锁",
+      "unlocked": "已解锁",
+      "left": "剩余",
+      "accrued": "已累积",
+      "rate": "费率",
+      "counted": "已计算"
+    },
+    "nftSelection": {
+      "noNftsFound": "未找到 AGV NFT",
+      "noNftsDescription": "您在 {network} 上连接的钱包中没有 {collection} NFT。",
+      "mintFirstNft": "铸造您的第一个 NFT",
+      "selected": "已选择",
+      "clear": "清除",
+      "stake": "质押",
+      "staking": "质押中…"
+    },
+    "loadingStakedNfts": "加载质押的 NFT 中…",
+    "noStakesFoundForNetwork": "未找到此网络和收藏的质押。",
+    "durationMustBeAtLeastSevenDays": "质押期限必须至少为 7 天。"
+  },
+  "minting": {
+    "title": "AGV 协议铸造",
+    "description": "Mint 跨多个区块链网络的独家 AGV 协议 NFT。",
+    "collections": "从 SeedPass、TreePass、SolarPass 和 ComputePass 集合中进行选择。",
+    "liveMinting": "实时铸造",
+    "multiChain": "多链",
+    "usdtPayment": "USDT支付",
+    "selectNetwork": "选择网络",
+    "mintingMode": "铸币模式",
+    "mintingModeDescription": "选择您的铸造模式",
+    "publicMint": "公共铸币厂",
+    "agentMint": "特工薄荷",
+    "selectNftToMint": "选择要铸造的 NFT",
+    "chooseQuantity": "选择数量",
+    "nft": {
+      "seed": {
+        "name": "SeedPass NFT",
+        "description": "获得可持续农业奖励和专属福利"
+      },
+      "tree": {
+        "name": "TreePass NFT",
+        "description": "优质树木领养，奖励更丰厚"
+      },
+      "solar": {
+        "name": "SolarPass NFT",
+        "description": "太阳能奖励和绿色基础设施使用"
+      },
+      "compute": {
+        "name": "ComputePass NFT",
+        "description": "边缘计算奖励和 DePIN 基础设施访问"
+      }
+    },
+    "referralId": "推荐人 ID",
+    "input6DigitId": "输入6位ID",
+    "referralIdPlaceholder": "输入推荐人ID",
+    "summary": "概括",
+    "noItemsSelected": "未选择任何商品",
+    "connectAndMint": "连接并铸造",
+    "connectWallet": "连接钱包",
+    "walletNotConnected": "钱包未连接",
+    "insufficientGasBalance": "气体平衡不足",
+    "insufficientGas": "气体不足",
+    "mint": "薄荷",
+    "minting": "正在铸造...",
+    "mintNfts": "Mint NFT",
+    "referralLinkCopied": "推荐链接已复制",
+    "whitelistRequired": "需要白名单",
+    "price": "价格",
+    "supply": "供应",
+    "remaining": "其余的",
+    "loading": "正在加载铸造界面..."
+  },
+  "dashboard": {
+    "title": "仪表板",
+    "description": "AGV 协议活动和性能概述",
+    "overview": "概述",
+    "analytics": "分析",
+    "performance": "表现",
+    "activity": "活动"
+  },
+  "landing": {
+    "hero": {
+      "title": "AGV 协议 NFT 生态系统",
+      "description": "解锁专属 SeedPass、TreePass、SolarPass 和 ComputePass NFT，开启您获得可持续奖励的大门。立即质押，无锁定期，并开始在 BSC、Polygon 和 Arbitrum 网络上赚取每日奖励。",
+      "startMinting": "开始铸造",
+      "viewStaking": "查看 Staking",
+      "stats": {
+        "blockchains": "区块链",
+        "nftCollections": "NFT 收藏品",
+        "dailyRewards": "rGGP 每日奖励"
+      }
+    },
+    "platformOverview": {
+      "title": "平台概述",
+      "totalSupply": "总供应量",
+      "nftsMinted": "NFT 铸造",
+      "rewardRate": "奖励率",
+      "dailyRewards": "每日奖励",
+      "auditRating": "审计评级",
+      "securityScore": "安全评分"
+    },
+    "coreFeatures": {
+      "title": "核心功能",
+      "multiChain": {
+        "title": "多链支持",
+        "description": "在 BSC、Polygon 和 Arbitrum 网络上部署和管理 NFT"
+      },
+      "secureMinting": {
+        "title": "安全铸造",
+        "description": "先进的安全措施和智能合约审计"
+      },
+      "instantRewards": {
+        "title": "即时奖励",
+        "description": "使用我们的权益系统铸造后立即获得奖励"
+      }
+    },
+    "getStarted": {
+      "title": "开始",
+      "mintNFTs": {
+        "title": "Mint NFT",
+        "description": "跨多链铸造 AGV 协议 NFT",
+        "button": "开始铸造"
+      },
+      "stakeEarn": {
+        "title": "质押并赚取",
+        "description": "质押您的 NFT 来赚取每日奖励",
+        "button": "开始质押"
+      },
+      "learnMore": {
+        "title": "了解更多",
+        "description": "探索代币信息和文档",
+        "button": "查看详情"
+      }
+    },
+    "community": {
+      "title": "社区",
+      "github": "GitHub",
+      "twitter": "叽叽喳喳",
+      "discord": "不和谐",
+      "telegram": "电报",
+      "follow": "跟随",
+      "members": "成员",
+      "followers": "追随者",
+      "stars": "星星"
+    },
+    "latestUpdates": {
+      "title": "最新更新",
+      "readMore": "阅读更多",
+      "articles": {
+        "introducing": {
+          "title": "AGV协议介绍",
+          "description": "AGV协议简介：解锁现实世界资产的未来"
+        },
+        "rggpExplained": {
+          "title": "rGGP 解释",
+          "description": "AGV 协议如何将现实世界的收益转化为链上奖励"
+        }
+      }
+    },
+    "whatIsAGV": {
+      "title": "什么是 AGV？",
+      "description": "AGV（AgriVolt 协议）是一个基于真实资产的 Web3 协议，它将果园、太阳能农场和去中心化节点接入区块链。每个资产单元都能产生现实世界的收益，涵盖水果收成、太阳能发电和边缘计算。用户可以认养果树、参与太阳能项目，并获得代币化奖励，收益透明。AGV 扎根于中国领先的农业和太阳能地区，使可持续性变得可投资、可验证，并在全球范围内具有可扩展性。"
+    },
+    "threeLayer": {
+      "title": "现实世界收益率的三个层次",
+      "fruitBacked": {
+        "title": "水果支持的NFT",
+        "description": "AGV 将苹果园转变为代币化资产。每个 NFT 都映射到一棵真实的树上，在链上产生果实、收入和可验证的收益。"
+      },
+      "solarDriven": {
+        "title": "太阳能驱动的奖励",
+        "description": "每个单元包括 6MW 的太阳能容量，不仅为农场供电，还为边缘节点和能源支持的代币铸造供电——“阳光作为收入”。"
+      },
+      "depinReady": {
+        "title": "DePIN 就绪基础设施",
+        "description": "AGV 结合传感器、智能合约和实时数据，为边缘节点供电、记录碳排放并在全球范围内提供 Web3 服务。"
+      }
+    },
+    "fixing": {
+      "title": "修复现实世界标记化中的问题",
+      "description1": "AGV 通过将果园和太阳能农场转化为 NFT 和代币，连接数字世界和现实世界。每项资产都与智能合约挂钩，从而实现收益共享、所有权和治理的自动化，从而解决数据碎片化、产量无法验证以及土地权不透明等问题。",
+      "description2": "AGV 的核心是采用标准化资产单位：100 亩高产苹果园搭配 6 兆瓦太阳能发电。该模式每单位年收入可达 18 万至 28 万美元，内部收益率 (IRR) 为 18% 至 26%，并由基于物联网的绩效数据和预测模型提供支持。",
+      "description3": "与难以复制的传统农业项目不同，AGV 单元采用 SPV 封装、兼容 DeFi 且全球模块化，从而实现快速部署和跨境可重复扩展。"
+    },
+    "exploreAGV": {
+      "title": "探索 AGV 的链上基础设施",
+      "description": "欢迎参观我们的实际项目现场，了解果园、太阳能电池板和区块链如何融合。从中国的绿色区域到未来的国际枢纽，AGV 正在构建链上陆基 RWA 的未来。"
+    },
+    "whyAGV": {
+      "title": "为什么AGV是真正收益基础设施的蓝图？",
+      "description1": "AGV 并非一次性项目。它是一种可复制的协议，将真实土地转化为数字化收益基础设施。",
+      "description2": "根据实际果园产量和区域太阳能性能数据，每个 AGV 单元预计每年可产生 18 万至 28 万美元的收入，内部收益率在 18% 至 26% 之间。",
+      "description3": "我们将中国世界领先的农业和太阳能资产与模块化 SPV 代币化和链上数据架构相结合，使每个物理单元都具有数字可验证性、收益性和 DeFi 兼容性。"
+    },
+    "blockchainInfrastructure": {
+      "title": "利用区块链彻底改变基础设施",
+      "realAssets": {
+        "title": "真实资产。真实收入。",
+        "description": "每个 AGV 单元包括：",
+        "features": [
+          "100亩高密度苹果园",
+          "6MW公用事业级太阳能发电场",
+          "年收入：18万至28万美元",
+          "内部收益率目标：18% - 26%"
+        ],
+        "conclusion": "资产是基于土地的、能产生收益的、能抗通胀的——而不是合成代币或投机性的 DeFi 实验。"
+      },
+      "onChainData": {
+        "title": "链上数据基础设施",
+        "subtitle": "链上数据基础设施",
+        "description": "每个单位都配备：",
+        "features": [
+          "用于实时产量和能源数据的物联网传感器",
+          "智能合约和 NFT 映射",
+          "仪表板与卫星信息同步",
+          "代币发行与已验证的输出挂钩"
+        ],
+        "conclusion": "用户可以监控增长、发电量和代币累积——所有这些都透明地记录并可在链上访问。"
+      },
+      "builtToScale": {
+        "title": "在全球范围内扩大规模",
+        "description": "每个 AGV 单元都通过 SPV 进行标准化和标记化：",
+        "features": [
+          "可通过电池存储和边缘计算进行扩展",
+          "模块化设计支持灌溉、AI节点或碳追踪",
+          "适用于亚洲、拉丁美洲、非洲和中东及北非地区"
+        ],
+        "conclusion": "支持 CEX、兼容 DeFi 且符合 ESG 要求 — AGV 专为全球整合而构建。"
+      }
+    },
+    "testimonials": {
+      "title": "基础设施的未来是真实的、绿色的、链上的",
+      "description": "顶级机构一致认为：实体资产、可持续能源和区块链融合正在塑造下一个万亿美元的机遇。AGV 正处于这些宏观趋势的交汇点。",
+      "quotes": [
+        {
+          "text": "Tokenization of real-world assets could unlock a $10T market by 2030.",
+          "source": "Boston Consulting Group"
+        },
+        {
+          "text": "ESG and energy-linked infrastructure are set to dominate institutional flows over the next decade.",
+          "source": "BlackRock 2024 Outlook"
+        },
+        {
+          "text": "Distributed green energy is the foundation of long-term economic resilience.",
+          "source": "World Bank"
+        }
+      ],
+      "cta": {
+        "title": "未来由土地、阳光和代码驱动",
+        "button": "立即投资",
+        "backToTop": "返回顶部"
+      }
+    },
+    "footer": {
+      "companyName": "AGRIVOLT 协议",
+      "tagline": "NFT铸造平台",
+      "description": "通过创新的 NFT 技术，实现去中心化计算的未来。加入成千上万的用户，在多个区块链网络上铸造专属的 AGV NFT。",
+      "features": {
+        "secure": "安全可靠",
+        "fast": "闪电般快速",
+        "multiChain": "多链"
+      },
+      "navigation": {
+        "product": {
+          "title": "产品",
+          "nftMinting": "NFT铸造",
+          "dashboard": "仪表板",
+          "kolProgram": "KOL计划",
+          "analytics": "分析"
+        },
+        "company": {
+          "title": "公司",
+          "aboutUs": "关于我们",
+          "careers": "职业发展",
+          "press": "按",
+          "blog": "博客"
+        },
+        "support": {
+          "title": "支持",
+          "helpCenter": "帮助中心",
+          "documentation": "文档",
+          "apiReference": "API 参考",
+          "contactSupport": "联系支持"
+        },
+        "legal": {
+          "title": "合法的",
+          "privacyPolicy": "隐私政策",
+          "termsOfService": "服务条款",
+          "cookiePolicy": "Cookie 政策",
+          "gdpr": "GDPR"
+        }
+      },
+      "legal": {
+        "headquarters": "总部位于亚洲，业务遍及全球，并由顶级公司审计。",
+        "description": "所有现实世界资产均由授权的中国特殊目的公司持有，并通过法律授权映射到JLL Asset Ltd.（英属维尔京群岛公司编号：2182436）。NFT的发行和运营由iJET Limited（NZBN：9429049576290）负责。目前，AGV DAO的治理过渡正在进行中。"
+      },
+      "copyright": "© 2025 AgriVolt Protocol. 保留所有权利"
+    },
+    "admin": {
+      "hero": {
+        "title": "系统仪表板",
+        "description": "监控并跟踪所有 AGV 协议功能。实时分析、性能指标和系统健康监控。"
+      },
+      "status": {
+        "online": "系统在线",
+        "secure": "安全访问",
+        "adminOnly": "仅限管理员"
+      },
+      "sections": {
+        "systemOverview": {
+          "title": "系统概述"
+        },
+        "functionalityMonitoring": {
+          "title": "功能监控"
+        },
+        "quickAccess": {
+          "title": "快速访问"
+        }
+      },
+      "features": {
+        "userAnalytics": {
+          "title": "用户分析",
+          "description": "跟踪用户参与度、增长指标和平台采用率"
+        },
+        "performanceAnalytics": {
+          "title": "性能分析",
+          "description": "监控平台性能、响应时间和系统健康状况"
+        },
+        "kolTracking": {
+          "title": "KOL追踪",
+          "description": "监控关键意见领袖的表现和推荐指标"
+        },
+        "activityMonitoring": {
+          "title": "活动监控",
+          "description": "实时跟踪用户活动和系统事件"
+        },
+        "performanceMetrics": {
+          "title": "绩效指标",
+          "description": "跟踪所有链上的铸造、质押和代币表现"
+        },
+        "systemMonitoring": {
+          "title": "系统监控",
+          "description": "监控系统配置和操作参数"
+        }
+      },
+      "stats": {
+        "activeUsers": {
+          "title": "活跃用户",
+          "value": "2,847",
+          "change": "+12％"
+        },
+        "mintingActivity": {
+          "title": "铸币活动",
+          "value": "1,234",
+          "change": "+8%"
+        },
+        "stakingVolume": {
+          "title": "质押量",
+          "value": "5,678",
+          "change": "+15％"
+        },
+        "systemUptime": {
+          "title": "系统正常运行时间",
+          "value": "99.8%",
+          "change": "+0.2%"
+        }
+      },
+      "quickAccess": {
+        "dashboard": {
+          "title": "仪表板",
+          "description": "查看主仪表板"
+        },
+        "users": {
+          "title": "用户",
+          "description": "管理用户"
+        },
+        "analytics": {
+          "title": "分析",
+          "description": "查看分析"
+        },
+        "settings": {
+          "title": "设置",
+          "description": "配置系统"
+        }
+      },
+      "buttons": {
+        "viewMetrics": "查看指标"
+      },
+      "systemStatus": {
+        "title": "系统状态",
+        "description": "该仪表板提供所有 AGV 协议功能的实时监控。所有指标均自动更新，并提供有关平台性能、用户活动以及所有功能系统运行状况的洞察。"
+      }
+    },
+    "comingSoon": {
+      "logo": "AGRIVOLT 协议",
+      "title": "即将推出",
+      "subtitle": "我们正在努力为您带来精彩内容。\n敬请关注最新动态！",
+      "features": {
+        "lightningFast": "闪电般快速",
+        "multiChain": "多链",
+        "community": "社区",
+        "secure": "安全的"
+      },
+      "backButton": "返回首页",
+      "footer": "关注我们，了解我们革新现实世界资产代币化的历程"
+    },
+    "token": {
+      "copySuccess": "{label} 已复制到剪贴板",
+      "hero": {
+        "title": "AGV协议代币",
+        "description": "探索 GVT（治理代币）和 rGGP（奖励代币）—— AGV 协议的双代币生态系统。通过质押赚取 rGGP 奖励，并通过 GVT 参与治理。"
+      },
+      "status": {
+        "liveEcosystem": "活生态系统",
+        "multiChain": "多链",
+        "secure": "安全的"
+      },
+      "sections": {
+        "ecosystemOverview": {
+          "title": "生态系统概述"
+        }
+      },
+      "stats": {
+        "tokenHolders": {
+          "title": "GVT持有者",
+          "value": "2,847",
+          "label": "代币持有者"
+        },
+        "activeStakers": {
+          "title": "rGGP 收入者",
+          "value": "1,234",
+          "label": "活跃质押者"
+        },
+        "dailyEmission": {
+          "title": "rGGP奖励",
+          "value": "5万",
+          "label": "每日排放量"
+        },
+        "networks": {
+          "title": "多链",
+          "value": "3",
+          "label": "网络"
+        }
+      },
+      "tabs": {
+        "overview": "概述",
+        "contracts": "合同",
+        "staking": "质押",
+        "resources": "资源"
+      },
+      "overview": {
+        "aboutTokens": {
+          "title": "关于GVT和rGGP",
+          "description": "AGV 协议采用双代币系统，旨在分离治理机制和奖励机制。GVT 作为治理代币，rGGP 作为生态系统参与的奖励代币。",
+          "tokenRoles": {
+            "title": "令牌角色：",
+            "gvt": "GVT：协议治理和投票权",
+            "rggp": "rGGP：权益奖励和生态系统激励",
+            "multiChain": "跨主要网络的多链部署",
+            "decentralized": "去中心化、社区驱动的生态系统"
+          }
+        },
+        "tokenEconomics": {
+          "title": "代币经济学",
+          "gvt": {
+            "title": "GVT（治理代币）",
+            "totalSupply": "总供应量",
+            "totalSupplyValue": "1,000,000",
+            "circulating": "循环",
+            "circulatingValue": "75万",
+            "useCase": "用例",
+            "useCaseValue": "治理"
+          },
+          "rggp": {
+            "title": "rGGP（奖励代币）",
+            "dailyEmission": "每日排放量",
+            "dailyEmissionValue": "5万",
+            "perStakeReward": "每笔权益奖励",
+            "perStakeRewardValue": "50 rGGP/天",
+            "useCase": "用例",
+            "useCaseValue": "质押奖励"
+          }
+        },
+        "benefits": {
+          "title": "双代币生态系统优势",
+          "earnRewards": {
+            "title": "赚取 rGGP 奖励",
+            "description": "质押代币即可每天赚取 rGGP 奖励，无需锁定期。"
+          },
+          "governance": {
+            "title": "GVT治理",
+            "description": "使用 GVT 代币对协议提案进行投票并塑造 AGV 的未来。"
+          },
+          "exclusiveAccess": {
+            "title": "独家访问",
+            "description": "抢先体验新功能、空投和生态系统更新。"
+          },
+          "multiChainSupport": {
+            "title": "多链支持",
+            "description": "通过 BSC、Arbitrum 和 Polygon 网络访问这两个令牌。"
+          }
+        }
+      },
+      "contracts": {
+        "title": "合约地址",
+        "description": "跨不同网络的 GVT 和 rGGP 代币官方合约地址",
+        "networks": "{network} 网络",
+        "gvtToken": "GVT代币",
+        "rggpToken": "rGGP代币",
+        "stakingContract": "质押合约"
+      },
+      "staking": {
+        "howToStake": {
+          "title": "如何质押代币",
+          "step1": {
+            "title": "连接钱包",
+            "description": "连接包含 GVT 或 rGGP 代币的钱包"
+          },
+          "step2": {
+            "title": "选择网络",
+            "description": "选择 BSC、Arbitrum 或 Polygon 网络"
+          },
+          "step3": {
+            "title": "权益代币",
+            "description": "选择并质押您的代币以开始赚取奖励"
+          }
+        },
+        "startStaking": "开始质押",
+        "dualTokenRewards": {
+          "title": "双代币奖励"
+        },
+        "rewards": {
+          "rggp": {
+            "title": "rGGP奖励",
+            "dailyRate": "日费率",
+            "dailyRateValue": "每份股份 50 rGGP",
+            "compounding": "复合",
+            "compoundingValue": "自动的",
+            "withdrawal": "提款",
+            "withdrawalValue": "任何时间"
+          },
+          "gvt": {
+            "title": "GVT治理",
+            "votingPower": "投票权",
+            "votingPowerValue": "1 GVT = 1 票",
+            "proposalRights": "提案权",
+            "proposalRightsValue": "10,000 GVT",
+            "minimumStake": "最低投注额",
+            "minimumStakeValue": "100个代币"
+          }
+        },
+        "exampleCalculation": {
+          "title": "示例计算",
+          "description": "质押 1000 个代币，期限为 30 天 = 1000 × 0.05 × 30 = 1,500 rGGP 奖励",
+          "note": "加上 GVT 代币的治理投票权"
+        }
+      },
+      "resources": {
+        "socialMedia": {
+          "title": "社交媒体",
+          "platforms": "{平台}"
+        },
+        "documentation": {
+          "title": "文档",
+          "tokenHandbook": "代币手册",
+          "stakingGuide": "质押指南",
+          "securityAudit": "安全审计"
+        },
+        "latestArticles": {
+          "title": "最新文章",
+          "readMore": "阅读更多"
+        }
+      },
+      "articles": {
+        "dualTokenStaking": {
+          "title": "双币质押指南",
+          "description": "了解如何质押 GVT 和 rGGP 代币以最大化您的奖励"
+        },
+        "rggpRewards": {
+          "title": "了解 rGGP 奖励",
+          "description": "关于 rGGP 奖励机制和分配你需要知道的一切"
+        },
+        "gvtGovernance": {
+          "title": "GVT治理指南",
+          "description": "如何使用 GVT 代币参与协议治理"
+        },
+        "multiChainStrategy": {
+          "title": "多链代币策略",
+          "description": "在 BSC、Arbitrum 和 Polygon 网络上最大化您的奖励"
+        }
+      }
+    }
+  },
+  "career": {
+    "hero": {
+      "title": "加入我们的团队",
+      "description": "成为现实世界资产代币化未来的一部分。加入 AGV 协议，帮助构建连接传统资产与区块链技术的基础设施。"
+    },
+    "values": {
+      "title": "我们的公司价值观",
+      "subtitle": "我们正在构建可持续区块链基础设施的未来。加入一个热衷于通过创新技术创造现实世界影响的团队。",
+      "passion": {
+        "title": "对创新的热情",
+        "description": "我们相信区块链技术可以解决现实世界的问题，为全球社区创造可持续的价值。"
+      },
+      "collaboration": {
+        "title": "协作精神",
+        "description": "我们相信团队合作和多元化观点的力量，能够创造惠及生态系统中每个人的解决方案。"
+      },
+      "learning": {
+        "title": "持续学习",
+        "description": "区块链领域发展迅速，我们致力于通过持续学习和适应保持领先地位。"
+      },
+      "sustainability": {
+        "title": "可持续性",
+        "description": "我们致力于长期管理资源。从果园到太阳能和计算资源，我们协调激励措施，确保链上增长能够反映现实世界的生产力和环境责任。"
+      },
+      "innovation": {
+        "title": "创新",
+        "description": "我们安全地推进一切可能。我们务实地应用区块链：物联网验证的收益、双代币经济以及合规的结构，让真实资产无需炒作即可触达。"
+      }
+    },
+    "perks": {
+      "title": "福利与津贴",
+      "subtitle": "我们提供有竞争力的福利和支持性的工作环境，帮助团队成员在个人和职业方面都能茁壮成长。",
+      "health": {
+        "title": "健康与福祉",
+        "description": "全面的健康保险、心理健康支持和健康计划，让我们的团队保持健康和快乐。"
+      },
+      "flexible": {
+        "title": "灵活工作",
+        "description": "远程优先文化，工作时间灵活，可以在世界任何地方自由工作。"
+      },
+      "impact": {
+        "title": "真实影响",
+        "description": "从事具有现实世界影响的项目，从可持续农业到可再生能源基础设施。"
+      },
+      "remote": {
+        "title": "远程优先工作环境",
+        "description": "灵活的全球团队结构。"
+      },
+      "growth": {
+        "title": "专业成长",
+        "description": "允许指导、培训和学习。"
+      },
+      "mission": {
+        "title": "任务协调",
+        "description": "成为将现实世界的基础设施与 Web3 连接起来的影响力驱动项目的一部分。"
+      }
+    },
+    "roles": {
+      "title": "开放职位",
+      "subtitle": "我们一直在寻找与我们构建可持续区块链基础设施愿景一致的优秀人才。",
+      "seeMore": "查看更多机会",
+      "noOpenings": "暂无空缺职位",
+      "noOpenings1": "目前沒有空缺。"
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "AGV 协议博客",
+      "subtitle": "了解现实世界资产代币化和可持续区块链基础设施领域的最新新闻、见解和发展。"
+    },
+    "tabs": {
+      "all": "全部",
+      "announcements": "公告",
+      "tech": "技术",
+      "community": "社区"
+    },
+    "featured": {
+      "title": "精选文章"
+    },
+    "search": {
+      "title": "搜索文章"
+    },
+    "searchPlaceholder": "搜索文章...",
+    "newsletter": {
+      "title": "保持更新",
+      "description": "获取最新新闻和更新，直接发送到您的收件箱。",
+      "emailPlaceholder": "输入您的电子邮件",
+      "send": "发送"
+    },
+    "main": {
+      "title": "最新文章",
+      "articlesFound": "找到的文章",
+      "inCategory": "在 {category} 中",
+      "forQuery": "搜索 \"{query}\"",
+      "noResultsForQuery": "未找到 \"{query}\" 的文章",
+      "noResultsInCategory": "在 {category} 中未找到文章",
+      "viewAllPosts": "查看所有文章"
+    },
+    "featuredArticle": {
+      "title": "AGV协议简介：解锁现实世界资产的未来",
+      "description": "2025年，世界金融格局瞬息万变。因此，一个问题不断浮现……"
+    },
+    "articles": {
+      "sustainableWeb3": {
+        "title": "可持续 Web3 的未来",
+        "description": "探索区块链技术如何推动环境可持续发展并对现实世界产生影响。"
+      },
+      "nftStaking": {
+        "title": "NFT 质押革命",
+        "description": "了解我们创新的权益机制，该机制在支持现实世界资产的同时奖励用户。"
+      },
+      "multiChain": {
+        "title": "多链集成",
+        "description": "了解 AGV 协议如何在多个区块链网络之间无缝运行以实现最大程度的可访问性。"
+      },
+      "governance": {
+        "title": "社区治理",
+        "description": "了解社区在塑造去中心化金融和资产管理的未来中的作用。"
+      },
+      "tokenization": {
+        "title": "现实世界资产代币化",
+        "description": "我们如何弥合传统资产与区块链技术之间的差距以实现可持续增长。"
+      },
+      "security": {
+        "title": "安全性和透明度",
+        "description": "我们致力于维持最高的安全标准，同时确保完全透明。"
+      },
+      "developer": {
+        "title": "开发者生态系统",
+        "description": "构建工具和基础设施来支持开发人员创建下一代 Web3 应用程序。"
+      },
+      "expansion": {
+        "title": "全球扩张",
+        "description": "AGV Protocol 成为可持续区块链解决方案全球领导者的历程。"
+      },
+      "ama": {
+        "title": "社区 AMA 会议",
+        "description": "加入我们与 AGV 协议团队每月的“问我任何问题”会议并获得问题的答案。"
+      },
+      "partnership": {
+        "title": "合作公告",
+        "description": "我们很高兴宣布与领先的区块链基础设施提供商建立新的合作伙伴关系。"
+      },
+      "smartContracts": {
+        "title": "技术深度探讨：智能合约",
+        "description": "全面了解我们的智能合约架构和安全措施。"
+      },
+      "spotlight": {
+        "title": "社区焦点：成功案例",
+        "description": "听听我们的社区成员关于他们使用 AGV 协议的经验。"
+      },
+      "introducingAGVProtocol": {
+        "title": "AGV协议介绍：",
+        "description": "解锁现实世界资产的未来"
+      },
+      "rGGPExplained": {
+        "title": "rGGP 解释",
+        "description": "AGV 协议如何将现实世界的收益转化为回报"
+      },
+      "turningEveryUser": {
+        "title": "AGV协议",
+        "description": "让每个用户都成为AI发电者"
+      }
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "真实能源。真实收益。",
+      "subtitle": "真实资产 — 链上。"
+    },
+    "mission": {
+      "title": "使命",
+      "description": "我们的使命是通过将经过验证的现实世界产出转化为透明、链上资产，让每个人都能投资电力和计算。"
+    },
+    "story": {
+      "title": "我们的故事",
+      "description": "在人工智能时代，电力和计算需求呈指数级增长。AGV协议通过将果园、太阳能农场和边缘计算微电网与物联网遥测和链上验证相结合，创建可持续的收益支持代币来解决这个问题。我们的初始资产位于中国陕西，计划扩展到亚洲及其他地区。"
+    },
+    "whatWeBuild": {
+      "title": "我们构建什么",
+      "cleanEnergy": {
+        "title": "清洁能源资产",
+        "description": "首批6MWp CdTe光伏电站，预计年发电量7.3GWh。其他太阳能装置正在开发中。"
+      },
+      "orchards": {
+        "title": "高产果园",
+        "description": "每 100 亩每年可产出约 100,000 公斤苹果，并融入 NFT 收入流，并通过物联网传感器进行监控。"
+      },
+      "compute": {
+        "title": "边缘计算微网格",
+        "description": "初始 1.5 MW 集群（~1 PFLOPS）为 AI 工作负载提供 ~1.31 GWh/年的计算负载；计划部署更多节点。"
+      },
+      "verification": {
+        "title": "物联网验证和链上证明",
+        "description": "在代币铸造之前，每一瓦的电力和每一轮计算都会经过验证并锚定在链上（Power-to-Mint）。这确保了问责制和透明度。"
+      }
+    },
+    "howItWorks": {
+      "title": "工作原理 - 电力到铸造",
+      "acquire": {
+        "title": "收购与整合",
+        "description": "AGV 收购或与果园、太阳能发电场和计算集群合作，安装物联网传感器和安全遥测。"
+      },
+      "verify": {
+        "title": "核实",
+        "description": "能源和计算输出数据是实时收集的，由审计员验证并锚定在链上。"
+      },
+      "mint": {
+        "title": "薄荷",
+        "description": "代币仅在产出验证后才会铸造。GVT 由已验证的收益铸造；rGGP 作为基于绩效的激励机制进行分配，并可转换为 GVT。投资者可以准确了解每个代币背后有多少现实世界产出作为支撑。"
+      }
+    },
+    "team": {
+      "title": "核心团队成员",
+      "susan": {
+        "name": "苏珊",
+        "role": "总经理"
+      },
+      "tyler": {
+        "name": "泰勒",
+        "role": "首席技术官（CTO）"
+      },
+      "yasir": {
+        "name": "亚西尔",
+        "role": "技术主管"
+      },
+      "winnie": {
+        "name": "温妮",
+        "role": "资本/DAO 负责人"
+      },
+      "yatogami": {
+        "name": "夜刀神",
+        "role": "业务发展主管"
+      },
+      "frank": {
+        "name": "坦率",
+        "role": "市场营销与公关"
+      }
+    },
+    "cta": {
+      "title": "加入我们，共同构建可持续的代币化未来。",
+      "button": "阅读白皮书"
+    }
+  },
+  "whatWeBuilding": {
+    "assetBackedNFT": {
+      "title": "资产支持的 NFT",
+      "description": "SeedPass、TreePass、SolarPass 和 ComputePass 代表着对果园、太阳能发电装置和计算能力的部分所有权。持有者通过按比例分配的产出份额获得实际收益。"
+    },
+    "powerToMint": {
+      "title": "Power-to-Mint",
+      "description": "只有在物联网验证电力和计算之后才会铸造代币，以确保现实世界的支持并防止通货膨胀。"
+    },
+    "dualTokenSystem": {
+      "title": "双代币系统",
+      "description": "GVT（绿色价值代币）由已验证的收益铸造；rGGP（奖励代币）用于激励采用，并可兑换为 GVT。空投和分配是基于绩效的社区奖励，并非保证回报。"
+    },
+    "daoCompliance": {
+      "title": "DAO 与合规性",
+      "description": "AGV 通过具有多重签名和评分投票治理的跨境 DAO 进行运营。"
+    },
+    "title": "我们正在构建什么"
+  },
+  "howWeDiffer": {
+    "realAssets": {
+      "title": "实物资产",
+      "description": "AGV 的底层果园、太阳能容量和边缘计算集群提供了切实可衡量的收益。"
+    },
+    "tokenization": {
+      "title": "标记化",
+      "description": "输出数据由物联网设备测量并在链上提交；只有这样才能铸造代币（Power-to-Mint），确保无需信任的 1：1 关系。"
+    },
+    "yieldDistribution": {
+      "title": "收益分布",
+      "description": "投资者根据其NFT持有量，获得果园、太阳能和计算资源的收益。目标混合内部收益率为18-26%，优于许多传统的可再生能源基金。"
+    },
+    "scalableSustainability": {
+      "title": "可扩展的可持续性",
+      "description": "分布式微电网架构可在整个亚洲/中东和北非地区扩展，从而减轻电网压力，降低人工智能工作负载的延迟，并推进可持续发展目标。每个新的资产单位都会提升收益率和估值。"
+    },
+    "title": "我们的不同之处"
+  },
+  "executionProofs": {
+    "solarPlantOnline": {
+      "title": "太阳能发电厂在线",
+      "description": "第一座 6 MWp CdTe 光伏电站已投入使用并接入当地电网。"
+    },
+    "ppaInProgress": {
+      "title": "电力采购协议正在进行中",
+      "description": "正在与区域电网运营商敲定长期购电协议；合同草案已经过审查。"
+    },
+    "computeNodeRunning": {
+      "title": "计算节点正在运行",
+      "description": "最初的 1.5 MW 边缘计算集群已经安装并正在积极处理试点工作负载；物联网遥测已在链上记录。"
+    },
+    "title": "执行证明"
+  },
+  "team": {
+    "section": {
+      "title": "认识团队",
+      "description": "AGV 由一支遍布全球的团队提供支持，该团队由执行力驱动的建造者、工程师和运营商组成，他们在 RWA、可再生能源、计算、标记化和 DePIN 网络方面拥有专业知识"
+    },
+    "members": {
+      "susan": {
+        "name": "苏珊",
+        "role": "总经理"
+      },
+      "tyler": {
+        "name": "泰勒",
+        "role": "首席技术官"
+      },
+      "yasir": {
+        "name": "亚西尔",
+        "role": "技术主管"
+      },
+      "winnie": {
+        "name": "温妮",
+        "role": "资本/DAO 负责人"
+      },
+      "yatogami": {
+        "name": "夜刀神",
+        "role": "业务发展主管"
+      },
+      "frank": {
+        "name": "坦率",
+        "role": "市场营销与公关"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "联系我们",
+      "subtitle": "我们随时为您提供帮助"
+    },
+    "section": {
+      "title": "联系信息",
+      "description": "联系我们的专业团队，获取最相关的帮助。点击任意电子邮件即可将其复制到剪贴板。"
+    },
+    "general": {
+      "title": "一般联系方式",
+      "description": "用于一般查询和协调。"
+    },
+    "investor": {
+      "title": "投资者关系（IR）",
+      "description": "适用于 VC/FO/机构通信和数据室。"
+    },
+    "business": {
+      "title": "业务发展/社区",
+      "description": "适用于 KOL、合作伙伴、活动（TaskOn/Zealy）和社区运营。"
+    },
+    "technology": {
+      "title": "技术",
+      "description": "适用于产品、网站、集成、部署和支持。"
+    },
+    "onchain": {
+      "title": "链上/智能合约",
+      "description": "对于链上事务、审计、验证和合同。"
+    },
+    "external": {
+      "title": "对外关系",
+      "description": "适用于交易所、做市商、启动平台和媒体合作伙伴。"
+    },
+    "additional": {
+      "title": "需要更多信息吗？",
+      "description": "如果您有一般性问题，或者不确定该联系哪个团队，请联系我们的常规联系邮箱。我们会确保您的咨询联系到合适的人员。"
+    }
+  },
+  "vault": {
+    "connectWallet": {
+      "features": {
+        "title": "连接后，您将能够：",
+        "liveEarnings": "查看您的实时 rGGP 收入",
+        "stakedPositions": "查看您的质押 NFT 仓位",
+        "trackXp": "追踪您的 XP 和奖励",
+        "leaderboard": "在排行榜上比较你的表现"
+      },
+      "title": "连接你的钱包",
+      "description": "连接您的钱包以查看您的 rGGP 保险库、质押的 NFT 和盈利潜力。"
+    },
+    "header": {
+      "wallet": "钱包：",
+      "network": "网络：",
+      "lockTier": "锁定层级："
+    },
+    "liveCounter": {
+      "title": "活体rGGP计数器",
+      "accrued": "应计",
+      "dailyYield": "每日收益",
+      "perSecond": "每秒",
+      "lockTierCta": "锁定层级以获得更高的年利率",
+      "lockTierDescription": "锁定您的 NFT 即可赚取高达 490% 的年利率",
+      "unlockAll": "解锁所有 NFT",
+      "unlockAllDescription": "这将停止所有保险库奖励"
+    },
+    "aprBars": {
+      "title": "年利率明细",
+      "real": "真实的",
+      "boost": "促进",
+      "social": "社会的",
+      "total": "总年利率"
+    },
+    "positions": {
+      "title": "您锁定的 NFT",
+      "noNfts": "未质押 NFT",
+      "noNftsDescription": "从您的钱包中选择 NFT 开始赚取保险库奖励",
+      "claimRewards": "领取奖励（即将推出）",
+      "unlockNft": "解锁 NFT",
+      "multiplier": "乘数",
+      "daysStaked": "质押天数：",
+      "lockTier": "锁定层级："
+    },
+    "xpPanel": {
+      "title": "XP 和社交奖励",
+      "currentXp": "当前 XP",
+      "lastUpdate": "最后更新",
+      "earnMore": "获得更多经验值",
+      "zealy": "完成 Zealy 上的任务",
+      "taskon": "加入 TaskOn 社区",
+      "noXpData": "没有 XP 数据",
+      "noXpDescription": "完成社区任务来获得 XP 并提升你的奖励",
+      "xpBoostActive": "XP 提升激活",
+      "xpBoostDescription": "您的 XP 可增加您每日的 rGGP 产量",
+      "updatePending": "更新待定",
+      "upToDate": "最新"
+    },
+    "leaderboard": {
+      "title": "前 100 名排行榜",
+      "rank": "秩",
+      "wallet": "钱包",
+      "rggp": "重组GGP",
+      "xp": "经验值",
+      "loading": "正在加载排行榜...",
+      "noData": "没有可用的排行榜数据",
+      "updated": "已更新",
+      "realTimeActive": "实时更新活跃",
+      "showingTop100": "显示所有参与者的前 100 名"
+    },
+    "nftSelector": {
+      "title": "选择要锁定的 NFT",
+      "selected": "已选择",
+      "connectWallet": "连接你的钱包",
+      "connectDescription": "连接您的钱包以查看并选择要锁定的 NFT",
+      "loading": "加载你的 NFT",
+      "error": "加载 NFT 时出错",
+      "tryAgain": "再试一次",
+      "noNfts": "未找到 NFT",
+      "noNftsDescription": "您的钱包中没有任何 AGV NFT。铸造您的第一个 NFT，开始赚取金库奖励！",
+      "goToMint": "前往 Mint 页面",
+      "lockNfts": "锁定 NFT（即将推出）",
+      "selectedForLocking": "已选择锁定"
+    },
+    "warning": {
+      "title": "NFT 被锁定在保险库中",
+      "important": "重要的：",
+      "description": "NFT 已锁定在保管库中。请勿转移，否则奖励将停止。请先使用“解锁”功能将其安全移除。",
+      "lastValidation": "最后验证：",
+      "validateNow": "立即验证"
+    },
+    "footer": {
+      "dataUpdates": "数据每 60 秒更新一次。XP 在任务完成后 1 小时内更新。"
+    },
+    "refresh": {
+      "refreshing": "令人耳目一新……",
+      "refreshData": "刷新数据",
+      "refresh": "刷新",
+      "updating": "正在更新...",
+      "updatingLeaderboard": "正在更新排行榜..."
+    },
+    "unlock": {
+      "confirmSingle": "您确定要解锁此 NFT 吗？解锁后您将无法获得奖励。",
+      "confirmAll": "您确定要解锁全部 {count} 个 NFT 吗？这将停止所有奖励。",
+      "lockedUntil": "锁定至",
+      "cannotUnlockYet": "尚无法解锁",
+      "timeRemaining": "剩余时间"
+    },
+    "tierSelection": {
+      "tierBenefits": {
+        "flex": {
+          "title": "灵活锁",
+          "description": "无锁定期，随时解锁",
+          "apr": "基本年利率",
+          "duration": "无锁"
+        },
+        "1m": {
+          "title": "1个月锁定",
+          "description": "锁定30天，更高奖励",
+          "apr": "增强型年利率",
+          "duration": "30天"
+        },
+        "3m": {
+          "title": "3个月锁定",
+          "description": "锁定90天，最高奖励",
+          "apr": "最高年利率",
+          "duration": "90天"
+        },
+        "6m": {
+          "title": "6个月锁定",
+          "description": "锁定180天，尊享奖励",
+          "apr": "保费年利率",
+          "duration": "180天"
+        },
+        "12m": {
+          "title": "12个月锁定",
+          "description": "锁定365天，终极奖励",
+          "apr": "最终年利率",
+          "duration": "365天"
+        }
+      },
+      "title": "首先选择锁定层级",
+      "description": "在选择要锁定的 NFT 之前，请选择您的锁定等级",
+      "selectTier": "选择锁定等级以继续",
+      "tierDescription": "锁定期越长，年利率奖励越高。请谨慎选择，因为一旦 NFT 锁定，您将无法更改等级。"
+    },
+    "title": "rGGP库",
+    "subtitle": "通过锁定 NFT 并完成社区任务来获得奖励"
+  }
+}

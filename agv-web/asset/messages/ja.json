@@ -1,0 +1,190 @@
+{
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "edit": "編集",
+    "delete": "削除",
+    "back": "[JA] Back",
+    "next": "[JA] Next",
+    "previous": "前へ",
+    "close": "閉じる",
+    "confirm": "確認",
+    "required": "必須",
+    "optional": "オプション",
+    "readMore": "続きを読む",
+    "yes": "[JA] Yes",
+    "no": "[JA] No",
+    "review": "[JA] Review",
+    "submitting": "送信中..."
+  },
+  "header": {
+    "title": "[JA] REAL WORLD ASSETS",
+    "alt": "[JA] AGV Protocol"
+  },
+  "form": {
+    "title": "[JA] ASSET REGISTRATION FORM",
+    "steps": {
+      "basicData": "[JA] Basic Data",
+      "financialRevenue": "[JA] Financial & Revenue",
+      "operationsCompliance": "[JA] Operations & Compliance",
+      "tierData": "[JA] Tier Data"
+    },
+    "basicData": {
+      "title": "[JA] BASIC DATA",
+      "projectName": "[JA] Project Name",
+      "landParcelId": "[JA] Land Parcel ID",
+      "county": "[JA] County",
+      "city": "[JA] City",
+      "province": "[JA] Province",
+      "latitude": "[JA] Latitude",
+      "longitude": "[JA] Longitude",
+      "landType": "[JA] Land Type",
+      "landTypeOptions": {
+        "orchard": "[JA] Orchard",
+        "farmland": "[JA] Farmland",
+        "facilityAgriculture": "[JA] Facility Agriculture"
+      },
+      "leaseContractId": "[JA] Lease Contract ID",
+      "duration": "[JA] Duration",
+      "owner": "[JA] Owner"
+    },
+    "financialData": {
+      "title": "[JA] Financial & Revenue Data",
+      "unitInvestmentCost": "単位投資コスト（1ムーまたは1MWあたりCNY）",
+      "annualCashFlowBreakdown": "[JA] Annual Cash Flow Breakdown",
+      "otherSubsidies": "[JA] Other Subsidies / Green Certificate Income",
+      "annualizedIRR": "[JA] Annualized IRR / ROI Calculation"
+    },
+    "operationsCompliance": {
+      "title": "[JA] Operations & Compliance",
+      "companyName": "[JA] Company Name",
+      "businessLicense": "[JA] Business License / Credit Code",
+      "epcContractorName": "[JA] EPC / O&M Contractor Name",
+      "governmentFiling": "[JA] Government Filing / Approval Document IDs",
+      "governmentFilingOptions": {
+        "ndrc": "[JA] NDRC",
+        "energyBureau": "[JA] Energy Bureau",
+        "agricultureBureau": "[JA] Agriculture Bureau"
+      },
+      "operatingEntity": "[JA] Operating Entity",
+      "operatingEntityOptions": {
+        "agricultureInsurance": "[JA] Agriculture Insurance",
+        "solarPlantInsurance": "[JA] Solar Plant Insurance"
+      },
+      "tier": "[JA] Select Tier",
+      "tierOptions": {
+        "orchardData": "[JA] Orchard Data",
+        "solarData": "[JA] Solar Data"
+      }
+    },
+    "orchardData": {
+      "title": "[JA] Orchard Data",
+      "plantingArea": "[JA] Planting Area (mu / hectares)",
+      "numberOfTrees": "木の数",
+      "age": "[JA] Age",
+      "variety": "[JA] Variety",
+      "plantingDensity": "[JA] Planting Density",
+      "rowSpacing": "[JA] Row Spacing",
+      "treeDensity": "[JA] Tree Density",
+      "annualYield": "[JA] Annual Yield (tons)",
+      "lastThreeYearsYield": "[JA] Last 3 years yield",
+      "monitoringSystem": "監視システム（害虫・気候制御用IoTデバイス）",
+      "deviceId": "[JA] Device ID if available",
+      "orchardProductSalesRevenue": "[JA] Orchard Product Sales Revenue"
+    },
+    "solarData": {
+      "title": "[JA] Solar Data",
+      "installedCapacity": "[JA] Installed Capacity (MWp)",
+      "pvModuleModel": "[JA] PV Module Model",
+      "manufacturer": "[JA] Manufacturer",
+      "installationDate": "[JA] Installation Date",
+      "gridConnectionPermitId": "[JA] Grid Connection Permit ID",
+      "gridCompany": "[JA] Grid Company",
+      "averageAnnualPowerGeneration": "[JA] Average Annual Power Generation (last 12 months, kWh)",
+      "tariffPpaContractId": "[JA] Tariff / PPA Contract ID",
+      "solarElectricitySalesRevenue": "[JA] Solar Electricity Sales Revenue"
+    },
+    "review": {
+      "title": "[JA] Review Your Submission",
+      "basicData": "[JA] Basic Data",
+      "financialData": "[JA] Financial & Revenue Data",
+      "operationsCompliance": "[JA] Operations & Compliance",
+      "orchardData": "[JA] Orchard Data",
+      "solarData": "[JA] Solar Data",
+      "backToEdit": "編集に戻る",
+      "submitRegistration": "[JA] Submit Registration",
+      "noFileUploaded": "[JA] No file uploaded"
+    },
+    "validation": {
+      "required": "この項目は必須です",
+      "fillAllRequired": "{section}セクションのすべての必須項目を入力してください",
+      "selectTier": "レビューに進む前に、ティアを選択してください。",
+      "fieldRequired": "この項目は必須です"
+    },
+    "success": {
+      "submitted": "[JA] Asset registration submitted successfully!",
+      "failed": "資産登録の送信に失敗しました。もう一度お試しください。"
+    }
+  },
+  "footer": {
+    "title": "RWA ASSETS",
+    "description": "ブロックチェーン技術と現実世界の資産のトークン化を通じて農業を変革します。",
+    "features": {
+      "secure": "[JA] Secure",
+      "fast": "[JA] Fast",
+      "multichain": "[JA] Multichain"
+    },
+    "sections": {
+      "resources": "[JA] Resources",
+      "company": "[JA] Company",
+      "support": "[JA] Support",
+      "legal": "[JA] Legal"
+    },
+    "links": {
+      "assetRegistration": "[JA] Asset Registration",
+      "documentation": "[JA] Documentation",
+      "support": "[JA] Support",
+      "aboutUs": "[JA] About Us",
+      "careers": "[JA] Careers",
+      "blog": "[JA] Blog",
+      "helpCenter": "[JA] Help Center",
+      "contactSupport": "[JA] Contact Support",
+      "faq": "[JA] FAQ",
+      "privacy": "[JA] Privacy",
+      "terms": "[JA] Terms",
+      "cookiePolicy": "[JA] Cookie Policy"
+    },
+    "legal": {
+      "headquarters": "[JA] Headquarters: Global",
+      "description": "すべての権利は留保されています。AGVプロトコルは、現実世界の資産をトークン化するための分散型プラットフォームです。"
+    },
+    "copyright": "[JA] © 2024 AGV Protocol. All rights reserved."
+  },
+  "locationPicker": {
+    "noLocationSelected": "[JA] No location selected",
+    "changeLocation": "[JA] Change Location",
+    "selectLocation": "[JA] Select Location",
+    "selectLocationTitle": "[JA] Select Location",
+    "searchLocation": "[JA] Search Location",
+    "searchPlaceholder": "住所、都市、またはランドマークを入力してください...",
+    "useCurrentLocation": "[JA] Use Current Location",
+    "detecting": "[JA] Detecting...",
+    "searchResults": "[JA] Search Results",
+    "selectedLocation": "[JA] Selected Location",
+    "address": "[JA] Address",
+    "province": "[JA] Province",
+    "city": "[JA] City",
+    "county": "[JA] County",
+    "coordinates": "[JA] Coordinates",
+    "mapNotConfigured": "マップAPIが設定されていません。座標を手動で入力するか、APIキーを設定してください。",
+    "latitude": "[JA] Latitude",
+    "longitude": "[JA] Longitude",
+    "setCoordinates": "[JA] Set Coordinates",
+    "cancel": "キャンセル",
+    "confirmLocation": "[JA] Confirm Location"
+  }
+}

@@ -1,0 +1,1109 @@
+{
+  "common": {
+    "loading": "로딩중...",
+    "error": "오류",
+    "success": "성공",
+    "submit": "제출",
+    "cancel": "취소",
+    "save": "저장",
+    "edit": "편집",
+    "delete": "삭제",
+    "back": "뒤로",
+    "next": "다음",
+    "previous": "이전",
+    "close": "닫기",
+    "confirm": "확인",
+    "required": "필수",
+    "optional": "선택사항",
+    "readMore": "더 읽기",
+    "lastUpdated": "마지막 업데이트",
+    "docs": "문서"
+  },
+  "nav": {
+    "home": "홈",
+    "about": "소개",
+    "investor": "투자자 관계",
+    "financials": "재무 보고서",
+    "legal": "법적 문서",
+    "contact": "문의하기",
+    "brandkit": "브랜드 키트",
+    "tech": "기술",
+    "esg": "ESG",
+    "depin": "데핀",
+    "salesMarketing": "영업 및 마케팅",
+    "managementTeam": "경영팀"
+  },
+  "header": {
+    "title": "AGV 프로토콜",
+    "subtitle": "투자자 관계",
+    "description": "독점 투자자 리소스, 재무 보고서 및 회사 업데이트에 액세스"
+  },
+  "hero": {
+    "title": "투자자 관계",
+    "subtitle": "AGV 프로토콜",
+    "description": "독점 투자자 리소스, 재무 보고서 및 회사 업데이트에 액세스",
+    "loginButton": "투자자 로그인",
+    "learnMore": "더 알아보기",
+    "whitepaperButton": "백서 읽기"
+  },
+  "auth": {
+    "login": "로그인",
+    "logout": "로그아웃",
+    "email": "이메일",
+    "password": "비밀번호",
+    "forgotPassword": "비밀번호를 잊으셨나요?",
+    "rememberMe": "로그인 상태 유지",
+    "loginButton": "로그인",
+    "invalidCredentials": "이메일 또는 비밀번호가 잘못되었습니다",
+    "loginSuccess": "로그인 성공",
+    "loginError": "로그인에 실패했습니다. 다시 시도해주세요"
+  },
+  "investor": {
+    "welcome": "투자자 포털에 오신 것을 환영합니다",
+    "dashboard": "대시보드",
+    "documents": "문서",
+    "reports": "보고서",
+    "presentations": "프레젠테이션",
+    "financials": "재무제표",
+    "legal": "법적 문서",
+    "brandkit": "브랜드 키트",
+    "contact": "문의하기",
+    "header": {
+      "title": "AGV 프로토콜 데이터 룸",
+      "subtitle": "투자자 포털",
+      "description": "모든 AGV 프로토콜 문서, 재무 모델, 투자 자료에 대한 포괄적인 접근이 가능합니다."
+    },
+    "overview": {
+      "title": "데이터룸 개요",
+      "totalDocs": "총 문서",
+      "categories": "카테고리",
+      "access": "접근 가능",
+      "transparency": "투명도"
+    },
+    "categories": {
+      "tech": "기술 문서, 아키텍처 및 감사 보고서",
+      "financials": "재무 모델, 평가 및 예측",
+      "legal": "법률 문서, 규정 준수 및 등록",
+      "esg": "환경 영향 및 지속 가능성 보고서",
+      "brandkit": "브랜드 자산, 로고 및 마케팅 자료",
+      "depin": "분산형 물리적 인프라 네트워크 문서",
+      "salesMarketing": "판매 전략, 파트너십 및 마케팅 자료",
+      "managementTeam": "리더십 구조 및 거버넌스 문서"
+    },
+    "recent": {
+      "title": "최근 업데이트된 문서"
+    },
+    "process": {
+      "title": "투자 프로세스",
+      "steps": {
+        "review": {
+          "title": "리뷰 자료",
+          "desc": "포괄적인 문서를 살펴보세요"
+        },
+        "schedule": {
+          "title": "통화 일정 예약",
+          "desc": "자세한 논의를 위해 저희 팀에 문의하세요"
+        },
+        "dd": {
+          "title": "실사",
+          "desc": "NDA를 통해 기밀 정보에 접근하세요"
+        },
+        "decision": {
+          "title": "투자 결정",
+          "desc": "약관을 확정하고 AGV 프로토콜에 가입하세요"
+        }
+      }
+    },
+    "cta": {
+      "title": "AGV 프로토콜에 투자할 준비가 되셨나요?",
+      "description": "지속 가능한 블록체인 인프라를 통해 실제 자산 토큰화에 혁명을 일으키는 데 동참하세요.",
+      "contact": "저희 팀에 문의하세요",
+      "viewFinancials": "재무 모델 보기"
+    }
+  },
+  "documents": {
+    "title": "문서",
+    "description": "투자자 문서 및 리소스에 액세스",
+    "categories": {
+      "financials": "재무 보고서",
+      "legal": "법적 문서",
+      "presentations": "프레젠테이션",
+      "brandkit": "브랜드 키트",
+      "tech": "당사의 기술 백서, 시스템 다이어그램, 감사 보고서를 살펴보세요.",
+      "esg": "당사의 환경 영향과 실제 자산 검증에 대해 알아보세요."
+    },
+    "download": "다운로드",
+    "view": "보기",
+    "noDocuments": "사용 가능한 문서가 없습니다",
+    "loading": "문서 로딩 중..."
+  },
+  "footer": {
+    "company": "AGV 프로토콜",
+    "description": "실제 자산과 블록체인 기술을 연결",
+    "links": {
+      "home": "홈",
+      "about": "소개",
+      "investor": "투자자 관계",
+      "contact": "문의하기"
+    },
+    "legal": {
+      "privacy": "개인정보 보호정책",
+      "terms": "서비스 약관",
+      "cookies": "쿠키 정책"
+    },
+    "copyright": "© 2024 AGV 프로토콜. 모든 권리 보유.",
+    "quickLinks": "빠른 링크",
+    "resources": "자원",
+    "dataRoom": "데이터 룸",
+    "privacyPolicy": "개인정보 보호정책"
+  },
+  "error": {
+    "pageNotFound": "페이지를 찾을 수 없습니다",
+    "accessDenied": "액세스가 거부되었습니다",
+    "serverError": "서버 오류",
+    "tryAgain": "다시 시도",
+    "goHome": "홈으로 이동"
+  },
+  "brandkit": {
+    "hero": {
+      "title": "AGV 브랜드 키트",
+      "subtitle": "공식 신원, 자산 및 사용 지침",
+      "tagline": "공식 자료를 다운로드하고 브랜드 표준을 준수하여 일관되고 전문적인 커뮤니케이션을 보장하세요.",
+      "protocol": "규약"
+    },
+    "overview": {
+      "title": "브랜드 개요",
+      "visionTitle": "비전",
+      "visionLine3": "AGV 프로토콜은 세계 최초의 분산형 AI Power ETF를 지원합니다.",
+      "visionLine1": "지난 세기에는 석유가 산업의 부를 촉진했습니다.",
+      "visionLine2": "이번 세기에는 전기와 컴퓨팅이 AI의 부를 촉진할 것입니다.",
+      "missionTitle": "사명",
+      "missionText": "AGV 프로토콜은 청정 에너지, 인공지능, 그리고 탈중앙화 금융을 연결하여 실물 자산(RWA)의 범주를 새롭게 정의합니다. AGV는 단순한 토큰화된 자산 플랫폼을 넘어, 세계 최초의 탈중앙화 AI 전력 ETF로 자리매김합니다. 실제 전기와 컴퓨팅 용량이 유동적이고 수익을 창출하는 디지털 자산으로 전환되는 생태계를 구축하는 것입니다.",
+      "taglineTitle": "브랜드 약속",
+      "taglineLine1": "에너지 x 컴퓨팅",
+      "taglineLine2": "AI 경제에 활력을 불어넣다"
+    },
+    "logo": {
+      "title": "로고 시스템",
+      "description": "공식 로고마크와 기본 로고는 승인된 변형에만 사용하십시오. 최적의 가독성을 위해 대비와 여백을 유지하십시오.",
+      "primaryTitle": "기본 변형",
+      "logomark": "로고마크",
+      "logomarkDesc": "아바타, 파비콘 또는 컴팩트 배치에 사용되는 독립형 심볼입니다.",
+      "primary": "기본 로고",
+      "primaryDesc": "표준 브랜드 배치를 위한 기호가 있는 워드마크입니다.",
+      "backgroundsTitle": "승인된 배경",
+      "whiteBg": "흰색에",
+      "whiteBgDesc": "흰색 바탕에 풀컬러로 기본 로고를 사용하세요.",
+      "navyBg": "해군에 관하여",
+      "navyBgDesc": "대조를 위해 어두운 배경에 흰색 로고를 사용하세요.",
+      "skyBg": "스카이에서",
+      "skyBgDesc": "밝은 파란색 배경에 네이비 로고를 사용하세요."
+    },
+    "spacing": {
+      "title": "클리어 스페이스",
+      "lead": "가시성과 효과를 보장하기 위해 로고 주위에 충분한 공간을 확보하세요.",
+      "clearSpace": "최소 여백",
+      "minDistance": "이 거리 안에는 어떠한 요소도 침입해서는 안 됩니다."
+    },
+    "social": {
+      "title": "소셜 미디어",
+      "square": "정사각형 아바타",
+      "squareDesc": "밝은 배경에 로고마크를 중앙에 배치하세요.",
+      "circle": "원형 아바타",
+      "circleDesc": "흰색 원을 중심으로 로고마크를 사용하세요."
+    },
+    "favicon": {
+      "title": "파비콘",
+      "web": "웹 파비콘",
+      "webDesc": "브라우저 탭에는 공식 32×32 파비콘을 사용하세요."
+    },
+    "colors": {
+      "title": "색상 시스템",
+      "description": "저희 컬러 팔레트는 신뢰, 혁신, 그리고 깨끗한 기술을 반영합니다. 각 색상은 브랜드 가치를 전달하고 일관된 비주얼 아이덴티티를 구축하기 위해 신중하게 선정되었습니다.",
+      "primaryTitle": "기본색",
+      "navy": "네이비 블루",
+      "navyDesc": "헤더와 배경의 기본 브랜드 색상입니다.",
+      "sky": "하늘색",
+      "skyDesc": "하이라이트와 UI 요소에 대한 강조색입니다.",
+      "white": "하얀색",
+      "whiteDesc": "명확성과 대비를 위해 중립적인 색상을 사용합니다."
+    },
+    "gradient": {
+      "title": "구배",
+      "primary": "1차 기울기",
+      "primaryDesc": "히어로 섹션과 주요 CTA에는 네이비에서 스카이로 그라데이션을 사용하세요."
+    },
+    "typography": {
+      "title": "타이포그래피",
+      "primaryTitle": "기본 글꼴",
+      "primaryDesc": "이 기본 글꼴은 브랜드와 상호 작용하는 모든 사람에게 회사를 정의하는 데 도움이 됩니다.",
+      "secondaryTitle": "보조 글꼴",
+      "secondaryDesc": "이 보조 글꼴은 기본 글꼴을 지원하고 브랜드를 보완합니다.",
+      "usageTitle": "용법",
+      "usageDesc": "헤드라인 크기는 명확성, 영향력, 권위가 필수적인 주요 순간에만 적용됩니다.",
+      "leadingTitle": "줄 간격 / 행간",
+      "bodyTitle": "신체 사용"
+    },
+    "photography": {
+      "title": "사진술",
+      "lead": "브랜드를 일관되게 미적으로 표현하는 이미지를 보장하는 스타일 가이드입니다.",
+      "captions": {
+        "cleanTech": "클린 테크놀로지 포커스",
+        "energyInnovation": "에너지 혁신",
+        "sustainableFuture": "지속 가능한 미래"
+      }
+    },
+    "applications": {
+      "title": "응용 프로그램",
+      "waterBottle": "물병",
+      "waterBottleDesc": "지속 가능한 상품에 대한 브랜드 적용",
+      "baseballCap": "야구 모자",
+      "baseballCapDesc": "프로모션 의류에 대한 브랜드 적용"
+    },
+    "documents": {
+      "view": "문서 보기"
+    },
+    "usage": {
+      "badTitle": "잘못된 사용",
+      "logoTitle": "로고 가이드라인",
+      "standardsTitle": "브랜드 표준"
+    }
+  },
+  "actions": {
+    "explore": "탐구하다",
+    "scheduleCall": "전화 통화 예약",
+    "downloadPitchDeck": "피치 덱 다운로드",
+    "requestInfo": "추가 정보 요청",
+    "contactBD": "BD 팀에 문의하세요"
+  },
+  "home": {
+    "investmentMaterials": {
+      "title": "투자 자료",
+      "subtitle": "주요 문서",
+      "description": "AGV Protocol의 비전, 기술, 시장 기회를 다루는 포괄적인 피치 데크와 요약을 검토해 보세요."
+    },
+    "execSummary": {
+      "title": "요약",
+      "subtitle": "빠른 개요 및 주요 지표",
+      "description": "비전, 기술, 재무 예측을 포괄하는 포괄적인 프레젠테이션입니다."
+    },
+    "pitchDeck": {
+      "title": "피치 데크",
+      "subtitle": "투자 프리젠테이션 완료",
+      "disclaimer": "위 프레젠테이션에는 기밀 정보가 포함되어 있습니다. 주의 깊게 검토하시고 추가 정보가 필요하시면 문의해 주시기 바랍니다."
+    },
+    "resources": {
+      "title": "투자 자원",
+      "subtitle": "데이터 룸",
+      "description": "잠재적 투자자와 파트너를 위한 포괄적인 문서와 리소스."
+    },
+    "cta": {
+      "title": "미래에 투자할 준비가 되셨나요?",
+      "description": "지속 가능한 블록체인 인프라를 통해 실제 자산 토큰화를 혁신하는 AGV 프로토콜에 참여하세요.",
+      "accessDataRoom": "전체 데이터 룸에 액세스"
+    }
+  },
+  "docs": {
+    "tech": {
+      "whitepaper": {
+        "title": "AGV 프로토콜 백서",
+        "description": "AGV 프로토콜 인프라에 대한 자세한 기술 개요 및 시스템 설계입니다."
+      },
+      "architectureDiagram": {
+        "title": "시스템 아키텍처 다이어그램",
+        "description": "AGV의 온체인 및 IoT 계층 통합에 대한 포괄적인 설명입니다."
+      },
+      "audit": {
+        "title": "스마트 계약 감사 보고서",
+        "description": "제3자 보안 감사 결과 및 권장 사항."
+      },
+      "github": {
+        "title": "GitHub 저장소 액세스",
+        "description": "핵심 프로토콜 구현을 담고 있는 공개 저장소입니다."
+      }
+    },
+    "financials": {
+      "modelQ12024": {
+        "title": "2024년 1분기 재무 모델",
+        "description": "2024년 1분기에 대한 자세한 전망과 매출 세부내역입니다."
+      },
+      "valuation": {
+        "title": "가치 평가 분석",
+        "description": "포괄적인 평가 방법론과 시장 분석."
+      },
+      "revenueForecast": {
+        "title": "2024-2026년 매출 예측",
+        "description": "3년 수익 예측 및 성장 가정."
+      },
+      "tokenEconomics": {
+        "title": "토큰 경제 모델",
+        "description": "토큰 분배, 유용성 및 경제적 인센티브 설계."
+      }
+    },
+    "legal": {
+      "coi": {
+        "title": "법인설립증서",
+        "description": "공식적인 법인 설립 서류 및 사업 등록."
+      },
+      "ipTransfer": {
+        "title": "IP 양도 계약",
+        "description": "지적재산권 양도 및 양도 문서."
+      },
+      "tokenSale": {
+        "title": "토큰 판매 계약",
+        "description": "토큰 구매 및 배포에 대한 약관입니다."
+      },
+      "compliance": {
+        "title": "규정 준수 보고서",
+        "description": "법률 준수 상태 및 규제 프레임워크 분석."
+      }
+    },
+    "esg": {
+      "impact": {
+        "title": "지속 가능성 영향 보고서",
+        "description": "환경영향평가 및 지속가능성 지표."
+      },
+      "carbon": {
+        "title": "IoT 탄소 발자국 데이터",
+        "description": "IoT 기기를 통한 실시간 탄소 배출량 추적."
+      },
+      "framework": {
+        "title": "ESG 규정 준수 프레임워크",
+        "description": "환경, 사회, 거버넌스 준수 표준."
+      },
+      "rwa": {
+        "title": "실제 자산 검증",
+        "description": "실제 자산 지원 및 검증 프로세스의 증거."
+      }
+    },
+    "brandkit": {
+      "logoPack": {
+        "title": "AGV 로고 팩",
+        "description": "다양한 형식과 크기로 로고를 완성하세요."
+      },
+      "guidelines": {
+        "title": "브랜드 가이드라인",
+        "description": "포괄적인 브랜드 아이덴티티 가이드라인 및 사용 규칙."
+      },
+      "pressKit": {
+        "title": "보도자료 자료",
+        "description": "미디어 자산, 보도자료, 홍보 자료."
+      },
+      "templates": {
+        "title": "마케팅 템플릿",
+        "description": "프레젠테이션과 마케팅 자료를 위한 디자인 템플릿입니다."
+      }
+    }
+  },
+  "contact": {
+    "title": "연락처 및 투자 문의",
+    "subtitle": "연락하세요",
+    "description": "AGV 프로토콜에 투자할 준비가 되셨나요? 자세한 상담 및 파트너십 기회에 대해서는 저희 팀에 문의해 주세요.",
+    "form": {
+      "title": "투자 문의 양식",
+      "firstName": "이름",
+      "lastName": "성",
+      "email": "이메일 주소",
+      "phone": "전화 번호",
+      "company": "회사/조직",
+      "investmentType": "투자 유형",
+      "message": "메시지",
+      "nda": "비밀 논의를 위해 NDA에 서명하는 데 동의합니다.",
+      "submit": "문의하기",
+      "sending": "배상...",
+      "success": "감사합니다! 문의가 성공적으로 전송되었습니다.",
+      "error": "메시지를 보내지 못했습니다",
+      "networkError": "네트워크 오류가 발생했습니다. 다시 시도해 주세요.",
+      "selectType": "투자 유형을 선택하세요",
+      "messagePlaceholder": "귀하의 투자 관심분야와 구체적인 질문사항을 알려주세요.",
+      "investmentTypes": {
+        "series-a": "시리즈 A",
+        "strategic": "전략적 투자",
+        "partnership": "공동",
+        "advisory": "자문 역할",
+        "other": "다른"
+      }
+    },
+    "info": {
+      "title": "연락처 정보",
+      "email": "이메일",
+      "phone": "핸드폰",
+      "address": "주소",
+      "addressText": "123 이노베이션 드라이브\n샌프란시스코, 캘리포니아 94105"
+    },
+    "actions": {
+      "title": "빠른 작업",
+      "dataRoom": "전체 데이터 룸에 액세스",
+      "financials": "재무 모델 보기",
+      "esg": "ESG 및 지속가능성 보고서",
+      "brandkit": "브랜드 키트 다운로드"
+    },
+    "nda": {
+      "title": "기밀 정보 접근",
+      "description": "기밀 재무 예측, 기술 사양 및 전략 계획에 대한 접근을 원하시면 이메일로 NDA를 요청하세요.",
+      "request": "비밀 유지 계약(NDA) 요청"
+    }
+  },
+  "financials": {
+    "title": "재무 모델 및 예측",
+    "subtitle": "재무 문서",
+    "description": "포괄적인 문서를 통해 AGV 프로토콜에 대한 자세한 재무 모델, 평가 분석 및 수익 예측에 접근하세요.",
+    "mainDocument": {
+      "title": "재무 감사 및 평가 지수",
+      "description": "AGV 프로토콜에 대한 포괄적인 재무 감사 및 가치 평가 분석에는 세부적인 재무 모델, 예측 및 투자 지표가 포함됩니다."
+    },
+    "metrics": {
+      "title": "주요 재무 지표",
+      "tam": "총 주소 가능 시장",
+      "roi": "예상 투자 수익률",
+      "seriesA": "시리즈 A 타겟",
+      "profitability": "수익성 확보까지 걸리는 기간"
+    },
+    "documents": {
+      "title": "재무 문서 및 보고서",
+      "description": "토큰 핸드북, 통합 보고서, 자본금 표, 백서 발췌문을 포함한 필수 재무 문서입니다.",
+      "tokenHandbook": "AGV 프로토콜 토큰 핸드북 v2025",
+      "tokenHandbookDesc": "유틸리티, 거버넌스, 경제 모델을 포함한 AGV 프로토콜 토큰에 대한 포괄적인 가이드입니다.",
+      "integratedReport": "AGV 프로토콜 – 통합 재무 및 평가 보고서 v2025.10",
+      "integratedReportDesc": "프로토콜의 재무 실적의 모든 측면을 포괄하는 세부적인 통합 재무 분석 및 평가 보고서입니다.",
+      "capTable": "Cap Table BVI 주주 결의안 V2025.10",
+      "capTableDesc": "BVI 관할권의 공식 자본금표 문서와 주주 결의안.",
+      "whitepaper": "듀얼 토큰 rGGP + GVT(백서 발췌) v2025.10",
+      "whitepaperDesc": "rGGP와 GVT 토큰을 사용한 듀얼 토큰 시스템을 자세히 설명하는 기술 백서 발췌본입니다."
+    },
+    "revenue": {
+      "title": "수익 흐름",
+      "transactionFees": "거래 수수료",
+      "transactionFeesDesc": "자산 토큰화 거래당 0.1-0.5%",
+      "subscription": "구독 서비스",
+      "subscriptionDesc": "프리미엄 기능에 대한 월/연간 요금",
+      "dataLicensing": "데이터 라이선싱",
+      "dataLicensingDesc": "IoT 및 탄소 추적 데이터 라이선싱"
+    },
+    "highlights": {
+      "title": "투자 하이라이트",
+      "market": {
+        "title": "시장 기회",
+        "tam": "• 총 주소 가능 시장 규모 2.5조 달러",
+        "demand": "• 지속 가능한 투자에 대한 수요 증가",
+        "regulatory": "• 녹색금융에 대한 규제 지원",
+        "advantage": "• RWA 토큰화의 선점자 이점"
+      },
+      "projections": {
+        "title": "재무 예측",
+        "roi": "• 예상 ROI 25-40%",
+        "seriesA": "• 시리즈 A 펀딩 목표액 5000만 달러",
+        "profitability": "• 수익성 달성까지 18~24개월 소요",
+        "revenue": "• 다양한 수익원"
+      }
+    }
+  },
+  "tech": {
+    "mainDoc": {
+      "title": "기술 감사 및 인프라 검증 지수",
+      "description": "시스템 아키텍처, 보안 평가, 기술 스택 검증을 포괄하는 포괄적인 기술 감사 및 인프라 검증 문서입니다."
+    },
+    "header": {
+      "title": "기술 및 건축",
+      "subtitle": "기술 문서",
+      "description": "포괄적인 문서를 통해 AGV 프로토콜의 기술 인프라, 시스템 아키텍처 및 보안 감사를 살펴보세요."
+    },
+    "metrics": {
+      "title": "기술 지표",
+      "uptime": "가동 시간 SLA",
+      "speed": "거래 속도",
+      "encryption": "암호화",
+      "monitoring": "모니터링"
+    },
+    "highlights": {
+      "title": "기술적 하이라이트",
+      "blockchain": {
+        "title": "블록체인 인프라",
+        "l2": "2계층 스케일링 솔루션",
+        "automation": "스마트 계약 자동화",
+        "interop": "크로스체인 상호운용성",
+        "governance": "분산화된 거버넌스"
+      },
+      "iot": {
+        "title": "IoT 통합",
+        "realtime": "실시간 데이터 피드",
+        "auth": "장치 인증",
+        "carbon": "탄소 추적 센서",
+        "compliance": "자동화된 규정 준수"
+      }
+    },
+    "stack": {
+      "title": "기술 스택",
+      "blockchain": "블록체인",
+      "blockchainDesc": "스마트 계약 및 DeFi",
+      "iot": "사물인터넷",
+      "iotDesc": "실시간 모니터링",
+      "aiml": "인공지능/머신러닝",
+      "aimlDesc": "예측 분석"
+    },
+    "sections": {
+      "ip": {
+        "title": "IP 요약",
+        "description": "파워 투 민트 기능과 RWA 매핑 프로토콜을 다루는 백서 발췌본을 포함한 지적 재산권 문서입니다.",
+        "docs": {
+          "powerToMint": {
+            "title": "Power to Mint(백서 발췌) V2025.10",
+            "description": "AGV 프로토콜 생태계 내에서 기능을 주조하고 토큰을 생성하는 메커니즘을 자세히 설명하는 기술 백서 발췌본입니다."
+          },
+          "rwaMapping": {
+            "title": "RWA 매핑(백서 발췌) v2025.10",
+            "description": "실제 자산(RWA) 매핑 프로토콜과 토큰화 메커니즘을 다루는 포괄적인 백서 발췌본입니다."
+          }
+        }
+      },
+      "github": {
+        "title": "GitHub(스마트 계약) 링크",
+        "description": "AGV 프로토콜의 블록체인 인프라를 위한 스마트 계약 저장소와 개발 리소스에 액세스합니다.",
+        "docs": {
+          "profile": {
+            "title": "GitHub 프로필 링크",
+            "description": "스마트 계약 저장소, 개발 문서, 소스 코드가 포함된 AGV 프로토콜의 GitHub 프로필에 직접 액세스하세요."
+          }
+        }
+      },
+      "pitchDecks": {
+        "title": "피치 데크",
+        "description": "사업 개발, 기관 투자자, 전문 프레젠테이션을 위한 다양한 버전을 망라한 포괄적인 피치 데크 컬렉션입니다.",
+        "docs": {
+          "bd": {
+            "title": "AGV 프로토콜 피치 데크(BD 버전) v2025.10",
+            "description": "AGV 프로토콜의 가치 제안과 시장 기회를 강조하는 사업 개발에 중점을 둔 피치 데크입니다."
+          },
+          "institutional": {
+            "title": "AGV 프로토콜 피치 데크(기관용) v2025.10",
+            "description": "자세한 재무 예측과 위험 평가를 담은 기관 투자자 중심의 투자 설명 자료입니다."
+          },
+          "oilToAi": {
+            "title": "AGV 프로토콜 피치 데크(석유에서 AI 전력으로의 전환 에디션) v2025.10",
+            "description": "기존의 석유 기반 전력에서 AI 기반 재생 에너지 솔루션으로의 전환에 초점을 맞춘 전문적인 투자 설명 자료입니다."
+          },
+          "general": {
+            "title": "AGV 프로토콜 피치 데크 v2025.10",
+            "description": "기술, 시장 기회, 비즈니스 모델을 포함한 AGV 프로토콜의 모든 측면을 다루는 포괄적인 피치 데크입니다."
+          }
+        }
+      },
+      "architecture": {
+        "title": "기술 아키텍처 및 프로세스 흐름",
+        "description": "시스템 아키텍처, 프로세스 흐름, 생태계 설계를 다루는 자세한 기술 문서입니다.",
+        "docs": {
+          "ecosystem": {
+            "title": "AGV 프로토콜 생태계 V2025.10",
+            "description": "기술 아키텍처, 프로세스 흐름, 시스템 통합 지점을 포괄하는 포괄적인 생태계 문서입니다."
+          }
+        }
+      }
+    }
+  },
+  "legal": {
+    "mainDoc": {
+      "title": "법률 패킷 인덱스",
+      "description": "모든 법적 구조와 규제 요건을 포괄하여 기관의 실사 및 규정 준수 검토를 위한 포괄적인 법적 문서 색인입니다."
+    },
+    "header": {
+      "title": "법률 및 등록 문서",
+      "subtitle": "법률 문서",
+      "description": "자세한 문서를 통해 AGV 프로토콜의 포괄적인 법적 구조, 준수 상태 및 규제 프레임워크를 검토합니다."
+    },
+    "compliance": {
+      "title": "준수 상태",
+      "regulatory": "규정 준수",
+      "items": {
+        "bvi": "BVI 법인 등록",
+        "nz": "뉴질랜드 법인 설립",
+        "kyc": "KYC/AML 규정 준수",
+        "cn": "중국 국내 등록"
+      }
+    },
+    "structure": {
+      "title": "법적 구조",
+      "items": {
+        "bvi": "BVI 지주회사(JLL Asset Ltd)",
+        "nz": "뉴질랜드 SPV(3669875)",
+        "cn": "중국 내륙 법인",
+        "multi": "다중 관할권 준수"
+      }
+    },
+    "framework": {
+      "title": "법적 틀",
+      "governance": {
+        "title": "기업 지배구조",
+        "multi": "다중 관할 구조",
+        "bvi": "BVI 지주회사 프레임워크",
+        "nz": "뉴질랜드 DAO 거버넌스",
+        "cn": "중국 내륙 규정 준수"
+      },
+      "risk": {
+        "title": "위험 관리",
+        "docs": "포괄적인 법률 문서",
+        "translation": "공증 번역 서비스",
+        "monitoring": "규정 준수 모니터링",
+        "opinions": "다중 관할권 법률 의견"
+      }
+    },
+    "overview": {
+      "title": "법적 구조 개요",
+      "bvi": "영국령 버진아일랜드",
+      "bviDesc": "지주회사",
+      "nz": "뉴질랜드",
+      "nzDesc": "DAO 거버넌스",
+      "cn": "중국",
+      "cnDesc": "육상 자산"
+    },
+    "sections": {
+      "articles": {
+        "title": "정관",
+        "description": "BVI 법인의 공식 정관 및 기업 지배 구조 문서입니다.",
+        "docs": {
+          "bviArticles": {
+            "title": "BVI JLL Asset Ltd 정관 v2025.10",
+            "description": "BVI JLL Asset Ltd의 공식 정관으로 기업 지배 구조 프레임워크와 운영 지침이 확립되었습니다."
+          }
+        }
+      },
+      "china": {
+        "title": "중국 국내 자산 기업",
+        "description": "승인 계약, 이사회 결의안, 규정 준수 성명을 포함한 중국 내륙 자산 기업에 대한 법적 문서입니다.",
+        "docs": {
+          "authorization": {
+            "title": "승인 계약 CHN CO_BVI 2025 v2025.10",
+            "description": "중국 국내 법인과 BVI 지주회사 간의 자산 관리 및 운영을 위한 권한 부여 계약."
+          },
+          "boardResolution": {
+            "title": "이사회 결의안 CHN CO_BVI 2025 v2025.10",
+            "description": "중국 국내 기업이 BVI 운영 및 자산 관리 활동을 승인하는 공식 이사회 결의안을 발표했습니다."
+          },
+          "compliance": {
+            "title": "준수 성명 CHN CO_BVI 2025 v2025.10",
+            "description": "중국 국내 기업의 규제 준수 및 운영 표준에 대한 포괄적인 준수 성명입니다."
+          },
+          "irrevocable": {
+            "title": "취소 불가능한 승인서 CHN CO_BVI 2025 v2025.10",
+            "description": "BVI 법인에 중국 내륙 자산 운영에 대한 전적인 권한을 부여하는 취소 불가능한 승인 성명서입니다."
+          },
+          "noLitigation": {
+            "title": "소송/중재 금지 증명서 CHN CO_BVI 2025 v2025.10",
+            "description": "중국 국내 법인에 대한 계류 중인 소송이나 중재 절차가 없음을 확인하는 공식 인증서입니다."
+          },
+          "tax": {
+            "title": "세금 등록 증명서 및 세금 납부 증명서 CHN CO_BVI 2025 v2025.10",
+            "description": "중국 세무 당국에서 발급한 해외 법인의 공식 세무 등록 및 통관 증명서입니다."
+          }
+        }
+      },
+      "bvi": {
+        "title": "해외 지주 SPV - 영국령 버진 아일랜드",
+        "description": "이사회 결의안, 승인 체계, 규정 준수 성명을 포함한 BVI 해외 지주 특수 목적 회사에 대한 완전한 법적 문서입니다.",
+        "docs": {
+          "boardReauth": {
+            "title": "이사회 결의안(재승인) BVI_ijet 2025 v2025.10",
+            "description": "BVI ijet 운영 및 자산 관리 활동 재인가를 위한 이사회 결의안."
+          },
+          "chain": {
+            "title": "권한 부여 체인 BVI_ijet 2025 v2025.10",
+            "description": "BVI 기관에서 법적 권한 흐름을 확립하는 완전한 권한 부여 문서 체인입니다."
+          },
+          "compliance": {
+            "title": "규정 준수 성명 BVI_ijet ltd 2025 v2025.10",
+            "description": "BVI ijet Ltd의 규정 준수 및 운영 표준에 대한 포괄적인 준수 성명입니다."
+          },
+          "irrevocable": {
+            "title": "취소 불가능한 승인서 BVI_ijet ltd 2025 v2025.10",
+            "description": "BVI ijet Ltd의 영구 운영 권한을 확립하는 취소 불가능한 승인 성명서."
+          },
+          "kyc": {
+            "title": "KYC 및 AML 문서 BVI_ijet Ltd 2025 v2025.10",
+            "description": "BVI ijet Ltd.에 대한 고객 확인 및 자금 세탁 방지 문서 완성"
+          },
+          "noLitigation": {
+            "title": "소송/중재 금지 인증서 BVI_ijet ltd 2025 v2025.10",
+            "description": "BVI ijet Ltd.에 대한 계류 중인 소송이나 중재 절차가 없음을 확인하는 공식 인증서"
+          },
+          "reauth": {
+            "title": "재승인 계약 BVI Ijet Ltd 2025 v2025.10",
+            "description": "BVI Ijet Ltd.의 운영 권한을 갱신하는 재승인 계약"
+          },
+          "revenue": {
+            "title": "수익 및 유통 계약 BVI_ijet ltd 2025 v2025.10",
+            "description": "BVI ijet Ltd.의 수익 분배 및 유통 메커니즘을 설명하는 수익 및 유통 계약."
+          }
+        }
+      },
+      "nz": {
+        "title": "발행인 및 DAO 거버넌스 SPV - 뉴질랜드",
+        "description": "뉴질랜드에 본사를 둔 발행인과 DAO 거버넌스 특수목적회사에 대한 법적 문서로, 설립 증명서와 승인 계약서가 포함됩니다.",
+        "docs": {
+          "coi": {
+            "title": "법인설립증서(3669875 2022년 11월 11일) v2025.10",
+            "description": "2022년 11월 11일자 뉴질랜드 법인(3669875)의 공식 설립증명서."
+          },
+          "chain": {
+            "title": "권한 부여 체인 BVI_ijet 2025 v2025.10",
+            "description": "BVI에서 뉴질랜드 법인으로의 법적 권한 흐름을 확립하는 권한 부여 문서 체인입니다."
+          },
+          "extract": {
+            "title": "회사 추출물(3669875 2022년 11월 11일) v2025.10",
+            "description": "2022년 11월 11일자 뉴질랜드 회사 사무소의 법인 3669875에 대한 공식 회사 발췌문입니다."
+          },
+          "constitution": {
+            "title": "뉴질랜드 헌법 iJet Limited",
+            "description": "뉴질랜드 iJet Limited의 공식 정관 문서로, 기업 지배 구조 프레임워크와 운영 지침을 확립했습니다."
+          },
+          "reauth": {
+            "title": "재승인 계약 BVI Ijet Ltd 2025 v2025.10",
+            "description": "BVI와 뉴질랜드 기관 간의 재승인 협정으로 운영 권한이 확립되었습니다."
+          }
+        }
+      },
+      "structure": {
+        "title": "법적 구조 및 검증 문서",
+        "description": "공증 번역본과 법률 요약을 포함한 법적 구조 요약 및 검증 문서입니다.",
+        "docs": {
+          "summary": {
+            "title": "AGV 프로토콜 – 법적 구조 요약",
+            "description": "AGV 프로토콜의 전체 기업 및 법적 틀을 개략적으로 설명한 포괄적인 법적 구조 요약입니다."
+          },
+          "naati": {
+            "title": "NAATI 공인 중국어-영어 번역가 자격증",
+            "description": "중국어-영어 번역 서비스에 대한 공식 NAATI 인증(인증서 3327_620583_6)."
+          },
+          "nzstii": {
+            "title": "NZSTII 공인 중국어-영어 번역가 회원 증명서",
+            "description": "공식 NZSTII 회원 증명서는 중국어-영어 번역 서비스를 공인하는 기관입니다."
+          }
+        }
+      }
+    }
+  },
+  "depin": {
+    "header": {
+      "title": "DePIN 확인",
+      "subtitle": "분산형 물리적 인프라 네트워크",
+      "description": "AGV 프로토콜의 물리적 인프라 개발, 농업 구현, 재생 에너지 통합에 대한 포괄적인 검증 문서를 자세한 시각적, 비디오 증거를 통해 제공합니다."
+    },
+    "main": {
+      "title": "DePIN 검증 인덱스 - AGV 프로토콜 v2025.10",
+      "description": "토지 개발, 인프라 구현, 농업-태양광 통합 프로세스를 포괄하는 포괄적인 DePIN(분산형 물리적 인프라 네트워크) 검증 문서입니다."
+    },
+    "metrics": {
+      "title": "DePIN 인프라 지표",
+      "solar": "태양광 용량",
+      "iot": "사물인터넷 센서",
+      "monitoring": "실시간 모니터링",
+      "coverage": "검증 범위"
+    },
+    "overview": {
+      "title": "DePIN 인프라 개요",
+      "agricultural": {
+        "title": "농업",
+        "desc": "스마트 농업 및 관개"
+      },
+      "pv": {
+        "title": "태양광",
+        "desc": "태양열 발전"
+      },
+      "iot": {
+        "title": "사물인터넷 네트워크",
+        "desc": "실시간 모니터링"
+      }
+    },
+    "sections": {
+      "landOverview": {
+        "title": "토지 개요 사진",
+        "description": "개발 전의 초기 조건, 지형, 지리적 특징을 보여주는 토지 면적에 대한 포괄적인 시각적 문서입니다."
+      },
+      "leveling": {
+        "title": "토지 평탄화 및 시비 平整施肥",
+        "description": "평탄화, 토양 처리, 비료 공급 절차를 포함한 토지 준비 과정에 대한 비디오 문서입니다."
+      },
+      "trellis": {
+        "title": "Trellis 인프라 格架系统",
+        "description": "농업 지원 구조물을 위한 격자 시스템 설치 및 인프라 개발에 대한 비디오 문서입니다."
+      },
+      "irrigation": {
+        "title": "점적 관개 시스템(滴灌系统)",
+        "description": "이미지와 구현 과정을 담은 점적 관개 시스템 설치에 대한 포괄적인 문서입니다."
+      },
+      "plantation": {
+        "title": "드워프 밀집 농장 矮砧密植",
+        "description": "심기 과정을 담은 사진과 영상을 포함하여 왜소 밀집 식재 기술에 대한 문서입니다."
+      },
+      "maintenance": {
+        "title": "식물 보호 및 유지관리 植保养护",
+        "description": "이미지와 비디오를 모두 포함한 식물 보호 조치 및 유지 관리 절차에 대한 포괄적인 문서입니다."
+      },
+      "agriPv": {
+        "title": "농업-PV 통합 园光互补",
+        "description": "태양광 패널 설치 및 통합 과정의 이미지와 비디오를 포함한 농업-태양광 통합에 대한 포괄적인 문서입니다."
+      },
+      "onSite": {
+        "title": "현장 现场",
+        "description": "프로젝트 현장의 조감도, 수평도, 상향도를 포함한 포괄적인 현장 문서입니다."
+      },
+      "device": {
+        "title": "장치 设备",
+        "description": "프로젝트에서 사용되는 장비 및 장치의 비디오 문서입니다."
+      },
+      "data": {
+        "title": "데이터 数据",
+        "description": "데이터 수집 및 모니터링 시스템의 비디오 문서입니다."
+      }
+    }
+  },
+  "esg": {
+    "header": {
+      "title": "ESG 및 실제 자산 증명",
+      "subtitle": "지속 가능성 및 영향",
+      "description": "포괄적인 문서화를 통해 AGV 프로토콜의 환경적 영향, 지속 가능성 이니셔티브, 실제 자산 검증을 살펴보세요."
+    },
+    "main": {
+      "title": "ESG 및 지속가능성 영향 보고서",
+      "description": "AGV 프로토콜의 환경 영향, 지속 가능성 이니셔티브, 실제 자산 검증에 대한 포괄적인 평가."
+    },
+    "metrics": {
+      "title": "ESG 성과 지표",
+      "carbon": "탄소 발자국 감소",
+      "renewable": "재생 에너지 사용",
+      "waste": "폐기물 감소",
+      "verifiedRwa": "검증된 RWA 자산"
+    },
+    "verification": {
+      "title": "실제 자산 검증",
+      "iot": {
+        "title": "사물인터넷 모니터링",
+        "items": [
+          "실시간 자산 추적",
+          "환경 센서",
+          "탄소 배출 모니터링",
+          "자동화된 규정 준수 보고"
+        ]
+      },
+      "process": {
+        "title": "검증 프로세스",
+        "items": [
+          "제3자 감사",
+          "블록체인 불변성",
+          "스마트 계약 자동화",
+          "투명한 보고"
+        ]
+      }
+    },
+    "dashboard": {
+      "title": "탄소 영향 대시보드",
+      "co2": "CO2 절감량(톤)",
+      "devices": "배포된 IoT 장치",
+      "monitoring": "실시간 모니터링"
+    },
+    "sections": {
+      "admin": {
+        "title": "행정 및 재무 문서",
+        "description": "프로젝트 수립 및 규정 준수에 필요한 필수 법률 및 재무 문서입니다.",
+        "docs": {
+          "registration": {
+            "title": "산시성 기업투자프로젝트 등록확인서",
+            "description": "산시성 기업 투자 프로젝트에 대한 공식 등록 확인서."
+          },
+          "lease": {
+            "title": "토지 임대 계약",
+            "description": "토지 임대 계약 및 재산권에 대한 법적 문서."
+          },
+          "jv": {
+            "title": "정부 농업 태양광 합작 투자 계약",
+            "description": "정부와 농업용 태양광 프로젝트 파트너 간의 공식 합작 투자 계약."
+          },
+          "dd": {
+            "title": "재무 실사 보고서",
+            "description": "프로젝트에 대한 포괄적인 재무 분석 및 실사 평가."
+          }
+        }
+      },
+      "yichuan": {
+        "title": "이촨현 6.42MW 과수원 + 태양광 하이브리드 프로젝트(승인 및 검토)",
+        "description": "이촨현 태양광 하이브리드 프로젝트에 대한 정부 승인 및 규제 검토의 전체 목록입니다.",
+        "docs": {
+          "landTransfer": {
+            "title": "윈얀 타운 토지 양도 증명서",
+            "description": "윈얀진 당국에서 발급한 공식 토지 양도 증명서."
+          },
+          "edb": {
+            "title": "경제개발국 승인",
+            "description": "경제개발국의 승인 문서."
+          },
+          "nrb": {
+            "title": "천연자원국 승인",
+            "description": "토지 이용 및 환경 규정 준수에 대한 천연자원국의 공식 승인."
+          },
+          "coal": {
+            "title": "이촨현 석탄감축사무소 토지 승인",
+            "description": "이촨현 석탄감축사무소의 토지 허가 서류."
+          },
+          "edbOpinion": {
+            "title": "이촨현 경제개발국 의견",
+            "description": "이촨현 경제개발국의 공식 의견 및 권고."
+          },
+          "drb": {
+            "title": "이촨현 개발개혁국 승인",
+            "description": "이촨현 개발개혁국의 승인 문서."
+          },
+          "forestry": {
+            "title": "이촨현 임업국 승인",
+            "description": "이촨현 임업국으로부터 임업 및 환경 승인을 받았습니다."
+          },
+          "epb": {
+            "title": "이촨현 환경보호국 의견",
+            "description": "환경보호국의 환경영향평가 및 의견."
+          }
+        }
+      },
+      "zhongnan": {
+        "title": "중난그룹 협력 협정",
+        "description": "중난그룹과의 전략적 파트너십 계약 및 협력 문서화.",
+        "docs": {
+          "energy": {
+            "title": "중난그룹 에너지 협력 계약",
+            "description": "AGV Protocol과 Zhongnan Group 간의 전략적 에너지 협력 계약."
+          },
+          "yichuan": {
+            "title": "Zhongnan Group Yichuan 협력 계약",
+            "description": "중난그룹과 이촨현 프로젝트에 대한 특정 협력 협정을 체결했습니다."
+          },
+          "supplement": {
+            "title": "보충 협정",
+            "description": "주요 협력 계약을 보완하는 추가 약관입니다."
+          }
+        }
+      }
+    }
+  },
+  "nda": {
+    "form": {
+      "title": "직책",
+      "subtitle": "비밀 유지 계약 요청",
+      "description": "비밀 유지 계약(NDA)을 요청하시려면 아래 양식을 작성해 주세요. 계약서는 귀하의 이메일 주소로 발송해 드리겠습니다.",
+      "name": "성명",
+      "organization": "조직/회사",
+      "email": "이메일 주소",
+      "submit": "비밀 유지 계약(NDA) 요청",
+      "sending": "요청 제출 중...",
+      "success": "감사합니다! NDA 요청이 성공적으로 제출되었습니다. 곧 귀하의 이메일 주소로 NDA 문서를 보내드리겠습니다.",
+      "error": "NDA 요청을 제출하지 못했습니다.",
+      "networkError": "네트워크 오류가 발생했습니다. 다시 시도해 주세요.",
+      "namePlaceholder": "귀하의 성명을 입력하세요",
+      "titlePlaceholder": "예: CEO, 투자 관리자, 분석가",
+      "organizationPlaceholder": "회사 또는 조직 이름을 입력하세요",
+      "emailPlaceholder": "이메일 주소를 입력하세요",
+      "emailNote": "NDA는 이 이메일 주소로 전송됩니다.",
+      "disclaimer": "이 양식을 제출함으로써 귀하는 NDA 문서를 수신하는 데 동의하고 해당 문서가 제공된 이메일 주소로 전송된다는 점을 이해합니다.",
+      "jobTitle": "직책"
+    },
+    "title": "비밀 유지 계약 요청",
+    "subtitle": "비밀 유지 계약 요청",
+    "description": "NDA 요청 양식을 제출하여 기밀 AGV 프로토콜 정보에 대한 액세스를 요청하세요."
+  },
+  "salesMarketing": {
+    "header": {
+      "title": "영업 및 마케팅",
+      "subtitle": "영업 전략 및 파트너십",
+      "description": "포괄적인 문서를 통해 AGV Protocol의 판매 전략, 시장 위치 및 전략적 파트너십을 살펴보세요."
+    },
+    "mainDoc": {
+      "title": "제품 타임라인 및 백서 발췌문 v2025.10",
+      "description": "AI 기반 재생 에너지 경제에 대한 로드맵과 비전을 보여주는 포괄적인 제품 타임라인과 백서 발췌본입니다."
+    },
+    "metrics": {
+      "title": "판매 성과 지표",
+      "pipeline": "판매 파이프라인",
+      "partners": "전략적 파트너",
+      "satisfaction": "고객 만족",
+      "support": "지원 가능"
+    },
+    "strategy": {
+      "market": {
+        "title": "시장 침투",
+        "desc": "재생에너지 분야의 기관 투자자 및 전략적 파트너를 타겟으로 합니다."
+      },
+      "growth": {
+        "title": "성장 전략",
+        "desc": "파트너십 및 직접 판매 채널을 통한 시장 도달 범위 확대"
+      },
+      "partnerships": {
+        "title": "전략적 파트너십",
+        "desc": "주요 산업 참여자 및 투자자와 장기적인 관계 구축"
+      },
+      "title": "판매 전략 개요"
+    },
+    "sections": {
+      "mous": {
+        "docs": {
+          "pusu": {
+            "title": "朴素资本管리유유공주投资意向书",
+            "description": "Pu Su Capital Management Co., Ltd.가 AGV Protocol 투자 기회에 관심을 표명한 투자 의향서입니다."
+          },
+          "guopeng": {
+            "title": "國鵬投資管理유유공주전略합작의서",
+            "description": "Guo Peng Investment Management Co., Ltd.의 전략적 협력 의향서에는 파트너십 프레임워크와 협력 조건이 설명되어 있습니다."
+          }
+        },
+        "title": "양해각서(MOU)",
+        "description": "주요 기관 파트너와의 전략적 파트너십 계약 및 투자 의향서."
+      }
+    }
+  },
+  "managementTeam": {
+    "header": {
+      "title": "경영팀",
+      "subtitle": "리더십 및 거버넌스",
+      "description": "AGV Protocol의 리더십 팀을 만나고 포괄적인 문서를 통해 당사의 거버넌스 구조를 알아보세요."
+    },
+    "mainDoc": {
+      "title": "AGV 프로토콜 글로벌 관리 및 거버넌스 개요 2025",
+      "description": "리더십 역할과 조직 구조를 포함하여 AGV 프로토콜의 글로벌 관리 구조와 거버넌스 프레임워크에 대한 포괄적인 개요입니다."
+    },
+    "expertise": {
+      "title": "팀 전문성",
+      "years": "년 경험",
+      "projects": "완료된 프로젝트",
+      "managed": "관리 자산",
+      "countries": "서비스 제공 국가"
+    },
+    "leadership": {
+      "executive": {
+        "title": "임원진",
+        "desc": "전략적 방향과 운영적 우수성을 주도하는 고위 리더십"
+      },
+      "board": {
+        "title": "이사회",
+        "desc": "거버넌스와 감독을 제공하는 독립 이사회 구성원"
+      },
+      "advisory": {
+        "title": "자문위원회",
+        "desc": "전략적 지침과 시장 통찰력을 제공하는 업계 전문가"
+      },
+      "title": "리더십 구조"
+    },
+    "principles": {
+      "transparency": {
+        "title": "투명도",
+        "desc": "모든 이해관계자에게 공개적인 의사소통과 명확한 보고"
+      },
+      "accountability": {
+        "title": "책임",
+        "desc": "명확한 책임 및 성과 측정 프레임워크"
+      },
+      "innovation": {
+        "title": "혁신",
+        "desc": "지속적인 개선과 기술 발전"
+      },
+      "sustainability": {
+        "title": "지속 가능성",
+        "desc": "장기적 가치 창출과 환경적 책임"
+      },
+      "title": "거버넌스 원칙"
+    }
+  }
+}

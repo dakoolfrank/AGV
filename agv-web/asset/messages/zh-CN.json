@@ -1,0 +1,190 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "节省",
+    "edit": "编辑",
+    "delete": "删除",
+    "back": "后退",
+    "next": "下一个",
+    "previous": "以前的",
+    "close": "关闭",
+    "confirm": "确认",
+    "required": "必需的",
+    "optional": "选修的",
+    "readMore": "阅读更多",
+    "yes": "是的",
+    "no": "不",
+    "review": "审查",
+    "submitting": "正在提交..."
+  },
+  "header": {
+    "title": "现实世界资产",
+    "alt": "AGV协议"
+  },
+  "form": {
+    "title": "资产登记表",
+    "steps": {
+      "basicData": "基础数据",
+      "financialRevenue": "财务与收入",
+      "operationsCompliance": "运营与合规",
+      "tierData": "层级数据"
+    },
+    "basicData": {
+      "title": "基本数据",
+      "projectName": "项目名称",
+      "landParcelId": "地块 ID",
+      "county": "县",
+      "city": "城市",
+      "province": "省",
+      "latitude": "纬度",
+      "longitude": "经度",
+      "landType": "土地类型",
+      "landTypeOptions": {
+        "orchard": "果园",
+        "farmland": "农田",
+        "facilityAgriculture": "设施农业"
+      },
+      "leaseContractId": "租赁合同编号",
+      "duration": "期间",
+      "owner": "所有者"
+    },
+    "financialData": {
+      "title": "财务和收入数据",
+      "unitInvestmentCost": "单位投资成本（元/亩或/兆瓦）",
+      "annualCashFlowBreakdown": "年度现金流明细",
+      "otherSubsidies": "其他补贴/绿色证书收入",
+      "annualizedIRR": "年化内部收益率/投资回报率计算"
+    },
+    "operationsCompliance": {
+      "title": "运营与合规",
+      "companyName": "公司名称",
+      "businessLicense": "营业执照/信用代码",
+      "epcContractorName": "EPC/O&M承包商名称",
+      "governmentFiling": "政府备案/批准文件 ID",
+      "governmentFilingOptions": {
+        "ndrc": "国家发改委",
+        "energyBureau": "能源局",
+        "agricultureBureau": "农业局"
+      },
+      "operatingEntity": "经营实体",
+      "operatingEntityOptions": {
+        "agricultureInsurance": "农业保险",
+        "solarPlantInsurance": "太阳能发电厂保险"
+      },
+      "tier": "选择等级",
+      "tierOptions": {
+        "orchardData": "果园数据",
+        "solarData": "太阳能数据"
+      }
+    },
+    "orchardData": {
+      "title": "果园数据",
+      "plantingArea": "种植面积（亩/公顷）",
+      "numberOfTrees": "树木数量",
+      "age": "年龄",
+      "variety": "种类",
+      "plantingDensity": "种植密度",
+      "rowSpacing": "行距",
+      "treeDensity": "树木密度",
+      "annualYield": "年产量（吨）",
+      "lastThreeYearsYield": "过去3年收益率",
+      "monitoringSystem": "监控系统（用于害虫/气候控制的物联网设备）",
+      "deviceId": "设备 ID（如果有）",
+      "orchardProductSalesRevenue": "果园产品销售收入"
+    },
+    "solarData": {
+      "title": "太阳能数据",
+      "installedCapacity": "装机容量（MWp）",
+      "pvModuleModel": "光伏组件型号",
+      "manufacturer": "制造商",
+      "installationDate": "安装日期",
+      "gridConnectionPermitId": "电网连接许可证ID",
+      "gridCompany": "电网公司",
+      "averageAnnualPowerGeneration": "平均年发电量（过去 12 个月，千瓦时）",
+      "tariffPpaContractId": "关税/PPA 合同 ID",
+      "solarElectricitySalesRevenue": "太阳能电力销售收入"
+    },
+    "review": {
+      "title": "审核您的提交",
+      "basicData": "基础数据",
+      "financialData": "财务和收入数据",
+      "operationsCompliance": "运营与合规",
+      "orchardData": "果园数据",
+      "solarData": "太阳能数据",
+      "backToEdit": "返回编辑",
+      "submitRegistration": "提交注册",
+      "noFileUploaded": "未上传文件"
+    },
+    "validation": {
+      "required": "此字段是必需的",
+      "fillAllRequired": "请填写{section}部分的所有必填字段",
+      "selectTier": "请在继续审核之前选择一个等级。",
+      "fieldRequired": "此字段是必需的"
+    },
+    "success": {
+      "submitted": "资产登记提交成功！",
+      "failed": "资产登记提交失败，请重试。"
+    }
+  },
+  "footer": {
+    "title": "RWA 资产",
+    "description": "通过区块链技术和现实世界资产代币化来改变农业。",
+    "features": {
+      "secure": "安全的",
+      "fast": "快速地",
+      "multichain": "多链"
+    },
+    "sections": {
+      "resources": "资源",
+      "company": "公司",
+      "support": "支持",
+      "legal": "合法的"
+    },
+    "links": {
+      "assetRegistration": "资产登记",
+      "documentation": "文档",
+      "support": "支持",
+      "aboutUs": "关于我们",
+      "careers": "职业发展",
+      "blog": "博客",
+      "helpCenter": "帮助中心",
+      "contactSupport": "联系支持",
+      "faq": "常问问题",
+      "privacy": "隐私",
+      "terms": "条款",
+      "cookiePolicy": "Cookie 政策"
+    },
+    "legal": {
+      "headquarters": "总部：全球",
+      "description": "保留所有权利。AGV 协议是一个用于现实世界资产代币化的去中心化平台。"
+    },
+    "copyright": "© 2024 AGV 协议。保留所有权利。"
+  },
+  "locationPicker": {
+    "noLocationSelected": "未选择位置",
+    "changeLocation": "更改位置",
+    "selectLocation": "选择位置",
+    "selectLocationTitle": "选择位置",
+    "searchLocation": "搜索地点",
+    "searchPlaceholder": "输入地址、城市或地标...",
+    "useCurrentLocation": "使用当前位置",
+    "detecting": "正在检测...",
+    "searchResults": "搜索结果",
+    "selectedLocation": "选定位置",
+    "address": "地址",
+    "province": "省",
+    "city": "城市",
+    "county": "县",
+    "coordinates": "坐标",
+    "mapNotConfigured": "未配置地图 API。请手动输入坐标或配置 API 密钥。",
+    "latitude": "纬度",
+    "longitude": "经度",
+    "setCoordinates": "设置坐标",
+    "cancel": "取消",
+    "confirmLocation": "确认位置"
+  }
+}

@@ -1,0 +1,1109 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "submit": "Entregar",
+    "cancel": "Cancelar",
+    "save": "Ahorrar",
+    "edit": "Editar",
+    "delete": "Borrar",
+    "back": "Atrás",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "close": "Cerca",
+    "confirm": "Confirmar",
+    "required": "Requerido",
+    "optional": "Opcional",
+    "readMore": "Leer más",
+    "lastUpdated": "Última actualización",
+    "docs": "documentos"
+  },
+  "nav": {
+    "home": "Hogar",
+    "about": "Acerca de",
+    "investor": "Relaciones con los inversores",
+    "financials": "Finanzas",
+    "legal": "Legal",
+    "contact": "Contacto",
+    "brandkit": "Kit de marca",
+    "tech": "Tecnología",
+    "esg": "ESG",
+    "depin": "DePIN",
+    "salesMarketing": "Ventas y marketing",
+    "managementTeam": "Equipo directivo"
+  },
+  "header": {
+    "title": "Protocolo AGV",
+    "subtitle": "Relaciones con los inversores",
+    "description": "Acceda a recursos exclusivos para inversores, informes financieros y actualizaciones de la empresa."
+  },
+  "hero": {
+    "title": "Relaciones con los inversores",
+    "subtitle": "Protocolo AGV",
+    "description": "Acceda a recursos exclusivos para inversores, informes financieros y actualizaciones de la empresa.",
+    "loginButton": "Inicio de sesión de inversor",
+    "learnMore": "Saber más",
+    "whitepaperButton": "Leer el documento técnico"
+  },
+  "auth": {
+    "login": "Iniciar sesión",
+    "logout": "Cerrar sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "rememberMe": "Acuérdate de mí",
+    "loginButton": "Iniciar sesión",
+    "invalidCredentials": "Correo electrónico o contraseña inválidos",
+    "loginSuccess": "Inicio de sesión exitoso",
+    "loginError": "Error en el inicio de sesión. Por favor, inténtalo de nuevo."
+  },
+  "investor": {
+    "welcome": "Bienvenido al Portal del Inversionista",
+    "dashboard": "Sala de datos",
+    "documents": "Documentos",
+    "reports": "Informes",
+    "presentations": "Presentaciones",
+    "financials": "Estados financieros",
+    "legal": "Documentos legales",
+    "brandkit": "Kit de marca",
+    "contact": "Contáctenos",
+    "header": {
+      "title": "Sala de datos del protocolo AGV",
+      "subtitle": "Portal del inversor",
+      "description": "Acceso completo a toda la documentación del Protocolo AGV, modelos financieros y materiales de inversión."
+    },
+    "overview": {
+      "title": "Descripción general de la sala de datos",
+      "totalDocs": "Total de documentos",
+      "categories": "Categorías",
+      "access": "Acceso disponible",
+      "transparency": "Transparencia"
+    },
+    "categories": {
+      "tech": "Documentación técnica, arquitectura e informes de auditoría",
+      "financials": "Modelos financieros, valoraciones y proyecciones",
+      "legal": "Documentos legales, cumplimiento y registro",
+      "esg": "Informes de impacto ambiental y sostenibilidad",
+      "brandkit": "Activos de marca, logotipos y materiales de marketing",
+      "depin": "Documentación de la red de infraestructura física descentralizada",
+      "salesMarketing": "Estrategias de ventas, asociaciones y materiales de mercado",
+      "managementTeam": "Documentación sobre la estructura de liderazgo y gobernanza"
+    },
+    "recent": {
+      "title": "Documentos actualizados recientemente"
+    },
+    "process": {
+      "title": "Proceso de inversión",
+      "steps": {
+        "review": {
+          "title": "Materiales de revisión",
+          "desc": "Explora nuestra documentación completa"
+        },
+        "schedule": {
+          "title": "Programar llamada",
+          "desc": "Conéctese con nuestro equipo para discusiones detalladas."
+        },
+        "dd": {
+          "title": "Debida diligencia",
+          "desc": "Acceda a información confidencial con NDA"
+        },
+        "decision": {
+          "title": "Decisión de inversión",
+          "desc": "Finalizar términos y unirse al Protocolo AGV"
+        }
+      }
+    },
+    "cta": {
+      "title": "¿Listo para invertir en el protocolo AGV?",
+      "description": "Únase a nosotros para revolucionar la tokenización de activos del mundo real a través de una infraestructura blockchain sostenible.",
+      "contact": "Contacte con nuestro equipo",
+      "viewFinancials": "Ver modelos financieros"
+    }
+  },
+  "documents": {
+    "title": "Documentos",
+    "description": "Acceda a documentos y recursos para inversores",
+    "categories": {
+      "financials": "Informes financieros",
+      "legal": "Documentos legales",
+      "presentations": "Presentaciones",
+      "brandkit": "Kit de marca",
+      "tech": "Explore nuestro documento técnico, diagramas de sistemas e informes de auditoría.",
+      "esg": "Descubra nuestro impacto ambiental y la verificación de activos en el mundo real."
+    },
+    "download": "Descargar",
+    "view": "Vista",
+    "noDocuments": "No hay documentos disponibles",
+    "loading": "Cargando documentos..."
+  },
+  "footer": {
+    "company": "Protocolo AGV",
+    "description": "Conectando activos del mundo real con tecnología blockchain",
+    "links": {
+      "home": "Inicio",
+      "about": "Acerca de",
+      "investor": "Relaciones con inversores",
+      "contact": "Contacto"
+    },
+    "legal": {
+      "privacy": "Política de privacidad",
+      "terms": "Términos de servicio",
+      "cookies": "Política de cookies"
+    },
+    "copyright": "© 2024 Protocolo AGV. Todos los derechos reservados.",
+    "quickLinks": "Enlaces rápidos",
+    "resources": "Recursos",
+    "dataRoom": "Sala de datos",
+    "privacyPolicy": "política de privacidad"
+  },
+  "error": {
+    "pageNotFound": "Página no encontrada",
+    "accessDenied": "Acceso denegado",
+    "serverError": "Error del servidor",
+    "tryAgain": "Intentar otra vez",
+    "goHome": "Ir a casa"
+  },
+  "brandkit": {
+    "hero": {
+      "title": "Kit de marca AGV",
+      "subtitle": "Identidad oficial, activos y pautas de uso",
+      "tagline": "Descargue activos oficiales y siga los estándares de la marca para garantizar comunicaciones consistentes y profesionales.",
+      "protocol": "PROTOCOLO"
+    },
+    "overview": {
+      "title": "Descripción general de la marca",
+      "visionTitle": "Visión",
+      "visionLine3": "El protocolo AGV impulsa el primer ETF de energía de inteligencia artificial descentralizado del mundo.",
+      "visionLine1": "En el siglo pasado, el petróleo impulsó la riqueza industrial.",
+      "visionLine2": "En este siglo, la electricidad y la informática impulsarán la riqueza de la IA.",
+      "missionTitle": "Misión",
+      "missionText": "El Protocolo AGV redefine la categoría de Activos del Mundo Real (RWA) al conectar la energía limpia, la inteligencia artificial y las finanzas descentralizadas. Más que una plataforma de activos tokenizados, AGV se posiciona como el primer ETF descentralizado de Energía de IA del mundo: un ecosistema donde la electricidad real y la capacidad de cómputo se convierten en activos digitales líquidos y rentables.",
+      "taglineTitle": "Promesa de marca",
+      "taglineLine1": "Energía x Computación",
+      "taglineLine2": "Impulsando la economía de la IA"
+    },
+    "logo": {
+      "title": "Sistema de logotipos",
+      "description": "Utilice el logotipo oficial y el logotipo principal únicamente en las variantes aprobadas. Mantenga el contraste y el espacio libre para una legibilidad óptima.",
+      "primaryTitle": "Variaciones primarias",
+      "logomark": "Marca de logotipo",
+      "logomarkDesc": "Símbolo independiente utilizado para avatares, faviconos o ubicaciones compactas.",
+      "primary": "Logotipo principal",
+      "primaryDesc": "Marca denominativa con símbolo para ubicaciones de marca estándar.",
+      "backgroundsTitle": "Fondos aprobados",
+      "whiteBg": "En blanco",
+      "whiteBgDesc": "Utilice el logotipo principal a todo color sobre blanco.",
+      "navyBg": "En la Marina",
+      "navyBgDesc": "Utilice el logotipo blanco sobre fondos oscuros para generar contraste.",
+      "skyBg": "En el cielo",
+      "skyBgDesc": "Utilice el logotipo de la marina sobre fondos azul claro."
+    },
+    "spacing": {
+      "title": "Espacio despejado",
+      "lead": "Mantenga suficiente espacio libre alrededor del logotipo para garantizar la visibilidad y el impacto.",
+      "clearSpace": "Espacio libre mínimo",
+      "minDistance": "Ningún elemento debe interferir en esta distancia."
+    },
+    "social": {
+      "title": "Redes sociales",
+      "square": "Avatar cuadrado",
+      "squareDesc": "Utilice el logotipo centrado sobre un fondo claro.",
+      "circle": "Avatar circular",
+      "circleDesc": "Utilice el logotipo centrado en un círculo blanco."
+    },
+    "favicon": {
+      "title": "Favicon",
+      "web": "Favicono web",
+      "webDesc": "Utilice el favicon oficial de 32×32 para las pestañas del navegador."
+    },
+    "colors": {
+      "title": "Sistema de colores",
+      "description": "Nuestra paleta de colores refleja confianza, innovación y tecnología limpia. Cada color ha sido cuidadosamente seleccionado para transmitir los valores de nuestra marca y crear una identidad visual cohesiva.",
+      "primaryTitle": "Colores primarios",
+      "navy": "Azul marino",
+      "navyDesc": "Color principal de la marca para encabezados y fondos.",
+      "sky": "Azul cielo",
+      "skyDesc": "Color de acento para resaltados y elementos de la interfaz de usuario.",
+      "white": "Blanco",
+      "whiteDesc": "Color neutro para claridad y contraste."
+    },
+    "gradient": {
+      "title": "Gradiente",
+      "primary": "Gradiente primario",
+      "primaryDesc": "Utilice el degradado de azul marino a cielo para las secciones principales y los CTA clave."
+    },
+    "typography": {
+      "title": "TIPOGRAFÍA",
+      "primaryTitle": "TIPOGRAFÍA PRINCIPAL",
+      "primaryDesc": "Esta tipografía principal ayuda a definir su empresa ante cualquier persona que interactúe con su marca.",
+      "secondaryTitle": "TIPOGRAFÍA SECUNDARIA",
+      "secondaryDesc": "Esta fuente secundaria apoya a la principal y complementa la marca.",
+      "usageTitle": "USO",
+      "usageDesc": "Los tamaños de los titulares se reservan para momentos clave donde la claridad, el impacto y la autoridad son esenciales.",
+      "leadingTitle": "ESPACIADO DE LÍNEAS / INTERLINEADO",
+      "bodyTitle": "USO CORPORAL"
+    },
+    "photography": {
+      "title": "FOTOGRAFÍA",
+      "lead": "Una guía de estilo para garantizar que las imágenes mantengan una estética consistente y representativa de la marca.",
+      "captions": {
+        "cleanTech": "Enfoque en tecnología limpia",
+        "energyInnovation": "Innovación energética",
+        "sustainableFuture": "Futuro sostenible"
+      }
+    },
+    "applications": {
+      "title": "APLICACIONES",
+      "waterBottle": "Botella de agua",
+      "waterBottleDesc": "Aplicación de marca en productos sostenibles",
+      "baseballCap": "Gorra de béisbol",
+      "baseballCapDesc": "Aplicación de marca en prendas promocionales"
+    },
+    "documents": {
+      "view": "Ver documento"
+    },
+    "usage": {
+      "badTitle": "USO INCORRECTO",
+      "logoTitle": "Pautas para el logotipo",
+      "standardsTitle": "Estándares de marca"
+    }
+  },
+  "actions": {
+    "explore": "Explorar",
+    "scheduleCall": "Programar una llamada",
+    "downloadPitchDeck": "Descargar Pitch Deck",
+    "requestInfo": "Solicitar información adicional",
+    "contactBD": "Contacte con el equipo de BD"
+  },
+  "home": {
+    "investmentMaterials": {
+      "title": "Materiales de inversión",
+      "subtitle": "Documentos clave",
+      "description": "Revise nuestra presentación completa y resumen ejecutivo que cubre la visión, la tecnología y la oportunidad de mercado de AGV Protocol."
+    },
+    "execSummary": {
+      "title": "Resumen ejecutivo",
+      "subtitle": "Descripción general rápida y métricas clave",
+      "description": "Presentación completa que cubre visión, tecnología y proyecciones financieras."
+    },
+    "pitchDeck": {
+      "title": "Presentación",
+      "subtitle": "Presentación completa de inversiones",
+      "disclaimer": "Esta presentación incluye información confidencial. Por favor, revísela detenidamente y contáctenos para obtener más información."
+    },
+    "resources": {
+      "title": "Recursos de inversión",
+      "subtitle": "Sala de datos",
+      "description": "Documentación y recursos completos para potenciales inversores y socios."
+    },
+    "cta": {
+      "title": "¿Listo para invertir en el futuro?",
+      "description": "Únase al Protocolo AGV para revolucionar la tokenización de activos del mundo real a través de una infraestructura blockchain sostenible.",
+      "accessDataRoom": "Acceso a la sala de datos completa"
+    }
+  },
+  "docs": {
+    "tech": {
+      "whitepaper": {
+        "title": "Documento técnico del protocolo AGV",
+        "description": "Descripción técnica detallada y diseño del sistema de la infraestructura del Protocolo AGV."
+      },
+      "architectureDiagram": {
+        "title": "Diagrama de arquitectura del sistema",
+        "description": "Ilustración completa de la integración de capas IoT y en cadena de AGV."
+      },
+      "audit": {
+        "title": "Informe de auditoría de contratos inteligentes",
+        "description": "Resultados y recomendaciones de auditorías de seguridad de terceros."
+      },
+      "github": {
+        "title": "Acceso al repositorio de GitHub",
+        "description": "Repositorio público que contiene implementaciones de protocolos centrales."
+      }
+    },
+    "financials": {
+      "modelQ12024": {
+        "title": "Modelo financiero T1 2024",
+        "description": "Proyección detallada y desglose de ingresos para el primer trimestre de 2024."
+      },
+      "valuation": {
+        "title": "Análisis de valoración",
+        "description": "Metodología integral de valoración y análisis de mercado."
+      },
+      "revenueForecast": {
+        "title": "Pronóstico de ingresos 2024-2026",
+        "description": "Proyecciones de ingresos y supuestos de crecimiento a tres años."
+      },
+      "tokenEconomics": {
+        "title": "Modelo de economía de tokens",
+        "description": "Distribución de tokens, utilidad y diseño de incentivos económicos."
+      }
+    },
+    "legal": {
+      "coi": {
+        "title": "Certificado de constitución",
+        "description": "Documentos oficiales de constitución y registro empresarial."
+      },
+      "ipTransfer": {
+        "title": "Acuerdo de transferencia de propiedad intelectual",
+        "description": "Documentos de transferencia y cesión de derechos de propiedad intelectual."
+      },
+      "tokenSale": {
+        "title": "Acuerdo de venta de tokens",
+        "description": "Términos y condiciones para la compra y distribución de tokens."
+      },
+      "compliance": {
+        "title": "Informe de cumplimiento normativo",
+        "description": "Análisis del estado de cumplimiento legal y marco regulatorio."
+      }
+    },
+    "esg": {
+      "impact": {
+        "title": "Informe de Impacto de Sostenibilidad",
+        "description": "Evaluación de impacto ambiental y métricas de sostenibilidad."
+      },
+      "carbon": {
+        "title": "Datos de la huella de carbono del IoT",
+        "description": "Seguimiento de emisiones de carbono en tiempo real desde dispositivos IoT."
+      },
+      "framework": {
+        "title": "Marco de cumplimiento ESG",
+        "description": "Estándares de cumplimiento ambiental, social y de gobernanza."
+      },
+      "rwa": {
+        "title": "Verificación de activos en el mundo real",
+        "description": "Prueba de procesos de respaldo y verificación de activos del mundo real."
+      }
+    },
+    "brandkit": {
+      "logoPack": {
+        "title": "Paquete de logotipos AGV",
+        "description": "Variaciones completas de logotipos en múltiples formatos y tamaños."
+      },
+      "guidelines": {
+        "title": "Pautas de marca",
+        "description": "Pautas completas de identidad de marca y reglas de uso."
+      },
+      "pressKit": {
+        "title": "Materiales del kit de prensa",
+        "description": "Recursos multimedia, comunicados de prensa y materiales promocionales."
+      },
+      "templates": {
+        "title": "Plantillas de marketing",
+        "description": "Plantillas de diseño para presentaciones y materiales de marketing."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contacto y consultas sobre inversiones",
+    "subtitle": "Contáctanos",
+    "description": "¿Listo para invertir en el Protocolo AGV? Contacte con nuestro equipo para conversar detalladamente y conocer oportunidades de colaboración.",
+    "form": {
+      "title": "Formulario de consulta de inversión",
+      "firstName": "Nombre de pila",
+      "lastName": "Apellido",
+      "email": "Dirección de correo electrónico",
+      "phone": "Número de teléfono",
+      "company": "Empresa/Organización",
+      "investmentType": "Tipo de inversión",
+      "message": "Mensaje",
+      "nda": "Acepto firmar un acuerdo de confidencialidad para discusiones confidenciales.",
+      "submit": "Enviar consulta",
+      "sending": "Envío...",
+      "success": "¡Gracias! Su consulta se ha enviado correctamente.",
+      "error": "No se pudo enviar el mensaje",
+      "networkError": "Error de red. Inténtalo de nuevo.",
+      "selectType": "Seleccione el tipo de inversión",
+      "messagePlaceholder": "Cuéntenos sobre su interés de inversión y cualquier pregunta específica...",
+      "investmentTypes": {
+        "series-a": "Serie A",
+        "strategic": "Inversión estratégica",
+        "partnership": "Asociación",
+        "advisory": "Función de asesoramiento",
+        "other": "Otro"
+      }
+    },
+    "info": {
+      "title": "Información del contacto",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "address": "DIRECCIÓN",
+      "addressText": "123 Innovation Drive\nSan Francisco, CA 94105"
+    },
+    "actions": {
+      "title": "Acciones rápidas",
+      "dataRoom": "Acceso a la sala de datos completa",
+      "financials": "Ver modelos financieros",
+      "esg": "Informe ESG y Sostenibilidad",
+      "brandkit": "Descargar el kit de marca"
+    },
+    "nda": {
+      "title": "Acceso a información confidencial",
+      "description": "Para acceder a proyecciones financieras confidenciales, especificaciones técnicas y planes estratégicos, solicite que se le envíe un NDA a su correo electrónico.",
+      "request": "Solicitud de acuerdo de confidencialidad"
+    }
+  },
+  "financials": {
+    "title": "Modelos y proyecciones financieras",
+    "subtitle": "Documentación financiera",
+    "description": "Acceda a modelos financieros detallados, análisis de valoración y proyecciones de ingresos para el Protocolo AGV a través de documentación completa.",
+    "mainDocument": {
+      "title": "Índice de auditoría y valoración financiera",
+      "description": "Auditoría financiera integral y análisis de valoración para AGV Protocol, incluidos modelos financieros detallados, proyecciones y métricas de inversión."
+    },
+    "metrics": {
+      "title": "Métricas financieras clave",
+      "tam": "Mercado total direccionable",
+      "roi": "ROI esperado",
+      "seriesA": "Objetivo de la Serie A",
+      "profitability": "Meses para la rentabilidad"
+    },
+    "documents": {
+      "title": "Documentación e informes financieros",
+      "description": "Documentos financieros esenciales que incluyen manuales de tokens, informes integrados, tablas de capitalización y extractos de documentos técnicos.",
+      "tokenHandbook": "Manual del token del protocolo AGV v2025",
+      "tokenHandbookDesc": "Guía completa de los tokens del protocolo AGV, incluidos modelos de utilidad, gobernanza y económicos.",
+      "integratedReport": "Protocolo AGV – Informe Financiero y de Valoración Integrado v2025.10",
+      "integratedReportDesc": "Informe de análisis financiero e valoración integrado detallado que cubre todos los aspectos del desempeño financiero del protocolo.",
+      "capTable": "Tabla de capitalización de la Resolución de accionistas de las Islas Vírgenes Británicas V2025.10",
+      "capTableDesc": "Documentación oficial de la tabla de capitalización y resolución de accionistas de la jurisdicción de las Islas Vírgenes Británicas.",
+      "whitepaper": "Token dual rGGP + GVT (extractos del informe técnico) v2025.10",
+      "whitepaperDesc": "Extractos del documento técnico que detallan el sistema de token dual con tokens rGGP y GVT."
+    },
+    "revenue": {
+      "title": "Flujos de ingresos",
+      "transactionFees": "Tarifas de transacción",
+      "transactionFeesDesc": "0,1-0,5 % por transacción de tokenización de activos",
+      "subscription": "Servicios de suscripción",
+      "subscriptionDesc": "Tarifas mensuales/anuales para funciones premium",
+      "dataLicensing": "Licencias de datos",
+      "dataLicensingDesc": "Licencias de IoT y datos de seguimiento de carbono"
+    },
+    "highlights": {
+      "title": "Aspectos destacados de la inversión",
+      "market": {
+        "title": "Oportunidad de mercado",
+        "tam": "• Mercado direccionable total de $2,5 billones",
+        "demand": "• Creciente demanda de inversiones sostenibles",
+        "regulatory": "• Apoyo regulatorio para las finanzas verdes",
+        "advantage": "• Ventaja de ser pionero en la tokenización de RWA"
+      },
+      "projections": {
+        "title": "Proyecciones financieras",
+        "roi": "• 25-40% de retorno de la inversión esperado",
+        "seriesA": "• Objetivo de financiación de la Serie A de 50 millones de dólares",
+        "profitability": "• 18-24 meses hasta rentabilidad",
+        "revenue": "• Múltiples fuentes de ingresos"
+      }
+    }
+  },
+  "tech": {
+    "mainDoc": {
+      "title": "Índice de Auditoría Técnica y Verificación de Infraestructura",
+      "description": "Documentación integral de auditoría técnica y verificación de infraestructura que cubre la arquitectura del sistema, las evaluaciones de seguridad y la validación de la pila tecnológica."
+    },
+    "header": {
+      "title": "Tecnología y arquitectura",
+      "subtitle": "Documentación técnica",
+      "description": "Explore la infraestructura técnica, la arquitectura del sistema y las auditorías de seguridad del Protocolo AGV a través de documentación completa."
+    },
+    "metrics": {
+      "title": "Métricas técnicas",
+      "uptime": "Acuerdo de nivel de servicio de tiempo de actividad",
+      "speed": "Velocidad de transacción",
+      "encryption": "Cifrado",
+      "monitoring": "Escucha"
+    },
+    "highlights": {
+      "title": "Aspectos técnicos destacados",
+      "blockchain": {
+        "title": "Infraestructura de blockchain",
+        "l2": "Soluciones de escalamiento de capa 2",
+        "automation": "Automatización de contratos inteligentes",
+        "interop": "Interoperabilidad entre cadenas",
+        "governance": "Gobernanza descentralizada"
+      },
+      "iot": {
+        "title": "Integración de IoT",
+        "realtime": "Fuentes de datos en tiempo real",
+        "auth": "Autenticación del dispositivo",
+        "carbon": "Sensores de seguimiento de carbono",
+        "compliance": "Cumplimiento automatizado"
+      }
+    },
+    "stack": {
+      "title": "Pila de tecnología",
+      "blockchain": "Cadena de bloques",
+      "blockchainDesc": "Contratos inteligentes y DeFi",
+      "iot": "IoT",
+      "iotDesc": "Monitoreo en tiempo real",
+      "aiml": "IA/ML",
+      "aimlDesc": "Análisis predictivo"
+    },
+    "sections": {
+      "ip": {
+        "title": "Resumen de IP",
+        "description": "Documentación de propiedad intelectual que incluye extractos de documentos técnicos que cubren la funcionalidad de poder acuñar y los protocolos de mapeo de RWA.",
+        "docs": {
+          "powerToMint": {
+            "title": "Poder de acuñar (extracto del libro blanco) V2025.10",
+            "description": "Extracto del documento técnico que detalla la funcionalidad de poder de acuñación y los mecanismos de generación de tokens dentro del ecosistema del Protocolo AGV."
+          },
+          "rwaMapping": {
+            "title": "Mapeo de RWA (extracto del documento técnico) v2025.10",
+            "description": "Extracto completo del documento técnico que cubre los protocolos de mapeo de activos del mundo real (RWA) y los mecanismos de tokenización."
+          }
+        }
+      },
+      "github": {
+        "title": "Enlaces a GitHub (contratos inteligentes)",
+        "description": "Acceso a repositorios de contratos inteligentes y recursos de desarrollo para la infraestructura blockchain del Protocolo AGV.",
+        "docs": {
+          "profile": {
+            "title": "Enlace al perfil de GitHub",
+            "description": "Acceso directo al perfil de GitHub de AGV Protocol que contiene repositorios de contratos inteligentes, documentación de desarrollo y código fuente."
+          }
+        }
+      },
+      "pitchDecks": {
+        "title": "Pitch Decks",
+        "description": "Colección completa de pitch decks que cubre diferentes versiones para desarrollo de negocios, inversores institucionales y presentaciones especializadas.",
+        "docs": {
+          "bd": {
+            "title": "Presentación del protocolo AGV (versión BD) v2025.10",
+            "description": "Presentación centrada en el desarrollo de negocios que destaca la propuesta de valor y las oportunidades de mercado del Protocolo AGV."
+          },
+          "institutional": {
+            "title": "Presentación del protocolo AGV (institucional) v2025.10",
+            "description": "Presentación centrada en inversores institucionales con proyecciones financieras detalladas y evaluaciones de riesgos."
+          },
+          "oilToAi": {
+            "title": "Presentación del protocolo AGV (Edición de potencia de aceite a IA) v2025.10",
+            "description": "Presentación especializada centrada en la transición de la energía tradicional basada en petróleo a soluciones de energía renovable impulsadas por IA."
+          },
+          "general": {
+            "title": "Presentación del protocolo AGV v2025.10",
+            "description": "Presentación completa que cubre todos los aspectos del protocolo AGV, incluida la tecnología, la oportunidad de mercado y el modelo comercial."
+          }
+        }
+      },
+      "architecture": {
+        "title": "Arquitectura tecnológica y flujo de procesos",
+        "description": "Documentación técnica detallada que cubre la arquitectura del sistema, los flujos de procesos y el diseño del ecosistema.",
+        "docs": {
+          "ecosystem": {
+            "title": "Ecosistema de protocolo AGV V2025.10",
+            "description": "Documentación completa del ecosistema que cubre la arquitectura tecnológica, los flujos de procesos y los puntos de integración del sistema."
+          }
+        }
+      }
+    }
+  },
+  "legal": {
+    "mainDoc": {
+      "title": "Índice de paquetes legales",
+      "description": "Índice completo de documentación legal para la debida diligencia institucional y revisión de cumplimiento, que cubre todas las estructuras legales y los requisitos regulatorios."
+    },
+    "header": {
+      "title": "Documentos legales y de registro",
+      "subtitle": "Documentación legal",
+      "description": "Revise la estructura legal integral, el estado de cumplimiento y el marco regulatorio del Protocolo AGV a través de documentación detallada."
+    },
+    "compliance": {
+      "title": "Estado de cumplimiento",
+      "regulatory": "Cumplimiento normativo",
+      "items": {
+        "bvi": "Registro corporativo en las Islas Vírgenes Británicas",
+        "nz": "Constitución de Nueva Zelanda",
+        "kyc": "Cumplimiento de KYC/AML",
+        "cn": "Registro en tierra en China"
+      }
+    },
+    "structure": {
+      "title": "Estructura legal",
+      "items": {
+        "bvi": "Compañía holding de las Islas Vírgenes Británicas (JLL Asset Ltd)",
+        "nz": "SPV de Nueva Zelanda (3669875)",
+        "cn": "Entidades onshore de China",
+        "multi": "Cumplimiento multijurisdiccional"
+      }
+    },
+    "framework": {
+      "title": "Marco legal",
+      "governance": {
+        "title": "Gobierno corporativo",
+        "multi": "Estructura multijurisdiccional",
+        "bvi": "Marco de la sociedad holding de las Islas Vírgenes Británicas",
+        "nz": "Gobernanza de la DAO de Nueva Zelanda",
+        "cn": "Cumplimiento en tierra en China"
+      },
+      "risk": {
+        "title": "Gestión de riesgos",
+        "docs": "Documentación legal completa",
+        "translation": "Servicios de traducción certificada",
+        "monitoring": "Monitoreo del cumplimiento normativo",
+        "opinions": "Dictámenes jurídicos multijurisdiccionales"
+      }
+    },
+    "overview": {
+      "title": "Descripción general de la estructura legal",
+      "bvi": "Islas Vírgenes Británicas",
+      "bviDesc": "Holding",
+      "nz": "Nueva Zelanda",
+      "nzDesc": "Gobernanza de DAO",
+      "cn": "CN",
+      "cnDesc": "Activos en tierra"
+    },
+    "sections": {
+      "articles": {
+        "title": "Estatutos Sociales",
+        "description": "Artículos oficiales de asociación y documentos de gobierno corporativo para entidades de las Islas Vírgenes Británicas.",
+        "docs": {
+          "bviArticles": {
+            "title": "Estatutos de JLL Asset Ltd. de las Islas Vírgenes Británicas v2025.10",
+            "description": "Artículos oficiales de asociación de BVI JLL Asset Ltd, que establecen el marco de gobierno corporativo y las pautas operativas."
+          }
+        }
+      },
+      "china": {
+        "title": "Entidades con activos onshore en China",
+        "description": "Documentación legal para entidades con activos onshore en China, incluidos acuerdos de autorización, resoluciones de directorio y declaraciones de cumplimiento.",
+        "docs": {
+          "authorization": {
+            "title": "Acuerdo de Autorización CHN CO_BVI 2025 v2025.10",
+            "description": "Acuerdo de autorización entre entidades onshore de China y una sociedad holding de BVI para gestión de activos y operaciones."
+          },
+          "boardResolution": {
+            "title": "Resolución de la Junta CHN CO_BVI 2025 v2025.10",
+            "description": "Resolución oficial de la junta directiva de las entidades onshore de China que autoriza las operaciones y actividades de gestión de activos en las Islas Vírgenes Británicas."
+          },
+          "compliance": {
+            "title": "Declaración de cumplimiento CHN CO_BVI 2025 v2025.10",
+            "description": "Declaración de cumplimiento integral de las entidades onshore de China con respecto al cumplimiento normativo y los estándares operativos."
+          },
+          "irrevocable": {
+            "title": "Declaración de autorización irrevocable CHN CO_BVI 2025 v2025.10",
+            "description": "Declaración de autorización irrevocable que otorga a las entidades de las Islas Vírgenes Británicas plena autoridad sobre las operaciones de activos onshore en China."
+          },
+          "noLitigation": {
+            "title": "Certificado de no litigio/arbitraje CHN CO_BVI 2025 v2025.10",
+            "description": "Certificado oficial que confirma que no hay litigios pendientes ni procedimientos de arbitraje para entidades onshore en China."
+          },
+          "tax": {
+            "title": "Certificado de registro fiscal y certificado de liquidación de impuestos CHN CO_BVI 2025 v2025.10",
+            "description": "Certificados oficiales de registro y liquidación de impuestos de las autoridades fiscales chinas para entidades onshore."
+          }
+        }
+      },
+      "bvi": {
+        "title": "Sociedad de inversión offshore (SPV) - Islas Vírgenes Británicas",
+        "description": "Documentación legal completa para el vehículo de propósito especial de holding offshore de BVI, incluidas resoluciones de la junta, cadenas de autorización y declaraciones de cumplimiento.",
+        "docs": {
+          "boardReauth": {
+            "title": "Resolución de la Junta (Reautorización) BVI_ijet 2025 v2025.10",
+            "description": "Resolución de la Junta para la reautorización de las operaciones y actividades de gestión de activos de BVI ijet."
+          },
+          "chain": {
+            "title": "Cadena de autorización BVI_ijet 2025 v2025.10",
+            "description": "Cadena completa de documentación de autorización que establece el flujo de autoridad legal de las entidades de las Islas Vírgenes Británicas."
+          },
+          "compliance": {
+            "title": "Declaración de cumplimiento BVI_ijet ltd 2025 v2025.10",
+            "description": "Declaración de cumplimiento integral de BVI ijet ltd con respecto al cumplimiento normativo y los estándares operativos."
+          },
+          "irrevocable": {
+            "title": "Declaración de autorización irrevocable BVI_ijet ltd 2025 v2025.10",
+            "description": "Declaración de autorización irrevocable de BVI ijet ltd que establece autoridad operativa permanente."
+          },
+          "kyc": {
+            "title": "Documentación KYC y AML BVI_ijet Ltd 2025 v2025.10",
+            "description": "Documentación completa de Conozca a su cliente y prevención de lavado de dinero para BVI ijet Ltd."
+          },
+          "noLitigation": {
+            "title": "Certificado de no litigio/arbitraje BVI_ijet ltd 2025 v2025.10",
+            "description": "Certificado oficial que confirma que no hay litigios ni procedimientos de arbitraje pendientes para BVI ijet ltd."
+          },
+          "reauth": {
+            "title": "Acuerdo de reautorización BVI Ijet ltd 2025 v2025.10",
+            "description": "Acuerdo de reautorización que establece autoridad operativa renovada para BVI Ijet ltd."
+          },
+          "revenue": {
+            "title": "Acuerdo de ingresos y distribución BVI_ijet ltd 2025 v2025.10",
+            "description": "Acuerdo de ingresos y distribución que describe los mecanismos de participación en las ganancias y distribución para BVI ijet ltd."
+          }
+        }
+      },
+      "nz": {
+        "title": "Emisor y Gobernanza de DAO SPV - Nueva Zelanda",
+        "description": "Documentación legal para el emisor con sede en Nueva Zelanda y el vehículo de propósito especial de gobernanza de la DAO, incluidos los certificados de constitución y los acuerdos de autorización.",
+        "docs": {
+          "coi": {
+            "title": "Certificado de constitución (3669875 11 de noviembre de 2022) v2025.10",
+            "description": "Certificado oficial de constitución de la entidad de Nueva Zelanda (3669875) con fecha del 11 de noviembre de 2022."
+          },
+          "chain": {
+            "title": "Cadena de autorización BVI_ijet 2025 v2025.10",
+            "description": "Cadena de documentación de autorización que establece el flujo de autoridad legal desde las Islas Vírgenes Británicas a las entidades de Nueva Zelanda."
+          },
+          "extract": {
+            "title": "Extracto de la empresa (3669875 11 de noviembre de 2022) v2025.10",
+            "description": "Extracto oficial de la empresa de la Oficina de Sociedades de Nueva Zelanda para la entidad 3669875 con fecha 11 de noviembre de 2022."
+          },
+          "constitution": {
+            "title": "Constitución de Nueva Zelanda iJet Limited",
+            "description": "Documento de constitución oficial de New Zealand iJet Limited que establece el marco de gobernanza corporativa y las pautas operativas."
+          },
+          "reauth": {
+            "title": "Acuerdo de reautorización BVI Ijet ltd 2025 v2025.10",
+            "description": "Acuerdo de reautorización entre entidades de las Islas Vírgenes Británicas y Nueva Zelanda que establece autoridad operativa."
+          }
+        }
+      },
+      "structure": {
+        "title": "Estructura legal y documentos de verificación",
+        "description": "Documentos de resumen y verificación de estructura legal incluyendo traducciones certificadas y resúmenes legales.",
+        "docs": {
+          "summary": {
+            "title": "Protocolo AGV – Resumen de la estructura legal",
+            "description": "Resumen completo de la estructura legal que describe el marco corporativo y legal completo del Protocolo AGV."
+          },
+          "naati": {
+            "title": "Certificado de traductor certificado de chino a inglés de NAATI",
+            "description": "Certificación oficial NAATI para servicios de traducción de chino a inglés (Certificado 3327_620583_6)."
+          },
+          "nzstii": {
+            "title": "Certificado de membresía de traductor certificado de chino a inglés de NZSTII",
+            "description": "Certificado oficial de membresía de NZSTII para servicios de traducción certificados de chino a inglés."
+          }
+        }
+      }
+    }
+  },
+  "depin": {
+    "header": {
+      "title": "Verificación de DePIN",
+      "subtitle": "Red de Infraestructura Física Descentralizada",
+      "description": "Documentación de verificación integral del desarrollo de la infraestructura física del Protocolo AGV, la implementación agrícola y la integración de energía renovable a través de evidencia visual y de video detallada."
+    },
+    "main": {
+      "title": "Índice de verificación DePIN - Protocolo AGV v2025.10",
+      "description": "Documentación integral de verificación DePIN (Red de Infraestructura Física Descentralizada) que cubre el desarrollo de tierras, la implementación de infraestructura y los procesos de integración agrícola-fotovoltaica."
+    },
+    "metrics": {
+      "title": "Métricas de infraestructura de DePIN",
+      "solar": "Capacidad solar",
+      "iot": "Sensores IoT",
+      "monitoring": "Monitoreo en tiempo real",
+      "coverage": "Cobertura de verificación"
+    },
+    "overview": {
+      "title": "Descripción general de la infraestructura de DePIN",
+      "agricultural": {
+        "title": "Agrícola",
+        "desc": "Agricultura y riego inteligentes"
+      },
+      "pv": {
+        "title": "Fotovoltaica",
+        "desc": "Generación de energía solar"
+      },
+      "iot": {
+        "title": "Red de IoT",
+        "desc": "Monitoreo en tiempo real"
+      }
+    },
+    "sections": {
+      "landOverview": {
+        "title": "Descripción general del terreno 土地图片",
+        "description": "Documentación visual completa del área de tierra que muestra las condiciones iniciales, el terreno y las características geográficas antes del desarrollo."
+      },
+      "leveling": {
+        "title": "Nivelación de tierras y fertilización 平整施肥",
+        "description": "Documentación en vídeo de los procesos de preparación del terreno, incluidos los procedimientos de nivelación, tratamiento del suelo y fertilización."
+      },
+      "trellis": {
+        "title": "Infraestructura Trellis 格架系统",
+        "description": "Documentación en vídeo de la instalación del sistema de espalderas y desarrollo de infraestructura para estructuras de soporte agrícola."
+      },
+      "irrigation": {
+        "title": "Sistema de riego por goteo 滴灌系统",
+        "description": "Documentación completa de la instalación del sistema de riego por goteo que incluye imágenes y vídeos del proceso de implementación."
+      },
+      "plantation": {
+        "title": "Plantación densa enana 矮砧密植",
+        "description": "Documentación de técnicas de plantación densa de árboles enanos, incluyendo imágenes y vídeos del proceso de plantación."
+      },
+      "maintenance": {
+        "title": "Protección y mantenimiento de plantas 植保养护",
+        "description": "Documentación completa de medidas de protección vegetal y procedimientos de mantenimiento, incluyendo imágenes y vídeos."
+      },
+      "agriPv": {
+        "title": "Integración agro-fotovoltaica 园光互补",
+        "description": "Documentación completa de la integración agrícola-fotovoltaica incluyendo imágenes y vídeos del proceso de instalación e integración de paneles solares."
+      },
+      "onSite": {
+        "title": "En el sitio 现场",
+        "description": "Documentación completa del sitio que incluye vistas aéreas, vistas horizontales y vistas hacia arriba del sitio del proyecto."
+      },
+      "device": {
+        "title": "Dispositivo 设备",
+        "description": "Documentación en video de equipos y dispositivos utilizados en el proyecto."
+      },
+      "data": {
+        "title": "Datos 数据",
+        "description": "Documentación en video de sistemas de recopilación y monitoreo de datos."
+      }
+    }
+  },
+  "esg": {
+    "header": {
+      "title": "ESG y prueba de activos del mundo real",
+      "subtitle": "Sostenibilidad e impacto",
+      "description": "Explore el impacto ambiental del Protocolo AGV, las iniciativas de sostenibilidad y la verificación de activos en el mundo real a través de una documentación completa."
+    },
+    "main": {
+      "title": "Informe de Impacto ESG y Sostenibilidad",
+      "description": "Evaluación integral del impacto ambiental del Protocolo AGV, iniciativas de sostenibilidad y verificación de activos en el mundo real."
+    },
+    "metrics": {
+      "title": "Métricas de desempeño ESG",
+      "carbon": "Reducción de la huella de carbono",
+      "renewable": "Uso de energía renovable",
+      "waste": "Reducción de residuos",
+      "verifiedRwa": "Activos RWA verificados"
+    },
+    "verification": {
+      "title": "Verificación de activos en el mundo real",
+      "iot": {
+        "title": "Monitoreo de IoT",
+        "items": [
+          "Seguimiento de activos en tiempo real",
+          "Sensores ambientales",
+          "Monitoreo de emisiones de carbono",
+          "Informes de cumplimiento automatizados"
+        ]
+      },
+      "process": {
+        "title": "Proceso de verificación",
+        "items": [
+          "Auditorías de terceros",
+          "Inmutabilidad de la cadena de bloques",
+          "Automatización de contratos inteligentes",
+          "Informes transparentes"
+        ]
+      }
+    },
+    "dashboard": {
+      "title": "Panel de impacto de carbono",
+      "co2": "Toneladas de CO2 ahorradas",
+      "devices": "Dispositivos IoT implementados",
+      "monitoring": "Monitoreo en tiempo real"
+    },
+    "sections": {
+      "admin": {
+        "title": "Documentos administrativos y financieros",
+        "description": "Documentación legal y financiera esencial para el establecimiento y cumplimiento del proyecto.",
+        "docs": {
+          "registration": {
+            "title": "Confirmación de registro de proyecto de inversión empresarial en la provincia de Shaanxi",
+            "description": "Confirmación de registro oficial para el proyecto de inversión empresarial en la provincia de Shaanxi."
+          },
+          "lease": {
+            "title": "Contrato de arrendamiento de terrenos",
+            "description": "Documentación legal para contratos de arrendamiento de tierras y derechos de propiedad."
+          },
+          "jv": {
+            "title": "Acuerdo de empresa conjunta fotovoltaica agrícola del Gobierno",
+            "description": "Acuerdo oficial de empresa conjunta entre el gobierno y los socios del proyecto fotovoltaico agrícola."
+          },
+          "dd": {
+            "title": "Informe de diligencia debida financiera",
+            "description": "Análisis financiero integral y evaluación de diligencia debida del proyecto."
+          }
+        }
+      },
+      "yichuan": {
+        "title": "Proyecto híbrido de energía solar y huerto de 6,42 MW en el condado de Yichuan (aprobaciones y revisiones)",
+        "description": "Conjunto completo de aprobaciones gubernamentales y revisiones regulatorias para el proyecto solar híbrido del condado de Yichuan.",
+        "docs": {
+          "landTransfer": {
+            "title": "Certificado de transferencia de tierras de la ciudad de Yunyan",
+            "description": "Certificado oficial de transferencia de tierras de las autoridades de la ciudad de Yunyan."
+          },
+          "edb": {
+            "title": "Aprobación de la Oficina de Desarrollo Económico",
+            "description": "Documentación de aprobación de la Oficina de Desarrollo Económico."
+          },
+          "nrb": {
+            "title": "Aprobación de la Oficina de Recursos Naturales",
+            "description": "Aprobación oficial de la Oficina de Recursos Naturales para el uso de la tierra y el cumplimiento ambiental."
+          },
+          "coal": {
+            "title": "Aprobación de tierras de la Oficina de Reducción de Carbón del Condado de Yichuan",
+            "description": "Documentación de aprobación de tierras de la Oficina de Reducción de Carbón del condado de Yichuan."
+          },
+          "edbOpinion": {
+            "title": "Opinión de la Oficina de Desarrollo Económico del Condado de Yichuan",
+            "description": "Opinión oficial y recomendación de la Oficina de Desarrollo Económico del condado de Yichuan."
+          },
+          "drb": {
+            "title": "Aprobación de la Oficina de Desarrollo y Reforma del Condado de Yichuan",
+            "description": "Documentación de aprobación de la Oficina de Desarrollo y Reforma del condado de Yichuan."
+          },
+          "forestry": {
+            "title": "Aprobación de la Oficina Forestal del Condado de Yichuan",
+            "description": "Aprobación forestal y ambiental de la Oficina Forestal del Condado de Yichuan."
+          },
+          "epb": {
+            "title": "Opinión de la Oficina de Protección Ambiental del Condado de Yichuan",
+            "description": "Evaluación de impacto ambiental y dictamen de la Dirección de Protección Ambiental."
+          }
+        }
+      },
+      "zhongnan": {
+        "title": "Acuerdos de cooperación del Grupo Zhongnan",
+        "description": "Acuerdos de asociación estratégica y documentación de cooperación con Zhongnan Group.",
+        "docs": {
+          "energy": {
+            "title": "Acuerdo de cooperación energética del Grupo Zhongnan",
+            "description": "Acuerdo de cooperación energética estratégica entre AGV Protocol y Zhongnan Group."
+          },
+          "yichuan": {
+            "title": "Acuerdo de cooperación de Yichuan del grupo Zhongnan",
+            "description": "Acuerdo de cooperación específico para el proyecto del condado de Yichuan con Zhongnan Group."
+          },
+          "supplement": {
+            "title": "Acuerdo complementario",
+            "description": "Términos y condiciones adicionales que complementan los principales acuerdos de cooperación."
+          }
+        }
+      }
+    }
+  },
+  "nda": {
+    "form": {
+      "title": "Título profesional",
+      "subtitle": "Solicitud de acuerdo de confidencialidad",
+      "description": "Complete el formulario a continuación para solicitar un acuerdo de confidencialidad. Le enviaremos el acuerdo a su correo electrónico.",
+      "name": "Nombre completo",
+      "organization": "Organización/Empresa",
+      "email": "Dirección de correo electrónico",
+      "submit": "Solicitud de acuerdo de confidencialidad",
+      "sending": "Enviando solicitud...",
+      "success": "¡Gracias! Su solicitud de NDA se ha enviado correctamente. En breve le enviaremos el documento de NDA a su correo electrónico.",
+      "error": "No se pudo enviar la solicitud de NDA",
+      "networkError": "Error de red. Inténtalo de nuevo.",
+      "namePlaceholder": "Ingrese su nombre completo",
+      "titlePlaceholder": "Por ejemplo, director ejecutivo, gestor de inversiones, analista.",
+      "organizationPlaceholder": "Ingrese el nombre de su empresa u organización",
+      "emailPlaceholder": "Introduzca su dirección de correo electrónico",
+      "emailNote": "El NDA se enviará a esta dirección de correo electrónico.",
+      "disclaimer": "Al enviar este formulario, usted acepta recibir el documento NDA y comprende que se enviará a la dirección de correo electrónico proporcionada.",
+      "jobTitle": "Título profesional"
+    },
+    "title": "Solicitud de NDA",
+    "subtitle": "Solicitud de acuerdo de confidencialidad",
+    "description": "Solicite acceso a información confidencial del Protocolo AGV enviando un formulario de solicitud de NDA."
+  },
+  "salesMarketing": {
+    "header": {
+      "title": "Ventas y marketing",
+      "subtitle": "Estrategia de ventas y asociaciones",
+      "description": "Explore las estrategias de ventas, el posicionamiento de mercado y las asociaciones estratégicas de AGV Protocol a través de una documentación completa."
+    },
+    "mainDoc": {
+      "title": "Cronología del producto y extractos del informe técnico v2025.10",
+      "description": "Cronología completa del producto y extractos de documentos técnicos que muestran nuestra hoja de ruta y visión para la economía de energía renovable impulsada por IA."
+    },
+    "metrics": {
+      "title": "Métricas de rendimiento de ventas",
+      "pipeline": "Canal de ventas",
+      "partners": "Socios estratégicos",
+      "satisfaction": "Satisfacción del cliente",
+      "support": "Soporte disponible"
+    },
+    "strategy": {
+      "market": {
+        "title": "Penetración del mercado",
+        "desc": "Dirigido a inversores institucionales y socios estratégicos en el sector de las energías renovables"
+      },
+      "growth": {
+        "title": "Estrategia de crecimiento",
+        "desc": "Ampliar el alcance del mercado a través de asociaciones y canales de venta directa"
+      },
+      "partnerships": {
+        "title": "Asociaciones estratégicas",
+        "desc": "Construir relaciones a largo plazo con actores clave de la industria e inversores"
+      },
+      "title": "Descripción general de la estrategia de ventas"
+    },
+    "sections": {
+      "mous": {
+        "docs": {
+          "pusu": {
+            "title": "朴素资本管理有限公司投资意向书",
+            "description": "Carta de intención de inversión de Pu Su Capital Management Co., Ltd. expresando interés en oportunidades de inversión en el Protocolo AGV."
+          },
+          "guopeng": {
+            "title": "國鵬投資管理有限公司戰略合作意向書",
+            "description": "Carta de intención de cooperación estratégica de Guo Peng Investment Management Co., Ltd. que describe el marco de asociación y los términos de colaboración."
+          }
+        },
+        "title": "Memorandos de Entendimiento (MOU)",
+        "description": "Acuerdos de asociación estratégica y cartas de intención de inversión de socios institucionales clave."
+      }
+    }
+  },
+  "managementTeam": {
+    "header": {
+      "title": "Equipo directivo",
+      "subtitle": "Liderazgo y gobernanza",
+      "description": "Conozca al equipo de liderazgo de AGV Protocol y explore nuestra estructura de gobernanza a través de documentación completa."
+    },
+    "mainDoc": {
+      "title": "Visión general de la gestión y gobernanza global del protocolo AGV 2025",
+      "description": "Descripción general completa de la estructura de gestión global y el marco de gobernanza del Protocolo AGV, incluidos los roles de liderazgo y la estructura organizacional."
+    },
+    "expertise": {
+      "title": "Experiencia del equipo",
+      "years": "Años de experiencia",
+      "projects": "Proyectos completados",
+      "managed": "Activos gestionados",
+      "countries": "Países atendidos"
+    },
+    "leadership": {
+      "executive": {
+        "title": "Equipo ejecutivo",
+        "desc": "El liderazgo superior impulsa la dirección estratégica y la excelencia operativa"
+      },
+      "board": {
+        "title": "Junta Directiva",
+        "desc": "Miembros independientes de la junta directiva que brindan gobernanza y supervisión"
+      },
+      "advisory": {
+        "title": "Consejo Asesor",
+        "desc": "Expertos de la industria que brindan orientación estratégica y conocimientos del mercado"
+      },
+      "title": "Estructura de liderazgo"
+    },
+    "principles": {
+      "transparency": {
+        "title": "Transparencia",
+        "desc": "Comunicación abierta e informes claros a todas las partes interesadas"
+      },
+      "accountability": {
+        "title": "Responsabilidad",
+        "desc": "Marcos claros de responsabilidad y medición del desempeño"
+      },
+      "innovation": {
+        "title": "Innovación",
+        "desc": "Mejora continua y avance tecnológico"
+      },
+      "sustainability": {
+        "title": "Sostenibilidad",
+        "desc": "Creación de valor a largo plazo y responsabilidad ambiental"
+      },
+      "title": "Principios de gobernanza"
+    }
+  }
+}

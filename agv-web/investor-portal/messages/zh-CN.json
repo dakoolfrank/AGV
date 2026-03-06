@@ -1,0 +1,1109 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "保存",
+    "edit": "编辑",
+    "delete": "删除",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "close": "关闭",
+    "confirm": "确认",
+    "required": "必填",
+    "optional": "可选",
+    "readMore": "阅读更多",
+    "lastUpdated": "上次更新",
+    "docs": "文档"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "关于",
+    "investor": "投资者关系",
+    "financials": "财务报告",
+    "legal": "法律文件",
+    "contact": "联系我们",
+    "brandkit": "品牌工具包",
+    "tech": "技术",
+    "esg": "环境、社会及管治",
+    "depin": "德平",
+    "salesMarketing": "销售与营销",
+    "managementTeam": "管理团队"
+  },
+  "header": {
+    "title": "AGV协议",
+    "subtitle": "投资者关系",
+    "description": "访问专属投资者资源、财务报告和公司更新"
+  },
+  "hero": {
+    "title": "投资者关系",
+    "subtitle": "AGV协议",
+    "description": "访问专属投资者资源、财务报告和公司更新",
+    "loginButton": "投资者登录",
+    "learnMore": "了解更多",
+    "whitepaperButton": "阅读白皮书"
+  },
+  "auth": {
+    "login": "登录",
+    "logout": "退出",
+    "email": "邮箱",
+    "password": "密码",
+    "forgotPassword": "忘记密码？",
+    "rememberMe": "记住我",
+    "loginButton": "登录",
+    "invalidCredentials": "邮箱或密码错误",
+    "loginSuccess": "登录成功",
+    "loginError": "登录失败，请重试"
+  },
+  "investor": {
+    "welcome": "欢迎来到投资者门户",
+    "dashboard": "仪表板",
+    "documents": "文档",
+    "reports": "报告",
+    "presentations": "演示文稿",
+    "financials": "财务报表",
+    "legal": "法律文件",
+    "brandkit": "品牌工具包",
+    "contact": "联系我们",
+    "header": {
+      "title": "AGV协议数据室",
+      "subtitle": "投资者门户",
+      "description": "全面访问所有 AGV 协议文档、财务模型和投资材料。"
+    },
+    "overview": {
+      "title": "数据室概览",
+      "totalDocs": "文档总数",
+      "categories": "类别",
+      "access": "可访问",
+      "transparency": "透明度"
+    },
+    "categories": {
+      "tech": "技术文档、架构和审计报告",
+      "financials": "财务模型、估值和预测",
+      "legal": "法律文件、合规性和注册",
+      "esg": "环境影响和可持续性报告",
+      "brandkit": "品牌资产、标识和营销材料",
+      "depin": "分散式物理基础设施网络文档",
+      "salesMarketing": "销售策略、合作伙伴关系和市场材料",
+      "managementTeam": "领导结构和治理文件"
+    },
+    "recent": {
+      "title": "最近更新的文档"
+    },
+    "process": {
+      "title": "投资流程",
+      "steps": {
+        "review": {
+          "title": "审查材料",
+          "desc": "探索我们全面的文档"
+        },
+        "schedule": {
+          "title": "安排通话",
+          "desc": "与我们的团队联系进行详细讨论"
+        },
+        "dd": {
+          "title": "尽职调查",
+          "desc": "使用 NDA 访问机密信息"
+        },
+        "decision": {
+          "title": "投资决策",
+          "desc": "敲定条款并加入 AGV 协议"
+        }
+      }
+    },
+    "cta": {
+      "title": "准备投资 AGV 协议吗？",
+      "description": "加入我们，通过可持续的区块链基础设施彻底改变现实世界的资产标记化。",
+      "contact": "联系我们的团队",
+      "viewFinancials": "查看财务模型"
+    }
+  },
+  "documents": {
+    "title": "文档",
+    "description": "访问投资者文档和资源",
+    "categories": {
+      "financials": "财务报告",
+      "legal": "法律文件",
+      "presentations": "演示文稿",
+      "brandkit": "品牌工具包",
+      "tech": "探索我们的技术白皮书、系统图和审计报告。",
+      "esg": "了解我们的环境影响和现实世界的资产验证。"
+    },
+    "download": "下载",
+    "view": "查看",
+    "noDocuments": "暂无文档",
+    "loading": "加载文档中..."
+  },
+  "footer": {
+    "company": "AGV协议",
+    "description": "连接现实世界资产与区块链技术",
+    "links": {
+      "home": "首页",
+      "about": "关于",
+      "investor": "投资者关系",
+      "contact": "联系我们"
+    },
+    "legal": {
+      "privacy": "隐私政策",
+      "terms": "服务条款",
+      "cookies": "Cookie政策"
+    },
+    "copyright": "© 2024 AGV协议。保留所有权利。",
+    "quickLinks": "快速链接",
+    "resources": "资源",
+    "dataRoom": "资料室",
+    "privacyPolicy": "隐私政策"
+  },
+  "error": {
+    "pageNotFound": "页面未找到",
+    "accessDenied": "访问被拒绝",
+    "serverError": "服务器错误",
+    "tryAgain": "重试",
+    "goHome": "返回首页"
+  },
+  "brandkit": {
+    "hero": {
+      "title": "AGV品牌套件",
+      "subtitle": "官方身份、资产和使用指南",
+      "tagline": "下载官方资产并遵循品牌标准，以确保一致、专业的沟通。",
+      "protocol": "协议"
+    },
+    "overview": {
+      "title": "品牌概述",
+      "visionTitle": "想象",
+      "visionLine3": "AGV 协议为世界上第一个去中心化的 AI Power ETF 提供支持。",
+      "visionLine1": "上个世纪，石油推动了工业财富的增长。",
+      "visionLine2": "本世纪，电力+计算将推动人工智能财富的繁荣。",
+      "missionTitle": "使命",
+      "missionText": "AGV 协议通过连接清洁能源、人工智能和去中心化金融，重新定义了现实世界资产 (RWA) 类别。AGV 不仅仅是一个代币化资产平台，更是全球首个去中心化人工智能电力 ETF——一个将真实电力和计算能力转化为具有流动性和收益的数字资产的生态系统。",
+      "taglineTitle": "品牌承诺",
+      "taglineLine1": "能源 x 计算",
+      "taglineLine2": "推动人工智能经济"
+    },
+    "logo": {
+      "title": "标识系统",
+      "description": "仅使用官方徽标和主徽标的认可变体。保持对比度和清晰的空间，以达到最佳可读性。",
+      "primaryTitle": "主要变奏",
+      "logomark": "标志",
+      "logomarkDesc": "用于头像、图标或紧凑位置的独立符号。",
+      "primary": "主要标志",
+      "primaryDesc": "带有符号的文字标记，用于标准品牌展示。",
+      "backgroundsTitle": "已批准的背景",
+      "whiteBg": "在白色",
+      "whiteBgDesc": "在白色背景上使用全彩的主要标志。",
+      "navyBg": "关于海军",
+      "navyBgDesc": "在深色背景上使用白色标志来形成对比。",
+      "skyBg": "在天空",
+      "skyBgDesc": "在浅蓝色背景上使用海军标志。"
+    },
+    "spacing": {
+      "title": "清除空间",
+      "lead": "保留徽标周围足够的净空间以确保可见性和影响力。",
+      "clearSpace": "最小净空空间",
+      "minDistance": "任何元素都不应侵入此距离内。"
+    },
+    "social": {
+      "title": "社交媒体",
+      "square": "方形头像",
+      "squareDesc": "使用位于浅色背景中心的标志。",
+      "circle": "圆形头像",
+      "circleDesc": "使用以白色圆圈为中心的标志。"
+    },
+    "favicon": {
+      "title": "网站图标",
+      "web": "网站图标",
+      "webDesc": "使用官方的 32×32 图标作为浏览器标签。"
+    },
+    "colors": {
+      "title": "颜色系统",
+      "description": "我们的配色方案体现了信任、创新和清洁技术。每一种颜色都经过精心挑选，以传达我们的品牌价值，并打造出具有凝聚力的视觉形象。",
+      "primaryTitle": "原色",
+      "navy": "海军蓝",
+      "navyDesc": "标题和背景的主要品牌颜色。",
+      "sky": "天蓝色",
+      "skyDesc": "突出显示和 UI 元素的强调色。",
+      "white": "白色的",
+      "whiteDesc": "中性色，清晰且对比度高。"
+    },
+    "gradient": {
+      "title": "坡度",
+      "primary": "主渐变",
+      "primaryDesc": "使用从海军蓝到天空的渐变色作为英雄部分和关键 CTA。"
+    },
+    "typography": {
+      "title": "排版",
+      "primaryTitle": "主要字体",
+      "primaryDesc": "这种主要字体有助于向与您的品牌互动的任何人介绍您的公司。",
+      "secondaryTitle": "次要字体",
+      "secondaryDesc": "这种辅助字体支持主要字体并与品牌相辅相成。",
+      "usageTitle": "用法",
+      "usageDesc": "标题大小仅用于清晰度、影响力和权威性至关重要的关键时刻。",
+      "leadingTitle": "行距/行距",
+      "bodyTitle": "身体使用"
+    },
+    "photography": {
+      "title": "摄影",
+      "lead": "风格指南确保图像保持品牌一致的美学代表。",
+      "captions": {
+        "cleanTech": "清洁技术焦点",
+        "energyInnovation": "能源创新",
+        "sustainableFuture": "可持续的未来"
+      }
+    },
+    "applications": {
+      "title": "应用",
+      "waterBottle": "水瓶",
+      "waterBottleDesc": "可持续商品上的品牌应用",
+      "baseballCap": "棒球帽",
+      "baseballCapDesc": "促销服装上的品牌应用"
+    },
+    "documents": {
+      "view": "查看文档"
+    },
+    "usage": {
+      "badTitle": "错误用法",
+      "logoTitle": "徽标指南",
+      "standardsTitle": "品牌标准"
+    }
+  },
+  "actions": {
+    "explore": "探索",
+    "scheduleCall": "安排通话",
+    "downloadPitchDeck": "下载演示文稿",
+    "requestInfo": "索取更多信息",
+    "contactBD": "联系 BD 团队"
+  },
+  "home": {
+    "investmentMaterials": {
+      "title": "投资材料",
+      "subtitle": "重要文件",
+      "description": "查看我们全面的演示文稿和执行摘要，涵盖 AGV 协议的愿景、技术和市场机会。"
+    },
+    "execSummary": {
+      "title": "执行摘要",
+      "subtitle": "快速概览和关键指标",
+      "description": "涵盖愿景、技术和财务预测的综合演示。"
+    },
+    "pitchDeck": {
+      "title": "演讲稿",
+      "subtitle": "完成投资介绍",
+      "disclaimer": "以上演示文稿包含机密信息。请仔细阅读并联系我们获取更多信息。"
+    },
+    "resources": {
+      "title": "投资资源",
+      "subtitle": "资料室",
+      "description": "为潜在投资者和合作伙伴提供全面的文档和资源。"
+    },
+    "cta": {
+      "title": "准备好投资未来了吗？",
+      "description": "加入 AGV 协议，通过可持续的区块链基础设施彻底改变现实世界的资产标记化。",
+      "accessDataRoom": "访问完整数据室"
+    }
+  },
+  "docs": {
+    "tech": {
+      "whitepaper": {
+        "title": "AGV协议白皮书",
+        "description": "AGV 协议基础设施的详细技术概述和系统设计。"
+      },
+      "architectureDiagram": {
+        "title": "系统架构图",
+        "description": "全面展示AGV上链与IoT层集成。"
+      },
+      "audit": {
+        "title": "智能合约审计报告",
+        "description": "第三方安全审计结果和建议。"
+      },
+      "github": {
+        "title": "GitHub 存储库访问",
+        "description": "包含核心协议实现的公共存储库。"
+      }
+    },
+    "financials": {
+      "modelQ12024": {
+        "title": "2024 年第一季度财务模型",
+        "description": "2024 年第一季度的详细预测和收入细目。"
+      },
+      "valuation": {
+        "title": "估值分析",
+        "description": "全面的估值方法和市场分析。"
+      },
+      "revenueForecast": {
+        "title": "2024-2026年收入预测",
+        "description": "三年收入预测和增长假设。"
+      },
+      "tokenEconomics": {
+        "title": "代币经济模型",
+        "description": "代币分配、效用和经济激励设计。"
+      }
+    },
+    "legal": {
+      "coi": {
+        "title": "公司注册证书",
+        "description": "正式的公司注册文件和商业登记。"
+      },
+      "ipTransfer": {
+        "title": "知识产权转让协议",
+        "description": "知识产权转让及分配文件。"
+      },
+      "tokenSale": {
+        "title": "代币销售协议",
+        "description": "代币购买和分发的条款和条件。"
+      },
+      "compliance": {
+        "title": "监管合规报告",
+        "description": "法律合规状况和监管框架分析。"
+      }
+    },
+    "esg": {
+      "impact": {
+        "title": "可持续发展影响报告",
+        "description": "环境影响评估和可持续性指标。"
+      },
+      "carbon": {
+        "title": "物联网碳足迹数据",
+        "description": "从物联网设备实时跟踪碳排放。"
+      },
+      "framework": {
+        "title": "ESG合规框架",
+        "description": "环境、社会和治理合规标准。"
+      },
+      "rwa": {
+        "title": "真实世界资产验证",
+        "description": "现实世界资产支持和验证流程的证明。"
+      }
+    },
+    "brandkit": {
+      "logoPack": {
+        "title": "AGV 徽标包",
+        "description": "多种格式和尺寸的完整徽标变化。"
+      },
+      "guidelines": {
+        "title": "品牌指南",
+        "description": "全面的品牌标识指南和使用规则。"
+      },
+      "pressKit": {
+        "title": "新闻资料包材料",
+        "description": "媒体资产、新闻稿和宣传材料。"
+      },
+      "templates": {
+        "title": "营销模板",
+        "description": "演示文稿和营销材料的设计模板。"
+      }
+    }
+  },
+  "contact": {
+    "title": "联系及投资咨询",
+    "subtitle": "联系我们",
+    "description": "准备好投资 AGV 协议了吗？请联系我们的团队，了解详细讨论和合作机会。",
+    "form": {
+      "title": "投资咨询表",
+      "firstName": "名",
+      "lastName": "姓",
+      "email": "电子邮件",
+      "phone": "电话号码",
+      "company": "公司/组织",
+      "investmentType": "投资类型",
+      "message": "信息",
+      "nda": "我同意签署保密协议以进行保密讨论",
+      "submit": "提交询问",
+      "sending": "正在发送...",
+      "success": "谢谢！您的咨询已成功发送。",
+      "error": "发送消息失败",
+      "networkError": "网络错误。请重试。",
+      "selectType": "选择投资类型",
+      "messagePlaceholder": "告诉我们您的投资兴趣和任何具体问题...",
+      "investmentTypes": {
+        "series-a": "A轮",
+        "strategic": "战略投资",
+        "partnership": "合伙",
+        "advisory": "顾问角色",
+        "other": "其他"
+      }
+    },
+    "info": {
+      "title": "联系信息",
+      "email": "电子邮件",
+      "phone": "电话",
+      "address": "地址",
+      "addressText": "创新大道123号\n旧金山，加州 94105"
+    },
+    "actions": {
+      "title": "快速操作",
+      "dataRoom": "访问完整数据室",
+      "financials": "查看财务模型",
+      "esg": "ESG与可持续发展报告",
+      "brandkit": "下载品牌套件"
+    },
+    "nda": {
+      "title": "机密信息访问",
+      "description": "如需获取机密财务预测、技术规格和战略计划，请请求将保密协议发送到您的电子邮箱。",
+      "request": "请求保密协议"
+    }
+  },
+  "financials": {
+    "title": "财务模型和预测",
+    "subtitle": "财务文件",
+    "description": "通过全面的文档访问 AGV 协议的详细财务模型、估值分析和收入预测。",
+    "mainDocument": {
+      "title": "财务审计与估值指数",
+      "description": "AGV 协议的全面财务审计和估值分析，包括详细的财务模型、预测和投资指标。"
+    },
+    "metrics": {
+      "title": "关键财务指标",
+      "tam": "总目标市场",
+      "roi": "预期投资回报率",
+      "seriesA": "A轮目标",
+      "profitability": "实现盈利的月数"
+    },
+    "documents": {
+      "title": "财务文件和报告",
+      "description": "必要的财务文件，包括代币手册、综合报告、上限表和白皮书摘录。",
+      "tokenHandbook": "AGV 协议令牌手册 v2025",
+      "tokenHandbookDesc": "AGV 协议代币的综合指南，包括实用性、治理和经济模型。",
+      "integratedReport": "AGV 协议 – 综合财务与估值报告 v2025.10",
+      "integratedReportDesc": "详细的综合财务分析和估值报告涵盖了协议财务表现的各个方面。",
+      "capTable": "股权结构表 BVI 股东决议 V2025.10",
+      "capTableDesc": "来自英属维尔京群岛司法管辖区的官方股权结构表文件和股东决议。",
+      "whitepaper": "双代币 rGGP + GVT（白皮书摘录）v2025.10",
+      "whitepaperDesc": "技术白皮书摘录详细介绍了 rGGP 和 GVT 代币的双代币系统。"
+    },
+    "revenue": {
+      "title": "收入来源",
+      "transactionFees": "交易费",
+      "transactionFeesDesc": "每笔资产代币化交易 0.1-0.5%",
+      "subscription": "订阅服务",
+      "subscriptionDesc": "高级功能的月费/年费",
+      "dataLicensing": "数据许可",
+      "dataLicensingDesc": "物联网和碳追踪数据的许可"
+    },
+    "highlights": {
+      "title": "投资亮点",
+      "market": {
+        "title": "市场机遇",
+        "tam": "• 潜在市场总额 2.5 万亿美元",
+        "demand": "• 对可持续投资的需求不断增长",
+        "regulatory": "• 绿色金融的监管支持",
+        "advantage": "• RWA 代币化的先发优势"
+      },
+      "projections": {
+        "title": "财务预测",
+        "roi": "• 预期投资回报率为 25-40%",
+        "seriesA": "• A 轮融资目标为 5000 万美元",
+        "profitability": "• 18-24个月实现盈利",
+        "revenue": "• 多种收入来源"
+      }
+    }
+  },
+  "tech": {
+    "mainDoc": {
+      "title": "技术审计和基础设施验证指数",
+      "description": "全面的技术审计和基础设施验证文档，涵盖系统架构、安全评估和技术堆栈验证。"
+    },
+    "header": {
+      "title": "技术与架构",
+      "subtitle": "技术文档",
+      "description": "通过全面的文档探索 AGV 协议的技术基础设施、系统架构和安全审计。"
+    },
+    "metrics": {
+      "title": "技术指标",
+      "uptime": "正常运行时间 SLA",
+      "speed": "交易速度",
+      "encryption": "加密",
+      "monitoring": "监控"
+    },
+    "highlights": {
+      "title": "技术亮点",
+      "blockchain": {
+        "title": "区块链基础设施",
+        "l2": "第 2 层扩展解决方案",
+        "automation": "智能合约自动化",
+        "interop": "跨链互操作性",
+        "governance": "去中心化治理"
+      },
+      "iot": {
+        "title": "物联网集成",
+        "realtime": "实时数据馈送",
+        "auth": "设备身份验证",
+        "carbon": "碳追踪传感器",
+        "compliance": "自动合规"
+      }
+    },
+    "stack": {
+      "title": "技术堆栈",
+      "blockchain": "区块链",
+      "blockchainDesc": "智能合约与 DeFi",
+      "iot": "物联网",
+      "iotDesc": "实时监控",
+      "aiml": "人工智能/机器学习",
+      "aimlDesc": "预测分析"
+    },
+    "sections": {
+      "ip": {
+        "title": "知识产权摘要",
+        "description": "知识产权文件包括白皮书摘录，涵盖铸造功能和 RWA 映射协议的能力。",
+        "docs": {
+          "powerToMint": {
+            "title": "Power to Mint（白皮书摘录）V2025.10",
+            "description": "技术白皮书摘录详细介绍了 AGV 协议生态系统中的铸造功能和代币生成机制。"
+          },
+          "rwaMapping": {
+            "title": "RWA 映射（白皮书摘录）v2025.10",
+            "description": "全面的白皮书摘录，涵盖现实世界资产 (RWA) 映射协议和标记化机制。"
+          }
+        }
+      },
+      "github": {
+        "title": "GitHub 链接（智能合约）",
+        "description": "访问 AGV 协议区块链基础设施的智能合约存储库和开发资源。",
+        "docs": {
+          "profile": {
+            "title": "GitHub 个人资料链接",
+            "description": "直接访问 AGV 协议的 GitHub 配置文件，其中包含智能合约存储库、开发文档和源代码。"
+          }
+        }
+      },
+      "pitchDecks": {
+        "title": "融资演讲稿",
+        "description": "全面的演示文稿集合，涵盖针对业务发展、机构投资者和专业演示的不同版本。",
+        "docs": {
+          "bd": {
+            "title": "AGV 协议演示文稿（BD 版本）v2025.10",
+            "description": "以业务发展为重点的推介平台突出了 AGV 协议的价值主张和市场机会。"
+          },
+          "institutional": {
+            "title": "AGV 协议演示文稿（机构）v2025.10",
+            "description": "以机构投资者为中心的推介平台，包含详细的财务预测和风险评估。"
+          },
+          "oilToAi": {
+            "title": "AGV 协议演示文稿（石油到人工智能动力版）v2025.10",
+            "description": "专门的演示文稿重点关注从传统石油能源向人工智能可再生能源解决方案的转变。"
+          },
+          "general": {
+            "title": "AGV 协议演示文稿 v2025.10",
+            "description": "全面的演示文稿涵盖 AGV 协议的所有方面，包括技术、市场机会和商业模式。"
+          }
+        }
+      },
+      "architecture": {
+        "title": "技术架构与流程",
+        "description": "详细的技术文档涵盖系统架构、流程和生态系统设计。",
+        "docs": {
+          "ecosystem": {
+            "title": "AGV协议生态系统V2025.10",
+            "description": "全面的生态系统文档，涵盖技术架构、流程和系统集成点。"
+          }
+        }
+      }
+    }
+  },
+  "legal": {
+    "mainDoc": {
+      "title": "法律数据包索引",
+      "description": "机构尽职调查和合规审查的综合法律文件索引，涵盖所有法律结构和监管要求。"
+    },
+    "header": {
+      "title": "法律和注册文件",
+      "subtitle": "法律文件",
+      "description": "通过详细的文档审查 AGV 协议的综合法律结构、合规状态和监管框架。"
+    },
+    "compliance": {
+      "title": "合规状态",
+      "regulatory": "监管合规",
+      "items": {
+        "bvi": "英属维尔京群岛公司注册",
+        "nz": "新西兰公司注册",
+        "kyc": "KYC/AML合规",
+        "cn": "中国境内注册"
+      }
+    },
+    "structure": {
+      "title": "法律结构",
+      "items": {
+        "bvi": "英属维尔京群岛控股公司（JLL Asset Ltd）",
+        "nz": "新西兰特殊目的公司（3669875）",
+        "cn": "中国境内实体",
+        "multi": "跨司法管辖区合规"
+      }
+    },
+    "framework": {
+      "title": "法律框架",
+      "governance": {
+        "title": "公司治理",
+        "multi": "多司法管辖区结构",
+        "bvi": "BVI控股公司框架",
+        "nz": "新西兰 DAO 治理",
+        "cn": "中国境内合规"
+      },
+      "risk": {
+        "title": "风险管理",
+        "docs": "全面的法律文件",
+        "translation": "认证翻译服务",
+        "monitoring": "监管合规监控",
+        "opinions": "跨司法管辖区的法律意见"
+      }
+    },
+    "overview": {
+      "title": "法律结构概述",
+      "bvi": "英属维尔京群岛",
+      "bviDesc": "控股公司",
+      "nz": "新西兰",
+      "nzDesc": "DAO治理",
+      "cn": "中国",
+      "cnDesc": "境内资产"
+    },
+    "sections": {
+      "articles": {
+        "title": "公司章程",
+        "description": "英属维尔京群岛实体的官方章程和公司治理文件。",
+        "docs": {
+          "bviArticles": {
+            "title": "BVI JLL Asset Ltd 公司章程 v2025.10",
+            "description": "英属维尔京群岛 JLL Asset Ltd 的正式公司章程，确立了公司治理框架和运营指南。"
+          }
+        }
+      },
+      "china": {
+        "title": "中国境内资产实体",
+        "description": "中国境内资产实体的法律文件，包括授权协议、董事会决议和合规声明。",
+        "docs": {
+          "authorization": {
+            "title": "授权协议 CHN CO_BVI 2025 v2025.10",
+            "description": "中国境内实体与BVI控股公司之间就资产管理和运营签订的授权协议。"
+          },
+          "boardResolution": {
+            "title": "董事会决议 CHN CO_BVI 2025 v2025.10",
+            "description": "中国境内实体的正式董事会决议授权 BVI 运营和资产管理活动。"
+          },
+          "compliance": {
+            "title": "合规声明 CHN CO_BVI 2025 v2025.10",
+            "description": "中国境内实体关于遵守法规和运营标准的全面合规声明。"
+          },
+          "irrevocable": {
+            "title": "不可撤销授权声明 CHN CO_BVI 2025 v2025.10",
+            "description": "不可撤销的授权声明，授予英属维尔京群岛实体对中国境内资产运营的全权权力。"
+          },
+          "noLitigation": {
+            "title": "无诉讼/仲裁证书 CHN CO_BVI 2025 v2025.10",
+            "description": "官方证明，确认中国境内实体不存在未决诉讼或仲裁程序。"
+          },
+          "tax": {
+            "title": "税务登记证和税务清关证 CHN CO_BVI 2025 v2025.10",
+            "description": "中国税务机关为境内实体提供的官方税务登记和清关证明。"
+          }
+        }
+      },
+      "bvi": {
+        "title": "离岸控股特殊目的公司 - 英属维尔京群岛",
+        "description": "为英属维尔京群岛离岸控股特殊目的公司提供完整的法律文件，包括董事会决议、授权链和合规声明。",
+        "docs": {
+          "boardReauth": {
+            "title": "董事会决议（重新授权）BVI_ijet 2025 v2025.10",
+            "description": "董事会决议重新授权英属维尔京群岛 ijet 运营和资产管理活动。"
+          },
+          "chain": {
+            "title": "授权链 BVI_ijet 2025 v2025.10",
+            "description": "建立来自英属维尔京群岛实体的法律授权流的完整授权文件链。"
+          },
+          "compliance": {
+            "title": "合规声明 BVI_ijet ltd 2025 v2025.10",
+            "description": "BVI ijet ltd 关于遵守法规和运营标准的全面合规声明。"
+          },
+          "irrevocable": {
+            "title": "不可撤销授权声明 BVI_ijet ltd 2025 v2025.10",
+            "description": "来自 BVI ijet ltd 的不可撤销授权声明，确立永久运营权。"
+          },
+          "kyc": {
+            "title": "KYC 和 AML 文档 BVI_ijet Ltd 2025 v2025.10",
+            "description": "完成 BVI ijet Ltd. 的了解您的客户和反洗钱文件。"
+          },
+          "noLitigation": {
+            "title": "无诉讼/仲裁证书 BVI_ijet ltd 2025 v2025.10",
+            "description": "官方证明确认 BVI ijet ltd. 没有未决诉讼或仲裁程序。"
+          },
+          "reauth": {
+            "title": "重新授权协议 BVI Ijet ltd 2025 v2025.10",
+            "description": "重新授权协议为 BVI Ijet ltd. 建立新的经营权。"
+          },
+          "revenue": {
+            "title": "收入和分销协议 BVI_ijet ltd 2025 v2025.10",
+            "description": "收入和分配协议概述了 BVI ijet ltd. 的利润分享和分配机制。"
+          }
+        }
+      },
+      "nz": {
+        "title": "发行人和 DAO 治理 SPV - 新西兰",
+        "description": "新西兰发行人和 DAO 治理特殊目的机构的法律文件，包括公司注册证书和授权协议。",
+        "docs": {
+          "coi": {
+            "title": "公司注册证书（3669875 2022年11月11日）v2025.10",
+            "description": "新西兰实体的正式注册证书（3669875），日期为 2022 年 11 月 11 日。"
+          },
+          "chain": {
+            "title": "授权链 BVI_ijet 2025 v2025.10",
+            "description": "确立法律权力的授权文件链从英属维尔京群岛流向新西兰实体。"
+          },
+          "extract": {
+            "title": "公司摘录 (3669875 2022年11月11日) v2025.10",
+            "description": "新西兰公司办公室针对实体 3669875 的官方公司摘录，日期为 2022 年 11 月 11 日。"
+          },
+          "constitution": {
+            "title": "新西兰 iJet 有限公司章程",
+            "description": "新西兰 iJet 有限公司的官方章程文件，确立了公司治理框架和运营指南。"
+          },
+          "reauth": {
+            "title": "重新授权协议 BVI Ijet ltd 2025 v2025.10",
+            "description": "英属维尔京群岛和新西兰实体之间建立运营授权的重新授权协议。"
+          }
+        }
+      },
+      "structure": {
+        "title": "法律结构和验证文件",
+        "description": "法律结构摘要和验证文件，包括认证翻译和法律摘要。",
+        "docs": {
+          "summary": {
+            "title": "AGV 协议——法律结构摘要",
+            "description": "全面的法律结构摘要，概述了 AGV 协议的完整公司和法律框架。"
+          },
+          "naati": {
+            "title": "NAATI认证中英翻译证书",
+            "description": "中英翻译服务的官方 NAATI 认证（证书 3327_620583_6）。"
+          },
+          "nzstii": {
+            "title": "NZSTII 认证中英翻译员会员证书",
+            "description": "获得认证的中英翻译服务的官方 NZSTII 会员证书。"
+          }
+        }
+      }
+    }
+  },
+  "depin": {
+    "header": {
+      "title": "DePIN验证",
+      "subtitle": "去中心化物理基础设施网络",
+      "description": "通过详细的视觉和视频证据对 AGV 协议的物理基础设施开发、农业实施和可再生能源整合进行全面的验证记录。"
+    },
+    "main": {
+      "title": "DePIN 验证索引 - AGV 协议 v2025.10",
+      "description": "全面的 DePIN（分散式物理基础设施网络）验证文档，涵盖土地开发、基础设施实施和农业光伏一体化过程。"
+    },
+    "metrics": {
+      "title": "DePIN 基础设施指标",
+      "solar": "太阳能容量",
+      "iot": "物联网传感器",
+      "monitoring": "实时监控",
+      "coverage": "验证覆盖率"
+    },
+    "overview": {
+      "title": "DePIN 基础设施概述",
+      "agricultural": {
+        "title": "农业",
+        "desc": "智能农业和灌溉"
+      },
+      "pv": {
+        "title": "光伏",
+        "desc": "太阳能发电"
+      },
+      "iot": {
+        "title": "物联网",
+        "desc": "实时监控"
+      }
+    },
+    "sections": {
+      "landOverview": {
+        "title": "土地概况 土地图片",
+        "description": "全面的土地区域视觉记录，展示开发前的初始条件、地形和地理特征。"
+      },
+      "leveling": {
+        "title": "土地平整和施肥 平整施肥",
+        "description": "土地准备过程的视频记录，包括平整、土壤处理和施肥程序。"
+      },
+      "trellis": {
+        "title": "Trellis基础架构系统",
+        "description": "农业支撑结构的棚架系统安装和基础设施开发的视频记录。"
+      },
+      "irrigation": {
+        "title": "滴灌系统 滴灌系统",
+        "description": "滴灌系统安装的综合文档，包括实施过程的图像和视频。"
+      },
+      "plantation": {
+        "title": "Dwarf Dense Plantation 矮砧密植",
+        "description": "矮密植树技术记录，包括种植过程的图像和视频。"
+      },
+      "maintenance": {
+        "title": "Plant Protection & Maintenance 植保护",
+        "description": "全面记录植物保护措施和维护程序，包括图像和视频。"
+      },
+      "agriPv": {
+        "title": "农光互补园光互补",
+        "description": "农业光伏一体化的综合文档，包括太阳能电池板安装和集成过程的图像和视频。"
+      },
+      "onSite": {
+        "title": "现场 现场",
+        "description": "全面的现场文档，包括项目现场的鸟瞰图、平视图和仰视图。"
+      },
+      "device": {
+        "title": "设备 设备",
+        "description": "项目中使用的设备和装置的视频记录。"
+      },
+      "data": {
+        "title": "数据 数据",
+        "description": "数据收集和监控系统的视频记录。"
+      }
+    }
+  },
+  "esg": {
+    "header": {
+      "title": "ESG与现实世界资产证明",
+      "subtitle": "可持续性与影响",
+      "description": "通过全面的文档探索 AGV 协议的环境影响、可持续发展计划和现实世界的资产验证。"
+    },
+    "main": {
+      "title": "ESG与可持续发展影响报告",
+      "description": "全面评估 AGV 协议的环境影响、可持续发展举措和现实世界资产验证。"
+    },
+    "metrics": {
+      "title": "ESG绩效指标",
+      "carbon": "减少碳足迹",
+      "renewable": "可再生能源的使用",
+      "waste": "减少废物",
+      "verifiedRwa": "已验证的 RWA 资产"
+    },
+    "verification": {
+      "title": "真实世界资产验证",
+      "iot": {
+        "title": "物联网监控",
+        "items": [
+          "实时资产跟踪",
+          "环境传感器",
+          "碳排放监测",
+          "自动合规报告"
+        ]
+      },
+      "process": {
+        "title": "验证流程",
+        "items": [
+          "第三方审计",
+          "区块链的不变性",
+          "智能合约自动化",
+          "透明的报告"
+        ]
+      }
+    },
+    "dashboard": {
+      "title": "碳影响仪表盘",
+      "co2": "减少二氧化碳排放量吨",
+      "devices": "已部署的物联网设备",
+      "monitoring": "实时监控"
+    },
+    "sections": {
+      "admin": {
+        "title": "行政和财务文件",
+        "description": "项目建立和合规所需的必要法律和财务文件。",
+        "docs": {
+          "registration": {
+            "title": "陕西省企业投资项目登记确认书",
+            "description": "陕西省企业投资项目正式登记确认书。"
+          },
+          "lease": {
+            "title": "土地租赁合同",
+            "description": "土地租赁协议和产权的法律文件。"
+          },
+          "jv": {
+            "title": "政府农业光伏合资协议",
+            "description": "政府与农业光伏项目合作伙伴之间的正式合资协议。"
+          },
+          "dd": {
+            "title": "财务尽职调查报告",
+            "description": "对项目进行全面的财务分析和尽职调查评估。"
+          }
+        }
+      },
+      "yichuan": {
+        "title": "宜川县6.42兆瓦果园+太阳能混合项目（批准和审核）",
+        "description": "伊川县太阳能混合项目的完整政府审批和监管审查。",
+        "docs": {
+          "landTransfer": {
+            "title": "云岩镇土地流转证",
+            "description": "云岩镇政府出具的正式土地转让证明。"
+          },
+          "edb": {
+            "title": "经济发展局批准",
+            "description": "经济发展局的批准文件。"
+          },
+          "nrb": {
+            "title": "自然资源局批准",
+            "description": "自然资源局对土地使用和环境合规性的正式批准。"
+          },
+          "coal": {
+            "title": "伊川县煤炭减量办公室土地审批",
+            "description": "伊川县煤炭减量办公室的土地批准文件。"
+          },
+          "edbOpinion": {
+            "title": "伊川县经济发展局意见",
+            "description": "伊川县经济发展局的正式意见和建议。"
+          },
+          "drb": {
+            "title": "伊川县发展改革局批复",
+            "description": "伊川县发展和改革局的批准文件。"
+          },
+          "forestry": {
+            "title": "伊川县林业局批复",
+            "description": "获得伊川县林业局林业环保审批。"
+          },
+          "epb": {
+            "title": "伊川县环保局意见",
+            "description": "环境影响评价及环保局意见。"
+          }
+        }
+      },
+      "zhongnan": {
+        "title": "中南集团合作协议",
+        "description": "与中南集团签署战略合作协议及合作文件。",
+        "docs": {
+          "energy": {
+            "title": "中南集团能源合作协议",
+            "description": "AGV Protocol与中南集团签署能源战略合作协议。"
+          },
+          "yichuan": {
+            "title": "中南集团伊川合作协议",
+            "description": "与中南集团就伊川县项目达成的具体合作协议。"
+          },
+          "supplement": {
+            "title": "补充协议",
+            "description": "补充主要合作协议的附加条款和条件。"
+          }
+        }
+      }
+    }
+  },
+  "nda": {
+    "form": {
+      "title": "职称",
+      "subtitle": "请求保密协议",
+      "description": "请填写下方表格，申请保密协议。我们会将协议发送至您的邮箱。",
+      "name": "姓名",
+      "organization": "组织/公司",
+      "email": "电子邮件",
+      "submit": "请求保密协议",
+      "sending": "正在提交请求...",
+      "success": "谢谢！您的保密协议 (NDA) 申请已成功提交。我们将尽快将保密协议 (NDA) 文件发送至您的邮箱。",
+      "error": "未能提交保密协议请求",
+      "networkError": "网络错误。请重试。",
+      "namePlaceholder": "输入您的全名",
+      "titlePlaceholder": "例如首席执行官、投资经理、分析师",
+      "organizationPlaceholder": "输入您的公司或组织名称",
+      "emailPlaceholder": "输入您的电子邮件地址",
+      "emailNote": "NDA 将发送至此电子邮件地址",
+      "disclaimer": "通过提交此表格，您同意接收 NDA 文件并理解它将被发送到所提供的电子邮件地址。",
+      "jobTitle": "职称"
+    },
+    "title": "保密协议请求",
+    "subtitle": "请求保密协议",
+    "description": "通过提交 NDA 请求表来请求访问机密的 AGV 协议信息。"
+  },
+  "salesMarketing": {
+    "header": {
+      "title": "销售与营销",
+      "subtitle": "销售策略与合作伙伴关系",
+      "description": "通过全面的文档探索 AGV Protocol 的销售策略、市场定位和战略合作伙伴关系。"
+    },
+    "mainDoc": {
+      "title": "产品时间表和白皮书摘录 v2025.10",
+      "description": "全面的产品时间表和白皮书摘录展示了我们对人工智能可再生能源经济的路线图和愿景。"
+    },
+    "metrics": {
+      "title": "销售绩效指标",
+      "pipeline": "销售渠道",
+      "partners": "战略合作伙伴",
+      "satisfaction": "客户满意度",
+      "support": "提供支持"
+    },
+    "strategy": {
+      "market": {
+        "title": "市场渗透",
+        "desc": "瞄准可再生能源领域的机构投资者和战略合作伙伴"
+      },
+      "growth": {
+        "title": "增长战略",
+        "desc": "通过合作伙伴关系和直销渠道扩大市场范围"
+      },
+      "partnerships": {
+        "title": "战略合作伙伴关系",
+        "desc": "与主要行业参与者和投资者建立长期关系"
+      },
+      "title": "销售策略概述"
+    },
+    "sections": {
+      "mous": {
+        "docs": {
+          "pusu": {
+            "title": "朴素资本管理有限公司投资意向书",
+            "description": "普速资本管理有限公司的投资意向书表达了对 AGV Protocol 投资机会的兴趣。"
+          },
+          "guopeng": {
+            "title": "国鹏投资管理有限公司战略合作意向书",
+            "description": "国鹏投资管理有限公司的战略合作意向书概述了合作框架和合作条款。"
+          }
+        },
+        "title": "谅解备忘录（MOU）",
+        "description": "来自主要机构合作伙伴的战略合作协议和投资意向书。"
+      }
+    }
+  },
+  "managementTeam": {
+    "header": {
+      "title": "管理团队",
+      "subtitle": "领导与治理",
+      "description": "与 AGV Protocol 的领导团队会面，并通过全面的文档探索我们的治理结构。"
+    },
+    "mainDoc": {
+      "title": "AGV协议全球管理和治理概览2025",
+      "description": "全面概述 AGV Protocol 的全球管理结构和治理框架，包括领导角色和组织结构。"
+    },
+    "expertise": {
+      "title": "团队专业知识",
+      "years": "多年经验",
+      "projects": "已完成项目",
+      "managed": "资产管理",
+      "countries": "服务国家"
+    },
+    "leadership": {
+      "executive": {
+        "title": "执行团队",
+        "desc": "高层领导推动战略方向和卓越运营"
+      },
+      "board": {
+        "title": "董事会",
+        "desc": "独立董事会成员提供治理和监督"
+      },
+      "advisory": {
+        "title": "顾问委员会",
+        "desc": "行业专家提供战略指导和市场洞察"
+      },
+      "title": "领导结构"
+    },
+    "principles": {
+      "transparency": {
+        "title": "透明度",
+        "desc": "向所有利益相关者进行开放的沟通和清晰的报告"
+      },
+      "accountability": {
+        "title": "问责制",
+        "desc": "明确的责任和绩效衡量框架"
+      },
+      "innovation": {
+        "title": "创新",
+        "desc": "持续改进和技术进步"
+      },
+      "sustainability": {
+        "title": "可持续性",
+        "desc": "长期价值创造和环境责任"
+      },
+      "title": "治理原则"
+    }
+  }
+}

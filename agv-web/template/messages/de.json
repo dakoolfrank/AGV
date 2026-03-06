@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "about": "Über"
+  },
+  "about": {
+    "title": "Über AGV",
+    "whatIsAGV": {
+      "title": "Was ist AGV?",
+      "description": "AGV (AGRIVOLTS) ist eine revolutionäre Plattform, die die Lücke zwischen traditionellen Finanzen und dezentralisierten Systemen schließt. Wir sind Pioniere der Zukunft der Tokenisierung von Real World Assets (RWA) und ermöglichen die nahtlose Integration physischer Vermögenswerte in das Blockchain-Ökosystem."
+    },
+    "mission": {
+      "title": "Unsere Mission",
+      "description": "Unsere Mission ist es, den Zugang zu realen Vermögenswerten durch Blockchain-Technologie zu demokratisieren und Investitionsmöglichkeiten zugänglicher, transparenter und effizienter zu machen. Wir streben danach, ein nachhaltiges Ökosystem zu schaffen, in dem traditionelle Vermögenswerte tokenisiert, gehandelt und on-chain verwaltet werden können, während die regulatorische Compliance und Sicherheit gewährleistet werden."
+    },
+    "vision": {
+      "title": "Unsere Vision",
+      "description": "Wir stellen uns eine Welt vor, in der jeder reale Vermögenswert nahtlos auf der Blockchain dargestellt werden kann, was globalen Zugang, Bruchteilseigentum und transparente Governance ermöglicht. AGV strebt danach, die führende Plattform für RWA-Tokenisierung zu sein und Industriestandards für Sicherheit, Compliance und Innovation zu setzen."
+    },
+    "values": {
+      "title": "Unsere Kernwerte",
+      "transparency": "Transparenz: Wir glauben an offene, ehrliche Kommunikation und transparente Prozesse.",
+      "innovation": "Innovation: Wir erweitern kontinuierlich die Grenzen dessen, was mit Blockchain-Technologie möglich ist.",
+      "community": "Gemeinschaft: Unsere Gemeinschaft steht im Mittelpunkt alles dessen, was wir tun.",
+      "sustainability": "Nachhaltigkeit: Wir sind verpflichtet, langfristige, nachhaltige Lösungen zu entwickeln."
+    },
+    "technology": {
+      "title": "Technologie",
+      "description": "AGV nutzt modernste Blockchain-Technologie, Smart Contracts und dezentralisierte Infrastruktur, um sichere, skalierbare und effiziente Lösungen für die Asset-Tokenisierung bereitzustellen. Unsere Plattform integriert fortschrittliche Sicherheitsmaßnahmen, Compliance-Frameworks und benutzerfreundliche Schnittstellen, um eine nahtlose Erfahrung für alle Teilnehmer zu gewährleisten."
+    }
+  }
+}

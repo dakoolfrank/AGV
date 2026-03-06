@@ -1,0 +1,225 @@
+{
+  "header": {
+    "brand": "PreGVT",
+    "protocolName": "Protocole AGV",
+    "languageLabel": "Langue",
+    "languageAriaLabel": "Sélectionnez la langue"
+  },
+  "hero": {
+    "title": {
+      "main": "Architecture des jetons AGV",
+      "highlight": "Un système de jetons conçu pour l'avenir"
+    },
+    "description": "Une structure à deux jetons claire et sécurisée : preGVT pour la prévente et l’acquisition, et GVT comme jeton central de l’écosystème qui alimente la gouvernance, le staking et l’intégration d’actifs du monde réel.",
+    "primaryCta": "Architecture des jetons de visualisation",
+    "secondaryCta": "Lire Tokenomics",
+    "tokenomicsHref": "#",
+    "icons": {
+      "pregvtAlt": "PreGVT",
+      "gvtAlt": "GVT"
+    }
+  },
+  "oneChain": {
+    "heading": {
+      "prefix": "Une seule chaîne. Zéro confusion.",
+      "highlight": "Sécurité maximale."
+    },
+    "description": "AGV est lancé exclusivement sur la BNB Chain — sans ponts, sans réplication des approvisionnements, sans risques inter-chaînes. Ceci garantit des audits simplifiés, une expérience utilisateur optimale et une économie de jetons transparente.",
+    "imageAlt": "Chaîne BNB",
+    "features": [
+      "Exécution rapide",
+      "Complexité d'audit minimale",
+      "Voie de référencement la plus propre",
+      "Vérification facile de l'approvisionnement en chaîne",
+      "Architecture minimale et prévisible"
+    ]
+  },
+  "twoToken": {
+    "heading": {
+      "prefix": "Un bâtiment conçu à cet effet,",
+      "highlight": "Architecture à deux jetons"
+    },
+    "pregvt": {
+      "title": "PreGVT",
+      "subtitle": "Prévente + jeton de récompense anticipée",
+      "bullets": [
+        "Non transférable",
+        "Convertit en GVT à TGE",
+        "Acquisition des droits imposée par les contrats de séquestre",
+        "Déjà déployé sur BNB"
+      ],
+      "callout": "Verrouillé jusqu'à TGE",
+      "imageAlt": "PreGVT"
+    },
+    "gvt": {
+      "title": "GVT",
+      "subtitle": "Jeton principal échangeable de l'écosystème",
+      "bullets": [
+        "Entièrement échangeable sur TGE",
+        "Approvisionnement canonique à chaîne unique",
+        "Gouvernance + staking + accès aux RWA"
+      ],
+      "callout": "L'actif principal des AGV.",
+      "imageAlt": "GVT"
+    }
+  },
+  "liquidity": {
+    "heading": {
+      "prefix": "Une stratégie de liquidité progressive pour",
+      "highlight": "Découverte de prix propre"
+    },
+    "phase1": {
+      "title": "Phase 1 — Pré-TGE",
+      "description": "PreGVT–USDT LP sur PancakeSwap.",
+      "purposeTitle": "But",
+      "bullets": [
+        "Prix de référence",
+        "Visibilité du portefeuille et du tableau de bord"
+      ]
+    },
+    "phase2": {
+      "title": "Phase 2 — TGE",
+      "description": "La liquidité de GVT est désormais disponible.",
+      "purposeTitle": "Comprend",
+      "bullets": [
+        "Soutien des teneurs de marché",
+        "Conversion complète de preGVT → GVT",
+        "Divulgation de l'offre en circulation sur la chaîne"
+      ]
+    }
+  },
+  "vesting": {
+    "heading": {
+      "prefix": "De PreGVT à GVT —",
+      "highlight": "Acquisition entièrement transparente"
+    },
+    "description": "Votre pré-GVT passe automatiquement en GVT via un contrat d'acquisition sécurisé chez TGE.",
+    "steps": [
+      "Vous détenez preGVT",
+      "preGVT passe au contrat d'acquisition",
+      "Durée d'acquisition : 9 à 12 mois",
+      "GVT se débloque progressivement",
+      "Vous recevez du GVT liquide"
+    ]
+  },
+  "security": {
+    "heading": {
+      "prefix": "Sécurité au",
+      "highlight": "Cœur du système"
+    },
+    "points": [
+      "Safe Multisig contrôle toutes les frappes",
+      "Une chaîne = une surface d'attaque plus petite",
+      "Application des droits de propriété par le biais d'un compte séquestre",
+      "Contrats non évolutifs pour la stabilité",
+      "fonctions d'urgence pouvant être mises en pause",
+      "Gouvernance de verrouillage temporel optionnelle"
+    ]
+  },
+  "builtForNext": {
+    "heading": {
+      "prefix": "Architecture des jetons AGV — Conçue pour",
+      "highlight": "Et ensuite ?"
+    },
+    "description": "Votre pré-GVT passe automatiquement en GVT via un contrat d'acquisition sécurisé chez TGE.",
+    "items": [
+      "Des audits plus rapides",
+      "Risque de sécurité réduit",
+      "Approvisionnement transparent",
+      "Comportement prévisible des jetons",
+      "Échange favorable",
+      "Documentation propre",
+      "Fondation pour une expansion multichaîne ultérieure"
+    ]
+  },
+  "tokenConversion": {
+    "heading": "Diagramme d'architecture de conversion des jetons AGV",
+    "pregvt": {
+      "title": "PreGVT",
+      "badge": "Jeton de prévente",
+      "propertiesTitle": "Propriétés",
+      "bullets": [
+        "Non transférable",
+        "Convertit en GVT à TGE",
+        "Acquisition des droits imposée par les contrats de séquestre",
+        "Déjà déployé sur BNB"
+      ]
+    },
+    "gvt": {
+      "title": "GVT",
+      "badge": "Jeton principal",
+      "propertiesTitle": "Propriétés",
+      "bullets": [
+        "Entièrement échangeable sur TGE",
+        "Approvisionnement canonique à chaîne unique",
+        "Gouvernance + staking + accès aux RWA"
+      ]
+    },
+    "callouts": {
+      "pause": {
+        "title": "Fonction Pause",
+        "description": "arrêt d'urgence ou arrêt complet"
+      },
+      "timelock": {
+        "title": "Verrouillage temporisé (optionnel)",
+        "description": "Reporter les actions essentielles à la gouvernance pour des raisons de transparence"
+      },
+      "noProxy": {
+        "title": "Aucun proxy évolutif",
+        "description": "Pour réduire la surface d'attaque"
+      }
+    },
+    "diagramTitle": "GÉNÉRATION / CONVERSION DE JETONS",
+    "diagramLabels": {
+      "from": "PreGVT",
+      "to": "GVT"
+    }
+  },
+  "footer": {
+    "brand": "Protocole PreGVT",
+    "tagline": "Plateforme de jetons numériques",
+    "description": "Le premier jeton numérique PreGVT conforme au monde, un produit financier innovant basé sur la technologie blockchain.",
+    "featureLabels": [
+      "Sécurisé",
+      "Rapide",
+      "Multichaîne"
+    ],
+    "sections": {
+      "product": {
+        "title": "Produits",
+        "links": {
+          "nftMinting": "Création de NFT",
+          "kolProgram": "Programme KOL",
+          "analytics": "Analytique"
+        }
+      },
+      "company": {
+        "title": "Entreprise",
+        "links": {
+          "aboutUs": "À propos de nous",
+          "careers": "Carrières",
+          "press": "Presse",
+          "blogs": "Blogs"
+        }
+      },
+      "support": {
+        "title": "Soutien",
+        "links": {
+          "helpCenter": "Centre d'aide",
+          "documentation": "Documentation",
+          "apiReference": "Référence API",
+          "contactSupport": "Contacter l'assistance"
+        }
+      },
+      "legal": {
+        "title": "Légal",
+        "links": {
+          "privacyPolicy": "politique de confidentialité",
+          "termsOfService": "Conditions d'utilisation",
+          "cookiePolicy": "Politique relative aux cookies",
+          "gdpr": "RGPD"
+        }
+      }
+    }
+  }
+}

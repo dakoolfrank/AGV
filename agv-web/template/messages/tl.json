@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "Tungkol"
+  },
+  "about": {
+    "title": "Tungkol sa AGV",
+    "whatIsAGV": {
+      "title": "Ano ang AGV?",
+      "description": "Ang AGV (AGRIVOLTS) ay isang rebolusyonaryong platform na nagbubuklod sa agwat sa pagitan ng tradisyonal na pananalapi at desentralisadong sistema. Kami ay nangunguna sa hinaharap ng Real World Assets (RWA) tokenization, na nagpapahintulot sa walang kahirap-hirap na pagsasama ng pisikal na assets sa blockchain ecosystem."
+    },
+    "mission": {
+      "title": "Ang Aming Misyon",
+      "description": "Ang aming misyon ay gawing demokratiko ang access sa real-world assets sa pamamagitan ng blockchain technology, na ginagawang mas accessible, transparent, at efficient ang mga oportunidad sa pamumuhunan. Layunin naming lumikha ng sustainable ecosystem kung saan ang tradisyonal na assets ay maaaring ma-tokenize, ma-trade, at ma-manage on-chain habang pinapanatili ang regulatory compliance at seguridad."
+    },
+    "vision": {
+      "title": "Ang Aming Pananaw",
+      "description": "Nakikita namin ang isang mundo kung saan ang anumang real-world asset ay maaaring walang kahirap-hirap na ma-represent sa blockchain, na nagpapahintulot sa global access, fractional ownership, at transparent governance. Ang AGV ay nagsusumikap na maging nangungunang platform para sa RWA tokenization, na nagtatakda ng mga pamantayan sa industriya para sa seguridad, compliance, at innovation."
+    },
+    "values": {
+      "title": "Ang Aming Core Values",
+      "transparency": "Transparency: Naniniwala kami sa bukas, tapat na komunikasyon at transparent na proseso.",
+      "innovation": "Innovation: Patuloy naming itinutulak ang mga hangganan ng kung ano ang posible sa blockchain technology.",
+      "community": "Community: Ang aming komunidad ay nasa puso ng lahat ng aming ginagawa.",
+      "sustainability": "Sustainability: Nakatuon kami sa pagbuo ng pangmatagalan, sustainable na solusyon."
+    },
+    "technology": {
+      "title": "Teknolohiya",
+      "description": "Ang AGV ay gumagamit ng cutting-edge blockchain technology, smart contracts, at desentralisadong infrastructure upang magbigay ng secure, scalable, at efficient na solusyon para sa asset tokenization. Ang aming platform ay nagsasama ng advanced security measures, compliance frameworks, at user-friendly interfaces upang matiyak ang walang kahirap-hirap na karanasan para sa lahat ng participants."
+    }
+  }
+}

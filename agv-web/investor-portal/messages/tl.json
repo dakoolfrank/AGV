@@ -1,0 +1,1109 @@
+{
+  "common": {
+    "loading": "Naglo-load...",
+    "error": "Error",
+    "success": "Tagumpay",
+    "submit": "Isumite",
+    "cancel": "Kanselahin",
+    "save": "I-save",
+    "edit": "I-edit",
+    "delete": "Tanggalin",
+    "back": "Bumalik",
+    "next": "Susunod",
+    "previous": "Nakaraang",
+    "close": "Isara",
+    "confirm": "Kumpirmahin",
+    "required": "Kinakailangan",
+    "optional": "Opsyonal",
+    "readMore": "Magbasa pa",
+    "lastUpdated": "Huling na-update",
+    "docs": "mga doc"
+  },
+  "nav": {
+    "home": "Bahay",
+    "about": "Tungkol sa",
+    "investor": "Relasyon sa Mamumuhunan",
+    "financials": "Pinansyal",
+    "legal": "Legal",
+    "contact": "Makipag-ugnayan",
+    "brandkit": "Brand Kit",
+    "tech": "Teknolohiya",
+    "esg": "ESG",
+    "depin": "DePIN",
+    "salesMarketing": "Sales at Marketing",
+    "managementTeam": "Koponan ng Pamamahala"
+  },
+  "header": {
+    "title": "Protokol ng AGV",
+    "subtitle": "Relasyon sa Mamumuhunan",
+    "description": "I-access ang mga eksklusibong mapagkukunan ng mamumuhunan, mga ulat sa pananalapi, at mga update ng kumpanya"
+  },
+  "hero": {
+    "title": "Relasyon sa Mamumuhunan",
+    "subtitle": "Protokol ng AGV",
+    "description": "I-access ang mga eksklusibong mapagkukunan ng mamumuhunan, mga ulat sa pananalapi, at mga update ng kumpanya",
+    "loginButton": "Pag-login sa Mamumuhunan",
+    "learnMore": "Matuto pa",
+    "whitepaperButton": "Basahin ang Whitepaper"
+  },
+  "auth": {
+    "login": "Mag-login",
+    "logout": "Mag-logout",
+    "email": "Email",
+    "password": "Password",
+    "forgotPassword": "Nakalimutan ang Password?",
+    "rememberMe": "Tandaan Mo Ako",
+    "loginButton": "Mag-sign In",
+    "invalidCredentials": "Di-wastong email o password",
+    "loginSuccess": "Matagumpay ang pag-log in",
+    "loginError": "Nabigo ang pag-login. Pakisubukang muli."
+  },
+  "investor": {
+    "welcome": "Maligayang pagdating sa Investor Portal",
+    "dashboard": "Data Room",
+    "documents": "Mga dokumento",
+    "reports": "Mga ulat",
+    "presentations": "Mga pagtatanghal",
+    "financials": "Mga Pahayag sa pananalapi",
+    "legal": "Mga Legal na Dokumento",
+    "brandkit": "Brand Kit",
+    "contact": "Makipag-ugnayan sa Amin",
+    "header": {
+      "title": "Data Room ng AGV Protocol",
+      "subtitle": "Portal ng Mamumuhunan",
+      "description": "Komprehensibong pag-access sa lahat ng dokumentasyon ng AGV Protocol, mga modelo sa pananalapi, at mga materyales sa pamumuhunan."
+    },
+    "overview": {
+      "title": "Pangkalahatang-ideya ng Data Room",
+      "totalDocs": "Kabuuang mga Dokumento",
+      "categories": "Mga kategorya",
+      "access": "Magagamit ang Access",
+      "transparency": "Transparency"
+    },
+    "categories": {
+      "tech": "Teknikal na dokumentasyon, arkitektura, at mga ulat sa pag-audit",
+      "financials": "Mga modelo sa pananalapi, pagpapahalaga, at pagpapakita",
+      "legal": "Mga legal na dokumento, pagsunod, at pagpaparehistro",
+      "esg": "Mga ulat sa epekto sa kapaligiran at pagpapanatili",
+      "brandkit": "Mga asset ng brand, logo, at materyal sa marketing",
+      "depin": "Desentralisadong pisikal na dokumentasyon ng network ng imprastraktura",
+      "salesMarketing": "Mga diskarte sa pagbebenta, pakikipagsosyo, at mga materyales sa merkado",
+      "managementTeam": "Istraktura ng pamumuno at dokumentasyon ng pamamahala"
+    },
+    "recent": {
+      "title": "Mga Kamakailang Na-update na Dokumento"
+    },
+    "process": {
+      "title": "Proseso ng Pamumuhunan",
+      "steps": {
+        "review": {
+          "title": "Mga Materyales sa Pagsusuri",
+          "desc": "Galugarin ang aming komprehensibong dokumentasyon"
+        },
+        "schedule": {
+          "title": "Iskedyul ang Tawag",
+          "desc": "Kumonekta sa aming koponan para sa mga detalyadong talakayan"
+        },
+        "dd": {
+          "title": "Due Diligence",
+          "desc": "I-access ang kumpidensyal na impormasyon gamit ang NDA"
+        },
+        "decision": {
+          "title": "Desisyon sa Pamumuhunan",
+          "desc": "Tapusin ang mga tuntunin at sumali sa AGV Protocol"
+        }
+      }
+    },
+    "cta": {
+      "title": "Handa nang Mamuhunan sa AGV Protocol?",
+      "description": "Samahan kami sa pagbabago ng real-world na asset tokenization sa pamamagitan ng napapanatiling imprastraktura ng blockchain.",
+      "contact": "Makipag-ugnayan sa Aming Koponan",
+      "viewFinancials": "Tingnan ang Mga Modelong Pananalapi"
+    }
+  },
+  "documents": {
+    "title": "Mga dokumento",
+    "description": "I-access ang mga dokumento at mapagkukunan ng mamumuhunan",
+    "categories": {
+      "financials": "Mga Ulat sa Pananalapi",
+      "legal": "Mga Legal na Dokumento",
+      "presentations": "Mga pagtatanghal",
+      "brandkit": "Brand Kit",
+      "tech": "Galugarin ang aming teknikal na whitepaper, mga system diagram, at mga ulat sa pag-audit.",
+      "esg": "Tuklasin ang aming epekto sa kapaligiran at real-world na pag-verify ng asset."
+    },
+    "download": "I-download",
+    "view": "Tingnan",
+    "noDocuments": "Walang magagamit na mga dokumento",
+    "loading": "Naglo-load ng mga dokumento..."
+  },
+  "footer": {
+    "company": "Protokol ng AGV",
+    "description": "Pinagsasama ang agwat sa pagitan ng real-world asset at blockchain technology sa pamamagitan ng makabagong IoT integration at sustainable practices.",
+    "links": {
+      "home": "Home",
+      "about": "Tungkol",
+      "investor": "Mga Relasyon sa Investor",
+      "contact": "Makipag-ugnayan"
+    },
+    "legal": {
+      "privacy": "Patakaran sa Privacy",
+      "terms": "Mga Tuntunin ng Serbisyo",
+      "cookies": "Patakaran sa Cookies"
+    },
+    "copyright": "© 2024 AGV Protocol. Lahat ng karapatan ay nakalaan.",
+    "quickLinks": "Mga Mabilisang Link",
+    "resources": "Mga mapagkukunan",
+    "dataRoom": "Data Room",
+    "privacyPolicy": "Patakaran sa Privacy"
+  },
+  "error": {
+    "pageNotFound": "Hindi Nahanap ang Pahina",
+    "accessDenied": "Tinanggihan ang Access",
+    "serverError": "Error sa Server",
+    "tryAgain": "Subukan Muli",
+    "goHome": "Umuwi ka na"
+  },
+  "brandkit": {
+    "hero": {
+      "title": "AGV Brand Kit",
+      "subtitle": "Opisyal na pagkakakilanlan, mga asset, at mga alituntunin sa paggamit",
+      "tagline": "Mag-download ng mga opisyal na asset at sundin ang mga pamantayan ng brand para matiyak ang pare-pareho, propesyonal na komunikasyon.",
+      "protocol": "PROTOCOL"
+    },
+    "overview": {
+      "title": "Pangkalahatang-ideya ng Brand",
+      "visionTitle": "Pangitain",
+      "visionLine3": "Pinapatakbo ng AGV Protocol ang unang desentralisadong AI Power ETF sa mundo.",
+      "visionLine1": "Noong nakaraang siglo, pinalakas ng langis ang yaman ng industriya.",
+      "visionLine2": "Sa siglong ito, ang kuryente + compute ay magpapagatong sa kayamanan ng AI.",
+      "missionTitle": "Misyon",
+      "missionText": "Binabago ng AGV Protocol ang kategoryang Real-World Asset (RWA) sa pamamagitan ng pagtulay ng malinis na enerhiya, artificial intelligence, at desentralisadong pananalapi. Higit pa sa isang tokenized asset platform, ipinoposisyon ng AGV ang sarili bilang ang unang desentralisadong AI Power ETF sa buong mundo — isang ecosystem kung saan ang tunay na kuryente at compute capacity ay nagiging likido, na nagbubunga ng mga digital na asset.",
+      "taglineTitle": "Pangako ng Brand",
+      "taglineLine1": "Enerhiya x Compute",
+      "taglineLine2": "Pinapalakas ang AI Economy"
+    },
+    "logo": {
+      "title": "Sistema ng Logo",
+      "description": "Gamitin ang opisyal na logomark at pangunahing logo sa mga aprubadong variation lang. Panatilihin ang kaibahan at malinaw na espasyo para sa pinakamainam na pagiging madaling mabasa.",
+      "primaryTitle": "Pangunahing Pagkakaiba-iba",
+      "logomark": "Logomark",
+      "logomarkDesc": "Standalone na simbolo na ginagamit para sa mga avatar, favicon, o mga compact na placement.",
+      "primary": "Pangunahing Logo",
+      "primaryDesc": "Wordmark na may simbolo para sa mga karaniwang placement ng brand.",
+      "backgroundsTitle": "Mga Inaprubahang Background",
+      "whiteBg": "Sa Puti",
+      "whiteBgDesc": "Gamitin ang pangunahing logo sa buong kulay sa puti.",
+      "navyBg": "Sa Navy",
+      "navyBgDesc": "Gamitin ang puting logo sa madilim na background para sa contrast.",
+      "skyBg": "Sa Sky",
+      "skyBgDesc": "Gamitin ang navy logo sa mapusyaw na asul na background."
+    },
+    "spacing": {
+      "title": "Clear Space",
+      "lead": "Panatilihin ang sapat na malinaw na espasyo sa paligid ng logo upang matiyak ang visibility at epekto.",
+      "clearSpace": "Minimum Clear Space",
+      "minDistance": "Walang mga elemento ang dapat pumasok sa ganitong distansya."
+    },
+    "social": {
+      "title": "Social Media",
+      "square": "Square Avatar",
+      "squareDesc": "Gamitin ang logomark na nakasentro sa isang maliwanag na background.",
+      "circle": "Pabilog na Avatar",
+      "circleDesc": "Gamitin ang logomark na nakasentro sa isang puting bilog."
+    },
+    "favicon": {
+      "title": "Favicon",
+      "web": "Web Favicon",
+      "webDesc": "Gamitin ang opisyal na 32×32 favicon para sa mga tab ng browser."
+    },
+    "colors": {
+      "title": "Sistema ng Kulay",
+      "description": "Ang aming color palette ay sumasalamin sa tiwala, pagbabago, at malinis na teknolohiya. Ang bawat kulay ay maingat na pinili upang maihatid ang aming mga halaga ng tatak at lumikha ng isang magkakaugnay na visual na pagkakakilanlan.",
+      "primaryTitle": "Pangunahing Kulay",
+      "navy": "Navy Blue",
+      "navyDesc": "Pangunahing kulay ng brand para sa mga header at background.",
+      "sky": "Asul na Langit",
+      "skyDesc": "Kulay ng accent para sa mga highlight at elemento ng UI.",
+      "white": "Puti",
+      "whiteDesc": "Neutral na kulay para sa kalinawan at kaibahan."
+    },
+    "gradient": {
+      "title": "Gradient",
+      "primary": "Pangunahing Gradient",
+      "primaryDesc": "Gamitin ang navy-to-sky gradient para sa mga hero section at key CTA."
+    },
+    "typography": {
+      "title": "TYPOGRAPHY",
+      "primaryTitle": "PANGUNAHING TYPEFACE",
+      "primaryDesc": "Nakakatulong ang pangunahing typeface na ito na tukuyin ang iyong kumpanya sa sinumang nakikipag-ugnayan sa iyong brand.",
+      "secondaryTitle": "SECONDARY TYPEFACE",
+      "secondaryDesc": "Ang pangalawang font na ito ay sumusuporta sa pangunahin at umaakma sa tatak.",
+      "usageTitle": "PAGGAMIT",
+      "usageDesc": "Ang mga laki ng headline ay nakalaan para sa mahahalagang sandali kung saan ang kalinawan, epekto, at awtoridad ay mahalaga.",
+      "leadingTitle": "LINE SPACING / LEADING",
+      "bodyTitle": "PAGGAMIT NG KATAWAN"
+    },
+    "photography": {
+      "title": "PHOTOGRAPHY",
+      "lead": "Isang gabay sa istilo upang matiyak na ang imahe ay nagpapanatili ng isang pare-parehong aesthetic na kinatawan ng tatak.",
+      "captions": {
+        "cleanTech": "Malinis na Pokus sa Teknolohiya",
+        "energyInnovation": "Pagbabago ng Enerhiya",
+        "sustainableFuture": "Sustainable Future"
+      }
+    },
+    "applications": {
+      "title": "MGA APLIKASYON",
+      "waterBottle": "Bote ng Tubig",
+      "waterBottleDesc": "Application ng brand sa sustainable merchandise",
+      "baseballCap": "Baseball Cap",
+      "baseballCapDesc": "Application ng tatak sa mga damit na pang-promosyon"
+    },
+    "documents": {
+      "view": "Tingnan ang Dokumento"
+    },
+    "usage": {
+      "badTitle": "MALING PAGGAMIT",
+      "logoTitle": "Mga Alituntunin sa Logo",
+      "standardsTitle": "Mga Pamantayan ng Brand"
+    }
+  },
+  "actions": {
+    "explore": "Galugarin",
+    "scheduleCall": "Mag-iskedyul ng Tawag",
+    "downloadPitchDeck": "I-download ang Pitch Deck",
+    "requestInfo": "Humiling ng Karagdagang Impormasyon",
+    "contactBD": "Makipag-ugnayan sa BD Team"
+  },
+  "home": {
+    "investmentMaterials": {
+      "title": "Mga Materyales sa Pamumuhunan",
+      "subtitle": "Mga Pangunahing Dokumento",
+      "description": "Suriin ang aming komprehensibong pitch deck at executive summary na sumasaklaw sa pananaw, teknolohiya, at pagkakataon sa merkado ng AGV Protocol."
+    },
+    "execSummary": {
+      "title": "Executive Summary",
+      "subtitle": "Mabilis na pangkalahatang-ideya at mga pangunahing sukatan",
+      "description": "Komprehensibong pagtatanghal na sumasaklaw sa pananaw, teknolohiya, at mga projection sa pananalapi."
+    },
+    "pitchDeck": {
+      "title": "Pitch Deck",
+      "subtitle": "Kumpletuhin ang pagtatanghal ng pamumuhunan",
+      "disclaimer": "Kasama sa presentasyong ito sa itaas ang kumpidensyal na impormasyon. Mangyaring suriing mabuti at makipag-ugnayan sa amin para sa karagdagang impormasyon."
+    },
+    "resources": {
+      "title": "Mga Mapagkukunan ng Pamumuhunan",
+      "subtitle": "Data Room",
+      "description": "Komprehensibong dokumentasyon at mapagkukunan para sa mga potensyal na mamumuhunan at kasosyo."
+    },
+    "cta": {
+      "title": "Handa nang Mamuhunan sa Hinaharap?",
+      "description": "Sumali sa AGV Protocol sa pagbabago ng real-world asset tokenization sa pamamagitan ng napapanatiling imprastraktura ng blockchain.",
+      "accessDataRoom": "I-access ang Full Data Room"
+    }
+  },
+  "docs": {
+    "tech": {
+      "whitepaper": {
+        "title": "AGV Protocol Whitepaper",
+        "description": "Detalyadong teknikal na pangkalahatang-ideya at disenyo ng system ng imprastraktura ng AGV Protocol."
+      },
+      "architectureDiagram": {
+        "title": "Diagram ng Arkitektura ng System",
+        "description": "Komprehensibong paglalarawan ng on-chain at pagsasama ng IoT layer ng AGV."
+      },
+      "audit": {
+        "title": "Ulat ng Smart Contract Audit",
+        "description": "Mga resulta at rekomendasyon sa pag-audit ng seguridad ng third-party."
+      },
+      "github": {
+        "title": "Access sa GitHub Repository",
+        "description": "Pampublikong repositoryo na naglalaman ng mga pangunahing pagpapatupad ng protocol."
+      }
+    },
+    "financials": {
+      "modelQ12024": {
+        "title": "Modelong Pananalapi Q1 2024",
+        "description": "Detalyadong projection at breakdown ng kita para sa Q1 2024."
+      },
+      "valuation": {
+        "title": "Pagsusuri sa Pagpapahalaga",
+        "description": "Comprehensive valuation methodology at market analysis."
+      },
+      "revenueForecast": {
+        "title": "Pagtataya ng Kita 2024-2026",
+        "description": "Tatlong-taong pag-asa ng kita at pagpapalagay ng paglago."
+      },
+      "tokenEconomics": {
+        "title": "Modelo ng Token Economics",
+        "description": "Pamamahagi ng token, utility, at disenyo ng mga insentibo sa ekonomiya."
+      }
+    },
+    "legal": {
+      "coi": {
+        "title": "Sertipiko ng Pagsasama",
+        "description": "Mga opisyal na dokumento ng pagsasama at pagpaparehistro ng negosyo."
+      },
+      "ipTransfer": {
+        "title": "Kasunduan sa Paglipat ng IP",
+        "description": "Mga dokumento sa paglilipat ng mga karapatan sa intelektwal na ari-arian at pagtatalaga."
+      },
+      "tokenSale": {
+        "title": "Kasunduan sa Pagbebenta ng Token",
+        "description": "Mga tuntunin at kundisyon para sa pagbili at pamamahagi ng token."
+      },
+      "compliance": {
+        "title": "Ulat sa Pagsunod sa Regulatoryo",
+        "description": "Katayuan ng pagsunod sa batas at pagsusuri sa balangkas ng regulasyon."
+      }
+    },
+    "esg": {
+      "impact": {
+        "title": "Ulat sa Epekto ng Pagpapanatili",
+        "description": "Pagsusuri sa epekto sa kapaligiran at mga sukatan ng pagpapanatili."
+      },
+      "carbon": {
+        "title": "Data ng IoT Carbon Footprint",
+        "description": "Real-time na pagsubaybay sa carbon emission mula sa mga IoT device."
+      },
+      "framework": {
+        "title": "ESG Compliance Framework",
+        "description": "Mga pamantayan sa pagsunod sa Pangkapaligiran, Panlipunan, at Pamamahala."
+      },
+      "rwa": {
+        "title": "Real-World Asset Verification",
+        "description": "Patunay ng real-world na pag-back up ng asset at mga proseso ng pag-verify."
+      }
+    },
+    "brandkit": {
+      "logoPack": {
+        "title": "AGV Logo Pack",
+        "description": "Kumpletuhin ang mga variation ng logo sa maraming format at laki."
+      },
+      "guidelines": {
+        "title": "Mga Alituntunin sa Brand",
+        "description": "Mga komprehensibong alituntunin sa pagkakakilanlan ng brand at mga panuntunan sa paggamit."
+      },
+      "pressKit": {
+        "title": "Mga Materyales ng Press Kit",
+        "description": "Mga asset ng media, press release, at promotional material."
+      },
+      "templates": {
+        "title": "Mga Template ng Marketing",
+        "description": "Mga template ng disenyo para sa mga presentasyon at mga materyales sa marketing."
+      }
+    }
+  },
+  "contact": {
+    "title": "Makipag-ugnayan at Mga Tanong sa Pamumuhunan",
+    "subtitle": "Makipag-ugnayan",
+    "description": "Handa nang mamuhunan sa AGV Protocol? Makipag-ugnayan sa aming team para sa mga detalyadong talakayan at mga pagkakataon sa pakikipagsosyo.",
+    "form": {
+      "title": "Form ng Pagtatanong sa Pamumuhunan",
+      "firstName": "Unang Pangalan",
+      "lastName": "Apelyido",
+      "email": "Email Address",
+      "phone": "Numero ng Telepono",
+      "company": "Kumpanya/Samahan",
+      "investmentType": "Uri ng Pamumuhunan",
+      "message": "Mensahe",
+      "nda": "Sumasang-ayon akong pumirma sa isang NDA para sa mga kumpidensyal na talakayan",
+      "submit": "Magsumite ng Inquiry",
+      "sending": "Ipinapadala...",
+      "success": "salamat po! Ang iyong pagtatanong ay matagumpay na naipadala.",
+      "error": "Nabigong magpadala ng mensahe",
+      "networkError": "Error sa network. Pakisubukang muli.",
+      "selectType": "Pumili ng uri ng pamumuhunan",
+      "messagePlaceholder": "Sabihin sa amin ang tungkol sa iyong interes sa pamumuhunan at anumang partikular na tanong...",
+      "investmentTypes": {
+        "series-a": "Serye A",
+        "strategic": "Madiskarteng Pamumuhunan",
+        "partnership": "Partnership",
+        "advisory": "Tungkulin sa Pagpapayo",
+        "other": "Iba pa"
+      }
+    },
+    "info": {
+      "title": "Impormasyon sa Pakikipag-ugnayan",
+      "email": "Email",
+      "phone": "Telepono",
+      "address": "Address",
+      "addressText": "123 Inovation Drive\nSan Francisco, CA 94105"
+    },
+    "actions": {
+      "title": "Mabilis na Aksyon",
+      "dataRoom": "I-access ang Full Data Room",
+      "financials": "Tingnan ang Mga Modelong Pananalapi",
+      "esg": "ESG at Sustainability Report",
+      "brandkit": "I-download ang Brand Kit"
+    },
+    "nda": {
+      "title": "Access sa Kumpidensyal na Impormasyon",
+      "description": "Para sa pag-access sa mga kumpidensyal na projection sa pananalapi, mga teknikal na detalye, at mga madiskarteng plano, mangyaring humiling ng isang NDA na ipadala sa iyong email.",
+      "request": "Humiling ng NDA"
+    }
+  },
+  "financials": {
+    "title": "Mga Modelong Pananalapi at Projection",
+    "subtitle": "Dokumentasyong Pananalapi",
+    "description": "I-access ang mga detalyadong modelo ng pananalapi, pagsusuri sa pagpapahalaga, at mga projection ng kita para sa AGV Protocol sa pamamagitan ng komprehensibong dokumentasyon.",
+    "mainDocument": {
+      "title": "Financial Audit at Index ng Pagpapahalaga",
+      "description": "Comprehensive financial audit at valuation analysis para sa AGV Protocol, kabilang ang mga detalyadong modelo ng pananalapi, projection, at mga sukatan ng pamumuhunan."
+    },
+    "metrics": {
+      "title": "Mga Pangunahing Sukatan sa Pananalapi",
+      "tam": "Kabuuang Addressable Market",
+      "roi": "Inaasahang ROI",
+      "seriesA": "Serye A Target",
+      "profitability": "Mga Buwan sa Pagkakakitaan"
+    },
+    "documents": {
+      "title": "Pinansyal na Dokumentasyon at Ulat",
+      "description": "Mahahalagang dokumento sa pananalapi kabilang ang mga token handbook, pinagsamang ulat, cap table, at mga sipi ng whitepaper.",
+      "tokenHandbook": "Handbook ng Token ng AGV Protocol v2025",
+      "tokenHandbookDesc": "Komprehensibong gabay sa mga token ng AGV Protocol, kabilang ang utility, pamamahala, at mga modelong pang-ekonomiya.",
+      "integratedReport": "AGV Protocol – Pinagsanib na Ulat sa Pinansyal at Pagpapahalaga v2025.10",
+      "integratedReportDesc": "Detalyadong pinagsama-samang pagsusuri sa pananalapi at ulat sa pagpapahalaga na sumasaklaw sa lahat ng aspeto ng pagganap sa pananalapi ng protocol.",
+      "capTable": "Cap Table BVI Shareholder Resolution V2025.10",
+      "capTableDesc": "Opisyal na dokumentasyon ng cap table at resolusyon ng shareholder mula sa hurisdiksyon ng BVI.",
+      "whitepaper": "Dual Token rGGP + GVT (Whitpaper Excerpts) v2025.10",
+      "whitepaperDesc": "Mga teknikal na sipi ng whitepaper na nagdedetalye sa dual token system na may rGGP at GVT token."
+    },
+    "revenue": {
+      "title": "Mga Stream ng Kita",
+      "transactionFees": "Mga Bayarin sa Transaksyon",
+      "transactionFeesDesc": "0.1-0.5% bawat transaksyon sa tokenization ng asset",
+      "subscription": "Mga Serbisyo sa Subscription",
+      "subscriptionDesc": "Mga buwanan/taunang bayarin para sa mga premium na feature",
+      "dataLicensing": "Paglilisensya ng Data",
+      "dataLicensingDesc": "Paglilisensya ng IoT at data ng pagsubaybay sa carbon"
+    },
+    "highlights": {
+      "title": "Mga Highlight sa Pamumuhunan",
+      "market": {
+        "title": "Pagkakataon sa Market",
+        "tam": "• $2.5T kabuuang addressable market",
+        "demand": "• Lumalagong pangangailangan para sa napapanatiling pamumuhunan",
+        "regulatory": "• Regulatoryong suporta para sa green finance",
+        "advantage": "• First-mover na bentahe sa tokenization ng RWA"
+      },
+      "projections": {
+        "title": "Mga Proyektong Pananalapi",
+        "roi": "• 25-40% ang inaasahang ROI",
+        "seriesA": "• $50M Serye A na target ng pagpopondo",
+        "profitability": "• 18-24 na buwan para kumita",
+        "revenue": "• Maramihang mga daloy ng kita"
+      }
+    }
+  },
+  "tech": {
+    "mainDoc": {
+      "title": "Teknikal na Pag-audit at Index ng Pag-verify ng Infrastruktura",
+      "description": "Komprehensibong teknikal na pag-audit at dokumentasyon sa pag-verify ng imprastraktura na sumasaklaw sa arkitektura ng system, mga pagsusuri sa seguridad, at pagpapatunay ng stack ng teknolohiya."
+    },
+    "header": {
+      "title": "Teknolohiya at Arkitektura",
+      "subtitle": "Teknikal na Dokumentasyon",
+      "description": "Galugarin ang teknikal na imprastraktura ng AGV Protocol, arkitektura ng system, at mga pag-audit sa seguridad sa pamamagitan ng komprehensibong dokumentasyon."
+    },
+    "metrics": {
+      "title": "Mga Teknikal na Sukatan",
+      "uptime": "Uptime SLA",
+      "speed": "Bilis ng Transaksyon",
+      "encryption": "Pag-encrypt",
+      "monitoring": "Pagsubaybay"
+    },
+    "highlights": {
+      "title": "Mga Teknikal na Highlight",
+      "blockchain": {
+        "title": "Imprastraktura ng Blockchain",
+        "l2": "Layer 2 scaling solution",
+        "automation": "Smart contract automation",
+        "interop": "Cross-chain interoperability",
+        "governance": "Desentralisadong pamamahala"
+      },
+      "iot": {
+        "title": "Pagsasama ng IoT",
+        "realtime": "Mga real-time na data feed",
+        "auth": "Pagpapatunay ng device",
+        "carbon": "Mga sensor ng pagsubaybay sa carbon",
+        "compliance": "Awtomatikong pagsunod"
+      }
+    },
+    "stack": {
+      "title": "Technology Stack",
+      "blockchain": "Blockchain",
+      "blockchainDesc": "Mga Smart Contract at DeFi",
+      "iot": "IoT",
+      "iotDesc": "Real-time na Pagsubaybay",
+      "aiml": "AI/ML",
+      "aimlDesc": "Predictive Analytics"
+    },
+    "sections": {
+      "ip": {
+        "title": "Buod ng IP",
+        "description": "Dokumentasyon ng intelektwal na ari-arian kabilang ang mga sipi ng whitepaper na sumasaklaw sa power to mint functionality at RWA mapping protocols.",
+        "docs": {
+          "powerToMint": {
+            "title": "Power to Mint (Whitpaper Excerpt) V2025.10",
+            "description": "Teknikal na whitepaper excerpt na nagdedetalye ng kapangyarihan sa pag-mint ng functionality at mga mekanismo ng pagbuo ng token sa loob ng AGV Protocol ecosystem."
+          },
+          "rwaMapping": {
+            "title": "RWA Mapping (Whitpaper Excerpt) v2025.10",
+            "description": "Comprehensive whitepaper excerpt na sumasaklaw sa Real-World Asset (RWA) mapping protocol at tokenization mechanism."
+          }
+        }
+      },
+      "github": {
+        "title": "Mga link sa GitHub (Mga Smart Contract)",
+        "description": "Access sa smart contract repository at development resources para sa blockchain infrastructure ng AGV Protocol.",
+        "docs": {
+          "profile": {
+            "title": "Link ng Profile ng GitHub",
+            "description": "Direktang pag-access sa profile ng GitHub ng AGV Protocol na naglalaman ng mga imbakan ng matalinong kontrata, dokumentasyon ng pag-develop, at source code."
+          }
+        }
+      },
+      "pitchDecks": {
+        "title": "Mga Pitch Deck",
+        "description": "Komprehensibong koleksyon ng pitch deck na sumasaklaw sa iba't ibang bersyon para sa pagpapaunlad ng negosyo, mga namumuhunan sa institusyon, at mga espesyal na presentasyon.",
+        "docs": {
+          "bd": {
+            "title": "AGV Protocol Pitch Deck (BD-Version) v2025.10",
+            "description": "Nakatuon sa pag-unlad ng negosyo na pitch deck na nagha-highlight sa value proposition ng AGV Protocol at mga pagkakataon sa merkado."
+          },
+          "institutional": {
+            "title": "AGV Protocol Pitch Deck (Institutional) v2025.10",
+            "description": "Ang pitch deck na nakatuon sa mamumuhunan sa institusyon na may mga detalyadong projection sa pananalapi at mga pagtatasa ng panganib."
+          },
+          "oilToAi": {
+            "title": "AGV Protocol Pitch Deck (Oil to AI Power Edition) v2025.10",
+            "description": "Espesyal na pitch deck na tumutuon sa paglipat mula sa tradisyonal na oil-based na power tungo sa AI-powered renewable energy solution."
+          },
+          "general": {
+            "title": "AGV Protocol Pitch Deck v2025.10",
+            "description": "Ang komprehensibong pitch deck na sumasaklaw sa lahat ng aspeto ng AGV Protocol kabilang ang teknolohiya, pagkakataon sa merkado, at modelo ng negosyo."
+          }
+        }
+      },
+      "architecture": {
+        "title": "Arkitektura ng Teknolohiya at Daloy ng Proseso",
+        "description": "Detalyadong teknikal na dokumentasyong sumasaklaw sa arkitektura ng system, mga daloy ng proseso, at disenyo ng ecosystem.",
+        "docs": {
+          "ecosystem": {
+            "title": "AGV Protocol Ecosystem V2025.10",
+            "description": "Komprehensibong dokumentasyon ng ecosystem na sumasaklaw sa arkitektura ng teknolohiya, mga daloy ng proseso, at mga punto ng pagsasama ng system."
+          }
+        }
+      }
+    }
+  },
+  "legal": {
+    "mainDoc": {
+      "title": "Legal na Packet Index",
+      "description": "Comprehensive legal documentation index para sa institutional due diligence at compliance review, na sumasaklaw sa lahat ng legal na istruktura at mga kinakailangan sa regulasyon."
+    },
+    "header": {
+      "title": "Mga Dokumento sa Legal at Pagpaparehistro",
+      "subtitle": "Legal na Dokumentasyon",
+      "description": "Suriin ang komprehensibong legal na istruktura ng AGV Protocol, katayuan ng pagsunod, at balangkas ng regulasyon sa pamamagitan ng detalyadong dokumentasyon."
+    },
+    "compliance": {
+      "title": "Katayuan ng Pagsunod",
+      "regulatory": "Pagsunod sa Regulasyon",
+      "items": {
+        "bvi": "BVI Corporate Registration",
+        "nz": "New Zealand Incorporation",
+        "kyc": "Pagsunod sa KYC/AML",
+        "cn": "Pagpaparehistro sa China Onshore"
+      }
+    },
+    "structure": {
+      "title": "Legal na Istraktura",
+      "items": {
+        "bvi": "BVI Holding Company (JLL Asset Ltd)",
+        "nz": "New Zealand SPV (3669875)",
+        "cn": "China Onshore Entity",
+        "multi": "Multi-jurisdictional Compliance"
+      }
+    },
+    "framework": {
+      "title": "Legal na Balangkas",
+      "governance": {
+        "title": "Corporate Governance",
+        "multi": "Multi-jurisdictional na istraktura",
+        "bvi": "BVI holding company framework",
+        "nz": "Pamamahala ng DAO sa New Zealand",
+        "cn": "Pagsunod sa pampang ng China"
+      },
+      "risk": {
+        "title": "Pamamahala ng Panganib",
+        "docs": "Komprehensibong legal na dokumentasyon",
+        "translation": "Mga sertipikadong serbisyo sa pagsasalin",
+        "monitoring": "Pagsubaybay sa pagsunod sa regulasyon",
+        "opinions": "Multi-jurisdictional legal na opinyon"
+      }
+    },
+    "overview": {
+      "title": "Pangkalahatang-ideya ng Legal na Istraktura",
+      "bvi": "BVI",
+      "bviDesc": "Holding Company",
+      "nz": "NZ",
+      "nzDesc": "Pamamahala ng DAO",
+      "cn": "CN",
+      "cnDesc": "Onshore Assets"
+    },
+    "sections": {
+      "articles": {
+        "title": "Mga Artikulo ng Samahan",
+        "description": "Mga opisyal na artikulo ng asosasyon at mga dokumento ng pamamahala ng korporasyon para sa mga entidad ng BVI.",
+        "docs": {
+          "bviArticles": {
+            "title": "BVI JLL Asset Ltd Mga Artikulo ng Asosasyon v2025.10",
+            "description": "Mga opisyal na artikulo ng asosasyon para sa BVI JLL Asset Ltd, na nagtatatag ng corporate governance framework at mga alituntunin sa pagpapatakbo."
+          }
+        }
+      },
+      "china": {
+        "title": "China Onshore Asset Entities",
+        "description": "Legal na dokumentasyon para sa China onshore asset entity kabilang ang mga kasunduan sa awtorisasyon, mga resolusyon ng board, at mga pahayag sa pagsunod.",
+        "docs": {
+          "authorization": {
+            "title": "Kasunduan sa Pagpapahintulot CHN CO_BVI 2025 v2025.10",
+            "description": "Kasunduan sa pagpapahintulot sa pagitan ng mga onshore na entity ng China at BVI holding company para sa pamamahala at pagpapatakbo ng asset."
+          },
+          "boardResolution": {
+            "title": "Board Resolution CHN CO_BVI 2025 v2025.10",
+            "description": "Opisyal na resolusyon ng board mula sa mga onshore na entity ng China na nagpapahintulot sa mga operasyon ng BVI at mga aktibidad sa pamamahala ng asset."
+          },
+          "compliance": {
+            "title": "Pahayag ng Pagsunod CHN CO_BVI 2025 v2025.10",
+            "description": "Comprehensive compliance statement mula sa China onshore entity patungkol sa pagsunod sa regulasyon at mga pamantayan sa pagpapatakbo."
+          },
+          "irrevocable": {
+            "title": "Irrevocable Authorization Statement CHN CO_BVI 2025 v2025.10",
+            "description": "Irrevocable authorization statement na nagbibigay sa mga BVI entity ng buong awtoridad sa China onshore asset operations."
+          },
+          "noLitigation": {
+            "title": "Walang Litigation/Arbitration Certificate CHN CO_BVI 2025 v2025.10",
+            "description": "Opisyal na sertipiko na nagkukumpirma na walang nakabinbing paglilitis o paglilitis sa arbitrasyon para sa mga entidad sa pampang ng China."
+          },
+          "tax": {
+            "title": "Tax Registration Certificate at Tax Clearance Certificate CHN CO_BVI 2025 v2025.10",
+            "description": "Opisyal na pagpaparehistro ng buwis at mga sertipiko ng clearance mula sa mga awtoridad sa buwis ng China para sa mga onshore na entity."
+          }
+        }
+      },
+      "bvi": {
+        "title": "Offshore Holding SPV - British Virgin Islands",
+        "description": "Kumpletuhin ang legal na dokumentasyon para sa BVI offshore na may hawak na espesyal na layuning sasakyan kabilang ang mga resolusyon ng board, mga chain ng awtorisasyon, at mga pahayag sa pagsunod.",
+        "docs": {
+          "boardReauth": {
+            "title": "Board Resolution (Re-Authorization) BVI_ijet 2025 v2025.10",
+            "description": "Resolusyon ng lupon para sa muling pagpapahintulot ng mga pagpapatakbo ng BVI ijet at mga aktibidad sa pamamahala ng asset."
+          },
+          "chain": {
+            "title": "Chain of Authorization BVI_ijet 2025 v2025.10",
+            "description": "Kumpletuhin ang serye ng dokumentasyon ng awtorisasyon na nagtatatag ng daloy ng legal na awtoridad mula sa mga entidad ng BVI."
+          },
+          "compliance": {
+            "title": "Pahayag ng Pagsunod BVI_ijet ltd 2025 v2025.10",
+            "description": "Comprehensive compliance statement mula sa BVI ijet ltd patungkol sa pagsunod sa regulasyon at mga pamantayan sa pagpapatakbo."
+          },
+          "irrevocable": {
+            "title": "Irrevocable Authorization Statement BVI_ijet ltd 2025 v2025.10",
+            "description": "Irrevocable authorization statement mula sa BVI ijet ltd na nagtatatag ng permanenteng awtoridad sa pagpapatakbo."
+          },
+          "kyc": {
+            "title": "KYC at AML Documentation BVI_ijet Ltd 2025 v2025.10",
+            "description": "Kumpletuhin ang dokumentasyon ng Know Your Customer at Anti-Money Laundering para sa BVI ijet Ltd."
+          },
+          "noLitigation": {
+            "title": "Walang Litigation/Arbitration Certificate BVI_ijet ltd 2025 v2025.10",
+            "description": "Opisyal na sertipiko na nagkukumpirma na walang nakabinbing paglilitis o paglilitis sa arbitrasyon para sa BVI ijet ltd."
+          },
+          "reauth": {
+            "title": "Re-Authorization Agreement BVI Ijet ltd 2025 v2025.10",
+            "description": "Kasunduan sa muling pagpapahintulot na nagtatatag ng nabagong awtoridad sa pagpapatakbo para sa BVI Ijet ltd."
+          },
+          "revenue": {
+            "title": "Kasunduan sa Kita at Pamamahagi BVI_ijet ltd 2025 v2025.10",
+            "description": "Kasunduan sa kita at pamamahagi na nagbabalangkas ng mga mekanismo ng pagbabahagi ng kita at pamamahagi para sa BVI ijet ltd."
+          }
+        }
+      },
+      "nz": {
+        "title": "Issuer at DAO Governance SPV - New Zealand",
+        "description": "Legal na dokumentasyon para sa taga-isyu na nakabase sa New Zealand at sasakyan ng espesyal na layunin ng pamamahala ng DAO kabilang ang mga sertipiko ng pagsasama at mga kasunduan sa awtorisasyon.",
+        "docs": {
+          "coi": {
+            "title": "Certificate of Incorporation (3669875 11Nobyembre2022) v2025.10",
+            "description": "Opisyal na certificate of incorporation para sa New Zealand entity (3669875) na may petsang Nobyembre 11, 2022."
+          },
+          "chain": {
+            "title": "Chain of Authorization BVI_ijet 2025 v2025.10",
+            "description": "Chain ng dokumentasyon ng awtorisasyon na nagtatatag ng daloy ng legal na awtoridad mula sa BVI patungo sa mga entity ng New Zealand."
+          },
+          "extract": {
+            "title": "Extract ng Kumpanya (3669875 11Nobyembre2022) v2025.10",
+            "description": "Opisyal na extract ng kumpanya mula sa New Zealand Companies Office para sa entity 3669875 na may petsang Nobyembre 11, 2022."
+          },
+          "constitution": {
+            "title": "Konstitusyon ng New Zealand iJet Limited",
+            "description": "Opisyal na dokumento ng konstitusyon para sa New Zealand iJet Limited na nagtatatag ng corporate governance framework at operational guidelines."
+          },
+          "reauth": {
+            "title": "Re-Authorization Agreement BVI Ijet ltd 2025 v2025.10",
+            "description": "Kasunduan sa muling pagpapahintulot sa pagitan ng BVI at mga entity ng New Zealand na nagtatatag ng awtoridad sa pagpapatakbo."
+          }
+        }
+      },
+      "structure": {
+        "title": "Legal na Istraktura at Mga Dokumento sa Pag-verify",
+        "description": "Buod ng legal na istraktura at mga dokumento sa pag-verify kabilang ang mga sertipikadong pagsasalin at mga legal na buod.",
+        "docs": {
+          "summary": {
+            "title": "AGV Protocol – Buod ng Legal na Istraktura",
+            "description": "Buod ng kumpletong legal na istruktura na nagbabalangkas sa kumpletong corporate at legal na balangkas ng AGV Protocol."
+          },
+          "naati": {
+            "title": "NAATI Certified Translator Chinese to English Certificate",
+            "description": "Opisyal na sertipikasyon ng NAATI para sa mga serbisyo ng pagsasalin ng Chinese sa English (Certificate 3327_620583_6)."
+          },
+          "nzstii": {
+            "title": "NZSTII Certified Translator Chinese into English Certificate of Membership",
+            "description": "Opisyal na sertipiko ng membership ng NZSTII para sa mga sertipikadong serbisyo sa pagsasalin ng Chinese hanggang English."
+          }
+        }
+      }
+    }
+  },
+  "depin": {
+    "header": {
+      "title": "Pag-verify ng DePIN",
+      "subtitle": "Desentralisadong Pisikal na Infrastructure Network",
+      "description": "Comprehensive verification documentation ng physical infrastructure development ng AGV Protocol, pagpapatupad ng agrikultura, at renewable energy integration sa pamamagitan ng detalyadong visual at video na ebidensya."
+    },
+    "main": {
+      "title": "DePIN Verification Index - AGV Protocol v2025.10",
+      "description": "Comprehensive DePIN (Decentralized Physical Infrastructure Network) na dokumentasyon sa pag-verify na sumasaklaw sa pagpapaunlad ng lupa, pagpapatupad ng imprastraktura, at mga proseso ng pagsasanib ng agricultural-photovoltaic."
+    },
+    "metrics": {
+      "title": "Mga Sukatan sa Imprastraktura ng DePIN",
+      "solar": "Kapasidad ng Solar",
+      "iot": "Mga IoT Sensor",
+      "monitoring": "Real-time na Pagsubaybay",
+      "coverage": "Saklaw ng Pagpapatunay"
+    },
+    "overview": {
+      "title": "Pangkalahatang-ideya ng Imprastraktura ng DePIN",
+      "agricultural": {
+        "title": "Pang-agrikultura",
+        "desc": "Matalinong Pagsasaka at Patubig"
+      },
+      "pv": {
+        "title": "Photovoltaic",
+        "desc": "Pagbuo ng Enerhiya ng Solar"
+      },
+      "iot": {
+        "title": "IoT Network",
+        "desc": "Real-time na Pagsubaybay"
+      }
+    },
+    "sections": {
+      "landOverview": {
+        "title": "Pangkalahatang-ideya ng Lupa 土地图片",
+        "description": "Komprehensibong visual na dokumentasyon ng lugar ng lupa na nagpapakita ng mga paunang kundisyon, terrain, at heograpikal na katangian bago ang pag-unlad."
+      },
+      "leveling": {
+        "title": "Land Leveling & Fertilization 平整施肥",
+        "description": "Video na dokumentasyon ng mga proseso ng paghahanda ng lupa kabilang ang pagpapatag, paggamot sa lupa, at mga pamamaraan ng pagpapabunga."
+      },
+      "trellis": {
+        "title": "Trellis Infrastructure 格架系统",
+        "description": "Dokumentasyon ng video ng pag-install ng trellis system at pagpapaunlad ng imprastraktura para sa mga istrukturang pangsuporta sa agrikultura."
+      },
+      "irrigation": {
+        "title": "Drip Irrigation System 滴灌系统",
+        "description": "Komprehensibong dokumentasyon ng pag-install ng drip irrigation system kasama ang parehong mga larawan at video ng proseso ng pagpapatupad."
+      },
+      "plantation": {
+        "title": "Dwarf Dense Plantation 矮砧密植",
+        "description": "Dokumentasyon ng dwarf dense plantation techniques kasama ang parehong mga larawan at video ng proseso ng pagtatanim."
+      },
+      "maintenance": {
+        "title": "Proteksyon at Pagpapanatili ng Halaman 植保养护",
+        "description": "Komprehensibong dokumentasyon ng mga hakbang sa proteksyon ng halaman at mga pamamaraan sa pagpapanatili kabilang ang parehong mga larawan at video."
+      },
+      "agriPv": {
+        "title": "Agri-PV Integration 园光互补",
+        "description": "Komprehensibong dokumentasyon ng pagsasanib ng agrikultura-photovoltaic kabilang ang parehong mga larawan at video ng proseso ng pag-install at pagsasama ng solar panel."
+      },
+      "onSite": {
+        "title": "Sa Site 现场",
+        "description": "Komprehensibong dokumentasyon sa site na kinabibilangan ng aerial views, horizontal views, at upward views ng project site."
+      },
+      "device": {
+        "title": "Device 设备",
+        "description": "Video documentation ng mga kagamitan at device na ginamit sa proyekto."
+      },
+      "data": {
+        "title": "Data 数据",
+        "description": "Video documentation ng mga sistema ng pagkolekta at pagsubaybay ng data."
+      }
+    }
+  },
+  "esg": {
+    "header": {
+      "title": "ESG at Real-World Asset Proof",
+      "subtitle": "Sustainability at Epekto",
+      "description": "Galugarin ang epekto sa kapaligiran ng AGV Protocol, mga hakbangin sa pagpapanatili, at real-world na pag-verify ng asset sa pamamagitan ng komprehensibong dokumentasyon."
+    },
+    "main": {
+      "title": "Ulat ng ESG at Sustainability Epekto",
+      "description": "Komprehensibong pagtatasa ng epekto sa kapaligiran ng AGV Protocol, mga hakbangin sa pagpapanatili, at pag-verify ng real-world na asset."
+    },
+    "metrics": {
+      "title": "Mga Sukatan ng Pagganap ng ESG",
+      "carbon": "Carbon Footprint Reduction",
+      "renewable": "Paggamit ng Renewable Energy",
+      "waste": "Pagbawas ng Basura",
+      "verifiedRwa": "Na-verify na Mga Asset ng RWA"
+    },
+    "verification": {
+      "title": "Real-World Asset Verification",
+      "iot": {
+        "title": "Pagsubaybay sa IoT",
+        "items": [
+          "Real-time na pagsubaybay sa asset",
+          "Mga sensor sa kapaligiran",
+          "Pagsubaybay sa paglabas ng carbon",
+          "Awtomatikong pag-uulat sa pagsunod"
+        ]
+      },
+      "process": {
+        "title": "Proseso ng Pagpapatunay",
+        "items": [
+          "Mga pag-audit ng third-party",
+          "Hindi nababago ng Blockchain",
+          "Smart contract automation",
+          "Transparent na pag-uulat"
+        ]
+      }
+    },
+    "dashboard": {
+      "title": "Carbon Impact Dashboard",
+      "co2": "Tonelada CO2 Na-save",
+      "devices": "Na-deploy ang Mga IoT Device",
+      "monitoring": "Real-time na Pagsubaybay"
+    },
+    "sections": {
+      "admin": {
+        "title": "Mga Dokumentong Pang-administratibo at Pananalapi",
+        "description": "Mahalagang legal at pinansyal na dokumentasyon para sa pagtatatag at pagsunod ng proyekto.",
+        "docs": {
+          "registration": {
+            "title": "Pagkumpirma ng Pagpaparehistro ng Enterprise Investment Project sa Shaanxi Province",
+            "description": "Opisyal na kumpirmasyon sa pagpaparehistro para sa proyekto ng pamumuhunan sa negosyo sa Lalawigan ng Shaanxi."
+          },
+          "lease": {
+            "title": "Kontrata sa Pag-upa ng Lupa",
+            "description": "Legal na dokumentasyon para sa mga kasunduan sa pagpapaupa ng lupa at mga karapatan sa ari-arian."
+          },
+          "jv": {
+            "title": "Government Agricultural Photovoltaic Joint Venture Agreement",
+            "description": "Opisyal na kasunduan sa joint venture sa pagitan ng gobyerno at mga kasosyo sa proyektong photovoltaic sa agrikultura."
+          },
+          "dd": {
+            "title": "Ulat sa Pinansyal na Due Diligence",
+            "description": "Comprehensive financial analysis at due diligence assessment ng proyekto."
+          }
+        }
+      },
+      "yichuan": {
+        "title": "Yichuan County 6.42 MW Orchard + Solar Hybrid Project (Mga Pag-apruba at Pagsusuri)",
+        "description": "Kumpletong hanay ng mga pag-apruba ng pamahalaan at mga pagsusuri sa regulasyon para sa proyektong solar hybrid ng Yichuan County.",
+        "docs": {
+          "landTransfer": {
+            "title": "Sertipiko ng Paglipat ng Lupa ng Bayan ng Yunyan",
+            "description": "Opisyal na sertipiko ng paglilipat ng lupa mula sa mga awtoridad ng Bayan ng Yunyan."
+          },
+          "edb": {
+            "title": "Pag-apruba ng Economic Development Bureau",
+            "description": "Dokumentasyon ng pag-apruba mula sa Economic Development Bureau."
+          },
+          "nrb": {
+            "title": "Pag-apruba ng Kawanihan ng Likas na Yaman",
+            "description": "Opisyal na pag-apruba mula sa Natural Resources Bureau para sa paggamit ng lupa at pagsunod sa kapaligiran."
+          },
+          "coal": {
+            "title": "Pag-apruba sa Lupa ng Opisina ng Pagbabawas ng Coal County ng Yichuan",
+            "description": "Dokumentasyon ng pag-apruba ng lupa mula sa Yichuan County Coal Reduction Office."
+          },
+          "edbOpinion": {
+            "title": "Opinyon ng Kawanihan sa Pagpapaunlad ng Ekonomiya ng Yichuan County",
+            "description": "Opisyal na opinyon at rekomendasyon mula sa Yichuan County Economic Development Bureau."
+          },
+          "drb": {
+            "title": "Pag-apruba ng Kawanihan sa Pagpapaunlad at Reporma ng Yichuan County",
+            "description": "Dokumentasyon ng pag-apruba mula sa Yichuan County Development and Reform Bureau."
+          },
+          "forestry": {
+            "title": "Pag-apruba ng Yichuan County Forestry Bureau",
+            "description": "Pag-apruba ng kagubatan at kapaligiran mula sa Yichuan County Forestry Bureau."
+          },
+          "epb": {
+            "title": "Opinyon ng Yichuan County Environmental Protection Bureau",
+            "description": "Pagtatasa at opinyon ng epekto sa kapaligiran mula sa Environmental Protection Bureau."
+          }
+        }
+      },
+      "zhongnan": {
+        "title": "Mga Kasunduan sa Kooperasyon ng Zhongnan Group",
+        "description": "Mga kasunduan sa madiskarteng partnership at dokumentasyon ng pakikipagtulungan sa Zhongnan Group.",
+        "docs": {
+          "energy": {
+            "title": "Zhongnan Group Energy Cooperation Agreement",
+            "description": "Kasunduan sa kooperasyong madiskarteng enerhiya sa pagitan ng AGV Protocol at Zhongnan Group."
+          },
+          "yichuan": {
+            "title": "Kasunduan sa Kooperasyon ng Zhongnan Group Yichuan",
+            "description": "Partikular na kasunduan sa pakikipagtulungan para sa proyekto ng Yichuan County kasama ang Zhongnan Group."
+          },
+          "supplement": {
+            "title": "Karagdagang Kasunduan",
+            "description": "Mga karagdagang tuntunin at kundisyon na nagdaragdag sa mga pangunahing kasunduan sa pakikipagtulungan."
+          }
+        }
+      }
+    }
+  },
+  "nda": {
+    "form": {
+      "title": "Form ng Kahilingan ng NDA",
+      "subtitle": "Humiling ng Kasunduan sa Hindi Pagbubunyag",
+      "description": "Mangyaring punan ang form sa ibaba upang humiling ng isang NDA. Ipapadala namin ang kasunduan sa iyong email address.",
+      "name": "Buong Pangalan",
+      "organization": "Organisasyon/Kumpanya",
+      "email": "Email Address",
+      "submit": "Humiling ng NDA",
+      "sending": "Nagsusumite ng Kahilingan...",
+      "success": "salamat po! Ang iyong kahilingan sa NDA ay matagumpay na naisumite. Ipapadala namin ang dokumento ng NDA sa iyong email address sa ilang sandali.",
+      "error": "Nabigong isumite ang kahilingan sa NDA",
+      "networkError": "Error sa network. Pakisubukang muli.",
+      "namePlaceholder": "Ilagay ang iyong buong pangalan",
+      "titlePlaceholder": "hal., CEO, Investment Manager, Analyst",
+      "organizationPlaceholder": "Ilagay ang pangalan ng iyong kumpanya o organisasyon",
+      "emailPlaceholder": "Ilagay ang iyong email address",
+      "emailNote": "Ipapadala ang NDA sa email address na ito",
+      "disclaimer": "Sa pamamagitan ng pagsusumite ng form na ito, sumasang-ayon kang tanggapin ang dokumento ng NDA at nauunawaan na ipapadala ito sa ibinigay na email address.",
+      "jobTitle": "Pamagat ng Trabaho"
+    },
+    "title": "Kahilingan ng NDA",
+    "subtitle": "Humiling ng Kasunduan sa Hindi Pagbubunyag",
+    "description": "Humiling ng access sa kumpidensyal na impormasyon ng AGV Protocol sa pamamagitan ng pagsusumite ng form ng kahilingan sa NDA."
+  },
+  "salesMarketing": {
+    "header": {
+      "title": "Sales at Marketing",
+      "subtitle": "Diskarte sa Pagbebenta at Pakikipagsosyo",
+      "description": "Galugarin ang mga diskarte sa pagbebenta ng AGV Protocol, pagpoposisyon sa merkado, at mga madiskarteng pakikipagsosyo sa pamamagitan ng komprehensibong dokumentasyon."
+    },
+    "mainDoc": {
+      "title": "Timeline ng Produkto at Mga Sipi sa Whitepaper v2025.10",
+      "description": "Ang komprehensibong timeline ng produkto at mga sipi ng whitepaper na nagpapakita ng aming roadmap at pananaw para sa renewable energy economy na pinapagana ng AI."
+    },
+    "metrics": {
+      "title": "Mga Sukatan sa Pagganap ng Benta",
+      "pipeline": "Sales Pipeline",
+      "partners": "Mga Madiskarteng Kasosyo",
+      "satisfaction": "Kasiyahan ng Kliyente",
+      "support": "Magagamit ang Suporta"
+    },
+    "strategy": {
+      "market": {
+        "title": "Pagpasok ng Market",
+        "desc": "Pag-target sa mga institusyonal na mamumuhunan at estratehikong kasosyo sa sektor ng nababagong enerhiya"
+      },
+      "growth": {
+        "title": "Diskarte sa Paglago",
+        "desc": "Pagpapalawak ng pag-abot sa merkado sa pamamagitan ng mga partnership at direct sales channel"
+      },
+      "partnerships": {
+        "title": "Mga Madiskarteng Pakikipagsosyo",
+        "desc": "Bumuo ng mga pangmatagalang relasyon sa mga pangunahing manlalaro at mamumuhunan sa industriya"
+      },
+      "title": "Pangkalahatang-ideya ng Diskarte sa Pagbebenta"
+    },
+    "sections": {
+      "mous": {
+        "docs": {
+          "pusu": {
+            "title": "朴素资本管理有限公司投资意向书",
+            "description": "Investment letter of intent mula sa Pu Su Capital Management Co., Ltd. na nagpapahayag ng interes sa mga pagkakataon sa pamumuhunan ng AGV Protocol."
+          },
+          "guopeng": {
+            "title": "國鵬投資管理有限公司戰略合作意向書",
+            "description": "Liham ng layunin ng madiskarteng pakikipagtulungan mula sa Guo Peng Investment Management Co., Ltd. na binabalangkas ang balangkas ng pakikipagtulungan at mga tuntunin sa pakikipagtulungan."
+          }
+        },
+        "title": "Memorandum of Understanding (MOUs)",
+        "description": "Mga kasunduan sa strategic partnership at investment letter of intent mula sa mga pangunahing institusyonal na kasosyo."
+      }
+    }
+  },
+  "managementTeam": {
+    "header": {
+      "title": "Koponan ng Pamamahala",
+      "subtitle": "Pamumuno at Pamamahala",
+      "description": "Kilalanin ang pangkat ng pamumuno ng AGV Protocol at tuklasin ang aming istruktura ng pamamahala sa pamamagitan ng komprehensibong dokumentasyon."
+    },
+    "mainDoc": {
+      "title": "Pangkalahatang-ideya ng AGV Protocol Global Management and Governance 2025",
+      "description": "Komprehensibong pangkalahatang-ideya ng pandaigdigang istruktura ng pamamahala at balangkas ng pamamahala ng AGV Protocol, kabilang ang mga tungkulin sa pamumuno at istruktura ng organisasyon."
+    },
+    "expertise": {
+      "title": "Dalubhasa sa Koponan",
+      "years": "Taon na Karanasan",
+      "projects": "Mga Nakumpletong Proyekto",
+      "managed": "Pinamamahalaan ang mga Asset",
+      "countries": "Mga Bansang Pinaglingkuran"
+    },
+    "leadership": {
+      "executive": {
+        "title": "Executive Team",
+        "desc": "Ang nakatataas na pamumuno ay nagtutulak ng estratehikong direksyon at kahusayan sa pagpapatakbo"
+      },
+      "board": {
+        "title": "Lupon ng mga Direktor",
+        "desc": "Mga independiyenteng miyembro ng lupon na nagbibigay ng pamamahala at pangangasiwa"
+      },
+      "advisory": {
+        "title": "Lupon ng Tagapayo",
+        "desc": "Mga eksperto sa industriya na nagbibigay ng madiskarteng gabay at mga insight sa merkado"
+      },
+      "title": "Istruktura ng Pamumuno"
+    },
+    "principles": {
+      "transparency": {
+        "title": "Transparency",
+        "desc": "Buksan ang komunikasyon at malinaw na pag-uulat sa lahat ng stakeholder"
+      },
+      "accountability": {
+        "title": "Pananagutan",
+        "desc": "Malinaw na responsibilidad at mga balangkas ng pagsukat ng pagganap"
+      },
+      "innovation": {
+        "title": "Inobasyon",
+        "desc": "Patuloy na pagpapabuti at pag-unlad ng teknolohiya"
+      },
+      "sustainability": {
+        "title": "Sustainability",
+        "desc": "Pangmatagalang paglikha ng halaga at responsibilidad sa kapaligiran"
+      },
+      "title": "Mga Prinsipyo ng Pamamahala"
+    }
+  }
+}

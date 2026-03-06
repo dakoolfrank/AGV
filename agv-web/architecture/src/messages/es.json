@@ -1,0 +1,225 @@
+{
+  "header": {
+    "brand": "PreGVT",
+    "protocolName": "Protocolo AGV",
+    "languageLabel": "Idioma",
+    "languageAriaLabel": "Seleccionar idioma"
+  },
+  "hero": {
+    "title": {
+      "main": "Arquitectura del token AGV",
+      "highlight": "Sistema de tokens diseñado para el futuro"
+    },
+    "description": "Una estructura limpia y segura de 2 tokens: preGVT para preventa y adquisición de derechos, y GVT como el token central del ecosistema que impulsa la gobernanza, el staking y la integración de activos del mundo real.",
+    "primaryCta": "Ver la arquitectura del token",
+    "secondaryCta": "Leer Tokenomics",
+    "tokenomicsHref": "#",
+    "icons": {
+      "pregvtAlt": "PreGVT",
+      "gvtAlt": "GVT"
+    }
+  },
+  "oneChain": {
+    "heading": {
+      "prefix": "Una cadena. Cero confusión.",
+      "highlight": "Máxima seguridad."
+    },
+    "description": "AGV se lanza exclusivamente en la cadena BNB: sin puentes, sin suministros duplicados ni riesgos entre cadenas. Esto garantiza auditorías sencillas, una experiencia de usuario segura y una economía de tokens limpia.",
+    "imageAlt": "Cadena BNB",
+    "features": [
+      "Ejecución rápida",
+      "Mínima complejidad de auditoría",
+      "Ruta de listado más limpia",
+      "Verificación sencilla del suministro en cadena",
+      "Arquitectura mínima y predecible"
+    ]
+  },
+  "twoToken": {
+    "heading": {
+      "prefix": "Un edificio construido especialmente para este propósito,",
+      "highlight": "Arquitectura de dos tokens"
+    },
+    "pregvt": {
+      "title": "PreGVT",
+      "subtitle": "Preventa + token de recompensa anticipada",
+      "bullets": [
+        "No transferible",
+        "Se convierte a GVT en TGE",
+        "Adquisición de derechos ejecutada mediante contratos de depósito en garantía",
+        "Ya implementado en BNB"
+      ],
+      "callout": "Bloqueado hasta TGE",
+      "imageAlt": "PreGVT"
+    },
+    "gvt": {
+      "title": "GVT",
+      "subtitle": "Token principal del ecosistema comercializable",
+      "bullets": [
+        "Totalmente negociable en TGE",
+        "Suministro canónico de cadena única",
+        "Gobernanza + staking + acceso a RWA"
+      ],
+      "callout": "El activo principal del AGV.",
+      "imageAlt": "GVT"
+    }
+  },
+  "liquidity": {
+    "heading": {
+      "prefix": "Una estrategia de liquidez por fases para",
+      "highlight": "Descubrimiento de precios limpios"
+    },
+    "phase1": {
+      "title": "Fase 1 — Pre-TGE",
+      "description": "PreGVT–USDT LP en PancakeSwap.",
+      "purposeTitle": "Objetivo",
+      "bullets": [
+        "Referencia de precios",
+        "Visibilidad de la billetera y el panel"
+      ]
+    },
+    "phase2": {
+      "title": "Fase 2 — TGE",
+      "description": "La liquidez de GVT se pone en marcha.",
+      "purposeTitle": "Incluye",
+      "bullets": [
+        "Apoyo a los creadores de mercado",
+        "Conversión completa de preGVT a GVT",
+        "Divulgación del suministro circulante en cadena"
+      ]
+    }
+  },
+  "vesting": {
+    "heading": {
+      "prefix": "De PreGVT a GVT —",
+      "highlight": "Adquisición de derechos totalmente transparente"
+    },
+    "description": "Su preGVT se transforma automáticamente en GVT a través de un contrato de adquisición de derechos seguro en TGE.",
+    "steps": [
+      "Tienes preGVT",
+      "preGVT pasa a contrato de adquisición de derechos",
+      "Duración de la adquisición de derechos: 9-12 meses",
+      "GVT se desbloquea gradualmente",
+      "Recibes GVT líquido"
+    ]
+  },
+  "security": {
+    "heading": {
+      "prefix": "Seguridad en el",
+      "highlight": "Núcleo del sistema"
+    },
+    "points": [
+      "Safe Multisig controla toda la acuñación",
+      "Una cadena = menor superficie de ataque",
+      "Ejecución de la adquisición de derechos basada en depósito en garantía",
+      "Contratos no actualizables para estabilidad",
+      "Funciones de emergencia pausables",
+      "Gobernanza de bloqueo de tiempo opcional"
+    ]
+  },
+  "builtForNext": {
+    "heading": {
+      "prefix": "Arquitectura de token AGV: diseñada para",
+      "highlight": "¿Qué viene después?"
+    },
+    "description": "Su preGVT se transforma automáticamente en GVT a través de un contrato de adquisición de derechos seguro en TGE.",
+    "items": [
+      "Auditorías más rápidas",
+      "Menor riesgo de seguridad",
+      "Suministro transparente",
+      "Comportamiento predecible del token",
+      "Amigable con el intercambio",
+      "Documentación limpia",
+      "Fundación para una posterior expansión multicadena"
+    ]
+  },
+  "tokenConversion": {
+    "heading": "Diagrama de la arquitectura de conversión de tokens AGV",
+    "pregvt": {
+      "title": "PreGVT",
+      "badge": "Token de preventa",
+      "propertiesTitle": "Propiedades",
+      "bullets": [
+        "No transferible",
+        "Se convierte a GVT en TGE",
+        "Adquisición de derechos ejecutada mediante contratos de depósito en garantía",
+        "Ya implementado en BNB"
+      ]
+    },
+    "gvt": {
+      "title": "GVT",
+      "badge": "Token principal",
+      "propertiesTitle": "Propiedades",
+      "bullets": [
+        "Totalmente negociable en TGE",
+        "Suministro canónico de cadena única",
+        "Gobernanza + staking + acceso a RWA"
+      ]
+    },
+    "callouts": {
+      "pause": {
+        "title": "Función de pausa",
+        "description": "Parada de emergencia o detención"
+      },
+      "timelock": {
+        "title": "Bloqueo de tiempo (opcional)",
+        "description": "Retrasar las acciones críticas de gobernanza para la transparencia"
+      },
+      "noProxy": {
+        "title": "No hay servidores proxy actualizables",
+        "description": "Para reducir la superficie de ataque"
+      }
+    },
+    "diagramTitle": "GENERACIÓN/CONVERSIÓN DE TOKEN",
+    "diagramLabels": {
+      "from": "PreGVT",
+      "to": "GVT"
+    }
+  },
+  "footer": {
+    "brand": "Protocolo PreGVT",
+    "tagline": "Plataforma de tokens digitales",
+    "description": "El primer token digital PreGVT compatible del mundo, un producto financiero innovador basado en la tecnología blockchain.",
+    "featureLabels": [
+      "Seguro",
+      "Rápido",
+      "Multicadena"
+    ],
+    "sections": {
+      "product": {
+        "title": "Productos",
+        "links": {
+          "nftMinting": "Acuñación de NFT",
+          "kolProgram": "Programa KOL",
+          "analytics": "Analítica"
+        }
+      },
+      "company": {
+        "title": "Compañía",
+        "links": {
+          "aboutUs": "Sobre nosotros",
+          "careers": "Carreras",
+          "press": "Prensa",
+          "blogs": "Blogs"
+        }
+      },
+      "support": {
+        "title": "Apoyo",
+        "links": {
+          "helpCenter": "Centro de ayuda",
+          "documentation": "Documentación",
+          "apiReference": "Referencia de API",
+          "contactSupport": "Contactar con soporte técnico"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "links": {
+          "privacyPolicy": "política de privacidad",
+          "termsOfService": "Condiciones de servicio",
+          "cookiePolicy": "Política de cookies",
+          "gdpr": "RGPD"
+        }
+      }
+    }
+  }
+}

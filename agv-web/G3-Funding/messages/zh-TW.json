@@ -1,0 +1,874 @@
+{
+  "common": {
+    "loading": "載入中...",
+    "error": "錯誤",
+    "success": "成功",
+    "submit": "提交",
+    "cancel": "取消",
+    "save": "儲存",
+    "edit": "編輯",
+    "delete": "刪除",
+    "back": "返回",
+    "next": "下一步",
+    "previous": "上一步",
+    "close": "關閉",
+    "confirm": "確認",
+    "required": "必填",
+    "optional": "可選"
+  },
+  "navigation": {
+    "home": "首頁",
+    "about": "關於",
+    "contact": "聯絡",
+    "community": "社群",
+    "fund": "基金",
+    "applications": "申請",
+    "admin": "管理"
+  },
+  "contributor": {
+    "title": "貢獻者申請",
+    "subtitle": "作為貢獻者加入 G3 基金並幫助建立 RWA 社區",
+    "tier": {
+      "airdrop_hunter": {
+        "name": "空投獵人",
+        "description": "社群成員的入門層級",
+        "requirements": "無最低要求",
+        "benefits": "基本社區訪問、空投通知"
+      },
+      "contributor": {
+        "name": "撰稿人",
+        "description": "活躍的社區貢獻者",
+        "requirements": "至少一個頻道有 1K-10K 名粉絲",
+        "benefits": "佣金、培訓、內容支持"
+      },
+      "micro_kol": {
+        "name": "微型KOL",
+        "description": "有影響力的社區成員",
+        "requirements": "10K-100K 粉絲 + 穩定的表現",
+        "benefits": "更高的佣金、代幣激勵、合作機會"
+      },
+      "fund_partner": {
+        "name": "基金合夥人",
+        "description": "具有重大影響力的策略夥伴",
+        "requirements": "10萬+粉絲+卓越表現+策略價值",
+        "benefits": "最大回報、潛在股權參與、策略投入"
+      }
+    },
+    "steps": {
+      "identity": {
+        "title": "身分與聯絡方式",
+        "description": "基本資訊及聯絡方式"
+      },
+      "channels": {
+        "title": "管道和指標",
+        "description": "社群媒體和內容管道"
+      },
+      "role": {
+        "title": "角色和可用性",
+        "description": "您的角色和可用性"
+      },
+      "performance": {
+        "title": "績效關鍵績效指標",
+        "description": "績效目標和指標"
+      },
+      "rewards": {
+        "title": "獎勵與薪酬",
+        "description": "付款偏好和詳細信息"
+      },
+      "portfolio": {
+        "title": "投資組合和業績記錄",
+        "description": "先前的工作和經驗"
+      },
+      "wallets": {
+        "title": "錢包和驗證",
+        "description": "錢包地址和驗證"
+      },
+      "compliance": {
+        "title": "社區與合規",
+        "description": "協議與合規"
+      }
+    },
+    "form": {
+      "displayName": "顯示名稱",
+      "email": "電子郵件",
+      "countryRegion": "國家/地區",
+      "languages": "語言",
+      "riskTermsConsent": "風險/條款同意",
+      "riskTermsText": "我承認沒有保證的回報，這是一項社區倡議，我了解反詐欺政策和地區限制。",
+      "platform": "平台",
+      "url": "網址",
+      "followers": "追蹤者",
+      "avgViews30d": "平均觀看次數（30 天）",
+      "audienceTop3Geos": "觀眾最多的 3 個地區",
+      "contentFocus": "內容焦點",
+      "addChannel": "新增頻道",
+      "removeChannel": "消除",
+      "channelNumber": "頻道 {number}",
+      "noChannels": "尚未新增頻道。點擊「新增頻道」即可開始。",
+      "manualVerification": "手動驗證：提交後，我們的管理團隊將手動驗證您的社群媒體管道。",
+      "manualVerificationRequired": "需要手動驗證",
+      "manualVerificationText": "對於{tier}等級，您的社群媒體頻道提交後將由我們的管理團隊進行手動驗證。請確保所有頻道資訊準確且完整。",
+      "stepValidation": "請先填寫「{step}」中的所有必填字段，然後再繼續。",
+      "stepValidationWarning": "⚠️ 請填寫所有標有 * 的必填字段，然後再繼續",
+      "submitting": "正在提交...",
+      "submitApplication": "提交申請",
+      "applicationSubmitted": "申請提交成功！",
+      "applicationError": "提交申請失敗，請重試。",
+      "validationWarning": "⚠️ 請填寫所有標有 * 的必填字段，然後再繼續",
+      "stepValidationError": "請先填寫「{step}」中的所有必填字段，然後再繼續。",
+      "allStepsValidationError": "請先填寫「{step}」中的所有必填字段，然後再繼續。",
+      "fileUploadText": "點擊上傳或拖放",
+      "fileUploadTypes": ".pdf、.png、.jpg、.jpeg（每個最大 20MB，最多 5 個檔案）",
+      "websitePlaceholder": "https://example.com"
+    }
+  },
+  "institutional": {
+    "title": "機構申請",
+    "subtitle": "以機構夥伴身分加入G3基金",
+    "steps": {
+      "purpose": {
+        "title": "目的與適合性",
+        "description": "告訴我們您的合作目標"
+      },
+      "organization": {
+        "title": "組織簡介",
+        "description": "公司資訊和 KYB 詳細信息"
+      },
+      "contacts": {
+        "title": "聯絡方式",
+        "description": "主要人員及聯絡方式"
+      },
+      "partnership": {
+        "title": "合作模式",
+        "description": "具體合作細節"
+      },
+      "geography": {
+        "title": "地理和受眾",
+        "description": "目標市場和受眾"
+      },
+      "wallets": {
+        "title": "錢包和支付",
+        "description": "付款偏好和詳細信息"
+      },
+      "data": {
+        "title": "數據與合規性",
+        "description": "報告和合規要求"
+      },
+      "brand": {
+        "title": "品牌與法律",
+        "description": "品牌使用和法律確認"
+      }
+    },
+    "form": {
+      "submitting": "正在提交...",
+      "submitApplication": "提交申請",
+      "primaryIntent": "主要目的（選擇所有適用項）",
+      "whatYouWantToGain": "您希望獲得什麼（選擇所有適用項）",
+      "howOrgSupportsRWA": "您的組織目前如何支援 RWA？",
+      "howOrgSupportsRWAPlaceholder": "描述您目前的 RWA 計劃、投資或合作夥伴關係…",
+      "rwaVerticals": "哪些 RWA 垂直產業適用於您的組織？",
+      "otherVertical": "請指定其他 RWA 垂直行業",
+      "otherVerticalPlaceholder": "描述您的其他 RWA 垂直...",
+      "legalEntityName": "法人實體名稱",
+      "jurisdiction": "公司註冊地",
+      "jurisdictionPlaceholder": "例如特拉華州、新加坡等。",
+      "registrationNumber": "註冊/公司編號",
+      "website": "網站",
+      "registeredAddress": "註冊地址",
+      "organizationType": "組織類型",
+      "otherOrganizationType": "請指定組織類型",
+      "otherOrganizationTypePlaceholder": "描述您的組織類型...",
+      "regulatoryPermissions": "監理許可證/執照",
+      "regulatoryPermissionsPlaceholder": "描述任何監管許可或執照…",
+      "briefHistory": "簡史與資產管理規模/資源",
+      "briefHistoryPlaceholder": "提供您的組織和 AUM/資源的簡要歷史...",
+      "regulatoryDocuments": "監管文件",
+      "primaryContactName": "主要聯絡人姓名",
+      "primaryContactTitle": "主要聯絡人職務",
+      "primaryContactEmail": "主要聯絡人電子郵件",
+      "primaryContactPhone": "主要聯絡電話",
+      "complianceContactName": "合規聯絡人姓名",
+      "complianceContactEmail": "合規聯絡電子郵件",
+      "brandPrContactName": "品牌/公關聯絡人姓名",
+      "brandPrContactEmail": "品牌/公關聯絡信箱",
+      "options": {
+        "advocacyPartner": "倡議夥伴",
+        "financialSupport": "財政支持",
+        "tokenContribution": "代幣貢獻",
+        "strategicPartner": "戰略合作夥伴",
+        "userGrowth": "用戶成長",
+        "resourceAccess": "資源訪問",
+        "educationNarrative": "教育與敘事",
+        "brandReputation": "品牌與聲譽",
+        "longTermLeverage": "長期槓桿",
+        "energy": "活力",
+        "agriculture": "農業",
+        "realEstate": "房地產",
+        "carbonEsg": "碳/ESG",
+        "supplyChain": "供應鏈",
+        "other": "其他",
+        "exchange": "交換",
+        "fund": "基金",
+        "assetOwnerOriginator": "資產所有者/發起人",
+        "technologyProvider": "技術提供者",
+        "ngoAlliance": "非政府組織/聯盟",
+        "corporate": "公司的"
+      },
+      "validationWarning": "⚠️ 請填寫所有標有 * 的必填字段，然後再繼續",
+      "stepValidationError": "請先填寫「{step}」中的所有必填字段，然後再繼續。",
+      "allStepsValidationError": "請先填寫「{step}」中的所有必填字段，然後再繼續。",
+      "fileUploadText": "點擊上傳或拖放",
+      "fileUploadTypes": ".pdf、.png、.jpg、.jpeg（每個最大 20MB，最多 5 個檔案）",
+      "websitePlaceholder": "https://example.com",
+      "settlementPreference": "定居優先權",
+      "bank": "銀行",
+      "crypto": "加密",
+      "walletAddresses": "錢包地址",
+      "addWallet": "添加錢包",
+      "chainPlaceholder": "鏈（例如以太坊、BSC）",
+      "addressPlaceholder": "錢包地址",
+      "removeWallet": "消除",
+      "complianceConstraints": "合規性約束",
+      "complianceConstraintsPlaceholder": "任何特定的合規要求或限制...",
+      "consentToOnChainVerification": "同意鏈上驗證",
+      "consentToOnChainVerificationText": "我同意對我的組織的憑證和活動進行鏈上驗證。",
+      "preferredReportingCadence": "首選報告節奏",
+      "monthly": "每月",
+      "quarterly": "季刊",
+      "confidentialityLevel": "保密等級",
+      "public": "民眾",
+      "partnersOnly": "僅限合作夥伴",
+      "ndaRequired": "需要保密協議",
+      "riskDisclosureAcknowledged": "已確認風險揭露",
+      "riskDisclosureAcknowledgedText": "我確認我已閱讀並瞭解風險揭露文件。",
+      "termsPrivacyConsent": "條款和隱私權同意",
+      "termsPrivacyConsentText": "我同意服務條款和隱私權政策。"
+    }
+  },
+  "footer": {
+    "companyName": "G3基金",
+    "tagline": "RWA KOL孵化平台",
+    "description": "首個RWA原生KOL孵化基金。透過代幣化合作夥伴關係和長期激勵機制，將社群轉變為資產化成長引擎。",
+    "features": {
+      "secure": "安全可信",
+      "fast": "閃電快速",
+      "multichain": "多鏈"
+    },
+    "sections": {
+      "platform": {
+        "title": "平台",
+        "fundStructure": "基金結構",
+        "community": "社群",
+        "kolProgram": "KOL計劃",
+        "referralSystem": "推薦系統"
+      },
+      "resources": {
+        "title": "資源",
+        "aboutG3": "關於G3基金",
+        "rwaEducation": "RWA教育",
+        "trainingPrograms": "培訓計劃",
+        "blog": "博客"
+      },
+      "support": {
+        "title": "支援",
+        "helpCenter": "幫助中心",
+        "kolGuidelines": "KOL指南",
+        "communityRules": "社群規則",
+        "contactSupport": "聯絡支援"
+      },
+      "legal": {
+        "title": "法律",
+        "privacyPolicy": "隱私政策",
+        "termsOfService": "服務條款",
+        "cookiePolicy": "Cookie政策",
+        "gdpr": "GDPR"
+      }
+    },
+    "disclaimer": {
+      "operational": "G3基金作為社群發展倡議運營，專注於RWA教育和KOL孵化。",
+      "risk": "不保證投資回報。所有參與者應了解加密貨幣和社群參與所涉及的風險。請在參與任何計劃前查看我們的服務條款和風險披露。"
+    },
+    "copyright": "© 2024 G3基金。保留所有權利。",
+    "privacy": "隱私權政策",
+    "terms": "服務條款"
+  },
+  "home": {
+    "valuePillars": {
+      "educate": {
+        "title": "教育與推廣",
+        "description": "透過全面的教育和社區參與建立對 RWA 的認識和理解"
+      },
+      "growth": {
+        "title": "永續成長",
+        "description": "透過結構化的晉昇路徑，將空投獵手轉變為長期的 KOL 和大使"
+      },
+      "institutional": {
+        "title": "機構對接",
+        "description": "為交易所、基金和資產所有者提供真實採用和可驗證的用戶牽引力"
+      }
+    },
+    "mission": {
+      "title": "使命",
+      "subtitle": "加密貨幣的下一個萬億美元浪潮是現實世界資產（RWA）。",
+      "description": "華爾街已推出風險加權資產投資產品。香港和新加坡已開放風險加權資產的監管窗口。全球用戶都希望獲得有資產支持的產品，而不是受炒作驅動的加密貨幣。",
+      "role": {
+        "title": "我們的角色",
+        "description": "G3 基金是唯一將 RWA 教育、社區發展和機構支持融入永續框架的平台。"
+      }
+    },
+    "valueProposition": {
+      "title": "價值主張",
+      "description": "三大核心支柱輔助 G3 Fund 成為領先的 RWA 貢獻者平台"
+    },
+    "responsibility": {
+      "title": "責任召喚",
+      "subtitle": "每個金融創新時代都需要願意為未來承擔責任的領導者，而不僅僅是從中獲利。",
+      "description": "如今，現實世界資產（RWA）已不再是一個概念——它們是下一個萬億美元的轉型：",
+      "points": {
+        "wallStreet": {
+          "title": "華爾街認可",
+          "description": "華爾街已宣布 RWA 為一種新的資產類別"
+        },
+        "tokenization": {
+          "title": "全球代幣化",
+          "description": "全球資產所有者正在將能源、碳、房地產和供應鏈代幣化"
+        },
+        "regulatory": {
+          "title": "監管進展",
+          "description": "香港和新加坡已打開監管大門"
+        },
+        "demand": {
+          "title": "用戶需求",
+          "description": "用戶要求安全性和可信度：由真實資產支持的加密，而不是空頭承諾"
+        }
+      }
+    },
+    "institutions": {
+      "title": "為什麼機構不能忽視這一點？",
+      "subtitle": "如果沒有領導力，RWA 的採用將會緩慢、分散且容易被誤解。當今的機構面臨著：",
+      "points": {
+        "compliance": {
+          "title": "合規風險",
+          "description": "行業需要可信的框架，而不是噪音"
+        },
+        "voice": {
+          "title": "聲音缺口",
+          "description": "資產和資本缺乏觸達人們的網絡"
+        },
+        "marketing": {
+          "title": "低效營銷",
+          "description": "一次性推廣沒有複合效應"
+        },
+        "proof": {
+          "title": "缺乏證明",
+          "description": "沒有可信數據向監管機構或LP展示"
+        }
+      }
+    },
+    "g3Mission": {
+      "title": "G3基金的使命",
+      "subtitle": "G3 基金並非為某個計畫而設立，而是為整個 RWA 產業而設立。",
+      "points": {
+        "influence": {
+          "title": "負責任的影響",
+          "description": "賦能頂級KOL負責任地運用其影響力，擴大真相，而非炒作"
+        },
+        "education": {
+          "title": "教育網絡",
+          "description": "建設全球教育和推廣網絡"
+        },
+        "incubation": {
+          "title": "全球 RWA 孵化",
+          "description": "全球首個 RWA 貢獻者孵化基金"
+        },
+        "growth": {
+          "title": "可驗證成長",
+          "description": "為機構提供可驗證的採用數據和永續成長"
+        },
+        "community": {
+          "title": "社群轉型",
+          "description": "尊重草根社群（空投獵人、OG）並將其轉化為合作夥伴和微KOL"
+        }
+      }
+    },
+    "operatingPrinciples": {
+      "title": "我們的營運原則",
+      "dualPathways": {
+        "title": "雙路徑",
+        "description": "草根 → 貢獻者；影響者 → 合作夥伴"
+      },
+      "compliance": {
+        "title": "透明度與合規",
+        "description": "鏈上驗證、公共儀表板、定期報告"
+      },
+      "incentive": {
+        "title": "激勵與價值綁定",
+        "description": "結構化、長期和基於績效"
+      },
+      "noOneLeft": {
+        "title": "不落下任何人",
+        "description": "從小的貢獻者到主要基金，每個參與者都有角色和責任"
+      }
+    },
+    "participants": {
+      "title": "當前參與者",
+      "technology": {
+        "title": "技術合作夥伴",
+        "description": "物聯網、預言機、區塊鏈團隊"
+      },
+      "governance": {
+        "title": "治理",
+        "description": "紐西蘭永續倡議信託"
+      },
+      "agv": {
+        "title": "AGV協議",
+        "description": "DePIN + RWA 主幹"
+      },
+      "community": {
+        "title": "社群建設者",
+        "description": "OG、白名單、TaskOn和Zealy貢獻者"
+      },
+      "assets": {
+        "title": "資產合作夥伴",
+        "description": "亞太能源和農業企業"
+      }
+    },
+    "expansion": {
+      "title": "戰略擴張",
+      "greenFunds": {
+        "title": "全球綠色基金",
+        "description": "ESG驅動資本"
+      },
+      "exchanges": {
+        "title": "國際交易所",
+        "description": "流動性 + 市場准入"
+      },
+      "projects": {
+        "title": "更多 RWA 項目",
+        "description": "跨行業聯盟"
+      },
+      "footer": "這不是一次性的營銷，而是 RWA 行業的超級成長引擎。"
+    },
+    "institutionsJoin": {
+      "title": "機構如何加入",
+      "advocacy": {
+        "title": "倡導合作夥伴",
+        "description": "與我們並肩作戰，共同捍衛 RWA"
+      },
+      "financial": {
+        "title": "財務支持",
+        "description": "USD/USDT小額贊助"
+      },
+      "token": {
+        "title": "代幣貢獻",
+        "description": "將項目代幣分配給基金池"
+      },
+      "strategic": {
+        "title": "戰略合作夥伴",
+        "description": "品牌、優先數據和網絡訪問"
+      }
+    },
+    "institutionsGain": {
+      "title": "機構獲得什麼",
+      "left": {
+        "userGrowth": {
+          "title": "用戶成長",
+          "description": "錢包、質押和真實採用"
+        },
+        "resourceAccess": {
+          "title": "資源訪問",
+          "description": "優先連接到資產、基金和交易所"
+        }
+      },
+      "right": {
+        "education": {
+          "title": "教育與敘事",
+          "description": "由訓練有素的 KOL 大軍講述您的故事"
+        },
+        "brand": {
+          "title": "品牌與聲譽",
+          "description": "與全球首個 RWA 基金會結盟，獲得領導地位"
+        },
+        "leverage": {
+          "title": "長期槓桿",
+          "description": "複合網絡，不是一次性曝光"
+        }
+      }
+    },
+    "leadership": {
+      "title": "領導力或退位",
+      "subtitle": "RWA浪潮不可避免。世界不會問它是否會發生，而會問誰承擔了引領這場浪潮的責任。",
+      "points": {
+        "transform": {
+          "title": "轉變貢獻者",
+          "description": "我們不忽視草根貢獻者——我們將他們轉變為合作夥伴"
+        },
+        "align": {
+          "title": "統一聲音",
+          "description": "我們不會讓 KOL 浪費他們的聲音——我們讓他們與真理和教育保持一致"
+        },
+        "enable": {
+          "title": "啟用行動",
+          "description": "我們不讓機構站在一旁——我們為他們提供負責任行動的載體"
+        }
+      }
+    },
+    "cta": {
+      "title": "準備好擴大 RWA 的未來了嗎？",
+      "description": "加入全球首個 RWA 貢獻者基金。無論您是 KOL、機構還是社群成員，G3 基金生態系統都能為您提供一席之地。",
+      "contributor": "申請成為貢獻者",
+      "institution": "申請成為機構"
+    },
+    "compliance": {
+      "title": "重要合規通知",
+      "description": "G3基金是一項社區發展倡議，不保證投資回報。所有參與者應了解加密貨幣及社區參與所涉及的風險。參與前，請仔細閱讀我們的服務條款和風險揭露。"
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "家",
+      "fund": "基金",
+      "community": "社群",
+      "institutions": "機構"
+    },
+    "contactUs": "聯絡我們"
+  },
+  "hero": {
+    "buttons": {
+      "contributor": "加入貢獻者",
+      "institutions": "對於機構"
+    },
+    "features": {
+      "educate": {
+        "title": "教育與擴大",
+        "description": "透過全面的教育和社區參與建立對 RWA 的認識和理解"
+      },
+      "growth": {
+        "title": "永續成長",
+        "description": "透過結構化的晉昇路徑，將空投獵手轉變為長期的 KOL 和大使"
+      },
+      "institutional": {
+        "title": "機構協調",
+        "description": "為機構提供真正的採用和可驗證的用戶吸引力"
+      }
+    },
+    "stats": {
+      "partnerKols": "合作KOL",
+      "partnerKolsDesc": "頂級影響者",
+      "smallKols": "小型KOL",
+      "smallKolsDesc": "日益壯大的影響力人物",
+      "activeUsers": "活躍用戶",
+      "activeUsersDesc": "社群成員"
+    },
+    "badge": "全球首個 RWA 貢獻者基金",
+    "title": "G3基金",
+    "subtitle": "全球首個 RWA 貢獻者基金",
+    "description": "授權 KOL、貢獻者和合作夥伴擴大現實世界資產的未來。"
+  },
+  "community": {
+    "title": "加入貢獻者",
+    "heroButton": "申請成為貢獻者",
+    "identityGrowthPath": {
+      "title": "身分成長路徑",
+      "subtitle": "空投獵手 → 貢獻者 → 微KOL → 基金合夥人",
+      "earlyBuilders": "早期加入者將永久認定為 RWA 歷史上的「首批建造者」。"
+    },
+    "steps": {
+      "airdropHunter": {
+        "title": "空投獵人",
+        "description": "開啟你的加密貨幣之旅",
+        "requirements": [
+          "儘早加入",
+          "完成驗證",
+          "參與社區"
+        ],
+        "rewards": [
+          "搶先體驗",
+          "獨家活動",
+          "直接指導"
+        ]
+      },
+      "contributor": {
+        "title": "撰稿人",
+        "description": "成為活躍的社群貢獻者",
+        "requirements": [
+          "1K-10K 粉絲",
+          "創建內容",
+          "參與社區"
+        ],
+        "rewards": [
+          "佣金獎勵",
+          "培訓項目",
+          "內容支持"
+        ]
+      },
+      "microKol": {
+        "title": "微型KOL",
+        "description": "擴大你的影響力和覆蓋範圍",
+        "requirements": [
+          "1萬至10萬名粉絲",
+          "始終如一的性能",
+          "優質內容"
+        ],
+        "rewards": [
+          "更高的佣金",
+          "代幣激勵",
+          "合作機會"
+        ]
+      },
+      "fundPartner": {
+        "title": "基金合夥人",
+        "description": "成為頂級合作夥伴",
+        "requirements": [
+          "10萬+粉絲",
+          "卓越的性能",
+          "戰略價值"
+        ],
+        "rewards": [
+          "最高獎勵",
+          "股權參與",
+          "策略投入"
+        ]
+      }
+    },
+    "labels": {
+      "step": "步",
+      "requirements": "要求：",
+      "rewards": "獎勵："
+    },
+    "incentiveMechanism": {
+      "title": "激勵機制",
+      "subtitle": "旨在實現社區長期發展和可持續回報的高級激勵結構",
+      "postToEarn": {
+        "title": "發文賺錢",
+        "description": "每一則內容都會產生獎勵",
+        "features": [
+          "內容創作獎勵",
+          "基於品質的獎金",
+          "性能指標"
+        ]
+      },
+      "inviteToEarn": {
+        "title": "邀請贏取",
+        "description": "推薦創造長期收入份額",
+        "features": [
+          "兩級佣金結構",
+          "終身收入分享",
+          "網路效應"
+        ]
+      },
+      "promotionPath": {
+        "title": "晉昇路徑",
+        "description": "更高的地位帶來更大、更持久的回報",
+        "features": [
+          "等級獎勵",
+          "經常性收入",
+          "獨家機會"
+        ]
+      },
+      "performanceBased": {
+        "title": "基於績效",
+        "description": "所有激勵措施均以績效為基礎並具有長期約束力",
+        "features": [
+          "禁止短期傾銷",
+          "長期協調",
+          "永續成長"
+        ]
+      }
+    },
+    "futureOpportunities": {
+      "title": "未來機遇",
+      "subtitle": "G3基金生態系統將透過策略合作夥伴關係和整合進行擴展",
+      "phase2": {
+        "phase": "第 2 階段",
+        "title": "加入綠色基金",
+        "description": "ESG 敘事 + 全球資本"
+      },
+      "phase3": {
+        "phase": "第 3 階段",
+        "title": "融入國際交流",
+        "description": "流動性和風險敞口"
+      },
+      "phase4": {
+        "phase": "第四階段",
+        "title": "推出更多 RWA 項目",
+        "description": "無盡的獎勵流入網絡"
+      }
+    },
+    "cta": {
+      "title": "準備好成為第一位建築師了嗎？",
+      "description": "立即加入 G3 Fund 社區，永久被認可為 RWA 歷史上的“首位建造者”",
+      "startContributor": "以貢獻者身分開始",
+      "applyInstitution": "申請機構"
+    },
+    "complianceNotice": {
+      "title": "重要通知",
+      "description": "推薦獎勵基於績效，並受社群準則約束。所有參與者必須遵守反詐欺措施和區域限制。我們不保證任何回報。參與前請查看我們的服務條款。"
+    }
+  },
+  "institutions": {
+    "title": "對於機構",
+    "subtitle": "合作夥伴關係",
+    "description": "與 G3 Fund 合作解決 RWA 採用、社群建立和可驗證使用者吸引力的製度挑戰。",
+    "heroButton": "與 G3 基金合作",
+    "challenges": {
+      "title": "制度挑戰",
+      "subtitle": "機構在 RWA 採用和社區建設方面面臨重大挑戰",
+      "userEducation": {
+        "title": "用戶教育差距",
+        "description": "RWA 很複雜；使用者無法理解 → 轉換率低"
+      },
+      "insufficientVoice": {
+        "title": "聲音不足",
+        "description": "機構擁有資產但缺乏強大的社區網絡"
+      },
+      "inefficientMarketing": {
+        "title": "行銷效率低下",
+        "description": "一次性KOL帖子成本高昂，但沒有複合效應"
+      },
+      "lackOfData": {
+        "title": "缺乏數據",
+        "description": "難以向監管機構、有限合夥人或合作夥伴展示可驗證的採用指標"
+      },
+      "complianceRisks": {
+        "title": "合規與信託風險",
+        "description": "業喧囂，機構需誠信"
+      }
+    },
+    "solution": {
+      "title": "G3基金解決方案",
+      "subtitle": "解決 RWA 採用中的機構挑戰的綜合解決方案",
+      "educationNetwork": {
+        "title": "專用 RWA 教育網絡",
+        "description": "建立完善的RWA教育推廣網絡",
+        "features": [
+          "教育內容",
+          "社區參與",
+          "專家見解"
+        ]
+      },
+      "longTermAmbassadors": {
+        "title": "長期大使",
+        "description": "將一次性參與者轉變為長期大使",
+        "features": [
+          "持續參與",
+          "品牌忠誠度",
+          "持續推廣"
+        ]
+      },
+      "verifiableData": {
+        "title": "可驗證的採用數據",
+        "description": "提供鏈上和社區數據作為採用證明",
+        "features": [
+          "鏈上指標",
+          "社區分析",
+          "績效追蹤"
+        ]
+      },
+      "governance": {
+        "title": "治理與合規",
+        "description": "在新西蘭永續發展倡議信託基金的領導下運營",
+        "features": [
+          "監理合規性",
+          "信任框架",
+          "治理結構"
+        ]
+      }
+    },
+    "corePartners": {
+      "title": "現有核心合作夥伴",
+      "subtitle": "跨技術、社區、治理和資產管理的策略合作夥伴關係",
+      "technologyTeams": {
+        "title": "技術團隊",
+        "description": "物聯網、Oracle、區塊鏈工程師"
+      },
+      "communityBuilders": {
+        "title": "社區建設者",
+        "description": "OG 用戶、TaskOn 和 Zealy 貢獻者"
+      },
+      "governance": {
+        "title": "治理",
+        "description": "紐西蘭永續發展倡議信託基金"
+      },
+      "assetPartners": {
+        "title": "資產合作夥伴",
+        "description": "亞太地區能源與減碳企業"
+      },
+      "coreSponsor": {
+        "title": "核心贊助商",
+        "description": "AGV協議"
+      }
+    },
+    "participation": {
+      "title": "參與方式",
+      "subtitle": "靈活的合作夥伴選擇，以滿足不同機構的需求和承諾水平",
+      "lightSupport": {
+        "title": "輕度支持",
+        "description": "品牌曝光、象徵性贊助",
+        "benefits": [
+          "品牌知名度",
+          "社區認可",
+          "基本支持"
+        ]
+      },
+      "mediumSupport": {
+        "title": "中等支持",
+        "description": "Token/USDT 資金池投入",
+        "benefits": [
+          "基金參與",
+          "收益分享",
+          "優先訪問"
+        ]
+      },
+      "strategicPartner": {
+        "title": "戰略合作夥伴",
+        "description": "品牌知名度+網路存取+採用數據優先",
+        "benefits": [
+          "完全網路訪問",
+          "採用數據優先級",
+          "策略投入"
+        ]
+      }
+    },
+    "cta": {
+      "title": "準備好與 G3 基金合作了嗎？",
+      "description": "透過我們全面的合作夥伴框架，與領先機構一起解決 RWA 採用挑戰",
+      "button": "與 G3 基金合作"
+    },
+    "complianceNotice": {
+      "title": "重要合規通知",
+      "description": "G3基金是一項社區發展倡議，不保證投資回報。所有參與者應了解加密貨幣及社區參與所涉及的風險。參與前，請仔細閱讀我們的服務條款和風險揭露。"
+    }
+  },
+  "fund": {
+    "title": "G3基金結構",
+    "subtitle": "即將推出",
+    "description": "我們正在打造革命性的項目。 G3基金的架構和詳細資訊即將發布。",
+    "viewInstitutions": "查看機構",
+    "joinCommunity": "加入社區",
+    "whatsComingTitle": "未來展望",
+    "whatsComingSubtitle": "預覽 G3 基金架構將包含哪些內容",
+    "preview": {
+      "tokenAllocation": {
+        "title": "代幣分配",
+        "description": "透明的分銷模式"
+      },
+      "fundBudget": {
+        "title": "基金預算",
+        "description": "營運資金詳情"
+      },
+      "kolTargets": {
+        "title": "KOL目標",
+        "description": "合作KOL規範"
+      },
+      "growthMetrics": {
+        "title": "成長指標",
+        "description": "社區規模目標"
+      }
+    },
+    "stayUpdated": {
+      "title": "保持更新",
+      "description": "搶先了解 G3 基金結構發佈時間。加入我們的社區，搶先體驗。"
+    }
+  }
+}

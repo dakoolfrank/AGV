@@ -1,0 +1,225 @@
+{
+  "header": {
+    "brand": "PreGVT",
+    "protocolName": "AGV-Protokoll",
+    "languageLabel": "Sprache",
+    "languageAriaLabel": "Sprache auswählen"
+  },
+  "hero": {
+    "title": {
+      "main": "AGV-Token-Architektur",
+      "highlight": "Tokensystem für die Zukunft"
+    },
+    "description": "Eine saubere, sichere 2-Token-Struktur: preGVT für Vorverkauf und Vesting sowie GVT als Kern-Ökosystem-Token, der Governance, Staking und die Integration realer Vermögenswerte ermöglicht.",
+    "primaryCta": "Architektur des View-Tokens",
+    "secondaryCta": "Lesen Sie Tokenomics",
+    "tokenomicsHref": "#",
+    "icons": {
+      "pregvtAlt": "PreGVT",
+      "gvtAlt": "GVT"
+    }
+  },
+  "oneChain": {
+    "heading": {
+      "prefix": "Eine Kette. Null Verwirrung.",
+      "highlight": "Maximale Sicherheit."
+    },
+    "description": "AGV startet ausschließlich auf der BNB Chain – ohne Bridges, ohne gespiegelte Angebote, ohne Cross-Chain-Risiken. Dies gewährleistet einfachste Prüfungen, höchste Benutzersicherheit und eine transparente Token-Ökonomie.",
+    "imageAlt": "BNB-Kette",
+    "features": [
+      "Schnelle Ausführung",
+      "Geringste Prüfungskomplexität",
+      "Sauberster Listing-Pfad",
+      "Einfache Lieferkettenüberprüfung",
+      "Minimale, vorhersehbare Architektur"
+    ]
+  },
+  "twoToken": {
+    "heading": {
+      "prefix": "Ein speziell dafür gebauter",
+      "highlight": "Zwei-Token-Architektur"
+    },
+    "pregvt": {
+      "title": "PreGVT",
+      "subtitle": "Vorverkauf + Frühbelohnungstoken",
+      "bullets": [
+        "Nicht übertragbar",
+        "Umrechnung in GVT bei TGE",
+        "Die Unverfallbarkeit wird durch Treuhandverträge durchgesetzt.",
+        "Bereits auf BNB im Einsatz"
+      ],
+      "callout": "Gesperrt bis TGE",
+      "imageAlt": "PreGVT"
+    },
+    "gvt": {
+      "title": "GVT",
+      "subtitle": "Haupthandelstoken des Ökosystems",
+      "bullets": [
+        "Vollständig handelbar bei TGE",
+        "kanonische Versorgung aus einer einzigen Lieferkette",
+        "Governance + Staking + RWA-Zugriff"
+      ],
+      "callout": "Das wichtigste AGV-Instrument.",
+      "imageAlt": "GVT"
+    }
+  },
+  "liquidity": {
+    "heading": {
+      "prefix": "Eine gestaffelte Liquiditätsstrategie für",
+      "highlight": "Saubere Preisfindung"
+    },
+    "phase1": {
+      "title": "Phase 1 — Vor-TGE",
+      "description": "PreGVT–USDT LP auf PancakeSwap.",
+      "purposeTitle": "Zweck",
+      "bullets": [
+        "Preisreferenz",
+        "Wallet- und Dashboard-Sichtbarkeit"
+      ]
+    },
+    "phase2": {
+      "title": "Phase 2 — TGE",
+      "description": "Die GVT-Liquidität wird aktiviert.",
+      "purposeTitle": "Beinhaltet",
+      "bullets": [
+        "Unterstützung der Marktmacher",
+        "Vollständige Umstellung von vorGVT → GVT",
+        "Offenlegung des im Umlauf befindlichen Angebots in der Blockchain"
+      ]
+    }
+  },
+  "vesting": {
+    "heading": {
+      "prefix": "Von PreGVT zu GVT —",
+      "highlight": "Vollständig transparente Weste"
+    },
+    "description": "Ihr PreGVT-Status wird bei TGE automatisch über einen sicheren Vesting-Vertrag in den GVT-Status überführt.",
+    "steps": [
+      "Sie besitzen preGVT",
+      "preGVT geht in den Vesting-Vertrag über.",
+      "Unverfallbarkeitsdauer: 9-12 Monate",
+      "GVT wird schrittweise freigegeben",
+      "Sie erhalten flüssiges GVT"
+    ]
+  },
+  "security": {
+    "heading": {
+      "prefix": "Sicherheit bei",
+      "highlight": "Kern des Systems"
+    },
+    "points": [
+      "Safe Multisig kontrolliert die gesamte Prägung.",
+      "Eine Kette = kleinere Angriffsfläche",
+      "Durchsetzung von Treuhandverhältnissen",
+      "Nicht aufrüstbare Verträge für Stabilität",
+      "Pausenfähige Notfallfunktionen",
+      "Optionale Zeitschloss-Steuerung"
+    ]
+  },
+  "builtForNext": {
+    "heading": {
+      "prefix": "AGV-Token-Architektur – Entwickelt für",
+      "highlight": "Was kommt als Nächstes?"
+    },
+    "description": "Ihr PreGVT-Status wird bei TGE automatisch über einen sicheren Vesting-Vertrag in den GVT-Status überführt.",
+    "items": [
+      "Schnellere Prüfungen",
+      "Geringeres Sicherheitsrisiko",
+      "Transparente Versorgung",
+      "Vorhersagbares Tokenverhalten",
+      "Tauschfreundlich",
+      "Saubere Dokumentation",
+      "Grundlage für die spätere Multichain-Erweiterung"
+    ]
+  },
+  "tokenConversion": {
+    "heading": "Architekturdiagramm zur AGV-Token-Konvertierung",
+    "pregvt": {
+      "title": "PreGVT",
+      "badge": "Vorverkaufstoken",
+      "propertiesTitle": "Eigenschaften",
+      "bullets": [
+        "Nicht übertragbar",
+        "Umrechnung in GVT bei TGE",
+        "Die Unverfallbarkeit wird durch Treuhandverträge durchgesetzt.",
+        "Bereits auf BNB im Einsatz"
+      ]
+    },
+    "gvt": {
+      "title": "GVT",
+      "badge": "Haupttoken",
+      "propertiesTitle": "Eigenschaften",
+      "bullets": [
+        "Vollständig handelbar bei TGE",
+        "kanonische Versorgung aus einer einzigen Lieferkette",
+        "Governance + Staking + RWA-Zugriff"
+      ]
+    },
+    "callouts": {
+      "pause": {
+        "title": "Pausenfunktion",
+        "description": "Notstopp oder Anhalten"
+      },
+      "timelock": {
+        "title": "Zeitsperre (optional)",
+        "description": "Verzögerung von für die Regierungsführung kritischen Maßnahmen aus Gründen der Transparenz"
+      },
+      "noProxy": {
+        "title": "Keine upgradefähigen Proxys",
+        "description": "Um die Angriffsfläche zu verringern"
+      }
+    },
+    "diagramTitle": "Token-Generierung / -Konvertierung",
+    "diagramLabels": {
+      "from": "PreGVT",
+      "to": "GVT"
+    }
+  },
+  "footer": {
+    "brand": "PreGVT-Protokoll",
+    "tagline": "Digitale Token-Plattform",
+    "description": "Der weltweit erste konforme PreGVT-Digitaltoken, ein innovatives Finanzprodukt auf Basis der Blockchain-Technologie.",
+    "featureLabels": [
+      "Sicher",
+      "Schnell",
+      "Multichain"
+    ],
+    "sections": {
+      "product": {
+        "title": "Produkte",
+        "links": {
+          "nftMinting": "NFT-Prägung",
+          "kolProgram": "KOL-Programm",
+          "analytics": "Analysen"
+        }
+      },
+      "company": {
+        "title": "Unternehmen",
+        "links": {
+          "aboutUs": "Über uns",
+          "careers": "Karriere",
+          "press": "Drücken",
+          "blogs": "Blogs"
+        }
+      },
+      "support": {
+        "title": "Unterstützung",
+        "links": {
+          "helpCenter": "Hilfezentrum",
+          "documentation": "Dokumentation",
+          "apiReference": "API-Referenz",
+          "contactSupport": "Kontaktieren Sie den Support."
+        }
+      },
+      "legal": {
+        "title": "Recht",
+        "links": {
+          "privacyPolicy": "Datenschutzrichtlinie",
+          "termsOfService": "Nutzungsbedingungen",
+          "cookiePolicy": "Cookie-Richtlinie",
+          "gdpr": "DSGVO"
+        }
+      }
+    }
+  }
+}

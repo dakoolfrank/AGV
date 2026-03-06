@@ -1,0 +1,1082 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "submit": "Submit",
+    "cancel": "Cancel",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "close": "Close",
+    "confirm": "Confirm",
+    "required": "Required",
+    "optional": "Optional"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact",
+    "community": "Community",
+    "fund": "Fund",
+    "applications": "Applications",
+    "admin": "Admin"
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "fund": "Fund",
+      "community": "Community",
+      "joinSocialMining": "Join Social Mining",
+      "institutions": "Institutions"
+    },
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "badge": "The World's First RWA Contributor Fund",
+    "title": "G3 FUND",
+    "subtitle": "The World's First RWA Contributor Fund",
+    "description": "Empowering KOLs, contributors, and partners to amplify the future of Real World Assets.",
+    "buttons": {
+      "contributor": "Join as Contributor",
+      "institutions": "For Institutions"
+    },
+    "features": {
+      "educate": {
+        "title": "Educate & Amplify",
+        "description": "Build awareness and understanding of RWA through comprehensive education"
+      },
+      "growth": {
+        "title": "Sustainable Growth",
+        "description": "Turn airdrop hunters into long-term KOLs and ambassadors"
+      },
+      "institutional": {
+        "title": "Institutional Alignment",
+        "description": "Provide real adoption and verifiable user traction for institutions"
+      }
+    },
+    "stats": {
+      "partnerKols": "Partner KOLs",
+      "partnerKolsDesc": "Top-tier influencers",
+      "smallKols": "Small KOLs",
+      "smallKolsDesc": "Growing influencers",
+      "activeUsers": "Active Users",
+      "activeUsersDesc": "Community members"
+    }
+  },
+  "footer": {
+    "companyName": "G3 FUND",
+    "tagline": "RWA KOL Incubation Platform",
+    "description": "The first RWA-native KOL incubation fund. Transform community into an assetized growth engine through tokenized partnerships and long-term incentives.",
+    "features": {
+      "secure": "Secure & Trusted",
+      "fast": "Lightning Fast",
+      "multichain": "Multi-Chain"
+    },
+    "sections": {
+      "platform": {
+        "title": "Platform",
+        "fundStructure": "Fund Structure",
+        "community": "Community",
+        "kolProgram": "KOL Program",
+        "referralSystem": "Referral System"
+      },
+      "resources": {
+        "title": "Resources",
+        "aboutG3": "About G3 Fund",
+        "rwaEducation": "RWA Education",
+        "trainingPrograms": "Training Programs",
+        "blog": "Blog"
+      },
+      "support": {
+        "title": "Support",
+        "helpCenter": "Help Center",
+        "kolGuidelines": "KOL Guidelines",
+        "communityRules": "Community Rules",
+        "contactSupport": "Contact Support"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service",
+        "cookiePolicy": "Cookie Policy",
+        "gdpr": "GDPR"
+      }
+    },
+    "disclaimer": {
+      "operational": "G3 Fund operates as a community development initiative focused on RWA education and KOL incubation.",
+      "risk": "No investment returns are guaranteed. All participants should understand the risks involved in cryptocurrency and community participation. Please review our terms of service and risk disclosures before participating in any programs."
+    },
+    "copyright": "© 2025 G3 Fund. All rights reserved"
+  },
+  "home": {
+    "valuePillars": {
+      "educate": {
+        "title": "Educate & Amplify",
+        "description": "Build awareness and understanding of RWA through comprehensive education and community engagement"
+      },
+      "growth": {
+        "title": "Sustainable Growth",
+        "description": "Turn airdrop hunters into long-term KOLs and ambassadors through structured progression paths"
+      },
+      "institutional": {
+        "title": "Institutional Alignment",
+        "description": "Provide exchanges, funds, and asset owners with real adoption and verifiable user traction"
+      }
+    },
+    "mission": {
+      "title": "The Mission",
+      "subtitle": "The next trillion-dollar wave in crypto is Real World Assets (RWA).",
+      "description": "Wall Street is already launching RWA investment products. Hong Kong and Singapore have opened regulatory windows for RWA. Users worldwide are demanding asset-backed products instead of hype-driven coins.",
+      "role": {
+        "title": "Our Role",
+        "description": "G3 Fund is the only platform combining RWA education, community growth, and institutional support into one sustainable framework."
+      }
+    },
+    "valueProposition": {
+      "title": "Value Proposition",
+      "description": "Three core pillars that make G3 Fund the leading RWA contributor platform"
+    },
+    "responsibility": {
+      "title": "A Call to Responsibility",
+      "subtitle": "Every era of financial innovation has required leaders willing to take responsibility for the future, not just profit from it.",
+      "description": "Today, Real-World Assets (RWA) are no longer an idea — they are the next trillion-dollar transformation:",
+      "points": {
+        "wallStreet": {
+          "title": "Wall Street Recognition",
+          "description": "Wall Street has declared RWA a new asset class"
+        },
+        "tokenization": {
+          "title": "Global Tokenisation",
+          "description": "Asset owners worldwide are tokenising energy, carbon, real estate, and supply chains"
+        },
+        "regulatory": {
+          "title": "Regulatory Progress",
+          "description": "Hong Kong and Singapore have opened regulatory doors"
+        },
+        "demand": {
+          "title": "User Demand",
+          "description": "Users are demanding safety and credibility: crypto backed by real assets, not empty promises"
+        }
+      }
+    },
+    "institutions": {
+      "title": "Why institutions can't ignore this?",
+      "subtitle": "Without leadership, RWA adoption will be slow, fragmented, and misunderstood. Institutions today face:",
+      "points": {
+        "compliance": {
+          "title": "Compliance Risk",
+          "description": "The industry needs trusted frameworks, not noise"
+        },
+        "voice": {
+          "title": "Voice Gap",
+          "description": "Assets and capital lack the networks to reach people"
+        },
+        "marketing": {
+          "title": "Inefficient Marketing",
+          "description": "One-off promotions without compounding effect"
+        },
+        "proof": {
+          "title": "Lack of Proof",
+          "description": "No credible data to present to regulators or LPs"
+        }
+      }
+    },
+    "g3Mission": {
+      "title": "The Mission of the G3 Fund",
+      "subtitle": "The G3 Fund was not created for one project. It was created for the entire RWA sector.",
+      "points": {
+        "influence": {
+          "title": "Responsible Influence",
+          "description": "Empowering top KOLs to use their influence responsibly, amplifying truth, not hype"
+        },
+        "education": {
+          "title": "Education Network",
+          "description": "Building a worldwide education + amplification network"
+        },
+        "incubation": {
+          "title": "Global RWA Incubation",
+          "description": "The first global RWA Contributor Incubation Fund"
+        },
+        "growth": {
+          "title": "Verifiable Growth",
+          "description": "Delivering verifiable adoption data + sustainable growth for institutions"
+        },
+        "community": {
+          "title": "Community Transformation",
+          "description": "Respecting and transforming grassroots communities (airdrop hunters, OGs) into partners and micro-KOLs"
+        }
+      }
+    },
+    "operatingPrinciples": {
+      "title": "Our Operating Principles",
+      "dualPathways": {
+        "title": "Dual Pathways",
+        "description": "Grassroots → contributors; influencers → partners"
+      },
+      "compliance": {
+        "title": "Transparency & Compliance",
+        "description": "On-chain verification, public dashboards, periodic reports"
+      },
+      "incentive": {
+        "title": "Incentive & Value-Binding",
+        "description": "Structured, long-term, and performance-based"
+      },
+      "noOneLeft": {
+        "title": "No One Left Behind",
+        "description": "Every actor, from small contributor to major fund, has a role and responsibility"
+      }
+    },
+    "participants": {
+      "title": "Current Participants",
+      "technology": {
+        "title": "Technology Partners",
+        "description": "IoT, oracle, blockchain teams"
+      },
+      "governance": {
+        "title": "Governance",
+        "description": "New Zealand Sustainable Initiative Trust"
+      },
+      "agv": {
+        "title": "AGV Protocol",
+        "description": "DePIN + RWA backbone"
+      },
+      "community": {
+        "title": "Community Builders",
+        "description": "OGs, whitelist, TaskOn & Zealy contributors"
+      },
+      "assets": {
+        "title": "Asset Partners",
+        "description": "APAC energy & agriculture enterprises"
+      }
+    },
+    "expansion": {
+      "title": "Strategic Expansion",
+      "greenFunds": {
+        "title": "Global Green Funds",
+        "description": "ESG-driven capital"
+      },
+      "exchanges": {
+        "title": "International Exchanges",
+        "description": "Liquidity + market access"
+      },
+      "projects": {
+        "title": "More RWA Projects",
+        "description": "Cross-industry alliances"
+      },
+      "footer": "Not one-off marketing - but the super growth engine of the RWA industry."
+    },
+    "institutionsJoin": {
+      "title": "How Institutions Can Join",
+      "advocacy": {
+        "title": "Advocacy Partner",
+        "description": "Stand with us as co-champions of RWA"
+      },
+      "financial": {
+        "title": "Financial Support",
+        "description": "Small sponsorships in USD/USDT"
+      },
+      "token": {
+        "title": "Token Contribution",
+        "description": "Allocate project tokens to the Fund pool"
+      },
+      "strategic": {
+        "title": "Strategic Partner",
+        "description": "Branding, priority data, and network access"
+      }
+    },
+    "institutionsGain": {
+      "title": "What Institutions Gain",
+      "left": {
+        "userGrowth": {
+          "title": "User Growth",
+          "description": "Wallets, staking, and real adoption"
+        },
+        "resourceAccess": {
+          "title": "Resource Access",
+          "description": "Priority connections to assets, funds, and exchanges"
+        }
+      },
+      "right": {
+        "education": {
+          "title": "Education & Narrative",
+          "description": "Your story told by a trained KOL army"
+        },
+        "brand": {
+          "title": "Brand & Reputation",
+          "description": "Align with the first global RWA Fund, gain leadership status"
+        },
+        "leverage": {
+          "title": "Long-term Leverage",
+          "description": "Compounding network, not one-off exposure"
+        }
+      }
+    },
+    "leadership": {
+      "title": "Leadership or Abdication",
+      "subtitle": "The RWA wave is inevitable. The world will not ask if it happens, but who took responsibility to lead it.",
+      "points": {
+        "transform": {
+          "title": "Transform Contributors",
+          "description": "We do not dismiss grassroots contributors — we transform them into partners"
+        },
+        "align": {
+          "title": "Align Voices",
+          "description": "We do not let KOLs waste their voices — we align them with truth and education"
+        },
+        "enable": {
+          "title": "Enable Action",
+          "description": "We do not let institutions stand aside — we offer them the vehicle to act responsibly"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Amplify the Future of RWA?",
+      "description": "Join the world's first RWA contributor fund. Whether you're a KOL, institution, or community member, there's a place for you in the G3 Fund ecosystem.",
+      "contributor": "Apply as Contributor",
+      "institution": "Apply as Institution"
+    },
+    "compliance": {
+      "title": "Important Compliance Notice",
+      "description": "G3 Fund operates as a community development initiative. No investment returns are guaranteed. All participants should understand the risks involved in cryptocurrency and community participation. Please review our terms of service and risk disclosures before participating."
+    }
+  },
+  "community": {
+    "title": "Join as Contributor",
+    "heroButton": "Apply as Contributor",
+    "identityGrowthPath": {
+      "title": "Identity Growth Path",
+      "subtitle": "Airdrop Hunter → Contributor → Micro-KOL → Fund Partner",
+      "earlyBuilders": "Early joiners will be permanently recognized as \"First Builders\" in the history of RWA."
+    },
+    "steps": {
+      "airdropHunter": {
+        "title": "Airdrop Hunter",
+        "description": "Start your journey in the crypto space",
+        "requirements": ["Join early", "Complete verification", "Participate in community"],
+        "rewards": ["Early access", "Exclusive events", "Direct mentorship"]
+      },
+      "contributor": {
+        "title": "Contributor",
+        "description": "Become an active community contributor",
+        "requirements": ["1K-10K followers", "Create content", "Engage community"],
+        "rewards": ["Commission rewards", "Training programs", "Content support"]
+      },
+      "microKol": {
+        "title": "Micro-KOL",
+        "description": "Grow your influence and reach",
+        "requirements": ["10K-100K followers", "Consistent performance", "Quality content"],
+        "rewards": ["Higher commissions", "Token incentives", "Partnership opportunities"]
+      },
+      "fundPartner": {
+        "title": "Fund Partner",
+        "description": "Become a top-tier partner",
+        "requirements": ["100K+ followers", "Exceptional performance", "Strategic value"],
+        "rewards": ["Maximum rewards", "Equity participation", "Strategic input"]
+      }
+    },
+    "labels": {
+      "step": "Step",
+      "requirements": "Requirements:",
+      "rewards": "Rewards:"
+    },
+    "incentiveMechanism": {
+      "title": "Incentive Mechanism",
+      "subtitle": "High-level incentive structure designed for long-term community growth and sustainable rewards",
+      "postToEarn": {
+        "title": "Post to Earn",
+        "description": "Every piece of content generates rewards",
+        "features": ["Content creation rewards", "Quality-based bonuses", "Performance metrics"]
+      },
+      "inviteToEarn": {
+        "title": "Invite to Earn",
+        "description": "Referrals create long-term revenue share",
+        "features": ["2-tier commission structure", "Lifetime revenue sharing", "Network effects"]
+      },
+      "promotionPath": {
+        "title": "Promotion Path",
+        "description": "Higher status brings bigger, recurring rewards",
+        "features": ["Tier-based rewards", "Recurring income", "Exclusive opportunities"]
+      },
+      "performanceBased": {
+        "title": "Performance-Based",
+        "description": "All incentives are performance-based and long-term bound",
+        "features": ["No short-term dumping", "Long-term alignment", "Sustainable growth"]
+      }
+    },
+    "futureOpportunities": {
+      "title": "Future Opportunities",
+      "subtitle": "The G3 Fund ecosystem will expand through strategic partnerships and integrations",
+      "phase2": {
+        "phase": "Phase 2",
+        "title": "Onboard Green Funds",
+        "description": "ESG narrative + global capital"
+      },
+      "phase3": {
+        "phase": "Phase 3",
+        "title": "Integrate International Exchanges",
+        "description": "Liquidity and exposure"
+      },
+      "phase4": {
+        "phase": "Phase 4",
+        "title": "Bring in more RWA Projects",
+        "description": "Endless rewards flowing into the network"
+      }
+    },
+    "cta": {
+      "title": "Ready to Become a First Builder?",
+      "description": "Join the G3 Fund community today and be permanently recognized as a \"First Builder\" in the history of RWA",
+      "startContributor": "Start as Contributor",
+      "applyInstitution": "Apply as Institution"
+    },
+    "complianceNotice": {
+      "title": "Important Notice",
+      "description": "Referral rewards are performance-based and subject to community guidelines. All participants must comply with anti-fraud measures and regional restrictions. No guaranteed returns are promised. Please review our terms of service before participating."
+    },
+    "socialMiningTiers": {
+      "title": "Social Mining Tiers",
+      "subtitle": "Evolve from Pioneer to Partner through measurable performance and team building",
+      "newProgram": "🚀 New Program: Posts = Mining Work • Mints = Proof-of-Work • Rewards = Fair Distribution",
+      "pioneer": {
+        "title": "Pioneer",
+        "description": "Entry-level social miners with growing influence",
+        "requirements": [
+          "1K-10K followers on at least one platform",
+          "Consistent posting schedule",
+          "Basic engagement metrics"
+        ],
+        "rewards": [
+          "10% direct mint commission",
+          "5% L1 override commission",
+          "Post rewards up to 8/cycle",
+          "Milestone-based payouts"
+        ],
+        "milestones": {
+          "M1": "150 likes, 30 reposts, 20 comments (25% payout)",
+          "M2": "500 likes, 100 reposts, 60 comments (100% payout)",
+          "M3": "≥5 valid mints linked (conversion bonus)"
+        }
+      },
+      "ambassador": {
+        "title": "Ambassador",
+        "description": "Established influencers with proven track record",
+        "requirements": [
+          "10K-100K followers across platforms",
+          "Demonstrated conversion ability",
+          "Quality content creation"
+        ],
+        "rewards": [
+          "20% direct mint commission",
+          "10% L1 override commission",
+          "5% L2 override commission",
+          "Enhanced milestone rewards"
+        ],
+        "milestones": {
+          "M1": "300 likes, 60 reposts, 40 comments (25% payout)",
+          "M2": "1,000 likes, 200 reposts, 120 comments (100% payout)",
+          "M3": "≥5 valid mints linked (conversion bonus)"
+        }
+      },
+      "partner": {
+        "title": "Partner",
+        "description": "Elite KOLs with significant reach and influence",
+        "requirements": [
+          "100K+ followers with high engagement",
+          "Proven ROI and conversion metrics",
+          "Partner invite-only status"
+        ],
+        "rewards": [
+          "40% direct mint commission",
+          "20% L1 override commission",
+          "10% L2 override commission",
+          "Premium milestone bonuses"
+        ],
+        "milestones": {
+          "M1": "1,000 likes, 200 reposts, 120 comments (25% payout)",
+          "M2": "3,000 likes, 600 reposts, 300 comments (100% payout)",
+          "M3": "≥5 valid mints linked (conversion bonus)"
+        }
+      },
+      "requirements": "Requirements",
+      "rewards": "Rewards",
+      "milestones": "Milestones"
+    },
+    "socialMiningMechanisms": {
+      "title": "How Social Mining Works",
+      "subtitle": "Transparent, measurable, and fair reward mechanisms for the Web3 era",
+      "milestoneBased": {
+        "title": "Milestone-Based Post Rewards",
+        "description": "Earn rewards based on post performance milestones",
+        "features": [
+          "M1: 25% payout for initial traction",
+          "M2: 100% payout for strong performance",
+          "M3: Conversion bonus for driving mints",
+          "7-day measurement window"
+        ]
+      },
+      "commissionBased": {
+        "title": "Commission-Based Earnings",
+        "description": "Earn percentage commissions on mint conversions",
+        "features": [
+          "Direct mint commissions (10-40%)",
+          "L1 team override commissions",
+          "L2 team override commissions",
+          "Real-time attribution tracking"
+        ]
+      },
+      "teamBuilding": {
+        "title": "Team Building Rewards",
+        "description": "Build your downline and earn override commissions",
+        "features": [
+          "Recruit KOLs to your team",
+          "Earn from their performance",
+          "Up to 2 levels deep (L1 + L2)",
+          "Automated reward distribution"
+        ]
+      },
+      "transparentSettlement": {
+        "title": "Transparent Settlement",
+        "description": "Clear payout structure with vesting for sustainability",
+        "features": [
+          "40% immediate settlement",
+          "60% vests over 90 days",
+          "Anti-fraud protection",
+          "Public performance dashboards"
+        ]
+      }
+    },
+    "hero": {
+      "joinButton": "Join Social Mining Program"
+    }
+  },
+  "institutions": {
+    "title": "For Institutions",
+    "subtitle": "The Partnership",
+    "description": "Partner with G3 Fund to solve institutional challenges in RWA adoption, community building, and verifiable user traction.",
+    "heroButton": "Partner with G3 Fund",
+    "challenges": {
+      "title": "The Institutional Challenge",
+      "subtitle": "Institutions face significant challenges in RWA adoption and community building",
+      "userEducation": {
+        "title": "User Education Gap",
+        "description": "RWA is complex; users don't understand it → poor conversion"
+      },
+      "insufficientVoice": {
+        "title": "Insufficient Voice",
+        "description": "Institutions have assets but lack a strong community network"
+      },
+      "inefficientMarketing": {
+        "title": "Inefficient Marketing",
+        "description": "One-off KOL posts are expensive but bring no compounding effect"
+      },
+      "lackOfData": {
+        "title": "Lack of Data",
+        "description": "Hard to show regulators, LPs, or partners verifiable adoption metrics"
+      },
+      "complianceRisks": {
+        "title": "Compliance & Trust Risks",
+        "description": "The industry is full of noise, institutions need credibility"
+      }
+    },
+    "solution": {
+      "title": "The G3 Fund Solution",
+      "subtitle": "Comprehensive solutions to address institutional challenges in RWA adoption",
+      "educationNetwork": {
+        "title": "Dedicated RWA Education Network",
+        "description": "Build a comprehensive education and promotion network for RWA",
+        "features": ["Educational content", "Community engagement", "Expert insights"]
+      },
+      "longTermAmbassadors": {
+        "title": "Long-term Ambassadors",
+        "description": "Transform one-time participants into long-term ambassadors",
+        "features": ["Sustained engagement", "Brand loyalty", "Continuous promotion"]
+      },
+      "verifiableData": {
+        "title": "Verifiable Adoption Data",
+        "description": "Provide on-chain and community data as proof of adoption",
+        "features": ["On-chain metrics", "Community analytics", "Performance tracking"]
+      },
+      "governance": {
+        "title": "Governance & Compliance",
+        "description": "Operate under New Zealand Sustainable Initiative Trust",
+        "features": ["Regulatory compliance", "Trust framework", "Governance structure"]
+      }
+    },
+    "corePartners": {
+      "title": "Current Core Partners",
+      "subtitle": "Strategic partnerships across technology, community, governance, and asset management",
+      "technologyTeams": {
+        "title": "Technology Teams",
+        "description": "IoT, Oracle, Blockchain engineers"
+      },
+      "communityBuilders": {
+        "title": "Community Builders",
+        "description": "OG users, TaskOn & Zealy contributors"
+      },
+      "governance": {
+        "title": "Governance",
+        "description": "New Zealand Sustainable Initiative Trust"
+      },
+      "assetPartners": {
+        "title": "Asset Partners",
+        "description": "Energy & carbon reduction enterprises in APAC"
+      },
+      "coreSponsor": {
+        "title": "Core Sponsor",
+        "description": "AGV Protocol"
+      }
+    },
+    "participation": {
+      "title": "Ways to Participate",
+      "subtitle": "Flexible partnership options to suit different institutional needs and commitment levels",
+      "lightSupport": {
+        "title": "Light Support",
+        "description": "Branding exposure, symbolic sponsorship",
+        "benefits": ["Brand visibility", "Community recognition", "Basic support"]
+      },
+      "mediumSupport": {
+        "title": "Medium Support",
+        "description": "Token/USDT contributions into the fund pool",
+        "benefits": ["Fund participation", "Revenue sharing", "Priority access"]
+      },
+      "strategicPartner": {
+        "title": "Strategic Partner",
+        "description": "Brand visibility + access to network + priority in adoption data",
+        "benefits": ["Full network access", "Adoption data priority", "Strategic input"]
+      }
+    },
+    "cta": {
+      "title": "Ready to Partner with G3 Fund?",
+      "description": "Join leading institutions in solving RWA adoption challenges through our comprehensive partnership framework",
+      "button": "Partner with G3 Fund"
+    },
+    "complianceNotice": {
+      "title": "Important Compliance Notice",
+      "description": "G3 Fund operates as a community development initiative. No investment returns are guaranteed. All participants should understand the risks involved in cryptocurrency and community participation. Please review our terms of service and risk disclosures before participating."
+    }
+  },
+  "fund": {
+    "title": "G3 Fund Structure",
+    "subtitle": "Coming Soon",
+    "description": "We're building something revolutionary. The G3 Fund structure and detailed information will be available soon.",
+    "viewInstitutions": "View Institutions",
+    "joinCommunity": "Join Community",
+    "whatsComingTitle": "What's Coming",
+    "whatsComingSubtitle": "Get a preview of what the G3 Fund structure will include",
+    "preview": {
+      "tokenAllocation": {
+        "title": "Token Allocation",
+        "description": "Transparent distribution model"
+      },
+      "fundBudget": {
+        "title": "Fund Budget",
+        "description": "Operational funding details"
+      },
+      "kolTargets": {
+        "title": "KOL Targets",
+        "description": "Partner KOL specifications"
+      },
+      "growthMetrics": {
+        "title": "Growth Metrics",
+        "description": "Community size targets"
+      }
+    },
+    "stayUpdated": {
+      "title": "Stay Updated",
+      "description": "Be the first to know when the G3 Fund structure is released. Join our community for early access."
+    }
+  },
+  "contributor": {
+    "title": "Contributor Application",
+    "subtitle": "Join G3 Fund as a contributor and help build the RWA community",
+    "tier": {
+      "airdrop_hunter": {
+        "name": "Airdrop Hunter",
+        "description": "Entry-level tier for community members",
+        "requirements": "No minimum requirements",
+        "benefits": "Basic community access, airdrop notifications"
+      },
+      "contributor": {
+        "name": "Contributor",
+        "description": "Active community contributor",
+        "requirements": "1K-10K followers on at least one channel",
+        "benefits": "Commissions, training, content support"
+      },
+      "micro_kol": {
+        "name": "Micro-KOL",
+        "description": "Influential community member",
+        "requirements": "10K-100K followers + consistent performance",
+        "benefits": "Higher commissions, token incentives, partnership opportunities"
+      },
+      "fund_partner": {
+        "name": "Fund Partner",
+        "description": "Strategic partner with significant influence",
+        "requirements": "100K+ followers + exceptional performance + strategic value",
+        "benefits": "Maximum rewards, potential equity participation, strategic input"
+      }
+    },
+    "steps": {
+      "identity": {
+        "title": "Identity & Contact",
+        "description": "Basic information and contact details"
+      },
+      "channels": {
+        "title": "Channels & Metrics",
+        "description": "Social media and content channels"
+      },
+      "role": {
+        "title": "Role & Availability",
+        "description": "Your role and availability"
+      },
+      "performance": {
+        "title": "Performance KPIs",
+        "description": "Performance targets and metrics"
+      },
+      "rewards": {
+        "title": "Rewards & Compensation",
+        "description": "Payment preferences and details"
+      },
+      "portfolio": {
+        "title": "Portfolio & Track Record",
+        "description": "Previous work and experience"
+      },
+      "wallets": {
+        "title": "Wallets & Verification",
+        "description": "Wallet addresses and verification"
+      },
+      "compliance": {
+        "title": "Community & Compliance",
+        "description": "Agreements and compliance"
+      }
+    },
+    "form": {
+      "displayName": "Display Name",
+      "email": "Email",
+      "countryRegion": "Country/Region",
+      "languages": "Languages",
+      "riskTermsConsent": "Risk/Terms consent",
+      "riskTermsText": "I acknowledge that there are no guaranteed returns, this is a community initiative, and I understand the anti-fraud policy and regional restrictions.",
+      "platform": "Platform",
+      "url": "URL",
+      "followers": "Followers",
+      "avgViews30d": "Avg Views (30d)",
+      "audienceTop3Geos": "Audience Top 3 Geographies",
+      "contentFocus": "Content Focus",
+      "addChannel": "Add Channel",
+      "removeChannel": "Remove",
+      "channelNumber": "Channel",
+      "submitting": "Submitting...",
+      "submitApplication": "Submit Application",
+      "contentFocusPlaceholder": "e.g., DeFi, NFTs, RWA, Trading, etc.",
+      "noChannelsAdded": "No channels added yet. Click \"Add Channel\" to get started.",
+      "manualVerification": "Manual Verification:",
+      "manualVerificationText": "Your social media channels will be verified manually by our admin team after submission.",
+      "manualVerificationRequired": "Manual Verification Required",
+      "validationWarning": "⚠️ Please complete all required fields marked with * before proceeding",
+      "stepValidationError": "Please complete all required fields in \"{stepName}\" before proceeding.",
+      "allStepsValidationError": "Please complete all required fields in all steps before submitting.",
+      "fileUploadText": "Click to upload or drag and drop",
+      "fileUploadTypes": ".pdf,.png,.jpg,.jpeg (max 20MB each, up to 5 files)",
+      "websitePlaceholder": "https://example.com",
+          "telegramHandle": "Telegram Handle",
+          "telegramHandlePlaceholder": "@your_telegram_handle",
+          "emailPlaceholder": "your@email.com",
+          "selectPlatform": "Select platform",
+      "channel": "Channel",
+      "manualVerificationRequiredText": "Manual verification is required for {tier} tier applications.",
+      "joinZealy": "Join Zealy Community",
+      "platforms": {
+        "twitter": "Twitter/X",
+        "youtube": "YouTube",
+        "tiktok": "TikTok",
+        "instagram": "Instagram",
+        "linkedin": "LinkedIn",
+        "telegram": "Telegram",
+        "discord": "Discord",
+        "medium": "Medium",
+        "substack": "Substack",
+        "other": "Other"
+      },
+      "languageOptions": {
+        "english": "English",
+        "chineseSimplified": "Chinese (Simplified)",
+        "chineseTraditional": "Chinese (Traditional)",
+        "spanish": "Spanish",
+        "french": "French",
+        "german": "German",
+        "japanese": "Japanese",
+        "korean": "Korean",
+        "portuguese": "Portuguese",
+        "russian": "Russian",
+        "arabic": "Arabic",
+        "hindi": "Hindi",
+        "other": "Other"
+      },
+      "geographies": {
+        "northAmerica": "North America",
+        "southAmerica": "South America",
+        "europe": "Europe",
+        "asiaPacific": "Asia Pacific",
+        "middleEast": "Middle East",
+        "africa": "Africa",
+        "oceania": "Oceania",
+        "global": "Global"
+      },
+      "yourCalculatedTier": "Your Calculated Tier: {tier}",
+      "progressSteps": "Progress Steps",
+      "mobileStepper": "Mobile Stepper",
+      "desktopStepper": "Desktop Stepper",
+      "navigationButtons": "Navigation Buttons",
+      "step": "Step {number}",
+      "of": "of {total}",
+      "error": "Error",
+      "noValidSteps": "No valid steps found for the current tier. Please refresh the page.",
+      "loading": "Loading...",
+      "failedToSubmit": "Failed to submit application. Please try again.",
+      "youMustAgreeToCommunityRules": "You must agree to Community Rules",
+      "requirements": "Requirements:",
+      "benefits": "Benefits:",
+      "applicationSubmittedSuccessfully": "Application submitted successfully!"
+    }
+  },
+  "kolDashboard": {
+    "title": "KOL Dashboard",
+    "welcomeBack": "Welcome back, {name}",
+    "performanceSummary": "Performance Summary",
+    "currentPeriodHighlights": "Your current period highlights",
+    "directMints": "Direct Mints",
+    "conversionRate": "Conversion Rate",
+    "m1Milestones": "M1 Milestones",
+    "m2Milestones": "M2 Milestones",
+    "m3Bonuses": "M3 Bonuses",
+    "complianceStatus": "Compliance Status",
+    "accountStanding": "Your account standing",
+    "accountStatus": "Account Status",
+    "active": "Active",
+    "pendingPosts": "Pending Posts",
+    "approvedPosts": "Approved Posts",
+    "strikes": "Strikes",
+    "totalEarnings": "Total Earnings",
+    "postsApproved": "Posts Approved",
+    "teamMembers": "Team Members",
+    "overview": "Overview",
+    "myLinks": "My Links",
+    "team": "Team",
+    "earnings": "Earnings",
+    "dashboardUnavailable": "Dashboard Unavailable",
+    "tryAgain": "Try Again",
+    "reloadPage": "Reload Page",
+    "refreshing": "Refreshing...",
+    "refresh": "Refresh",
+    "authenticationRequired": "Authentication required. Please sign in again.",
+    "kolProfileNotFound": "KOL profile not found. Please complete your registration.",
+    "failedToFetchData": "Failed to fetch dashboard data: {error}",
+    "userNotAuthenticated": "User not authenticated",
+    "joinZealy": "Join Zealy"
+  },
+  "join": {
+    "title": "Join the G3 Social Mining Program",
+    "subtitle": "Turn your social influence into measurable rewards through transparent, performance-based mining",
+    "invitedBy": "You've been invited by {name}",
+    "joinTeam": "Join their team and start earning together",
+    "sponsorTier": "Sponsor Tier",
+    "teamMembers": "Team Members",
+    "successRate": "Success Rate",
+    "chooseStartingTier": "Choose Your Starting Tier",
+    "pioneer": {
+      "title": "Pioneer",
+      "description": "Entry-level social miners with growing influence",
+      "commission": "10%",
+      "l1Override": "5%",
+      "l2Override": "0%"
+    },
+    "ambassador": {
+      "title": "Ambassador",
+      "description": "Established influencers with proven track record",
+      "commission": "20%",
+      "l1Override": "10%",
+      "l2Override": "5%"
+    },
+    "partner": {
+      "title": "Partner",
+      "description": "Elite KOLs with significant reach and influence",
+      "commission": "40%",
+      "l1Override": "20%",
+      "l2Override": "10%"
+    },
+    "commissionRates": "Commission Rates",
+    "directMints": "Direct Mints",
+    "l1Override": "L1 Override",
+    "l2Override": "L2 Override",
+    "applyAs": "Apply as {tier}",
+    "whyJoin": "Why Join G3 Social Mining?",
+    "competitiveCommissions": {
+      "title": "Competitive Commissions",
+      "description": "Earn 10-40% commission on direct mints based on your tier"
+    },
+    "teamBuildingRewards": {
+      "title": "Team Building Rewards",
+      "description": "Build your downline and earn override commissions from their performance"
+    },
+    "transparentTracking": {
+      "title": "Transparent Tracking",
+      "description": "Real-time dashboards with clear attribution and anti-fraud protection"
+    },
+    "milestoneRewards": {
+      "title": "Milestone Rewards",
+      "description": "Earn additional rewards for achieving post engagement milestones"
+    },
+    "programHighlights": "Program Highlights",
+    "settlementSplit": "Settlement Split",
+    "settlementSplitDesc": "40% immediate, 60% vests over 90 days",
+    "milestoneWindow": "Milestone Window",
+    "milestoneWindowDesc": "Time to achieve post milestones",
+    "teamDepth": "Team Depth",
+    "teamDepthDesc": "Build up to 2 levels deep",
+    "settlementSplitValue": "40/60",
+    "milestoneWindowValue": "7 Days",
+    "teamDepthValue": "L1 + L2",
+    "readyToStart": "Ready to Start Mining?",
+    "readyDescription": "Join thousands of KOLs already earning through the G3 Social Mining program. Transparent rewards, real-time tracking, and fair distribution.",
+    "startApplication": "Start Application",
+    "learnMore": "Learn More"
+  },
+  "globalMintCounter": {
+    "title": "G3 Social Mining",
+    "description": "Live mint counter • Updates every 30s",
+    "totalMints": "TOTAL MINTS",
+    "totalValue": "TOTAL VALUE",
+    "last7Days": "LAST 7 DAYS",
+    "mints": "mints",
+    "noDataAvailable": "No data available",
+    "lastUpdated": "Last updated",
+    "unknown": "Unknown",
+    "unableToLoad": "Unable to load mint counter"
+  },
+  "institutional": {
+    "title": "Institutional Partnership Application",
+    "subtitle": "Join G3 Fund as an institutional partner and help shape the future of RWA",
+    "steps": {
+      "purpose": {
+        "title": "Purpose & Fit",
+        "description": "Tell us about your partnership goals"
+      },
+      "organization": {
+        "title": "Organization Profile",
+        "description": "Company information and KYB details"
+      },
+      "contacts": {
+        "title": "Contacts",
+        "description": "Key personnel and contact information"
+      },
+      "partnership": {
+        "title": "Partnership Mode",
+        "description": "Specific partnership details"
+      },
+      "geography": {
+        "title": "Geography & Audience",
+        "description": "Target markets and audience"
+      },
+      "wallets": {
+        "title": "Wallets & Payment",
+        "description": "Payment preferences and wallet details"
+      },
+      "data": {
+        "title": "Data & Compliance",
+        "description": "Reporting and compliance requirements"
+      },
+      "brand": {
+        "title": "Brand & Legal",
+        "description": "Brand usage and legal acknowledgments"
+      }
+    },
+    "form": {
+      "submitting": "Submitting...",
+      "submitApplication": "Submit Application",
+      "validationWarning": "⚠️ Please complete all required fields marked with * before proceeding",
+      "stepValidationError": "Please complete all required fields in \"{stepName}\" before proceeding.",
+      "allStepsValidationError": "Please complete all required fields in all steps before submitting.",
+      "primaryIntent": "Primary Intent (Select all that apply)",
+      "whatYouWantToGain": "What you want to gain (Select all that apply)",
+      "howOrgSupportsRWA": "How does your organization support RWA today?",
+      "howOrgSupportsRWAPlaceholder": "Describe your current RWA initiatives, investments, or partnerships...",
+      "rwaVerticals": "Which RWA verticals apply to your organization?",
+      "otherVertical": "Please specify other RWA vertical",
+      "otherVerticalPlaceholder": "Describe your other RWA vertical...",
+      "legalEntityName": "Legal Entity Name",
+      "jurisdiction": "Jurisdiction of Incorporation",
+      "jurisdictionPlaceholder": "e.g., Delaware, Singapore, etc.",
+      "registrationNumber": "Registration/Company No.",
+      "website": "Website",
+      "registeredAddress": "Registered Address",
+      "organizationType": "Organization Type",
+      "otherOrganizationType": "Please specify organization type",
+      "otherOrganizationTypePlaceholder": "Describe your organization type...",
+      "regulatoryPermissions": "Regulatory Permissions/Licences",
+      "regulatoryPermissionsPlaceholder": "Describe any regulatory permissions or licences...",
+      "briefHistory": "Brief History & AUM/Resources",
+      "briefHistoryPlaceholder": "Provide a brief history of your organization and AUM/resources...",
+      "regulatoryDocuments": "Regulatory Documents",
+      "primaryContactName": "Primary Contact Name",
+      "primaryContactTitle": "Primary Contact Title",
+      "primaryContactEmail": "Primary Contact Email",
+      "primaryContactPhone": "Primary Contact Phone",
+      "complianceContactName": "Compliance Contact Name",
+      "complianceContactEmail": "Compliance Contact Email",
+      "brandPrContactName": "Brand/PR Contact Name",
+      "brandPrContactEmail": "Brand/PR Contact Email",
+      "options": {
+        "advocacyPartner": "Advocacy Partner",
+        "financialSupport": "Financial Support",
+        "tokenContribution": "Token Contribution",
+        "strategicPartner": "Strategic Partner",
+        "userGrowth": "User Growth",
+        "resourceAccess": "Resource Access",
+        "educationNarrative": "Education & Narrative",
+        "brandReputation": "Brand & Reputation",
+        "longTermLeverage": "Long-term Leverage",
+        "energy": "Energy",
+        "agriculture": "Agriculture",
+        "realEstate": "Real Estate",
+        "carbonEsg": "Carbon/ESG",
+        "supplyChain": "Supply Chain",
+        "other": "Other",
+        "exchange": "Exchange",
+        "fund": "Fund",
+        "assetOwnerOriginator": "Asset Owner/Originator",
+        "technologyProvider": "Technology Provider",
+        "ngoAlliance": "NGO/Alliance",
+        "corporate": "Corporate"
+      },
+      "fileUploadText": "Click to upload or drag and drop",
+      "fileUploadTypes": ".pdf,.png,.jpg,.jpeg (max 20MB each, up to 5 files)",
+      "websitePlaceholder": "https://example.com",
+      "settlementPreference": "Settlement Preference",
+      "bank": "Bank",
+      "crypto": "Crypto",
+      "walletAddresses": "Wallet Addresses",
+      "addWallet": "Add Wallet",
+      "chainPlaceholder": "Chain (e.g., Ethereum, BSC)",
+      "addressPlaceholder": "Wallet Address",
+      "removeWallet": "Remove",
+      "complianceConstraints": "Compliance Constraints",
+      "complianceConstraintsPlaceholder": "Any specific compliance requirements or constraints...",
+      "consentToOnChainVerification": "Consent to On-Chain Verification",
+      "consentToOnChainVerificationText": "I consent to on-chain verification of my organization's credentials and activities.",
+      "preferredReportingCadence": "Preferred Reporting Cadence",
+      "monthly": "Monthly",
+      "quarterly": "Quarterly",
+      "confidentialityLevel": "Confidentiality Level",
+      "public": "Public",
+      "partnersOnly": "Partners Only",
+      "ndaRequired": "NDA Required",
+      "riskDisclosureAcknowledged": "Risk Disclosure Acknowledged",
+      "riskDisclosureAcknowledgedText": "I acknowledge that I have read and understood the risk disclosure document.",
+      "termsPrivacyConsent": "Terms & Privacy Consent",
+      "termsPrivacyConsentText": "I agree to the Terms of Service and Privacy Policy."
+    }
+  }
+}

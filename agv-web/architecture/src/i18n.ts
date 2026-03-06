@@ -1,0 +1,106 @@
+export const locales = [
+  'en', 'zh-CN', 'zh-TW', 'ko', 'tl', 'fr', 'de', 'es', 'ar', 'ja'
+] as const;
+
+export type Locale = typeof locales[number];
+export const defaultLocale: Locale = 'en';
+
+export const localeNames: Record<Locale, string> = {
+  en: 'English',
+  'zh-CN': '简体中文',
+  'zh-TW': '繁體中文',
+  ko: '한국어',
+  tl: 'Tagalog',
+  fr: 'Français',
+  de: 'Deutsch',
+  es: 'Español',
+  ar: 'العربية',
+  ja: '日本語'
+};
+
+export const localeFlags: Record<Locale, string> = {
+  en: '🇺🇸',
+  'zh-CN': '🇨🇳',
+  'zh-TW': '🇨🇳',
+  ko: '🇰🇷',
+  tl: '🇵🇭',
+  fr: '🇫🇷',
+  de: '🇩🇪',
+  es: '🇪🇸',
+  ar: '🇸🇦',
+  ja: '🇯🇵'
+};
+
+// Country to locale mapping for geo-detection
+export const COUNTRY_TO_LOCALE: Partial<Record<string, Locale>> = {
+  CN: 'zh-CN', 
+  TW: 'zh-CN', 
+  HK: 'zh-CN', 
+  MO: 'zh-CN',
+  KR: 'ko', 
+  PH: 'tl', 
+  FR: 'fr', 
+  DE: 'de',
+  ES: 'es', 
+  MX: 'es', 
+  CO: 'es', 
+  CL: 'es',
+  JP: 'ja',
+  SA: 'ar',
+  AE: 'ar',
+  EG: 'ar',
+  JO: 'ar',
+  LB: 'ar',
+  KW: 'ar',
+  QA: 'ar',
+  BH: 'ar',
+  OM: 'ar',
+  IQ: 'ar',
+  SY: 'ar',
+  YE: 'ar',
+  MA: 'ar',
+  TN: 'ar',
+  DZ: 'ar',
+  LY: 'ar',
+  SD: 'ar',
+  NG: 'en', 
+  US: 'en', 
+  GB: 'en', 
+  CA: 'en',
+  AU: 'en',
+  NZ: 'en',
+  SG: 'en',
+  MY: 'en',
+  TH: 'en',
+  VN: 'en',
+  ID: 'en',
+  IN: 'en',
+  BR: 'en',
+  IT: 'en',
+  NL: 'en',
+  BE: 'en',
+  CH: 'en',
+  AT: 'en',
+  SE: 'en',
+  NO: 'en',
+  DK: 'en',
+  FI: 'en',
+  PL: 'en',
+  CZ: 'en',
+  HU: 'en',
+  RO: 'en',
+  BG: 'en',
+  HR: 'en',
+  SI: 'en',
+  SK: 'en',
+  LT: 'en',
+  LV: 'en',
+  EE: 'en',
+  IE: 'en',
+  PT: 'en',
+  GR: 'en',
+  CY: 'en',
+  MT: 'en',
+  LU: 'en'
+};
+

@@ -1,0 +1,795 @@
+{
+  "common": {
+    "loading": "Naglo-load...",
+    "error": "Mali",
+    "success": "Tagumpay",
+    "cancel": "Kanselahin",
+    "confirm": "Kumpirmahin",
+    "close": "Isara",
+    "save": "I-save",
+    "delete": "Burahin",
+    "edit": "I-edit",
+    "back": "Balik",
+    "next": "Susunod",
+    "previous": "Nakaraan",
+    "submit": "Isumite",
+    "connect": "Kumonekta",
+    "disconnect": "Idiskonekta",
+    "wallet": "Pitaka",
+    "address": "Tirahan",
+    "balance": "Balanse",
+    "amount": "Halaga",
+    "price": "Presyo",
+    "total": "Kabuuan",
+    "status": "Katayuan",
+    "date": "Petsa",
+    "time": "Oras",
+    "search": "Maghanap",
+    "filter": "Salain",
+    "sort": "Pagbukud-bukurin",
+    "view": "Tingnan",
+    "copy": "Kopyahin",
+    "copied": "Kinopya!",
+    "share": "Ibahagi",
+    "learnMore": "Matuto Nang Higit Pa",
+    "joinNow": "Sumali Ngayon",
+    "claim": "Pag-angkin",
+    "buy": "Bumili",
+    "sell": "Ibenta",
+    "approve": "Aprubahan",
+    "reject": "Tanggihan",
+    "retry": "Subukan muli"
+  },
+  "header": {
+    "nav": {
+      "home": "Tahanan",
+      "claim": "Pag-angkin",
+      "buy": "Bumili",
+      "balance": "Balanse",
+      "staking": "Pagtaya",
+      "about": "Tungkol sa",
+      "whitepaper": "Whitepaper"
+    },
+    "language": "Wika",
+    "selectLanguage": "Pumili ng Wika"
+  },
+  "footer": {
+    "brand": {
+      "name": "Protokol ng PreGVT",
+      "tagline": "Plataporma ng Digital Token",
+      "description": "Ang kauna-unahang PreGVT digital token sa mundo na sumusunod sa mga regulasyon, isang makabagong produktong pinansyal batay sa teknolohiya ng blockchain."
+    },
+    "features": {
+      "secure": "Ligtas",
+      "fast": "Mabilis",
+      "multichain": "Multichain"
+    },
+    "links": {
+      "products": "Mga Produkto",
+      "company": "Kumpanya",
+      "support": "Suporta",
+      "legal": "Legal",
+      "nftMinting": "Paggawa ng NFT",
+      "kolProgram": "Programa ng KOL",
+      "analytics": "Analitika",
+      "aboutUs": "Tungkol sa Amin",
+      "careers": "Mga Karera",
+      "press": "Pindutin",
+      "blogs": "Mga Blog",
+      "helpCenter": "Sentro ng Tulong",
+      "documentation": "Dokumentasyon",
+      "apiReference": "Sanggunian ng API",
+      "contactSupport": "Makipag-ugnayan sa Suporta",
+      "privacyPolicy": "Patakaran sa Pagkapribado",
+      "termsOfService": "Mga Tuntunin ng Serbisyo",
+      "cookiePolicy": "Patakaran sa Cookie",
+      "gdpr": "GDPR"
+    }
+  },
+  "hero": {
+    "title": "Ang Unang Green-AI ETF Token sa Mundo na Sinuportahan ng",
+    "realAssets": "Mga Tunay na Ari-arian",
+    "subtitle": "Ang mga imprastraktura ng solar power at AI compute na sertipikado ng EU ay tokenized at beripikado na ngayon sa chain sa pamamagitan ng Green Garden Protocol (GGP).",
+    "tagline": "Tunay na kuryente. Tunay na ani. Tunay na paglago.",
+    "joinPresale": "Sumali sa Presale",
+    "learnMore": "Matuto Nang Higit Pa",
+    "ticker": {
+      "sold": "{nabenta} / {max} na nabenta ({porsyento}%)",
+      "nextPrice": "Susunod na Presyo {price} sa {time}",
+      "walletsJoined": "{count} mga wallet ang sumali"
+    }
+  },
+  "countdown": {
+    "title": "Pagbibilang ng Presale",
+    "joinNow": "Sumali Ngayon"
+  },
+  "realAsset": {
+    "title": "Tunay na Kapangyarihan. Tunay na mga Ari-arian.",
+    "onChain": "Naka-kadena.",
+    "liveFeed": "Live feed mula sa Jinglong Agrivoltaic Station, Shaanxi — EU-compliant 14.5 MW hybrid solar farm powering AI compute node.",
+    "dataFlowArchitecture": "Arkitektura ng Daloy ng Datos",
+    "steps": {
+      "solarPower": {
+        "title": "Enerhiya ng Araw",
+        "description": "Henerasyon ng photovoltaic mula sa mga sakahan na sertipikado ng EU"
+      },
+      "energyNode": {
+        "title": "Node ng Enerhiya",
+        "description": "Pagkuha at pag-convert ng enerhiya sa totoong oras"
+      },
+      "depinNetwork": {
+        "title": "DePIN Network",
+        "description": "Pag-verify at pamamahagi sa chain"
+      },
+      "aiCompute": {
+        "title": "AI Compute",
+        "description": "Pagpapagana ng mga node ng imprastraktura ng AI"
+      },
+      "tokenYield": {
+        "title": "Token Yield",
+        "description": "Ang tunay na ani ay ipinamamahagi sa mga may hawak ng token"
+      }
+    }
+  },
+  "about": {
+    "valueTitle": "Ang Halaga ng",
+    "valueTitleHighlight": "PreGVT Token",
+    "valueDescription": "Ang PreGVT ang unang dual-listed digital token sa mundo na nagdudugtong sa tradisyonal na pananalapi at blockchain. Inilabas ng PreGVT Group (Fitch A-), ito ay binuo sa Ethereum, bukas sa pampublikong pangangalap ng pondo, at sinusuportahan ng regulated financial credit, na nagmamarka ng isang mahalagang pangyayari sa mga tokenized asset.",
+    "steps": {
+      "step1": {
+        "title": "Hakbang 1: Gumawa ng Account",
+        "description": "Irehistro ang iyong PreGVT account, kumpletuhin ang beripikasyon ng pagkakakilanlan at mga setting ng seguridad"
+      },
+      "step2": {
+        "title": "Hakbang 2: Magdeposito ng Ethereum Chain Tokens (sinusuportahan ng ETH, USDT)",
+        "description": "Ikonekta ang iyong wallet at ideposito ang mga sinusuportahang token para sa pagbili"
+      },
+      "step3": {
+        "title": "Hakbang 3: Makilahok sa Presale at Bumili ng PreGVT",
+        "description": "Piliin ang halaga ng bibilhin, kumpirmahin ang transaksyon at kumpletuhin ang proseso ng pagbili"
+      },
+      "step4": {
+        "title": "Hakbang 4: Pagtatapos ng Pribadong Pagbebenta, Paglilista ng Exchange",
+        "description": "Maghintay hanggang matapos ang pribadong pagbebenta, ang mga token ay ililista sa mga pangunahing palitan"
+      }
+    },
+    "newEraTitle": "Isang Bagong Panahon ng",
+    "newEraTitleHighlight": "Reguladong DeFi",
+    "newEraDescription": "Habang mabilis na umuunlad ang merkado ng cryptocurrency, ang pabagu-bagong pananaw at panganib ay kadalasang nagpapaingat sa mga mamumuhunan—ginagawang \"Wild West\" ng pananalapi ang espasyo. Binabago ng PreGVT Token ang naratibong ito sa pamamagitan ng pagpapakilala ng isang regulated, asset-backed, at high-credit digital token na idinisenyo para sa pangmatagalang katatagan at kumpiyansa ng mamumuhunan. Itinayo batay sa transparency at totoong halaga, minamarkahan nito ang isang bagong panahon ng ligtas, sumusunod sa batas, at kapani-paniwalang digital investment.",
+    "features": {
+      "regulated": {
+        "title": "Regulated & Compliant",
+        "description": "Issued by PreGVT Group with Fitch A- rating, ensuring regulatory compliance and financial credibility"
+      },
+      "backed": {
+        "title": "Asset-Backed",
+        "description": "Backed by real-world assets including EU-certified solar farms and AI compute infrastructure"
+      },
+      "transparent": {
+        "title": "Transparent & Verifiable",
+        "description": "All assets and transactions are verified on-chain, providing full transparency and traceability"
+      },
+      "realAssetAnchoring": {
+        "title": "Pag-angkla ng Tunay na Ari-arian",
+        "description": "Ang bawat PreGVT ay tumutugma sa mga pinagbabatayang totoong asset, hindi sa mga walang kwentang algorithmic stablecoin, na may malinaw na halaga."
+      },
+      "strongCreditBacking": {
+        "title": "Malakas na Suporta sa Kredito",
+        "description": "Ang issuer ay isang ganap na pag-aari ng estado na may mataas na credit rating at garantisadong kakayahang magbayad."
+      },
+      "compliantInnovative": {
+        "title": "100% Sumusunod at Makabago",
+        "description": "Inilabas at nakalista sa publiko ayon sa mga internasyonal na batas at regulasyon, na sumasalamin sa inobasyon sa teknolohiyang pinansyal sa loob ng balangkas ng regulasyon."
+      }
+    },
+    "buyNow": "Bumili Ngayon"
+  },
+  "faq": {
+    "title": "Mga Madalas Itanong",
+    "titleHighlight": "Mga Madalas Itanong",
+    "subtitle": "Pinagsama-sama namin ang mga tanong na pinakamahalaga sa iyo upang matulungan kang mabilis na maunawaan ang mga detalye at proseso ng presale ng PreGVT.",
+    "questions": [
+      {
+        "question": "What is PreGVT?",
+        "answer": "The world's first financial product that combines \"public offering\", \"exchange listing\" and \"RWA digital token\" features. Token name: PreGVT  (PreGVT Coin), issued on the Ethereum public chain."
+      },
+      {
+        "question": "How do I buy PreGVT?",
+        "answer": "PreGVT is currently in presale stage and can only be purchased through the official PreGVT001.com website. Note: Please do not attempt to purchase from Uniswap, Pancakeswap, Raydium or any other platform, as these are unofficial platforms and may involve fraudulent activities."
+      },
+      {
+        "question": "How do I check my purchased token quantity?",
+        "answer": "You can view your purchased token quantity and balance in your created account."
+      },
+      {
+        "question": "How do I claim my tokens?",
+        "answer": "After participating in the purchase, tokens will be displayed in your account balance. After PreGVT is sold out, you can claim your tokens."
+      },
+      {
+        "question": "Does the presale support fiat currency? What are the minimum/maximum purchase amounts?",
+        "answer": "Currently, PreGVT presale does not support fiat currency, only Ethereum (ERC-20) assets. Minimum purchase amount per account is 100 USD, maximum purchase amount is 5000 USD."
+      },
+      {
+        "question": "How to contact the official PreGVT team?",
+        "answer": "You can contact the official email PreGVT001@proton.me or join the official Telegram community to contact administrators."
+      }
+    ]
+  },
+  "buy": {
+    "title": "Bumili ng PreGVT",
+    "subtitle": "Sumali sa presale at i-secure ang iyong mga token",
+    "connectWallet": "Ikonekta ang Wallet",
+    "enterAmount": "Ilagay ang Halaga",
+    "selectAmount": "Pumili ng Halaga",
+    "review": "Pagsusuri",
+    "confirmPurchase": "Kumpirmahin ang Pagbili",
+    "purchasing": "Binibili...",
+    "pricePerToken": "Presyo bawat Token",
+    "minimumReceived": "Minimum na Natanggap",
+    "youWillReceive": "Makakatanggap ka",
+    "tokens": "mga token",
+    "approveToken": "Aprubahan ang Token",
+    "approving": "Inaaprubahan...",
+    "approved": "Naaprubahan",
+    "buyNow": "Bumili Ngayon",
+    "buying": "Bumibili...",
+    "switchChain": "Lumipat sa Binance Smart Chain (BSC)",
+    "insufficientBalance": "Hindi sapat na balanse",
+    "enterValidAmount": "Mangyaring maglagay ng wastong halaga",
+    "connectWalletFirst": "Pakikonekta muna ang iyong wallet",
+    "selfReferralError": "Hindi mo maaaring i-refer ang iyong sarili gamit ang iyong sariling {type}. Mangyaring alisin ang referral ID o gumamit ng iba.",
+    "kolId": "KOL ID",
+    "referralWallet": "Referral Wallet",
+    "optional": "Opsyonal",
+    "reviewPurchase": "Suriin ang Pagbili",
+    "purchaseAmount": "Halaga ng Binili",
+    "youWillPay": "Magbabayad ka",
+    "transactionFee": "Bayad sa Transaksyon",
+    "estimatedGas": "Tinatayang Gas",
+    "confirmTransaction": "Kumpirmahin ang Transaksyon",
+    "transactionPending": "Nakabinbin ang Transaksyon",
+    "transactionSuccess": "Matagumpay ang Transaksyon",
+    "transactionFailed": "Nabigo ang Transaksyon",
+    "checkWallet": "Pakitingnan ang iyong wallet para kumpirmahin ang transaksyon",
+    "approvalSuccess": "Matagumpay ang pag-apruba ng token!",
+    "approvalFailed": "Nabigo ang pag-apruba",
+    "approvalRejected": "Tinanggihan ang pag-apruba. Pakisubukang muli at aprubahan ang transaksyon.",
+    "transactionClosed": "Isinara na ang window ng transaksyon. Pakisubukang muli.",
+    "purchaseSuccess": "Matagumpay ang pagbili!",
+    "purchaseFailed": "Nabigo ang pagbili",
+    "kolLocked": "Naka-lock ang KOL referral. Hindi mo na ito mababago pagkatapos simulan ang pagbili.",
+    "purchaseSuccessDesc": "Matagumpay kang nakabili ng mga token.",
+    "referralId": "ID ng Referral",
+    "locked": "Naka-lock",
+    "copyLink": "Kopyahin ang Link",
+    "walletAddress": "Address ng Wallet",
+    "enterReferralId": "Maglagay ng 6-digit na referral ID o wallet address",
+    "lockedWalletReferral": "Naka-lock: Natukoy ang referral sa wallet",
+    "lockedKolReferral": "Naka-lock: Natukoy ang referral ng KOL",
+    "walletReferral": "Referral sa Wallet",
+    "youreBuying": "Bumibili ka",
+    "pricePerTokenLabel": "Presyo bawat token:",
+    "gasFee": "Bayad sa Gasolina",
+    "slippageUnit": "Yunit ng Pagdulas",
+    "minimumReceivedLabel": "Minimum na natanggap:",
+    "back": "Balik",
+    "processing": "Pinoproseso...",
+    "contractPaused": "Kasalukuyang naka-pause ang kontrata. Pakisubukang muli mamaya.",
+    "presaleInactive": "Hindi aktibo ang presale sa kasalukuyan. Pakisubukang muli mamaya.",
+    "invalidPrice": "Hindi wastong presyo ng token. Paki-refresh at subukang muli.",
+    "amountTooSmall": "Masyadong maliit ang halaga ng token. Mangyaring maglagay ng mas malaking halaga.",
+    "paymentTokenError": "Nabigong makuha ang address ng token ng pagbabayad. Pakisubukang muli.",
+    "approvalRequired": "Kinakailangan ang pag-apruba ng USDT. Awtomatikong magbubukas ang MetaMask...",
+    "selfReferralWarning": "Hindi mo maaaring i-refer ang iyong sarili. Hindi mabibilang ang referral na ito sa iyong mga reward.",
+    "referralNotRecorded": "Hindi naitala ang referral",
+    "walletLinkCopied": "Nakopya na sa clipboard ang referral link ng wallet!",
+    "kolLinkCopied": "Nakopya na ang KOL referral link sa clipboard!",
+    "noReferralToCopy": "Walang referral ID na kokopyahin",
+    "noticeTitle": "Paunawa — Non-Tradeable Token",
+    "noticeMessage": "Ang token na ito ay kasalukuyang hindi maaaring ipagpalit at hindi maaaring ilipat o ibenta hangga't hindi ito opisyal na nakalista. Sa pamamagitan ng pagbili, kinikilala mo na ang token ay naka-lock at inilaan para sa on-chain utility at pamamahagi sa hinaharap lamang. Suriin ang timeline ng listahan ng token at mga tuntunin sa pag-vest sa mga dokumento bago bumili.",
+    "usdt": "USDT"
+  },
+  "claim": {
+    "title": "Kunin ang Iyong mga Token",
+    "subtitle": "Sundin ang mga hakbang para makuha ang iyong mga inilaang token",
+    "step1": {
+      "title": "Sumali sa Aming Mga Social Media",
+      "description": "Sumali sa aming komunidad ng Discord at sundan kami sa X para makapagsimula",
+      "fullTitle": "Hakbang 1: Sumali sa Aming Mga Social Media",
+      "shortDescription": "Sumali sa Discord at Sundan ang X",
+      "joinDiscord": "Sumali sa Komunidad ng Discord",
+      "followX": "Sundan si X para sa mga Update",
+      "afterJoining": "Pagkatapos sumali, pindutin ang mga buton sa itaas para magpatuloy sa beripikasyon"
+    },
+    "step2": {
+      "title": "I-verify ang Pagsali",
+      "description": "Tiyaking sumali ka sa aming Discord at sinundan kami sa X",
+      "shortDescription": "Kumpletong beripikasyon"
+    },
+    "step3": {
+      "title": "Badge ng Pag-angkin",
+      "description": "Kunin ang iyong airdrop badge para magpatuloy sa susunod na hakbang.",
+      "shortDescription": "Kunin ang iyong airdrop badge"
+    },
+    "step4": {
+      "title": "I-redeem ang Alokasyon",
+      "description": "Kunin ang iyong inilaang mga preGVT token.",
+      "shortDescription": "Kunin ang iyong mga preGVT token"
+    },
+    "step5": {
+      "title": "I-redeem ang Badge",
+      "description": "Kumpletuhin ang proseso sa pamamagitan ng pag-redeem ng iyong badge.",
+      "shortDescription": "Kumpletuhin ang proseso"
+    },
+    "connectWallet": "Ikonekta ang Wallet",
+    "verificationComplete": "✓ Kumpleto na ang pag-verify! Maaari ka na ngayong magpatuloy upang i-claim ang iyong badge.",
+    "completeVerifications": "Pakikumpleto ang parehong beripikasyon para magpatuloy",
+    "claimBadge": "Badge ng Pag-angkin",
+    "claimingBadge": "Pag-claim ng Badge...",
+    "badgeClaimed": "Na-claim na ang Badge",
+    "checking": "Sinusuri...",
+    "claimPrice": "Presyo ng Claim: {amount} BNB",
+    "yourAllocation": "Iyong Allocation: {amount} preGVT",
+    "claimAllocation": "Paglalaan ng Claim",
+    "claiming": "Inaangkin...",
+    "allocationClaimed": "Alokasyon na Inaangkin",
+    "balanceCheckFailed": "Nabigo ang Pagsusuri ng Balanse",
+    "insufficientBnbBalance": "Hindi Sapat na Balanse ng BNB",
+    "noAllocation": "Walang Alokasyon",
+    "allocationAvailable": "Available ang Allocation: {amount} preGVT",
+    "noAllocationFound": "Walang natagpuang alokasyon",
+    "checkingAllocation": "Sinusuri ang alokasyon...",
+    "gasFeeRequired": "Kinakailangang Bayad sa Gasolina - Minimum na 0.00005",
+    "redeemBadge": "I-redeem ang Badge",
+    "redeemingBadge": "Pagtubos ng Badge...",
+    "badgeRedeemed": "Natubos na ang Badge",
+    "congratulations": "Binabati kita!",
+    "claimSuccess": "Matagumpay mong na-claim ang iyong mga token!",
+    "error": "Nagkaroon ng error. Pakisubukang muli.",
+    "totalClaimed": "Kabuuang Na-claim",
+    "remainingSupply": "Natitirang Suplay"
+  },
+  "balance": {
+    "title": "Ang Iyong Balanse",
+    "subtitle": "Tingnan ang iyong balanse ng token ng PreGVT at kasaysayan ng transaksyon",
+    "connectWallet": "Ikonekta ang Wallet para makita ang iyong balanse",
+    "preGVTBalance": "Balanseng PreGVT",
+    "pricePerToken": "Presyo bawat Token",
+    "totalValue": "Kabuuang Halaga",
+    "transactionHistory": "Kasaysayan ng Transaksyon",
+    "noTransactions": "Walang nakitang transaksyon",
+    "leaderboard": "Leaderboard",
+    "yourRank": "Ranggo",
+    "redeemed": "Natubos",
+    "accrued": "Naipon",
+    "migration": {
+      "supportTicket": {
+        "title": "Ticket ng Suporta sa Migration",
+        "processTitle": "Proseso ng Paglipat:",
+        "step1": "Gumawa ng support ticket gamit ang iyong wallet address at lumang balanse ng token",
+        "step2": "I-download ang buod ng tiket",
+        "step3": "Ibahagi ang ticket ID sa #support channel sa Discord",
+        "step4": "Maghintay para sa manu-manong pagproseso ng koponan",
+        "checkingBalance": "Sinusuri ang lumang balanse ng token...",
+        "oldPreGVTBalance": "Lumang preGVT Balanse",
+        "walletAddress": "Address ng Wallet",
+        "ticketId": "Ticket ID",
+        "ticketIdPlaceholder": "Mabubuo sa pagsusumite",
+        "createTicket": "Gumawa ng Support Ticket",
+        "creatingTicket": "Gumagawa ng Ticket...",
+        "ticketCreated": "Matagumpay na Nagawa ang Ticket!",
+        "nextSteps": "Mga Susunod na Hakbang:",
+        "nextStep1": "I-post ang mensaheng ito sa #support channel:",
+        "nextStep2": "Mag-attach ng screenshot ng page na ito",
+        "nextStep3": "Maghintay para sa pagproseso ng koponan",
+        "postInSupport": "Mag-post sa #support Channel",
+        "migrationRequest": "Kahilingan sa Paglipat: {ticketId} | Wallet: {address}",
+        "noOldTokensFound": "Walang nakitang lumang preGVT token sa iyong wallet."
+      },
+      "title": "Token Migration",
+      "subtitle": "Ilipat ang iyong mga lumang token sa bagong token",
+      "oldTokenBalance": "Lumang Token Balanse",
+      "newTokenBalance": "Bagong Balanse ng Token",
+      "migrateButton": "I-migrate ang mga Token",
+      "migrating": "Lumilipat...",
+      "checkingStatus": "Sinusuri ang katayuan ng paglilipat...",
+      "checkingBalances": "Sinusuri ang mga balanse...",
+      "migrationEnabled": "Naka-enable ang migration",
+      "migrationDisabled": "Hindi pa pinagana ang paglipat",
+      "alreadyMigrated": "Na-migrate mo na ang iyong mga token",
+      "noOldTokens": "Wala kang anumang lumang token na i-migrate",
+      "migrationSuccess": "Matagumpay ang migrasyon! Na-migrate na ang iyong mga token.",
+      "migrationError": "Nabigo ang paglipat. Pakisubukang muli.",
+      "insufficientGas": "Hindi sapat na gas. Pakitiyak na mayroon kang sapat na BNB para sa transaksyon.",
+      "wrongNetwork": "Mangyaring lumipat sa Binance Smart Chain (BSC) para mag-migrate.",
+      "contractNotConfigured": "Hindi na-configure ang kontrata sa paglilipat. Mangyaring makipag-ugnayan sa suporta.",
+      "migrationInProgress": "Kasalukuyang nagaganap ang paglipat. Mangyaring maghintay...",
+      "checkWallet": "Pakisuri ang iyong wallet para kumpirmahin ang transaksyon",
+      "migrationComplete": "Kumpleto na ang Migration",
+      "oldToken": "Lumang Token",
+      "newToken": "Bagong Token"
+    },
+    "stakingCTA": {
+      "title": "Simulan ang Pag-Stake ng Iyong PreGVT",
+      "description": "Kumita ng mga passive reward sa pamamagitan ng pag-stake ng iyong mga preGVT token. Pumili mula sa mga flexible o fixed-term staking plan na may mga competitive APY rates.",
+      "goToStaking": "Pumunta sa Pahina ng Pag-i-stake"
+    },
+    "balanceFromContract": "Na-load ang balanse mula sa kontrata",
+    "loadingBalance": "Balanseng naglo-load..."
+  },
+  "staking": {
+    "title": "Pagtaya",
+    "subtitle": "I-stake ang iyong mga token at kumita ng mga gantimpala",
+    "connectWallet": "Ikonekta ang Wallet",
+    "selectPlan": "Pumili ng Plano ng Pagtaya",
+    "stakeAmount": "Halaga ng Taya",
+    "enterAmount": "Ilagay ang halagang itataya",
+    "max": "Pinakamataas",
+    "approveToken": "Aprubahan ang Token",
+    "approving": "Inaaprubahan...",
+    "stake": "Istas",
+    "staking": "Pagtaya...",
+    "yourStakes": "Ang Iyong mga Pusta",
+    "pendingRewards": "Mga Nakabinbing Gantimpala",
+    "claimRewards": "Mag-claim ng mga Gantimpala",
+    "unstake": "Tanggalin ang taya",
+    "unstaking": "Pag-alis ng taya...",
+    "lockPeriod": "Panahon ng Pag-lock",
+    "apy": "APY",
+    "minStake": "Pinakamababang Taya",
+    "connectWalletDesc": "Ikonekta ang iyong wallet para magsimulang mag-stake ng mga token",
+    "stakeTokens": "Mga Token ng Stake",
+    "tokenBalance": "Balanse ng Token",
+    "staked": "Naka-stake",
+    "stakedAmount": "Halaga ng Nakataya",
+    "totalEarned": "Kabuuang Kinita",
+    "days": "Mga Araw",
+    "available": "Magagamit",
+    "rewardsReady": "Mayroon ka",
+    "readyToClaim": "handa nang mag-angkin",
+    "claimingDisabled": "Hindi pinagana ang pag-claim hanggang sa ilunsad ang rGGP",
+    "claimDisabled": "Hindi Pinagana ang Pag-claim",
+    "loadingPositions": "Naglo-load ng mga posisyon...",
+    "positionId": "ID ng Posisyon",
+    "lockStatus": "Katayuan ng Pag-lock",
+    "unlocked": "Naka-unlock",
+    "locked": "Naka-lock",
+    "lockEnds": "Mga dulo ng kandado",
+    "noActivePositions": "Walang aktibong posisyon sa pag-stake",
+    "earlyExiting": "Maagang Pag-alis...",
+    "earlyExit": "Maagang Paglabas",
+    "unstakeWarning": "Babala: Pag-alis ng staking",
+    "unstakeWarningDesc": "Malapit mo nang tanggalin ang iyong mga token.",
+    "youWillReceive": "Makakatanggap ka",
+    "unstakeConfirm": "Sigurado ka bang gusto mong magpatuloy? Hindi na maaaring bawiin ang aksyon na ito.",
+    "confirmUnstake": "Kumpirmahin ang Pag-unstake",
+    "earlyExitWarning": "Babala: Parusa sa Maagang Paglabas",
+    "earlyExitWarningDesc": "Malapit mo nang tanggalin ang iyong mga token bago matapos ang panahon ng lock. Pakitandaan ang mga sumusunod:",
+    "penalty": "Parusa (10%)",
+    "penaltyToTreasury": "Ang parusang ito ay ipapadala sa kaban ng bayan",
+    "earlyExitConfirm": "Sigurado ka bang gusto mong magpatuloy? Hindi na maaaring bawiin ang aksyon na ito.",
+    "confirmEarlyExit": "Kumpirmahin ang Maagang Pag-alis",
+    "cancel": "Kanselahin",
+    "loadStakingDataFailed": "Nabigong i-load ang staking data",
+    "connectWalletFirst": "Pakikonekta muna ang iyong wallet",
+    "enterValidAmount": "Mangyaring maglagay ng wastong halaga",
+    "switchChain": "Mangyaring lumipat sa Binance Smart Chain (BSC) sa iyong wallet upang magpatuloy.",
+    "approvalSuccess": "Matagumpay na naaprubahan ang mga token!",
+    "connectWalletAndSelectPlan": "Pakikonekta ang iyong wallet at pumili ng staking plan",
+    "minStakeError": "Ang minimum na halaga ng taya ay",
+    "approveTokensFirst": "Paki-aprubahan muna ang mga token",
+    "stakingFailed": "Nabigo ang Pagtaya",
+    "rewardsClaimed": "Nakuha na ang mga Gantimpala!",
+    "rewardsClaimedDesc": "Ang iyong mga staking rewards ay matagumpay na na-claim at naidagdag na sa iyong wallet.",
+    "claimFailed": "Nabigo ang Paghahabol",
+    "positionLocked": "Naka-lock pa rin ang posisyon. Hindi ka maaaring mag-unstake hangga't hindi natatapos ang lock period.",
+    "unstakingSuccess": "Matagumpay ang Pag-unstaking!",
+    "unstakingSuccessDesc": "Matagumpay na natanggal sa stake ang iyong mga token at naibalik na sa iyong wallet.",
+    "unstakingFailed": "Nabigo ang Pag-alis ng Istaka",
+    "earlyExitSuccess": "Matagumpay ang Maagang Pag-alis!",
+    "earlyExitSuccessDesc": "Maagang natanggal sa stake ang iyong mga token. May 10% na multa na ipinataw at ipinadala na sa treasury.",
+    "earlyExitFailed": "Nabigo ang Maagang Pag-alis"
+  },
+  "campaign": {
+    "title": "Kampanya",
+    "subtitle": "Impormasyon at istatistika ng kampanya"
+  },
+  "disclaimer": {
+    "title": "Pagtatanggi",
+    "message": "Ito ay isang mensahe ng disclaimer. Pakibasang mabuti bago magpatuloy."
+  },
+  "info": {
+    "buyTokens": "Bumili ng mga Token",
+    "valueTitle": "Ang Halaga ng",
+    "valueTitleHighlight": "PreGVT Token",
+    "valueDescription": "Ayon sa kaugalian, ang mga ganitong mataas na kalidad na token ng kredito ng estado ay minomonopolyo ng malalaking institusyon, na nagpapahirap sa mga indibidwal na mamumuhunan na ma-access ang mga ito. Sa pamamagitan ng tokenization, hinahati namin ang nangungunang asset na ito sa mga accessible unit, na nagbibigay-daan sa iyo na maging isang \"shareholder\" ng mga pangunahing asset sa mas mababang threshold at makibahagi sa mga dibidendo ng pag-unlad. Pandaigdigang pasinaya! Nagsimula na ang presale ng PreGVT TOKEN, limitado ang mga puwesto na magagamit, hindi na muling magbubukas ang pagkakataong ito. Kumilos na ngayon upang masiguro ang mga kita sa hinaharap.",
+    "learnMore": "Matuto Nang Higit Pa",
+    "financialDisclaimer": "Pagtatanggi sa Pananalapi",
+    "financialDisclaimerDesc": "Binabalangkas ng pahinang ito ang mga mahahalagang target para sa paglago ng produkto at komunidad. Hindi ito payong pinansyal o pangako ng kita.",
+    "investmentWarning": "Babala sa Pamumuhunan",
+    "investmentWarningDesc": "Binabalangkas ng pahinang ito ang mga mahahalagang target para sa paglago ng produkto at komunidad. Hindi ito payong pinansyal o pangako ng kita.",
+    "targetBands": "Mga Target na Band at Metriks",
+    "targetBandsDesc": "Ang mga target na banda ng presyo ay indikasyon lamang at maaaring mag-adjust depende sa pagkumpleto ng milestone at mga kondisyon ng merkado. Ang lahat ng sukatan ay umaasa sa on-chain data at mga third-party dashboard/audit.",
+    "publicPriceRoute": "Ruta ng Pampublikong Presyo",
+    "tableHeaders": {
+      "stage": "Entablado",
+      "coreEvent": "Pangunahing Kaganapan",
+      "targetBand": "Target na Banda (USD)",
+      "rationale": "Katwiran"
+    },
+    "currentPhase": "Kasalukuyang Yugto",
+    "genesisSeed": "Genesis Seed",
+    "communityEarly": "Maagang Komunidad",
+    "publicFlashSale": "Pampublikong Flash Sale",
+    "phase1Title": "Phase-1 Three-Tier Pre-Sale",
+    "phase1Subtitle": "(Mababang Lumutang, Mataas na Elastisidad)",
+    "progress": "Pag-unlad",
+    "loading": "Naglo-load...",
+    "sold": "naibenta",
+    "remaining": "natitira",
+    "activations": "mga pag-activate",
+    "status": "Katayuan",
+    "presaleActive": "Aktibo ang Presale",
+    "presaleInactive": "Hindi Aktibo ang Presale",
+    "price": "Presyo",
+    "amount": "Halaga",
+    "raise": "Itaas",
+    "purpose": "Layunin",
+    "totals": "Mga Kabuuan",
+    "target": "target",
+    "mainTokenPreview": "Pangunahing Pagtingin sa Token",
+    "fixedPreviewPrice": "Nakapirming Presyo ng Preview · Hindi Nai-tradable",
+    "mainTokenPreviewDesc": "Ang presyong ito para sa preview ay nakakatulong sa mga maagang ahente at mamumuhunan na maunawaan ang target na halaga ng pangunahing token bago ang TGE (Token Generation Event). Hindi ito mula sa LP (liquidity pool), hindi mula sa DexScreener, at hindi konektado sa presyo sa merkado bago ang GVT. Ito ay isang preview na UI-lamang para sa kumpiyansa ng mamumuhunan at mga layunin ng komunikasyon sa ahente.",
+    "leaderboards": "Mga Leaderboard",
+    "kolReferrals": "Mga Referral ng KOL",
+    "buyer": "Mamimili",
+    "claimReferrals": "Mga Referral sa Claim",
+    "activation": "Pag-activate"
+  },
+  "aiYield": {
+    "title": "Mas Malapit Ka Na Ngayon Kaysa Kailanman",
+    "titleHighlight": "Kita sa Enerhiya ng AI",
+    "subtitle": "Hayaang Maging Tunay na Produkto ang Elektrisidad na Nabuo ng AI",
+    "description": "Noong 2025, ang mga U.S. AI Power ETF ay naghatid ng >48% taunang kita. Ngayon, sa unang pagkakataon, maaari mo nang ariin ang pinagmulan — mga totoong AI power node na naka-token sa chain.",
+    "yieldLoop": "Ang Yield Loop",
+    "step1": "Bumili ng preGVT",
+    "step2": "Istas",
+    "step3": "Kumita ng rGGP",
+    "step4": "Pagpapalakas ng NFT",
+    "step5": "I-redeem ang 1:1 para sa GVT",
+    "step6": "Muling pagtaya",
+    "step7": "Ulitin"
+  },
+  "community": {
+    "title": "Pandaigdigang Komunidad na Pinapagana ng AI at Green Energy",
+    "activeWallets": "2,351 aktibong wallet",
+    "fromCountries": "mula sa 47 na bansa",
+    "missions": "Zealy / Galxe na mga misyon",
+    "missionsDesc": "Kumpletuhin ang mga gawain para kumita ng preGVT",
+    "topReferrers": "Nangungunang 100 Referrer",
+    "topReferrersDesc": "Makakuha ng mga eksklusibong NFT + rGGP airdrop na bonus"
+  },
+  "roadmap": {
+    "title": "Roadmap ng PreGVT",
+    "titleHighlight": "PreGVT",
+    "description": "Ipinapakita ng roadmap na ito ang kahanga-hangang paglalakbay ng PreGVT mula sa paunang seed funding, unti-unting paglago, hanggang sa ganap na integrasyon sa mga pangunahing pamilihan sa pananalapi. Ang yugto ng pre-token ay para sa pamumuhunan sa GVT (Global Value Token), habang ang rGGP ay nananatiling ecosystem reward token para sa mga may hawak ng NFT at mga insentibo sa komunidad. Kung mas maaga kang lumahok, mas malaki ang potensyal na kita. Isasagawa ang pampublikong alok sa mga pangunahing pandaigdigang palitan ng cryptocurrency (Binance, Coinbase, OKX, Bybit), habang tinitiyak na ang pinagbabatayang RWA asset pool ay ganap na naitatag at nagsisimulang makabuo ng matatag na kita.",
+    "q3Title": "Inilunsad ang RWA Digital Token PreGVT",
+    "q3Desc": "Matagumpay na inilunsad ng AGV protocol ang isang presale digital token sa BSC chain sa Hong Kong. Pangalan ng token: preGVT. Ang pre-token na ito ay kumakatawan sa direktang ruta ng pamumuhunan patungo sa GVT. (Green Value token).",
+    "q4Title": "Pampublikong Presale ng PreGVT",
+    "q4Desc": "Magsisimula ang presale mula sa seed round sa $0.005 hanggang sa presyong ilunsad na $0.15 sa Q4 2025! Ito ay isang malinaw na landas sa pagtuklas ng halaga para sa ruta ng pamumuhunan ng preGVT → GVT. Ang desisyon na gagawin mo ngayon ay tutukoy sa iyong panimulang punto sa paglalakbay na ito.",
+    "q1Title": "Paglulunsad ng PreGVT at Higit Pa",
+    "q1Desc": "Ang Q1 2026 ang magiging pinakamaluwalhating milestone sa aming paglalakbay, habang kinukumpleto namin ang huling hakbang mula sa pribadong pagbebenta patungo sa pampublikong listahan, sinisimulan ang pangangalakal, at binubuksan ang isang bagong kabanata. Ang mga PreGVT token ay magiging GVT, habang ang rGGP ay nananatiling ecosystem reward token para sa mga may hawak ng NFT at mga insentibo sa komunidad."
+  },
+  "institutionalProof": {
+    "title": "Antas ng Institusyon",
+    "titleHighlight": "Transparency",
+    "metric": "Metriko",
+    "rmb": "RMB (¥)",
+    "usd": "USD ($)",
+    "notes": "Mga Tala",
+    "fixedAssets": "Mga Nakapirming Ari-arian",
+    "netAssets": "Mga Netong Ari-arian",
+    "netProfitYTD": "Netong Kita YTD"
+  },
+  "stakingPlans": {
+    "title": "Mga Plano sa Pag-stake — Flex at Vault Nodes",
+    "subtitle": "Piliin ang iyong estratehiya sa pag-stake at simulang kumita ng tunay na kita mula sa imprastraktura ng AI power",
+    "table": {
+      "type": "Uri",
+      "lockPeriod": "Panahon ng Pag-lock",
+      "apyReturnMode": "APY / Paraan ng Pagbabalik",
+      "rewardsPerks": "Mga Gantimpala at Perk"
+    },
+    "plans": {
+      "standard": {
+        "type": "Karaniwang Node",
+        "lockPeriod": "30 Araw",
+        "returnMode": "sa Maturity",
+        "rewards": "Prayoridad sa Airdrop"
+      },
+      "threeMonth": {
+        "type": "3 Buwang Vault",
+        "lockPeriod": "90 Araw",
+        "returnMode": "Buwanang Linya",
+        "rewards": "Pag-access sa Tungkulin ng OG"
+      },
+      "sixMonth": {
+        "type": "6 na Buwang Vault",
+        "lockPeriod": "180 Araw",
+        "returnMode": "Buwanang Linya",
+        "rewards": "Dagdag na rGGP Airdrop"
+      },
+      "twelveMonth": {
+        "type": "12 Buwang Vault (Whitelist)",
+        "lockPeriod": "360 Araw",
+        "returnMode": "Phase + Auto-Reinvest",
+        "rewards": "Eksklusibong Pag-access sa Vault",
+        "perks": "Mga Benepisyo ng Priority Listing"
+      }
+    },
+    "smallPrint": "Lahat ng staking na kontrata ay na-audit | Ibinahagi ang mga gantimpala sa rGGP | Magbubukas ang whitelist ng Vault pagkatapos makumpleto ang Tier-1.",
+    "cta": "Sumali Ngayon — Huwag Palampasin ang Panghuling Presale Window"
+  },
+  "claimFOMOBanner": {
+    "title": "20,000 Wallets Inilapat — I-claim ang Iyong Airdrop Ngayon (48 Oras Lang)",
+    "description": "Tanging mga beripikadong wallet lamang ang maaaring mag-claim. Kumpletuhin ang mga hakbang sa ibaba."
+  },
+  "discordVerificationModal": {
+    "title": "Pag-verify ng Discord",
+    "description": "Bago mag-verify, siguraduhing nakasali ka na sa aming Discord server.",
+    "proceed": "Magpatuloy sa Pag-verify",
+    "joinCommunity": "Sumali muna sa Komunidad",
+    "cancel": "Kanselahin"
+  },
+  "socialVerification": {
+    "title": "Pag-verify sa Lipunan",
+    "followX": "Sundan si X",
+    "joinDiscord": "Sumali sa Discord",
+    "verified": "✓ Na-verify",
+    "notVerified": "Hindi Na-verify",
+    "checking": "Sinusuri...",
+    "joinDiscordButton": "Sumali sa Discord",
+    "followingX": "✓ Sumusunod sa X",
+    "followNow": "Sundan Ngayon",
+    "verifyAgain": "I-verify Muli"
+  },
+  "walletConnect": {
+    "addressCopied": "Nakopya ang address sa clipboard",
+    "openingMetaMask": "Binubuksan ang MetaMask...",
+    "openingTrustWallet": "Binubuksan ang Trust Wallet...",
+    "openingCoinbase": "Binubuksan ang Coinbase Wallet...",
+    "quickConnect": "Mabilis na Koneksyon (Mobile)",
+    "openInMetaMask": "Buksan sa MetaMask",
+    "openInTrustWallet": "Buksan sa Trust Wallet",
+    "openInCoinbase": "Buksan sa Coinbase Wallet",
+    "orUseWalletConnect": "O kaya gamitin ang WalletConnect",
+    "useWalletConnect": "Gamitin ang WalletConnect",
+    "connectWallet": "Ikonekta ang Wallet",
+    "connectViaWalletConnect": "Kumonekta gamit ang WalletConnect",
+    "connectYourWallet": "Ikonekta ang Iyong Wallet",
+    "scanWithWallet": "I-scan gamit ang iyong wallet",
+    "useWalletConnectScan": "Gamitin ang WalletConnect para i-scan ang QR code",
+    "connectToPreGVT": "Kumonekta sa PreGVT",
+    "choosePreferredWallet": "Piliin ang iyong paboritong pitaka",
+    "walletNotConnected": "Hindi Nakakonekta ang Wallet",
+    "connectWalletToStart": "Ikonekta ang iyong wallet para simulan ang paggamit ng PreGVT",
+    "walletConnected": "Nakakonekta ang Wallet",
+    "on": "sa"
+  },
+  "stickyDisclaimer": {
+    "top": {
+      "title": "Paunawa sa Maagang Pag-access",
+      "description": "Ito ay isang maagang pag-access na nakabatay sa milestone. Ang mga target band ay nag-aadjust habang naa-unlock ang mga sukatan. Mangyaring DYOR."
+    },
+    "bottom": {
+      "title": "Sistemang Transparent",
+      "description": "Gumagamit kami ng isang malinaw at napapatunayang sistema ng mga milestone. 72 oras na abiso bago ang mga pagbabago."
+    }
+  },
+  "disclaimerBanner": {
+    "top": {
+      "title": "Maagang Pag-access na Pinapatakbo ng Milestone",
+      "description": "Ito ay isang maagang pag-access na nakabatay sa milestone. Ang mga target band ay nag-aadjust habang naa-unlock ang mga pampublikong sukatan; paki-DYOR. Ang mga ipinapakitang saklaw ay mga target band. Ang mga Tier ay nag-a-unlock at maaaring mag-adjust batay sa on-chain data at mga third-party dashboard. Anumang hindi nabentang halaga ay maaaring mapunta sa susunod na tier."
+    },
+    "bottom": {
+      "title": "Sistema ng Transparent Milestone",
+      "description": "Gumagamit kami ng isang malinaw at napapatunayang sistema ng milestone. Kapag naabot na ang mga itinakdang limitasyon (mga wallet/gawain/pakikipagsosyo/awdit, atbp.), magbubukas ang susunod na tier at uusad ang target band. Para sa kalinawan, naglalabas kami ng 72 oras na abiso bago ang mga pagbabago."
+    },
+    "showMore": "Magpakita pa",
+    "showLess": "Ipakita nang mas kaunti"
+  },
+  "leaderboard": {
+    "buyerLeaderboard": "Leaderboard ng Mamimili",
+    "referralLeaderboard": "Leaderboard ng Referral",
+    "activationLeaderboard": "Leaderboard ng Pag-activate",
+    "kolReferralLeaderboard": "Leaderboard ng Referral ng KOL",
+    "claimReferralLeaderboard": "Leaderboard ng Referral sa Paghahabol",
+    "leaderboard": "Leaderboard",
+    "rank": "Ranggo",
+    "wallet": "Pitaka",
+    "address": "Tirahan",
+    "totalPurchased": "Kabuuang Binili",
+    "purchases": "Mga Binili",
+    "referralTime": "Referral Time",
+    "totalEarned": "Total Earned",
+    "redeemed": "Redeemed",
+    "accrued": "Accrued",
+    "activated": "Activated",
+    "numberOfReferrals": "Number of Referrals",
+    "totalAmount": "Total Amount",
+    "referrals": "Referrals",
+    "loading": "Loading leaderboard...",
+    "noEntries": "No entries yet"
+  },
+  "fomoSection": {
+    "title": "Limited Supply. Next Price Tier Approaching.",
+    "soldProgress": "{sold} / {max} Nabenta ({percentage}%)",
+    "nextRound": "Susunod na Round → {price} sa {hours}h {minute}m",
+    "ctaButton": "Sumali Ngayon — Huwag Palampasin ang Panghuling Presale Window",
+    "livePurchaseFeed": "Live Purchase Feed",
+    "purchaseNotification": "Kakabili lang ng {amount} ng Wallet {wallet} preGVT",
+    "waitingForPurchases": "Waiting for purchases..."
+  },
+  "newsletterSection": {
+    "title": "Our Newsletter",
+    "subtitle": "Stay updated with our latest news",
+    "description": "Don't want to miss the historic moment of global financial innovation? Please leave your email address to subscribe to exclusive PreGVT TOKEN updates.",
+    "signupTitle": "Signup For Newsletter",
+    "emailPlaceholder": "Enter your email address",
+    "subscribeButton": "Subscribe Now",
+    "subscriptionSuccess": "✅ Matagumpay ang subscription! Salamat sa iyong pansin."
+  },
+  "migration": {
+    "supportTicket": {
+      "title": "Tiket ng Suporta sa Migrasyon",
+      "processTitle": "Proseso ng Migrasyon:",
+      "step1": "Gumawa ng support ticket gamit ang address ng iyong wallet at lumang token balance",
+      "step2": "I-download ang buod ng tiket",
+      "step3": "Ibahagi ang ticket ID sa #support channel sa Discord",
+      "step4": "Maghintay para sa manu-manong pagproseso ng koponan",
+      "checkingBalance": "Sinusuri ang lumang balanse ng token...",
+      "oldPreGVTBalance": "Lumang Balanse ng preGVT",
+      "walletAddress": "Address ng Wallet",
+      "ticketId": "ID ng Tiket",
+      "ticketIdPlaceholder": "Mabubuo sa oras ng pagsusumite",
+      "createTicket": "Gumawa ng Tiket ng Suporta",
+      "creatingTicket": "Gumagawa ng Tiket...",
+      "ticketCreated": "Matagumpay na Nalikha ang Tiket!",
+      "nextSteps": "Mga Susunod na Hakbang:",
+      "nextStep1": "I-post ang mensaheng ito sa #support channel:",
+      "nextStep2": "Maglakip ng screenshot ng pahinang ito",
+      "nextStep3": "Maghintay para sa pagproseso ng koponan",
+      "postInSupport": "Mag-post sa #support Channel",
+      "migrationRequest": "Kahilingan sa Paglipat: {ticketId} | Wallet: {address}",
+      "noOldTokensFound": "Walang nakitang lumang preGVT token sa iyong wallet."
+    },
+    "title": "Paglipat ng Token",
+    "subtitle": "Ilipat ang iyong mga lumang token sa bagong token",
+    "introCopy": "Ilipat ang iyong preGVT token sa aming bagong na-audit at na-deploy na vpreGVT (vested pre governance token). Narito ang isa sa aming maraming pagsisikap upang matiyak ang ligtas at sumusunod sa mga regulasyon ng pamamahagi ng token.",
+    "connectWallet": "Ikonekta ang iyong Wallet para makita ang iyong balanse at ilipat ang mga token",
+    "preGVTBalance": "Ang iyong preGVT Balance",
+    "loadingBalance": "Balanseng naglo-load...",
+    "balanceFromContract": "Na-load ang balanse mula sa kontrata",
+    "noPreGVTTokens": "Wala kang anumang preGVT token na maaaring ilipat",
+    "oldTokenBalance": "Lumang Balanse ng Token",
+    "newTokenBalance": "Bagong Balanse ng Token",
+    "migrateButton": "Ilipat ang mga Token",
+    "migrating": "Naglilipat...",
+    "checkingStatus": "Sinusuri ang katayuan ng paglipat...",
+    "checkingBalances": "Sinusuri ang mga balanse...",
+    "migrationEnabled": "Naka-enable ang paglipat",
+    "migrationDisabled": "Hindi pa pinagana ang paglipat",
+    "alreadyMigrated": "Nailipat mo na ang iyong mga token",
+    "noOldTokens": "Wala kang anumang lumang token na maililipat",
+    "migrationSuccess": "Matagumpay ang paglipat! Nailipat na ang iyong mga token.",
+    "migrationError": "Nabigo ang paglipat. Pakisubukang muli.",
+    "insufficientGas": "Kulang ang gasolina. Pakitiyak na mayroon kang sapat na BNB para sa transaksyon.",
+    "wrongNetwork": "Mangyaring lumipat sa Binance Smart Chain (BSC) para lumipat.",
+    "contractNotConfigured": "Hindi na-configure ang kontrata ng paglipat. Mangyaring makipag-ugnayan sa suporta.",
+    "migrationInProgress": "Kasalukuyang isinasagawa ang paglipat. Mangyaring maghintay...",
+    "checkWallet": "Pakitingnan ang iyong wallet para kumpirmahin ang transaksyon",
+    "migrationComplete": "Kumpleto na ang Paglipat",
+    "oldToken": "Lumang Token",
+    "newToken": "Bagong Token"
+  }
+}

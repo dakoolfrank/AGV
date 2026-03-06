@@ -1,0 +1,795 @@
+{
+  "common": {
+    "loading": "載入中...",
+    "error": "錯誤",
+    "success": "成功",
+    "cancel": "取消",
+    "confirm": "確認",
+    "close": "關閉",
+    "save": "節省",
+    "delete": "刪除",
+    "edit": "編輯",
+    "back": "後退",
+    "next": "下一個",
+    "previous": "以前的",
+    "submit": "提交",
+    "connect": "連接",
+    "disconnect": "斷開",
+    "wallet": "錢包",
+    "address": "地址",
+    "balance": "平衡",
+    "amount": "數量",
+    "price": "價格",
+    "total": "全部的",
+    "status": "地位",
+    "date": "日期",
+    "time": "時間",
+    "search": "搜尋",
+    "filter": "篩選",
+    "sort": "種類",
+    "view": "看法",
+    "copy": "複製",
+    "copied": "已複製！",
+    "share": "分享",
+    "learnMore": "了解更多",
+    "joinNow": "立即加入",
+    "claim": "宣稱",
+    "buy": "買",
+    "sell": "賣",
+    "approve": "核准",
+    "reject": "拒絕",
+    "retry": "重試"
+  },
+  "header": {
+    "nav": {
+      "home": "家",
+      "claim": "宣稱",
+      "buy": "買",
+      "balance": "平衡",
+      "staking": "質押",
+      "about": "關於",
+      "whitepaper": "白皮書"
+    },
+    "language": "語言",
+    "selectLanguage": "選擇語言"
+  },
+  "footer": {
+    "brand": {
+      "name": "PreGVT 方案",
+      "tagline": "數位代幣平台",
+      "description": "全球首個符合 PreGVT 標準的數位代幣，這是一款基於區塊鏈技術的創新金融產品。"
+    },
+    "features": {
+      "secure": "安全的",
+      "fast": "快速地",
+      "multichain": "多鏈"
+    },
+    "links": {
+      "products": "產品",
+      "company": "公司",
+      "support": "支援",
+      "legal": "合法的",
+      "nftMinting": "NFT鑄造",
+      "kolProgram": "KOL項目",
+      "analytics": "分析",
+      "aboutUs": "關於我們",
+      "careers": "職業生涯",
+      "press": "按",
+      "blogs": "部落格",
+      "helpCenter": "幫助中心",
+      "documentation": "文件",
+      "apiReference": "API 參考",
+      "contactSupport": "聯絡客服",
+      "privacyPolicy": "隱私權政策",
+      "termsOfService": "服務條款",
+      "cookiePolicy": "Cookie政策",
+      "gdpr": "GDPR"
+    }
+  },
+  "hero": {
+    "title": "全球首個由…支援的綠色人工智慧ETF代幣",
+    "realAssets": "實體資產",
+    "subtitle": "歐盟認證的太陽能和人工智慧運算基礎設施現在透過 Green Garden Protocol (GGP) 進行代幣化和鏈上驗證。",
+    "tagline": "真正的電力。真正的產量。真正的增長。",
+    "joinPresale": "加入預售",
+    "learnMore": "了解更多",
+    "ticker": {
+      "sold": "已售出 / 最大已售出 (百分比%)",
+      "nextPrice": "下一個價格 {price} 在 {time}",
+      "walletsJoined": "已加入的錢包數量為 {count} 個"
+    }
+  },
+  "countdown": {
+    "title": "預售倒數計時",
+    "joinNow": "立即加入"
+  },
+  "realAsset": {
+    "title": "真正的實力。真正的資產。",
+    "onChain": "鏈上。",
+    "liveFeed": "來自陝西京龍農光電站的即時畫面——符合歐盟標準的 14.5 MW 混合太陽能電站為 AI 計算節點供電。",
+    "dataFlowArchitecture": "資料流架構",
+    "steps": {
+      "solarPower": {
+        "title": "太陽能",
+        "description": "來自歐盟認證農場的光伏發電"
+      },
+      "energyNode": {
+        "title": "能量節點",
+        "description": "即時能量捕獲和轉換"
+      },
+      "depinNetwork": {
+        "title": "DePIN 網路",
+        "description": "鏈上驗證和分發"
+      },
+      "aiCompute": {
+        "title": "人工智慧運算",
+        "description": "為人工智慧基礎設施節點供電"
+      },
+      "tokenYield": {
+        "title": "代幣殖利率",
+        "description": "分配給代幣持有者的實際收益"
+      }
+    }
+  },
+  "about": {
+    "valueTitle": "價值",
+    "valueTitleHighlight": "PreGVT 代幣",
+    "valueDescription": "PreGVT是全球首個連接傳統金融和區塊鏈的雙重上市數位代幣。它由PreGVT集團（惠譽評級A-）發行，基於以太坊構建，面向公眾開放募資，並由受監管的金融信貸支持，標誌著代幣化資產發展的一個里程碑。",
+    "steps": {
+      "step1": {
+        "title": "第一步：建立帳戶",
+        "description": "註冊您的 PreGVT 帳戶，完成身份驗證和安全性設置"
+      },
+      "step2": {
+        "title": "步驟二：存入以太幣鏈代幣（支援ETH、USDT）",
+        "description": "連接您的錢包並存入支援的代幣以進行購買"
+      },
+      "step3": {
+        "title": "步驟 3：參與預售並購買 PreGVT",
+        "description": "選擇購買金額，確認交易並完成購買流程"
+      },
+      "step4": {
+        "title": "第四步：私下交易結束，轉為交易所上市",
+        "description": "等待私募結束後，代幣將在主要交易所上市。"
+      }
+    },
+    "newEraTitle": "一個新時代",
+    "newEraTitleHighlight": "受監管的去中心化金融",
+    "newEraDescription": "隨著加密貨幣市場的快速發展，波動性和風險往往令投資者謹慎行事，使該領域淪為許多人眼中的金融「蠻荒西部」。 PreGVT Token 的出現改變了這一局面，它是一種受監管、資產支持且信用評級高的數位代幣，旨在實現長期穩定性並增強投資者信心。 PreGVT Token 基於透明度和實際價值，標誌著安全、合規且可信的數位投資新時代的到來。",
+    "features": {
+      "regulated": {
+        "title": "Regulated & Compliant",
+        "description": "Issued by PreGVT Group with Fitch A- rating, ensuring regulatory compliance and financial credibility"
+      },
+      "backed": {
+        "title": "Asset-Backed",
+        "description": "Backed by real-world assets including EU-certified solar farms and AI compute infrastructure"
+      },
+      "transparent": {
+        "title": "Transparent & Verifiable",
+        "description": "All assets and transactions are verified on-chain, providing full transparency and traceability"
+      },
+      "realAssetAnchoring": {
+        "title": "實物資產錨定",
+        "description": "每個 PreGVT 都對應著具有明確價值的底層真實資產，而不是毫無價值的演算法穩定幣。"
+      },
+      "strongCreditBacking": {
+        "title": "雄厚的信用支持",
+        "description": "發行方是國營獨資企業，信用評等高，償付能力有保障。"
+      },
+      "compliantInnovative": {
+        "title": "100% 合規且具創新性",
+        "description": "根據國際法律法規發行並公開上市，體現了監理框架內的金融科技創新。"
+      }
+    },
+    "buyNow": "立即購買"
+  },
+  "faq": {
+    "title": "常見問題解答",
+    "titleHighlight": "常問問題",
+    "subtitle": "我們整理了您最關心的問題，以幫助您快速了解 PreGVT 的預售詳情和流程。",
+    "questions": [
+      {
+        "question": "What is PreGVT?",
+        "answer": "The world's first financial product that combines \"public offering\", \"exchange listing\" and \"RWA digital token\" features. Token name: PreGVT  (PreGVT Coin), issued on the Ethereum public chain."
+      },
+      {
+        "question": "How do I buy PreGVT?",
+        "answer": "PreGVT is currently in presale stage and can only be purchased through the official PreGVT001.com website. Note: Please do not attempt to purchase from Uniswap, Pancakeswap, Raydium or any other platform, as these are unofficial platforms and may involve fraudulent activities."
+      },
+      {
+        "question": "How do I check my purchased token quantity?",
+        "answer": "You can view your purchased token quantity and balance in your created account."
+      },
+      {
+        "question": "How do I claim my tokens?",
+        "answer": "After participating in the purchase, tokens will be displayed in your account balance. After PreGVT is sold out, you can claim your tokens."
+      },
+      {
+        "question": "Does the presale support fiat currency? What are the minimum/maximum purchase amounts?",
+        "answer": "Currently, PreGVT presale does not support fiat currency, only Ethereum (ERC-20) assets. Minimum purchase amount per account is 100 USD, maximum purchase amount is 5000 USD."
+      },
+      {
+        "question": "How to contact the official PreGVT team?",
+        "answer": "You can contact the official email PreGVT001@proton.me or join the official Telegram community to contact administrators."
+      }
+    ]
+  },
+  "buy": {
+    "title": "購買 PreGVT",
+    "subtitle": "參與預售，鎖定您的代幣",
+    "connectWallet": "連接錢包",
+    "enterAmount": "請輸入金額",
+    "selectAmount": "選擇金額",
+    "review": "審查",
+    "confirmPurchase": "確認購買",
+    "purchasing": "購買...",
+    "pricePerToken": "每個代幣的價格",
+    "minimumReceived": "最低收款",
+    "youWillReceive": "您將收到",
+    "tokens": "代幣",
+    "approveToken": "批准令牌",
+    "approving": "批准…",
+    "approved": "得到正式認可的",
+    "buyNow": "立即購買",
+    "buying": "購物…",
+    "switchChain": "切換到幣安智能鏈（BSC）",
+    "insufficientBalance": "平衡不足",
+    "enterValidAmount": "請輸入有效金額",
+    "connectWalletFirst": "請先連接您的錢包。",
+    "selfReferralError": "您不能使用自己的{type}進行推薦。請移除推薦ID或使用其他推薦ID。",
+    "kolId": "KOL ID",
+    "referralWallet": "推薦錢包",
+    "optional": "選修的",
+    "reviewPurchase": "評論購買",
+    "purchaseAmount": "購買金額",
+    "youWillPay": "您將支付",
+    "transactionFee": "交易費",
+    "estimatedGas": "預計氣體",
+    "confirmTransaction": "確認交易",
+    "transactionPending": "交易待處理",
+    "transactionSuccess": "交易成功",
+    "transactionFailed": "交易失敗",
+    "checkWallet": "請查看您的錢包以確認交易。",
+    "approvalSuccess": "代幣審批成功！",
+    "approvalFailed": "審批失敗",
+    "approvalRejected": "交易審批被拒絕。請重試並批准交易。",
+    "transactionClosed": "交易視窗已關閉，請稍後再試。",
+    "purchaseSuccess": "購買成功！",
+    "purchaseFailed": "購買失敗",
+    "kolLocked": "KOL推薦連結已鎖定。購買開始後無法更改。",
+    "purchaseSuccessDesc": "您已成功購買代幣。",
+    "referralId": "推薦人 ID",
+    "locked": "已鎖定",
+    "copyLink": "複製連結",
+    "walletAddress": "錢包地址",
+    "enterReferralId": "輸入6位數的推薦碼或錢包位址",
+    "lockedWalletReferral": "已鎖定：偵測到錢包推薦",
+    "lockedKolReferral": "已鎖定：偵測到 KOL 轉介",
+    "walletReferral": "錢包推薦",
+    "youreBuying": "你在買",
+    "pricePerTokenLabel": "每個代幣的價格：",
+    "gasFee": "瓦斯費",
+    "slippageUnit": "滑移單元",
+    "minimumReceivedLabel": "最低收入：",
+    "back": "後退",
+    "processing": "加工...",
+    "contractPaused": "合約目前已暫停，請稍後再試。",
+    "presaleInactive": "預售目前尚未開始，請稍後再試。",
+    "invalidPrice": "代幣價格無效。請刷新頁面後重試。",
+    "amountTooSmall": "代幣金額太小，請輸入更大的金額。",
+    "paymentTokenError": "取得支付令牌地址失敗，請重試。",
+    "approvalRequired": "需要 USDT 批准。 MetaMask 將自動開啟…",
+    "selfReferralWarning": "您不能推薦自己。此次推薦不會計入您的獎勵。",
+    "referralNotRecorded": "未記錄轉診資訊",
+    "walletLinkCopied": "錢包推薦連結已複製到剪貼簿！",
+    "kolLinkCopied": "KOL推薦連結已複製到剪貼簿！",
+    "noReferralToCopy": "沒有可複製的推薦 ID",
+    "noticeTitle": "注意事項－不可交易代幣",
+    "noticeMessage": "該代幣目前不可交易，在正式上線前不得轉讓或出售。購買即表示您確認該代幣已被鎖定，僅用於鏈上功能和未來分發。購買前，請務必查看文件中的代幣上線時間表和歸屬條款。",
+    "usdt": "美元"
+  },
+  "claim": {
+    "title": "領取您的代幣",
+    "subtitle": "依照步驟領取您分配的代幣",
+    "step1": {
+      "title": "第一步：連接錢包",
+      "description": "連接您的錢包即可開始使用",
+      "fullTitle": "第一步：加入我們的社群媒體",
+      "shortDescription": "加入 Discord 並關注 X",
+      "joinDiscord": "加入 Discord 社區",
+      "followX": "關注 X 以獲取最新消息",
+      "afterJoining": "加入後，點擊上方按鈕進行驗證"
+    },
+    "step2": {
+      "title": "步驟 2：驗證加入",
+      "description": "請確認您已加入我們的 Discord 伺服器並追蹤了我們的 X 帳號。",
+      "shortDescription": "完整驗證"
+    },
+    "step3": {
+      "title": "步驟 3：領取徽章",
+      "description": "領取空投徽章以進入下一步。",
+      "shortDescription": "取得空投徽章"
+    },
+    "step4": {
+      "title": "步驟 4：兌換分配",
+      "description": "領取您已分配的 preGVT 代幣。",
+      "shortDescription": "領取您的 preGVT 代幣"
+    },
+    "step5": {
+      "title": "第五步：兌換徽章",
+      "description": "完成此流程，請兌換您的徽章。",
+      "shortDescription": "完成該過程"
+    },
+    "connectWallet": "連接錢包",
+    "verificationComplete": "✓ 驗證完成！現在您可以領取您的徽章了。",
+    "completeVerifications": "請完成這兩項驗證以繼續",
+    "claimBadge": "領取徽章",
+    "claimingBadge": "領取徽章…",
+    "badgeClaimed": "徽章已領取",
+    "checking": "檢查...",
+    "claimPrice": "索賠價格：{amount} BNB",
+    "yourAllocation": "您的分配額：{amount} preGVT",
+    "claimAllocation": "索賠分配",
+    "claiming": "聲稱…",
+    "allocationClaimed": "已申請分配",
+    "balanceCheckFailed": "餘額檢定失敗",
+    "insufficientBnbBalance": "BNB餘額不足",
+    "noAllocation": "未分配",
+    "allocationAvailable": "可用分配額：{amount} preGVT",
+    "noAllocationFound": "未找到分配",
+    "checkingAllocation": "正在檢查分配情況…",
+    "gasFeeRequired": "需繳瓦斯費 - 最低 0.00005",
+    "redeemBadge": "兌換徽章",
+    "redeemingBadge": "贖罪徽章…",
+    "badgeRedeemed": "徽章已兌換",
+    "congratulations": "恭喜！",
+    "claimSuccess": "您已成功領取代幣！",
+    "error": "發生錯誤，請重試。",
+    "totalClaimed": "索賠總額",
+    "remainingSupply": "剩餘供應"
+  },
+  "balance": {
+    "title": "您的餘額",
+    "subtitle": "查看您的 PreGVT 代幣餘額和交易記錄",
+    "connectWallet": "連接錢包以查看餘額",
+    "preGVTBalance": "PreGVT 平衡",
+    "pricePerToken": "每個代幣的價格",
+    "totalValue": "總價值",
+    "transactionHistory": "交易歷史記錄",
+    "noTransactions": "未發現交易記錄",
+    "leaderboard": "排行榜",
+    "yourRank": "秩",
+    "redeemed": "已贖回",
+    "accrued": "累計",
+    "migration": {
+      "supportTicket": {
+        "title": "遷移支援工單",
+        "processTitle": "遷移過程：",
+        "step1": "請建立支援工單，並提供您的錢包地址和先前的代幣餘額。",
+        "step2": "下載票務摘要",
+        "step3": "請在 Discord 的 #support 頻道分享您的工單 ID。",
+        "step4": "等待團隊手動處理。",
+        "checkingBalance": "正在檢查舊代幣餘額…",
+        "oldPreGVTBalance": "舊 preGVT 餘額",
+        "walletAddress": "錢包地址",
+        "ticketId": "票號",
+        "ticketIdPlaceholder": "提交後將生成",
+        "createTicket": "建立支援工單",
+        "creatingTicket": "建立工單...",
+        "ticketCreated": "工單創建成功！",
+        "nextSteps": "後續步驟：",
+        "nextStep1": "將此訊息發佈到 #support 頻道：",
+        "nextStep2": "請附上此頁面的螢幕截圖",
+        "nextStep3": "等待團隊處理",
+        "postInSupport": "在 #support 頻道發帖",
+        "migrationRequest": "遷移請求：{ticketId} | 錢包：{address}",
+        "noOldTokensFound": "您的錢包中未找到舊的 preGVT 代幣。"
+      },
+      "title": "令牌遷移",
+      "subtitle": "將舊代幣移轉到新代幣",
+      "oldTokenBalance": "舊代幣餘額",
+      "newTokenBalance": "新的代幣餘額",
+      "migrateButton": "遷移令牌",
+      "migrating": "正在遷移…",
+      "checkingStatus": "正在檢查遷移狀態…",
+      "checkingBalances": "核對餘額…",
+      "migrationEnabled": "已啟用遷移功能",
+      "migrationDisabled": "遷移功能尚未啟用。",
+      "alreadyMigrated": "您已完成令牌遷移。",
+      "noOldTokens": "您沒有任何舊令牌需要遷移",
+      "migrationSuccess": "遷移成功！您的代幣已移轉完畢。",
+      "migrationError": "遷移失敗，請重試。",
+      "insufficientGas": "燃氣不足。請確保您的 BNB 餘額足以完成交易。",
+      "wrongNetwork": "請切換到幣安智能鏈（BSC）進行遷移。",
+      "contractNotConfigured": "遷移合約未配置。請聯絡技術支援。",
+      "migrationInProgress": "遷移正在進行中，請稍候…",
+      "checkWallet": "請查看您的錢包以確認交易。",
+      "migrationComplete": "遷移完成",
+      "oldToken": "舊代幣",
+      "newToken": "新代幣"
+    },
+    "stakingCTA": {
+      "title": "開始質押您的 preGVT",
+      "description": "質押您的 preGVT 代幣即可賺取被動收益。您可以選擇靈活或固定期限的質押方案，享受極具競爭力的年化報酬率 (APY)。",
+      "goToStaking": "前往質押頁面"
+    },
+    "balanceFromContract": "從合約載入的餘額",
+    "loadingBalance": "負載平衡..."
+  },
+  "staking": {
+    "title": "質押",
+    "subtitle": "質押代幣，贏取獎勵",
+    "connectWallet": "連接錢包",
+    "selectPlan": "選擇質押計劃",
+    "stakeAmount": "投注金額",
+    "enterAmount": "輸入投注金額",
+    "max": "最大限度",
+    "approveToken": "批准令牌",
+    "approving": "批准…",
+    "stake": "賭注",
+    "staking": "投資…",
+    "yourStakes": "你的賭注",
+    "pendingRewards": "待發放獎勵",
+    "claimRewards": "領取獎勵",
+    "unstake": "取消抵押",
+    "unstaking": "取消抵押品…",
+    "lockPeriod": "鎖定期",
+    "apy": "APY",
+    "minStake": "最低投注額",
+    "connectWalletDesc": "連接您的錢包即可開始質押代幣",
+    "stakeTokens": "質押代幣",
+    "tokenBalance": "代幣餘額",
+    "staked": "已下注",
+    "stakedAmount": "投注金額",
+    "totalEarned": "總收入",
+    "days": "天",
+    "available": "可用的",
+    "rewardsReady": "你有",
+    "readyToClaim": "準備領取",
+    "claimingDisabled": "rGGP啟動前，聲明功能已停用。",
+    "claimDisabled": "申領已禁用",
+    "loadingPositions": "正在加載位置…",
+    "positionId": "位置 ID",
+    "lockStatus": "鎖定狀態",
+    "unlocked": "已解鎖",
+    "locked": "已鎖定",
+    "lockEnds": "鎖端",
+    "noActivePositions": "沒有活躍的質押頭寸",
+    "earlyExiting": "提前離場…",
+    "earlyExit": "提前離場",
+    "unstakeWarning": "警告：取消質押",
+    "unstakeWarningDesc": "您即將取消質押您的代幣。",
+    "youWillReceive": "您將收到",
+    "unstakeConfirm": "您確定要繼續嗎？此操作無法撤銷。",
+    "confirmUnstake": "確認取消質押",
+    "earlyExitWarning": "警告：提前退出將受到處罰",
+    "earlyExitWarningDesc": "您即將在鎖定期結束前解除代幣質押。請注意以下事項：",
+    "penalty": "罰款（10%）",
+    "penaltyToTreasury": "這筆罰款將上繳國庫。",
+    "earlyExitConfirm": "您確定要繼續嗎？此操作無法撤銷。",
+    "confirmEarlyExit": "確認提前離場",
+    "cancel": "取消",
+    "loadStakingDataFailed": "載入質押資料失敗",
+    "connectWalletFirst": "請先連接您的錢包。",
+    "enterValidAmount": "請輸入有效金額",
+    "switchChain": "請在您的錢包中切換到幣安智能鏈（BSC）以繼續操作。",
+    "approvalSuccess": "代幣成功審核通過！",
+    "connectWalletAndSelectPlan": "請連接您的錢包並選擇質押計劃",
+    "minStakeError": "最低投注額為",
+    "approveTokensFirst": "請先批准代幣",
+    "stakingFailed": "質押失敗",
+    "rewardsClaimed": "獎勵已領！",
+    "rewardsClaimedDesc": "您的質押獎勵已成功領取並添加到您的錢包中。",
+    "claimFailed": "索賠失敗",
+    "positionLocked": "部位仍處於鎖定狀態。鎖定期結束前，您無法解除鎖定。",
+    "unstakingSuccess": "解除抵押成功！",
+    "unstakingSuccessDesc": "您的代幣已成功解除質押並返回您的錢包。",
+    "unstakingFailed": "解除抵押失敗",
+    "earlyExitSuccess": "提前退出成功！",
+    "earlyExitSuccessDesc": "您的代幣已提前解除質押。已處以 10% 的罰款，罰款已上繳國庫。",
+    "earlyExitFailed": "提前退出失敗"
+  },
+  "campaign": {
+    "title": "活動",
+    "subtitle": "競選資訊和統計數據"
+  },
+  "disclaimer": {
+    "title": "免責聲明",
+    "message": "這是一條免責聲明訊息。請在繼續操作前仔細閱讀。"
+  },
+  "info": {
+    "buyTokens": "購買代幣",
+    "valueTitle": "價值",
+    "valueTitleHighlight": "PreGVT 代幣",
+    "valueDescription": "傳統上，此類高品質的國家信用代幣被大型機構壟斷，個人投資者難以參與。透過代幣化，我們將這種頂級資產拆分成易於獲取的單位，讓您以更低的門檻成為核心資產的“股東”，並分享發展紅利。全球首發！ PreGVT 代幣預售開啟，名額有限，機會稍縱即逝。立即行動，鎖定未來收益。",
+    "learnMore": "了解更多",
+    "financialDisclaimer": "財務免責聲明",
+    "financialDisclaimerDesc": "本頁面概述了產品和社區發展的里程碑目標。這並非財務建議，也不構成任何回報承諾。",
+    "investmentWarning": "投資警示",
+    "investmentWarningDesc": "本頁面概述了產品和社區發展的里程碑目標。這並非財務建議，也不構成任何回報承諾。",
+    "targetBands": "目標區間和指標",
+    "targetBandsDesc": "目標價格區間僅供參考，可能會根據里程碑完成情況和市場狀況進行調整。所有指標均基於鏈上數據和第三方儀錶板/審計報告。",
+    "publicPriceRoute": "公共定價途徑",
+    "tableHeaders": {
+      "stage": "階段",
+      "coreEvent": "核心事件",
+      "targetBand": "目標區間（美元）",
+      "rationale": "理由"
+    },
+    "currentPhase": "當前階段",
+    "genesisSeed": "創世種子",
+    "communityEarly": "社區早期",
+    "publicFlashSale": "公開閃購",
+    "phase1Title": "第一階段三階段預售",
+    "phase1Subtitle": "（低浮力，高彈性）",
+    "progress": "進步",
+    "loading": "載入中...",
+    "sold": "賣",
+    "remaining": "其餘的",
+    "activations": "啟用設定",
+    "status": "地位",
+    "presaleActive": "預售進行中",
+    "presaleInactive": "預售已停止",
+    "price": "價格",
+    "amount": "數量",
+    "raise": "增加",
+    "purpose": "目的",
+    "totals": "總計",
+    "target": "目標",
+    "mainTokenPreview": "主代幣預覽",
+    "fixedPreviewPrice": "固定預覽價 · 不可交易",
+    "mainTokenPreviewDesc": "此預覽價格旨在幫助早期代理商和投資者了解代幣生成事件 (TGE) 前主代幣的目標價值。它並非來自流動性池 (LP)，也並非來自 DexScreener，並且與 TGE 前的市場價格無關。此預覽僅供使用者介面參考，旨在增強投資者信心並方便代理商溝通。",
+    "leaderboards": "排行榜",
+    "kolReferrals": "關鍵意見領袖推薦",
+    "buyer": "買方",
+    "claimReferrals": "索賠轉介",
+    "activation": "啟用設定"
+  },
+  "aiYield": {
+    "title": "你現在比以往任何時候都更接近",
+    "titleHighlight": "人工智慧電力收入",
+    "subtitle": "讓人工智慧產生的電力轉化為您的實際收益",
+    "description": "2025年，美國人工智慧算力ETF的年化報酬率超過48%。現在，您首次有機會擁有源泉——鏈上代幣化的真實人工智慧算力節點。",
+    "yieldLoop": "收益率循環",
+    "step1": "購買 preGVT",
+    "step2": "賭注",
+    "step3": "賺取 rGGP",
+    "step4": "NFT Boost",
+    "step5": "1:1兌換GVT",
+    "step6": "重新抵押",
+    "step7": "重複"
+  },
+  "community": {
+    "title": "由人工智慧和綠色能源驅動的全球社區",
+    "activeWallets": "2,351 個活躍錢包",
+    "fromCountries": "來自47個國家",
+    "missions": "澤利/加爾克斯任務",
+    "missionsDesc": "完成任務即可獲得 preGVT",
+    "topReferrers": "前 100 位推薦人",
+    "topReferrersDesc": "獲取獨家 NFT + rGGP 空投獎勵"
+  },
+  "roadmap": {
+    "title": "PreGVT路線圖",
+    "titleHighlight": "PreGVT",
+    "description": "這份路線圖展現了 PreGVT 從種子輪融資、逐步發展到全面融入主流金融市場的宏偉歷程。代幣發行前的階段主要針對 GVT（全球價值代幣）投資，而 rGGP 則作為 NFT 持有者和社群激勵的生態系統獎勵代幣。參與越早，潛在回報就越大。公開發行將在各大全球加密貨幣交易所（幣安、Coinbase、OKX、Bybit）進行，同時確保底層 RWA 資產池已完全建立並開始產生穩定收益。",
+    "q3Title": "RWA數位代幣PreGVT已推出",
+    "q3Desc": "AGV協議已在香港BSC鏈上成功推出預售數位代幣。代幣名稱：preGVT。該預售代幣代表了直接投資GVT（綠色價值代幣）的途徑。",
+    "q4Title": "PreGVT 公開預售",
+    "q4Desc": "預售從種子輪0.005美元起，預計2025年第四季以0.15美元的價格正式發售！這是一條清晰的價值發現路徑，適用於從preGVT到GVT的投資模式。您現在的決定將決定您在這段旅程中的起點。",
+    "q1Title": "PreGVT 啟動及後續",
+    "q1Desc": "2026 年第一季將是我們發展歷程中最輝煌的里程碑，屆時我們將完成從私募到公開上市的最後一步，開始交易，並開啟新的篇章。 PreGVT 代幣將轉換為 GVT，而 rGGP 仍將是 NFT 持有者和社區激勵的生態系統獎勵代幣。"
+  },
+  "institutionalProof": {
+    "title": "機構級",
+    "titleHighlight": "透明度",
+    "metric": "指標",
+    "rmb": "人民幣（¥）",
+    "usd": "美元（$）",
+    "notes": "筆記",
+    "fixedAssets": "固定資產",
+    "netAssets": "淨資產",
+    "netProfitYTD": "年初至今淨利潤"
+  },
+  "stakingPlans": {
+    "title": "質押計劃 — Flex 和 Vault 節點",
+    "subtitle": "選擇您的質押策略，開始從人工智慧算力基礎設施中賺取實際收益。",
+    "table": {
+      "type": "類型",
+      "lockPeriod": "鎖定期",
+      "apyReturnMode": "APY / 返回模式",
+      "rewardsPerks": "獎勵與福利"
+    },
+    "plans": {
+      "standard": {
+        "type": "標準節點",
+        "lockPeriod": "30天",
+        "returnMode": "成熟時",
+        "rewards": "空投優先權"
+      },
+      "threeMonth": {
+        "type": "3個月保險庫",
+        "lockPeriod": "90天",
+        "returnMode": "月度線性",
+        "rewards": "OG角色存取權限"
+      },
+      "sixMonth": {
+        "type": "6個月保險庫",
+        "lockPeriod": "180天",
+        "returnMode": "月度線性",
+        "rewards": "額外 rGGP 空投"
+      },
+      "twelveMonth": {
+        "type": "12 個月保險庫（白名單）",
+        "lockPeriod": "360天",
+        "returnMode": "分階段+自動再投資",
+        "rewards": "專屬金庫存取權限",
+        "perks": "優先上架優勢"
+      }
+    },
+    "smallPrint": "所有質押合約均已審計 | 獎勵以 rGGP 形式發放 | 第一階段完成後，金庫白名單將開放。",
+    "cta": "立即加入—不要錯過最後的預售機會"
+  },
+  "claimFOMOBanner": {
+    "title": "已有 20,000 個錢包申請——立即領取空投（僅限 48 小時）",
+    "description": "只有已驗證的錢包才能領取。請完成以下步驟。"
+  },
+  "discordVerificationModal": {
+    "title": "Discord驗證",
+    "description": "在驗證之前，請確保您已加入我們的 Discord 伺服器。",
+    "proceed": "繼續進行驗證",
+    "joinCommunity": "加入社群優先",
+    "cancel": "取消"
+  },
+  "socialVerification": {
+    "title": "社會驗證",
+    "followX": "關注 X",
+    "joinDiscord": "加入 Discord",
+    "verified": "✓ 已驗證",
+    "notVerified": "未經核實",
+    "checking": "檢查...",
+    "joinDiscordButton": "加入 Discord",
+    "followingX": "✓ 接續 X",
+    "followNow": "立即關注",
+    "verifyAgain": "再次核實"
+  },
+  "walletConnect": {
+    "addressCopied": "位址已複製到剪貼簿",
+    "openingMetaMask": "打開 MetaMask...",
+    "openingTrustWallet": "開啟 Trust Wallet...",
+    "openingCoinbase": "打開 Coinbase 錢包…",
+    "quickConnect": "快速連接（行動端）",
+    "openInMetaMask": "在 MetaMask 中打開",
+    "openInTrustWallet": "在 Trust Wallet 打開",
+    "openInCoinbase": "在 Coinbase 錢包中打開",
+    "orUseWalletConnect": "或使用 WalletConnect",
+    "useWalletConnect": "使用 WalletConnect",
+    "connectWallet": "連接錢包",
+    "connectViaWalletConnect": "透過 WalletConnect 連接",
+    "connectYourWallet": "連接您的錢包",
+    "scanWithWallet": "用錢包掃描",
+    "useWalletConnectScan": "使用 WalletConnect 掃描二維碼",
+    "connectToPreGVT": "連接到 PreGVT",
+    "choosePreferredWallet": "選擇您喜歡的皮夾",
+    "walletNotConnected": "錢包未連接",
+    "connectWalletToStart": "連接您的錢包即可開始使用 PreGVT",
+    "walletConnected": "錢包已連接",
+    "on": "在"
+  },
+  "stickyDisclaimer": {
+    "top": {
+      "title": "提前獲取通知",
+      "description": "這是基於里程碑的早期存取版本。目標範圍會隨著指標的解鎖而調整。請自行研究。"
+    },
+    "bottom": {
+      "title": "透明系統",
+      "description": "我們採用透明、可驗證的里程碑系統。變更前會提前72小時通知。"
+    }
+  },
+  "disclaimerBanner": {
+    "top": {
+      "title": "里程碑驅動的搶先體驗",
+      "description": "這是一個以里程碑為導向的早期訪問計劃。目標區間會隨著公開指標的解鎖而調整；請自行研究。所示範圍為目標區間。層級解鎖後，可能會根據鏈上資料和第三方儀表板進行調整。任何未售出的數量都可能結轉到下一層級。"
+    },
+    "bottom": {
+      "title": "透明里程碑系統",
+      "description": "我們採用透明、可驗證的里程碑系統。當預設閾值（例如錢包數量、任務數量、合作夥伴關係、審計結果等）達到時，下一層級解鎖，目標等級提升。為確保清晰透明，我們會在變更前 72 小時發出通知。"
+    },
+    "showMore": "顯示更多",
+    "showLess": "顯示更少"
+  },
+  "leaderboard": {
+    "buyerLeaderboard": "買家排行榜",
+    "referralLeaderboard": "推薦排行榜",
+    "activationLeaderboard": "啟動排行榜",
+    "kolReferralLeaderboard": "KOL推薦排行榜",
+    "claimReferralLeaderboard": "理賠推薦排行榜",
+    "leaderboard": "排行榜",
+    "rank": "秩",
+    "wallet": "錢包",
+    "address": "地址",
+    "totalPurchased": "總購買金額",
+    "purchases": "購買",
+    "referralTime": "轉診時間",
+    "totalEarned": "總收入",
+    "redeemed": "已贖回",
+    "accrued": "累計",
+    "activated": "活性",
+    "numberOfReferrals": "轉診數量",
+    "totalAmount": "總金額",
+    "referrals": "轉診",
+    "loading": "排行榜正在加載…",
+    "noEntries": "暫無條目"
+  },
+  "fomoSection": {
+    "title": "供應有限。下一價格區間即將到來。",
+    "soldProgress": "已售出 / 最大售出 (百分比)",
+    "nextRound": "下一輪 → {price} 以 {hours}h {minutes}m 為單位",
+    "ctaButton": "立即加入—不要錯過最後的預售機會",
+    "livePurchaseFeed": "即時購買資訊流",
+    "purchaseNotification": "錢包 {wallet} 剛買了 {amount} preGVT",
+    "waitingForPurchases": "等待購買…"
+  },
+  "newsletterSection": {
+    "title": "我們的簡訊",
+    "subtitle": "隨時關注我們的最新消息",
+    "description": "不想錯過全球金融創新這歷史性時刻？請留下您的信箱地址，訂閱PreGVT TOKEN獨家資訊。",
+    "signupTitle": "訂閱新聞簡報",
+    "emailPlaceholder": "請輸入您的電子郵件地址",
+    "subscribeButton": "立即訂閱",
+    "subscriptionSuccess": "✅ 訂閱成功！感謝您的關注。"
+  },
+  "migration": {
+    "supportTicket": {
+      "title": "遷移支援工單",
+      "processTitle": "遷移過程：",
+      "step1": "請建立支援工單，並提供您的錢包地址和先前的代幣餘額。",
+      "step2": "下載票務摘要",
+      "step3": "請在 Discord 的 #support 頻道中分享工單 ID。",
+      "step4": "等待團隊手動處理。",
+      "checkingBalance": "正在檢查舊代幣餘額…",
+      "oldPreGVTBalance": "舊 preGVT 餘額",
+      "walletAddress": "錢包地址",
+      "ticketId": "票號",
+      "ticketIdPlaceholder": "提交後將生成",
+      "createTicket": "建立支援工單",
+      "creatingTicket": "建立工單...",
+      "ticketCreated": "工單創建成功！",
+      "nextSteps": "後續步驟：",
+      "nextStep1": "將此訊息發佈到 #support 頻道：",
+      "nextStep2": "請附上此頁面的螢幕截圖",
+      "nextStep3": "等待團隊處理",
+      "postInSupport": "在 #support 頻道發帖",
+      "migrationRequest": "遷移請求：{ticketId} | 錢包：{address}",
+      "noOldTokensFound": "您的錢包中未找到舊的 preGVT 代幣。"
+    },
+    "title": "令牌遷移",
+    "subtitle": "將舊代幣移轉到新代幣",
+    "introCopy": "將您的 preGVT 代幣移至我們新近審計並部署的 vpreGVT（已歸屬的預治理代幣）。這是我們為確保安全合規地分發代幣而採取的眾多措施之一。",
+    "connectWallet": "連接您的錢包以查看餘額和遷移代幣",
+    "preGVTBalance": "您的 preGVT 餘額",
+    "loadingBalance": "負載平衡...",
+    "balanceFromContract": "從合約載入的餘額",
+    "noPreGVTTokens": "您沒有任何 preGVT 令牌需要遷移",
+    "oldTokenBalance": "舊代幣餘額",
+    "newTokenBalance": "新的代幣餘額",
+    "migrateButton": "遷移令牌",
+    "migrating": "正在遷移…",
+    "checkingStatus": "正在檢查遷移狀態…",
+    "checkingBalances": "核對餘額…",
+    "migrationEnabled": "已啟用遷移功能",
+    "migrationDisabled": "遷移功能尚未啟用。",
+    "alreadyMigrated": "您已完成令牌遷移。",
+    "noOldTokens": "您沒有任何舊令牌需要遷移",
+    "migrationSuccess": "遷移成功！您的代幣已移轉完畢。",
+    "migrationError": "遷移失敗，請重試。",
+    "insufficientGas": "燃氣不足。請確保您的 BNB 餘額足以完成交易。",
+    "wrongNetwork": "請切換到幣安智能鏈（BSC）進行遷移。",
+    "contractNotConfigured": "遷移合約未配置。請聯絡技術支援。",
+    "migrationInProgress": "遷移正在進行中，請稍候…",
+    "checkWallet": "請查看您的錢包以確認交易。",
+    "migrationComplete": "遷移完成",
+    "oldToken": "舊代幣",
+    "newToken": "新代幣"
+  }
+}

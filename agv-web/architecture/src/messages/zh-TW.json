@@ -1,0 +1,225 @@
+{
+  "header": {
+    "brand": "PreGVT",
+    "protocolName": "AGV協議",
+    "languageLabel": "語言",
+    "languageAriaLabel": "選擇語言"
+  },
+  "hero": {
+    "title": {
+      "main": "AGV 令牌架構",
+      "highlight": "面向未來的代幣系統"
+    },
+    "description": "一個乾淨、安全的 2 代幣結構：preGVT 用於預售和歸屬，GVT 作為核心生態系統代幣，用於支援治理、質押和現實世界資產整合。",
+    "primaryCta": "查看令牌架構",
+    "secondaryCta": "閱讀代幣經濟學",
+    "tokenomicsHref": "#",
+    "icons": {
+      "pregvtAlt": "PreGVT",
+      "gvtAlt": "全球暖化"
+    }
+  },
+  "oneChain": {
+    "heading": {
+      "prefix": "一條鏈，零混亂。",
+      "highlight": "最高安全等級。"
+    },
+    "description": "AGV 僅在 BNB 鏈上發行——無需橋接，沒有鏡像供應，不存在跨鏈風險。這確保了最簡單的審計、最安全的用戶體驗和最清晰的代幣經濟模型。",
+    "imageAlt": "BNB 鏈",
+    "features": [
+      "快速執行",
+      "最低審計複雜度",
+      "最清晰的列表路徑",
+      "簡單的鏈上供應鏈驗證",
+      "極簡、可預測的架構"
+    ]
+  },
+  "twoToken": {
+    "heading": {
+      "prefix": "專門建造的，",
+      "highlight": "雙令牌架構"
+    },
+    "pregvt": {
+      "title": "PreGVT",
+      "subtitle": "預售 + 早期獎勵代幣",
+      "bullets": [
+        "不可轉讓",
+        "在TGE處轉換為GVT",
+        "透過託管合約強制執行的歸屬權",
+        "已部署在 BNB 上"
+      ],
+      "callout": "鎖定至 TGE",
+      "imageAlt": "PreGVT"
+    },
+    "gvt": {
+      "title": "全球暖化",
+      "subtitle": "主要可交易生態系代幣",
+      "bullets": [
+        "可在TGE完全交易",
+        "單鏈規格供應",
+        "治理 + 質押 + RWA 存取權限"
+      ],
+      "callout": "核心AGV資產。",
+      "imageAlt": "全球暖化"
+    }
+  },
+  "liquidity": {
+    "heading": {
+      "prefix": "分階段流動性策略",
+      "highlight": "清潔價格發現"
+    },
+    "phase1": {
+      "title": "第一階段—TGE 前",
+      "description": "PreGVT–USDT LP 在 PancakeSwap 上。",
+      "purposeTitle": "目的",
+      "bullets": [
+        "價格參考",
+        "錢包 + 儀表板可見性"
+      ]
+    },
+    "phase2": {
+      "title": "第二階段－TGE",
+      "description": "GVT流動性上線。",
+      "purposeTitle": "包括",
+      "bullets": [
+        "做市商支持",
+        "從 preGVT 到 GVT 的完全轉換",
+        "鏈上流通供應揭露"
+      ]
+    }
+  },
+  "vesting": {
+    "heading": {
+      "prefix": "從 PreGVT 到 GVT —",
+      "highlight": "完全透明的股權結構"
+    },
+    "description": "您的 preGVT 將透過 TGE 的安全歸屬合約自動過渡到 GVT。",
+    "steps": [
+      "你持有 preGVT",
+      "preGVT 進入歸屬合約",
+      "歸屬期：9-12個月",
+      "GVT逐步解鎖",
+      "您收到液態GVT"
+    ]
+  },
+  "security": {
+    "heading": {
+      "prefix": "安保",
+      "highlight": "系統核心"
+    },
+    "points": [
+      "Safe Multisig 控制所有鑄幣活動",
+      "單鏈攻擊面較小",
+      "基於託管的權益歸屬執行",
+      "為了穩定，簽訂不可升級的合約。",
+      "可暫停的緊急功能",
+      "可選的時間鎖定治理"
+    ]
+  },
+  "builtForNext": {
+    "heading": {
+      "prefix": "AGV 代幣架構－專為…而打造",
+      "highlight": "接下來會發生什麼事？"
+    },
+    "description": "您的 preGVT 將透過 TGE 的安全歸屬合約自動過渡到 GVT。",
+    "items": [
+      "更快的審計",
+      "降低安全風險",
+      "透明供應",
+      "可預測的代幣行為",
+      "方便交換",
+      "清晰的文檔",
+      "多鏈擴展的基礎"
+    ]
+  },
+  "tokenConversion": {
+    "heading": "AGV代幣轉換架構圖",
+    "pregvt": {
+      "title": "PreGVT",
+      "badge": "預售代幣",
+      "propertiesTitle": "特性",
+      "bullets": [
+        "不可轉讓",
+        "在TGE處轉換為GVT",
+        "透過託管合約強制執行的歸屬權",
+        "已部署在 BNB 上"
+      ]
+    },
+    "gvt": {
+      "title": "全球暖化",
+      "badge": "主令牌",
+      "propertiesTitle": "特性",
+      "bullets": [
+        "可在TGE完全交易",
+        "單鏈規格供應",
+        "治理 + 質押 + RWA 存取權限"
+      ]
+    },
+    "callouts": {
+      "pause": {
+        "title": "暫停功能",
+        "description": "緊急停止或停車"
+      },
+      "timelock": {
+        "title": "時間鎖定（可選）",
+        "description": "推遲對治理至關重要的行動以提高透明度"
+      },
+      "noProxy": {
+        "title": "不支援升級代理",
+        "description": "為了減少攻擊面"
+      }
+    },
+    "diagramTitle": "代幣生成/轉換",
+    "diagramLabels": {
+      "from": "PreGVT",
+      "to": "全球暖化"
+    }
+  },
+  "footer": {
+    "brand": "PreGVT 方案",
+    "tagline": "數位代幣平台",
+    "description": "全球首個符合 PreGVT 標準的數位代幣，這是一款基於區塊鏈技術的創新金融產品。",
+    "featureLabels": [
+      "安全的",
+      "快速地",
+      "多鏈"
+    ],
+    "sections": {
+      "product": {
+        "title": "產品",
+        "links": {
+          "nftMinting": "NFT鑄造",
+          "kolProgram": "KOL項目",
+          "analytics": "分析"
+        }
+      },
+      "company": {
+        "title": "公司",
+        "links": {
+          "aboutUs": "關於我們",
+          "careers": "職業生涯",
+          "press": "按",
+          "blogs": "部落格"
+        }
+      },
+      "support": {
+        "title": "支援",
+        "links": {
+          "helpCenter": "幫助中心",
+          "documentation": "文件",
+          "apiReference": "API 參考",
+          "contactSupport": "聯絡客服"
+        }
+      },
+      "legal": {
+        "title": "合法的",
+        "links": {
+          "privacyPolicy": "隱私權政策",
+          "termsOfService": "服務條款",
+          "cookiePolicy": "Cookie政策",
+          "gdpr": "GDPR"
+        }
+      }
+    }
+  }
+}

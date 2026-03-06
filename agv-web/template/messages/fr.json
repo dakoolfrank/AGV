@@ -1,0 +1,32 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos"
+  },
+  "about": {
+    "title": "À propos d'AGV",
+    "whatIsAGV": {
+      "title": "Qu'est-ce qu'AGV ?",
+      "description": "AGV (AGRIVOLTS) est une plateforme révolutionnaire qui comble le fossé entre la finance traditionnelle et les systèmes décentralisés. Nous sommes pionniers de l'avenir de la tokenisation des actifs du monde réel (RWA), permettant l'intégration transparente d'actifs physiques dans l'écosystème blockchain."
+    },
+    "mission": {
+      "title": "Notre Mission",
+      "description": "Notre mission est de démocratiser l'accès aux actifs du monde réel grâce à la technologie blockchain, rendant les opportunités d'investissement plus accessibles, transparentes et efficaces. Nous visons à créer un écosystème durable où les actifs traditionnels peuvent être tokenisés, échangés et gérés sur la chaîne tout en maintenant la conformité réglementaire et la sécurité."
+    },
+    "vision": {
+      "title": "Notre Vision",
+      "description": "Nous envisageons un monde où tout actif du monde réel peut être représenté de manière transparente sur la blockchain, permettant un accès mondial, une propriété fractionnée et une gouvernance transparente. AGV s'efforce d'être la plateforme leader pour la tokenisation RWA, établissant des normes industrielles pour la sécurité, la conformité et l'innovation."
+    },
+    "values": {
+      "title": "Nos Valeurs Fondamentales",
+      "transparency": "Transparence : Nous croyons en une communication ouverte et honnête et en des processus transparents.",
+      "innovation": "Innovation : Nous repoussons continuellement les limites de ce qui est possible avec la technologie blockchain.",
+      "community": "Communauté : Notre communauté est au cœur de tout ce que nous faisons.",
+      "sustainability": "Durabilité : Nous nous engageons à construire des solutions durables à long terme."
+    },
+    "technology": {
+      "title": "Technologie",
+      "description": "AGV exploite la technologie blockchain de pointe, les contrats intelligents et l'infrastructure décentralisée pour fournir des solutions sécurisées, évolutives et efficaces pour la tokenisation d'actifs. Notre plateforme intègre des mesures de sécurité avancées, des cadres de conformité et des interfaces conviviales pour garantir une expérience transparente à tous les participants."
+    }
+  }
+}

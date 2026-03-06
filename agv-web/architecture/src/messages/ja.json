@@ -1,0 +1,225 @@
+{
+  "header": {
+    "brand": "GVT前",
+    "protocolName": "AGVプロトコル",
+    "languageLabel": "言語",
+    "languageAriaLabel": "言語を選択"
+  },
+  "hero": {
+    "title": {
+      "main": "AGVトークンアーキテクチャ",
+      "highlight": "未来を見据えたトークンシステム"
+    },
+    "description": "クリーンかつ安全な 2 つのトークン構造: 事前販売と権利確定のための preGVT と、ガバナンス、ステーキング、現実世界の資産統合を推進するコア エコシステム トークンとしての GVT。",
+    "primaryCta": "トークンアーキテクチャを見る",
+    "secondaryCta": "トークノミクスを読む",
+    "tokenomicsHref": "#",
+    "icons": {
+      "pregvtAlt": "GVT前",
+      "gvtAlt": "GVT"
+    }
+  },
+  "oneChain": {
+    "heading": {
+      "prefix": "1 つのチェーン。混乱ゼロ。",
+      "highlight": "最大限のセキュリティ。"
+    },
+    "description": "AGVはBNBチェーンのみでローンチされます。ブリッジ、ミラーリング、クロスチェーンリスクは一切ありません。これにより、最もシンプルな監査、最も安全なユーザーエクスペリエンス、そして最もクリーンなトークンエコノミクスが保証されます。",
+    "imageAlt": "BNBチェーン",
+    "features": [
+      "高速実行",
+      "監査の複雑さが最も低い",
+      "最もクリーンなリスト経路",
+      "簡単なオンチェーン供給検証",
+      "最小限で予測可能なアーキテクチャ"
+    ]
+  },
+  "twoToken": {
+    "heading": {
+      "prefix": "専用に設計された、",
+      "highlight": "2トークンアーキテクチャ"
+    },
+    "pregvt": {
+      "title": "GVT前",
+      "subtitle": "プレセール + 早期報酬トークン",
+      "bullets": [
+        "譲渡不可",
+        "TGEでGVTに変換",
+        "エスクロー契約によって強制される権利確定",
+        "すでにBNBに導入済み"
+      ],
+      "callout": "TGEまでロック",
+      "imageAlt": "GVT前"
+    },
+    "gvt": {
+      "title": "GVT",
+      "subtitle": "主な取引可能なエコシステムトークン",
+      "bullets": [
+        "TGEで完全に取引可能",
+        "シングルチェーン標準供給",
+        "ガバナンス + ステーキング + RWA アクセス"
+      ],
+      "callout": "AGV のコア資産。",
+      "imageAlt": "GVT"
+    }
+  },
+  "liquidity": {
+    "heading": {
+      "prefix": "段階的な流動性戦略",
+      "highlight": "クリーン価格発見"
+    },
+    "phase1": {
+      "title": "フェーズ1 - TGE前",
+      "description": "PancakeSwap の PreGVT–USDT LP。",
+      "purposeTitle": "目的",
+      "bullets": [
+        "価格参照",
+        "ウォレット + ダッシュボードの可視性"
+      ]
+    },
+    "phase2": {
+      "title": "フェーズ2 — TGE",
+      "description": "GVT 流動性が稼働開始します。",
+      "purposeTitle": "含まれるもの",
+      "bullets": [
+        "マーケットメーカーのサポート",
+        "preGVTからGVTへの完全な変換",
+        "オンチェーン流通供給量開示"
+      ]
+    }
+  },
+  "vesting": {
+    "heading": {
+      "prefix": "PreGVTからGVTへ —",
+      "highlight": "完全に透明な権利確定"
+    },
+    "description": "preGVT は、TGE での安全な権利確定契約を通じて自動的に GVT に移行します。",
+    "steps": [
+      "あなたはpreGVTを保持しています",
+      "preGVTが権利確定契約に移行",
+      "権利確定期間：9～12か月",
+      "GVTは段階的に解除されます",
+      "液体GVTを受け取ります"
+    ]
+  },
+  "security": {
+    "heading": {
+      "prefix": "セキュリティ",
+      "highlight": "システムの核"
+    },
+    "points": [
+      "安全なマルチシグがすべての鋳造を制御",
+      "1つのチェーン = 攻撃対象領域が小さい",
+      "エスクローベースの権利確定執行",
+      "安定性のためのアップグレード不可能な契約",
+      "一時停止可能な緊急機能",
+      "オプションのタイムロックガバナンス"
+    ]
+  },
+  "builtForNext": {
+    "heading": {
+      "prefix": "AGVトークンアーキテクチャ — 構築対象",
+      "highlight": "次に何が起こるか"
+    },
+    "description": "preGVT は、TGE での安全な権利確定契約を通じて自動的に GVT に移行します。",
+    "items": [
+      "より迅速な監査",
+      "セキュリティリスクの低減",
+      "透明な供給",
+      "予測可能なトークンの行動",
+      "交換しやすい",
+      "明確なドキュメント",
+      "後のマルチチェーン拡張の基盤"
+    ]
+  },
+  "tokenConversion": {
+    "heading": "AGVトークン変換アーキテクチャ図",
+    "pregvt": {
+      "title": "GVT前",
+      "badge": "プレセールトークン",
+      "propertiesTitle": "プロパティ",
+      "bullets": [
+        "譲渡不可",
+        "TGEでGVTに変換",
+        "エスクロー契約によって強制される権利確定",
+        "すでにBNBに導入済み"
+      ]
+    },
+    "gvt": {
+      "title": "GVT",
+      "badge": "メイントークン",
+      "propertiesTitle": "プロパティ",
+      "bullets": [
+        "TGEで完全に取引可能",
+        "シングルチェーン標準供給",
+        "ガバナンス + ステーキング + RWA アクセス"
+      ]
+    },
+    "callouts": {
+      "pause": {
+        "title": "一時停止機能",
+        "description": "緊急停止または停止"
+      },
+      "timelock": {
+        "title": "タイムロック（オプション）",
+        "description": "透明性を確保するためにガバナンス上重要な行動を遅らせる"
+      },
+      "noProxy": {
+        "title": "アップグレード可能なプロキシはありません",
+        "description": "攻撃対象領域を減らす"
+      }
+    },
+    "diagramTitle": "トークン生成/変換",
+    "diagramLabels": {
+      "from": "GVT前",
+      "to": "GVT"
+    }
+  },
+  "footer": {
+    "brand": "PreGVTプロトコル",
+    "tagline": "デジタルトークンプラットフォーム",
+    "description": "ブロックチェーン技術に基づいた革新的な金融商品である、世界初の準拠 PreGVT デジタル トークン。",
+    "featureLabels": [
+      "安全な",
+      "速い",
+      "マルチチェーン"
+    ],
+    "sections": {
+      "product": {
+        "title": "製品",
+        "links": {
+          "nftMinting": "NFT鋳造",
+          "kolProgram": "KOLプログラム",
+          "analytics": "分析"
+        }
+      },
+      "company": {
+        "title": "会社",
+        "links": {
+          "aboutUs": "私たちについて",
+          "careers": "キャリア",
+          "press": "プレス",
+          "blogs": "ブログ"
+        }
+      },
+      "support": {
+        "title": "サポート",
+        "links": {
+          "helpCenter": "ヘルプセンター",
+          "documentation": "ドキュメント",
+          "apiReference": "APIリファレンス",
+          "contactSupport": "サポートに問い合わせる"
+        }
+      },
+      "legal": {
+        "title": "法律上の",
+        "links": {
+          "privacyPolicy": "プライバシーポリシー",
+          "termsOfService": "利用規約",
+          "cookiePolicy": "クッキーポリシー",
+          "gdpr": "GDPR"
+        }
+      }
+    }
+  }
+}

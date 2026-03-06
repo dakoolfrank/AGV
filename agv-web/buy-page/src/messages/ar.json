@@ -1,0 +1,742 @@
+{
+  "common": {
+    "loading": "تحميل...",
+    "error": "خطأ",
+    "success": "نجاح",
+    "cancel": "يلغي",
+    "confirm": "يتأكد",
+    "close": "يغلق",
+    "save": "يحفظ",
+    "delete": "يمسح",
+    "edit": "يحرر",
+    "back": "خلف",
+    "next": "التالي",
+    "previous": "سابق",
+    "submit": "يُقدِّم",
+    "connect": "يتصل",
+    "disconnect": "قطع الاتصال",
+    "wallet": "محفظة",
+    "address": "عنوان",
+    "balance": "توازن",
+    "amount": "كمية",
+    "price": "سعر",
+    "total": "المجموع",
+    "status": "حالة",
+    "date": "تاريخ",
+    "time": "وقت",
+    "search": "يبحث",
+    "filter": "فلتر",
+    "sort": "نوع",
+    "view": "منظر",
+    "copy": "ينسخ",
+    "copied": "تم النسخ!",
+    "share": "يشارك",
+    "learnMore": "يتعلم أكثر",
+    "joinNow": "انضم الآن",
+    "claim": "مطالبة",
+    "buy": "يشتري",
+    "sell": "يبيع",
+    "approve": "يعتمد",
+    "reject": "يرفض",
+    "retry": "إعادة المحاولة"
+  },
+  "header": {
+    "nav": {
+      "home": "بيت",
+      "claim": "مطالبة",
+      "buy": "يشتري",
+      "balance": "توازن",
+      "staking": "المراهنة",
+      "about": "عن",
+      "whitepaper": "ورقة بيضاء"
+    },
+    "language": "لغة",
+    "selectLanguage": "اختر اللغة"
+  },
+  "footer": {
+    "brand": {
+      "name": "بروتوكول ما قبل GVT",
+      "tagline": "منصة الرمز الرقمي",
+      "description": "أول رمز رقمي متوافق مع معايير PreGVT في العالم، وهو منتج مالي مبتكر يعتمد على تقنية blockchain."
+    },
+    "features": {
+      "secure": "يؤمن",
+      "fast": "سريع",
+      "multichain": "متعدد السلاسل"
+    },
+    "links": {
+      "products": "منتجات",
+      "company": "شركة",
+      "support": "يدعم",
+      "legal": "قانوني",
+      "nftMinting": "سك NFT",
+      "kolProgram": "برنامج KOL",
+      "analytics": "التحليلات",
+      "aboutUs": "معلومات عنا",
+      "careers": "الوظائف",
+      "press": "يضعط",
+      "blogs": "المدونات",
+      "helpCenter": "مركز المساعدة",
+      "documentation": "التوثيق",
+      "apiReference": "مرجع واجهة برمجة التطبيقات",
+      "contactSupport": "اتصل بالدعم",
+      "privacyPolicy": "سياسة الخصوصية",
+      "termsOfService": "شروط الخدمة",
+      "cookiePolicy": "سياسة ملفات تعريف الارتباط",
+      "gdpr": "اللائحة العامة لحماية البيانات"
+    }
+  },
+  "hero": {
+    "title": "أول رمز ETF للذكاء الاصطناعي الأخضر في العالم مدعوم من",
+    "realAssets": "الأصول العقارية",
+    "subtitle": "أصبحت البنية التحتية للطاقة الشمسية والحوسبة بالذكاء الاصطناعي المعتمدة من الاتحاد الأوروبي الآن مميزة وموثقة على السلسلة من خلال بروتوكول الحديقة الخضراء (GGP).",
+    "tagline": "كهرباء حقيقية. إنتاج حقيقي. نمو حقيقي.",
+    "joinPresale": "انضم إلى البيع المسبق",
+    "learnMore": "يتعلم أكثر",
+    "ticker": {
+      "sold": "{sold} / {max} مباع ({percentage}%)",
+      "nextPrice": "السعر التالي {price} في {time}",
+      "walletsJoined": "{count} محفظة انضمت"
+    }
+  },
+  "countdown": {
+    "title": "العد التنازلي للبيع المسبق",
+    "joinNow": "انضم الآن"
+  },
+  "realAsset": {
+    "title": "قوة حقيقية. أصول حقيقية.",
+    "onChain": "على السلسلة.",
+    "liveFeed": "بث مباشر من محطة جينجلونج الزراعية الكهروضوئية، شنشي - مزرعة شمسية هجينة بقدرة 14.5 ميجاوات متوافقة مع الاتحاد الأوروبي تعمل على تشغيل عقد الحوسبة بالذكاء الاصطناعي.",
+    "dataFlowArchitecture": "هندسة تدفق البيانات",
+    "steps": {
+      "solarPower": {
+        "title": "الطاقة الشمسية",
+        "description": "توليد الطاقة الكهروضوئية من المزارع المعتمدة من الاتحاد الأوروبي"
+      },
+      "energyNode": {
+        "title": "عقدة الطاقة",
+        "description": "التقاط الطاقة وتحويلها في الوقت الفعلي"
+      },
+      "depinNetwork": {
+        "title": "شبكة ديبين",
+        "description": "التحقق والتوزيع على السلسلة"
+      },
+      "aiCompute": {
+        "title": "الحوسبة بالذكاء الاصطناعي",
+        "description": "دعم عقد البنية التحتية للذكاء الاصطناعي"
+      },
+      "tokenYield": {
+        "title": "عائد الرمز",
+        "description": "العائد الحقيقي الموزع على حاملي الرموز"
+      }
+    }
+  },
+  "about": {
+    "valueTitle": "قيمة",
+    "valueTitleHighlight": "رمز PreGVT",
+    "valueDescription": "PreGVT هي أول عملة رقمية مُدرجة في بورصتين عالميتين، تجمع بين التمويل التقليدي وتقنية البلوك تشين. أصدرتها مجموعة PreGVT (تصنيف فيتش A-)، وهي مبنية على إيثريوم، ومتاحة لجمع التبرعات العامة، ومدعومة بائتمان مالي مُنظم، مُسجلةً بذلك إنجازًا بارزًا في مجال الأصول الرمزية.",
+    "steps": {
+      "step1": {
+        "title": "الخطوة 1: إنشاء حساب",
+        "description": "سجل حساب PreGVT الخاص بك، وأكمل التحقق من الهوية وإعدادات الأمان"
+      },
+      "step2": {
+        "title": "الخطوة 2: إيداع رموز سلسلة الإيثريوم (يدعم ETH وUSDT)",
+        "description": "قم بربط محفظتك وإيداع الرموز المدعومة للشراء"
+      },
+      "step3": {
+        "title": "الخطوة 3: المشاركة في البيع المسبق وشراء PreGVT",
+        "description": "حدد مبلغ الشراء، وأكد المعاملة وأكمل عملية الشراء"
+      },
+      "step4": {
+        "title": "الخطوة 4: انتهاء البيع الخاص، قائمة التبادل",
+        "description": "انتظر حتى انتهاء البيع الخاص، وسيتم إدراج الرموز المميزة في البورصات الرئيسية"
+      }
+    },
+    "newEraTitle": "عصر جديد من",
+    "newEraTitleHighlight": "التمويل اللامركزي المنظم",
+    "newEraDescription": "مع التطور السريع لسوق العملات المشفرة، غالبًا ما تدفع التقلبات والمخاطر المستثمرين إلى توخي الحذر، مما يُحوّل هذا المجال إلى ما يُطلق عليه الكثيرون \"الغرب المتوحش\" في عالم المال. تُغيّر عملة PreGVT هذا التوجه بتقديمها رمزًا رقميًا مُنظّمًا، مدعومًا بالأصول، وعالي الائتمان، مُصمّمًا لتحقيق الاستقرار طويل الأمد وثقة المستثمرين. مبنيًا على الشفافية والقيمة الحقيقية، يُمثّل هذا الرمز حقبة جديدة من الاستثمار الرقمي الآمن والمتوافق مع القوانين والموثوق.",
+    "features": {
+      "regulated": {
+        "title": "Regulated & Compliant",
+        "description": "Issued by PreGVT Group with Fitch A- rating, ensuring regulatory compliance and financial credibility"
+      },
+      "backed": {
+        "title": "Asset-Backed",
+        "description": "Backed by real-world assets including EU-certified solar farms and AI compute infrastructure"
+      },
+      "transparent": {
+        "title": "Transparent & Verifiable",
+        "description": "All assets and transactions are verified on-chain, providing full transparency and traceability"
+      },
+      "realAssetAnchoring": {
+        "title": "ترسيخ الأصول الحقيقية",
+        "description": "تتوافق كل PreGVT مع الأصول الحقيقية الأساسية، وليس العملات المستقرة الخوارزمية عديمة القيمة، ذات القيمة الواضحة."
+      },
+      "strongCreditBacking": {
+        "title": "دعم ائتماني قوي",
+        "description": "الجهة المصدرة هي مؤسسة مملوكة بالكامل للدولة وتتمتع بتصنيف ائتماني مرتفع وقدرة مضمونة على السداد."
+      },
+      "compliantInnovative": {
+        "title": "متوافق ومبتكر بنسبة 100%",
+        "description": "يتم إصدارها وإدراجها علناً وفقاً للقوانين والأنظمة الدولية، مما يعكس ابتكار التكنولوجيا المالية ضمن الإطار التنظيمي."
+      }
+    },
+    "buyNow": "اشتري الآن"
+  },
+  "faq": {
+    "title": "الأسئلة الشائعة",
+    "titleHighlight": "التعليمات",
+    "subtitle": "لقد قمنا بتجميع الأسئلة التي تهمك أكثر لمساعدتك على فهم تفاصيل البيع المسبق وعملية PreGVT بسرعة.",
+    "questions": [
+      {
+        "question": "What is PreGVT?",
+        "answer": "The world's first financial product that combines \"public offering\", \"exchange listing\" and \"RWA digital token\" features. Token name: PreGVT  (PreGVT Coin), issued on the Ethereum public chain."
+      },
+      {
+        "question": "How do I buy PreGVT?",
+        "answer": "PreGVT is currently in presale stage and can only be purchased through the official PreGVT001.com website. Note: Please do not attempt to purchase from Uniswap, Pancakeswap, Raydium or any other platform, as these are unofficial platforms and may involve fraudulent activities."
+      },
+      {
+        "question": "How do I check my purchased token quantity?",
+        "answer": "You can view your purchased token quantity and balance in your created account."
+      },
+      {
+        "question": "How do I claim my tokens?",
+        "answer": "After participating in the purchase, tokens will be displayed in your account balance. After PreGVT is sold out, you can claim your tokens."
+      },
+      {
+        "question": "Does the presale support fiat currency? What are the minimum/maximum purchase amounts?",
+        "answer": "Currently, PreGVT presale does not support fiat currency, only Ethereum (ERC-20) assets. Minimum purchase amount per account is 100 USD, maximum purchase amount is 5000 USD."
+      },
+      {
+        "question": "How to contact the official PreGVT team?",
+        "answer": "You can contact the official email PreGVT001@proton.me or join the official Telegram community to contact administrators."
+      }
+    ]
+  },
+  "buy": {
+    "title": "شراء PreGVT",
+    "subtitle": "انضم إلى البيع المسبق واحصل على رموزك",
+    "connectWallet": "ربط المحفظة",
+    "enterAmount": "أدخل المبلغ",
+    "selectAmount": "حدد المبلغ",
+    "review": "مراجعة",
+    "confirmPurchase": "تأكيد الشراء",
+    "purchasing": "شراء...",
+    "pricePerToken": "السعر لكل رمز",
+    "minimumReceived": "الحد الأدنى المستلم",
+    "youWillReceive": "سوف تتلقى",
+    "tokens": "الرموز",
+    "approveToken": "الموافقة على الرمز",
+    "approving": "الموافقة...",
+    "approved": "موافقة",
+    "buyNow": "اشتري الآن",
+    "buying": "شراء...",
+    "switchChain": "التبديل إلى Binance Smart Chain (BSC)",
+    "insufficientBalance": "رصيد غير كاف",
+    "enterValidAmount": "الرجاء إدخال مبلغ صالح",
+    "connectWalletFirst": "الرجاء ربط محفظتك أولاً",
+    "selfReferralError": "لا يمكنك إحالة نفسك باستخدام {type} الخاص بك. يُرجى إزالة مُعرّف الإحالة أو استخدام مُعرّف آخر.",
+    "kolId": "معرف كول",
+    "referralWallet": "محفظة الإحالة",
+    "optional": "خياري",
+    "reviewPurchase": "مراجعة الشراء",
+    "purchaseAmount": "مبلغ الشراء",
+    "youWillPay": "سوف تدفع",
+    "transactionFee": "رسوم المعاملة",
+    "estimatedGas": "تقدير الغاز",
+    "confirmTransaction": "تأكيد المعاملة",
+    "transactionPending": "المعاملة معلقة",
+    "transactionSuccess": "تمت المعاملة بنجاح",
+    "transactionFailed": "فشلت المعاملة",
+    "checkWallet": "يرجى التحقق من محفظتك لتأكيد المعاملة",
+    "approvalSuccess": "تمت الموافقة على الرمز بنجاح!",
+    "approvalFailed": "فشلت الموافقة",
+    "approvalRejected": "تم رفض الموافقة. يُرجى المحاولة مرة أخرى والموافقة على المعاملة.",
+    "transactionClosed": "تم إغلاق نافذة المعاملة. يُرجى المحاولة مرة أخرى.",
+    "purchaseSuccess": "تم الشراء بنجاح!",
+    "purchaseFailed": "فشل الشراء",
+    "kolLocked": "إحالة KOL مُقفلة. لا يُمكنك تغييرها بعد بدء عملية شراء.",
+    "purchaseSuccessDesc": "لقد قمت بشراء الرموز بنجاح.",
+    "referralId": "معرف الإحالة",
+    "locked": "مغلق",
+    "copyLink": "نسخ الوصلة",
+    "walletAddress": "عنوان المحفظة",
+    "enterReferralId": "أدخل معرف الإحالة المكون من 6 أرقام أو عنوان المحفظة",
+    "lockedWalletReferral": "مقفل: تم اكتشاف إحالة المحفظة",
+    "lockedKolReferral": "مقفل: تم اكتشاف إحالة KOL",
+    "walletReferral": "إحالة المحفظة",
+    "youreBuying": "أنت تشتري",
+    "pricePerTokenLabel": "السعر لكل رمز:",
+    "gasFee": "رسوم الغاز",
+    "slippageUnit": "وحدة الانزلاق",
+    "minimumReceivedLabel": "الحد الأدنى المستلم:",
+    "back": "خلف",
+    "processing": "يعالج...",
+    "contractPaused": "العقد متوقف حاليًا. يُرجى المحاولة لاحقًا.",
+    "presaleInactive": "البيع المسبق غير مُفعّل حاليًا. يُرجى المحاولة لاحقًا.",
+    "invalidPrice": "سعر الرمز غير صحيح. يُرجى التحديث والمحاولة مرة أخرى.",
+    "amountTooSmall": "مبلغ الرمز صغير جدًا. يُرجى إدخال مبلغ أكبر.",
+    "paymentTokenError": "تعذّر الحصول على عنوان رمز الدفع. يُرجى المحاولة مجددًا.",
+    "approvalRequired": "مطلوب موافقة USDT. سيتم فتح MetaMask تلقائيًا...",
+    "selfReferralWarning": "لا يمكنك إحالة نفسك. هذه الإحالة لن تُحتسب ضمن مكافآتك.",
+    "referralNotRecorded": "لم يتم تسجيل الإحالة",
+    "walletLinkCopied": "تم نسخ رابط الإحالة إلى الحافظة!",
+    "kolLinkCopied": "تم نسخ رابط الإحالة الخاص بـKOL إلى الحافظة!",
+    "noReferralToCopy": "لا يوجد معرف إحالة للنسخ",
+    "noticeTitle": "إشعار - رمز غير قابل للتداول",
+    "noticeMessage": "هذا الرمز غير قابل للتداول حاليًا، ولا يمكن نقله أو بيعه حتى يتم إدراجه رسميًا. بشرائك، فإنك تُقر بأن الرمز مُقفل ومُخصص للاستخدام على السلسلة والتوزيع المُستقبلي فقط. يُرجى مراجعة الجدول الزمني لإدراج الرمز وشروط الاستحقاق في المستندات قبل الشراء.",
+    "usdt": "تيثر"
+  },
+  "claim": {
+    "title": "اطلب رموزك",
+    "subtitle": "اتبع الخطوات للمطالبة بالرموز المخصصة لك",
+    "step1": {
+      "title": "الخطوة 1: ربط المحفظة",
+      "description": "قم بتوصيل محفظتك للبدء",
+      "fullTitle": "الخطوة 1: انضم إلى صفحاتنا الاجتماعية",
+      "shortDescription": "انضم إلى Discord وتابع X",
+      "joinDiscord": "انضم إلى مجتمع Discord",
+      "followX": "اتبع X للحصول على التحديثات",
+      "afterJoining": "بعد الانضمام، انقر على الأزرار أعلاه للانتقال إلى التحقق"
+    },
+    "step2": {
+      "title": "الخطوة 2: التحقق من الانضمام",
+      "description": "تأكد من انضمامك إلى Discord ومتابعتنا على X",
+      "shortDescription": "التحقق الكامل"
+    },
+    "step3": {
+      "title": "الخطوة 3: المطالبة بالشارة",
+      "description": "اطلب شارة الإنزال الجوي الخاصة بك للانتقال إلى الخطوة التالية.",
+      "shortDescription": "احصل على شارة الإنزال الجوي الخاصة بك"
+    },
+    "step4": {
+      "title": "الخطوة 4: استرداد التخصيص",
+      "description": "اطلب رموز preGVT المخصصة لك.",
+      "shortDescription": "اطلب رموز preGVT الخاصة بك"
+    },
+    "step5": {
+      "title": "الخطوة 5: استرداد الشارة",
+      "description": "أكمل العملية عن طريق استرداد شارتك.",
+      "shortDescription": "اكمل العملية"
+    },
+    "connectWallet": "ربط المحفظة",
+    "verificationComplete": "✓ تم التحقق! يمكنك الآن استلام شارتك.",
+    "completeVerifications": "يرجى إكمال كلا التحققين للمتابعة",
+    "claimBadge": "المطالبة بالشارة",
+    "claimingBadge": "المطالبة بالشارة...",
+    "badgeClaimed": "تم المطالبة بالشارة",
+    "checking": "جاري التحقق...",
+    "claimPrice": "سعر المطالبة: {amount} BNB",
+    "yourAllocation": "تخصيصك: {amount} preGVT",
+    "claimAllocation": "تخصيص المطالبة",
+    "claiming": "المطالبة...",
+    "allocationClaimed": "تم المطالبة بالتخصيص",
+    "balanceCheckFailed": "فشل التحقق من الرصيد",
+    "insufficientBnbBalance": "رصيد BNB غير كافٍ",
+    "noAllocation": "لا يوجد تخصيص",
+    "allocationAvailable": "التخصيص المتاح: {amount} preGVT",
+    "noAllocationFound": "لم يتم العثور على تخصيص",
+    "checkingAllocation": "التحقق من التخصيص...",
+    "gasFeeRequired": "رسوم الغاز المطلوبة - الحد الأدنى 0.00005",
+    "redeemBadge": "استرداد الشارة",
+    "redeemingBadge": "شارة الاسترداد...",
+    "badgeRedeemed": "تم استرداد الشارة",
+    "congratulations": "مبروك!",
+    "claimSuccess": "لقد قمت بنجاح بالمطالبة بالرموز الخاصة بك!",
+    "error": "حدث خطأ. يُرجى المحاولة مرة أخرى.",
+    "totalClaimed": "إجمالي المطالبات",
+    "remainingSupply": "العرض المتبقي"
+  },
+  "balance": {
+    "title": "رصيدك",
+    "subtitle": "عرض رصيد رمز PreGVT الخاص بك وسجل المعاملات",
+    "connectWallet": "قم بتوصيل المحفظة لعرض رصيدك",
+    "preGVTBalance": "رصيد ما قبل GVT",
+    "pricePerToken": "السعر لكل رمز",
+    "totalValue": "القيمة الإجمالية",
+    "transactionHistory": "سجل المعاملات",
+    "noTransactions": "لم يتم العثور على معاملات",
+    "leaderboard": "لوحة المتصدرين",
+    "yourRank": "رتبة",
+    "redeemed": "مُخلّص",
+    "accrued": "مستحق",
+    "migration": {
+      "supportTicket": {
+        "title": "تذكرة دعم الهجرة",
+        "processTitle": "عملية الهجرة:",
+        "step1": "إنشاء تذكرة دعم باستخدام عنوان محفظتك ورصيد الرمز المميز القديم",
+        "step2": "تنزيل ملخص التذكرة",
+        "step3": "شارك معرف التذكرة في قناة #support على Discord",
+        "step4": "انتظر المعالجة اليدوية من قبل الفريق",
+        "checkingBalance": "التحقق من رصيد الرمز القديم...",
+        "oldPreGVTBalance": "الرصيد القديم قبل ضريبة القيمة المضافة",
+        "walletAddress": "عنوان المحفظة",
+        "ticketId": "معرف التذكرة",
+        "ticketIdPlaceholder": "سيتم إنشاؤها عند الإرسال",
+        "createTicket": "إنشاء تذكرة دعم",
+        "creatingTicket": "إنشاء التذكرة...",
+        "ticketCreated": "تم إنشاء التذكرة بنجاح!",
+        "nextSteps": "الخطوات التالية:",
+        "nextStep1": "انشر هذه الرسالة في قناة #الدعم:",
+        "nextStep2": "قم بإرفاق لقطة شاشة لهذه الصفحة",
+        "nextStep3": "انتظر معالجة الفريق",
+        "postInSupport": "انشر في قناة #الدعم",
+        "migrationRequest": "طلب الهجرة: {ticketId} | المحفظة: {address}",
+        "noOldTokensFound": "لم يتم العثور على رموز preGVT القديمة في محفظتك."
+      },
+      "title": "هجرة الرمز",
+      "subtitle": "نقل رموزك القديمة إلى الرمز الجديد",
+      "oldTokenBalance": "رصيد الرمز القديم",
+      "newTokenBalance": "رصيد الرمز الجديد",
+      "migrateButton": "ترحيل الرموز",
+      "migrating": "الهجرة...",
+      "checkingStatus": "التحقق من حالة الهجرة...",
+      "checkingBalances": "التحقق من الأرصدة...",
+      "migrationEnabled": "تم تمكين الهجرة",
+      "migrationDisabled": "لم يتم تمكين الهجرة بعد",
+      "alreadyMigrated": "لقد قمت بالفعل بنقل رموزك",
+      "noOldTokens": "ليس لديك أي رموز قديمة للنقل",
+      "migrationSuccess": "تمت عملية النقل بنجاح! تم نقل رموزك.",
+      "migrationError": "فشلت عملية النقل. يُرجى المحاولة مرة أخرى.",
+      "insufficientGas": "لا يوجد وقود كافٍ. يُرجى التأكد من وجود ما يكفي من BNB لإتمام المعاملة.",
+      "wrongNetwork": "يرجى التبديل إلى Binance Smart Chain (BSC) للانتقال.",
+      "contractNotConfigured": "لم يتم تكوين عقد الترحيل. يُرجى التواصل مع الدعم.",
+      "migrationInProgress": "جاري النقل. يُرجى الانتظار...",
+      "checkWallet": "يرجى التحقق من محفظتك لتأكيد المعاملة",
+      "migrationComplete": "تم الانتهاء من الهجرة",
+      "oldToken": "الرمز القديم",
+      "newToken": "رمز جديد"
+    },
+    "stakingCTA": {
+      "title": "ابدأ في وضع علامة preGVT الخاصة بك",
+      "description": "اربح مكافآت سلبية من خلال رهن رموز preGVT الخاصة بك. اختر من بين خطط رهن مرنة أو ثابتة المدة بأسعار فائدة سنوية تنافسية.",
+      "goToStaking": "انتقل إلى صفحة Staking"
+    },
+    "balanceFromContract": "الرصيد المحمل من العقد",
+    "loadingBalance": "موازنة التحميل..."
+  },
+  "staking": {
+    "title": "المراهنة",
+    "subtitle": "راهن برموزك واكسب مكافآت",
+    "connectWallet": "ربط المحفظة",
+    "selectPlan": "حدد خطة المراهنة",
+    "stakeAmount": "مبلغ الرهان",
+    "enterAmount": "أدخل المبلغ الذي تريد المراهنة عليه",
+    "max": "الأعلى",
+    "approveToken": "الموافقة على الرمز",
+    "approving": "الموافقة...",
+    "stake": "حصة",
+    "staking": "المراهنة...",
+    "yourStakes": "حصصك",
+    "pendingRewards": "المكافآت المعلقة",
+    "claimRewards": "المطالبة بالمكافآت",
+    "unstake": "إلغاء الرهان",
+    "unstaking": "إلغاء...",
+    "lockPeriod": "فترة القفل",
+    "apy": "معدل الفائدة السنوي",
+    "minStake": "الحد الأدنى للرهان",
+    "connectWalletDesc": "قم بتوصيل محفظتك لبدء تخزين الرموز",
+    "stakeTokens": "رموز الرهان",
+    "tokenBalance": "رصيد الرمز",
+    "staked": "راهن",
+    "stakedAmount": "المبلغ المراهن به",
+    "totalEarned": "إجمالي المكتسبات",
+    "days": "أيام",
+    "available": "متاح",
+    "rewardsReady": "لديك",
+    "readyToClaim": "مستعد للمطالبة",
+    "claimingDisabled": "تم تعطيل المطالبة حتى يتم تشغيل rGGP",
+    "claimDisabled": "المطالبة بالتعطيل",
+    "loadingPositions": "جاري تحميل المواضع...",
+    "positionId": "معرف الموضع",
+    "lockStatus": "حالة القفل",
+    "unlocked": "مفتوح",
+    "locked": "مغلق",
+    "lockEnds": "نهايات القفل",
+    "noActivePositions": "لا توجد مراكز مراهنة نشطة",
+    "earlyExiting": "الخروج المبكر...",
+    "earlyExit": "الخروج المبكر",
+    "unstakeWarning": "تحذير: إلغاء الرهان",
+    "unstakeWarningDesc": "أنت على وشك إلغاء رموزك.",
+    "youWillReceive": "سوف تتلقى",
+    "unstakeConfirm": "هل أنت متأكد من رغبتك في المتابعة؟ لا يمكن التراجع عن هذا الإجراء.",
+    "confirmUnstake": "تأكيد إلغاء الرهان",
+    "earlyExitWarning": "تحذير: عقوبة الخروج المبكر",
+    "earlyExitWarningDesc": "أنت على وشك إلغاء رهان رموزك قبل انتهاء فترة القفل. يُرجى الانتباه لما يلي:",
+    "penalty": "عقوبة (10%)",
+    "penaltyToTreasury": "سيتم إرسال هذه العقوبة إلى الخزانة",
+    "earlyExitConfirm": "هل أنت متأكد من رغبتك في المتابعة؟ لا يمكن التراجع عن هذا الإجراء.",
+    "confirmEarlyExit": "تأكيد الخروج المبكر",
+    "cancel": "يلغي",
+    "loadStakingDataFailed": "فشل تحميل بيانات المراهنة",
+    "connectWalletFirst": "الرجاء ربط محفظتك أولاً",
+    "enterValidAmount": "الرجاء إدخال مبلغ صالح",
+    "switchChain": "يرجى التبديل إلى Binance Smart Chain (BSC) في محفظتك للمتابعة.",
+    "approvalSuccess": "تمت الموافقة على الرموز بنجاح!",
+    "connectWalletAndSelectPlan": "يرجى ربط محفظتك واختيار خطة المشاركة",
+    "minStakeError": "الحد الأدنى لمبلغ الرهان هو",
+    "approveTokensFirst": "يرجى الموافقة على الرموز أولاً",
+    "stakingFailed": "فشل الرهان",
+    "rewardsClaimed": "تمت المطالبة بالمكافآت!",
+    "rewardsClaimedDesc": "لقد تم المطالبة بمكافآت الرهان الخاصة بك بنجاح وتم إضافتها إلى محفظتك.",
+    "claimFailed": "فشل المطالبة",
+    "positionLocked": "لا يزال المركز مُقفلاً. لا يُمكنك إلغاء رهانك إلا بعد انتهاء فترة القفل.",
+    "unstakingSuccess": "تم إلغاء الرهان بنجاح!",
+    "unstakingSuccessDesc": "لقد تم إلغاء رهان رموزك بنجاح وتم إرجاعها إلى محفظتك.",
+    "unstakingFailed": "فشل إلغاء الرهان",
+    "earlyExitSuccess": "الخروج المبكر ناجح!",
+    "earlyExitSuccessDesc": "تم إلغاء رهن رموزك مبكرًا. تم تطبيق غرامة بنسبة 10% وإرسالها إلى الخزانة.",
+    "earlyExitFailed": "فشل الخروج المبكر"
+  },
+  "campaign": {
+    "title": "حملة",
+    "subtitle": "معلومات وإحصائيات الحملة"
+  },
+  "disclaimer": {
+    "title": "تنصل",
+    "message": "هذه رسالة إخلاء مسؤولية. يُرجى قراءتها بعناية قبل المتابعة."
+  },
+  "info": {
+    "buyTokens": "شراء الرموز",
+    "valueTitle": "قيمة",
+    "valueTitleHighlight": "رمز PreGVT",
+    "valueDescription": "تقليديًا، كانت هذه الرموز الائتمانية الحكومية عالية الجودة تحتكرها المؤسسات الكبيرة، مما يجعل الوصول إليها صعبًا على المستثمرين الأفراد. من خلال الترميز، نُقسّم هذا الأصل عالي الجودة إلى وحدات يسهل الوصول إليها، مما يتيح لك أن تصبح \"مساهمًا\" في الأصول الأساسية بعتبة استثمارية أقل، وأن تشارك في أرباح التطوير. انطلاق عالمي! بدأ البيع المسبق لرموز PreGVT، والأماكن محدودة، وهذه الفرصة لن تُتاح مرة أخرى. بادر الآن لتأمين عوائد مستقبلية.",
+    "learnMore": "يتعلم أكثر",
+    "financialDisclaimer": "إخلاء المسؤولية المالية",
+    "financialDisclaimerDesc": "تُحدد هذه الصفحة أهدافًا رئيسية لنمو المنتج والمجتمع. وليست نصيحة مالية أو وعدًا بالعوائد.",
+    "investmentWarning": "تحذير استثماري",
+    "investmentWarningDesc": "تُحدد هذه الصفحة أهدافًا رئيسية لنمو المنتج والمجتمع. وليست نصيحة مالية أو وعدًا بالعوائد.",
+    "targetBands": "النطاقات والمقاييس المستهدفة",
+    "targetBandsDesc": "نطاقات الأسعار المستهدفة إرشادية، وقد تتغير تبعًا لإنجاز المراحل وظروف السوق. تعتمد جميع المقاييس على بيانات السلسلة ولوحات معلومات/تدقيقات خارجية.",
+    "publicPriceRoute": "طريق السعر العام",
+    "tableHeaders": {
+      "stage": "منصة",
+      "coreEvent": "الحدث الأساسي",
+      "targetBand": "النطاق المستهدف (بالدولار الأمريكي)",
+      "rationale": "الأساس المنطقي"
+    },
+    "currentPhase": "المرحلة الحالية",
+    "genesisSeed": "بذرة التكوين",
+    "communityEarly": "المجتمع المبكر",
+    "publicFlashSale": "بيع سريع عام",
+    "phase1Title": "المرحلة الأولى من البيع المسبق ثلاثي المستويات",
+    "phase1Subtitle": "(طفو منخفض، مرونة عالية)",
+    "progress": "تقدم",
+    "loading": "تحميل...",
+    "sold": "مُباع",
+    "remaining": "متبقي",
+    "activations": "التنشيطات",
+    "status": "حالة",
+    "presaleActive": "البيع المسبق نشط",
+    "presaleInactive": "البيع المسبق غير نشط",
+    "price": "سعر",
+    "amount": "كمية",
+    "raise": "يرفع",
+    "purpose": "غاية",
+    "totals": "المجموع",
+    "target": "هدف",
+    "mainTokenPreview": "معاينة الرمز الرئيسي",
+    "fixedPreviewPrice": "سعر المعاينة الثابت · غير قابل للتداول",
+    "mainTokenPreviewDesc": "يساعد سعر المعاينة هذا الوكلاء والمستثمرين الأوائل على فهم القيمة المستهدفة للرمز الرئيسي قبل حدث توليد الرمز (TGE). هذا السعر ليس من مُجمّع السيولة (LP)، ولا من DexScreener، ولا يرتبط بسعر السوق قبل حدث توليد الرمز (GVT). هذه معاينة لواجهة المستخدم فقط لأغراض ثقة المستثمرين والتواصل مع الوكلاء.",
+    "leaderboards": "لوحات المتصدرين",
+    "kolReferrals": "إحالات KOL",
+    "buyer": "المشتري",
+    "claimReferrals": "المطالبة بالإحالات",
+    "activation": "التنشيط"
+  },
+  "aiYield": {
+    "title": "أنت الآن أقرب من أي وقت مضى إلى",
+    "titleHighlight": "دخل قوة الذكاء الاصطناعي",
+    "subtitle": "دع الكهرباء المولدة بالذكاء الاصطناعي تتحول إلى عائدك الحقيقي",
+    "description": "في عام ٢٠٢٥، حققت صناديق المؤشرات المتداولة الأمريكية لقوة الذكاء الاصطناعي عوائد سنوية تزيد عن ٤٨٪. الآن، ولأول مرة، يمكنك امتلاك المصدر - عُقد الذكاء الاصطناعي الحقيقية المُرمزة على السلسلة.",
+    "yieldLoop": "حلقة العائد",
+    "step1": "شراء preGVT",
+    "step2": "حصة",
+    "step3": "اكسب rGGP",
+    "step4": "تعزيز NFT",
+    "step5": "استرداد 1:1 لـ GVT",
+    "step6": "إعادة الرهان",
+    "step7": "يكرر"
+  },
+  "community": {
+    "title": "مجتمع عالمي مدعوم بالذكاء الاصطناعي والطاقة الخضراء",
+    "activeWallets": "2,351 محفظة نشطة",
+    "fromCountries": "من 47 دولة",
+    "missions": "مهمات Zealy / Galxe",
+    "missionsDesc": "أكمل المهام للحصول على preGVT",
+    "topReferrers": "أفضل 100 مُحيل",
+    "topReferrersDesc": "احصل على NFTs حصرية + مكافآت rGGP الجوية"
+  },
+  "roadmap": {
+    "title": "خريطة طريق ما قبل GVT",
+    "titleHighlight": "قبل GVT",
+    "description": "تُظهر هذه الخريطة المسارَ الرائعَ لـ PreGVT، بدءًا من التمويل الأولي، والنمو التدريجي، وصولًا إلى التكامل الكامل مع الأسواق المالية الرئيسية. تُخصَّص مرحلة ما قبل الرمز المميز للاستثمار في GVT (رمز القيمة العالمية)، بينما يبقى rGGP رمز مكافأة النظام البيئي لحاملي NFT وحوافز المجتمع. كلما شاركتَ مُبكِّرًا، زادت العوائد المُحتملة. سيتم إجراء الطرح العام على منصات تداول العملات المشفرة العالمية الرئيسية (Binance، وCoinbase، وOKX، وBybit)، مع ضمان التأسيس الكامل لمجموعة أصول RWA الأساسية وبدء تحقيق عوائد مستقرة.",
+    "q3Title": "تم إطلاق رمز RWA الرقمي PreGVT",
+    "q3Desc": "أطلق بروتوكول AGV بنجاح عملية بيع مسبقة للرموز الرقمية على سلسلة BSC في هونغ كونغ. اسم الرمز: preGVT. يمثل هذا الرمز المسبق مسار الاستثمار المباشر في GVT (رمز القيمة الخضراء).",
+    "q4Title": "البيع المسبق العام لـ PreGVT",
+    "q4Desc": "يبدأ البيع المسبق من الجولة التأسيسية برأس مال 0.005 دولار أمريكي حتى سعر الإطلاق 0.15 دولار أمريكي في الربع الرابع من عام 2025! هذا مسار واضح لاكتشاف القيمة لمسار الاستثمار من مرحلة ما قبل GVT إلى GVT. القرار الذي تتخذه الآن سيحدد نقطة انطلاقك في هذه الرحلة.",
+    "q1Title": "إطلاق PreGVT وما بعده",
+    "q1Desc": "سيشهد الربع الأول من عام ٢٠٢٦ إنجازًا باهرًا في مسيرتنا، حيث نُكمل المرحلة النهائية من البيع الخاص إلى الإدراج العام، ونبدأ التداول، ونفتح صفحة جديدة. ستُحوّل رموز PreGVT إلى GVT، بينما يبقى rGGP رمز مكافأة النظام البيئي لحاملي NFT وحوافز المجتمع."
+  },
+  "institutionalProof": {
+    "title": "درجة مؤسسية",
+    "titleHighlight": "الشفافية",
+    "metric": "متري",
+    "rmb": "يوان صيني (ين)",
+    "usd": "دولار أمريكي (دولار)",
+    "notes": "ملحوظات",
+    "fixedAssets": "الأصول الثابتة",
+    "netAssets": "صافي الأصول",
+    "netProfitYTD": "صافي الربح حتى الآن"
+  },
+  "stakingPlans": {
+    "title": "خطط التخزين - عقد Flex وVault",
+    "subtitle": "اختر استراتيجية المراهنة الخاصة بك وابدأ في كسب عائد حقيقي من البنية التحتية لقوة الذكاء الاصطناعي",
+    "table": {
+      "type": "يكتب",
+      "lockPeriod": "فترة القفل",
+      "apyReturnMode": "APY / وضع العودة",
+      "rewardsPerks": "المكافآت والمزايا"
+    },
+    "plans": {
+      "standard": {
+        "type": "العقدة القياسية",
+        "lockPeriod": "30 يومًا",
+        "returnMode": "عند النضج",
+        "rewards": "أولوية الإنزال الجوي"
+      },
+      "threeMonth": {
+        "type": "خزنة 3 أشهر",
+        "lockPeriod": "90 يومًا",
+        "returnMode": "خطي شهري",
+        "rewards": "الوصول إلى دور OG"
+      },
+      "sixMonth": {
+        "type": "خزنة 6 أشهر",
+        "lockPeriod": "180 يومًا",
+        "returnMode": "خطي شهري",
+        "rewards": "إنزال جوي إضافي من rGGP"
+      },
+      "twelveMonth": {
+        "type": "خزنة لمدة 12 شهرًا (القائمة البيضاء)",
+        "lockPeriod": "360 يومًا",
+        "returnMode": "إعادة الاستثمار التدريجي + التلقائي",
+        "rewards": "الوصول الحصري إلى الخزنة",
+        "perks": "فوائد القائمة ذات الأولوية"
+      }
+    },
+    "smallPrint": "تم تدقيق جميع عقود المراهنة | تم توزيع المكافآت في rGGP | يتم فتح القائمة البيضاء لـ Vault بعد إكمال المستوى 1.",
+    "cta": "انضم الآن - لا تفوت فرصة البيع المسبق النهائية"
+  },
+  "claimFOMOBanner": {
+    "title": "تم تطبيق 20,000 محفظة - اطلب الإنزال الجوي الآن (48 ساعة فقط)",
+    "description": "المحافظ المُوثَّقة فقط هي التي يمكنها المطالبة. اتبع الخطوات التالية."
+  },
+  "discordVerificationModal": {
+    "title": "التحقق من Discord",
+    "description": "قبل التحقق، تأكد من انضمامك إلى خادم Discord الخاص بنا.",
+    "proceed": "المضي قدما في التحقق",
+    "joinCommunity": "انضم إلى المجتمع أولاً",
+    "cancel": "يلغي"
+  },
+  "socialVerification": {
+    "title": "التحقق الاجتماعي",
+    "followX": "اتبع X",
+    "joinDiscord": "انضم إلى ديسكورد",
+    "verified": "✓ تم التحقق",
+    "notVerified": "لم يتم التحقق",
+    "checking": "جاري التحقق...",
+    "joinDiscordButton": "انضم إلى ديسكورد",
+    "followingX": "✓ متابعة على X",
+    "followNow": "تابع الآن",
+    "verifyAgain": "التحقق مرة أخرى"
+  },
+  "walletConnect": {
+    "addressCopied": "تم نسخ العنوان إلى الحافظة",
+    "openingMetaMask": "فتح MetaMask...",
+    "openingTrustWallet": "فتح محفظة الثقة...",
+    "openingCoinbase": "فتح محفظة Coinbase...",
+    "quickConnect": "الاتصال السريع (الجوال)",
+    "openInMetaMask": "افتح في MetaMask",
+    "openInTrustWallet": "افتح في محفظة Trust Wallet",
+    "openInCoinbase": "افتح في محفظة Coinbase",
+    "orUseWalletConnect": "أو استخدم WalletConnect",
+    "useWalletConnect": "استخدم WalletConnect",
+    "connectWallet": "ربط المحفظة",
+    "connectViaWalletConnect": "الاتصال عبر WalletConnect",
+    "connectYourWallet": "ربط محفظتك",
+    "scanWithWallet": "امسح ضوئيًا باستخدام محفظتك",
+    "useWalletConnectScan": "استخدم WalletConnect لمسح رمز الاستجابة السريعة",
+    "connectToPreGVT": "الاتصال بـ PreGVT",
+    "choosePreferredWallet": "اختر محفظتك المفضلة",
+    "walletNotConnected": "المحفظة غير متصلة",
+    "connectWalletToStart": "قم بتوصيل محفظتك لبدء استخدام PreGVT",
+    "walletConnected": "المحفظة متصلة",
+    "on": "على"
+  },
+  "stickyDisclaimer": {
+    "top": {
+      "title": "إشعار الوصول المبكر",
+      "description": "هذا وصول مبكر قائم على إنجازات مهمة. يتم تعديل النطاقات المستهدفة مع فتح المقاييس. يُرجى اختيار ما يناسبك."
+    },
+    "bottom": {
+      "title": "نظام شفاف",
+      "description": "نحن نستخدم نظامًا شفافًا وقابلًا للتحقق من المعالم. إشعار قبل 72 ساعة من إجراء التغييرات."
+    }
+  },
+  "disclaimerBanner": {
+    "top": {
+      "title": "الوصول المبكر الموجه نحو الإنجازات",
+      "description": "هذا وصول مبكر قائم على إنجازات محددة. تُعدّل النطاقات المستهدفة مع فتح المقاييس العامة؛ يُرجى اختيار النطاق الذي يناسبك. النطاقات المعروضة هي نطاقات مستهدفة. تُفتح المستويات وقد تُعدّل بناءً على بيانات السلسلة ولوحات معلومات الجهات الخارجية. قد يتم ترحيل أي مبلغ غير مُباع إلى المستوى التالي."
+    },
+    "bottom": {
+      "title": "نظام المعالم الشفاف",
+      "description": "نستخدم نظامًا شفافًا وقابلًا للتحقق من الإنجازات. عند استيفاء الحدود المحددة مسبقًا (المحافظ/المهام/الشراكات/التدقيق، إلخ)، يتم فتح المستوى التالي والارتقاء إلى المستوى المستهدف. وللتوضيح، نصدر إشعارًا قبل 72 ساعة من أي تغييرات."
+    },
+    "showMore": "إظهار المزيد",
+    "showLess": "إظهار أقل"
+  },
+  "leaderboard": {
+    "buyerLeaderboard": "قائمة المتصدرين للمشترين",
+    "referralLeaderboard": "لوحة المتصدرين للإحالة",
+    "activationLeaderboard": "لوحة صدارة التنشيط",
+    "kolReferralLeaderboard": "قائمة المتصدرين في إحالة KOL",
+    "claimReferralLeaderboard": "المطالبة بقائمة المتصدرين للإحالة",
+    "leaderboard": "لوحة المتصدرين",
+    "rank": "رتبة",
+    "wallet": "محفظة",
+    "address": "عنوان",
+    "totalPurchased": "إجمالي المشتريات",
+    "purchases": "المشتريات",
+    "referralTime": "وقت الإحالة",
+    "totalEarned": "إجمالي المكتسبات",
+    "redeemed": "مُخلّص",
+    "accrued": "مستحق",
+    "activated": "تم التفعيل",
+    "numberOfReferrals": "عدد الإحالات",
+    "totalAmount": "المبلغ الإجمالي",
+    "referrals": "الإحالات",
+    "loading": "جاري تحميل لوحة المتصدرين...",
+    "noEntries": "لا توجد إدخالات حتى الآن"
+  },
+  "fomoSection": {
+    "title": "العرض محدود. المستوى السعري التالي يقترب.",
+    "soldProgress": "{sold} / {max} تم البيع ({percentage}%)",
+    "nextRound": "الجولة التالية → {السعر} في {ساعة}س {دقيقة}د",
+    "ctaButton": "انضم الآن - لا تفوت فرصة البيع المسبق النهائية",
+    "livePurchaseFeed": "تغذية الشراء المباشرة",
+    "purchaseNotification": "المحفظة {wallet} اشترت للتو {amount} preGVT",
+    "waitingForPurchases": "في انتظار المشتريات..."
+  },
+  "newsletterSection": {
+    "title": "نشرتنا الإخبارية",
+    "subtitle": "ابق على اطلاع بأحدث أخبارنا",
+    "description": "هل ترغب في تفويت هذه اللحظة التاريخية للابتكار المالي العالمي؟ يُرجى ترك بريدك الإلكتروني للاشتراك في تحديثات PreGVT TOKEN الحصرية.",
+    "signupTitle": "اشترك في النشرة الإخبارية",
+    "emailPlaceholder": "أدخل عنوان بريدك الإلكتروني",
+    "subscribeButton": "اشترك الآن",
+    "subscriptionSuccess": "✅ تم الاشتراك بنجاح! شكرًا لاهتمامك."
+  }
+}

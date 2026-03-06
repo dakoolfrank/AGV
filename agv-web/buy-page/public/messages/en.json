@@ -1,0 +1,339 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "close": "Close",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "submit": "Submit",
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "wallet": "Wallet",
+    "address": "Address",
+    "balance": "Balance",
+    "amount": "Amount",
+    "price": "Price",
+    "total": "Total",
+    "status": "Status",
+    "date": "Date",
+    "time": "Time",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "view": "View",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "share": "Share",
+    "learnMore": "Learn More",
+    "joinNow": "Join Now",
+    "claim": "Claim",
+    "buy": "Buy",
+    "sell": "Sell",
+    "approve": "Approve",
+    "reject": "Reject",
+    "retry": "Retry"
+  },
+  "header": {
+    "nav": {
+      "home": "Home",
+      "claim": "Claim",
+      "buy": "Buy",
+      "balance": "Balance",
+      "staking": "Staking",
+      "about": "About",
+      "whitepaper": "Whitepaper"
+    },
+    "language": "Language",
+    "selectLanguage": "Select Language"
+  },
+  "footer": {
+    "brand": {
+      "name": "PreGVT Protocol",
+      "tagline": "Digital Token Platform",
+      "description": "The world's first compliant PreGVT digital token, an innovative financial product based on blockchain technology."
+    },
+    "features": {
+      "secure": "Secure",
+      "fast": "Fast",
+      "multichain": "Multichain"
+    },
+    "links": {
+      "products": "Products",
+      "company": "Company",
+      "support": "Support",
+      "legal": "Legal",
+      "nftMinting": "NFT Minting",
+      "kolProgram": "KOL Program",
+      "analytics": "Analytics",
+      "aboutUs": "About Us",
+      "careers": "Careers",
+      "press": "Press",
+      "blogs": "Blogs",
+      "helpCenter": "Help Center",
+      "documentation": "Documentation",
+      "apiReference": "API Reference",
+      "contactSupport": "Contact Support",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfService": "Terms of Service",
+      "cookiePolicy": "Cookie Policy",
+      "gdpr": "GDPR"
+    }
+  },
+  "hero": {
+    "title": "The World's First Green-AI ETF Token Backed by",
+    "realAssets": "Real Assets",
+    "subtitle": "EU-certified solar power and AI compute infrastructure are now tokenized and verified on-chain through the Green Garden Protocol (GGP).",
+    "tagline": "Real electricity. Real yield. Real growth.",
+    "joinPresale": "Join Presale",
+    "learnMore": "Learn More",
+    "ticker": {
+      "sold": "{sold} / {max} sold ({percentage}%)",
+      "nextPrice": "Next Price {price} in {time}",
+      "walletsJoined": "{count} wallets joined"
+    }
+  },
+  "countdown": {
+    "title": "Presale Countdown",
+    "joinNow": "Join Now"
+  },
+  "realAsset": {
+    "title": "Real Power. Real Assets.",
+    "onChain": "On-Chain.",
+    "liveFeed": "Live feed from Jinglong Agrivoltaic Station, Shaanxi — EU-compliant 14.5 MW hybrid solar farm powering AI compute nodes.",
+    "dataFlowArchitecture": "Data Flow Architecture",
+    "steps": {
+      "solarPower": {
+        "title": "Solar Power",
+        "description": "Photovoltaic generation from EU-certified farms"
+      },
+      "energyNode": {
+        "title": "Energy Node",
+        "description": "Real-time energy capture and conversion"
+      },
+      "depinNetwork": {
+        "title": "DePIN Network",
+        "description": "On-chain verification and distribution"
+      },
+      "aiCompute": {
+        "title": "AI Compute",
+        "description": "Powering AI infrastructure nodes"
+      },
+      "tokenYield": {
+        "title": "Token Yield",
+        "description": "Real yield distributed to token holders"
+      }
+    }
+  },
+  "about": {
+    "valueTitle": "The Value of",
+    "valueTitleHighlight": "PreGVT Token",
+    "valueDescription": "PreGVT is the world's first dual-listed digital token bridging traditional finance and blockchain. Issued by PreGVT Group (Fitch A-), it's built on Ethereum, open to public fundraising, and backed by regulated financial credit, marking a milestone in tokenized assets.",
+    "steps": {
+      "step1": {
+        "title": "Step 1: Create Account",
+        "description": "Register your PreGVT account, complete identity verification and security settings"
+      },
+      "step2": {
+        "title": "Step 2: Deposit Ethereum Chain Tokens (ETH, USDT supported)",
+        "description": "Connect your wallet and deposit supported tokens for purchase"
+      },
+      "step3": {
+        "title": "Step 3: Participate in Presale and Buy PreGVT",
+        "description": "Select purchase amount, confirm transaction and complete purchase process"
+      },
+      "step4": {
+        "title": "Step 4: Private Sale Ends, Exchange Listing",
+        "description": "Wait for private sale to end, tokens will be listed on major exchanges"
+      }
+    },
+    "newEraTitle": "A New Era of",
+    "newEraTitleHighlight": "Regulated DeFi",
+    "newEraDescription": "As the cryptocurrency market rapidly evolves, volatility and risk often make investors cautious—turning the space into what many call the \"Wild West\" of finance. PreGVT Token changes that narrative by introducing a regulated, asset-backed, and high-credit digital token designed for long-term stability and investor confidence. Built on transparency and real-world value, it marks a new era of secure, compliant, and credible digital investment.",
+    "features": {
+      "regulated": {
+        "title": "Regulated & Compliant",
+        "description": "Issued by PreGVT Group with Fitch A- rating, ensuring regulatory compliance and financial credibility"
+      },
+      "backed": {
+        "title": "Asset-Backed",
+        "description": "Backed by real-world assets including EU-certified solar farms and AI compute infrastructure"
+      },
+      "transparent": {
+        "title": "Transparent & Verifiable",
+        "description": "All assets and transactions are verified on-chain, providing full transparency and traceability"
+      }
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "titleHighlight": "FAQ",
+    "subtitle": "We have compiled the questions you care about most to help you quickly understand the presale details and process of PreGVT.",
+    "questions": [
+      {
+        "question": "What is PreGVT?",
+        "answer": "The world's first financial product that combines \"public offering\", \"exchange listing\" and \"RWA digital token\" features. Token name: PreGVT  (PreGVT Coin), issued on the Ethereum public chain."
+      },
+      {
+        "question": "How do I buy PreGVT?",
+        "answer": "PreGVT is currently in presale stage and can only be purchased through the official PreGVT001.com website. Note: Please do not attempt to purchase from Uniswap, Pancakeswap, Raydium or any other platform, as these are unofficial platforms and may involve fraudulent activities."
+      },
+      {
+        "question": "How do I check my purchased token quantity?",
+        "answer": "You can view your purchased token quantity and balance in your created account."
+      },
+      {
+        "question": "How do I claim my tokens?",
+        "answer": "After participating in the purchase, tokens will be displayed in your account balance. After PreGVT is sold out, you can claim your tokens."
+      },
+      {
+        "question": "Does the presale support fiat currency? What are the minimum/maximum purchase amounts?",
+        "answer": "Currently, PreGVT presale does not support fiat currency, only Ethereum (ERC-20) assets. Minimum purchase amount per account is 100 USD, maximum purchase amount is 5000 USD."
+      },
+      {
+        "question": "How to contact the official PreGVT team?",
+        "answer": "You can contact the official email PreGVT001@proton.me or join the official Telegram community to contact administrators."
+      }
+    ]
+  },
+  "buy": {
+    "title": "Buy PreGVT",
+    "subtitle": "Join the presale and secure your tokens",
+    "connectWallet": "Connect Wallet",
+    "enterAmount": "Enter Amount",
+    "selectAmount": "Select Amount",
+    "review": "Review",
+    "confirmPurchase": "Confirm Purchase",
+    "purchasing": "Purchasing...",
+    "pricePerToken": "Price per Token",
+    "minimumReceived": "Minimum Received",
+    "youWillReceive": "You will receive",
+    "tokens": "tokens",
+    "approveToken": "Approve Token",
+    "approving": "Approving...",
+    "approved": "Approved",
+    "buyNow": "Buy Now",
+    "buying": "Buying...",
+    "switchChain": "Switch to Binance Smart Chain (BSC)",
+    "insufficientBalance": "Insufficient balance",
+    "enterValidAmount": "Please enter a valid amount",
+    "connectWalletFirst": "Please connect your wallet first",
+    "selfReferralError": "You cannot refer yourself using your own {type}. Please remove the referral ID or use a different one.",
+    "kolId": "KOL ID",
+    "referralWallet": "Referral Wallet",
+    "optional": "Optional",
+    "reviewPurchase": "Review Purchase",
+    "purchaseAmount": "Purchase Amount",
+    "youWillPay": "You will pay",
+    "transactionFee": "Transaction Fee",
+    "estimatedGas": "Estimated Gas",
+    "confirmTransaction": "Confirm Transaction",
+    "transactionPending": "Transaction Pending",
+    "transactionSuccess": "Transaction Successful",
+    "transactionFailed": "Transaction Failed",
+    "checkWallet": "Please check your wallet to confirm the transaction",
+    "approvalSuccess": "Token approval successful!",
+    "approvalFailed": "Approval failed",
+    "approvalRejected": "Approval was rejected. Please try again and approve the transaction.",
+    "transactionClosed": "Transaction window was closed. Please try again.",
+    "purchaseSuccess": "Purchase successful!",
+    "purchaseFailed": "Purchase failed",
+    "kolLocked": "KOL referral is locked. You cannot change it after starting a purchase."
+  },
+  "claim": {
+    "title": "Claim Your Tokens",
+    "subtitle": "Follow the steps to claim your allocated tokens",
+    "step1": {
+      "title": "Step 1: Connect Wallet",
+      "description": "Connect your wallet to get started"
+    },
+    "step2": {
+      "title": "Step 2: Verify Joining",
+      "description": "Verify that you've joined our Discord and followed us on X"
+    },
+    "step3": {
+      "title": "Step 3: Claim Badge",
+      "description": "Claim your airdrop badge to proceed to the next step."
+    },
+    "step4": {
+      "title": "Step 4: Redeem Allocation",
+      "description": "Claim your allocated preGVT tokens."
+    },
+    "step5": {
+      "title": "Step 5: Redeem Badge",
+      "description": "Complete the process by redeeming your badge."
+    },
+    "connectWallet": "Connect Wallet",
+    "verificationComplete": "✓ Verification complete! You can now proceed to claim your badge.",
+    "completeVerifications": "Please complete both verifications to continue",
+    "claimBadge": "Claim Badge",
+    "claimingBadge": "Claiming Badge...",
+    "badgeClaimed": "Badge Claimed",
+    "checking": "Checking...",
+    "claimPrice": "Claim Price: {amount} BNB",
+    "yourAllocation": "Your Allocation: {amount} preGVT",
+    "claimAllocation": "Claim Allocation",
+    "claiming": "Claiming...",
+    "allocationClaimed": "Allocation Claimed",
+    "balanceCheckFailed": "Balance Check Failed",
+    "insufficientBnbBalance": "Insufficient BNB Balance",
+    "noAllocation": "No Allocation",
+    "allocationAvailable": "Allocation Available: {amount} preGVT",
+    "noAllocationFound": "No allocation found",
+    "checkingAllocation": "Checking allocation...",
+    "gasFeeRequired": "Gas Fee Required - Minimum 0.00005",
+    "redeemBadge": "Redeem Badge",
+    "redeemingBadge": "Redeeming Badge...",
+    "badgeRedeemed": "Badge Redeemed",
+    "congratulations": "Congratulations!",
+    "claimSuccess": "You have successfully claimed your tokens!",
+    "error": "An error occurred. Please try again."
+  },
+  "balance": {
+    "title": "Your Balance",
+    "subtitle": "View your PreGVT token balance and transaction history",
+    "connectWallet": "Connect Wallet to view your balance",
+    "preGVTBalance": "PreGVT Balance",
+    "pricePerToken": "Price per Token",
+    "totalValue": "Total Value",
+    "transactionHistory": "Transaction History",
+    "noTransactions": "No transactions found",
+    "leaderboard": "Leaderboard"
+  },
+  "staking": {
+    "title": "Staking",
+    "subtitle": "Stake your tokens and earn rewards",
+    "connectWallet": "Connect Wallet",
+    "selectPlan": "Select Staking Plan",
+    "stakeAmount": "Stake Amount",
+    "enterAmount": "Enter amount to stake",
+    "max": "Max",
+    "approveToken": "Approve Token",
+    "approving": "Approving...",
+    "stake": "Stake",
+    "staking": "Staking...",
+    "yourStakes": "Your Stakes",
+    "pendingRewards": "Pending Rewards",
+    "claimRewards": "Claim Rewards",
+    "unstake": "Unstake",
+    "unstaking": "Unstaking...",
+    "lockPeriod": "Lock Period",
+    "apy": "APY",
+    "minStake": "Min Stake"
+  },
+  "campaign": {
+    "title": "Campaign",
+    "subtitle": "Campaign information and statistics"
+  },
+  "disclaimer": {
+    "title": "Disclaimer",
+    "message": "This is a disclaimer message. Please read carefully before proceeding."
+  }
+}
+

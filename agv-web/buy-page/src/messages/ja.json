@@ -1,0 +1,742 @@
+{
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "cancel": "キャンセル",
+    "confirm": "確認する",
+    "close": "近い",
+    "save": "保存",
+    "delete": "消去",
+    "edit": "編集",
+    "back": "戻る",
+    "next": "次",
+    "previous": "前の",
+    "submit": "提出する",
+    "connect": "接続する",
+    "disconnect": "切断",
+    "wallet": "財布",
+    "address": "住所",
+    "balance": "バランス",
+    "amount": "額",
+    "price": "価格",
+    "total": "合計",
+    "status": "状態",
+    "date": "日付",
+    "time": "時間",
+    "search": "検索",
+    "filter": "フィルター",
+    "sort": "選別",
+    "view": "ビュー",
+    "copy": "コピー",
+    "copied": "コピーしました！",
+    "share": "共有",
+    "learnMore": "もっと詳しく知る",
+    "joinNow": "今すぐ参加",
+    "claim": "請求",
+    "buy": "買う",
+    "sell": "売る",
+    "approve": "承認する",
+    "reject": "拒否する",
+    "retry": "リトライ"
+  },
+  "header": {
+    "nav": {
+      "home": "家",
+      "claim": "請求",
+      "buy": "買う",
+      "balance": "バランス",
+      "staking": "ステーキング",
+      "about": "について",
+      "whitepaper": "ホワイトペーパー"
+    },
+    "language": "言語",
+    "selectLanguage": "言語を選択"
+  },
+  "footer": {
+    "brand": {
+      "name": "PreGVTプロトコル",
+      "tagline": "デジタルトークンプラットフォーム",
+      "description": "ブロックチェーン技術に基づいた革新的な金融商品である、世界初の準拠 PreGVT デジタル トークン。"
+    },
+    "features": {
+      "secure": "安全な",
+      "fast": "速い",
+      "multichain": "マルチチェーン"
+    },
+    "links": {
+      "products": "製品",
+      "company": "会社",
+      "support": "サポート",
+      "legal": "法律上の",
+      "nftMinting": "NFT鋳造",
+      "kolProgram": "KOLプログラム",
+      "analytics": "分析",
+      "aboutUs": "私たちについて",
+      "careers": "キャリア",
+      "press": "プレス",
+      "blogs": "ブログ",
+      "helpCenter": "ヘルプセンター",
+      "documentation": "ドキュメント",
+      "apiReference": "APIリファレンス",
+      "contactSupport": "サポートに問い合わせる",
+      "privacyPolicy": "プライバシーポリシー",
+      "termsOfService": "利用規約",
+      "cookiePolicy": "クッキーポリシー",
+      "gdpr": "GDPR"
+    }
+  },
+  "hero": {
+    "title": "世界初のグリーンAI ETFトークンは",
+    "realAssets": "実物資産",
+    "subtitle": "EU 認証の太陽光発電および AI コンピューティング インフラストラクチャは現在、Green Garden Protocol (GGP) を通じてオンチェーンでトークン化および検証されます。",
+    "tagline": "本物の電力。本物の収益。本物の成長。",
+    "joinPresale": "プレセールに参加する",
+    "learnMore": "もっと詳しく知る",
+    "ticker": {
+      "sold": "{販売数} / {最大販売数} ({パーセント}%)",
+      "nextPrice": "次の価格は {time} 後 {price} です",
+      "walletsJoined": "{count} 個のウォレットが参加しました"
+    }
+  },
+  "countdown": {
+    "title": "プレセールカウントダウン",
+    "joinNow": "今すぐ参加"
+  },
+  "realAsset": {
+    "title": "真の力。真の資産。",
+    "onChain": "オンチェーン。",
+    "liveFeed": "陝西省の景龍農業発電所からのライブフィード — AI コンピューティング ノードに電力を供給する EU 準拠の 14.5 MW ハイブリッド太陽光発電ファーム。",
+    "dataFlowArchitecture": "データフローアーキテクチャ",
+    "steps": {
+      "solarPower": {
+        "title": "太陽光発電",
+        "description": "EU認証農場からの太陽光発電"
+      },
+      "energyNode": {
+        "title": "エネルギーノード",
+        "description": "リアルタイムのエネルギー捕捉と変換"
+      },
+      "depinNetwork": {
+        "title": "DePINネットワーク",
+        "description": "オンチェーン検証と配布"
+      },
+      "aiCompute": {
+        "title": "AIコンピューティング",
+        "description": "AIインフラストラクチャノードの強化"
+      },
+      "tokenYield": {
+        "title": "トークン利回り",
+        "description": "トークン保有者に分配される実質利回り"
+      }
+    }
+  },
+  "about": {
+    "valueTitle": "の価値",
+    "valueTitleHighlight": "PreGVTトークン",
+    "valueDescription": "PreGVTは、従来の金融とブロックチェーンを橋渡しする世界初の二重上場デジタルトークンです。PreGVTグループ（フィッチA-）が発行するこのトークンは、イーサリアムを基盤とし、一般からの資金調達が可能で、規制された金融信用によって裏付けられており、トークン化資産における画期的な出来事となります。",
+    "steps": {
+      "step1": {
+        "title": "ステップ1：アカウントを作成する",
+        "description": "PreGVTアカウントを登録し、本人確認とセキュリティ設定を完了してください"
+      },
+      "step2": {
+        "title": "ステップ2：イーサリアムチェーントークンを入金する（ETH、USDTに対応）",
+        "description": "ウォレットを接続して、サポートされているトークンを入金して購入します"
+      },
+      "step3": {
+        "title": "ステップ3：プレセールに参加してPreGVTを購入する",
+        "description": "購入金額を選択し、取引を確認して購入手続きを完了します"
+      },
+      "step4": {
+        "title": "ステップ4：プライベートセール終了、取引所上場",
+        "description": "プライベートセールが終了するまで待ってください。トークンは主要取引所に上場されます。"
+      }
+    },
+    "newEraTitle": "新しい時代",
+    "newEraTitleHighlight": "規制されたDeFi",
+    "newEraDescription": "暗号通貨市場が急速に進化するにつれ、ボラティリティとリスクは投資家を警戒させる傾向が強まり、この分野は金融界の「ワイルド・ウェスト」と呼ばれる様相を呈しています。PreGVTトークンは、長期的な安定性と投資家の信頼確保を目指して設計された、規制に準拠し、資産に裏付けられた高信用度のデジタルトークンを導入することで、この状況を変えます。透明性と現実世界の価値を基盤として構築されたPreGVTトークンは、安全でコンプライアンスに準拠し、信頼性の高いデジタル投資の新たな時代を告げます。",
+    "features": {
+      "regulated": {
+        "title": "Regulated & Compliant",
+        "description": "Issued by PreGVT Group with Fitch A- rating, ensuring regulatory compliance and financial credibility"
+      },
+      "backed": {
+        "title": "Asset-Backed",
+        "description": "Backed by real-world assets including EU-certified solar farms and AI compute infrastructure"
+      },
+      "transparent": {
+        "title": "Transparent & Verifiable",
+        "description": "All assets and transactions are verified on-chain, providing full transparency and traceability"
+      },
+      "realAssetAnchoring": {
+        "title": "実物資産のアンカー",
+        "description": "各 PreGVT は、価値のないアルゴリズム ステーブルコインではなく、明確な価値を持つ基礎となる実際の資産に対応しています。"
+      },
+      "strongCreditBacking": {
+        "title": "強力な信用力",
+        "description": "発行体は高い信用格付けと保証された返済能力を備えた 100% 国有企業です。"
+      },
+      "compliantInnovative": {
+        "title": "100%準拠で革新的",
+        "description": "規制の枠組み内での金融技術の革新を反映し、国際法および規制に従って発行および上場されています。"
+      }
+    },
+    "buyNow": "今すぐ購入"
+  },
+  "faq": {
+    "title": "よくある質問",
+    "titleHighlight": "よくある質問",
+    "subtitle": "PreGVT の先行販売の詳細とプロセスをすぐに理解できるように、最も関心のある質問をまとめました。",
+    "questions": [
+      {
+        "question": "What is PreGVT?",
+        "answer": "The world's first financial product that combines \"public offering\", \"exchange listing\" and \"RWA digital token\" features. Token name: PreGVT  (PreGVT Coin), issued on the Ethereum public chain."
+      },
+      {
+        "question": "How do I buy PreGVT?",
+        "answer": "PreGVT is currently in presale stage and can only be purchased through the official PreGVT001.com website. Note: Please do not attempt to purchase from Uniswap, Pancakeswap, Raydium or any other platform, as these are unofficial platforms and may involve fraudulent activities."
+      },
+      {
+        "question": "How do I check my purchased token quantity?",
+        "answer": "You can view your purchased token quantity and balance in your created account."
+      },
+      {
+        "question": "How do I claim my tokens?",
+        "answer": "After participating in the purchase, tokens will be displayed in your account balance. After PreGVT is sold out, you can claim your tokens."
+      },
+      {
+        "question": "Does the presale support fiat currency? What are the minimum/maximum purchase amounts?",
+        "answer": "Currently, PreGVT presale does not support fiat currency, only Ethereum (ERC-20) assets. Minimum purchase amount per account is 100 USD, maximum purchase amount is 5000 USD."
+      },
+      {
+        "question": "How to contact the official PreGVT team?",
+        "answer": "You can contact the official email PreGVT001@proton.me or join the official Telegram community to contact administrators."
+      }
+    ]
+  },
+  "buy": {
+    "title": "PreGVTを購入する",
+    "subtitle": "プレセールに参加してトークンを確保しましょう",
+    "connectWallet": "ウォレットを接続する",
+    "enterAmount": "金額を入力",
+    "selectAmount": "金額を選択",
+    "review": "レビュー",
+    "confirmPurchase": "購入の確認",
+    "purchasing": "購入...",
+    "pricePerToken": "トークンあたりの価格",
+    "minimumReceived": "最低受領額",
+    "youWillReceive": "受け取るもの",
+    "tokens": "トークン",
+    "approveToken": "トークンを承認",
+    "approving": "承認しています...",
+    "approved": "承認された",
+    "buyNow": "今すぐ購入",
+    "buying": "購入中...",
+    "switchChain": "Binance Smart Chain（BSC）に切り替える",
+    "insufficientBalance": "残高不足",
+    "enterValidAmount": "有効な金額を入力してください",
+    "connectWalletFirst": "まずウォレットを接続してください",
+    "selfReferralError": "ご自身の{type}を使用して自分自身を紹介することはできません。紹介IDを削除するか、別のIDを使用してください。",
+    "kolId": "KOL ID",
+    "referralWallet": "紹介ウォレット",
+    "optional": "オプション",
+    "reviewPurchase": "購入レビュー",
+    "purchaseAmount": "購入金額",
+    "youWillPay": "支払うことになる",
+    "transactionFee": "取引手数料",
+    "estimatedGas": "推定ガス",
+    "confirmTransaction": "取引の確認",
+    "transactionPending": "取引保留中",
+    "transactionSuccess": "取引は成功しました",
+    "transactionFailed": "取引に失敗しました",
+    "checkWallet": "取引を確認するにはウォレットを確認してください",
+    "approvalSuccess": "トークンの承認に成功しました!",
+    "approvalFailed": "承認に失敗しました",
+    "approvalRejected": "承認は拒否されました。もう一度試して取引を承認してください。",
+    "transactionClosed": "取引ウィンドウが閉じられました。もう一度お試しください。",
+    "purchaseSuccess": "購入成功しました！",
+    "purchaseFailed": "購入に失敗しました",
+    "kolLocked": "KOL紹介はロックされています。購入開始後は変更できません。",
+    "purchaseSuccessDesc": "トークンの購入に成功しました。",
+    "referralId": "紹介ID",
+    "locked": "ロックされています",
+    "copyLink": "リンクをコピー",
+    "walletAddress": "ウォレットアドレス",
+    "enterReferralId": "6桁の紹介IDまたはウォレットアドレスを入力してください",
+    "lockedWalletReferral": "ロックされました: ウォレットの紹介が検出されました",
+    "lockedKolReferral": "ロック済み: KOL紹介が検出されました",
+    "walletReferral": "ウォレット紹介",
+    "youreBuying": "購入するのは",
+    "pricePerTokenLabel": "トークンあたりの価格:",
+    "gasFee": "ガス料金",
+    "slippageUnit": "スリッページユニット",
+    "minimumReceivedLabel": "最低限受け取った金額:",
+    "back": "戻る",
+    "processing": "処理...",
+    "contractPaused": "契約は現在一時停止中です。しばらくしてからもう一度お試しください。",
+    "presaleInactive": "先行販売は現在無効です。しばらくしてからもう一度お試しください。",
+    "invalidPrice": "トークンの価格が無効です。更新してもう一度お試しください。",
+    "amountTooSmall": "トークンの金額が少なすぎます。より大きな金額を入力してください。",
+    "paymentTokenError": "支払いトークンアドレスを取得できませんでした。もう一度お試しください。",
+    "approvalRequired": "USDTの承認が必要です。MetaMaskが自動的に開きます...",
+    "selfReferralWarning": "自分自身を紹介することはできません。この紹介は報酬の対象にはなりません。",
+    "referralNotRecorded": "紹介は記録されていません",
+    "walletLinkCopied": "ウォレット紹介リンクがクリップボードにコピーされました。",
+    "kolLinkCopied": "KOL 紹介リンクがクリップボードにコピーされました。",
+    "noReferralToCopy": "コピーする紹介IDがありません",
+    "noticeTitle": "注意 — 取引不可能なトークン",
+    "noticeMessage": "このトークンは現在取引不可であり、正式に上場されるまで譲渡または売却することはできません。ご購入いただくことで、このトークンがロックされ、オンチェーンでのユーティリティおよび将来の流通のみを目的としていることを承認したものとみなされます。ご購入前に、ドキュメントに記載されているトークン上場のタイムラインと権利確定条件をご確認ください。",
+    "usdt": "USDT"
+  },
+  "claim": {
+    "title": "トークンを請求する",
+    "subtitle": "割り当てられたトークンを受け取るには手順に従ってください",
+    "step1": {
+      "title": "ステップ1：ウォレットを接続する",
+      "description": "始めるにはウォレットを接続してください",
+      "fullTitle": "ステップ1：ソーシャルに参加する",
+      "shortDescription": "Discordに参加してXをフォロー",
+      "joinDiscord": "Discordコミュニティに参加する",
+      "followX": "最新情報を受け取るにはXをフォローしてください",
+      "afterJoining": "参加後、上のボタンをクリックして認証に進みます"
+    },
+    "step2": {
+      "title": "ステップ2: 参加を確認する",
+      "description": "Discordに参加し、Xでフォローしていることを確認してください",
+      "shortDescription": "完全な検証"
+    },
+    "step3": {
+      "title": "ステップ3: バッジを取得する",
+      "description": "次のステップに進むには、エアドロップバッジを受け取ってください。",
+      "shortDescription": "エアドロップバッジを入手"
+    },
+    "step4": {
+      "title": "ステップ4: 割り当てを利用する",
+      "description": "割り当てられた preGVT トークンを請求します。",
+      "shortDescription": "preGVTトークンを請求する"
+    },
+    "step5": {
+      "title": "ステップ5: バッジを利用する",
+      "description": "バッジを引き換えてプロセスを完了します。",
+      "shortDescription": "プロセスを完了する"
+    },
+    "connectWallet": "ウォレットを接続する",
+    "verificationComplete": "✓ 認証が完了しました。バッジの申請手続きに進むことができます。",
+    "completeVerifications": "続行するには両方の確認を完了してください",
+    "claimBadge": "バッジを請求する",
+    "claimingBadge": "バッジを申請中...",
+    "badgeClaimed": "バッジを取得しました",
+    "checking": "チェック中...",
+    "claimPrice": "請求価格: {amount} BNB",
+    "yourAllocation": "あなたの割り当て: {amount} preGVT",
+    "claimAllocation": "請求の割り当て",
+    "claiming": "請求中...",
+    "allocationClaimed": "割り当て申請",
+    "balanceCheckFailed": "残高チェックに失敗しました",
+    "insufficientBnbBalance": "BNB残高不足",
+    "noAllocation": "割り当てなし",
+    "allocationAvailable": "利用可能な割り当て: {amount} preGVT",
+    "noAllocationFound": "割り当てが見つかりません",
+    "checkingAllocation": "割り当てを確認しています...",
+    "gasFeeRequired": "必要なガス料金 - 最低 0.00005",
+    "redeemBadge": "バッジを引き換える",
+    "redeemingBadge": "バッジを引き換え中...",
+    "badgeRedeemed": "バッジが引き換えられました",
+    "congratulations": "おめでとう！",
+    "claimSuccess": "トークンの請求に成功しました。",
+    "error": "エラーが発生しました。もう一度お試しください。",
+    "totalClaimed": "請求総額",
+    "remainingSupply": "残りの供給"
+  },
+  "balance": {
+    "title": "残高",
+    "subtitle": "PreGVTトークンの残高と取引履歴を表示する",
+    "connectWallet": "残高を確認するにはウォレットに接続してください",
+    "preGVTBalance": "PreGVTバランス",
+    "pricePerToken": "トークンあたりの価格",
+    "totalValue": "合計金額",
+    "transactionHistory": "取引履歴",
+    "noTransactions": "取引が見つかりません",
+    "leaderboard": "リーダーボード",
+    "yourRank": "ランク",
+    "redeemed": "償還された",
+    "accrued": "発生",
+    "migration": {
+      "supportTicket": {
+        "title": "移行サポートチケット",
+        "processTitle": "移行プロセス:",
+        "step1": "ウォレットアドレスと古いトークン残高を記載したサポートチケットを作成します",
+        "step2": "チケット概要をダウンロードする",
+        "step3": "Discordの#supportチャンネルでチケットIDを共有してください",
+        "step4": "チームによる手動処理を待つ",
+        "checkingBalance": "古いトークンの残高を確認しています...",
+        "oldPreGVTBalance": "古いGVT前バランス",
+        "walletAddress": "ウォレットアドレス",
+        "ticketId": "チケットID",
+        "ticketIdPlaceholder": "送信時に生成されます",
+        "createTicket": "サポートチケットを作成する",
+        "creatingTicket": "チケットを作成しています...",
+        "ticketCreated": "チケットが正常に作成されました。",
+        "nextSteps": "次のステップ:",
+        "nextStep1": "このメッセージを#support チャンネルに投稿してください:",
+        "nextStep2": "このページのスクリーンショットを添付してください",
+        "nextStep3": "チームの処理を待つ",
+        "postInSupport": "#supportチャンネルに投稿する",
+        "migrationRequest": "移行リクエスト: {ticketId} | ウォレット: {address}",
+        "noOldTokensFound": "ウォレット内に古い preGVT トークンは見つかりません。"
+      },
+      "title": "トークン移行",
+      "subtitle": "古いトークンを新しいトークンに移行する",
+      "oldTokenBalance": "古いトークン残高",
+      "newTokenBalance": "新しいトークン残高",
+      "migrateButton": "トークンの移行",
+      "migrating": "移行中...",
+      "checkingStatus": "移行ステータスを確認しています...",
+      "checkingBalances": "残高を確認しています...",
+      "migrationEnabled": "移行が有効になっています",
+      "migrationDisabled": "移行はまだ有効になっていません",
+      "alreadyMigrated": "トークンはすでに移行済みです",
+      "noOldTokens": "移行する古いトークンはありません",
+      "migrationSuccess": "移行が成功しました。トークンが移行されました。",
+      "migrationError": "移行に失敗しました。もう一度お試しください。",
+      "insufficientGas": "ガスが不足しています。取引に必要なBNBが十分にあることを確認してください。",
+      "wrongNetwork": "移行するには、Binance Smart Chain (BSC) に切り替えてください。",
+      "contractNotConfigured": "移行契約が設定されていません。サポートにお問い合わせください。",
+      "migrationInProgress": "移行中です。お待ちください...",
+      "checkWallet": "取引を確認するにはウォレットを確認してください",
+      "migrationComplete": "移行完了",
+      "oldToken": "古いトークン",
+      "newToken": "新しいトークン"
+    },
+    "stakingCTA": {
+      "title": "preGVTのステーキングを開始する",
+      "description": "preGVTトークンをステーキングすることで、パッシブ報酬を獲得できます。競争力のあるAPYレートで、柔軟なステーキングプランと固定期間のステーキングプランからお選びいただけます。",
+      "goToStaking": "ステーキングページへ"
+    },
+    "balanceFromContract": "契約からロードされた残高",
+    "loadingBalance": "残高を読み込んでいます..."
+  },
+  "staking": {
+    "title": "ステーキング",
+    "subtitle": "トークンをステークして報酬を獲得しましょう",
+    "connectWallet": "ウォレットを接続する",
+    "selectPlan": "ステーキングプランを選択",
+    "stakeAmount": "賭け金",
+    "enterAmount": "賭ける金額を入力してください",
+    "max": "マックス",
+    "approveToken": "トークンを承認",
+    "approving": "承認しています...",
+    "stake": "ステーク",
+    "staking": "ステーキング...",
+    "yourStakes": "あなたの賭け",
+    "pendingRewards": "保留中の報酬",
+    "claimRewards": "報酬を受け取る",
+    "unstake": "ステーク解除",
+    "unstaking": "ステーキング解除...",
+    "lockPeriod": "ロック期間",
+    "apy": "年利",
+    "minStake": "最小賭け金",
+    "connectWalletDesc": "ウォレットを接続してトークンのステーキングを開始しましょう",
+    "stakeTokens": "ステークトークン",
+    "tokenBalance": "トークン残高",
+    "staked": "賭けられた",
+    "stakedAmount": "ステーク額",
+    "totalEarned": "合計獲得額",
+    "days": "日数",
+    "available": "利用可能",
+    "rewardsReady": "あなたが持っている",
+    "readyToClaim": "請求する準備ができました",
+    "claimingDisabled": "rGGPがリリースされるまで請求は無効です",
+    "claimDisabled": "請求無効",
+    "loadingPositions": "ポジションを読み込んでいます...",
+    "positionId": "ポジションID",
+    "lockStatus": "ロックステータス",
+    "unlocked": "ロック解除",
+    "locked": "ロックされています",
+    "lockEnds": "ロックエンド",
+    "noActivePositions": "アクティブなステーキングポジションはありません",
+    "earlyExiting": "早期終了...",
+    "earlyExit": "早期退出",
+    "unstakeWarning": "警告: ステーキング解除",
+    "unstakeWarningDesc": "トークンのステークを解除しようとしています。",
+    "youWillReceive": "受け取るもの",
+    "unstakeConfirm": "続行しますか? この操作は元に戻せません。",
+    "confirmUnstake": "ステーク解除を確認",
+    "earlyExitWarning": "警告: 早期退出ペナルティ",
+    "earlyExitWarningDesc": "ロック期間が終了する前にトークンのステークを解除しようとしています。以下の点にご注意ください。",
+    "penalty": "ペナルティ（10％）",
+    "penaltyToTreasury": "この罰金は国庫に送られる",
+    "earlyExitConfirm": "続行しますか? この操作は元に戻せません。",
+    "confirmEarlyExit": "早期退出の確認",
+    "cancel": "キャンセル",
+    "loadStakingDataFailed": "ステーキングデータの読み込みに失敗しました",
+    "connectWalletFirst": "まずウォレットを接続してください",
+    "enterValidAmount": "有効な金額を入力してください",
+    "switchChain": "続行するには、ウォレットで Binance Smart Chain (BSC) に切り替えてください。",
+    "approvalSuccess": "トークンが正常に承認されました!",
+    "connectWalletAndSelectPlan": "ウォレットを接続してステーキングプランを選択してください",
+    "minStakeError": "最低賭け金は",
+    "approveTokensFirst": "まずトークンを承認してください",
+    "stakingFailed": "ステーキング失敗",
+    "rewardsClaimed": "報酬を受け取りました!",
+    "rewardsClaimedDesc": "ステーキング報酬は正常に請求され、ウォレットに追加されました。",
+    "claimFailed": "請求失敗",
+    "positionLocked": "ポジションはまだロックされています。ロック期間が終了するまでステークを解除することはできません。",
+    "unstakingSuccess": "アンステーキング成功！",
+    "unstakingSuccessDesc": "トークンは正常にステーク解除され、ウォレットに返されました。",
+    "unstakingFailed": "アンステーキング失敗",
+    "earlyExitSuccess": "早期終了に成功しました！",
+    "earlyExitSuccessDesc": "あなたのトークンは早期にステーク解除されました。10%のペナルティが適用され、トレジャリーに送金されました。",
+    "earlyExitFailed": "早期退出失敗"
+  },
+  "campaign": {
+    "title": "キャンペーン",
+    "subtitle": "キャンペーン情報と統計"
+  },
+  "disclaimer": {
+    "title": "免責事項",
+    "message": "これは免責事項です。続行する前に必ずお読みください。"
+  },
+  "info": {
+    "buyTokens": "トークンを購入",
+    "valueTitle": "の価値",
+    "valueTitleHighlight": "PreGVTトークン",
+    "valueDescription": "従来、このような高品質な政府信用トークンは大手機関によって独占されており、個人投資家がアクセスするのは困難でした。トークン化によって、この最高級資産をアクセスしやすい単位に分割することで、より低いハードルでコア資産の「株主」となり、開発配当を受け取ることが可能になります。世界初登場！PreGVTトークンの先行販売開始。数量限定で、この機会は二度とありません。将来のリターンを確保するために、今すぐ行動しましょう。",
+    "learnMore": "もっと詳しく知る",
+    "financialDisclaimer": "財務に関する免責事項",
+    "financialDisclaimerDesc": "このページでは、製品とコミュニティの成長に向けたマイルストーン目標の概要を示します。財務上のアドバイスや収益の約束ではありません。",
+    "investmentWarning": "投資警告",
+    "investmentWarningDesc": "このページでは、製品とコミュニティの成長に向けたマイルストーン目標の概要を示します。財務上のアドバイスや収益の約束ではありません。",
+    "targetBands": "ターゲットバンドとメトリクス",
+    "targetBandsDesc": "目標価格帯は参考値であり、マイルストーンの達成状況や市場状況に応じて調整される可能性があります。すべての指標は、オンチェーンデータとサードパーティのダッシュボード／監査に基づいています。",
+    "publicPriceRoute": "公示価格ルート",
+    "tableHeaders": {
+      "stage": "ステージ",
+      "coreEvent": "コアイベント",
+      "targetBand": "ターゲットバンド（米ドル）",
+      "rationale": "根拠"
+    },
+    "currentPhase": "現在のフェーズ",
+    "genesisSeed": "ジェネシスシード",
+    "communityEarly": "コミュニティ初期",
+    "publicFlashSale": "パブリックフラッシュセール",
+    "phase1Title": "フェーズ1 3段階プレセール",
+    "phase1Subtitle": "（低浮上、高弾性）",
+    "progress": "進捗",
+    "loading": "読み込み中...",
+    "sold": "販売された",
+    "remaining": "残り",
+    "activations": "アクティベーション",
+    "status": "状態",
+    "presaleActive": "先行販売中",
+    "presaleInactive": "プレセール非アクティブ",
+    "price": "価格",
+    "amount": "額",
+    "raise": "上げる",
+    "purpose": "目的",
+    "totals": "合計",
+    "target": "ターゲット",
+    "mainTokenPreview": "メイントークンプレビュー",
+    "fixedPreviewPrice": "固定プレビュー価格 · 取引不可",
+    "mainTokenPreviewDesc": "このプレビュー価格は、初期エージェントと投資家がTGE（トークンジェネレーションイベント）前のメイントークンの目標価格を把握するのに役立ちます。LP（流動性プール）やDexScreenerからの情報ではなく、GVT前の市場価格にも連動していません。これは、投資家の信頼とエージェントとのコミュニケーションを目的としたUIのみのプレビューです。",
+    "leaderboards": "リーダーボード",
+    "kolReferrals": "KOL紹介",
+    "buyer": "買い手",
+    "claimReferrals": "クレーム紹介",
+    "activation": "アクティベーション"
+  },
+  "aiYield": {
+    "title": "これまで以上に近づいています",
+    "titleHighlight": "AIパワーインカム",
+    "subtitle": "AIが生成した電力を実際の収益に変えましょう",
+    "description": "2025年、米国のAIパワーETFは年率48%以上のリターンを達成しました。今、初めて、オンチェーンでトークン化された実際のAIパワーノードというソースを所有できるようになりました。",
+    "yieldLoop": "利回りループ",
+    "step1": "プレGVTを購入する",
+    "step2": "ステーク",
+    "step3": "rGGPを獲得する",
+    "step4": "NFTブースト",
+    "step5": "1:1でGVTと引き換え",
+    "step6": "再ステーク",
+    "step7": "繰り返す"
+  },
+  "community": {
+    "title": "AIとグリーンエネルギーを活用したグローバルコミュニティ",
+    "activeWallets": "2,351個のアクティブウォレット",
+    "fromCountries": "47か国から",
+    "missions": "Zealy / Galxeミッション",
+    "missionsDesc": "タスクを完了してpreGVTを獲得する",
+    "topReferrers": "上位100人の紹介者",
+    "topReferrersDesc": "限定NFTとrGGPエアドロップボーナスを獲得"
+  },
+  "roadmap": {
+    "title": "PreGVTロードマップ",
+    "titleHighlight": "GVT前",
+    "description": "このロードマップは、初期のシード資金調達から段階的な成長、そして主流の金融市場への完全な統合に至るまでのPreGVTの壮大な道のりを示しています。プレトークン段階はGVT（Global Value Token）への投資に使用され、rGGPはNFT保有者へのエコシステム報酬トークンおよびコミュニティインセンティブとして機能します。早期に参加すればするほど、より大きなリターンを得られる可能性があります。公募は、主要な世界的暗号資産取引所（Binance、Coinbase、OKX、Bybit）で実施されます。その際には、基盤となるRWA資産プールが完全に確立され、安定したリターンを生み出し始めることが確実となります。",
+    "q3Title": "RWAデジタルトークンPreGVTがリリースされました",
+    "q3Desc": "AGVプロトコルは、香港のBSCチェーン上でデジタルトークンのプレセールを成功裏に開始しました。トークン名：preGVT。このプレトークンは、GVT（グリーンバリュートークン）への直接投資ルートを表しています。",
+    "q4Title": "PreGVT 公開先行販売",
+    "q4Desc": "プレセールはシードラウンドの0.005ドルから始まり、2025年第4四半期にはローンチ価格の0.15ドルでスタートします！これは、preGVTからGVTへの投資ルートにおける明確な価値発見の道筋です。今あなたが下す決断が、この旅の出発点を決定づけます。",
+    "q1Title": "PreGVTの発売とその後",
+    "q1Desc": "2026年第1四半期は、私たちの旅の中で最も輝かしい節目となるでしょう。プライベートセールから上場への最終段階を終え、取引を開始し、新たな章を開きます。PreGVTトークンはGVTに変換されますが、rGGPはNFT保有者およびコミュニティインセンティブのためのエコシステム報酬トークンとして残ります。"
+  },
+  "institutionalProof": {
+    "title": "機関レベル",
+    "titleHighlight": "透明性",
+    "metric": "メトリック",
+    "rmb": "人民元（円）",
+    "usd": "米ドル（$）",
+    "notes": "注記",
+    "fixedAssets": "固定資産",
+    "netAssets": "純資産",
+    "netProfitYTD": "年累計純利益"
+  },
+  "stakingPlans": {
+    "title": "ステーキングプラン - フレックスノードとVaultノード",
+    "subtitle": "ステーキング戦略を選択し、AIパワーインフラから実質的な収益を獲得しましょう",
+    "table": {
+      "type": "タイプ",
+      "lockPeriod": "ロック期間",
+      "apyReturnMode": "APY / リターンモード",
+      "rewardsPerks": "報酬と特典"
+    },
+    "plans": {
+      "standard": {
+        "type": "標準ノード",
+        "lockPeriod": "30日間",
+        "returnMode": "成熟時",
+        "rewards": "エアドロップの優先順位"
+      },
+      "threeMonth": {
+        "type": "3ヶ月保管庫",
+        "lockPeriod": "90日間",
+        "returnMode": "月次リニア",
+        "rewards": "OG ロール アクセス"
+      },
+      "sixMonth": {
+        "type": "6ヶ月保管庫",
+        "lockPeriod": "180日",
+        "returnMode": "月次リニア",
+        "rewards": "追加のrGGPエアドロップ"
+      },
+      "twelveMonth": {
+        "type": "12ヶ月保管庫（ホワイトリスト）",
+        "lockPeriod": "360日",
+        "returnMode": "段階的+自動再投資",
+        "rewards": "限定金庫アクセス",
+        "perks": "優先上場のメリット"
+      }
+    },
+    "smallPrint": "すべてのステーキング契約が監査済み | 報酬は rGGP で配布されます | Tier-1 完了後に Vault のホワイトリストが開きます。",
+    "cta": "今すぐ参加しましょう — 最後のプレセール期間をお見逃しなく"
+  },
+  "claimFOMOBanner": {
+    "title": "20,000 ウォレットが申請済み — 今すぐエアドロップを受け取ってください (48 時間限定)",
+    "description": "認証済みのウォレットのみ申請できます。以下の手順を完了してください。"
+  },
+  "discordVerificationModal": {
+    "title": "Discord認証",
+    "description": "検証する前に、必ず Discord サーバーに参加してください。",
+    "proceed": "検証に進む",
+    "joinCommunity": "まずはコミュニティに参加しましょう",
+    "cancel": "キャンセル"
+  },
+  "socialVerification": {
+    "title": "ソーシャル認証",
+    "followX": "フォローX",
+    "joinDiscord": "Discordに参加する",
+    "verified": "✓ 検証済み",
+    "notVerified": "未確認",
+    "checking": "チェック中...",
+    "joinDiscordButton": "Discordに参加する",
+    "followingX": "✓ Xをフォロー",
+    "followNow": "今すぐフォロー",
+    "verifyAgain": "再度確認"
+  },
+  "walletConnect": {
+    "addressCopied": "アドレスをクリップボードにコピーしました",
+    "openingMetaMask": "MetaMask を開いています...",
+    "openingTrustWallet": "Trust Wallet を開いています...",
+    "openingCoinbase": "Coinbase ウォレットを開いています...",
+    "quickConnect": "クイックコネクト（モバイル）",
+    "openInMetaMask": "MetaMaskで開く",
+    "openInTrustWallet": "Trust Walletで開く",
+    "openInCoinbase": "Coinbaseウォレットで開く",
+    "orUseWalletConnect": "またはWalletConnectを使用する",
+    "useWalletConnect": "WalletConnectを使用する",
+    "connectWallet": "ウォレットを接続する",
+    "connectViaWalletConnect": "WalletConnect経由で接続",
+    "connectYourWallet": "ウォレットを接続する",
+    "scanWithWallet": "財布でスキャン",
+    "useWalletConnectScan": "WalletConnectを使用してQRコードをスキャンします",
+    "connectToPreGVT": "PreGVTに接続する",
+    "choosePreferredWallet": "お好みのウォレットを選択してください",
+    "walletNotConnected": "ウォレットが接続されていません",
+    "connectWalletToStart": "PreGVTを使い始めるにはウォレットを接続してください",
+    "walletConnected": "ウォレット接続",
+    "on": "の上"
+  },
+  "stickyDisclaimer": {
+    "top": {
+      "title": "早期アクセスに関するお知らせ",
+      "description": "これはマイルストーンに基づく早期アクセスです。指標がアンロックされると、ターゲットバンドが調整されます。ぜひご自身でプレイしてください。"
+    },
+    "bottom": {
+      "title": "透明なシステム",
+      "description": "当社では、透明性が高く検証可能なマイルストーン システムを採用しています。変更の 72 時間前に通知します。"
+    }
+  },
+  "disclaimerBanner": {
+    "top": {
+      "title": "マイルストーン主導の早期アクセス",
+      "description": "これはマイルストーンに基づく早期アクセスです。公開メトリクスのロック解除に伴い、ターゲットバンドが調整されます。ご自身でお試しください。表示されている範囲はターゲットバンドです。ティアはロック解除され、オンチェーンデータとサードパーティダッシュボードに基づいて調整される場合があります。売れ残った数量は次のティアに繰り越される場合があります。"
+    },
+    "bottom": {
+      "title": "透明なマイルストーンシステム",
+      "description": "透明性と検証性に優れたマイルストーンシステムを採用しています。設定されたしきい値（ウォレット／タスク／パートナーシップ／監査など）を達成すると、次のティアがアンロックされ、目標バンドが上がります。明確化のため、変更の72時間前に通知いたします。"
+    },
+    "showMore": "もっと見る",
+    "showLess": "表示を減らす"
+  },
+  "leaderboard": {
+    "buyerLeaderboard": "バイヤーリーダーボード",
+    "referralLeaderboard": "紹介リーダーボード",
+    "activationLeaderboard": "アクティベーションリーダーボード",
+    "kolReferralLeaderboard": "KOL紹介リーダーボード",
+    "claimReferralLeaderboard": "クレーム紹介リーダーボード",
+    "leaderboard": "リーダーボード",
+    "rank": "ランク",
+    "wallet": "財布",
+    "address": "住所",
+    "totalPurchased": "購入合計",
+    "purchases": "購入",
+    "referralTime": "紹介時間",
+    "totalEarned": "合計獲得額",
+    "redeemed": "償還された",
+    "accrued": "発生",
+    "activated": "有効化",
+    "numberOfReferrals": "紹介数",
+    "totalAmount": "合計金額",
+    "referrals": "紹介",
+    "loading": "リーダーボードを読み込んでいます...",
+    "noEntries": "まだエントリーはありません"
+  },
+  "fomoSection": {
+    "title": "在庫が限られています。次の価格帯が近づいています。",
+    "soldProgress": "{販売数} / {最大} 販売数 ({パーセント}%)",
+    "nextRound": "次のラウンド → {price}（{時間}時間{分}分後）",
+    "ctaButton": "今すぐ参加しましょう — 最後のプレセール期間をお見逃しなく",
+    "livePurchaseFeed": "ライブ購入フィード",
+    "purchaseNotification": "ウォレット {wallet} が GVT 前に {amount} を購入しました",
+    "waitingForPurchases": "購入を待っています..."
+  },
+  "newsletterSection": {
+    "title": "ニュースレター",
+    "subtitle": "最新ニュースをお届けします",
+    "description": "世界的な金融イノベーションの歴史的瞬間を見逃したくないですか？PreGVTトークンの最新情報を独占的に受け取るには、メールアドレスをご登録ください。",
+    "signupTitle": "ニュースレターの登録",
+    "emailPlaceholder": "メールアドレスを入力してください",
+    "subscribeButton": "今すぐ購読する",
+    "subscriptionSuccess": "✅ 登録が完了しました！ご清聴ありがとうございました。"
+  }
+}

@@ -1,0 +1,874 @@
+{
+  "common": {
+    "loading": "Naglo-load...",
+    "error": "Error",
+    "success": "Tagumpay",
+    "submit": "Isumite",
+    "cancel": "Kanselahin",
+    "save": "I-save",
+    "edit": "I-edit",
+    "delete": "Tanggalin",
+    "back": "Bumalik",
+    "next": "Susunod",
+    "previous": "Nakaraang",
+    "close": "Isara",
+    "confirm": "Kumpirmahin",
+    "required": "Kinakailangan",
+    "optional": "Opsyonal"
+  },
+  "navigation": {
+    "home": "Bahay",
+    "about": "Tungkol sa",
+    "contact": "Makipag-ugnayan",
+    "community": "Komunidad",
+    "fund": "Pondo",
+    "applications": "Mga aplikasyon",
+    "admin": "Admin"
+  },
+  "contributor": {
+    "title": "Aplikasyon ng Contributor",
+    "subtitle": "Sumali sa G3 Fund bilang isang kontribyutor at tumulong sa pagbuo ng komunidad ng RWA",
+    "tier": {
+      "airdrop_hunter": {
+        "name": "Airdrop Hunter",
+        "description": "Entry-level tier para sa mga miyembro ng komunidad",
+        "requirements": "Walang minimum na kinakailangan",
+        "benefits": "Pangunahing access sa komunidad, mga abiso sa airdrop"
+      },
+      "contributor": {
+        "name": "Contributor",
+        "description": "Aktibong kontribyutor ng komunidad",
+        "requirements": "1K-10K na tagasubaybay sa kahit isang channel",
+        "benefits": "Mga komisyon, pagsasanay, suporta sa nilalaman"
+      },
+      "micro_kol": {
+        "name": "Micro-KOL",
+        "description": "Maimpluwensyang miyembro ng komunidad",
+        "requirements": "10K-100K followers + pare-parehong performance",
+        "benefits": "Mas mataas na komisyon, mga insentibo ng token, mga pagkakataon sa pakikipagsosyo"
+      },
+      "fund_partner": {
+        "name": "Kasosyo sa Pondo",
+        "description": "Madiskarteng kasosyo na may makabuluhang impluwensya",
+        "requirements": "100K+ tagasunod + pambihirang pagganap + madiskarteng halaga",
+        "benefits": "Pinakamataas na gantimpala, potensyal na pakikilahok sa equity, madiskarteng input"
+      }
+    },
+    "steps": {
+      "identity": {
+        "title": "Pagkakakilanlan at Pakikipag-ugnayan",
+        "description": "Pangunahing impormasyon at mga detalye ng contact"
+      },
+      "channels": {
+        "title": "Mga Channel at Sukatan",
+        "description": "Mga channel ng social media at nilalaman"
+      },
+      "role": {
+        "title": "Tungkulin at Availability",
+        "description": "Ang iyong tungkulin at kakayahang magamit"
+      },
+      "performance": {
+        "title": "Mga KPI ng Pagganap",
+        "description": "Mga target at sukatan sa pagganap"
+      },
+      "rewards": {
+        "title": "Mga Gantimpala at Kabayaran",
+        "description": "Mga kagustuhan sa pagbabayad at mga detalye"
+      },
+      "portfolio": {
+        "title": "Portfolio at Track Record",
+        "description": "Nakaraang trabaho at karanasan"
+      },
+      "wallets": {
+        "title": "Mga Wallet at Pag-verify",
+        "description": "Mga address ng pitaka at pag-verify"
+      },
+      "compliance": {
+        "title": "Komunidad at Pagsunod",
+        "description": "Mga kasunduan at pagsunod"
+      }
+    },
+    "form": {
+      "displayName": "Display Name",
+      "email": "Email",
+      "countryRegion": "Bansa/Rehiyon",
+      "languages": "Mga wika",
+      "riskTermsConsent": "Pahintulot sa Risk/Terms",
+      "riskTermsText": "Kinikilala ko na walang garantisadong pagbabalik, ito ay isang inisyatiba ng komunidad, at naiintindihan ko ang patakaran laban sa panloloko at mga paghihigpit sa rehiyon.",
+      "platform": "Plataporma",
+      "url": "URL",
+      "followers": "Mga tagasunod",
+      "avgViews30d": "Avg Views (30d)",
+      "audienceTop3Geos": "Audience Top 3 Geographies",
+      "contentFocus": "Pokus sa Nilalaman",
+      "addChannel": "Magdagdag ng Channel",
+      "removeChannel": "Alisin",
+      "channelNumber": "Channel {number}",
+      "noChannels": "Wala pang naidagdag na channel. I-click ang \"Magdagdag ng Channel\" upang makapagsimula.",
+      "manualVerification": "Manu-manong Pag-verify: Ang iyong mga social media channel ay manu-manong ibe-verify ng aming admin team pagkatapos isumite.",
+      "manualVerificationRequired": "Kinakailangan ang Manu-manong Pag-verify",
+      "manualVerificationText": "Para sa {tier} tier, ang iyong mga social media channel ay manu-manong ibe-verify ng aming admin team pagkatapos isumite. Pakitiyak na tumpak at kumpleto ang lahat ng impormasyon ng channel.",
+      "stepValidation": "Pakikumpleto ang lahat ng kinakailangang field sa \"{step}\" bago magpatuloy.",
+      "stepValidationWarning": "⚠️ Pakikumpleto ang lahat ng kinakailangang field na may markang * bago magpatuloy",
+      "submitting": "Isinusumite...",
+      "submitApplication": "Isumite ang Application",
+      "applicationSubmitted": "Matagumpay na naisumite ang aplikasyon!",
+      "applicationError": "Nabigong magsumite ng aplikasyon. Pakisubukang muli.",
+      "validationWarning": "⚠️ Pakikumpleto ang lahat ng kinakailangang field na may markang * bago magpatuloy",
+      "stepValidationError": "Pakikumpleto ang lahat ng kinakailangang field sa \"{step}\" bago magpatuloy.",
+      "allStepsValidationError": "Pakikumpleto ang lahat ng kinakailangang field sa \"{step}\" bago magpatuloy.",
+      "fileUploadText": "I-click upang i-upload o i-drag at i-drop",
+      "fileUploadTypes": ".pdf,.png,.jpg,.jpeg (max 20MB bawat isa, hanggang 5 file)",
+      "websitePlaceholder": "https://example.com"
+    }
+  },
+  "institutional": {
+    "title": "Institusyonal na Aplikasyon",
+    "subtitle": "Sumali sa G3 Fund bilang isang institusyonal na kasosyo",
+    "steps": {
+      "purpose": {
+        "title": "Layunin at Pagkasyahin",
+        "description": "Sabihin sa amin ang tungkol sa iyong mga layunin sa pakikipagsosyo"
+      },
+      "organization": {
+        "title": "Profile ng Organisasyon",
+        "description": "Impormasyon ng kumpanya at mga detalye ng KYB"
+      },
+      "contacts": {
+        "title": "Mga contact",
+        "description": "Mga pangunahing tauhan at impormasyon sa pakikipag-ugnayan"
+      },
+      "partnership": {
+        "title": "Partnership Mode",
+        "description": "Mga detalye ng partikular na partnership"
+      },
+      "geography": {
+        "title": "Heograpiya at Madla",
+        "description": "Mga target na merkado at madla"
+      },
+      "wallets": {
+        "title": "Mga Wallet at Pagbabayad",
+        "description": "Mga kagustuhan sa pagbabayad at mga detalye"
+      },
+      "data": {
+        "title": "Data at Pagsunod",
+        "description": "Mga kinakailangan sa pag-uulat at pagsunod"
+      },
+      "brand": {
+        "title": "Brand at Legal",
+        "description": "Paggamit ng brand at mga legal na pagkilala"
+      }
+    },
+    "form": {
+      "submitting": "Isinusumite...",
+      "submitApplication": "Isumite ang Application",
+      "primaryIntent": "Pangunahing Layunin (Piliin ang lahat ng naaangkop)",
+      "whatYouWantToGain": "Ano ang gusto mong makuha (Piliin ang lahat ng naaangkop)",
+      "howOrgSupportsRWA": "Paano sinusuportahan ng iyong organisasyon ang RWA ngayon?",
+      "howOrgSupportsRWAPlaceholder": "Ilarawan ang iyong kasalukuyang mga hakbangin, pamumuhunan, o pakikipagsosyo sa RWA...",
+      "rwaVerticals": "Aling mga RWA vertical ang nalalapat sa iyong organisasyon?",
+      "otherVertical": "Mangyaring tukuyin ang iba pang patayong RWA",
+      "otherVerticalPlaceholder": "Ilarawan ang iyong iba pang RWA vertical...",
+      "legalEntityName": "Pangalan ng Legal na Entidad",
+      "jurisdiction": "Jurisdiction of Incorporation",
+      "jurisdictionPlaceholder": "hal., Delaware, Singapore, atbp.",
+      "registrationNumber": "Registration/Company No.",
+      "website": "Website",
+      "registeredAddress": "Nakarehistrong Address",
+      "organizationType": "Uri ng Organisasyon",
+      "otherOrganizationType": "Mangyaring tukuyin ang uri ng organisasyon",
+      "otherOrganizationTypePlaceholder": "Ilarawan ang uri ng iyong organisasyon...",
+      "regulatoryPermissions": "Mga Pahintulot/Lisensya sa Regulasyon",
+      "regulatoryPermissionsPlaceholder": "Ilarawan ang anumang mga pahintulot sa regulasyon o lisensya...",
+      "briefHistory": "Maikling Kasaysayan at AUM/Resources",
+      "briefHistoryPlaceholder": "Magbigay ng maikling kasaysayan ng iyong organisasyon at AUM/resource...",
+      "regulatoryDocuments": "Mga Dokumentong Pang-regulasyon",
+      "primaryContactName": "Pangunahing Pangalan ng Contact",
+      "primaryContactTitle": "Pangunahing Pamagat ng Contact",
+      "primaryContactEmail": "Pangunahing Contact Email",
+      "primaryContactPhone": "Pangunahing Contact Phone",
+      "complianceContactName": "Pangalan ng Contact sa Pagsunod",
+      "complianceContactEmail": "Email sa Pakikipag-ugnayan sa Pagsunod",
+      "brandPrContactName": "Brand/PR Contact Name",
+      "brandPrContactEmail": "Brand/PR Contact Email",
+      "options": {
+        "advocacyPartner": "Kasosyo sa Pagtataguyod",
+        "financialSupport": "Suporta sa Pinansyal",
+        "tokenContribution": "Kontribusyon ng Token",
+        "strategicPartner": "Strategic Partner",
+        "userGrowth": "Paglago ng User",
+        "resourceAccess": "Access sa Mapagkukunan",
+        "educationNarrative": "Edukasyon at Salaysay",
+        "brandReputation": "Brand at Reputasyon",
+        "longTermLeverage": "Pangmatagalang Leverage",
+        "energy": "Enerhiya",
+        "agriculture": "Agrikultura",
+        "realEstate": "Real Estate",
+        "carbonEsg": "Carbon/ESG",
+        "supplyChain": "Supply Chain",
+        "other": "Iba pa",
+        "exchange": "Palitan",
+        "fund": "Pondo",
+        "assetOwnerOriginator": "May-ari ng Asset/Originator",
+        "technologyProvider": "Tagabigay ng Teknolohiya",
+        "ngoAlliance": "NGO/Alyansa",
+        "corporate": "Corporate"
+      },
+      "validationWarning": "⚠️ Pakikumpleto ang lahat ng kinakailangang field na may markang * bago magpatuloy",
+      "stepValidationError": "Pakikumpleto ang lahat ng kinakailangang field sa \"{step}\" bago magpatuloy.",
+      "allStepsValidationError": "Pakikumpleto ang lahat ng kinakailangang field sa \"{step}\" bago magpatuloy.",
+      "fileUploadText": "I-click upang i-upload o i-drag at i-drop",
+      "fileUploadTypes": ".pdf,.png,.jpg,.jpeg (max 20MB bawat isa, hanggang 5 file)",
+      "websitePlaceholder": "https://example.com",
+      "settlementPreference": "Kagustuhan sa Settlement",
+      "bank": "Bangko",
+      "crypto": "Crypto",
+      "walletAddresses": "Mga Address ng Wallet",
+      "addWallet": "Magdagdag ng Wallet",
+      "chainPlaceholder": "Chain (hal., Ethereum, BSC)",
+      "addressPlaceholder": "Address ng Wallet",
+      "removeWallet": "Alisin",
+      "complianceConstraints": "Mga Limitasyon sa Pagsunod",
+      "complianceConstraintsPlaceholder": "Anumang partikular na kinakailangan sa pagsunod o mga hadlang...",
+      "consentToOnChainVerification": "Pahintulot sa On-Chain Verification",
+      "consentToOnChainVerificationText": "Sumasang-ayon ako sa on-chain na pag-verify ng mga kredensyal at aktibidad ng aking organisasyon.",
+      "preferredReportingCadence": "Ginustong Indayog ng Pag-uulat",
+      "monthly": "Buwan-buwan",
+      "quarterly": "quarterly",
+      "confidentialityLevel": "Antas ng Pagkakumpidensyal",
+      "public": "Pampubliko",
+      "partnersOnly": "Mga Kasosyo Lamang",
+      "ndaRequired": "Kinakailangan ang NDA",
+      "riskDisclosureAcknowledged": "Kinikilala ang Pagbubunyag ng Panganib",
+      "riskDisclosureAcknowledgedText": "Kinikilala ko na nabasa at naunawaan ko ang dokumento sa pagsisiwalat ng panganib.",
+      "termsPrivacyConsent": "Mga Tuntunin at Pahintulot sa Privacy",
+      "termsPrivacyConsentText": "Sumasang-ayon ako sa Mga Tuntunin ng Serbisyo at Patakaran sa Privacy."
+    }
+  },
+  "footer": {
+    "companyName": "G3 FUND",
+    "tagline": "RWA KOL Incubation Platform",
+    "description": "Ang unang RWA-native KOL incubation fund. I-transform ang komunidad sa isang assetized growth engine sa pamamagitan ng tokenized partnerships at long-term incentives.",
+    "features": {
+      "secure": "Secure at Mapagkakatiwalaan",
+      "fast": "Napakabilis",
+      "multichain": "Multi-Chain"
+    },
+    "sections": {
+      "platform": {
+        "title": "Platform",
+        "fundStructure": "Fund Structure",
+        "community": "Komunidad",
+        "kolProgram": "KOL Program",
+        "referralSystem": "Referral System"
+      },
+      "resources": {
+        "title": "Mga Resources",
+        "aboutG3": "Tungkol sa G3 Fund",
+        "rwaEducation": "RWA Education",
+        "trainingPrograms": "Training Programs",
+        "blog": "Blog"
+      },
+      "support": {
+        "title": "Suporta",
+        "helpCenter": "Help Center",
+        "kolGuidelines": "KOL Guidelines",
+        "communityRules": "Community Rules",
+        "contactSupport": "Makipag-ugnayan sa Support"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacyPolicy": "Patakaran sa Privacy",
+        "termsOfService": "Mga Tuntunin ng Serbisyo",
+        "cookiePolicy": "Cookie Policy",
+        "gdpr": "GDPR"
+      }
+    },
+    "disclaimer": {
+      "operational": "Ang G3 Fund ay nagpapatakbo bilang isang community development initiative na nakatuon sa RWA education at KOL incubation.",
+      "risk": "Walang garantiya sa investment returns. Lahat ng participants ay dapat maintindihan ang mga panganib na kasama sa cryptocurrency at community participation. Pakitingnan ang aming terms of service at risk disclosures bago sumali sa anumang programa."
+    },
+    "copyright": "© 2024 G3 Fund. Lahat ng karapatan ay nakalaan.",
+    "privacy": "Patakaran sa Privacy",
+    "terms": "Mga Tuntunin ng Serbisyo"
+  },
+  "home": {
+    "valuePillars": {
+      "educate": {
+        "title": "Turuan at Palakihin",
+        "description": "Bumuo ng kamalayan at pag-unawa sa RWA sa pamamagitan ng komprehensibong edukasyon"
+      },
+      "growth": {
+        "title": "Sustainable Grow",
+        "description": "Gawing pangmatagalang KOL at ambassador ang mga mangangaso ng airdrop"
+      },
+      "institutional": {
+        "title": "Pagkahanay sa Institusyon",
+        "description": "Magbigay ng mga palitan, pondo, at may-ari ng asset na may tunay na pag-aampon at nabe-verify na traksyon ng user"
+      }
+    },
+    "mission": {
+      "title": "Ang Misyon",
+      "subtitle": "Ang susunod na trilyon-dollar wave sa crypto ay Real World Assets (RWA).",
+      "description": "Ang Wall Street ay naglulunsad na ng mga produkto ng pamumuhunan ng RWA. Nagbukas ang Hong Kong at Singapore ng mga regulatory window para sa RWA. Ang mga user sa buong mundo ay humihingi ng mga asset-backed na produkto sa halip na mga hype-driven na coin.",
+      "role": {
+        "title": "Ang aming Papel",
+        "description": "Ang G3 Fund ay ang tanging platform na pinagsasama-sama ang RWA na edukasyon, paglago ng komunidad, at suportang institusyonal sa isang napapanatiling balangkas."
+      }
+    },
+    "valueProposition": {
+      "title": "Proposisyon ng Halaga",
+      "description": "Tatlong pangunahing haligi na ginagawang ang G3 Fund ang nangungunang platform ng tagapag-ambag ng RWA"
+    },
+    "responsibility": {
+      "title": "Isang Tawag sa Pananagutan",
+      "subtitle": "Ang bawat panahon ng pagbabago sa pananalapi ay nangangailangan ng mga lider na handang kumuha ng responsibilidad para sa hinaharap, hindi lamang kumita mula dito.",
+      "description": "Ngayon, ang Real-World Assets (RWA) ay hindi na isang ideya — sila ang susunod na trilyong dolyar na pagbabago:",
+      "points": {
+        "wallStreet": {
+          "title": "Pagkilala sa Wall Street",
+          "description": "Idineklara ng Wall Street ang RWA na isang bagong klase ng asset"
+        },
+        "tokenization": {
+          "title": "Global Tokenization",
+          "description": "Ang mga may-ari ng asset sa buong mundo ay nag-token ng enerhiya, carbon, real estate, at mga supply chain"
+        },
+        "regulatory": {
+          "title": "Pag-unlad ng Regulasyon",
+          "description": "Nagbukas ang Hong Kong at Singapore ng mga regulatory door"
+        },
+        "demand": {
+          "title": "Demand ng User",
+          "description": "Hinihingi ng mga user ang kaligtasan at kredibilidad: ang crypto na sinusuportahan ng mga tunay na asset, hindi mga walang laman na pangako"
+        }
+      }
+    },
+    "institutions": {
+      "title": "Bakit hindi ito maaaring balewalain ng mga institusyon?",
+      "subtitle": "Kung walang pamumuno, ang RWA adoption ay magiging mabagal, pira-piraso, at hindi mauunawaan. Ang mga institusyon ngayon ay nahaharap:",
+      "points": {
+        "compliance": {
+          "title": "Panganib sa Pagsunod",
+          "description": "Ang industriya ay nangangailangan ng mga pinagkakatiwalaang balangkas, hindi ingay"
+        },
+        "voice": {
+          "title": "Gap ng Boses",
+          "description": "Ang mga asset at kapital ay kulang sa mga network upang maabot ang mga tao"
+        },
+        "marketing": {
+          "title": "Hindi Mahusay na Marketing",
+          "description": "Mga one-off na promo na walang compounding effect"
+        },
+        "proof": {
+          "title": "Kakulangan ng Patunay",
+          "description": "Walang mapagkakatiwalaang data na ipapakita sa mga regulator o LP"
+        }
+      }
+    },
+    "g3Mission": {
+      "title": "Ang Misyon ng G3 Fund",
+      "subtitle": "Ang G3 Fund ay hindi ginawa para sa isang proyekto. Ito ay nilikha para sa buong sektor ng RWA.",
+      "points": {
+        "influence": {
+          "title": "Responsableng Impluwensiya",
+          "description": "Ang pagbibigay kapangyarihan sa mga nangungunang KOL na gamitin ang kanilang impluwensya nang responsable, pinalalakas ang katotohanan, hindi ang hype"
+        },
+        "education": {
+          "title": "Network ng Edukasyon",
+          "description": "Pagbuo ng worldwide education + amplification network"
+        },
+        "incubation": {
+          "title": "Pandaigdigang RWA Incubation",
+          "description": "Ang unang pandaigdigang RWA Contributor Incubation Fund"
+        },
+        "growth": {
+          "title": "Napapatunayang Paglago",
+          "description": "Pagbibigay ng verifiable adoption data + sustainable growth para sa mga institusyon"
+        },
+        "community": {
+          "title": "Pagbabagong Komunidad",
+          "description": "Paggalang at pagbabago sa mga komunidad ng katutubo (airdrop hunters, OGs) sa mga kasosyo at micro-KOL"
+        }
+      }
+    },
+    "operatingPrinciples": {
+      "title": "Ang Aming Mga Prinsipyo sa Pagpapatakbo",
+      "dualPathways": {
+        "title": "Dalawahang Daan",
+        "description": "Grassroots → mga kontribyutor; mga influencer → mga kasosyo"
+      },
+      "compliance": {
+        "title": "Transparency at Pagsunod",
+        "description": "On-chain na pag-verify, mga pampublikong dashboard, mga pana-panahong ulat"
+      },
+      "incentive": {
+        "title": "Incentive at Value-Binding",
+        "description": "Nakabalangkas, pangmatagalan, at nakabatay sa pagganap"
+      },
+      "noOneLeft": {
+        "title": "Walang Naiwan",
+        "description": "Ang bawat artista, mula sa maliit na kontribyutor hanggang sa malaking pondo, ay may tungkulin at responsibilidad"
+      }
+    },
+    "participants": {
+      "title": "Mga Kasalukuyang Kalahok",
+      "technology": {
+        "title": "Mga Kasosyo sa Teknolohiya",
+        "description": "IoT, oracle, mga koponan ng blockchain"
+      },
+      "governance": {
+        "title": "Pamamahala",
+        "description": "New Zealand Sustainable Initiative Trust"
+      },
+      "agv": {
+        "title": "Protokol ng AGV",
+        "description": "DePIN + RWA backbone"
+      },
+      "community": {
+        "title": "Mga Tagabuo ng Komunidad",
+        "description": "Mga OG, whitelist, TaskOn at Zealy contributor"
+      },
+      "assets": {
+        "title": "Mga Kasosyo sa Asset",
+        "description": "Enerhiya at agrikultura ng APAC"
+      }
+    },
+    "expansion": {
+      "title": "Estratehikong Pagpapalawak",
+      "greenFunds": {
+        "title": "Global Green Funds",
+        "description": "ESG-driven na kapital"
+      },
+      "exchanges": {
+        "title": "Mga Internasyonal na Palitan",
+        "description": "Pagkatubig + access sa merkado"
+      },
+      "projects": {
+        "title": "Higit pang RWA Projects",
+        "description": "Mga alyansa sa cross-industriya"
+      },
+      "footer": "Hindi one-off marketing - ngunit ang super growth engine ng industriya ng RWA."
+    },
+    "institutionsJoin": {
+      "title": "Paano Makakasali ang mga Institusyon",
+      "advocacy": {
+        "title": "Kasosyo sa Pagtataguyod",
+        "description": "Tumayo sa amin bilang mga co-champions ng RWA"
+      },
+      "financial": {
+        "title": "Suporta sa Pinansyal",
+        "description": "Mga maliit na sponsorship sa USD/USDT"
+      },
+      "token": {
+        "title": "Kontribusyon ng Token",
+        "description": "Maglaan ng mga token ng proyekto sa Fund pool"
+      },
+      "strategic": {
+        "title": "Strategic Partner",
+        "description": "Pagba-brand, priyoridad na data, at access sa network"
+      }
+    },
+    "institutionsGain": {
+      "title": "Ano ang Nakuha ng mga Institusyon",
+      "left": {
+        "userGrowth": {
+          "title": "Paglago ng User",
+          "description": "Mga pitaka, staking, at tunay na pag-aampon"
+        },
+        "resourceAccess": {
+          "title": "Access sa Mapagkukunan",
+          "description": "Mga priyoridad na koneksyon sa mga asset, pondo, at palitan"
+        }
+      },
+      "right": {
+        "education": {
+          "title": "Edukasyon at Salaysay",
+          "description": "Iyong kwento na sinabi ng isang sinanay na hukbo ng KOL"
+        },
+        "brand": {
+          "title": "Brand at Reputasyon",
+          "description": "Ihanay sa unang pandaigdigang RWA Fund, makakuha ng katayuan sa pamumuno"
+        },
+        "leverage": {
+          "title": "Pangmatagalang Leverage",
+          "description": "Pinagsasama-sama ang network, hindi one-off exposure"
+        }
+      }
+    },
+    "leadership": {
+      "title": "Pamumuno o Pag-aalis",
+      "subtitle": "Ang alon ng RWA ay hindi maiiwasan. Ang mundo ay hindi magtatanong kung nangyari ito, ngunit kung sino ang kumuha ng responsibilidad na pamunuan ito.",
+      "points": {
+        "transform": {
+          "title": "Ibahin ang anyo ng mga Contributor",
+          "description": "Hindi namin pinababayaan ang grassroots contributors — binabago namin sila sa mga partner"
+        },
+        "align": {
+          "title": "I-align ang Mga Boses",
+          "description": "Hindi namin hinahayaan na sayangin ng mga KOL ang kanilang mga boses — inihanay namin sila sa katotohanan at edukasyon"
+        },
+        "enable": {
+          "title": "Paganahin ang Aksyon",
+          "description": "Hindi namin hinahayaan na tumayo sa tabi ang mga institusyon — binibigyan namin sila ng sasakyan para kumilos nang responsable"
+        }
+      }
+    },
+    "cta": {
+      "title": "Handa nang Palakasin ang Kinabukasan ng RWA?",
+      "description": "Sumali sa unang RWA contributor fund sa mundo. KOL ka man, institusyon, o miyembro ng komunidad, mayroong lugar para sa iyo sa ecosystem ng G3 Fund.",
+      "contributor": "Mag-apply bilang Contributor",
+      "institution": "Mag-apply bilang Institusyon"
+    },
+    "compliance": {
+      "title": "Mahalagang Paunawa sa Pagsunod",
+      "description": "Ang G3 Fund ay tumatakbo bilang isang community development initiative. Walang garantisadong pagbabalik ng pamumuhunan. Dapat maunawaan ng lahat ng kalahok ang mga panganib na kasangkot sa cryptocurrency at pakikilahok ng komunidad. Pakisuri ang aming mga tuntunin ng serbisyo at mga pagsisiwalat ng panganib bago makilahok."
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "Bahay",
+      "fund": "Pondo",
+      "community": "Komunidad",
+      "institutions": "Mga institusyon"
+    },
+    "dashboard": "Dashboard"
+  },
+  "hero": {
+    "buttons": {
+      "contributor": "Sumali bilang Contributor",
+      "institutions": "Para sa mga Institusyon"
+    },
+    "features": {
+      "educate": {
+        "title": "Turuan at Palakihin",
+        "description": "Bumuo ng kamalayan at pag-unawa sa RWA sa pamamagitan ng komprehensibong edukasyon"
+      },
+      "growth": {
+        "title": "Sustainable Grow",
+        "description": "Gawing pangmatagalang KOL at ambassador ang mga mangangaso ng airdrop"
+      },
+      "institutional": {
+        "title": "Pagkahanay sa Institusyon",
+        "description": "Magbigay ng tunay na pag-aampon at nabe-verify na traksyon ng user para sa mga institusyon"
+      }
+    },
+    "stats": {
+      "partnerKols": "Partner KOLs",
+      "partnerKolsDesc": "Top-tier influencer",
+      "smallKols": "Mga maliliit na KOL",
+      "smallKolsDesc": "Lumalagong mga influencer",
+      "activeUsers": "Mga Aktibong Gumagamit",
+      "activeUsersDesc": "Mga miyembro ng komunidad"
+    },
+    "badge": "Ang Unang RWA Contributor Fund ng Mundo",
+    "title": "G3 PONDO",
+    "subtitle": "Ang Unang RWA Contributor Fund ng Mundo",
+    "description": "Pagbibigay-kapangyarihan sa mga KOL, contributor, at partner para palakasin ang hinaharap ng Real World Assets."
+  },
+  "community": {
+    "title": "Sumali bilang Contributor",
+    "heroButton": "Mag-apply bilang Contributor",
+    "identityGrowthPath": {
+      "title": "Landas ng Paglago ng Pagkakakilanlan",
+      "subtitle": "Airdrop Hunter → Contributor → Micro-KOL → Fund Partner",
+      "earlyBuilders": "Ang mga maagang sumali ay permanenteng kikilalanin bilang \"Mga Unang Tagabuo\" sa kasaysayan ng RWA."
+    },
+    "steps": {
+      "airdropHunter": {
+        "title": "Airdrop Hunter",
+        "description": "Simulan ang iyong paglalakbay sa espasyo ng crypto",
+        "requirements": [
+          "Sumali ng maaga",
+          "Kumpletuhin ang pagpapatunay",
+          "Makilahok sa komunidad"
+        ],
+        "rewards": [
+          "Maagang pag-access",
+          "Mga eksklusibong kaganapan",
+          "Direktang mentorship"
+        ]
+      },
+      "contributor": {
+        "title": "Contributor",
+        "description": "Maging isang aktibong kontribyutor ng komunidad",
+        "requirements": [
+          "1K-10K followers",
+          "Lumikha ng nilalaman",
+          "Himukin ang komunidad"
+        ],
+        "rewards": [
+          "Mga gantimpala ng komisyon",
+          "Mga programa sa pagsasanay",
+          "Suporta sa nilalaman"
+        ]
+      },
+      "microKol": {
+        "title": "Micro-KOL",
+        "description": "Palakihin ang iyong impluwensya at abutin",
+        "requirements": [
+          "10K-100K followers",
+          "Pare-parehong pagganap",
+          "May kalidad na nilalaman"
+        ],
+        "rewards": [
+          "Mas mataas na komisyon",
+          "Mga insentibo ng token",
+          "Mga pagkakataon sa pakikipagsosyo"
+        ]
+      },
+      "fundPartner": {
+        "title": "Kasosyo sa Pondo",
+        "description": "Maging isang top-tier na kasosyo",
+        "requirements": [
+          "100K+ na tagasubaybay",
+          "Pambihirang pagganap",
+          "Estratehikong halaga"
+        ],
+        "rewards": [
+          "Pinakamataas na gantimpala",
+          "Equity partisipasyon",
+          "Madiskarteng input"
+        ]
+      }
+    },
+    "labels": {
+      "step": "Hakbang",
+      "requirements": "Mga kinakailangan:",
+      "rewards": "Mga gantimpala:"
+    },
+    "incentiveMechanism": {
+      "title": "Mekanismo ng Insentibo",
+      "subtitle": "Mataas na antas na istraktura ng insentibo na idinisenyo para sa pangmatagalang paglago ng komunidad at napapanatiling mga gantimpala",
+      "postToEarn": {
+        "title": "Mag-post para Kumita",
+        "description": "Ang bawat piraso ng nilalaman ay bumubuo ng mga gantimpala",
+        "features": [
+          "Mga gantimpala sa paglikha ng nilalaman",
+          "Mga bonus na nakabatay sa kalidad",
+          "Mga sukatan ng pagganap"
+        ]
+      },
+      "inviteToEarn": {
+        "title": "Mag-imbita para Kumita",
+        "description": "Ang mga referral ay lumilikha ng pangmatagalang bahagi ng kita",
+        "features": [
+          "2-tier na istraktura ng komisyon",
+          "Panghabambuhay na pagbabahagi ng kita",
+          "Mga epekto sa network"
+        ]
+      },
+      "promotionPath": {
+        "title": "Daan ng Promosyon",
+        "description": "Ang mas mataas na status ay nagdudulot ng mas malaki, umuulit na mga reward",
+        "features": [
+          "Tier-based na mga reward",
+          "Paulit-ulit na kita",
+          "Mga eksklusibong pagkakataon"
+        ]
+      },
+      "performanceBased": {
+        "title": "Batay sa Pagganap",
+        "description": "Ang lahat ng mga insentibo ay nakabatay sa pagganap at pangmatagalang nakatali",
+        "features": [
+          "Walang panandaliang pagtatapon",
+          "Pangmatagalang pagkakahanay",
+          "Sustainable growth"
+        ]
+      }
+    },
+    "futureOpportunities": {
+      "title": "Mga Oportunidad sa Hinaharap",
+      "subtitle": "Lalawak ang ecosystem ng G3 Fund sa pamamagitan ng mga strategic partnership at integrations",
+      "phase2": {
+        "phase": "Phase 2",
+        "title": "Onboard Green Funds",
+        "description": "ESG narrative + global capital"
+      },
+      "phase3": {
+        "phase": "Phase 3",
+        "title": "Isama ang mga International Exchange",
+        "description": "Pagkatubig at pagkakalantad"
+      },
+      "phase4": {
+        "phase": "Phase 4",
+        "title": "Magdala ng higit pang RWA Projects",
+        "description": "Walang katapusang reward na dumadaloy sa network"
+      }
+    },
+    "cta": {
+      "title": "Handa nang Maging Unang Tagabuo?",
+      "description": "Sumali sa komunidad ng G3 Fund ngayon at permanenteng kilalanin bilang isang \"Unang Tagabuo\" sa kasaysayan ng RWA",
+      "startContributor": "Magsimula bilang Contributor",
+      "applyInstitution": "Mag-apply bilang Institusyon"
+    },
+    "complianceNotice": {
+      "title": "Mahalagang Paunawa",
+      "description": "Ang mga reward sa referral ay nakabatay sa pagganap at napapailalim sa mga alituntunin ng komunidad. Ang lahat ng kalahok ay dapat sumunod sa mga hakbang laban sa panloloko at mga paghihigpit sa rehiyon. Walang garantisadong pagbabalik ang ipinangako. Pakisuri ang aming mga tuntunin ng serbisyo bago lumahok."
+    }
+  },
+  "institutions": {
+    "title": "Para sa mga Institusyon",
+    "subtitle": "Ang Partnership",
+    "description": "Makipagtulungan sa G3 Fund upang lutasin ang mga hamon sa institusyonal sa pag-aampon ng RWA, pagbuo ng komunidad, at nabe-verify na traksyon ng gumagamit.",
+    "heroButton": "Kasosyo sa G3 Fund",
+    "challenges": {
+      "title": "Ang Institusyonal na Hamon",
+      "subtitle": "Ang mga institusyon ay nahaharap sa malalaking hamon sa pag-aampon ng RWA at pagbuo ng komunidad",
+      "userEducation": {
+        "title": "Gap sa Edukasyon ng Gumagamit",
+        "description": "Ang RWA ay kumplikado; hindi ito naiintindihan ng mga gumagamit → mahinang conversion"
+      },
+      "insufficientVoice": {
+        "title": "Hindi sapat na Boses",
+        "description": "Ang mga institusyon ay may mga ari-arian ngunit walang malakas na network ng komunidad"
+      },
+      "inefficientMarketing": {
+        "title": "Hindi Mahusay na Marketing",
+        "description": "Ang mga one-off na post ng KOL ay mahal ngunit walang epekto sa compounding"
+      },
+      "lackOfData": {
+        "title": "Kakulangan ng Data",
+        "description": "Mahirap ipakita sa mga regulator, LP, o mga partner ang nabe-verify na sukatan ng pag-aampon"
+      },
+      "complianceRisks": {
+        "title": "Mga Panganib sa Pagsunod at Pagtitiwala",
+        "description": "Ang industriya ay puno ng ingay, ang mga institusyon ay nangangailangan ng kredibilidad"
+      }
+    },
+    "solution": {
+      "title": "Ang Solusyon sa G3 Fund",
+      "subtitle": "Mga komprehensibong solusyon upang matugunan ang mga hamon sa institusyon sa pag-aampon ng RWA",
+      "educationNetwork": {
+        "title": "Dedicated RWA Education Network",
+        "description": "Bumuo ng komprehensibong network ng edukasyon at promosyon para sa RWA",
+        "features": [
+          "Pang-edukasyon na nilalaman",
+          "Pakikipag-ugnayan sa komunidad",
+          "Mga pananaw ng eksperto"
+        ]
+      },
+      "longTermAmbassadors": {
+        "title": "Mga Pangmatagalang Ambassador",
+        "description": "Ibahin ang isang beses na kalahok sa pangmatagalang ambassador",
+        "features": [
+          "Sustained engagement",
+          "Katapatan sa tatak",
+          "Patuloy na promosyon"
+        ]
+      },
+      "verifiableData": {
+        "title": "Na-verify na Data ng Pag-ampon",
+        "description": "Magbigay ng on-chain at data ng komunidad bilang patunay ng pag-aampon",
+        "features": [
+          "On-chain na mga sukatan",
+          "Pagsusuri ng komunidad",
+          "Pagsubaybay sa pagganap"
+        ]
+      },
+      "governance": {
+        "title": "Pamamahala at Pagsunod",
+        "description": "Gumana sa ilalim ng New Zealand Sustainable Initiative Trust",
+        "features": [
+          "Pagsunod sa regulasyon",
+          "Framework ng tiwala",
+          "Istraktura ng pamamahala"
+        ]
+      }
+    },
+    "corePartners": {
+      "title": "Kasalukuyang Mga Pangunahing Kasosyo",
+      "subtitle": "Mga madiskarteng pakikipagsosyo sa buong teknolohiya, komunidad, pamamahala, at pamamahala ng asset",
+      "technologyTeams": {
+        "title": "Mga Koponan ng Teknolohiya",
+        "description": "Mga inhinyero ng IoT, Oracle, Blockchain"
+      },
+      "communityBuilders": {
+        "title": "Mga Tagabuo ng Komunidad",
+        "description": "OG user, TaskOn at Zealy contributor"
+      },
+      "governance": {
+        "title": "Pamamahala",
+        "description": "New Zealand Sustainable Initiative Trust"
+      },
+      "assetPartners": {
+        "title": "Mga Kasosyo sa Asset",
+        "description": "Mga negosyo sa pagbabawas ng enerhiya at carbon sa APAC"
+      },
+      "coreSponsor": {
+        "title": "Pangunahing Sponsor",
+        "description": "Protokol ng AGV"
+      }
+    },
+    "participation": {
+      "title": "Mga Paraan para Makilahok",
+      "subtitle": "Nababaluktot na mga opsyon sa pakikipagsosyo upang umangkop sa iba't ibang pangangailangan ng institusyon at antas ng pangako",
+      "lightSupport": {
+        "title": "Banayad na Suporta",
+        "description": "Pagkalantad sa pagba-brand, simbolikong pag-sponsor",
+        "benefits": [
+          "Visibility ng brand",
+          "Pagkilala sa komunidad",
+          "Pangunahing suporta"
+        ]
+      },
+      "mediumSupport": {
+        "title": "Katamtamang Suporta",
+        "description": "Mga kontribusyon sa Token/USDT sa fund pool",
+        "benefits": [
+          "Paglahok sa pondo",
+          "Pagbabahagi ng kita",
+          "Priyoridad na pag-access"
+        ]
+      },
+      "strategicPartner": {
+        "title": "Strategic Partner",
+        "description": "Visibility ng brand + access sa network + priority sa data ng adoption",
+        "benefits": [
+          "Buong pag-access sa network",
+          "Priyoridad ng data ng pag-ampon",
+          "Madiskarteng input"
+        ]
+      }
+    },
+    "cta": {
+      "title": "Handa nang makipagsosyo sa G3 Fund?",
+      "description": "Sumali sa mga nangungunang institusyon sa paglutas ng mga hamon ng RWA adoption sa pamamagitan ng aming komprehensibong balangkas ng partnership",
+      "button": "Kasosyo sa G3 Fund"
+    },
+    "complianceNotice": {
+      "title": "Mahalagang Paunawa sa Pagsunod",
+      "description": "Ang G3 Fund ay tumatakbo bilang isang community development initiative. Walang garantisadong pagbabalik ng pamumuhunan. Dapat maunawaan ng lahat ng kalahok ang mga panganib na kasangkot sa cryptocurrency at pakikilahok ng komunidad. Pakisuri ang aming mga tuntunin ng serbisyo at mga pagsisiwalat ng panganib bago makilahok."
+    }
+  },
+  "fund": {
+    "title": "Istruktura ng Pondo ng G3",
+    "subtitle": "Malapit na",
+    "description": "Gumagawa kami ng isang bagay na rebolusyonaryo. Ang istraktura ng G3 Fund at ang detalyadong impormasyon ay magiging available sa lalong madaling panahon.",
+    "viewInstitutions": "Tingnan ang mga Institusyon",
+    "joinCommunity": "Sumali sa Komunidad",
+    "whatsComingTitle": "What's Coming",
+    "whatsComingSubtitle": "Kumuha ng preview kung ano ang isasama ng istruktura ng G3 Fund",
+    "preview": {
+      "tokenAllocation": {
+        "title": "Paglalaan ng Token",
+        "description": "Transparent na modelo ng pamamahagi"
+      },
+      "fundBudget": {
+        "title": "Badyet ng Pondo",
+        "description": "Mga detalye ng pagpopondo sa pagpapatakbo"
+      },
+      "kolTargets": {
+        "title": "Mga Target ng KOL",
+        "description": "Mga detalye ng partner KOL"
+      },
+      "growthMetrics": {
+        "title": "Mga Sukatan ng Paglago",
+        "description": "Mga target na laki ng komunidad"
+      }
+    },
+    "stayUpdated": {
+      "title": "Manatiling Update",
+      "description": "Maunang makaalam kung kailan inilabas ang istruktura ng G3 Fund. Sumali sa aming komunidad para sa maagang pag-access."
+    }
+  }
+}

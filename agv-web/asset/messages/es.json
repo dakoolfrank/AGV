@@ -1,0 +1,190 @@
+{
+  "common": {
+    "loading": "Cargando...",
+    "error": "Error",
+    "success": "Éxito",
+    "submit": "Entregar",
+    "cancel": "Cancelar",
+    "save": "Ahorrar",
+    "edit": "Editar",
+    "delete": "Borrar",
+    "back": "Atrás",
+    "next": "Próximo",
+    "previous": "Anterior",
+    "close": "Cerca",
+    "confirm": "Confirmar",
+    "required": "Requerido",
+    "optional": "Opcional",
+    "readMore": "Leer más",
+    "yes": "Sí",
+    "no": "No",
+    "review": "Revisar",
+    "submitting": "Sumisión..."
+  },
+  "header": {
+    "title": "ACTIVOS DEL MUNDO REAL",
+    "alt": "Protocolo AGV"
+  },
+  "form": {
+    "title": "FORMULARIO DE REGISTRO DE ACTIVOS",
+    "steps": {
+      "basicData": "Datos básicos",
+      "financialRevenue": "Finanzas e ingresos",
+      "operationsCompliance": "Operaciones y Cumplimiento",
+      "tierData": "Datos de niveles"
+    },
+    "basicData": {
+      "title": "DATOS BÁSICOS",
+      "projectName": "Nombre del proyecto",
+      "landParcelId": "Identificación de parcela de tierra",
+      "county": "Condado",
+      "city": "Ciudad",
+      "province": "Provincia",
+      "latitude": "Latitud",
+      "longitude": "Longitud",
+      "landType": "Tipo de terreno",
+      "landTypeOptions": {
+        "orchard": "Huerta",
+        "farmland": "Tierras de cultivo",
+        "facilityAgriculture": "Agricultura de instalaciones"
+      },
+      "leaseContractId": "Identificación del contrato de arrendamiento",
+      "duration": "Duración",
+      "owner": "Dueño"
+    },
+    "financialData": {
+      "title": "Datos financieros y de ingresos",
+      "unitInvestmentCost": "Costo de inversión unitario (CNY por mu o por MW)",
+      "annualCashFlowBreakdown": "Desglose del flujo de caja anual",
+      "otherSubsidies": "Otros subsidios / Ingresos por certificados verdes",
+      "annualizedIRR": "Cálculo de TIR/ROI anualizado"
+    },
+    "operationsCompliance": {
+      "title": "Operaciones y Cumplimiento",
+      "companyName": "nombre de empresa",
+      "businessLicense": "Licencia comercial / Código de crédito",
+      "epcContractorName": "Nombre del contratista EPC/O&M",
+      "governmentFiling": "Identificadores de documentos de presentación/aprobación del gobierno",
+      "governmentFilingOptions": {
+        "ndrc": "Comisión Nacional de Desarrollo y Reforma (NDRC)",
+        "energyBureau": "Oficina de Energía",
+        "agricultureBureau": "Oficina de Agricultura"
+      },
+      "operatingEntity": "Entidad Operadora",
+      "operatingEntityOptions": {
+        "agricultureInsurance": "Seguro Agrícola",
+        "solarPlantInsurance": "Seguro de Plantas Solares"
+      },
+      "tier": "Seleccionar nivel",
+      "tierOptions": {
+        "orchardData": "Datos del huerto",
+        "solarData": "Datos solares"
+      }
+    },
+    "orchardData": {
+      "title": "Datos del huerto",
+      "plantingArea": "Área de plantación (mu/hectáreas)",
+      "numberOfTrees": "Número de árboles",
+      "age": "Edad",
+      "variety": "Variedad",
+      "plantingDensity": "Densidad de plantación",
+      "rowSpacing": "Espaciado entre filas",
+      "treeDensity": "Densidad de árboles",
+      "annualYield": "Rendimiento anual (toneladas)",
+      "lastThreeYearsYield": "Rendimiento de los últimos 3 años",
+      "monitoringSystem": "Sistema de monitoreo (dispositivos IoT para control de plagas y clima)",
+      "deviceId": "ID del dispositivo si está disponible",
+      "orchardProductSalesRevenue": "Ingresos por ventas de productos de huertos"
+    },
+    "solarData": {
+      "title": "Datos solares",
+      "installedCapacity": "Capacidad instalada (MWp)",
+      "pvModuleModel": "Modelo de módulo fotovoltaico",
+      "manufacturer": "Fabricante",
+      "installationDate": "Fecha de instalación",
+      "gridConnectionPermitId": "ID de permiso de conexión a la red",
+      "gridCompany": "Compañía de red",
+      "averageAnnualPowerGeneration": "Generación de energía anual promedio (últimos 12 meses, kWh)",
+      "tariffPpaContractId": "Identificación del contrato de tarifa/PPA",
+      "solarElectricitySalesRevenue": "Ingresos por ventas de electricidad solar"
+    },
+    "review": {
+      "title": "Revisar su envío",
+      "basicData": "Datos básicos",
+      "financialData": "Datos financieros y de ingresos",
+      "operationsCompliance": "Operaciones y Cumplimiento",
+      "orchardData": "Datos del huerto",
+      "solarData": "Datos solares",
+      "backToEdit": "Volver a editar",
+      "submitRegistration": "Enviar registro",
+      "noFileUploaded": "No se ha subido ningún archivo"
+    },
+    "validation": {
+      "required": "Este campo es obligatorio",
+      "fillAllRequired": "Por favor, rellene todos los campos obligatorios en la sección {section}",
+      "selectTier": "Seleccione un nivel antes de continuar con la revisión.",
+      "fieldRequired": "Este campo es obligatorio"
+    },
+    "success": {
+      "submitted": "¡Registro de activos enviado exitosamente!",
+      "failed": "No se pudo enviar el registro del activo. Inténtelo de nuevo."
+    }
+  },
+  "footer": {
+    "title": "RWA ASSETS",
+    "description": "Transformando la agricultura a través de la tecnología blockchain y la tokenización de activos del mundo real.",
+    "features": {
+      "secure": "Seguro",
+      "fast": "Rápido",
+      "multichain": "Multicadena"
+    },
+    "sections": {
+      "resources": "Recursos",
+      "company": "Compañía",
+      "support": "Apoyo",
+      "legal": "Legal"
+    },
+    "links": {
+      "assetRegistration": "Registro de activos",
+      "documentation": "Documentación",
+      "support": "Apoyo",
+      "aboutUs": "Sobre nosotros",
+      "careers": "Carreras",
+      "blog": "Blog",
+      "helpCenter": "Centro de ayuda",
+      "contactSupport": "Contactar con soporte técnico",
+      "faq": "Preguntas frecuentes",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "cookiePolicy": "Política de cookies"
+    },
+    "legal": {
+      "headquarters": "Sede: Global",
+      "description": "Todos los derechos reservados. AGV Protocol es una plataforma descentralizada para la tokenización de activos del mundo real."
+    },
+    "copyright": "© 2024 Protocolo AGV. Todos los derechos reservados."
+  },
+  "locationPicker": {
+    "noLocationSelected": "No se ha seleccionado ninguna ubicación",
+    "changeLocation": "Cambiar ubicación",
+    "selectLocation": "Seleccionar ubicación",
+    "selectLocationTitle": "Seleccionar ubicación",
+    "searchLocation": "Buscar ubicación",
+    "searchPlaceholder": "Introduzca dirección, ciudad o punto de referencia...",
+    "useCurrentLocation": "Usar ubicación actual",
+    "detecting": "Detector...",
+    "searchResults": "Resultados de la búsqueda",
+    "selectedLocation": "Ubicación seleccionada",
+    "address": "DIRECCIÓN",
+    "province": "Provincia",
+    "city": "Ciudad",
+    "county": "Condado",
+    "coordinates": "Coordenadas",
+    "mapNotConfigured": "Las API de mapas no están configuradas. Introduzca las coordenadas manualmente o configure las claves API.",
+    "latitude": "Latitud",
+    "longitude": "Longitud",
+    "setCoordinates": "Establecer coordenadas",
+    "cancel": "Cancelar",
+    "confirmLocation": "Confirmar ubicación"
+  }
+}

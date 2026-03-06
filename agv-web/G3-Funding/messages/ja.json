@@ -1,0 +1,874 @@
+{
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "success": "成功",
+    "submit": "送信",
+    "cancel": "キャンセル",
+    "save": "保存",
+    "edit": "編集",
+    "delete": "削除",
+    "back": "戻る",
+    "next": "次へ",
+    "previous": "前へ",
+    "close": "閉じる",
+    "confirm": "確認",
+    "required": "必須",
+    "optional": "任意"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "about": "について",
+    "contact": "お問い合わせ",
+    "community": "コミュニティ",
+    "fund": "ファンド",
+    "applications": "申請",
+    "admin": "管理"
+  },
+  "contributor": {
+    "title": "コントリビューター申請",
+    "subtitle": "G3 Fund に貢献者として参加し、RWA コミュニティの構築を支援しましょう",
+    "tier": {
+      "airdrop_hunter": {
+        "name": "エアドロップハンター",
+        "description": "コミュニティメンバーの入門レベル",
+        "requirements": "最低要件なし",
+        "benefits": "基本的なコミュニティアクセス、エアドロップ通知"
+      },
+      "contributor": {
+        "name": "コントリビューター",
+        "description": "アクティブなコミュニティコントリビューター",
+        "requirements": "少なくとも1つのチャンネルで1K-10Kフォロワー",
+        "benefits": "コミッション、トレーニング、コンテンツサポート"
+      },
+      "micro_kol": {
+        "name": "マイクロKOL",
+        "description": "影響力のあるコミュニティメンバー",
+        "requirements": "10K-100Kフォロワー + 一貫したパフォーマンス",
+        "benefits": "より高いコミッション、トークンインセンティブ、パートナーシップ機会"
+      },
+      "fund_partner": {
+        "name": "ファンドパートナー",
+        "description": "重要な影響力を持つ戦略的パートナー",
+        "requirements": "100K+フォロワー + 例外的なパフォーマンス + 戦略的価値",
+        "benefits": "最大の報酬、潜在的な株式参加、戦略的インプット"
+      }
+    },
+    "steps": {
+      "identity": {
+        "title": "身元と連絡先",
+        "description": "基本情報と連絡先詳細"
+      },
+      "channels": {
+        "title": "チャンネルとメトリクス",
+        "description": "ソーシャルメディアとコンテンツチャンネル"
+      },
+      "role": {
+        "title": "役割と利用可能性",
+        "description": "あなたの役割と利用可能性"
+      },
+      "performance": {
+        "title": "パフォーマンスKPI",
+        "description": "パフォーマンス目標とメトリクス"
+      },
+      "rewards": {
+        "title": "報酬と補償",
+        "description": "支払いの好みと詳細"
+      },
+      "portfolio": {
+        "title": "ポートフォリオと実績",
+        "description": "過去の仕事と経験"
+      },
+      "wallets": {
+        "title": "ウォレットと認証",
+        "description": "ウォレットアドレスと認証"
+      },
+      "compliance": {
+        "title": "コミュニティとコンプライアンス",
+        "description": "合意とコンプライアンス"
+      }
+    },
+    "form": {
+      "displayName": "表示名",
+      "email": "メール",
+      "countryRegion": "国/地域",
+      "languages": "言語",
+      "riskTermsConsent": "リスク/利用規約への同意",
+      "riskTermsText": "返金保証はなく、これはコミュニティの取り組みであり、詐欺防止ポリシーと地域制限を理解していることを承知しています。",
+      "platform": "プラットフォーム",
+      "url": "URL",
+      "followers": "フォロワー",
+      "avgViews30d": "平均視聴回数（30日間）",
+      "audienceTop3Geos": "視聴者上位3地域",
+      "contentFocus": "コンテンツの焦点",
+      "addChannel": "チャンネルを追加",
+      "removeChannel": "取り除く",
+      "channelNumber": "チャンネル{番号}",
+      "noChannels": "まだチャンネルが追加されていません。開始するには「チャンネルを追加」をクリックしてください。",
+      "manualVerification": "手動検証: 提出後、ソーシャル メディア チャネルは当社の管理チームによって手動で検証されます。",
+      "manualVerificationRequired": "手動検証が必要です",
+      "manualVerificationText": "{tier} ティアでは、申請後、ソーシャルメディアチャンネルは管理チームによって手動で確認されます。チャンネル情報はすべて正確かつ完全であることをご確認ください。",
+      "stepValidation": "続行する前に、「{step}」のすべての必須フィールドを入力してください。",
+      "stepValidationWarning": "⚠️ 続行する前に、* マークの付いた必須項目をすべて入力してください",
+      "submitting": "送信中...",
+      "submitApplication": "申請を提出する",
+      "applicationSubmitted": "申請が正常に送信されました。",
+      "applicationError": "申請を送信できませんでした。もう一度お試しください。",
+      "validationWarning": "⚠️ 続行する前に、* マークの付いた必須項目をすべて入力してください",
+      "stepValidationError": "続行する前に、「{step}」のすべての必須フィールドを入力してください。",
+      "allStepsValidationError": "続行する前に、「{step}」のすべての必須フィールドを入力してください。",
+      "fileUploadText": "クリックしてアップロードするか、ドラッグアンドドロップしてください",
+      "fileUploadTypes": ".pdf、.png、.jpg、.jpeg（それぞれ最大20MB、最大5ファイル）",
+      "websitePlaceholder": "https://example.com"
+    }
+  },
+  "institutional": {
+    "title": "機関申請",
+    "subtitle": "G3ファンドに機関投資家として参加する",
+    "steps": {
+      "purpose": {
+        "title": "目的と適合性",
+        "description": "パートナーシップの目標について教えてください"
+      },
+      "organization": {
+        "title": "組織プロフィール",
+        "description": "会社情報とKYBの詳細"
+      },
+      "contacts": {
+        "title": "連絡先",
+        "description": "主要担当者および連絡先情報"
+      },
+      "partnership": {
+        "title": "パートナーシップモード",
+        "description": "具体的なパートナーシップの詳細"
+      },
+      "geography": {
+        "title": "地理と視聴者",
+        "description": "ターゲット市場とオーディエンス"
+      },
+      "wallets": {
+        "title": "ウォレットと支払い",
+        "description": "支払い設定とウォレットの詳細"
+      },
+      "data": {
+        "title": "データとコンプライアンス",
+        "description": "報告およびコンプライアンス要件"
+      },
+      "brand": {
+        "title": "ブランドと法務",
+        "description": "ブランドの使用と法的承認"
+      }
+    },
+    "form": {
+      "submitting": "送信中...",
+      "submitApplication": "申請を提出する",
+      "primaryIntent": "主な意図（該当するものをすべて選択してください）",
+      "whatYouWantToGain": "何を得たいか（該当するものをすべて選択してください）",
+      "howOrgSupportsRWA": "現在、貴社は RWA をどのようにサポートしていますか?",
+      "howOrgSupportsRWAPlaceholder": "現在の RWA イニシアチブ、投資、またはパートナーシップについて説明してください。",
+      "rwaVerticals": "あなたの組織に当てはまる RWA 垂直分野はどれですか?",
+      "otherVertical": "他のRWA垂直分野を指定してください",
+      "otherVerticalPlaceholder": "他の RWA 分野について説明してください...",
+      "legalEntityName": "法人名",
+      "jurisdiction": "設立管轄",
+      "jurisdictionPlaceholder": "例：デラウェア州、シンガポールなど。",
+      "registrationNumber": "登録/会社番号",
+      "website": "Webサイト",
+      "registeredAddress": "登録住所",
+      "organizationType": "組織の種類",
+      "otherOrganizationType": "組織の種類を指定してください",
+      "otherOrganizationTypePlaceholder": "組織の種類について説明してください...",
+      "regulatoryPermissions": "規制上の許可/ライセンス",
+      "regulatoryPermissionsPlaceholder": "規制上の許可またはライセンスがあれば説明してください...",
+      "briefHistory": "簡単な歴史と運用資産/リソース",
+      "briefHistoryPlaceholder": "組織の簡単な歴史と AUM/リソースを入力してください...",
+      "regulatoryDocuments": "規制文書",
+      "primaryContactName": "主な連絡先名",
+      "primaryContactTitle": "主な連絡先の役職",
+      "primaryContactEmail": "主な連絡先メールアドレス",
+      "primaryContactPhone": "主な連絡先電話番号",
+      "complianceContactName": "コンプライアンス担当者名",
+      "complianceContactEmail": "コンプライアンス連絡先メールアドレス",
+      "brandPrContactName": "ブランド/PR担当者名",
+      "brandPrContactEmail": "ブランド/PR連絡先メールアドレス",
+      "options": {
+        "advocacyPartner": "アドボカシーパートナー",
+        "financialSupport": "財政支援",
+        "tokenContribution": "トークン寄付",
+        "strategicPartner": "戦略的パートナー",
+        "userGrowth": "ユーザーの成長",
+        "resourceAccess": "リソースアクセス",
+        "educationNarrative": "教育と物語",
+        "brandReputation": "ブランドと評判",
+        "longTermLeverage": "長期レバレッジ",
+        "energy": "エネルギー",
+        "agriculture": "農業",
+        "realEstate": "不動産",
+        "carbonEsg": "カーボン/ESG",
+        "supplyChain": "サプライチェーン",
+        "other": "他の",
+        "exchange": "交換",
+        "fund": "基金",
+        "assetOwnerOriginator": "資産所有者/発行者",
+        "technologyProvider": "テクノロジープロバイダー",
+        "ngoAlliance": "NGO/アライアンス",
+        "corporate": "企業"
+      },
+      "validationWarning": "⚠️ 続行する前に、* マークの付いた必須項目をすべて入力してください",
+      "stepValidationError": "続行する前に、「{step}」のすべての必須フィールドを入力してください。",
+      "allStepsValidationError": "続行する前に、「{step}」のすべての必須フィールドを入力してください。",
+      "fileUploadText": "クリックしてアップロードするか、ドラッグアンドドロップしてください",
+      "fileUploadTypes": ".pdf、.png、.jpg、.jpeg（それぞれ最大20MB、最大5ファイル）",
+      "websitePlaceholder": "https://example.com",
+      "settlementPreference": "和解の優先権",
+      "bank": "銀行",
+      "crypto": "暗号",
+      "walletAddresses": "ウォレットアドレス",
+      "addWallet": "ウォレットを追加",
+      "chainPlaceholder": "チェーン（例：イーサリアム、BSC）",
+      "addressPlaceholder": "ウォレットアドレス",
+      "removeWallet": "取り除く",
+      "complianceConstraints": "コンプライアンス制約",
+      "complianceConstraintsPlaceholder": "具体的なコンプライアンス要件または制約はありますか...",
+      "consentToOnChainVerification": "オンチェーン検証への同意",
+      "consentToOnChainVerificationText": "私の組織の資格情報と活動のオンチェーン検証に同意します。",
+      "preferredReportingCadence": "推奨される報告頻度",
+      "monthly": "毎月",
+      "quarterly": "四半期ごと",
+      "confidentialityLevel": "機密レベル",
+      "public": "公共",
+      "partnersOnly": "パートナーのみ",
+      "ndaRequired": "NDAが必要",
+      "riskDisclosureAcknowledged": "リスク開示を承認",
+      "riskDisclosureAcknowledgedText": "私はリスク開示文書を読み、理解したことを認めます。",
+      "termsPrivacyConsent": "利用規約とプライバシーの同意",
+      "termsPrivacyConsentText": "利用規約およびプライバシーポリシーに同意します。"
+    }
+  },
+  "footer": {
+    "companyName": "G3ファンド",
+    "tagline": "RWA KOLインキュベーションプラットフォーム",
+    "description": "初のRWAネイティブKOLインキュベーションファンド。トークン化されたパートナーシップと長期インセンティブを通じて、コミュニティを資産化された成長エンジンに変換します。",
+    "features": {
+      "secure": "安全で信頼できる",
+      "fast": "超高速",
+      "multichain": "マルチチェーン"
+    },
+    "sections": {
+      "platform": {
+        "title": "プラットフォーム",
+        "fundStructure": "ファンド構造",
+        "community": "コミュニティ",
+        "kolProgram": "KOLプログラム",
+        "referralSystem": "紹介システム"
+      },
+      "resources": {
+        "title": "リソース",
+        "aboutG3": "G3ファンドについて",
+        "rwaEducation": "RWA教育",
+        "trainingPrograms": "トレーニングプログラム",
+        "blog": "ブログ"
+      },
+      "support": {
+        "title": "サポート",
+        "helpCenter": "ヘルプセンター",
+        "kolGuidelines": "KOLガイドライン",
+        "communityRules": "コミュニティルール",
+        "contactSupport": "サポートに連絡"
+      },
+      "legal": {
+        "title": "法的",
+        "privacyPolicy": "プライバシーポリシー",
+        "termsOfService": "利用規約",
+        "cookiePolicy": "クッキーポリシー",
+        "gdpr": "GDPR"
+      }
+    },
+    "disclaimer": {
+      "operational": "G3ファンドは、RWA教育とKOLインキュベーションに焦点を当てたコミュニティ開発イニシアチブとして運営されています。",
+      "risk": "投資リターンは保証されていません。すべての参加者は、暗号通貨とコミュニティ参加に関連するリスクを理解する必要があります。プログラムに参加する前に、利用規約とリスク開示をご確認ください。"
+    },
+    "copyright": "© 2024 G3ファンド。無断複写・転載を禁じます。",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約"
+  },
+  "home": {
+    "valuePillars": {
+      "educate": {
+        "title": "教育と拡散",
+        "description": "包括的な教育を通じてRWAに対する認識と理解を深める"
+      },
+      "growth": {
+        "title": "持続可能な成長",
+        "description": "エアドロップハンターを長期的なKOLやアンバサダーに変える"
+      },
+      "institutional": {
+        "title": "機関連携",
+        "description": "取引所、ファンド、資産所有者に真の採用と検証可能なユーザートラクションを提供"
+      }
+    },
+    "mission": {
+      "title": "ミッション",
+      "subtitle": "暗号通貨における次の兆ドルの波は、Real World Assets (RWA) です。",
+      "description": "ウォール街ではすでにRWA投資商品が発売されています。香港とシンガポールはRWAの規制緩和を進めています。世界中のユーザーは、誇大広告に踊らされたコインではなく、資産担保型商品を求めています。",
+      "role": {
+        "title": "私たちの役割",
+        "description": "G3 基金は、RWA 教育、コミュニティの成長、組織的サポートを 1 つの持続可能なフレームワークに統合した唯一のプラットフォームです。"
+      }
+    },
+    "valueProposition": {
+      "title": "価値提案",
+      "description": "G3ファンドを主要なRWA貢献プラットフォームにしている3つの柱"
+    },
+    "responsibility": {
+      "title": "責任への呼びかけ",
+      "subtitle": "金融革新の各時代には、未来に対して責任を負う準備ができたリーダーが必要でした。単に利益を得るだけでなく。",
+      "description": "今日、リアルワールドアセット（RWA）はもはやアイデアではなく、次の1兆ドル規模の変革です。",
+      "points": {
+        "wallStreet": {
+          "title": "ウォール街の認識",
+          "description": "ウォール街はRWAを新たな資産クラスと宣言した"
+        },
+        "tokenization": {
+          "title": "グローバルトークン化",
+          "description": "世界中の資産所有者がエネルギー、炭素、不動産、サプライチェーンをトークン化しています"
+        },
+        "regulatory": {
+          "title": "規制の進歩",
+          "description": "香港とシンガポールが規制の扉を開きました"
+        },
+        "demand": {
+          "title": "ユーザー需要",
+          "description": "ユーザーは安全性と信頼性を求めています：空の約束ではなく、真の資産に裏打ちされた暗号通貨"
+        }
+      }
+    },
+    "institutions": {
+      "title": "なぜ機関はこれを無視できないのか？",
+      "subtitle": "リーダーシップがなければ、RWAの導入は遅く、断片化され、誤解を招くことになります。今日の機関は次のような問題に直面しています。",
+      "points": {
+        "compliance": {
+          "title": "コンプライアンスリスク",
+          "description": "業界は騒音ではなく、信頼できるフレームワークを必要としています"
+        },
+        "voice": {
+          "title": "声のギャップ",
+          "description": "資産と資本は人々に到達するネットワークが不足しています"
+        },
+        "marketing": {
+          "title": "非効率なマーケティング",
+          "description": "複合効果のない一回限りのプロモーション"
+        },
+        "proof": {
+          "title": "証拠の不足",
+          "description": "規制当局やLPに提示する信頼できるデータがありません"
+        }
+      }
+    },
+    "g3Mission": {
+      "title": "G3ファンドの使命",
+      "subtitle": "G3基金は特定のプロジェクトのために設立されたのではなく、RWAセクター全体のために設立されました。",
+      "points": {
+        "influence": {
+          "title": "責任ある影響力",
+          "description": "トップKOLが責任を持って影響力を発揮し、誇大宣伝ではなく真実を広められるように支援する"
+        },
+        "education": {
+          "title": "教育ネットワーク",
+          "description": "グローバルな教育と拡散ネットワークの構築"
+        },
+        "incubation": {
+          "title": "グローバルRWAインキュベーション",
+          "description": "初のグローバルRWA貢献者インキュベーションファンド"
+        },
+        "growth": {
+          "title": "検証可能な成長",
+          "description": "機関に検証可能な採用データと持続可能な成長を提供"
+        },
+        "community": {
+          "title": "コミュニティ変革",
+          "description": "草の根コミュニティ（エアドロップハンター、OG）を尊重し、パートナーやマイクロKOLに変革する"
+        }
+      }
+    },
+    "operatingPrinciples": {
+      "title": "私たちの運営原則",
+      "dualPathways": {
+        "title": "デュアルパスウェイ",
+        "description": "草の根 → コントリビューター；インフルエンサー → パートナー"
+      },
+      "compliance": {
+        "title": "透明性とコンプライアンス",
+        "description": "オンチェーン検証、パブリックダッシュボード、定期レポート"
+      },
+      "incentive": {
+        "title": "インセンティブと価値連携",
+        "description": "構造化、長期、パフォーマンスベース"
+      },
+      "noOneLeft": {
+        "title": "誰も取り残さない",
+        "description": "小さなコントリビューターから大きなファンドまで、すべてのアクターが役割と責任を持ちます"
+      }
+    },
+    "participants": {
+      "title": "現在の参加者",
+      "technology": {
+        "title": "テクノロジーパートナー",
+        "description": "IoT、オラクル、ブロックチェーンチーム"
+      },
+      "governance": {
+        "title": "ガバナンス",
+        "description": "ニュージーランド持続可能イニシアティブトラスト"
+      },
+      "agv": {
+        "title": "AGVプロトコル",
+        "description": "DePIN + RWAバックボーン"
+      },
+      "community": {
+        "title": "コミュニティビルダー",
+        "description": "OG、ホワイトリスト、TaskOn & Zealyコントリビューター"
+      },
+      "assets": {
+        "title": "資産パートナー",
+        "description": "APACエネルギー・農業企業"
+      }
+    },
+    "expansion": {
+      "title": "戦略的拡張",
+      "greenFunds": {
+        "title": "グローバルグリーンファンド",
+        "description": "ESG駆動資本"
+      },
+      "exchanges": {
+        "title": "国際取引所",
+        "description": "流動性 + 市場アクセス"
+      },
+      "projects": {
+        "title": "その他のRWAプロジェクト",
+        "description": "クロス業界アライアンス"
+      },
+      "footer": "一度限りのマーケティングではなく、RWA 業界のスーパー成長エンジンです。"
+    },
+    "institutionsJoin": {
+      "title": "機関の参加方法",
+      "advocacy": {
+        "title": "アドボカシーパートナー",
+        "description": "RWAの共同チャンピオンとして私たちと共に立ちましょう"
+      },
+      "financial": {
+        "title": "財務サポート",
+        "description": "USD/USDTでの小額スポンサーシップ"
+      },
+      "token": {
+        "title": "トークン貢献",
+        "description": "プロジェクトトークンをファンドプールに割り当てる"
+      },
+      "strategic": {
+        "title": "戦略パートナー",
+        "description": "ブランディング、優先データ、ネットワークアクセス"
+      }
+    },
+    "institutionsGain": {
+      "title": "機関が得るもの",
+      "left": {
+        "userGrowth": {
+          "title": "ユーザー成長",
+          "description": "ウォレット、ステーキング、真の採用"
+        },
+        "resourceAccess": {
+          "title": "リソースアクセス",
+          "description": "資産、ファンド、取引所への優先接続"
+        }
+      },
+      "right": {
+        "education": {
+          "title": "教育とナラティブ",
+          "description": "訓練を受けたKOL軍団があなたのストーリーを語る"
+        },
+        "brand": {
+          "title": "ブランドと評判",
+          "description": "初のグローバルRWAファンドと提携し、リーダーシップの地位を獲得"
+        },
+        "leverage": {
+          "title": "長期レバレッジ",
+          "description": "複合ネットワーク、一回限りの露出ではない"
+        }
+      }
+    },
+    "leadership": {
+      "title": "リーダーシップまたは退位",
+      "subtitle": "RWAの波は避けられない。世界が問うのは、それが起こるかどうかではなく、誰が責任を持ってそれを主導したのかということだ。",
+      "points": {
+        "transform": {
+          "title": "コントリビューターを変革",
+          "description": "私たちは草の根コントリビューターを拒否しません — 彼らをパートナーに変革します"
+        },
+        "align": {
+          "title": "声を連携",
+          "description": "KOLの声を無駄にさせず、真実と教育に結びつける"
+        },
+        "enable": {
+          "title": "行動を可能にする",
+          "description": "私たちは機関が傍観することを許しません — 彼らに責任を持って行動する手段を提供します"
+        }
+      }
+    },
+    "cta": {
+      "title": "RWA の未来を拡大する準備はできていますか?",
+      "description": "世界初のRWAコントリビューターファンドにご参加ください。KOL、機関投資家、コミュニティメンバーなど、どなたでもG3ファンドのエコシステムに参加いただけます。",
+      "contributor": "コントリビューターとして申請",
+      "institution": "機関として申請"
+    },
+    "compliance": {
+      "title": "重要なコンプライアンス通知",
+      "description": "G3ファンドはコミュニティ開発イニシアチブとして運営されています。投資収益は保証されません。すべての参加者は、暗号通貨およびコミュニティへの参加に伴うリスクを理解する必要があります。参加前に、利用規約およびリスク開示事項をご確認ください。"
+    }
+  },
+  "header": {
+    "nav": {
+      "home": "ホーム",
+      "fund": "ファンド",
+      "community": "コミュニティ",
+      "institutions": "機関"
+    },
+    "dashboard": "ダッシュボード"
+  },
+  "hero": {
+    "badge": "世界初のRWA貢献基金",
+    "title": "G3ファンド",
+    "subtitle": "世界初のRWA貢献基金",
+    "description": "KOL、貢献者、パートナーを支援して、リアルワールドアセットの未来を拡大します。",
+    "buttons": {
+      "contributor": "コントリビューターとして参加",
+      "institutions": "機関向け"
+    },
+    "features": {
+      "educate": {
+        "title": "教育と拡散",
+        "description": "包括的な教育を通じてRWAに対する認識と理解を深める"
+      },
+      "growth": {
+        "title": "持続可能な成長",
+        "description": "エアドロップハンターを長期的なKOLやアンバサダーに変える"
+      },
+      "institutional": {
+        "title": "機関連携",
+        "description": "機関に真の採用と検証可能なユーザートラクションを提供"
+      }
+    },
+    "stats": {
+      "partnerKols": "パートナーKOL",
+      "partnerKolsDesc": "トップティアインフルエンサー",
+      "smallKols": "小規模KOL",
+      "smallKolsDesc": "成長中のインフルエンサー",
+      "activeUsers": "アクティブユーザー",
+      "activeUsersDesc": "コミュニティメンバー"
+    }
+  },
+  "community": {
+    "title": "コントリビューターとして参加",
+    "heroButton": "コントリビューターとして申請",
+    "identityGrowthPath": {
+      "title": "アイデンティティ成長パス",
+      "subtitle": "エアドロップハンター → 貢献者 → マイクロKOL → ファンドパートナー",
+      "earlyBuilders": "早期参加者は、RWA の歴史において「最初のビルダー」として永久に認められます。"
+    },
+    "steps": {
+      "airdropHunter": {
+        "title": "エアドロップハンター",
+        "description": "暗号通貨の世界への旅を始めましょう",
+        "requirements": [
+          "早めに参加する",
+          "完全な検証",
+          "コミュニティに参加する"
+        ],
+        "rewards": [
+          "早期アクセス",
+          "限定イベント",
+          "直接指導"
+        ]
+      },
+      "contributor": {
+        "title": "寄稿者",
+        "description": "積極的なコミュニティ貢献者になりましょう",
+        "requirements": [
+          "1,000～10,000人のフォロワー",
+          "コンテンツを作成する",
+          "コミュニティに参加する"
+        ],
+        "rewards": [
+          "コミッション報酬",
+          "研修プログラム",
+          "コンテンツサポート"
+        ]
+      },
+      "microKol": {
+        "title": "マイクロKOL",
+        "description": "影響力とリーチを拡大",
+        "requirements": [
+          "1万～10万人のフォロワー",
+          "一貫したパフォーマンス",
+          "質の高いコンテンツ"
+        ],
+        "rewards": [
+          "より高い手数料",
+          "トークンインセンティブ",
+          "パートナーシップの機会"
+        ]
+      },
+      "fundPartner": {
+        "title": "ファンドパートナー",
+        "description": "トップレベルのパートナーになる",
+        "requirements": [
+          "10万人以上のフォロワー",
+          "卓越したパフォーマンス",
+          "戦略的価値"
+        ],
+        "rewards": [
+          "最大の報酬",
+          "株式参加",
+          "戦略的インプット"
+        ]
+      }
+    },
+    "labels": {
+      "step": "ステップ",
+      "requirements": "要件：",
+      "rewards": "報酬:"
+    },
+    "incentiveMechanism": {
+      "title": "インセンティブメカニズム",
+      "subtitle": "長期的なコミュニティの成長と持続可能な報酬のために設計された高レベルのインセンティブ構造",
+      "postToEarn": {
+        "title": "投稿して稼ぐ",
+        "description": "すべてのコンテンツが報酬を生み出す",
+        "features": [
+          "コンテンツ作成報酬",
+          "品質に基づくボーナス",
+          "パフォーマンスメトリック"
+        ]
+      },
+      "inviteToEarn": {
+        "title": "招待して獲得",
+        "description": "紹介は長期的な収益分配を生み出す",
+        "features": [
+          "2段階のコミッション構造",
+          "生涯収益分配",
+          "ネットワーク効果"
+        ]
+      },
+      "promotionPath": {
+        "title": "昇進パス",
+        "description": "ステータスが上がると、より大きな報酬が継続的に得られる",
+        "features": [
+          "階層ベースの報酬",
+          "経常収入",
+          "特別な機会"
+        ]
+      },
+      "performanceBased": {
+        "title": "パフォーマンスベース",
+        "description": "すべてのインセンティブはパフォーマンスに基づいており、長期にわたるものである",
+        "features": [
+          "短期的な投棄は禁止",
+          "長期的な調整",
+          "持続可能な成長"
+        ]
+      }
+    },
+    "futureOpportunities": {
+      "title": "将来の機会",
+      "subtitle": "G3ファンドのエコシステムは、戦略的パートナーシップと統合を通じて拡大します。",
+      "phase2": {
+        "phase": "フェーズ2",
+        "title": "グリーンファンドに加入",
+        "description": "ESGナラティブ + グローバル資本"
+      },
+      "phase3": {
+        "phase": "フェーズ3",
+        "title": "国際交流の統合",
+        "description": "流動性とエクスポージャー"
+      },
+      "phase4": {
+        "phase": "フェーズ4",
+        "title": "RWAプロジェクトをさらに導入する",
+        "description": "ネットワークに流れ込む無限の報酬"
+      }
+    },
+    "cta": {
+      "title": "最初のビルダーになる準備はできましたか?",
+      "description": "今すぐG3ファンドコミュニティに参加して、RWAの歴史における「最初のビルダー」として永久に認められましょう。",
+      "startContributor": "貢献者として始める",
+      "applyInstitution": "機関として申請する"
+    },
+    "complianceNotice": {
+      "title": "重要なお知らせ",
+      "description": "紹介報酬はパフォーマンスに基づいており、コミュニティガイドラインに準拠しています。参加者は全員、不正行為防止対策と地域制限を遵守する必要があります。報酬の保証はございません。ご参加前に利用規約をご確認ください。"
+    }
+  },
+  "institutions": {
+    "title": "機関向け",
+    "subtitle": "パートナーシップ",
+    "description": "G3 ファンドと提携して、RWA の導入、コミュニティの構築、検証可能なユーザー牽引における組織上の課題を解決します。",
+    "heroButton": "G3ファンドと提携",
+    "challenges": {
+      "title": "制度上の課題",
+      "subtitle": "機関はRWAの導入とコミュニティ構築において大きな課題に直面している",
+      "userEducation": {
+        "title": "ユーザー教育のギャップ",
+        "description": "RWA は複雑で、ユーザーが理解できない → コンバージョン率が低い"
+      },
+      "insufficientVoice": {
+        "title": "不十分な声",
+        "description": "機関は資産を持っているが、強力なコミュニティネットワークが不足している"
+      },
+      "inefficientMarketing": {
+        "title": "非効率的なマーケティング",
+        "description": "KOLによる単発の投稿は費用がかかるが、複利効果はもたらさない"
+      },
+      "lackOfData": {
+        "title": "データ不足",
+        "description": "規制当局、LP、パートナーに検証可能な採用指標を示すことが難しい"
+      },
+      "complianceRisks": {
+        "title": "コンプライアンスと信頼リスク",
+        "description": "業界はノイズに満ちており、機関は信頼性を必要としている"
+      }
+    },
+    "solution": {
+      "title": "G3ファンドソリューション",
+      "subtitle": "RWA導入における制度的課題に対処するための包括的なソリューション",
+      "educationNetwork": {
+        "title": "専用RWA教育ネットワーク",
+        "description": "RWAのための包括的な教育および推進ネットワークを構築する",
+        "features": [
+          "教育コンテンツ",
+          "コミュニティの関与",
+          "専門家の洞察"
+        ]
+      },
+      "longTermAmbassadors": {
+        "title": "長期アンバサダー",
+        "description": "一度限りの参加者を長期的なアンバサダーに変える",
+        "features": [
+          "持続的な関与",
+          "ブランドロイヤルティ",
+          "継続的なプロモーション"
+        ]
+      },
+      "verifiableData": {
+        "title": "検証可能な採用データ",
+        "description": "採用の証明としてオンチェーンとコミュニティのデータを提供する",
+        "features": [
+          "オンチェーンメトリクス",
+          "コミュニティ分析",
+          "パフォーマンス追跡"
+        ]
+      },
+      "governance": {
+        "title": "ガバナンスとコンプライアンス",
+        "description": "ニュージーランド・サステナブル・イニシアティブ・トラストの管轄下で運営",
+        "features": [
+          "規制遵守",
+          "信頼の枠組み",
+          "ガバナンス構造"
+        ]
+      }
+    },
+    "corePartners": {
+      "title": "現在のコアパートナー",
+      "subtitle": "テクノロジー、コミュニティ、ガバナンス、資産管理にわたる戦略的パートナーシップ",
+      "technologyTeams": {
+        "title": "テクノロジーチーム",
+        "description": "IoT、Oracle、ブロックチェーンエンジニア"
+      },
+      "communityBuilders": {
+        "title": "コミュニティビルダー",
+        "description": "OGユーザー、TaskOnおよびZealy貢献者"
+      },
+      "governance": {
+        "title": "ガバナンス",
+        "description": "ニュージーランド・サステナブル・イニシアティブ・トラスト"
+      },
+      "assetPartners": {
+        "title": "アセットパートナーズ",
+        "description": "アジア太平洋地域のエネルギーおよび炭素削減企業"
+      },
+      "coreSponsor": {
+        "title": "コアスポンサー",
+        "description": "AGVプロトコル"
+      }
+    },
+    "participation": {
+      "title": "参加方法",
+      "subtitle": "さまざまな組織のニーズとコミットメントレベルに合わせた柔軟なパートナーシップオプション",
+      "lightSupport": {
+        "title": "軽いサポート",
+        "description": "ブランド露出、象徴的なスポンサーシップ",
+        "benefits": [
+          "ブランドの認知度",
+          "コミュニティの認識",
+          "基本サポート"
+        ]
+      },
+      "mediumSupport": {
+        "title": "中程度のサポート",
+        "description": "ファンドプールへのトークン/USDTの拠出",
+        "benefits": [
+          "ファンド参加",
+          "収益分配",
+          "優先アクセス"
+        ]
+      },
+      "strategicPartner": {
+        "title": "戦略的パートナー",
+        "description": "ブランドの認知度 + ネットワークへのアクセス + 採用データにおける優先順位",
+        "benefits": [
+          "完全なネットワークアクセス",
+          "採用データの優先順位",
+          "戦略的インプット"
+        ]
+      }
+    },
+    "cta": {
+      "title": "G3 ファンドと提携する準備はできていますか?",
+      "description": "包括的なパートナーシップフレームワークを通じて、RWA導入の課題を解決する主要機関に加わりましょう",
+      "button": "G3ファンドと提携"
+    },
+    "complianceNotice": {
+      "title": "重要なコンプライアンス通知",
+      "description": "G3ファンドはコミュニティ開発イニシアチブとして運営されています。投資収益は保証されません。すべての参加者は、暗号通貨およびコミュニティへの参加に伴うリスクを理解する必要があります。参加前に、利用規約およびリスク開示事項をご確認ください。"
+    }
+  },
+  "fund": {
+    "title": "G3ファンド構造",
+    "subtitle": "近日公開",
+    "description": "私たちは革新的なものを構築しています。G3ファンドの構造と詳細情報は近日中に公開予定です。",
+    "viewInstitutions": "機関を表示",
+    "joinCommunity": "コミュニティに参加する",
+    "whatsComingTitle": "今後の予定",
+    "whatsComingSubtitle": "G3ファンドの構造に含まれるものをプレビューします",
+    "preview": {
+      "tokenAllocation": {
+        "title": "トークンの割り当て",
+        "description": "透明な流通モデル"
+      },
+      "fundBudget": {
+        "title": "基金予算",
+        "description": "運営資金の詳細"
+      },
+      "kolTargets": {
+        "title": "KOLターゲット",
+        "description": "パートナーKOL仕様"
+      },
+      "growthMetrics": {
+        "title": "成長指標",
+        "description": "コミュニティ規模の目標"
+      }
+    },
+    "stayUpdated": {
+      "title": "最新情報を入手",
+      "description": "G3ファンドの構造が発表されたら、いち早く情報を入手しましょう。コミュニティに参加して早期アクセスをご利用ください。"
+    }
+  }
+}

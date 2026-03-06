@@ -1,0 +1,40 @@
+{
+  "name": "investor-portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint",
+    "translate": "tsx scripts/translate-missing.ts",
+    "translate-sync": "node scripts/sync-translations.js"
+  },
+  "dependencies": {
+    "@getbrevo/brevo": "^3.0.1",
+    "@google-cloud/translate": "^9.2.1",
+    "dotenv": "^17.2.3",
+    "firebase": "^10.14.1",
+    "firebase-admin": "^12.0.0",
+    "framer-motion": "^11.0.0",
+    "googleapis": "^163.0.0",
+    "lucide-react": "^0.546.0",
+    "openai": "^6.5.0",
+    "next": "15.5.7",
+    "react": "19.2.1",
+    "react-dom": "19.2.1",
+    "react-icons": "^5.0.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.7",
+    "tailwindcss": "^4",
+    "tsx": "^4.20.6",
+    "typescript": "^5"
+  }
+}

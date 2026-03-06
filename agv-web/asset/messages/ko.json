@@ -1,0 +1,190 @@
+{
+  "common": {
+    "loading": "로딩중...",
+    "error": "오류",
+    "success": "성공",
+    "submit": "제출하다",
+    "cancel": "취소",
+    "save": "구하다",
+    "edit": "편집하다",
+    "delete": "삭제",
+    "back": "뒤쪽에",
+    "next": "다음",
+    "previous": "이전의",
+    "close": "닫다",
+    "confirm": "확인하다",
+    "required": "필수의",
+    "optional": "선택 과목",
+    "readMore": "더 읽어보기",
+    "yes": "예",
+    "no": "아니요",
+    "review": "검토",
+    "submitting": "제출 중..."
+  },
+  "header": {
+    "title": "실제 자산",
+    "alt": "AGV 프로토콜"
+  },
+  "form": {
+    "title": "자산 등록 양식",
+    "steps": {
+      "basicData": "기본 데이터",
+      "financialRevenue": "재무 및 수익",
+      "operationsCompliance": "운영 및 규정 준수",
+      "tierData": "계층 데이터"
+    },
+    "basicData": {
+      "title": "기본 데이터",
+      "projectName": "프로젝트 이름",
+      "landParcelId": "토지 소포 ID",
+      "county": "군",
+      "city": "도시",
+      "province": "주",
+      "latitude": "위도",
+      "longitude": "경도",
+      "landType": "토지 유형",
+      "landTypeOptions": {
+        "orchard": "과수원",
+        "farmland": "농토",
+        "facilityAgriculture": "시설 농업"
+      },
+      "leaseContractId": "임대 계약 ID",
+      "duration": "지속",
+      "owner": "소유자"
+    },
+    "financialData": {
+      "title": "재무 및 수익 데이터",
+      "unitInvestmentCost": "단위 투자 비용(mu당 또는 MW당 CNY)",
+      "annualCashFlowBreakdown": "연간 현금 흐름 분석",
+      "otherSubsidies": "기타 보조금 / 녹색인증 소득",
+      "annualizedIRR": "연간 IRR/ROI 계산"
+    },
+    "operationsCompliance": {
+      "title": "운영 및 규정 준수",
+      "companyName": "회사 이름",
+      "businessLicense": "사업자등록증/신용코드",
+      "epcContractorName": "EPC/O&M 계약자 이름",
+      "governmentFiling": "정부 제출/승인 문서 ID",
+      "governmentFilingOptions": {
+        "ndrc": "국가개발개혁위원회",
+        "energyBureau": "에너지국",
+        "agricultureBureau": "농업국"
+      },
+      "operatingEntity": "운영 주체",
+      "operatingEntityOptions": {
+        "agricultureInsurance": "농업 보험",
+        "solarPlantInsurance": "태양광 발전소 보험"
+      },
+      "tier": "티어 선택",
+      "tierOptions": {
+        "orchardData": "과수원 데이터",
+        "solarData": "태양 데이터"
+      }
+    },
+    "orchardData": {
+      "title": "과수원 데이터",
+      "plantingArea": "재배 면적(mu / 헥타르)",
+      "numberOfTrees": "나무의 수",
+      "age": "나이",
+      "variety": "다양성",
+      "plantingDensity": "심기 밀도",
+      "rowSpacing": "행 간격",
+      "treeDensity": "나무 밀도",
+      "annualYield": "연간 수확량(톤)",
+      "lastThreeYearsYield": "지난 3년간의 수익률",
+      "monitoringSystem": "모니터링 시스템(해충/기후 제어를 위한 IoT 장치)",
+      "deviceId": "사용 가능한 경우 장치 ID",
+      "orchardProductSalesRevenue": "과수원 제품 판매 수익"
+    },
+    "solarData": {
+      "title": "태양 데이터",
+      "installedCapacity": "설치 용량(MWp)",
+      "pvModuleModel": "PV 모듈 모델",
+      "manufacturer": "제조업체",
+      "installationDate": "설치 날짜",
+      "gridConnectionPermitId": "그리드 연결 허가 ID",
+      "gridCompany": "그리드 회사",
+      "averageAnnualPowerGeneration": "연평균 발전량(지난 12개월, kWh)",
+      "tariffPpaContractId": "관세/PPA 계약 ID",
+      "solarElectricitySalesRevenue": "태양광 발전 판매 수익"
+    },
+    "review": {
+      "title": "제출물 검토",
+      "basicData": "기본 데이터",
+      "financialData": "재무 및 수익 데이터",
+      "operationsCompliance": "운영 및 규정 준수",
+      "orchardData": "과수원 데이터",
+      "solarData": "태양 데이터",
+      "backToEdit": "편집으로 돌아가기",
+      "submitRegistration": "등록 제출",
+      "noFileUploaded": "파일이 업로드되지 않았습니다"
+    },
+    "validation": {
+      "required": "이 필드는 필수입니다",
+      "fillAllRequired": "{section} 섹션의 모든 필수 필드를 작성해 주세요.",
+      "selectTier": "검토를 진행하기 전에 등급을 선택하세요.",
+      "fieldRequired": "이 필드는 필수입니다"
+    },
+    "success": {
+      "submitted": "자산 등록이 성공적으로 제출되었습니다!",
+      "failed": "자산 등록을 제출하지 못했습니다. 다시 시도해 주세요."
+    }
+  },
+  "footer": {
+    "title": "RWA ASSETS",
+    "description": "블록체인 기술과 실제 자산 토큰화를 통해 농업을 혁신합니다.",
+    "features": {
+      "secure": "안전한",
+      "fast": "빠른",
+      "multichain": "멀티체인"
+    },
+    "sections": {
+      "resources": "자원",
+      "company": "회사",
+      "support": "지원하다",
+      "legal": "합법적인"
+    },
+    "links": {
+      "assetRegistration": "자산 등록",
+      "documentation": "선적 서류 비치",
+      "support": "지원하다",
+      "aboutUs": "회사 소개",
+      "careers": "경력",
+      "blog": "블로그",
+      "helpCenter": "도움말 센터",
+      "contactSupport": "지원팀에 문의하세요",
+      "faq": "자주 묻는 질문",
+      "privacy": "은둔",
+      "terms": "자귀",
+      "cookiePolicy": "쿠키 정책"
+    },
+    "legal": {
+      "headquarters": "본사: 글로벌",
+      "description": "모든 권리 보유. AGV 프로토콜은 실제 자산 토큰화를 위한 분산형 플랫폼입니다."
+    },
+    "copyright": "© 2024 AGV 프로토콜. 모든 권리 보유."
+  },
+  "locationPicker": {
+    "noLocationSelected": "선택된 위치가 없습니다",
+    "changeLocation": "위치 변경",
+    "selectLocation": "위치 선택",
+    "selectLocationTitle": "위치 선택",
+    "searchLocation": "위치 검색",
+    "searchPlaceholder": "주소, 도시 또는 랜드마크를 입력하세요...",
+    "useCurrentLocation": "현재 위치 사용",
+    "detecting": "감지 중...",
+    "searchResults": "검색 결과",
+    "selectedLocation": "선택된 위치",
+    "address": "주소",
+    "province": "주",
+    "city": "도시",
+    "county": "군",
+    "coordinates": "좌표",
+    "mapNotConfigured": "지도 API가 구성되지 않았습니다. 좌표를 직접 입력하거나 API 키를 구성하세요.",
+    "latitude": "위도",
+    "longitude": "경도",
+    "setCoordinates": "좌표 설정",
+    "cancel": "취소",
+    "confirmLocation": "위치 확인"
+  }
+}

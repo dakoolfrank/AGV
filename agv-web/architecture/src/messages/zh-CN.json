@@ -1,0 +1,225 @@
+{
+  "header": {
+    "brand": "PreGVT",
+    "protocolName": "AGV协议",
+    "languageLabel": "语言",
+    "languageAriaLabel": "选择语言"
+  },
+  "hero": {
+    "title": {
+      "main": "AGV 令牌架构",
+      "highlight": "面向未来的代币系统"
+    },
+    "description": "一个干净、安全的 2 代币结构：preGVT 用于预售和归属，GVT 作为核心生态系统代币，用于支持治理、质押和现实世界资产集成。",
+    "primaryCta": "查看令牌架构",
+    "secondaryCta": "阅读代币经济学",
+    "tokenomicsHref": "#",
+    "icons": {
+      "pregvtAlt": "PreGVT",
+      "gvtAlt": "全球变暖"
+    }
+  },
+  "oneChain": {
+    "heading": {
+      "prefix": "一条链，零混乱。",
+      "highlight": "最高安全级别。"
+    },
+    "description": "AGV 仅在 BNB 链上发行——无需桥接，没有镜像供应，不存在跨链风险。这确保了最简便的审计、最安全的用户体验和最清晰的代币经济模型。",
+    "imageAlt": "BNB 链",
+    "features": [
+      "快速执行",
+      "最低审计复杂度",
+      "最清晰的列表路径",
+      "简便的链上供应链验证",
+      "极简、可预测的架构"
+    ]
+  },
+  "twoToken": {
+    "heading": {
+      "prefix": "专门建造的，",
+      "highlight": "双令牌架构"
+    },
+    "pregvt": {
+      "title": "PreGVT",
+      "subtitle": "预售 + 早期奖励代币",
+      "bullets": [
+        "不可转让",
+        "在TGE处转换为GVT",
+        "通过托管合同强制执行的归属权",
+        "已部署在 BNB 上"
+      ],
+      "callout": "锁定直至 TGE",
+      "imageAlt": "PreGVT"
+    },
+    "gvt": {
+      "title": "全球变暖",
+      "subtitle": "主要可交易生态系统代币",
+      "bullets": [
+        "可在TGE完全交易",
+        "单链规范供应",
+        "治理 + 质押 + RWA 访问权限"
+      ],
+      "callout": "核心AGV资产。",
+      "imageAlt": "全球变暖"
+    }
+  },
+  "liquidity": {
+    "heading": {
+      "prefix": "分阶段流动性策略",
+      "highlight": "清洁价格发现"
+    },
+    "phase1": {
+      "title": "第一阶段——TGE 前",
+      "description": "PreGVT–USDT LP 在 PancakeSwap 上。",
+      "purposeTitle": "目的",
+      "bullets": [
+        "价格参考",
+        "钱包 + 仪表盘可见性"
+      ]
+    },
+    "phase2": {
+      "title": "第二阶段——TGE",
+      "description": "GVT流动性上线。",
+      "purposeTitle": "包括",
+      "bullets": [
+        "做市商支持",
+        "从 preGVT 到 GVT 的完全转换",
+        "链上流通供应披露"
+      ]
+    }
+  },
+  "vesting": {
+    "heading": {
+      "prefix": "从 PreGVT 到 GVT —",
+      "highlight": "完全透明的股权结构"
+    },
+    "description": "您的 preGVT 将通过 TGE 的安全归属合同自动过渡到 GVT。",
+    "steps": [
+      "你持有 preGVT",
+      "preGVT 进入归属合同",
+      "归属期：9-12个月",
+      "GVT逐步解锁",
+      "您收到液态GVT"
+    ]
+  },
+  "security": {
+    "heading": {
+      "prefix": "安保",
+      "highlight": "系统核心"
+    },
+    "points": [
+      "Safe Multisig 控制所有铸币活动",
+      "单链攻击面较小",
+      "基于托管的权益归属执行",
+      "为了稳定，合同不可升级。",
+      "可暂停的紧急功能",
+      "可选的时间锁定治理"
+    ]
+  },
+  "builtForNext": {
+    "heading": {
+      "prefix": "AGV 代币架构 — 专为……而打造",
+      "highlight": "接下来会发生什么？"
+    },
+    "description": "您的 preGVT 将通过 TGE 的安全归属合同自动过渡到 GVT。",
+    "items": [
+      "更快的审计",
+      "降低安全风险",
+      "透明供应",
+      "可预测的代币行为",
+      "便于交换",
+      "清晰的文档",
+      "多链扩展的基础"
+    ]
+  },
+  "tokenConversion": {
+    "heading": "AGV代币转换架构图",
+    "pregvt": {
+      "title": "PreGVT",
+      "badge": "预售代币",
+      "propertiesTitle": "特性",
+      "bullets": [
+        "不可转让",
+        "在TGE处转换为GVT",
+        "通过托管合同强制执行的归属权",
+        "已部署在 BNB 上"
+      ]
+    },
+    "gvt": {
+      "title": "全球变暖",
+      "badge": "主令牌",
+      "propertiesTitle": "特性",
+      "bullets": [
+        "可在TGE完全交易",
+        "单链规范供应",
+        "治理 + 质押 + RWA 访问权限"
+      ]
+    },
+    "callouts": {
+      "pause": {
+        "title": "暂停功能",
+        "description": "紧急停止或停车"
+      },
+      "timelock": {
+        "title": "时间锁定（可选）",
+        "description": "推迟对治理至关重要的行动以提高透明度"
+      },
+      "noProxy": {
+        "title": "不支持升级代理",
+        "description": "为了减少攻击面"
+      }
+    },
+    "diagramTitle": "代币生成/转换",
+    "diagramLabels": {
+      "from": "PreGVT",
+      "to": "全球变暖"
+    }
+  },
+  "footer": {
+    "brand": "PreGVT 方案",
+    "tagline": "数字代币平台",
+    "description": "全球首个符合 PreGVT 标准的数字代币，这是一款基于区块链技术的创新型金融产品。",
+    "featureLabels": [
+      "安全的",
+      "快速地",
+      "多链"
+    ],
+    "sections": {
+      "product": {
+        "title": "产品",
+        "links": {
+          "nftMinting": "NFT铸造",
+          "kolProgram": "KOL项目",
+          "analytics": "分析"
+        }
+      },
+      "company": {
+        "title": "公司",
+        "links": {
+          "aboutUs": "关于我们",
+          "careers": "职业生涯",
+          "press": "按",
+          "blogs": "博客"
+        }
+      },
+      "support": {
+        "title": "支持",
+        "links": {
+          "helpCenter": "帮助中心",
+          "documentation": "文档",
+          "apiReference": "API 参考",
+          "contactSupport": "联系客服"
+        }
+      },
+      "legal": {
+        "title": "合法的",
+        "links": {
+          "privacyPolicy": "隐私政策",
+          "termsOfService": "服务条款",
+          "cookiePolicy": "Cookie政策",
+          "gdpr": "GDPR"
+        }
+      }
+    }
+  }
+}

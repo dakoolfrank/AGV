@@ -1,0 +1,1399 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "success": "Erfolg",
+    "submit": "Einreichen",
+    "cancel": "Stornieren",
+    "save": "Speichern",
+    "edit": "Bearbeiten",
+    "delete": "Löschen",
+    "back": "Zurück",
+    "next": "Nächste",
+    "previous": "Vorherige",
+    "close": "Schließen",
+    "confirm": "Bestätigen",
+    "required": "Erforderlich",
+    "optional": "Optional",
+    "readMore": "Mehr lesen"
+  },
+  "nav": {
+    "home": "Heim",
+    "about": "Um",
+    "career": "Karriere",
+    "blog": "Ressourcen",
+    "investors": "Investor Relations"
+  },
+  "header": {
+    "nav": {
+      "home": "Heim",
+      "about": "Um",
+      "products": "Produkte",
+      "research": "Forschung",
+      "investorRelations": "Investor Relations",
+      "dashboard": "Armaturenbrett",
+      "staking": "Abstecken",
+      "mint": "Minze"
+    },
+    "connectWallet": "Wallets verbinden",
+    "disconnect": "Trennen"
+  },
+  "hero": {
+    "description": "Erschließen Sie saubere Energie und Rechenleistung, indem Sie verifizierte Elektrizität und Edge-Rechenkapazität in investierbare On-Chain-Assets umwandeln.",
+    "startMinting": "Beginnen Sie mit dem Prägen",
+    "viewStaking": "Staking ansehen",
+    "blockchains": "Blockchains",
+    "nftCollections": "NFT-Sammlungen",
+    "dailyRewards": "Tägliche Belohnungen",
+    "title1": "Die führende RWA",
+    "title2": "Protokoll für KI-Leistung"
+  },
+  "whatisagv": {
+    "title": "Was wir tun",
+    "description": "AGV Protocol ist ein dePIN RWA-Infrastrukturprotokoll, das Obstgärten, Solarparks und Edge-Compute-Cluster in verifizierbare, ertragsbasierte digitale Assets verwandelt. Jede Energie- und Rechenleistung wird von IoT-Geräten überwacht, in der Blockchain verankert und erst dann tokenisiert. Dieser Power-to-Mint-Mechanismus gewährleistet eine 1:1-Verbindung zwischen physischer Produktivität und digitalem Wert und erschließt so nachhaltige Renditen für On-Chain-Investoren. AGV verankert derzeit Erträge in verifizierten Obstgärten, Solaranlagen und Rechenknoten in Shaanxi, China – der weltweit größten Energie- und KI-Infrastrukturzone."
+  },
+  "whyagv": {
+    "title": "Warum ist AGV eine Blaupause für eine Infrastruktur mit echtem Ertrag?",
+    "description": "AGV ist kein einmaliges Projekt. Es handelt sich um ein replizierbares Protokoll, das reales Land in digitale Ertragsinfrastruktur verwandelt. Jede AGV-Einheit soll einen Jahresumsatz von 180.000 bis 280.000 US-Dollar generieren, mit einem internen Zinsfuß (IRR) zwischen 18 % und 26 %, basierend auf den tatsächlichen Erträgen der Obstplantagen und regionalen Solarleistungsdaten."
+  },
+  "fixing": {
+    "title": "Beheben von Problemen bei der Tokenisierung in der realen Welt",
+    "description1": "AGV verbindet die digitale und die physische Welt, indem es Obstgärten und Solarparks in NFTs und Token umwandelt. Jedes Asset ist mit Smart Contracts verknüpft, die Einkommensverteilung, Eigentum und Governance automatisieren – und so Probleme wie fragmentierte Daten, nicht überprüfbare Erträge und undurchsichtige Landrechte lösen.",
+    "description2": "AGV nutzt im Kern eine standardisierte Anlageeinheit: 100 mu ertragreiche Apfelplantagen gepaart mit 6 MW Solarenergie. Dieses Modell liefert ein Jahreseinkommen von 180.000 bis 280.000 US-Dollar pro Einheit bei einem internen Zinsfuß von 18 % bis 26 %, unterstützt durch IoT-basierte Leistungsdaten und Prognosemodelle.",
+    "description3": "Im Gegensatz zu herkömmlichen Agrarprojekten, die schwer zu replizieren sind, sind AGV-Einheiten SPV-verpackt, DeFi-kompatibel und global modular – was eine schnelle Bereitstellung und wiederholbare Skalierung über Grenzen hinweg ermöglicht."
+  },
+  "exploreagv": {
+    "title": "Entdecken Sie die On-Chain-Infrastruktur von AGV",
+    "description": "Besuchen Sie unsere realen Projektstandorte und erleben Sie, wie Obstgärten, Solaranlagen und Blockchain zusammenkommen. Von Chinas grünen Zonen bis hin zu zukünftigen internationalen Knotenpunkten – AGV gestaltet die Zukunft der landgestützten RWA-On-Chain."
+  },
+  "blockchain": {
+    "title": "Revolutionierung der Infrastruktur mit Blockchain",
+    "realAssets": "REALES VERMÖGEN. REALER EINNAHMEN.",
+    "eachUnit": "Jede AGV-Einheit umfasst:",
+    "item1": "100 mu ertragreiche Apfelplantagen",
+    "item2": "6-MW-Solarpark in Versorgungsqualität",
+    "item3": "IoT-Sensoren für Echtzeitüberwachung",
+    "item4": "Smart Contracts für automatisierte Umsatzbeteiligung",
+    "item5": "Transparente Eigentumsverhältnisse und Governance",
+    "item6": "DeFi-kompatible Tokenisierung",
+    "assetsDescription": "Die Vermögenswerte sind landgestützt, ertragsbringend und inflationsresistent – keine synthetischen Token oder spekulativen DeFi-Experimente.",
+    "onChainData": "ON-CHAIN-DATENINFRASTRUKTUR",
+    "onChainDataDesc": "Jede Einheit ist ausgestattet mit:",
+    "onChainItem1": "IoT-Sensoren für Ertrags- und Energiedaten in Echtzeit",
+    "onChainItem2": "Smart Contracts und NFT-Mapping",
+    "onChainItem3": "Mit Satelliten-Feeds synchronisierte Dashboards",
+    "onChainItem4": "Token-Emission verknüpft mit verifizierter Ausgabe",
+    "onChainDataDesc2": "Benutzer können Wachstum, Stromerzeugung und Token-Ansammlung überwachen – alles transparent aufgezeichnet und in der Kette zugänglich.",
+    "builtToScale": "GLOBALER SKALIERBARKEIT",
+    "builtToScaleDesc": "Jede AGV-Einheit wird über SPV standardisiert und tokenisiert:",
+    "builtItem1": "Erweiterbar mit Batteriespeicher und Edge-Computing",
+    "builtItem2": "Modulares Design unterstützt Bewässerung, KI-Knoten oder Kohlenstoffverfolgung",
+    "builtItem3": "Anwendbar in Asien, Lateinamerika, Afrika und MENA",
+    "builtToScaleDesc2": "CEX-fähig, DeFi-kompatibel und ESG-konform – AGV ist für die globale Integration konzipiert."
+  },
+  "threelayer": {
+    "title": "Drei Ebenen der realen Rendite",
+    "fruit": {
+      "title": "NFTs mit Fruchtunterstützung",
+      "description": "AGV verwandelt Apfelplantagen in tokenisierte Vermögenswerte. Jedes NFT ist einem echten Baum zugeordnet, der Früchte, Einnahmen und einen nachweisbaren Ertrag in der Kette produziert."
+    },
+    "solar": {
+      "title": "Solarbetriebene Belohnungen",
+      "description": "Jede Einheit verfügt über eine Solarkapazität von 6 MW, die nicht nur die Farm, sondern auch Randknoten und die energiegestützte Token-Prägung mit Strom versorgt – „Sonnenlicht als Einkommen“."
+    },
+    "depin": {
+      "title": "DePIN-fähige Infrastruktur",
+      "description": "AGV vereint Sensoren, Smart Contracts und Echtzeitdaten, um Edge-Knoten mit Strom zu versorgen, Kohlenstoff aufzuzeichnen und Web3-Dienste weltweit bereitzustellen."
+    }
+  },
+  "testimonials": {
+    "title1": "Die Zukunft der Infrastruktur ist real, grün und On-Chain",
+    "description": "Führende Institutionen sind sich einig: Reale Vermögenswerte, nachhaltige Energie und Blockchain-Integration prägen die nächste Billionen-Dollar-Chance. AGV befindet sich an der Schnittstelle dieser Makrotrends.",
+    "quote1": "Durch die Tokenisierung realer Vermögenswerte könnte bis 2030 ein Markt im Wert von 10 Billionen US-Dollar erschlossen werden.",
+    "source1": "Boston Consulting Group",
+    "quote2": "ESG und energiebezogene Infrastruktur werden die institutionellen Kapitalströme im nächsten Jahrzehnt dominieren.",
+    "source2": "BlackRock 2024 Ausblick",
+    "quote3": "Dezentrale grüne Energie ist die Grundlage für langfristige wirtschaftliche Widerstandsfähigkeit.",
+    "source3": "Weltbank",
+    "title2": "Die Zukunft wird von Land, Sonne und Code angetrieben",
+    "investNow": "Jetzt investieren"
+  },
+  "maincontent": {
+    "platformOverview": "PLATTFORMÜBERSICHT",
+    "coreFeatures": "Kernfunktionen",
+    "getStarted": "Erste Schritte",
+    "community": "Gemeinschaft",
+    "latestUpdates": "Letzte Aktualisierung",
+    "features": {
+      "multichain": {
+        "title": "Multi-Chain-Unterstützung",
+        "description": "NFTs in BSC-, Polygon- und Arbitrum-Netzwerken bereitstellen und verwalten"
+      },
+      "secure": {
+        "title": "Sicheres Prägen",
+        "description": "Erweiterte Sicherheitsmaßnahmen und Smart-Contract-Audits"
+      },
+      "rewards": {
+        "title": "Sofortige Belohnungen",
+        "description": "Verdienen Sie mit unserem Staking-System sofort nach dem Prägen Belohnungen"
+      }
+    },
+    "stats": {
+      "totalSupply": "Gesamtversorgung",
+      "nftsMinted": "Geprägte NFTs",
+      "rewardRate": "Belohnungsrate",
+      "dailyRewards": "Tägliche Belohnungen",
+      "securityScore": "Sicherheitsbewertung",
+      "auditRating": "Audit-Bewertung",
+      "upto50rggp": "Bis zu 50,00",
+      "nftCount": "1.234"
+    },
+    "social": {
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "discord": "Zwietracht",
+      "telegram": "Telegramm",
+      "follow": "Folgen",
+      "stars": "Sterne",
+      "followers": "Anhänger",
+      "members": "Mitglieder"
+    },
+    "articles": {
+      "introducing": {
+        "title": "Einführung des AGV-Protokolls",
+        "description": "Erfahren Sie, wie Sie Ihr erstes NFT prägen und Belohnungen verdienen"
+      },
+      "multichain": {
+        "title": "rGGP erklärt",
+        "description": "Wie das AGV-Protokoll reale Erträge in Belohnungen umwandelt"
+      },
+      "security": {
+        "title": "Best Practices für die Sicherheit",
+        "description": "Wie das AGV-Protokoll reale Erträge in Belohnungen umwandelt"
+      },
+      "readMore": "Mehr lesen"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 AGV Protocol. Alle Rechte vorbehalten.",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Servicebedingungen",
+    "contact": "Kontaktieren Sie uns",
+    "description": "Die Zukunft des dezentralen Computing durch innovative NFT-Technologie. Schließen Sie sich Tausenden von Benutzern an, die exklusive AGV-NFTs in mehreren Blockchain-Netzwerken prägen.",
+    "secure": "Sicher und vertrauenswürdig",
+    "fast": "Blitzschnell",
+    "multichain": "Mehrketten",
+    "resources": "Ressourcen",
+    "nftMinting": "NFT-Prägung",
+    "nftStaking": "NFT-Staking",
+    "kolProgram": "KOL-Programm",
+    "company": "Unternehmen",
+    "aboutUs": "Über uns",
+    "careers": "Karriere",
+    "blogs": "Blogs",
+    "support": "Unterstützung",
+    "helpCenter": "Hilfecenter",
+    "documentation": "Dokumentation",
+    "contactSupport": "Support kontaktieren",
+    "legal": "Rechtliches",
+    "cookiePolicy": "Cookie-Richtlinie",
+    "gdpr": "DSGVO",
+    "headquarters": "Hauptsitz in Asien. Weltweit tätig. Von Top-Unternehmen geprüft.",
+    "legalText": "Alle realen Vermögenswerte werden von autorisierten chinesischen SPVs gehalten und per rechtlicher Autorisierung auf JLL Asset Ltd. (BVI-Firmennummer 2182436) abgebildet. Die Ausgabe und der Betrieb von NFTs werden von iJET Limited (NZBN: 9429049576290) durchgeführt. Der Governance-Übergang zur BVI-basierten AGV DAO ist im Gange."
+  },
+  "staking": {
+    "title": "AGV-Protokoll-Staking",
+    "description": "Setzen Sie Ihre NFTs ein und verdienen Sie Belohnungen",
+    "protocolTitle": "AGV-Protokoll-Staking",
+    "stakeYour": "Setzen Sie Ihre",
+    "nftsOn": "NFTs auf",
+    "toEarnRewards": "um Belohnungen zu verdienen",
+    "stake": "Einsatz",
+    "unstake": "Abstecken",
+    "rewards": "Belohnungen",
+    "totalStaked": "Gesamteinsatz",
+    "availableRewards": "Verfügbare Prämien",
+    "overview": "Staking-Übersicht",
+    "stakedNFTs": "Gestakete NFTs",
+    "currentlyStaked": "Derzeit abgesteckt",
+    "rggpReadyToClaim": "rGGP bereit zur Inanspruchnahme",
+    "dailyRewards": "Tägliche Belohnungen",
+    "perNFTStaked": "Pro eingesetztem NFT",
+    "selectNetwork": "Netzwerk auswählen",
+    "selectNFTCollection": "NFT-Sammlung auswählen",
+    "selectNftCollection": "NFT-Sammlung auswählen",
+    "selectStakingDuration": "Wählen Sie die Staking-Dauer",
+    "quickSelect": "Schnellauswahl",
+    "day": "Tag",
+    "days": "Tage",
+    "durationDays": "Dauer (Tage)",
+    "lockPeriod": "Sperrfrist",
+    "yourNftsWillBeLocked": "Ihre NFTs werden gesperrt für",
+    "youCannotWithdraw": "Sie können erst ab diesem Zeitpunkt abheben.",
+    "lockPeriodDescription": "Ihre NFTs werden für {duration} Tag{plural} gesperrt. Sie können erst nach Ablauf dieses Zeitraums abheben. Die Mindesteinsatzdauer beträgt 7 Tage.",
+    "currentWalletChain": "Aktuelle Wallet-Kette",
+    "notConnected": "Nicht verbunden",
+    "connectWalletFirst": "Verbinden Sie zuerst die Brieftasche",
+    "selectAtLeastOne": "Wählen Sie mindestens eine Token-ID aus",
+    "selectAtLeastOneToken": "Wählen Sie mindestens ein Token aus",
+    "durationMustBeAtLeastOneDay": "Die Dauer muss mindestens einen Tag betragen",
+    "minimumDuration": "Die Staking-Dauer muss mindestens 7 Tage betragen",
+    "approving": "Genehmigen (falls erforderlich)…",
+    "approvingIfNeeded": "Genehmigen (falls erforderlich)…",
+    "stakingOnChain": "On-Chain-Staking…",
+    "recordingStake": "Aufnahmeeinsatz…",
+    "stakeSuccess": "Für {Dauer} Tag {Plural} eingesetzt!",
+    "stakeFailed": "Einsatz fehlgeschlagen",
+    "selectAtLeastOneWithdraw": "Wählen Sie mindestens ein NFT zum Abheben aus",
+    "withdrawingOnChain": "Abheben in der Kette…",
+    "updatingRecords": "Datensätze werden aktualisiert…",
+    "withdrawSuccess": "Zurückgezogen!",
+    "withdrawFailed": "Abhebung fehlgeschlagen",
+    "selectNftsToStake": "Wählen Sie NFTs zum Staking aus",
+    "detectedInWallet": "In der Brieftasche erkannt",
+    "available": "verfügbar",
+    "connectYourWallet": "Verbinden Sie Ihr Wallet",
+    "connectToView": "um Ihre NFTs anzuzeigen",
+    "connect": "Verbinden",
+    "selected": "Ausgewählt",
+    "clear": "Klar",
+    "withdrawStakedNfts": "Abheben von eingesetzten NFTs",
+    "selectStakedNftsDescription": "Wählen Sie gestaked NFTs zum Abheben aus",
+    "connectWalletToSeeStakedNfts": "Verbinden Sie die Brieftasche, um eingesetzte NFTs anzuzeigen",
+    "whitelistRequired": "Whitelist erforderlich",
+    "rewardsDashboard": {
+      "title": "rGGP-Prämien-Dashboard",
+      "subtitle": "Verdienen Sie rGGP-Credits",
+      "available": "rGGP verfügbar",
+      "remaining": "übrig",
+      "collection": "Sammlung",
+      "baseRate": "Basiszinssatz",
+      "bonusMultiplier": "Bonus-Multiplikator",
+      "activeStakes": "Aktive Einsätze",
+      "readyToClaim": "Bereit zur Inanspruchnahme",
+      "claimAllRewards": "Alle Belohnungen einfordern",
+      "claiming": "Beanspruchen...",
+      "activeStakesTitle": "Aktive Einsätze",
+      "withdrawnStakesTitle": "Abgezogene Einsätze",
+      "noActiveStakes": "Keine aktiven Einsätze",
+      "noWithdrawnStakes": "Keine abgezogenen Einsätze"
+    },
+    "legacyRewards": {
+      "title": "Vorschau auf Legacy-Belohnungen",
+      "selection": "Auswahl",
+      "baseDailyPerNft": "Tägliche Basis (pro NFT)",
+      "bonusMultiplier": "Bonus-Multiplikator",
+      "perNftDaily": "Pro NFT täglich",
+      "totalDailyAllSelected": "Tägliche Gesamtsumme (alle ausgewählt)",
+      "duration": "Dauer",
+      "scheduledTotal": "Geplante Gesamtsumme (Auswahl × Tage)",
+      "description": "Dies ist eine Legacy-Belohnungsschätzung basierend auf der aktuellen Auswahl und Sperrzeit."
+    },
+    "yourStakes": {
+      "title": "Ihre Einsätze",
+      "connectWalletToView": "Wallet verbinden, um Ihre Einsätze anzuzeigen",
+      "loadingStakes": "Lade Ihre Einsätze...",
+      "noStakesFound": "Keine Einsätze für dieses Netzwerk und diese Sammlung gefunden.",
+      "staked": "Abgesteckt",
+      "unlocks": "Entsperrt",
+      "unlocked": "Entsperrt",
+      "left": "links",
+      "accrued": "Aufgelaufen",
+      "rate": "Rate",
+      "counted": "Gezählt"
+    },
+    "nftSelection": {
+      "noNftsFound": "Keine AGV-NFTs gefunden",
+      "noNftsDescription": "Sie haben keine {collection}-NFTs in Ihrer verbundenen Wallet auf {network}.",
+      "mintFirstNft": "Ihr erstes NFT prägen",
+      "selected": "Ausgewählt",
+      "clear": "Löschen",
+      "stake": "Einsatz",
+      "staking": "Einsetzen…"
+    },
+    "loadingStakedNfts": "Lade eingesetzte NFTs…",
+    "noStakesFoundForNetwork": "Keine Einsätze für dieses Netzwerk und diese Sammlung gefunden.",
+    "durationMustBeAtLeastSevenDays": "Die Einsatzdauer muss mindestens 7 Tage betragen."
+  },
+  "minting": {
+    "title": "AGV-Protokollprägung",
+    "description": "Prägen Sie exklusive AGV-Protokoll-NFTs über mehrere Blockchain-Netzwerke.",
+    "collections": "Wählen Sie aus den Sammlungen SeedPass, TreePass, SolarPass und ComputePass.",
+    "liveMinting": "Live-Prägung",
+    "multiChain": "Mehrketten",
+    "usdtPayment": "USDT-Zahlung",
+    "selectNetwork": "Netzwerk auswählen",
+    "mintingMode": "Prägemodus",
+    "mintingModeDescription": "Wählen Sie Ihren Prägemodus",
+    "publicMint": "Öffentliche Münzanstalt",
+    "agentMint": "Agent Mint",
+    "selectNftToMint": "Wählen Sie NFT zum Prägen aus",
+    "chooseQuantity": "Menge auswählen",
+    "nft": {
+      "seed": {
+        "name": "SeedPass NFT",
+        "description": "Zugang zu Prämien für nachhaltige Landwirtschaft und exklusiven Vorteilen"
+      },
+      "tree": {
+        "name": "TreePass NFT",
+        "description": "Premium-Baumpatenschaft mit verbesserten Prämien"
+      },
+      "solar": {
+        "name": "SolarPass NFT",
+        "description": "Solarenergie-Belohnungen und Zugang zu grüner Infrastruktur"
+      },
+      "compute": {
+        "name": "ComputePass NFT",
+        "description": "Edge-Computing-Belohnungen und Zugriff auf die DePIN-Infrastruktur"
+      }
+    },
+    "referralId": "Empfehlungs-ID",
+    "input6DigitId": "Geben Sie eine 6-stellige ID ein",
+    "referralIdPlaceholder": "Geben Sie die Empfehlungs-ID ein",
+    "summary": "Zusammenfassung",
+    "noItemsSelected": "Keine Elemente ausgewählt",
+    "connectAndMint": "Verbinden und prägen",
+    "connectWallet": "Wallets verbinden",
+    "walletNotConnected": "Wallet nicht verbunden",
+    "insufficientGasBalance": "Unzureichende Gasbilanz",
+    "insufficientGas": "Unzureichendes Gas",
+    "mint": "Minze",
+    "minting": "Prägung...",
+    "mintNfts": "Mint NFTs",
+    "referralLinkCopied": "Empfehlungslink kopiert",
+    "whitelistRequired": "Whitelist erforderlich",
+    "price": "Preis",
+    "supply": "Liefern",
+    "remaining": "Übrig",
+    "loading": "Minting-Schnittstelle wird geladen …"
+  },
+  "dashboard": {
+    "title": "Armaturenbrett",
+    "description": "Übersicht über Ihre AGV-Protokollaktivitäten und -Leistung",
+    "overview": "Überblick",
+    "analytics": "Analyse",
+    "performance": "Leistung",
+    "activity": "Aktivität"
+  },
+  "landing": {
+    "hero": {
+      "title": "AGV-PROTOKOLL NFT-ÖKOSYSTEM",
+      "description": "Schalten Sie exklusive SeedPass-, TreePass-, SolarPass- und ComputePass-NFTs frei, Ihr Tor zu nachhaltigen Belohnungen. Setzen Sie sofort ohne Sperrfrist ein und verdienen Sie täglich Belohnungen in den Netzwerken BSC, Polygon und Arbitrum.",
+      "startMinting": "Beginnen Sie mit dem Prägen",
+      "viewStaking": "Staking ansehen",
+      "stats": {
+        "blockchains": "Blockchains",
+        "nftCollections": "NFT-Sammlungen",
+        "dailyRewards": "Tägliche rGGP-Belohnungen"
+      }
+    },
+    "platformOverview": {
+      "title": "PLATTFORMÜBERSICHT",
+      "totalSupply": "Gesamtversorgung",
+      "nftsMinted": "Geprägte NFTs",
+      "rewardRate": "Belohnungsrate",
+      "dailyRewards": "Tägliche Belohnungen",
+      "auditRating": "Audit-Bewertung",
+      "securityScore": "Sicherheitsbewertung"
+    },
+    "coreFeatures": {
+      "title": "Kernfunktionen",
+      "multiChain": {
+        "title": "Multi-Chain-Unterstützung",
+        "description": "NFTs in BSC-, Polygon- und Arbitrum-Netzwerken bereitstellen und verwalten"
+      },
+      "secureMinting": {
+        "title": "Sicheres Prägen",
+        "description": "Erweiterte Sicherheitsmaßnahmen und Smart-Contract-Audits"
+      },
+      "instantRewards": {
+        "title": "Sofortige Belohnungen",
+        "description": "Verdienen Sie mit unserem Staking-System sofort nach dem Prägen Belohnungen"
+      }
+    },
+    "getStarted": {
+      "title": "Erste Schritte",
+      "mintNFTs": {
+        "title": "Mint NFTs",
+        "description": "Mint AGV Protocol NFTs über mehrere Ketten hinweg",
+        "button": "Beginnen Sie mit dem Prägen"
+      },
+      "stakeEarn": {
+        "title": "Setzen & Verdienen",
+        "description": "Setzen Sie Ihre NFTs ein, um tägliche Belohnungen zu erhalten",
+        "button": "Beginnen Sie mit dem Staking"
+      },
+      "learnMore": {
+        "title": "Mehr erfahren",
+        "description": "Token-Informationen und -Dokumentation erkunden",
+        "button": "Details anzeigen"
+      }
+    },
+    "community": {
+      "title": "Gemeinschaft",
+      "github": "GitHub",
+      "twitter": "Twitter",
+      "discord": "Zwietracht",
+      "telegram": "Telegramm",
+      "follow": "Folgen",
+      "members": "Mitglieder",
+      "followers": "Anhänger",
+      "stars": "Sterne"
+    },
+    "latestUpdates": {
+      "title": "Letzte Aktualisierung",
+      "readMore": "Mehr lesen",
+      "articles": {
+        "introducing": {
+          "title": "Einführung des AGV-Protokolls",
+          "description": "Einführung des AGV-Protokolls: Die Zukunft realer Vermögenswerte erschließen"
+        },
+        "rggpExplained": {
+          "title": "rGGP erklärt",
+          "description": "Wie das AGV-Protokoll reale Erträge in On-Chain-Belohnungen umwandelt"
+        }
+      }
+    },
+    "whatIsAGV": {
+      "title": "Was ist AGV?",
+      "description": "AGV (AgriVolt Protocol) ist ein realwertbasiertes Web3-Protokoll, das Obstgärten, Solarparks und dezentrale Knoten in die Blockchain integriert. Jede Anlageeinheit generiert reale Erträge von der Obsternte bis hin zu Solarenergie und Edge Computing. Nutzer können Obstbäume adoptieren, sich an Solarenergie beteiligen und tokenisierte Belohnungen mit transparenten Renditen erhalten. AGV ist in Chinas führenden Agrar- und Solarregionen verwurzelt und macht Nachhaltigkeit investierbar, überprüfbar und global skalierbar."
+    },
+    "threeLayer": {
+      "title": "Drei Ebenen der realen Rendite",
+      "fruitBacked": {
+        "title": "NFTs mit Fruchtunterstützung",
+        "description": "AGV verwandelt Apfelplantagen in tokenisierte Vermögenswerte. Jedes NFT wird einem echten Baum zugeordnet, der Früchte, Einnahmen und einen nachweisbaren Ertrag in der Kette produziert."
+      },
+      "solarDriven": {
+        "title": "Solarbetriebene Belohnungen",
+        "description": "Jede Einheit verfügt über 6 MW Solarkapazität, die nicht nur die Farm, sondern auch Randknoten und die energiegestützte Token-Prägung mit Strom versorgt – „Sonnenlicht als Einkommen“."
+      },
+      "depinReady": {
+        "title": "DePIN-fähige Infrastruktur",
+        "description": "AGV vereint Sensoren, Smart Contracts und Echtzeitdaten, um Edge-Knoten mit Strom zu versorgen, Kohlenstoff aufzuzeichnen und Web3-Dienste weltweit bereitzustellen."
+      }
+    },
+    "fixing": {
+      "title": "Beheben von Problemen bei der Tokenisierung in der realen Welt",
+      "description1": "AGV verbindet die digitale und die physische Welt, indem es Obstgärten und Solarparks in NFTs und Token umwandelt. Jedes Asset ist mit Smart Contracts verknüpft, die Einkommensverteilung, Eigentum und Governance automatisieren – und so Probleme wie fragmentierte Daten, nicht überprüfbare Erträge und undurchsichtige Landrechte lösen.",
+      "description2": "AGV nutzt im Kern eine standardisierte Anlageeinheit: 100 mu ertragreiche Apfelplantagen gepaart mit 6 MW Solarenergie. Dieses Modell liefert ein Jahreseinkommen von 180.000 bis 280.000 US-Dollar pro Einheit bei einem internen Zinsfuß von 18 % bis 26 %, unterstützt durch IoT-basierte Leistungsdaten und Prognosemodelle.",
+      "description3": "Im Gegensatz zu herkömmlichen Agrarprojekten, die schwer zu replizieren sind, sind AGV-Einheiten SPV-verpackt, DeFi-kompatibel und global modular – was eine schnelle Bereitstellung und wiederholbare Skalierung über Grenzen hinweg ermöglicht."
+    },
+    "exploreAGV": {
+      "title": "Entdecken Sie die On-Chain-Infrastruktur von AGV",
+      "description": "Besuchen Sie unsere realen Projektstandorte und erleben Sie, wie Obstgärten, Solaranlagen und Blockchain zusammenkommen. Von Chinas grünen Zonen bis hin zu zukünftigen internationalen Knotenpunkten – AGV gestaltet die Zukunft der landgestützten RWA-On-Chain."
+    },
+    "whyAGV": {
+      "title": "Warum ist AGV eine Blaupause für eine Infrastruktur mit echtem Ertrag?",
+      "description1": "AGV ist kein einmaliges Projekt. Es ist ein replizierbares Protokoll, das reales Land in eine digitale Ertragsinfrastruktur verwandelt.",
+      "description2": "Es wird erwartet, dass jede AGV-Einheit einen Jahresumsatz von 180.000 bis 280.000 US-Dollar generiert, mit einem internen Zinsfuß zwischen 18 % und 26 %, basierend auf den tatsächlichen Erträgen der Obstgärten und regionalen Daten zur Solarleistung.",
+      "description3": "Wir kombinieren Chinas weltweit führende landwirtschaftliche und solare Vermögenswerte mit modularer SPV-Tokenisierung und On-Chain-Datenarchitektur, wodurch jede physische Einheit digital verifizierbar, ertragreich und DeFi-kompatibel wird."
+    },
+    "blockchainInfrastructure": {
+      "title": "Revolutionierung der Infrastruktur mit Blockchain",
+      "realAssets": {
+        "title": "REALES VERMÖGEN. REALER EINNAHMEN.",
+        "description": "Jede AGV-Einheit umfasst:",
+        "features": [
+          "100 mu Apfelplantagen mit hoher Dichte",
+          "6-MW-Solarpark in Versorgungsqualität",
+          "Jahresumsatz: 180.000 – 280.000 US-Dollar",
+          "IRR-Ziel: 18 % – 26 %"
+        ],
+        "conclusion": "Die Vermögenswerte sind landgestützt, ertragsbringend und inflationsresistent – keine synthetischen Token oder spekulativen DeFi-Experimente."
+      },
+      "onChainData": {
+        "title": "ON-CHAIN-DATENINFRASTRUKTUR",
+        "subtitle": "On-Chain-Dateninfrastruktur",
+        "description": "Jede Einheit ist ausgestattet mit:",
+        "features": [
+          "IoT-Sensoren für Ertrags- und Energiedaten in Echtzeit",
+          "Smart Contracts und NFT-Mapping",
+          "Mit Satelliten-Feeds synchronisierte Dashboards",
+          "Token-Emission verknüpft mit verifizierter Ausgabe"
+        ],
+        "conclusion": "Benutzer können Wachstum, Stromerzeugung und Token-Ansammlung überwachen – alles transparent aufgezeichnet und in der Kette zugänglich."
+      },
+      "builtToScale": {
+        "title": "GLOBALER SKALIERBARKEIT",
+        "description": "Jede AGV-Einheit wird über SPV standardisiert und tokenisiert:",
+        "features": [
+          "Erweiterbar mit Batteriespeicher und Edge-Computing",
+          "Modulares Design unterstützt Bewässerung, KI-Knoten oder Kohlenstoffverfolgung",
+          "Anwendbar in Asien, Lateinamerika, Afrika und MENA"
+        ],
+        "conclusion": "CEX-fähig, DeFi-kompatibel und ESG-konform – AGV ist für die globale Integration konzipiert."
+      }
+    },
+    "testimonials": {
+      "title": "Die Zukunft der Infrastruktur ist real, grün und On-Chain",
+      "description": "Führende Institutionen sind sich einig: Reale Vermögenswerte, nachhaltige Energie und Blockchain-Integration prägen die nächste Billionen-Dollar-Chance. AGV befindet sich an der Schnittstelle dieser Makrotrends.",
+      "quotes": [
+        {
+          "text": "Tokenization of real-world assets could unlock a $10T market by 2030.",
+          "source": "Boston Consulting Group"
+        },
+        {
+          "text": "ESG and energy-linked infrastructure are set to dominate institutional flows over the next decade.",
+          "source": "BlackRock 2024 Outlook"
+        },
+        {
+          "text": "Distributed green energy is the foundation of long-term economic resilience.",
+          "source": "World Bank"
+        }
+      ],
+      "cta": {
+        "title": "Die Zukunft wird von Land, Sonne und Code angetrieben",
+        "button": "Jetzt investieren",
+        "backToTop": "Zurück nach oben"
+      }
+    },
+    "footer": {
+      "companyName": "AGRIVOLT-PROTOKOLL",
+      "tagline": "NFT-Minting-Plattform",
+      "description": "Die Zukunft des dezentralen Computing durch innovative NFT-Technologie. Schließen Sie sich Tausenden von Benutzern an, die exklusive AGV-NFTs in mehreren Blockchain-Netzwerken prägen.",
+      "features": {
+        "secure": "Sicher und vertrauenswürdig",
+        "fast": "Blitzschnell",
+        "multiChain": "Mehrketten"
+      },
+      "navigation": {
+        "product": {
+          "title": "Produkt",
+          "nftMinting": "NFT-Prägung",
+          "dashboard": "Armaturenbrett",
+          "kolProgram": "KOL-Programm",
+          "analytics": "Analyse"
+        },
+        "company": {
+          "title": "Unternehmen",
+          "aboutUs": "Über uns",
+          "careers": "Karriere",
+          "press": "Drücken",
+          "blog": "Der Blog"
+        },
+        "support": {
+          "title": "Unterstützung",
+          "helpCenter": "Hilfecenter",
+          "documentation": "Dokumentation",
+          "apiReference": "API-Referenz",
+          "contactSupport": "Support kontaktieren"
+        },
+        "legal": {
+          "title": "Rechtliches",
+          "privacyPolicy": "Datenschutzrichtlinie",
+          "termsOfService": "Servicebedingungen",
+          "cookiePolicy": "Cookie-Richtlinie",
+          "gdpr": "DSGVO"
+        }
+      },
+      "legal": {
+        "headquarters": "Hauptsitz in Asien. Weltweit tätig. Von Top-Unternehmen geprüft.",
+        "description": "Alle realen Vermögenswerte werden von autorisierten chinesischen SPVs gehalten und per rechtlicher Autorisierung auf JLL Asset Ltd. (BVI-Firmennummer 2182436) abgebildet. Die Ausgabe und der Betrieb von NFTs werden von iJET Limited (NZBN: 9429049576290) durchgeführt. Der Governance-Übergang zur BVI-basierten AGV DAO ist im Gange."
+      },
+      "copyright": "© 2025 AgriVolt-Protokoll. Alle Rechte vorbehalten"
+    },
+    "admin": {
+      "hero": {
+        "title": "System-Dashboard",
+        "description": "Überwachen und verfolgen Sie alle Funktionen des AGV-Protokolls. Echtzeitanalysen, Leistungsmetriken und Überwachung des Systemzustands."
+      },
+      "status": {
+        "online": "System Online",
+        "secure": "Sicherer Zugriff",
+        "adminOnly": "Nur Administratoren"
+      },
+      "sections": {
+        "systemOverview": {
+          "title": "Systemübersicht"
+        },
+        "functionalityMonitoring": {
+          "title": "Funktionsüberwachung"
+        },
+        "quickAccess": {
+          "title": "Schnellzugriff"
+        }
+      },
+      "features": {
+        "userAnalytics": {
+          "title": "Benutzeranalysen",
+          "description": "Verfolgen Sie Benutzerengagement, Wachstumsmetriken und Plattformakzeptanz"
+        },
+        "performanceAnalytics": {
+          "title": "Leistungsanalysen",
+          "description": "Überwachen Sie Plattformleistung, Reaktionszeiten und Systemintegrität"
+        },
+        "kolTracking": {
+          "title": "KOL-Verfolgung",
+          "description": "Überwachen Sie die Leistung und Empfehlungsmetriken der wichtigsten Meinungsführer"
+        },
+        "activityMonitoring": {
+          "title": "Aktivitätsüberwachung",
+          "description": "Echtzeit-Tracking von Benutzeraktivitäten und Systemereignissen"
+        },
+        "performanceMetrics": {
+          "title": "Leistungsmetriken",
+          "description": "Verfolgen Sie die Prägung, das Staking und die Token-Leistung über alle Ketten hinweg"
+        },
+        "systemMonitoring": {
+          "title": "Systemüberwachung",
+          "description": "Überwachen Sie die Systemkonfiguration und Betriebsparameter"
+        }
+      },
+      "stats": {
+        "activeUsers": {
+          "title": "Aktive Benutzer",
+          "value": "2.847",
+          "change": "+12 %"
+        },
+        "mintingActivity": {
+          "title": "Prägetätigkeit",
+          "value": "1.234",
+          "change": "+8 %"
+        },
+        "stakingVolume": {
+          "title": "Staking-Volumen",
+          "value": "5.678",
+          "change": "+15 %"
+        },
+        "systemUptime": {
+          "title": "Systemverfügbarkeit",
+          "value": "99,8 %",
+          "change": "+0,2 %"
+        }
+      },
+      "quickAccess": {
+        "dashboard": {
+          "title": "Armaturenbrett",
+          "description": "Haupt-Dashboard anzeigen"
+        },
+        "users": {
+          "title": "Benutzer",
+          "description": "Benutzer verwalten"
+        },
+        "analytics": {
+          "title": "Analyse",
+          "description": "Anzeigen von Analysen"
+        },
+        "settings": {
+          "title": "Einstellungen",
+          "description": "System konfigurieren"
+        }
+      },
+      "buttons": {
+        "viewMetrics": "Metriken anzeigen"
+      },
+      "systemStatus": {
+        "title": "Systemstatus",
+        "description": "Dieses Dashboard ermöglicht die Echtzeitüberwachung aller AGV-Protokollfunktionen. Alle Metriken werden automatisch aktualisiert und bieten Einblicke in die Plattformleistung, Benutzeraktivität und Systemintegrität aller Funktionen."
+      }
+    },
+    "comingSoon": {
+      "logo": "AGRIVOLT-PROTOKOLL",
+      "title": "Demnächst verfügbar",
+      "subtitle": "Wir arbeiten hart daran, Ihnen etwas Großartiges zu bieten.\nBleiben Sie dran für Updates!",
+      "features": {
+        "lightningFast": "Blitzschnell",
+        "multiChain": "Mehrketten",
+        "community": "Gemeinschaft",
+        "secure": "Sicher"
+      },
+      "backButton": "Zurück zur Startseite",
+      "footer": "Folgen Sie uns für Updates auf unserem Weg zur Revolutionierung der Tokenisierung realer Vermögenswerte"
+    },
+    "token": {
+      "copySuccess": "{label} in die Zwischenablage kopiert",
+      "hero": {
+        "title": "AGV-Protokoll-Token",
+        "description": "Entdecken Sie GVT (Governance Token) und rGGP (Reward Token) – das Dual-Token-Ökosystem hinter dem AGV-Protokoll. Verdienen Sie rGGP-Belohnungen durch Staking und beteiligen Sie sich mit GVT an der Governance."
+      },
+      "status": {
+        "liveEcosystem": "Live-Ökosystem",
+        "multiChain": "Mehrketten",
+        "secure": "Sicher"
+      },
+      "sections": {
+        "ecosystemOverview": {
+          "title": "Ökosystemübersicht"
+        }
+      },
+      "stats": {
+        "tokenHolders": {
+          "title": "GVT-Inhaber",
+          "value": "2.847",
+          "label": "Token-Inhaber"
+        },
+        "activeStakers": {
+          "title": "rGGP-Verdiener",
+          "value": "1.234",
+          "label": "Aktive Staker"
+        },
+        "dailyEmission": {
+          "title": "rGGP-Belohnungen",
+          "value": "50.000",
+          "label": "Tägliche Emission"
+        },
+        "networks": {
+          "title": "Mehrketten",
+          "value": "3",
+          "label": "Netzwerke"
+        }
+      },
+      "tabs": {
+        "overview": "Überblick",
+        "contracts": "Verträge",
+        "staking": "Abstecken",
+        "resources": "Ressourcen"
+      },
+      "overview": {
+        "aboutTokens": {
+          "title": "Über GVT und rGGP",
+          "description": "Das AGV-Protokoll basiert auf einem Dual-Token-System, das Governance- und Belohnungsmechanismen trennt. GVT dient als Governance-Token, während rGGP als Belohnungstoken für die Teilnahme am Ökosystem fungiert.",
+          "tokenRoles": {
+            "title": "Token-Rollen:",
+            "gvt": "GVT: Protokollverwaltung und Stimmrechte",
+            "rggp": "rGGP: Staking-Belohnungen und Ökosystem-Anreize",
+            "multiChain": "Multi-Chain-Bereitstellung in großen Netzwerken",
+            "decentralized": "Dezentrales und Community-gesteuertes Ökosystem"
+          }
+        },
+        "tokenEconomics": {
+          "title": "Token-Ökonomie",
+          "gvt": {
+            "title": "GVT (Governance-Token)",
+            "totalSupply": "Gesamtversorgung",
+            "totalSupplyValue": "1.000.000",
+            "circulating": "Zirkulieren",
+            "circulatingValue": "750.000",
+            "useCase": "Anwendungsfall",
+            "useCaseValue": "Führung"
+          },
+          "rggp": {
+            "title": "rGGP (Belohnungstoken)",
+            "dailyEmission": "Tägliche Emission",
+            "dailyEmissionValue": "50.000",
+            "perStakeReward": "Belohnung pro Einsatz",
+            "perStakeRewardValue": "50 rGGP/Tag",
+            "useCase": "Anwendungsfall",
+            "useCaseValue": "Staking-Belohnungen"
+          }
+        },
+        "benefits": {
+          "title": "Vorteile des Dual-Token-Ökosystems",
+          "earnRewards": {
+            "title": "Verdienen Sie rGGP-Belohnungen",
+            "description": "Setzen Sie Token ein, um täglich rGGP-Belohnungen ohne Sperrfrist zu verdienen."
+          },
+          "governance": {
+            "title": "GVT-Governance",
+            "description": "Verwenden Sie GVT-Token, um über Protokollvorschläge abzustimmen und die Zukunft von AGV zu gestalten."
+          },
+          "exclusiveAccess": {
+            "title": "Exklusiver Zugang",
+            "description": "Erhalten Sie frühzeitigen Zugriff auf neue Funktionen, Airdrops und Ökosystem-Updates."
+          },
+          "multiChainSupport": {
+            "title": "Multi-Chain-Unterstützung",
+            "description": "Greifen Sie über die Netzwerke BSC, Arbitrum und Polygon auf beide Token zu."
+          }
+        }
+      },
+      "contracts": {
+        "title": "Vertragsadressen",
+        "description": "Offizielle Vertragsadressen für GVT- und rGGP-Token in verschiedenen Netzwerken",
+        "networks": "{network} Netzwerk",
+        "gvtToken": "GVT-Token",
+        "rggpToken": "rGGP-Token",
+        "stakingContract": "Staking-Vertrag"
+      },
+      "staking": {
+        "howToStake": {
+          "title": "So setzen Sie Token ein",
+          "step1": {
+            "title": "Wallets verbinden",
+            "description": "Verbinden Sie Ihr Wallet, das GVT- oder rGGP-Token enthält"
+          },
+          "step2": {
+            "title": "Netzwerk auswählen",
+            "description": "Wählen Sie das BSC-, Arbitrum- oder Polygon-Netzwerk"
+          },
+          "step3": {
+            "title": "Einsatz-Token",
+            "description": "Wählen Sie Ihre Token aus und setzen Sie sie ein, um Belohnungen zu verdienen"
+          }
+        },
+        "startStaking": "Beginnen Sie mit dem Staking",
+        "dualTokenRewards": {
+          "title": "Dual-Token-Belohnungen"
+        },
+        "rewards": {
+          "rggp": {
+            "title": "rGGP-Belohnungen",
+            "dailyRate": "Tagessatz",
+            "dailyRateValue": "50 rGGP pro Einsatz",
+            "compounding": "Compoundierung",
+            "compoundingValue": "Automatisch",
+            "withdrawal": "Rückzug",
+            "withdrawalValue": "Jederzeit"
+          },
+          "gvt": {
+            "title": "GVT-Governance",
+            "votingPower": "Stimmrecht",
+            "votingPowerValue": "1 GVT = 1 Stimme",
+            "proposalRights": "Vorschlagsrechte",
+            "proposalRightsValue": "10.000 GVT",
+            "minimumStake": "Mindesteinsatz",
+            "minimumStakeValue": "100 Token"
+          }
+        },
+        "exampleCalculation": {
+          "title": "Beispielrechnung",
+          "description": "1000 Token für 30 Tage einsetzen = 1000 × 0,05 × 30 = 1.500 rGGP-Belohnungen",
+          "note": "Plus Governance-Stimmrecht mit GVT-Token"
+        }
+      },
+      "resources": {
+        "socialMedia": {
+          "title": "Soziale Medien",
+          "platforms": "{Plattform}"
+        },
+        "documentation": {
+          "title": "Dokumentation",
+          "tokenHandbook": "Token-Handbuch",
+          "stakingGuide": "Staking-Leitfaden",
+          "securityAudit": "Sicherheitsüberprüfung"
+        },
+        "latestArticles": {
+          "title": "Neueste Artikel",
+          "readMore": "Mehr lesen"
+        }
+      },
+      "articles": {
+        "dualTokenStaking": {
+          "title": "Dual-Token-Staking-Leitfaden",
+          "description": "Erfahren Sie, wie Sie GVT- und rGGP-Token einsetzen, um Ihre Belohnungen zu maximieren"
+        },
+        "rggpRewards": {
+          "title": "rGGP-Belohnungen verstehen",
+          "description": "Alles, was Sie über die Mechanismen und Verteilung von rGGP-Belohnungen wissen müssen"
+        },
+        "gvtGovernance": {
+          "title": "GVT-Governance-Leitfaden",
+          "description": "So nehmen Sie mit GVT-Token an der Protokollverwaltung teil"
+        },
+        "multiChainStrategy": {
+          "title": "Multi-Chain-Token-Strategie",
+          "description": "Maximieren Sie Ihre Belohnungen in den Netzwerken BSC, Arbitrum und Polygon"
+        }
+      }
+    }
+  },
+  "career": {
+    "hero": {
+      "title": "Werden Sie Teil unseres Teams",
+      "description": "Werden Sie Teil der Zukunft der Tokenisierung realer Vermögenswerte. Treten Sie dem AGV-Protokoll bei und helfen Sie beim Aufbau der Infrastruktur, die traditionelle Vermögenswerte mit Blockchain-Technologie verbindet."
+    },
+    "values": {
+      "title": "Unsere Unternehmenswerte",
+      "subtitle": "Wir bauen die Zukunft nachhaltiger Blockchain-Infrastruktur. Treten Sie einem Team bei, das leidenschaftlich daran arbeitet, reale Auswirkungen durch innovative Technologie zu schaffen.",
+      "passion": {
+        "title": "Leidenschaft für Innovation",
+        "description": "Wir werden von der Überzeugung angetrieben, dass Blockchain-Technologie reale Probleme lösen und nachhaltigen Wert für Gemeinschaften weltweit schaffen kann."
+      },
+      "collaboration": {
+        "title": "Zusammenarbeit",
+        "description": "Wir entwickeln gemeinsam mit Partnern und Communities. Landwirte, Energieversorger, Knotenanbieter, Regulierungsbehörden und Nutzer arbeiten mit uns auf der Grundlage offener Standards, transparenter Daten und fairer Vergütungen zusammen."
+      },
+      "learning": {
+        "title": "Kontinuierliches Lernen",
+        "description": "Der Blockchain-Bereich entwickelt sich schnell, und wir sind verpflichtet, durch kontinuierliches Lernen und Anpassung an der Spitze zu bleiben."
+      },
+      "sustainability": {
+        "title": "Nachhaltigkeit",
+        "description": "Wir verwalten Ressourcen langfristig. Von Obstgärten über Solarenergie bis hin zu Computern – wir schaffen Anreize, damit das On-Chain-Wachstum die reale Produktivität und Umweltverantwortung widerspiegelt."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "description": "Wir fördern das Mögliche – sicher. Wir wenden Blockchain pragmatisch an: IoT-verifizierte Erträge, Dual-Token-Ökonomie und konforme Strukturen, die reale Vermögenswerte ohne Hype zugänglich machen."
+      }
+    },
+    "perks": {
+      "title": "Vergünstigungen und Vorteile",
+      "subtitle": "Wir bieten wettbewerbsfähige Vorteile und ein unterstützendes Arbeitsumfeld, das unseren Teammitgliedern hilft, sowohl persönlich als auch beruflich zu gedeihen.",
+      "health": {
+        "title": "Gesundheit & Wohlbefinden",
+        "description": "Umfassende Krankenversicherung, psychische Gesundheitsunterstützung und Wellness-Programme, um unser Team gesund und glücklich zu halten."
+      },
+      "flexible": {
+        "title": "Flexibles Arbeiten",
+        "description": "Remote-First-Kultur mit flexiblen Arbeitszeiten und der Freiheit, von überall auf der Welt zu arbeiten."
+      },
+      "impact": {
+        "title": "Echte Wirkung",
+        "description": "Arbeiten Sie an Projekten mit echter Wirkung, von nachhaltiger Landwirtschaft bis hin zu erneuerbarer Energieinfrastruktur."
+      },
+      "remote": {
+        "title": "Remote-First-Arbeitsumgebung",
+        "description": "Flexible, globale Teamstruktur."
+      },
+      "growth": {
+        "title": "Berufliches Wachstum",
+        "description": "Ermöglicht Mentoring, Training und Lernen."
+      },
+      "mission": {
+        "title": "Missionsausrichtung",
+        "description": "Seien Sie Teil eines wirkungsorientierten Projekts, das reale Infrastruktur mit Web3 verbindet."
+      }
+    },
+    "roles": {
+      "title": "Offene Rollen",
+      "subtitle": "Wir suchen immer nach talentierten Menschen, die unsere Vision des Aufbaus nachhaltiger Blockchain-Infrastruktur teilen.",
+      "seeMore": "Weitere Möglichkeiten ansehen",
+      "noOpenings": "Tragen Sie sich gerne über das untenstehende Formular in unsere Talentliste ein.",
+      "noOpenings1": "Derzeit keine offenen Stellen."
+    }
+  },
+  "blog": {
+    "hero": {
+      "title": "EINBLICKE & UPDATES",
+      "subtitle": "Entdecken Sie Einblicke in KI-Leistungstrends, reale Asset-Entwicklungen, Tokenomics-Forschung und Meilensteine der AGV-Community. In unserem Blog treffen nachhaltige Web3-Innovationen auf praktisches Wissen und helfen Investoren, Entwicklern und Partnern, immer einen Schritt voraus zu sein."
+    },
+    "tabs": {
+      "all": "Alle",
+      "announcements": "Ankündigungen",
+      "tech": "Technik",
+      "community": "Gemeinschaft"
+    },
+    "featured": {
+      "title": "Ausgewählter Artikel"
+    },
+    "search": {
+      "title": "Artikelsuche"
+    },
+    "searchPlaceholder": "Artikel suchen...",
+    "newsletter": {
+      "title": "Bleiben Sie auf dem Laufenden",
+      "description": "Erhalten Sie die neuesten Nachrichten und Updates direkt in Ihren Posteingang.",
+      "emailPlaceholder": "Geben Sie Ihre E-Mail ein",
+      "send": "Schicken"
+    },
+    "main": {
+      "title": "Neueste Artikel",
+      "articlesFound": "Artikel gefunden",
+      "inCategory": "in {Kategorie}",
+      "forQuery": "für \"{query}\"",
+      "noResultsForQuery": "Keine Artikel für \"{query}\" gefunden",
+      "noResultsInCategory": "Keine Artikel in {category} gefunden",
+      "viewAllPosts": "Alle Beiträge ansehen"
+    },
+    "featuredArticle": {
+      "title": "Einführung des AGV-Protokolls: Die Zukunft realer Vermögenswerte erschließen",
+      "description": "Wir schreiben das Jahr 2025 und die weltweite Finanzlandschaft verändert sich rasant. Daher stellt sich immer wieder eine Frage ..."
+    },
+    "articles": {
+      "introducingAGVProtocol": {
+        "title": "Einführung des AGV-Protokolls:",
+        "description": "Die Zukunft realer Vermögenswerte erschließen"
+      },
+      "rGGPExplained": {
+        "title": "rGGP erklärt",
+        "description": "Wie das AGV-Protokoll reale Erträge in Belohnungen umwandelt"
+      },
+      "multiChain": {
+        "title": "Multi-Chain-Integration",
+        "description": "Entdecken Sie, wie das AGV-Protokoll nahtlos über mehrere Blockchain-Netzwerke hinweg funktioniert und so maximale Zugänglichkeit gewährleistet."
+      },
+      "governance": {
+        "title": "Gemeinschaftsverwaltung",
+        "description": "Verstehen Sie die Rolle der Community bei der Gestaltung der Zukunft des dezentralen Finanz- und Vermögensmanagements."
+      },
+      "tokenization": {
+        "title": "Tokenisierung realer Vermögenswerte",
+        "description": "Wie wir die Lücke zwischen traditionellen Vermögenswerten und Blockchain-Technologie für nachhaltiges Wachstum schließen."
+      },
+      "security": {
+        "title": "Sicherheit & Transparenz",
+        "description": "Unser Engagement gilt der Einhaltung höchster Sicherheitsstandards bei gleichzeitiger Gewährleistung vollständiger Transparenz."
+      },
+      "developer": {
+        "title": "Entwickler-Ökosystem",
+        "description": "Erstellen von Tools und Infrastruktur, um Entwickler bei der Erstellung der nächsten Generation von Web3-Anwendungen zu unterstützen."
+      },
+      "expansion": {
+        "title": "Globale Expansion",
+        "description": "Der Weg von AGV Protocol zum weltweit führenden Anbieter nachhaltiger Blockchain-Lösungen."
+      },
+      "ama": {
+        "title": "Community-AMA-Sitzung",
+        "description": "Nehmen Sie an unserer monatlichen „Ask Me Anything“-Sitzung mit dem AGV Protocol-Team teil und erhalten Sie Antworten auf Ihre Fragen."
+      },
+      "partnership": {
+        "title": "Partnerschaftsankündigung",
+        "description": "Wir freuen uns, unsere neue Partnerschaft mit führenden Blockchain-Infrastrukturanbietern bekannt zu geben."
+      },
+      "smartContracts": {
+        "title": "Technischer Deep Dive: Smart Contracts",
+        "description": "Ein umfassender Blick auf unsere Smart-Contract-Architektur und Sicherheitsmaßnahmen."
+      },
+      "spotlight": {
+        "title": "Community Spotlight: Erfolgsgeschichten",
+        "description": "Hören Sie von den Erfahrungen unserer Community-Mitglieder mit dem AGV-Protokoll."
+      },
+      "turningEveryUser": {
+        "title": "AGV-Protokoll",
+        "description": "Jeder Benutzer wird zum KI-Stromerzeuger"
+      }
+    }
+  },
+  "whatWeBuilding": {
+    "assetBackedNFT": {
+      "title": "Asset-Backed NFT",
+      "description": "SeedPass, TreePass, SolarPass und ComputePass repräsentieren Teileigentum an Obstgärten, Solaranlagen und Rechenkapazität. Inhaber erzielen einen realen Ertrag aus ihrem Anteil an der Produktion."
+    },
+    "powerToMint": {
+      "title": "Macht zum Prägen",
+      "description": "Token werden erst nach der IoT-Verifizierung von Strom und Rechenleistung geprägt, um eine reale Unterstützung sicherzustellen und Inflation zu verhindern."
+    },
+    "dualTokenSystem": {
+      "title": "Dual-Token-System",
+      "description": "GVT (Green Value Token) wird aus verifizierten Erträgen geprägt; rGGP (Reward Token) fördert die Akzeptanz und kann in GVT umgewandelt werden. Airdrops und Verteilungen sind leistungsbasierte Community-Belohnungen, keine garantierten Erträge."
+    },
+    "daoCompliance": {
+      "title": "DAO und Compliance",
+      "description": "AGV arbeitet über eine grenzüberschreitende DAO mit Multi-Sig- und Score-to-Vote-Governance."
+    },
+    "title": "Was wir bauen"
+  },
+  "howWeDiffer": {
+    "realAssets": {
+      "title": "Sachwerte",
+      "description": "Die zugrunde liegenden Obstgärten, Solarkapazitäten und Edge-Compute-Cluster von AGV sorgen für einen greifbaren, messbaren Ertrag."
+    },
+    "tokenization": {
+      "title": "Tokenisierung",
+      "description": "Die Ausgabedaten werden von IoT-Geräten gemessen und in der Kette festgeschrieben. Erst dann können Token geprägt werden (Power-to-Mint), wodurch eine vertrauenslose 1:1-Beziehung gewährleistet wird."
+    },
+    "yieldDistribution": {
+      "title": "Renditeverteilung",
+      "description": "Anleger erhalten Erträge aus Obstgärten, Solarenergie und Computern entsprechend ihren NFT-Beständen. Der angestrebte gemischte IRR liegt bei 18–26 % und übertrifft damit viele traditionelle Fonds für erneuerbare Energien."
+    },
+    "scalableSustainability": {
+      "title": "Skalierbare Nachhaltigkeit",
+      "description": "Die verteilte Mini-Grid-Architektur lässt sich in Asien/MENA skalieren, reduziert die Netzbelastung, verringert die Latenz für KI-Workloads und fördert Nachhaltigkeitsziele. Jede neue Anlageeinheit steigert sowohl Ertrag als auch Bewertung."
+    },
+    "title": "Was uns unterscheidet"
+  },
+  "executionProofs": {
+    "solarPlantOnline": {
+      "title": "Solaranlage online",
+      "description": "Die erste 6-MWp-CdTe-PV-Anlage wurde in Betrieb genommen und an das lokale Stromnetz angeschlossen."
+    },
+    "ppaInProgress": {
+      "title": "PPA in Bearbeitung",
+      "description": "Derzeit werden mit den regionalen Netzbetreibern langfristige Stromabnahmeverträge abgeschlossen; Vertragsentwürfe wurden geprüft."
+    },
+    "computeNodeRunning": {
+      "title": "Rechenknoten läuft",
+      "description": "Der erste 1,5-MW-Edge-Compute-Cluster ist installiert und verarbeitet aktiv Pilot-Workloads. Die IoT-Telemetrie wird bereits in der Kette aufgezeichnet."
+    },
+    "title": "Ausführungsnachweise"
+  },
+  "about": {
+    "hero": {
+      "title": "ECHTE ENERGIE. ECHTER ERTRAG.",
+      "subtitle": "REALE VERMÖGENSWERTE – ON-CHAIN."
+    },
+    "mission": {
+      "title": "MISSION",
+      "description": "Unsere Mission besteht darin, Strom und Computer für jedermann investierbar zu machen, indem wir verifizierte reale Ergebnisse in transparente On-Chain-Assets umwandeln."
+    },
+    "story": {
+      "title": "UNSERE GESCHICHTE",
+      "description": "Im Zeitalter künstlicher Intelligenz wächst der Strom- und Rechenleistungsbedarf exponentiell. AGV Protocol begegnet diesem Problem, indem es Obstgärten, Solarparks und Edge-Computing-Mininetze mit IoT-Telemetrie und On-Chain-Verifizierung kombiniert, um nachhaltige, ertragsstarke Token zu schaffen. Unsere ersten Anlagen befinden sich in Shaanxi, China, und wir planen die Expansion in ganz Asien und darüber hinaus."
+    },
+    "whatWeBuild": {
+      "cleanEnergy": {
+        "title": "Anlagen für saubere Energie",
+        "description": "6 MWp CdTe-PV-Anlage (erste Charge) mit einer geplanten Jahresleistung von 7,3 GWh. Weitere Solaranlagen sind in der Entwicklung."
+      },
+      "orchards": {
+        "title": "Produktive Obstgärten",
+        "description": "~100.000 kg Äpfel pro 100 mu pro Jahr, integriert in NFT-Einnahmequellen und überwacht über IoT-Sensoren."
+      },
+      "compute": {
+        "title": "Edge-Compute-Mini-Grids",
+        "description": "Anfänglicher 1,5-MW-Cluster (~1 PFLOPS) liefert ca. 1,31 GWh/Jahr Rechenleistung für KI-Workloads; die Bereitstellung weiterer Knoten ist geplant."
+      },
+      "verification": {
+        "title": "IoT-Verifizierung und On-Chain-Bestätigung",
+        "description": "Jedes Watt Strom und jeder Rechenzyklus wird überprüft und in der Kette verankert, bevor Token geprägt werden (Power-to-Mint). Dies gewährleistet Verantwortlichkeit und Transparenz."
+      },
+      "title": "WAS WIR BAUEN"
+    },
+    "howItWorks": {
+      "acquire": {
+        "title": "Erwerben und Integrieren",
+        "description": "AGV erwirbt Obstgärten, Solarparks und Computercluster oder geht Partnerschaften mit ihnen ein und installiert IoT-Sensoren und sichere Telemetrie."
+      },
+      "verify": {
+        "title": "Verifizieren",
+        "description": "Daten zur Energie- und Rechenleistung werden in Echtzeit erfasst, von Prüfern validiert und in der Kette verankert."
+      },
+      "mint": {
+        "title": "Minze",
+        "description": "Token werden erst nach Überprüfung der Ausgabe geprägt. GVT wird aus dem verifizierten Ertrag geprägt; rGGP wird als leistungsbezogener Anreiz ausgeschüttet und kann in GVT umgewandelt werden. Investoren sehen genau, wie viel reale Ausgabe hinter jedem Token steckt."
+      },
+      "title": "SO FUNKTIONIERT ES - POWER-TO-MINT"
+    },
+    "team": {
+      "susan": {
+        "name": "Susan",
+        "role": "Generaldirektor"
+      },
+      "tyler": {
+        "name": "Tyler",
+        "role": "Technologievorstand (CTO)"
+      },
+      "yasir": {
+        "name": "Yasir",
+        "role": "Technischer Leiter"
+      },
+      "winnie": {
+        "name": "Winnie",
+        "role": "Capital/DAO-Leitung"
+      },
+      "yatogami": {
+        "name": "Yatogami",
+        "role": "Leiter Geschäftsentwicklung"
+      },
+      "frank": {
+        "name": "Frank",
+        "role": "Marketing & PR"
+      },
+      "title": "Mitglieder des Kernteams"
+    },
+    "cta": {
+      "title": "Bauen Sie mit uns eine nachhaltige, tokenisierte Zukunft auf.",
+      "button": "Whitepaper lesen"
+    }
+  },
+  "team": {
+    "section": {
+      "title": "LERNEN SIE DAS TEAM KENNEN",
+      "description": "AGV wird von einem weltweit verteilten Team aus umsetzungsorientierten Entwicklern, Ingenieuren und Betreibern mit Fachkenntnissen in den Bereichen RWA, erneuerbare Energien, Computer, Tokenisierung und DePIN-Netzwerke betrieben."
+    },
+    "members": {
+      "susan": {
+        "name": "Susan",
+        "role": "Generaldirektor"
+      },
+      "tyler": {
+        "name": "Tyler",
+        "role": "Technologievorstand"
+      },
+      "yasir": {
+        "name": "Yasir",
+        "role": "Technischer Leiter"
+      },
+      "winnie": {
+        "name": "Winnie",
+        "role": "Capital/DAO-Leitung"
+      },
+      "yatogami": {
+        "name": "Yatogami",
+        "role": "Leiter Geschäftsentwicklung"
+      },
+      "frank": {
+        "name": "Frank",
+        "role": "Marketing & PR"
+      }
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "KONTAKT AUFNEHMEN",
+      "subtitle": "WIR SIND HIER, UM ZU HELFEN"
+    },
+    "section": {
+      "title": "KONTAKTINFORMATIONEN",
+      "description": "Kontaktieren Sie unsere spezialisierten Teams für die relevanteste Unterstützung. Klicken Sie auf eine E-Mail, um sie in Ihre Zwischenablage zu kopieren."
+    },
+    "general": {
+      "title": "Allgemeiner Kontakt",
+      "description": "Für allgemeine Anfragen und Abstimmungen."
+    },
+    "investor": {
+      "title": "Investor Relations (IR)",
+      "description": "Für VC/FO/institutionelle Kommunikation und Datenräume."
+    },
+    "business": {
+      "title": "Geschäftsentwicklung / Community",
+      "description": "Für KOLs, Partner, Kampagnen (TaskOn/Zealy) und Community-Ops."
+    },
+    "technology": {
+      "title": "Technologie",
+      "description": "Für Produkt, Website, Integrationen, Bereitstellungen und Support."
+    },
+    "onchain": {
+      "title": "On-Chain / Smart Contracts",
+      "description": "Für On-Chain-Angelegenheiten, Audits, Verifizierungen und Verträge."
+    },
+    "external": {
+      "title": "Außenbeziehungen",
+      "description": "Für Börsen, Market Maker, Launchpads und Medienpartner."
+    },
+    "additional": {
+      "title": "Benötigen Sie weitere Informationen?",
+      "description": "Bei allgemeinen Fragen oder wenn Sie sich nicht sicher sind, welches Team Sie kontaktieren sollen, wenden Sie sich bitte an unsere allgemeine Kontakt-E-Mail. Wir stellen sicher, dass Ihre Anfrage die richtige Person erreicht."
+    }
+  },
+  "vault": {
+    "connectWallet": {
+      "features": {
+        "title": "Sobald die Verbindung hergestellt ist, können Sie:",
+        "liveEarnings": "Sehen Sie sich Ihre Live-rGGP-Einnahmen an",
+        "stakedPositions": "Sehen Sie sich Ihre eingesetzten NFT-Positionen an",
+        "trackXp": "Verfolgen Sie Ihre XP und Belohnungen",
+        "leaderboard": "Vergleichen Sie Ihre Leistung auf der Bestenliste"
+      },
+      "title": "Verbinden Sie Ihr Wallet",
+      "description": "Verbinden Sie Ihr Wallet, um Ihren rGGP-Tresor, eingesetzte NFTs und Ihr Verdienstpotenzial anzuzeigen."
+    },
+    "header": {
+      "wallet": "Geldbörse:",
+      "network": "Netzwerk:",
+      "lockTier": "Sperrstufe:"
+    },
+    "liveCounter": {
+      "title": "Live-rGGP-Zähler",
+      "accrued": "Aufgelaufen",
+      "dailyYield": "Täglicher Ertrag",
+      "perSecond": "Pro Sekunde",
+      "lockTierCta": "Sperrstufe für höheren effektiven Jahreszins",
+      "lockTierDescription": "Sperren Sie Ihre NFTs, um bis zu 490 % effektiven Jahreszins zu verdienen",
+      "unlockAll": "Alle NFTs freischalten",
+      "unlockAllDescription": "Dadurch werden alle Tresorbelohnungen gestoppt"
+    },
+    "aprBars": {
+      "title": "APR-Aufschlüsselung",
+      "real": "Real",
+      "boost": "Schub",
+      "social": "Sozial",
+      "total": "Gesamter effektiver Jahreszins"
+    },
+    "positions": {
+      "title": "Ihre gesperrten NFTs",
+      "noNfts": "Keine NFTs eingesetzt",
+      "noNftsDescription": "Wählen Sie NFTs aus Ihrem Wallet aus, um Tresorprämien zu verdienen",
+      "claimRewards": "Belohnungen einfordern (in Kürze verfügbar)",
+      "unlockNft": "NFT freischalten",
+      "multiplier": "Multiplikator",
+      "daysStaked": "Abgesteckte Tage:",
+      "lockTier": "Sperrstufe:"
+    },
+    "xpPanel": {
+      "title": "XP & Soziale Belohnungen",
+      "currentXp": "Aktuelle XP",
+      "lastUpdate": "Letztes Update",
+      "earnMore": "Verdienen Sie mehr XP",
+      "zealy": "Erledige Aufgaben auf Zealy",
+      "taskon": "Treten Sie der TaskOn-Community bei",
+      "noXpData": "Keine XP-Daten",
+      "noXpDescription": "Erledigen Sie Community-Aufgaben, um XP zu verdienen und Ihre Belohnungen zu steigern",
+      "xpBoostActive": "XP-Boost aktiv",
+      "xpBoostDescription": "Ihre XP erhöhen Ihren täglichen rGGP-Ertrag",
+      "updatePending": "Aktualisierung ausstehend",
+      "upToDate": "Aktuell"
+    },
+    "leaderboard": {
+      "title": "Top 100 Bestenliste",
+      "rank": "Rang",
+      "wallet": "Geldbörse",
+      "rggp": "rGGP",
+      "xp": "EP",
+      "loading": "Bestenliste wird geladen …",
+      "noData": "Keine Leaderboard-Daten verfügbar",
+      "updated": "Aktualisiert",
+      "realTimeActive": "Echtzeit-Updates aktiv",
+      "showingTop100": "Anzeige der Top 100 aller Teilnehmer"
+    },
+    "nftSelector": {
+      "title": "Wählen Sie NFTs zum Sperren aus",
+      "selected": "ausgewählt",
+      "connectWallet": "Verbinden Sie Ihr Wallet",
+      "connectDescription": "Verbinden Sie Ihr Wallet, um NFTs zum Sperren anzuzeigen und auszuwählen",
+      "loading": "Laden Ihrer NFTs",
+      "error": "Fehler beim Laden von NFTs",
+      "tryAgain": "Versuchen Sie es erneut",
+      "noNfts": "Keine NFTs gefunden",
+      "noNftsDescription": "Sie haben keine AGV-NFTs in Ihrer Brieftasche. Prägen Sie Ihr erstes NFT, um Tresor-Belohnungen zu verdienen!",
+      "goToMint": "Zur Mint-Seite",
+      "lockNfts": "NFTs sperren (in Kürze verfügbar)",
+      "selectedForLocking": "zum Sperren ausgewählt"
+    },
+    "warning": {
+      "title": "Im Tresor gesperrte NFTs",
+      "important": "Wichtig:",
+      "description": "NFT ist im Tresor gesperrt. Übertragen Sie es nicht, sonst werden keine Belohnungen mehr vergeben. Verwenden Sie „Entsperren“, um es zuerst sicher zu entfernen.",
+      "lastValidation": "Letzte Validierung:",
+      "validateNow": "Jetzt validieren"
+    },
+    "footer": {
+      "dataUpdates": "Die Daten werden alle 60 Sekunden aktualisiert. XP wird innerhalb einer Stunde nach Abschluss der Aufgabe aktualisiert."
+    },
+    "refresh": {
+      "refreshing": "Erfrischend...",
+      "refreshData": "Daten aktualisieren",
+      "refresh": "Aktualisieren",
+      "updating": "Aktualisierung...",
+      "updatingLeaderboard": "Bestenliste wird aktualisiert …"
+    },
+    "unlock": {
+      "confirmSingle": "Möchten Sie dieses NFT wirklich freischalten? Dadurch werden keine Belohnungen mehr vergeben.",
+      "confirmAll": "Möchten Sie wirklich alle {count} NFTs freischalten? Dadurch werden alle Belohnungen gestoppt.",
+      "lockedUntil": "Gesperrt bis",
+      "cannotUnlockYet": "Kann noch nicht entsperrt werden",
+      "timeRemaining": "Verbleibende Zeit"
+    },
+    "tierSelection": {
+      "tierBenefits": {
+        "flex": {
+          "title": "Flexibles Schloss",
+          "description": "Keine Sperrfrist, jederzeit entsperrbar",
+          "apr": "Basis-APR",
+          "duration": "Kein Schloss"
+        },
+        "1m": {
+          "title": "1 Monat Sperre",
+          "description": "30 Tage sperren, höhere Belohnungen",
+          "apr": "Verbesserter effektiver Jahreszins",
+          "duration": "30 Tage"
+        },
+        "3m": {
+          "title": "3-Monats-Sperre",
+          "description": "90 Tage gesperrt, maximale Belohnungen",
+          "apr": "Maximaler effektiver Jahreszins",
+          "duration": "90 Tage"
+        },
+        "6m": {
+          "title": "6-Monats-Sperre",
+          "description": "180 Tage gesperrt, Premium-Prämien",
+          "apr": "Prämie effektiver Jahreszins",
+          "duration": "180 Tage"
+        },
+        "12m": {
+          "title": "12 Monate Sperre",
+          "description": "365 Tage lang sperren, ultimative Belohnungen",
+          "apr": "Ultimativer effektiver Jahreszins",
+          "duration": "365 Tage"
+        }
+      },
+      "title": "Wählen Sie zuerst die Sperrebene aus",
+      "description": "Wählen Sie Ihre Sperrstufe, bevor Sie die zu sperrenden NFTs auswählen",
+      "selectTier": "Wählen Sie eine Sperrstufe aus, um fortzufahren",
+      "tierDescription": "Längere Sperrfristen bieten bessere APR-Belohnungen. Wählen Sie sorgfältig, da Sie die Stufe nicht mehr ändern können, sobald NFTs gesperrt sind."
+    },
+    "title": "rGGP-Tresor",
+    "subtitle": "Verdienen Sie Belohnungen, indem Sie Ihre NFTs sperren und Community-Aufgaben erledigen"
+  }
+}

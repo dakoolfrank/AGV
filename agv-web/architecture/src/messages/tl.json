@@ -1,0 +1,225 @@
+{
+  "header": {
+    "brand": "PreGVT",
+    "protocolName": "Protokol ng AGV",
+    "languageLabel": "Wika",
+    "languageAriaLabel": "Pumili ng wika"
+  },
+  "hero": {
+    "title": {
+      "main": "Arkitektura ng AGV Token",
+      "highlight": "Token System na Binuo para sa Hinaharap"
+    },
+    "description": "Isang malinis, secure na 2-token na istraktura: preGVT para sa presale at vesting, at ang GVT bilang pangunahing ecosystem token na nagpapagana ng pamamahala, staking, at real-world asset integration.",
+    "primaryCta": "Tingnan ang Token Architecture",
+    "secondaryCta": "Basahin ang Tokenomics",
+    "tokenomicsHref": "#",
+    "icons": {
+      "pregvtAlt": "PreGVT",
+      "gvtAlt": "GVT"
+    }
+  },
+  "oneChain": {
+    "heading": {
+      "prefix": "Isang Kadena. Zero Confusion.",
+      "highlight": "Pinakamataas na Seguridad."
+    },
+    "description": "Ang AGV ay naglulunsad sa BNB Chain lamang — walang tulay, walang salamin na supply, walang cross-chain na panganib. Tinitiyak nito ang pinakasimpleng pag-audit, pinakaligtas na karanasan ng user, at pinakamalinis na token economics.",
+    "imageAlt": "Kadena ng BNB",
+    "features": [
+      "Mabilis na Pagpapatupad",
+      "Pinakamababang Pagkakumplikado ng Audit",
+      "Pinakamalinis na daanan ng listahan",
+      "Madaling on-chain na pag-verify ng supply",
+      "Minimal, predictable na arkitektura"
+    ]
+  },
+  "twoToken": {
+    "heading": {
+      "prefix": "Isang Layunin na Binuo,",
+      "highlight": "Dalawang-Token na Arkitektura"
+    },
+    "pregvt": {
+      "title": "PreGVT",
+      "subtitle": "Presale + maagang reward token",
+      "bullets": [
+        "Hindi naililipat",
+        "Nagko-convert sa GVT sa TGE",
+        "Ang vesting ay ipinapatupad ng mga kontrata ng escrow",
+        "Na-deploy na sa BNB"
+      ],
+      "callout": "Naka-lock hanggang TGE",
+      "imageAlt": "PreGVT"
+    },
+    "gvt": {
+      "title": "GVT",
+      "subtitle": "Pangunahing mai-tradable na ecosystem token",
+      "bullets": [
+        "Ganap na nabibili sa TGE",
+        "Single-chain canonical supply",
+        "Pamamahala + staking + RWA access"
+      ],
+      "callout": "Ang pangunahing asset ng AGV.",
+      "imageAlt": "GVT"
+    }
+  },
+  "liquidity": {
+    "heading": {
+      "prefix": "Isang Phased Liquidity Strategy para sa",
+      "highlight": "Malinis na Pagtuklas ng Presyo"
+    },
+    "phase1": {
+      "title": "Phase 1 — Pre-TGE",
+      "description": "PreGVT–USDT LP sa PancakeSwap.",
+      "purposeTitle": "Layunin",
+      "bullets": [
+        "Sanggunian sa presyo",
+        "Pagpapakita ng pitaka + dashboard"
+      ]
+    },
+    "phase2": {
+      "title": "Phase 2 — TGE",
+      "description": "Nagiging live ang liquidity ng GVT.",
+      "purposeTitle": "Kasama ang",
+      "bullets": [
+        "Suporta sa market-maker",
+        "Buong conversion mula sa preGVT → GVT",
+        "On-chain circulating supply disclosure"
+      ]
+    }
+  },
+  "vesting": {
+    "heading": {
+      "prefix": "Mula PreGVT hanggang GVT —",
+      "highlight": "Ganap na Transparent na Vesting"
+    },
+    "description": "Awtomatikong lumilipat ang iyong preGVT sa GVT sa pamamagitan ng isang secure na kontrata ng vesting sa TGE.",
+    "steps": [
+      "Hawak mo ang preGVT",
+      "Ang preGVT ay lumipat sa vesting contract",
+      "Tagal ng vesting: 9-12 buwan",
+      "Unti-unting nagbubukas ang GVT",
+      "Nakatanggap ka ng likidong GVT"
+    ]
+  },
+  "security": {
+    "heading": {
+      "prefix": "Seguridad sa",
+      "highlight": "Core ng System"
+    },
+    "points": [
+      "Kinokontrol ng Safe Multisig ang lahat ng pagmimina",
+      "Isang chain = mas maliit na attack surface",
+      "Pagpapatupad ng vesting na nakabatay sa escrow",
+      "Mga hindi naa-upgrade na kontrata para sa katatagan",
+      "Mga na-pause na function ng emergency",
+      "Opsyonal na timelock na pamamahala"
+    ]
+  },
+  "builtForNext": {
+    "heading": {
+      "prefix": "Arkitektura ng AGV Token — Ginawa para sa",
+      "highlight": "Ano ang Susunod"
+    },
+    "description": "Awtomatikong lumilipat ang iyong preGVT sa GVT sa pamamagitan ng isang secure na kontrata ng vesting sa TGE.",
+    "items": [
+      "Mas mabilis na pag-audit",
+      "Mas mababang panganib sa seguridad",
+      "Transparent na supply",
+      "Nahuhulaang gawi ng token",
+      "Exchange-friendly",
+      "Malinis na dokumentasyon",
+      "Foundation para sa multichain expansion mamaya"
+    ]
+  },
+  "tokenConversion": {
+    "heading": "Diagram ng Arkitektura ng Conversion ng AGV Token",
+    "pregvt": {
+      "title": "PreGVT",
+      "badge": "Presale Token",
+      "propertiesTitle": "Mga Katangian",
+      "bullets": [
+        "Hindi naililipat",
+        "Nagko-convert sa GVT sa TGE",
+        "Ang vesting ay ipinapatupad ng mga kontrata ng escrow",
+        "Na-deploy na sa BNB"
+      ]
+    },
+    "gvt": {
+      "title": "GVT",
+      "badge": "Pangunahing Token",
+      "propertiesTitle": "Mga Katangian",
+      "bullets": [
+        "Ganap na nabibili sa TGE",
+        "Single-chain canonical supply",
+        "Pamamahala + staking + RWA access"
+      ]
+    },
+    "callouts": {
+      "pause": {
+        "title": "I-pause ang Function",
+        "description": "Emergency stop o paghinto"
+      },
+      "timelock": {
+        "title": "Timelock (opsyonal)",
+        "description": "Iantala ang mga aksyong kritikal sa pamamahala para sa transparency"
+      },
+      "noProxy": {
+        "title": "Walang Maa-upgrade na Proxies",
+        "description": "Upang mabawasan ang pag-atake sa ibabaw"
+      }
+    },
+    "diagramTitle": "TOKEN GENERATION / CONVERSION",
+    "diagramLabels": {
+      "from": "PreGVT",
+      "to": "GVT"
+    }
+  },
+  "footer": {
+    "brand": "PreGVT Protocol",
+    "tagline": "Platform ng Digital Token",
+    "description": "Ang unang sumusunod na PreGVT digital token sa mundo, isang makabagong produkto sa pananalapi batay sa teknolohiya ng blockchain.",
+    "featureLabels": [
+      "Secure",
+      "Mabilis",
+      "Multichain"
+    ],
+    "sections": {
+      "product": {
+        "title": "Mga produkto",
+        "links": {
+          "nftMinting": "NFT Minting",
+          "kolProgram": "Programa ng KOL",
+          "analytics": "Analytics"
+        }
+      },
+      "company": {
+        "title": "kumpanya",
+        "links": {
+          "aboutUs": "Tungkol sa Amin",
+          "careers": "Mga karera",
+          "press": "Pindutin",
+          "blogs": "Mga Blog"
+        }
+      },
+      "support": {
+        "title": "Suporta",
+        "links": {
+          "helpCenter": "Help Center",
+          "documentation": "Dokumentasyon",
+          "apiReference": "Sanggunian ng API",
+          "contactSupport": "Makipag-ugnayan sa Suporta"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "links": {
+          "privacyPolicy": "Patakaran sa Privacy",
+          "termsOfService": "Mga Tuntunin ng Serbisyo",
+          "cookiePolicy": "Patakaran sa Cookie",
+          "gdpr": "GDPR"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/export-referrals",
+      "schedule": "0 0 * * 1"
+    }
+  ]
+}
+

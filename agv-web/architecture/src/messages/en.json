@@ -1,0 +1,226 @@
+{
+  "header": {
+    "brand": "PreGVT",
+    "protocolName": "AGV Protocol",
+    "languageLabel": "Language",
+    "languageAriaLabel": "Select language"
+  },
+  "hero": {
+    "title": {
+      "main": "AGV Token Architecture",
+      "highlight": "Token System Built for the Future"
+    },
+    "description": "A clean, secure 2-token structure: preGVT for presale & vesting, and GVT as the core ecosystem token powering governance, staking, and real-world asset integration.",
+    "primaryCta": "View Token Architecture",
+    "secondaryCta": "Read Tokenomics",
+    "tokenomicsHref": "#",
+    "icons": {
+      "pregvtAlt": "PreGVT",
+      "gvtAlt": "GVT"
+    }
+  },
+  "oneChain": {
+    "heading": {
+      "prefix": "One Chain. Zero Confusion.",
+      "highlight": "Maximum Security."
+    },
+    "description": "AGV launches on BNB Chain only — no bridges, no mirrored supplies, no cross-chain risks. This ensures the simplest audits, safest user experience, and cleanest token economics.",
+    "imageAlt": "BNB Chain",
+    "features": [
+      "Fast Execution",
+      "Lowest Audit Complexity",
+      "Cleanest listing pathway",
+      "Easy on-chain supply verification",
+      "Minimal, predictable architecture"
+    ]
+  },
+  "twoToken": {
+    "heading": {
+      "prefix": "A Purpose-Built,",
+      "highlight": "Two-Token Architecture"
+    },
+    "pregvt": {
+      "title": "PreGVT",
+      "subtitle": "Presale + early reward token",
+      "bullets": [
+        "Non-transferable",
+        "Converts to GVT at TGE",
+        "Vesting enforced by escrow contracts",
+        "Already deployed on BNB"
+      ],
+      "callout": "Locked until TGE",
+      "imageAlt": "PreGVT"
+    },
+    "gvt": {
+      "title": "GVT",
+      "subtitle": "Main tradable ecosystem token",
+      "bullets": [
+        "Fully tradable at TGE",
+        "Single-chain canonical supply",
+        "Governance + staking + RWA access"
+      ],
+      "callout": "The core AGV asset.",
+      "imageAlt": "GVT"
+    }
+  },
+  "liquidity": {
+    "heading": {
+      "prefix": "A Phased Liquidity Strategy for",
+      "highlight": "Clean Price Discovery"
+    },
+    "phase1": {
+      "title": "Phase 1 — Pre-TGE",
+      "description": "PreGVT–USDT LP on PancakeSwap.",
+      "purposeTitle": "Purpose",
+      "bullets": [
+        "Price reference",
+        "Wallet + dashboard visibility"
+      ]
+    },
+    "phase2": {
+      "title": "Phase 2 — TGE",
+      "description": "GVT liquidity goes live.",
+      "purposeTitle": "Includes",
+      "bullets": [
+        "Market-maker support",
+        "Full conversion from preGVT → GVT",
+        "On-chain circulating supply disclosure"
+      ]
+    }
+  },
+  "vesting": {
+    "heading": {
+      "prefix": "From PreGVT to GVT —",
+      "highlight": "Fully Transparent Vesting"
+    },
+    "description": "Your preGVT automatically transitions to GVT through a secure vesting contract at TGE.",
+    "steps": [
+      "You hold preGVT",
+      "preGVT moves into vesting contract",
+      "Vesting duration: 9-12 months",
+      "GVT unlocks gradually",
+      "You receive liquid GVT"
+    ]
+  },
+  "security": {
+    "heading": {
+      "prefix": "Security at the",
+      "highlight": "Core of the System"
+    },
+    "points": [
+      "Safe Multisig controls all minting",
+      "One chain = smaller attack surface",
+      "Escrow-based vesting enforcement",
+      "Non-upgradable contracts for stability",
+      "Pausable emergency functions",
+      "Optional timelock governance"
+    ]
+  },
+  "builtForNext": {
+    "heading": {
+      "prefix": "AGV Token Architecture — Built for",
+      "highlight": "What Comes Next"
+    },
+    "description": "Your preGVT automatically transitions to GVT through a secure vesting contract at TGE.",
+    "items": [
+      "Faster audits",
+      "Lower security risk",
+      "Transparent supply",
+      "Predictable token behaviour",
+      "Exchange-friendly",
+      "Clean documentation",
+      "Foundation for multichain expansion later"
+    ]
+  },
+  "tokenConversion": {
+    "heading": "AGV Token Conversion Architecture Diagram",
+    "pregvt": {
+      "title": "PreGVT",
+      "badge": "Presale Token",
+      "propertiesTitle": "Properties",
+      "bullets": [
+        "Non-transferable",
+        "Converts to GVT at TGE",
+        "Vesting enforced by escrow contracts",
+        "Already deployed on BNB"
+      ]
+    },
+    "gvt": {
+      "title": "GVT",
+      "badge": "Main Token",
+      "propertiesTitle": "Properties",
+      "bullets": [
+        "Fully tradable at TGE",
+        "Single-chain canonical supply",
+        "Governance + staking + RWA access"
+      ]
+    },
+    "callouts": {
+      "pause": {
+        "title": "Pause Function",
+        "description": "Emergency stop or halting"
+      },
+      "timelock": {
+        "title": "Timelock (optional)",
+        "description": "Delay governance-critical actions for transparency"
+      },
+      "noProxy": {
+        "title": "No Upgradable Proxies",
+        "description": "To reduce attack surface"
+      }
+    },
+    "diagramTitle": "TOKEN GENERATION / CONVERSION",
+    "diagramLabels": {
+      "from": "PreGVT",
+      "to": "GVT"
+    }
+  },
+  "footer": {
+    "brand": "PreGVT Protocol",
+    "tagline": "Digital Token Platform",
+    "description": "The world's first compliant PreGVT digital token, an innovative financial product based on blockchain technology.",
+    "featureLabels": [
+      "Secure",
+      "Fast",
+      "Multichain"
+    ],
+    "sections": {
+      "product": {
+        "title": "Products",
+        "links": {
+          "nftMinting": "NFT Minting",
+          "kolProgram": "KOL Program",
+          "analytics": "Analytics"
+        }
+      },
+      "company": {
+        "title": "Company",
+        "links": {
+          "aboutUs": "About Us",
+          "careers": "Careers",
+          "press": "Press",
+          "blogs": "Blogs"
+        }
+      },
+      "support": {
+        "title": "Support",
+        "links": {
+          "helpCenter": "Help Center",
+          "documentation": "Documentation",
+          "apiReference": "API Reference",
+          "contactSupport": "Contact Support"
+        }
+      },
+      "legal": {
+        "title": "Legal",
+        "links": {
+          "privacyPolicy": "Privacy Policy",
+          "termsOfService": "Terms of Service",
+          "cookiePolicy": "Cookie Policy",
+          "gdpr": "GDPR"
+        }
+      }
+    }
+  }
+}
+

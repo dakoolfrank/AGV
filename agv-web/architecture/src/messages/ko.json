@@ -1,0 +1,225 @@
+{
+  "header": {
+    "brand": "PreGVT",
+    "protocolName": "AGV 프로토콜",
+    "languageLabel": "언어",
+    "languageAriaLabel": "언어 선택"
+  },
+  "hero": {
+    "title": {
+      "main": "AGV 토큰 아키텍처",
+      "highlight": "미래를 위해 구축된 토큰 시스템"
+    },
+    "description": "깔끔하고 안전한 2-토큰 구조: 사전 판매 및 확정을 위한 preGVT와 거버넌스, 스테이킹, 실제 자산 통합을 지원하는 핵심 생태계 토큰인 GVT.",
+    "primaryCta": "토큰 아키텍처 보기",
+    "secondaryCta": "토큰노믹스를 읽어보세요",
+    "tokenomicsHref": "#",
+    "icons": {
+      "pregvtAlt": "PreGVT",
+      "gvtAlt": "GVT"
+    }
+  },
+  "oneChain": {
+    "heading": {
+      "prefix": "사슬은 하나. 혼란은 제로.",
+      "highlight": "최고 수준의 보안."
+    },
+    "description": "AGV는 BNB 체인에서만 출시됩니다. 브릿지, 미러링된 공급, 크로스 체인 위험이 없습니다. 이를 통해 가장 간단한 감사, 가장 안전한 사용자 경험, 그리고 가장 깔끔한 토큰 경제를 보장합니다.",
+    "imageAlt": "BNB 체인",
+    "features": [
+      "빠른 실행",
+      "가장 낮은 감사 복잡성",
+      "가장 깨끗한 목록 경로",
+      "간편한 온체인 공급 검증",
+      "최소한의 예측 가능한 아키텍처"
+    ]
+  },
+  "twoToken": {
+    "heading": {
+      "prefix": "목적에 맞게 제작된,",
+      "highlight": "2토큰 아키텍처"
+    },
+    "pregvt": {
+      "title": "PreGVT",
+      "subtitle": "사전 판매 + 조기 보상 토큰",
+      "bullets": [
+        "양도 불가",
+        "TGE에서 GVT로 변환",
+        "에스크로 계약에 의해 강제되는 귀속",
+        "이미 BNB에 배포됨"
+      ],
+      "callout": "TGE까지 잠금",
+      "imageAlt": "PreGVT"
+    },
+    "gvt": {
+      "title": "GVT",
+      "subtitle": "주요 거래 가능 생태계 토큰",
+      "bullets": [
+        "TGE에서 완전 거래 가능",
+        "단일 체인 정식 공급",
+        "거버넌스 + 스테이킹 + RWA 액세스"
+      ],
+      "callout": "핵심 AGV 자산.",
+      "imageAlt": "GVT"
+    }
+  },
+  "liquidity": {
+    "heading": {
+      "prefix": "단계별 유동성 전략",
+      "highlight": "클린 가격 발견"
+    },
+    "phase1": {
+      "title": "1단계 - TGE 이전",
+      "description": "PancakeSwap의 PreGVT–USDT LP.",
+      "purposeTitle": "목적",
+      "bullets": [
+        "가격 참조",
+        "지갑 + 대시보드 가시성"
+      ]
+    },
+    "phase2": {
+      "title": "2단계 - TGE",
+      "description": "GVT 유동성이 활성화됩니다.",
+      "purposeTitle": "포함",
+      "bullets": [
+        "마켓메이커 지원",
+        "preGVT에서 GVT로의 완전한 전환",
+        "온체인 순환 공급 공개"
+      ]
+    }
+  },
+  "vesting": {
+    "heading": {
+      "prefix": "PreGVT에서 GVT로 —",
+      "highlight": "완전 투명한 베스팅"
+    },
+    "description": "귀하의 preGVT는 TGE의 안전한 확정 계약을 통해 자동으로 GVT로 전환됩니다.",
+    "steps": [
+      "당신은 preGVT를 보유하고 있습니다",
+      "preGVT가 귀속 계약으로 전환됩니다.",
+      "귀속 기간: 9-12개월",
+      "GVT가 점진적으로 잠금 해제됩니다",
+      "당신은 액체 GVT를 받습니다"
+    ]
+  },
+  "security": {
+    "heading": {
+      "prefix": "보안",
+      "highlight": "시스템의 핵심"
+    },
+    "points": [
+      "안전한 멀티시그는 모든 채굴을 제어합니다.",
+      "체인 1개 = 공격 표면 감소",
+      "에스크로 기반 귀속 집행",
+      "안정성을 위한 업그레이드 불가 계약",
+      "일시 정지 가능한 비상 기능",
+      "선택적 시간 잠금 거버넌스"
+    ]
+  },
+  "builtForNext": {
+    "heading": {
+      "prefix": "AGV 토큰 아키텍처 - 다음을 위해 구축됨",
+      "highlight": "다음에 무엇이 올까요?"
+    },
+    "description": "귀하의 preGVT는 TGE의 안전한 확정 계약을 통해 자동으로 GVT로 전환됩니다.",
+    "items": [
+      "더 빠른 감사",
+      "보안 위험 감소",
+      "투명한 공급",
+      "예측 가능한 토큰 동작",
+      "교환 친화적",
+      "깨끗한 문서",
+      "나중에 멀티체인 확장을 위한 기반"
+    ]
+  },
+  "tokenConversion": {
+    "heading": "AGV 토큰 변환 아키텍처 다이어그램",
+    "pregvt": {
+      "title": "PreGVT",
+      "badge": "사전 판매 토큰",
+      "propertiesTitle": "속성",
+      "bullets": [
+        "양도 불가",
+        "TGE에서 GVT로 변환",
+        "에스크로 계약에 의해 강제되는 귀속",
+        "이미 BNB에 배포됨"
+      ]
+    },
+    "gvt": {
+      "title": "GVT",
+      "badge": "메인 토큰",
+      "propertiesTitle": "속성",
+      "bullets": [
+        "TGE에서 완전 거래 가능",
+        "단일 체인 정식 공급",
+        "거버넌스 + 스테이킹 + RWA 액세스"
+      ]
+    },
+    "callouts": {
+      "pause": {
+        "title": "일시 정지 기능",
+        "description": "비상 정지 또는 정지"
+      },
+      "timelock": {
+        "title": "시간 잠금(선택 사항)",
+        "description": "투명성을 위해 거버넌스에 중요한 조치를 연기하세요"
+      },
+      "noProxy": {
+        "title": "업그레이드 가능한 프록시 없음",
+        "description": "공격 표면을 줄이려면"
+      }
+    },
+    "diagramTitle": "토큰 생성/변환",
+    "diagramLabels": {
+      "from": "PreGVT",
+      "to": "GVT"
+    }
+  },
+  "footer": {
+    "brand": "PreGVT 프로토콜",
+    "tagline": "디지털 토큰 플랫폼",
+    "description": "세계 최초의 PreGVT 규정을 준수하는 디지털 토큰으로, 블록체인 기술을 기반으로 한 혁신적인 금융 상품입니다.",
+    "featureLabels": [
+      "안전한",
+      "빠른",
+      "멀티체인"
+    ],
+    "sections": {
+      "product": {
+        "title": "제품",
+        "links": {
+          "nftMinting": "NFT 채굴",
+          "kolProgram": "KOL 프로그램",
+          "analytics": "해석학"
+        }
+      },
+      "company": {
+        "title": "회사",
+        "links": {
+          "aboutUs": "회사 소개",
+          "careers": "경력",
+          "press": "누르다",
+          "blogs": "블로그"
+        }
+      },
+      "support": {
+        "title": "지원하다",
+        "links": {
+          "helpCenter": "도움말 센터",
+          "documentation": "선적 서류 비치",
+          "apiReference": "API 참조",
+          "contactSupport": "지원팀에 문의하세요"
+        }
+      },
+      "legal": {
+        "title": "합법적인",
+        "links": {
+          "privacyPolicy": "개인정보 보호정책",
+          "termsOfService": "서비스 약관",
+          "cookiePolicy": "쿠키 정책",
+          "gdpr": "GDPR"
+        }
+      }
+    }
+  }
+}
