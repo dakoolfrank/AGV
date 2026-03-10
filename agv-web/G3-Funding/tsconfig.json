@@ -37,6 +37,7 @@
     ".next/types/**/*.ts"
 , "scripts/superadmin.js"  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "scripts"
   ]
 }
