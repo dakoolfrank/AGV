@@ -1,9 +1,5 @@
 import { Redis } from '@upstash/redis';
 import type { Translator } from './translator';
-import { config } from 'dotenv';
-
-// Load environment variables
-config();
 
 // Initialize Redis with proper error handling
 let redis: Redis | null = null;

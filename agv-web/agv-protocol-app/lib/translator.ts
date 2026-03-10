@@ -1,9 +1,5 @@
-import { config } from 'dotenv';
 import OpenAI from "openai";
 import { TranslationServiceClient } from '@google-cloud/translate';
-
-// Load environment variables
-config();
 
 export interface Translator {
   translate(params: { text: string; from: string; to: string }): Promise<string>;
