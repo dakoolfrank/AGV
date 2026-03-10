@@ -2,7 +2,7 @@
   "name": "agv-web",
   "private": true,
   "description": "AGV Protocol Frontend Monorepo (pnpm workspace)",
-  "packageManager": "pnpm@10.30.3",
+  "packageManager": "pnpm@9.15.4",
   "engines": {
     "node": ">=20.0.0"
   },
