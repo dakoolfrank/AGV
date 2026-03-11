@@ -248,6 +248,41 @@ export function Footer({ backgroundClass = "bg-background", textColorClass = "te
 
       <Separator />
 
+      {/* Contract Addresses — BSC Mainnet */}
+      <div className="container py-4 md:py-6">
+        <div className="flex flex-col space-y-3">
+          <h4 className={`text-xs md:text-sm font-semibold ${textColorClass}`}>
+            Official Contracts (BSC Mainnet)
+          </h4>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-6">
+            <div className="flex items-center space-x-2">
+              <span className={`text-xs ${textColorClass === 'text-white' ? 'text-white/60' : 'text-muted-foreground'}`}>pGVT:</span>
+              <a
+                href="https://bscscan.com/token/0x8F9EC8107C126e94F5C4df26350Fb7354E0C8af9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono text-primary hover:underline truncate max-w-[200px] sm:max-w-none"
+              >
+                0x8F9EC8107C126e94F5C4df26350Fb7354E0C8af9
+              </a>
+            </div>
+            <div className="flex items-center space-x-2">
+              <span className={`text-xs ${textColorClass === 'text-white' ? 'text-white/60' : 'text-muted-foreground'}`}>sGVT:</span>
+              <a
+                href="https://bscscan.com/token/0x53e599211bF49Aa2336C3F839Ad57e20dE3662a3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs font-mono text-primary hover:underline truncate max-w-[200px] sm:max-w-none"
+              >
+                0x53e599211bF49Aa2336C3F839Ad57e20dE3662a3
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <Separator />
+
       {/* Bottom Section */}
       <div className="container py-4 md:py-8">
         <div className="flex flex-col space-y-4 md:space-y-0">
