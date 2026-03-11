@@ -45,53 +45,9 @@ export const MainContent: React.FC = () => {
     }
   ];
 
-  const socialLinks = [
-    {
-      name: t('maincontent.social.github'),
-      icon: <Github className="h-5 w-5" />,
-      url: "https://github.com/AGV-Protocol/",
-      stars: "2.1K"
-    },
-    {
-      name: t('maincontent.social.twitter'),
-      icon: <Twitter className="h-5 w-5" />,
-      url: "https://x.com/AgvProtocol",
-      followers: "12.5K"
-    },
-    {
-      name: t('maincontent.social.discord'),
-      icon: <MessageCircle className="h-5 w-5" />,
-      url: "https://discord.gg/JP9RtzM2SC",
-      members: "8.2K"
-    },
-    {
-      name: t('maincontent.social.telegram'),
-      icon: <Send className="h-5 w-5" />,
-      url: "https://t.me/agvprotocol",
-      members: "5.8K"
-    }
-  ];
+  const socialLinks: { name: string; icon: React.ReactNode; url: string; stars?: string; followers?: string; members?: string }[] = [];
 
-  const articles = [
-    {
-      title: t('maincontent.articles.introducing.title'),
-      description: t('maincontent.articles.introducing.description'),
-      url: "https://medium.com/@agvprotocol/introducing-agv-protocol-unlocking-the-future-of-real-world-assets-c0715b23ff63",
-      date: "2025-09-14"
-    },
-    {
-       title: t('maincontent.articles.multichain.title'),
-       description: t('maincontent.articles.multichain.description'),
-       url: "https://medium.com/@agvprotocol/rggp-explained-how-agv-protocol-turns-real-world-yields-into-rewards-dacb0a7c31e9",
-       date: "2025-09-15"
-    },
-    {
-      title: t('blog.articles.turningEveryUser.title'),
-      description: t('blog.articles.turningEveryUser.description'),
-      url: "https://medium.com/@agvprotocol/agv-protocol-turning-every-user-into-an-ai-power-producer-2fa49a5d871b",
-      date: "2025-09-16"
-    },
-  ];
+  const articles: { title: string; description: string; url: string; date: string }[] = [];
   return (
     <section className="relative">
       {/* Gradient section from hero end to Platform Overview title */}
@@ -218,7 +174,7 @@ export const MainContent: React.FC = () => {
                   <h4 className="text-lg font-semibold text-gray-800">{t('landing.getStarted.learnMore.title')}</h4>
                 </div>
                 <p className="text-gray-600 text-sm mb-4">{t('landing.getStarted.learnMore.description')}</p>
-                <Link href="https://presale.agvprotocol.org/">
+                <Link href="https://buy.agvnexrur.ai">
                   <Button className="w-full border border-[#223256] hover:bg-[#223256] hover:text-white text-[#223256] px-8 py-3 text-sm bg-white rounded-md">
                     {t('landing.getStarted.learnMore.button')}
                     <ArrowRight className="ml-2 h-4 w-4" />

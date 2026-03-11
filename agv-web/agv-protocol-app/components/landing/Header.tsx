@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
           <a href={`/${locale}/about`} className="text-white hover:text-white/80 transition-colors text-sm xl:text-base">{t('nav.about')}</a>
           <a href={`/${locale}/career`} className="text-white hover:text-white/80 transition-colors text-sm xl:text-base">{t('nav.career')}</a>
           <a href={`/${locale}/blog`} className="text-white hover:text-white/80 transition-colors text-sm xl:text-base">{t('nav.blog')}</a>
-          <a href={`https://investor.agvprotocol.org/en`} className="text-white hover:text-white/80 transition-colors text-sm xl:text-base">{t('nav.investors')}</a>
+          <a href={`https://invest.agvnexrur.ai`} className="text-white hover:text-white/80 transition-colors text-sm xl:text-base">{t('nav.investors')}</a>
           <a href={`/${locale}/whitelist`} className="text-white hover:text-white/80 transition-colors text-sm xl:text-base font-semibold bg-white/20 px-3 py-1 rounded-full">Join Whitelist</a>
         </nav>
 

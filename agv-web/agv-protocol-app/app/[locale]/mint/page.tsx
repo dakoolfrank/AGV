@@ -51,6 +51,35 @@ export default function MintPage() {
           </div>
         </div>
 
+        {/* Official Contract Addresses */}
+        <div className="max-w-6xl mx-auto mb-6 sm:mb-8 rounded-2xl border border-white/10 bg-[#1a2a4a]/50 p-4 sm:p-6">
+          <h3 className="text-sm sm:text-base font-semibold text-white mb-3">Official Contracts (BSC Mainnet)</h3>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2">
+              <span className="text-xs sm:text-sm text-white/60">pGVT:</span>
+              <a
+                href="https://bscscan.com/token/0x8F9EC8107C126e94F5C4df26350Fb7354E0C8af9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs sm:text-sm font-mono text-[#4ade80] hover:underline truncate"
+              >
+                0x8F9EC8107C126e94F5C4df26350Fb7354E0C8af9
+              </a>
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-xs sm:text-sm text-white/60">sGVT:</span>
+              <a
+                href="https://bscscan.com/token/0x53e599211bF49Aa2336C3F839Ad57e20dE3662a3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xs sm:text-sm font-mono text-[#4ade80] hover:underline truncate"
+              >
+                0x53e599211bF49Aa2336C3F839Ad57e20dE3662a3
+              </a>
+            </div>
+          </div>
+        </div>
+
         {/* Minting Interface */}
         <div>
           <Suspense fallback={<div className="text-white text-center py-6 sm:py-8 text-sm sm:text-base">Loading minting interface...</div>}>

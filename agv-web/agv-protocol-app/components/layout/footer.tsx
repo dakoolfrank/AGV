@@ -61,12 +61,7 @@ export function Footer({ backgroundClass = "bg-background", textColorClass = "te
     ],
   };
 
-  const socialLinks = [
-    { name: "GitHub", href: "https://github.com/AGV-Protocol/", icon: Github },
-    { name: "Twitter", href: "https://x.com/AgvProtocol", icon: Twitter},
-    { name: "Discord", href: "https://discord.gg/JP9RtzM2SC", icon: MessageCircle },
-    { name: "Telegram", href: "https://t.me/agvprotocol", icon: Send },
-  ];
+  const socialLinks: { name: string; href: string; icon: React.ComponentType<{ className?: string }> }[] = [];
 
   const features = [
     { icon: Shield, text: t('footer.secure') },
