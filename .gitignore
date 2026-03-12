@@ -28,6 +28,22 @@ lcov.info
 # Build outputs
 .build/
 
+# Node.js
+node_modules/
+.next/
+.env.local
+.env.*.local
+
+# pnpm
+.pnpm-store/
+
 # OS files
 .DS_Store
 Thumbs.db
+.vercel
+.env*.local
+
+# Core design & operations documents — keep local only
+/*.md
+/*.md.bak
+agv-web/**/*.md

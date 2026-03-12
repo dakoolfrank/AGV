@@ -8,7 +8,11 @@
   },
   "pnpm": {
     "overrides": {
-      "fast-xml-parser": "4.4.1"
+      "fast-xml-parser": "4.4.1",
+      "@thirdweb-dev/sdk>ethers": "^5.7.2",
+      "@thirdweb-dev/react>ethers": "^5.7.2",
+      "@thirdweb-dev/react-core>ethers": "^5.7.2",
+      "@thirdweb-dev/wallets>ethers": "^5.7.2"
     },
     "peerDependencyRules": {
       "allowAny": ["fast-xml-parser"]

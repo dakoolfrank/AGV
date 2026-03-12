@@ -15,6 +15,7 @@
     "translate": "tsx scripts/translate-missing.ts"
   },
   "dependencies": {
+    "ethers": "5.7.2",
     "@formatjs/intl-localematcher": "^0.6.1",
     "@google-cloud/translate": "^9.2.0",
     "@hookform/resolvers": "^5.2.2",
