@@ -5,6 +5,7 @@ import ModernMintingInterface from "@/components/minting/modern-minting-interfac
 import { Footer } from "@/components/layout/footer";
 import { useTranslations } from "@/hooks/useTranslations";
 import { LanguageSwitcher } from "@/components/ui/language-switcher";
+import { AddTokenGroup } from "@/components/ui/add-token-button";
 
 function MintingInterfaceWrapper() {
   return <ModernMintingInterface />;
@@ -78,6 +79,7 @@ export default function MintPage() {
               </a>
             </div>
           </div>
+          <AddTokenGroup className="mt-4" />
         </div>
 
         {/* Minting Interface */}

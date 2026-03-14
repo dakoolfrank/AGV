@@ -6,6 +6,7 @@ import { PageLayout } from '@/components/layouts/PageLayout';
 import { WalletConnect } from '@/components/WalletConnect';
 import { PageCard } from '@/components/ui/PageCard';
 import { PageHeader } from '@/components/ui/PageHeader';
+import { AddTokenGroup } from '@/components/ui/AddTokenButton';
 import { useUserData } from '@/hooks/useUserData';
 import { Leaderboard } from '@/components/Leaderboard';
 import { VestingSchedule } from '@/components/VestingSchedule';
@@ -242,6 +243,9 @@ export default function BalancePage() {
             title={t('title')}
             description={t('subtitle')}
           />
+
+          {/* One-click add token to wallet */}
+          <AddTokenGroup className="mb-4 justify-center" />
 
           {/* Wallet Connection Section */}
           <PageCard className="mb-6 sm:mb-8" style={{ backgroundColor: 'rgba(30, 41, 59, 0.5)', borderColor: 'rgba(71, 85, 105, 0.3)' }}>
