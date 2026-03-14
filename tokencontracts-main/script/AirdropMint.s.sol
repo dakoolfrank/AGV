@@ -1,13 +1,13 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.20;
+pragma solidity ^0.8.25;
 
 import "forge-std/Script.sol";
 import "../contracts/tokens/pGVT.sol";
-import "../contracts/tokens/ShadowGVT.sol";
+import "../contracts/tokens/sGVT.sol";
 
 /**
  * @title AirdropMint
- * @notice One-step: deploy pGVT + sGVT on BNB Chain, airdrop 1M each to target wallet
+ * @notice One-step: deploy pGVT + sGVT on BNB Chain, mint initial supply to target wallet
  *
  * @dev Usage (BNB Chain):
  *   forge script script/AirdropMint.s.sol:AirdropMint \
@@ -20,14 +20,15 @@ import "../contracts/tokens/ShadowGVT.sol";
  *     AIRDROP_TO=0x...    (target wallet)
  *
  * What this script does (all in one tx sequence):
- *   1. Deploy pGVT   (symbol: pGVT, distinct from existing preGVT)
- *   2. Mint 1M pGVT  → target wallet
- *   3. Deploy sGVT   (symbol: sGVT, supply = 1M, treasury = target wallet)
- *   4. Done — wallet holds 1M pGVT + 1M sGVT, ready to transfer
+ *   1. Deploy pGVT (V3: MAX_SUPPLY=100M, all roles to deployer)
+ *   2. Mint 3M pGVT → target wallet
+ *   3. Deploy sGVT (maxSupply=100M) → mint 30M sGVT to target wallet
+ *   4. Done — wallet holds 3M pGVT + 30M sGVT, ready to BatchAirdrop
  */
 contract AirdropMint is Script {
-    uint256 constant PGVT_AMOUNT = 1_000_000 * 10 ** 18;  // 1M pGVT
-    uint256 constant SGVT_SUPPLY = 1_000_000 * 10 ** 18;  // 1M sGVT (entire supply)
+    uint256 constant SGVT_MAX_SUPPLY = 100_000_000 * 10 ** 18;  // sGVT 上限 1 亿
+    uint256 constant SGVT_MINT       =  30_000_000 * 10 ** 18;  // 首铸 3000 万
+    uint256 constant PGVT_MINT       =   3_000_000 * 10 ** 18;  // 首铸 300 万
 
     /// @notice Call with target wallet as argument
     function run(address wallet) external {
@@ -42,16 +43,18 @@ contract AirdropMint is Script {
 
         vm.startBroadcast(deployerKey);
 
-        // ---- pGVT: deploy → mint 1M to wallet ----
+        // ---- pGVT: deploy → mint 3M to wallet ----
         pGVT pgvt = new pGVT(deployer);
-        pgvt.mint(wallet, PGVT_AMOUNT);
+        pgvt.mint(wallet, PGVT_MINT);
         console.log("pGVT  deployed:", address(pgvt));
-        console.log("  -> Minted 1,000,000 pGVT to wallet");
+        console.log("  -> Minted 3,000,000 pGVT to wallet");
 
-        // ---- sGVT: deploy with treasury = wallet (all 1M go directly to wallet) ----
-        ShadowGVT sgvt = new ShadowGVT(deployer, SGVT_SUPPLY, wallet);
+        // ---- sGVT: deploy (maxSupply=100M) → mint 30M to wallet ----
+        sGVT sgvt = new sGVT(deployer, deployer, deployer, 2, SGVT_MAX_SUPPLY);
+        sgvt.grantRole(sgvt.MINTER_ROLE(), deployer);
+        sgvt.mint(wallet, SGVT_MINT, "initial_mint");
         console.log("sGVT  deployed:", address(sgvt));
-        console.log("  -> 1,000,000 sGVT minted to wallet in constructor");
+        console.log("  -> Minted 30,000,000 sGVT to wallet (maxSupply: 100M)");
 
         vm.stopBroadcast();
 

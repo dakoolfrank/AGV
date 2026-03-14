@@ -50,7 +50,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/assets/landing-hero.png"
-            alt="AGV Protocol - Sustainable Energy Infrastructure"
+            alt="AGV NEXRUR - Sustainable Energy Infrastructure"
             fill
             className="object-cover"
             priority
@@ -126,7 +126,7 @@ export default function Home() {
                 <div className="h-[400px] sm:h-[500px] rounded-lg overflow-hidden border border-border mb-6">
                   <PDFViewer
                     fileUrl="https://drive.google.com/file/d/1iGTCO2jI9302wU6QIGsDmfsY5FI3Q_t7/view"
-                    title="AGV Protocol Pitch Deck"
+                    title="AGV NEXRUR Pitch Deck"
                   />
                 </div>
 
@@ -167,7 +167,7 @@ export default function Home() {
                 <div className="h-[400px] sm:h-[500px] rounded-lg overflow-hidden border border-border mb-6">
                   <PDFViewer
                     fileUrl="https://drive.google.com/file/d/11N8RXY9NnAQd9bi-nyvCBco2l6c0vZVo/view"
-                    title="AGV Protocol Pitch Deck"
+                    title="AGV NEXRUR Pitch Deck"
                   />
                 </div>
 

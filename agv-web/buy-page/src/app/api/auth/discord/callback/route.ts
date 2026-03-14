@@ -118,7 +118,7 @@ export async function GET(request: NextRequest) {
 
         if (!isMember) {
           // Redirect with error and Discord invite link
-          const discordInviteLink = 'https://discord.com/invite/JP9RtzM2SC';
+          const discordInviteLink = 'https://discord.com/invite/mJKTyqWtKe';
           return NextResponse.redirect(
             `${baseUrl}/claim?discord_error=${encodeURIComponent('You must join our Discord server first. Click here to join, then try again.')}&discord_invite=${encodeURIComponent(discordInviteLink)}`
           );

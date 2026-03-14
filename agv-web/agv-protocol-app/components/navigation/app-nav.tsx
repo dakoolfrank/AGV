@@ -77,12 +77,12 @@ export function AppNav({ user, onSignOut, className }: AppNavProps) {
         <FastLink href="/" className="flex items-center space-x-2">
           <Image 
             src="/logo.svg" 
-            alt="AGV Protocol" 
+            alt="AGV NEXRUR" 
             width={32} 
             height={32}
             className="rounded-lg"
           />
-          <span className="font-bold text-xl">AGV Protocol</span>
+          <span className="font-bold text-xl">AGV NEXRUR</span>
         </FastLink>
 
         {/* Desktop Navigation */}

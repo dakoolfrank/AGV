@@ -508,7 +508,7 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* AGV Protocol */}
+              {/* AGV NEXRUR */}
               <div className="text-center space-y-4 w-full sm:w-auto sm:min-w-[200px]">
                 <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto">
                   <Image src="/icons/agv.png" alt="Dual Pathways" width={30} height={0} />

@@ -45,5 +45,19 @@ Thumbs.db
 
 # Core design & operations documents — keep local only
 /*.md
+!README.md
 /*.md.bak
 agv-web/**/*.md
+
+# Internal docs (not shared)
+.docs/
+
+# Python cache
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Debug / temp files
+add-token-test*.html
+*.bak
+*.check

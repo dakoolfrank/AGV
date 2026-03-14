@@ -36,7 +36,7 @@ export function AuthCard({ onSignIn, onSendMagicLink, sendingLink, linkSentTo }:
             Admin Dashboard
           </h2>
           <p className="text-gray-600 mb-6">
-            Sign in to access the AGV Protocol admin panel
+            Sign in to access the AGV NEXRUR admin panel
           </p>
           
           <button

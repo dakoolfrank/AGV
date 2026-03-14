@@ -110,7 +110,7 @@
         },
         "decision": {
           "title": "Investitionsentscheidung",
-          "desc": "Bedingungen abschließen und AGV Protocol beitreten"
+          "desc": "Bedingungen abschließen und AGV NEXRUR beitreten"
         }
       }
     },
@@ -280,7 +280,7 @@
     "investmentMaterials": {
       "title": "Einbettmassen",
       "subtitle": "Wichtige Dokumente",
-      "description": "Sehen Sie sich unser umfassendes Pitch Deck und die Zusammenfassung zur Vision, Technologie und Marktchance von AGV Protocol an."
+      "description": "Sehen Sie sich unser umfassendes Pitch Deck und die Zusammenfassung zur Vision, Technologie und Marktchance von AGV NEXRUR an."
     },
     "execSummary": {
       "title": "Zusammenfassung",
@@ -398,7 +398,7 @@
   "contact": {
     "title": "Kontakt & Investitionsanfragen",
     "subtitle": "Schreiben Sie uns",
-    "description": "Sind Sie bereit, in AGV Protocol zu investieren? Kontaktieren Sie unser Team für ausführliche Gespräche und Partnerschaftsmöglichkeiten.",
+    "description": "Sind Sie bereit, in AGV NEXRUR zu investieren? Kontaktieren Sie unser Team für ausführliche Gespräche und Partnerschaftsmöglichkeiten.",
     "form": {
       "title": "Investitionsanfrageformular",
       "firstName": "Vorname",
@@ -450,7 +450,7 @@
     "description": "Greifen Sie über die umfassende Dokumentation auf detaillierte Finanzmodelle, Bewertungsanalysen und Umsatzprognosen für das AGV-Protokoll zu.",
     "mainDocument": {
       "title": "Finanzprüfungs- und Bewertungsindex",
-      "description": "Umfassende Finanzprüfung und Bewertungsanalyse für AGV Protocol, einschließlich detaillierter Finanzmodelle, Prognosen und Investitionskennzahlen."
+      "description": "Umfassende Finanzprüfung und Bewertungsanalyse für AGV NEXRUR, einschließlich detaillierter Finanzmodelle, Prognosen und Investitionskennzahlen."
     },
     "metrics": {
       "title": "Wichtige Finanzkennzahlen",
@@ -571,7 +571,7 @@
         "description": "Umfassende Pitch-Deck-Sammlung mit verschiedenen Versionen für Geschäftsentwicklung, institutionelle Investoren und Fachpräsentationen.",
         "docs": {
           "bd": {
-            "title": "AGV Protocol Pitch Deck (BD-Version) v2025.10",
+            "title": "AGV NEXRUR Pitch Deck (BD-Version) v2025.10",
             "description": "Auf die Geschäftsentwicklung ausgerichtetes Pitch Deck, das den Wertbeitrag und die Marktchancen des AGV-Protokolls hervorhebt."
           },
           "institutional": {
@@ -966,7 +966,7 @@
         "docs": {
           "energy": {
             "title": "Energiekooperationsvereinbarung der Zhongnan Group",
-            "description": "Strategische Energiekooperationsvereinbarung zwischen AGV Protocol und Zhongnan Group."
+            "description": "Strategische Energiekooperationsvereinbarung zwischen AGV NEXRUR und Zhongnan Group."
           },
           "yichuan": {
             "title": "Kooperationsabkommen der Zhongnan-Gruppe Yichuan",
@@ -1009,7 +1009,7 @@
     "header": {
       "title": "Vertrieb & Marketing",
       "subtitle": "Vertriebsstrategie & Partnerschaften",
-      "description": "Informieren Sie sich anhand umfassender Dokumentationen über die Verkaufsstrategien, Marktpositionierung und strategischen Partnerschaften von AGV Protocol."
+      "description": "Informieren Sie sich anhand umfassender Dokumentationen über die Verkaufsstrategien, Marktpositionierung und strategischen Partnerschaften von AGV NEXRUR."
     },
     "mainDoc": {
       "title": "Produktzeitleiste und Whitepaper-Auszüge v2025.10",
@@ -1058,7 +1058,7 @@
     "header": {
       "title": "Management-Team",
       "subtitle": "Führung und Governance",
-      "description": "Lernen Sie das Führungsteam von AGV Protocol kennen und erkunden Sie unsere Governance-Struktur anhand der umfassenden Dokumentation."
+      "description": "Lernen Sie das Führungsteam von AGV NEXRUR kennen und erkunden Sie unsere Governance-Struktur anhand der umfassenden Dokumentation."
     },
     "mainDoc": {
       "title": "AGV-Protokoll – Globaler Management- und Governance-Überblick 2025",

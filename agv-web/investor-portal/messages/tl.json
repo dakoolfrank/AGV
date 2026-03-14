@@ -69,9 +69,9 @@
     "brandkit": "Brand Kit",
     "contact": "Makipag-ugnayan sa Amin",
     "header": {
-      "title": "Data Room ng AGV Protocol",
+      "title": "Data Room ng AGV NEXRUR",
       "subtitle": "Portal ng Mamumuhunan",
-      "description": "Komprehensibong pag-access sa lahat ng dokumentasyon ng AGV Protocol, mga modelo sa pananalapi, at mga materyales sa pamumuhunan."
+      "description": "Komprehensibong pag-access sa lahat ng dokumentasyon ng AGV NEXRUR, mga modelo sa pananalapi, at mga materyales sa pamumuhunan."
     },
     "overview": {
       "title": "Pangkalahatang-ideya ng Data Room",
@@ -110,12 +110,12 @@
         },
         "decision": {
           "title": "Desisyon sa Pamumuhunan",
-          "desc": "Tapusin ang mga tuntunin at sumali sa AGV Protocol"
+          "desc": "Tapusin ang mga tuntunin at sumali sa AGV NEXRUR"
         }
       }
     },
     "cta": {
-      "title": "Handa nang Mamuhunan sa AGV Protocol?",
+      "title": "Handa nang Mamuhunan sa AGV NEXRUR?",
       "description": "Samahan kami sa pagbabago ng real-world na asset tokenization sa pamamagitan ng napapanatiling imprastraktura ng blockchain.",
       "contact": "Makipag-ugnayan sa Aming Koponan",
       "viewFinancials": "Tingnan ang Mga Modelong Pananalapi"
@@ -151,7 +151,7 @@
       "terms": "Mga Tuntunin ng Serbisyo",
       "cookies": "Patakaran sa Cookies"
     },
-    "copyright": "© 2024 AGV Protocol. Lahat ng karapatan ay nakalaan.",
+    "copyright": "© 2024 AGV NEXRUR. Lahat ng karapatan ay nakalaan.",
     "quickLinks": "Mga Mabilisang Link",
     "resources": "Mga mapagkukunan",
     "dataRoom": "Data Room",
@@ -174,11 +174,11 @@
     "overview": {
       "title": "Pangkalahatang-ideya ng Brand",
       "visionTitle": "Pangitain",
-      "visionLine3": "Pinapatakbo ng AGV Protocol ang unang desentralisadong AI Power ETF sa mundo.",
+      "visionLine3": "Pinapatakbo ng AGV NEXRUR ang unang desentralisadong AI Power ETF sa mundo.",
       "visionLine1": "Noong nakaraang siglo, pinalakas ng langis ang yaman ng industriya.",
       "visionLine2": "Sa siglong ito, ang kuryente + compute ay magpapagatong sa kayamanan ng AI.",
       "missionTitle": "Misyon",
-      "missionText": "Binabago ng AGV Protocol ang kategoryang Real-World Asset (RWA) sa pamamagitan ng pagtulay ng malinis na enerhiya, artificial intelligence, at desentralisadong pananalapi. Higit pa sa isang tokenized asset platform, ipinoposisyon ng AGV ang sarili bilang ang unang desentralisadong AI Power ETF sa buong mundo — isang ecosystem kung saan ang tunay na kuryente at compute capacity ay nagiging likido, na nagbubunga ng mga digital na asset.",
+      "missionText": "Binabago ng AGV NEXRUR ang kategoryang Real-World Asset (RWA) sa pamamagitan ng pagtulay ng malinis na enerhiya, artificial intelligence, at desentralisadong pananalapi. Higit pa sa isang tokenized asset platform, ipinoposisyon ng AGV ang sarili bilang ang unang desentralisadong AI Power ETF sa buong mundo — isang ecosystem kung saan ang tunay na kuryente at compute capacity ay nagiging likido, na nagbubunga ng mga digital na asset.",
       "taglineTitle": "Pangako ng Brand",
       "taglineLine1": "Enerhiya x Compute",
       "taglineLine2": "Pinapalakas ang AI Economy"
@@ -280,7 +280,7 @@
     "investmentMaterials": {
       "title": "Mga Materyales sa Pamumuhunan",
       "subtitle": "Mga Pangunahing Dokumento",
-      "description": "Suriin ang aming komprehensibong pitch deck at executive summary na sumasaklaw sa pananaw, teknolohiya, at pagkakataon sa merkado ng AGV Protocol."
+      "description": "Suriin ang aming komprehensibong pitch deck at executive summary na sumasaklaw sa pananaw, teknolohiya, at pagkakataon sa merkado ng AGV NEXRUR."
     },
     "execSummary": {
       "title": "Executive Summary",
@@ -299,15 +299,15 @@
     },
     "cta": {
       "title": "Handa nang Mamuhunan sa Hinaharap?",
-      "description": "Sumali sa AGV Protocol sa pagbabago ng real-world asset tokenization sa pamamagitan ng napapanatiling imprastraktura ng blockchain.",
+      "description": "Sumali sa AGV NEXRUR sa pagbabago ng real-world asset tokenization sa pamamagitan ng napapanatiling imprastraktura ng blockchain.",
       "accessDataRoom": "I-access ang Full Data Room"
     }
   },
   "docs": {
     "tech": {
       "whitepaper": {
-        "title": "AGV Protocol Whitepaper",
-        "description": "Detalyadong teknikal na pangkalahatang-ideya at disenyo ng system ng imprastraktura ng AGV Protocol."
+        "title": "AGV NEXRUR Whitepaper",
+        "description": "Detalyadong teknikal na pangkalahatang-ideya at disenyo ng system ng imprastraktura ng AGV NEXRUR."
       },
       "architectureDiagram": {
         "title": "Diagram ng Arkitektura ng System",
@@ -398,7 +398,7 @@
   "contact": {
     "title": "Makipag-ugnayan at Mga Tanong sa Pamumuhunan",
     "subtitle": "Makipag-ugnayan",
-    "description": "Handa nang mamuhunan sa AGV Protocol? Makipag-ugnayan sa aming team para sa mga detalyadong talakayan at mga pagkakataon sa pakikipagsosyo.",
+    "description": "Handa nang mamuhunan sa AGV NEXRUR? Makipag-ugnayan sa aming team para sa mga detalyadong talakayan at mga pagkakataon sa pakikipagsosyo.",
     "form": {
       "title": "Form ng Pagtatanong sa Pamumuhunan",
       "firstName": "Unang Pangalan",
@@ -447,10 +447,10 @@
   "financials": {
     "title": "Mga Modelong Pananalapi at Projection",
     "subtitle": "Dokumentasyong Pananalapi",
-    "description": "I-access ang mga detalyadong modelo ng pananalapi, pagsusuri sa pagpapahalaga, at mga projection ng kita para sa AGV Protocol sa pamamagitan ng komprehensibong dokumentasyon.",
+    "description": "I-access ang mga detalyadong modelo ng pananalapi, pagsusuri sa pagpapahalaga, at mga projection ng kita para sa AGV NEXRUR sa pamamagitan ng komprehensibong dokumentasyon.",
     "mainDocument": {
       "title": "Financial Audit at Index ng Pagpapahalaga",
-      "description": "Comprehensive financial audit at valuation analysis para sa AGV Protocol, kabilang ang mga detalyadong modelo ng pananalapi, projection, at mga sukatan ng pamumuhunan."
+      "description": "Comprehensive financial audit at valuation analysis para sa AGV NEXRUR, kabilang ang mga detalyadong modelo ng pananalapi, projection, at mga sukatan ng pamumuhunan."
     },
     "metrics": {
       "title": "Mga Pangunahing Sukatan sa Pananalapi",
@@ -462,9 +462,9 @@
     "documents": {
       "title": "Pinansyal na Dokumentasyon at Ulat",
       "description": "Mahahalagang dokumento sa pananalapi kabilang ang mga token handbook, pinagsamang ulat, cap table, at mga sipi ng whitepaper.",
-      "tokenHandbook": "Handbook ng Token ng AGV Protocol v2025",
-      "tokenHandbookDesc": "Komprehensibong gabay sa mga token ng AGV Protocol, kabilang ang utility, pamamahala, at mga modelong pang-ekonomiya.",
-      "integratedReport": "AGV Protocol – Pinagsanib na Ulat sa Pinansyal at Pagpapahalaga v2025.10",
+      "tokenHandbook": "Handbook ng Token ng AGV NEXRUR v2025",
+      "tokenHandbookDesc": "Komprehensibong gabay sa mga token ng AGV NEXRUR, kabilang ang utility, pamamahala, at mga modelong pang-ekonomiya.",
+      "integratedReport": "AGV NEXRUR – Pinagsanib na Ulat sa Pinansyal at Pagpapahalaga v2025.10",
       "integratedReportDesc": "Detalyadong pinagsama-samang pagsusuri sa pananalapi at ulat sa pagpapahalaga na sumasaklaw sa lahat ng aspeto ng pagganap sa pananalapi ng protocol.",
       "capTable": "Cap Table BVI Shareholder Resolution V2025.10",
       "capTableDesc": "Opisyal na dokumentasyon ng cap table at resolusyon ng shareholder mula sa hurisdiksyon ng BVI.",
@@ -506,7 +506,7 @@
     "header": {
       "title": "Teknolohiya at Arkitektura",
       "subtitle": "Teknikal na Dokumentasyon",
-      "description": "Galugarin ang teknikal na imprastraktura ng AGV Protocol, arkitektura ng system, at mga pag-audit sa seguridad sa pamamagitan ng komprehensibong dokumentasyon."
+      "description": "Galugarin ang teknikal na imprastraktura ng AGV NEXRUR, arkitektura ng system, at mga pag-audit sa seguridad sa pamamagitan ng komprehensibong dokumentasyon."
     },
     "metrics": {
       "title": "Mga Teknikal na Sukatan",
@@ -548,7 +548,7 @@
         "docs": {
           "powerToMint": {
             "title": "Power to Mint (Whitpaper Excerpt) V2025.10",
-            "description": "Teknikal na whitepaper excerpt na nagdedetalye ng kapangyarihan sa pag-mint ng functionality at mga mekanismo ng pagbuo ng token sa loob ng AGV Protocol ecosystem."
+            "description": "Teknikal na whitepaper excerpt na nagdedetalye ng kapangyarihan sa pag-mint ng functionality at mga mekanismo ng pagbuo ng token sa loob ng AGV NEXRUR ecosystem."
           },
           "rwaMapping": {
             "title": "RWA Mapping (Whitpaper Excerpt) v2025.10",
@@ -558,11 +558,11 @@
       },
       "github": {
         "title": "Mga link sa GitHub (Mga Smart Contract)",
-        "description": "Access sa smart contract repository at development resources para sa blockchain infrastructure ng AGV Protocol.",
+        "description": "Access sa smart contract repository at development resources para sa blockchain infrastructure ng AGV NEXRUR.",
         "docs": {
           "profile": {
             "title": "Link ng Profile ng GitHub",
-            "description": "Direktang pag-access sa profile ng GitHub ng AGV Protocol na naglalaman ng mga imbakan ng matalinong kontrata, dokumentasyon ng pag-develop, at source code."
+            "description": "Direktang pag-access sa profile ng GitHub ng AGV NEXRUR na naglalaman ng mga imbakan ng matalinong kontrata, dokumentasyon ng pag-develop, at source code."
           }
         }
       },
@@ -571,20 +571,20 @@
         "description": "Komprehensibong koleksyon ng pitch deck na sumasaklaw sa iba't ibang bersyon para sa pagpapaunlad ng negosyo, mga namumuhunan sa institusyon, at mga espesyal na presentasyon.",
         "docs": {
           "bd": {
-            "title": "AGV Protocol Pitch Deck (BD-Version) v2025.10",
-            "description": "Nakatuon sa pag-unlad ng negosyo na pitch deck na nagha-highlight sa value proposition ng AGV Protocol at mga pagkakataon sa merkado."
+            "title": "AGV NEXRUR Pitch Deck (BD-Version) v2025.10",
+            "description": "Nakatuon sa pag-unlad ng negosyo na pitch deck na nagha-highlight sa value proposition ng AGV NEXRUR at mga pagkakataon sa merkado."
           },
           "institutional": {
-            "title": "AGV Protocol Pitch Deck (Institutional) v2025.10",
+            "title": "AGV NEXRUR Pitch Deck (Institutional) v2025.10",
             "description": "Ang pitch deck na nakatuon sa mamumuhunan sa institusyon na may mga detalyadong projection sa pananalapi at mga pagtatasa ng panganib."
           },
           "oilToAi": {
-            "title": "AGV Protocol Pitch Deck (Oil to AI Power Edition) v2025.10",
+            "title": "AGV NEXRUR Pitch Deck (Oil to AI Power Edition) v2025.10",
             "description": "Espesyal na pitch deck na tumutuon sa paglipat mula sa tradisyonal na oil-based na power tungo sa AI-powered renewable energy solution."
           },
           "general": {
-            "title": "AGV Protocol Pitch Deck v2025.10",
-            "description": "Ang komprehensibong pitch deck na sumasaklaw sa lahat ng aspeto ng AGV Protocol kabilang ang teknolohiya, pagkakataon sa merkado, at modelo ng negosyo."
+            "title": "AGV NEXRUR Pitch Deck v2025.10",
+            "description": "Ang komprehensibong pitch deck na sumasaklaw sa lahat ng aspeto ng AGV NEXRUR kabilang ang teknolohiya, pagkakataon sa merkado, at modelo ng negosyo."
           }
         }
       },
@@ -593,7 +593,7 @@
         "description": "Detalyadong teknikal na dokumentasyong sumasaklaw sa arkitektura ng system, mga daloy ng proseso, at disenyo ng ecosystem.",
         "docs": {
           "ecosystem": {
-            "title": "AGV Protocol Ecosystem V2025.10",
+            "title": "AGV NEXRUR Ecosystem V2025.10",
             "description": "Komprehensibong dokumentasyon ng ecosystem na sumasaklaw sa arkitektura ng teknolohiya, mga daloy ng proseso, at mga punto ng pagsasama ng system."
           }
         }
@@ -608,7 +608,7 @@
     "header": {
       "title": "Mga Dokumento sa Legal at Pagpaparehistro",
       "subtitle": "Legal na Dokumentasyon",
-      "description": "Suriin ang komprehensibong legal na istruktura ng AGV Protocol, katayuan ng pagsunod, at balangkas ng regulasyon sa pamamagitan ng detalyadong dokumentasyon."
+      "description": "Suriin ang komprehensibong legal na istruktura ng AGV NEXRUR, katayuan ng pagsunod, at balangkas ng regulasyon sa pamamagitan ng detalyadong dokumentasyon."
     },
     "compliance": {
       "title": "Katayuan ng Pagsunod",
@@ -765,8 +765,8 @@
         "description": "Buod ng legal na istraktura at mga dokumento sa pag-verify kabilang ang mga sertipikadong pagsasalin at mga legal na buod.",
         "docs": {
           "summary": {
-            "title": "AGV Protocol – Buod ng Legal na Istraktura",
-            "description": "Buod ng kumpletong legal na istruktura na nagbabalangkas sa kumpletong corporate at legal na balangkas ng AGV Protocol."
+            "title": "AGV NEXRUR – Buod ng Legal na Istraktura",
+            "description": "Buod ng kumpletong legal na istruktura na nagbabalangkas sa kumpletong corporate at legal na balangkas ng AGV NEXRUR."
           },
           "naati": {
             "title": "NAATI Certified Translator Chinese to English Certificate",
@@ -784,10 +784,10 @@
     "header": {
       "title": "Pag-verify ng DePIN",
       "subtitle": "Desentralisadong Pisikal na Infrastructure Network",
-      "description": "Comprehensive verification documentation ng physical infrastructure development ng AGV Protocol, pagpapatupad ng agrikultura, at renewable energy integration sa pamamagitan ng detalyadong visual at video na ebidensya."
+      "description": "Comprehensive verification documentation ng physical infrastructure development ng AGV NEXRUR, pagpapatupad ng agrikultura, at renewable energy integration sa pamamagitan ng detalyadong visual at video na ebidensya."
     },
     "main": {
-      "title": "DePIN Verification Index - AGV Protocol v2025.10",
+      "title": "DePIN Verification Index - AGV NEXRUR v2025.10",
       "description": "Comprehensive DePIN (Decentralized Physical Infrastructure Network) na dokumentasyon sa pag-verify na sumasaklaw sa pagpapaunlad ng lupa, pagpapatupad ng imprastraktura, at mga proseso ng pagsasanib ng agricultural-photovoltaic."
     },
     "metrics": {
@@ -859,11 +859,11 @@
     "header": {
       "title": "ESG at Real-World Asset Proof",
       "subtitle": "Sustainability at Epekto",
-      "description": "Galugarin ang epekto sa kapaligiran ng AGV Protocol, mga hakbangin sa pagpapanatili, at real-world na pag-verify ng asset sa pamamagitan ng komprehensibong dokumentasyon."
+      "description": "Galugarin ang epekto sa kapaligiran ng AGV NEXRUR, mga hakbangin sa pagpapanatili, at real-world na pag-verify ng asset sa pamamagitan ng komprehensibong dokumentasyon."
     },
     "main": {
       "title": "Ulat ng ESG at Sustainability Epekto",
-      "description": "Komprehensibong pagtatasa ng epekto sa kapaligiran ng AGV Protocol, mga hakbangin sa pagpapanatili, at pag-verify ng real-world na asset."
+      "description": "Komprehensibong pagtatasa ng epekto sa kapaligiran ng AGV NEXRUR, mga hakbangin sa pagpapanatili, at pag-verify ng real-world na asset."
     },
     "metrics": {
       "title": "Mga Sukatan ng Pagganap ng ESG",
@@ -966,7 +966,7 @@
         "docs": {
           "energy": {
             "title": "Zhongnan Group Energy Cooperation Agreement",
-            "description": "Kasunduan sa kooperasyong madiskarteng enerhiya sa pagitan ng AGV Protocol at Zhongnan Group."
+            "description": "Kasunduan sa kooperasyong madiskarteng enerhiya sa pagitan ng AGV NEXRUR at Zhongnan Group."
           },
           "yichuan": {
             "title": "Kasunduan sa Kooperasyon ng Zhongnan Group Yichuan",
@@ -1003,13 +1003,13 @@
     },
     "title": "Kahilingan ng NDA",
     "subtitle": "Humiling ng Kasunduan sa Hindi Pagbubunyag",
-    "description": "Humiling ng access sa kumpidensyal na impormasyon ng AGV Protocol sa pamamagitan ng pagsusumite ng form ng kahilingan sa NDA."
+    "description": "Humiling ng access sa kumpidensyal na impormasyon ng AGV NEXRUR sa pamamagitan ng pagsusumite ng form ng kahilingan sa NDA."
   },
   "salesMarketing": {
     "header": {
       "title": "Sales at Marketing",
       "subtitle": "Diskarte sa Pagbebenta at Pakikipagsosyo",
-      "description": "Galugarin ang mga diskarte sa pagbebenta ng AGV Protocol, pagpoposisyon sa merkado, at mga madiskarteng pakikipagsosyo sa pamamagitan ng komprehensibong dokumentasyon."
+      "description": "Galugarin ang mga diskarte sa pagbebenta ng AGV NEXRUR, pagpoposisyon sa merkado, at mga madiskarteng pakikipagsosyo sa pamamagitan ng komprehensibong dokumentasyon."
     },
     "mainDoc": {
       "title": "Timeline ng Produkto at Mga Sipi sa Whitepaper v2025.10",
@@ -1042,7 +1042,7 @@
         "docs": {
           "pusu": {
             "title": "朴素资本管理有限公司投资意向书",
-            "description": "Investment letter of intent mula sa Pu Su Capital Management Co., Ltd. na nagpapahayag ng interes sa mga pagkakataon sa pamumuhunan ng AGV Protocol."
+            "description": "Investment letter of intent mula sa Pu Su Capital Management Co., Ltd. na nagpapahayag ng interes sa mga pagkakataon sa pamumuhunan ng AGV NEXRUR."
           },
           "guopeng": {
             "title": "國鵬投資管理有限公司戰略合作意向書",
@@ -1058,11 +1058,11 @@
     "header": {
       "title": "Koponan ng Pamamahala",
       "subtitle": "Pamumuno at Pamamahala",
-      "description": "Kilalanin ang pangkat ng pamumuno ng AGV Protocol at tuklasin ang aming istruktura ng pamamahala sa pamamagitan ng komprehensibong dokumentasyon."
+      "description": "Kilalanin ang pangkat ng pamumuno ng AGV NEXRUR at tuklasin ang aming istruktura ng pamamahala sa pamamagitan ng komprehensibong dokumentasyon."
     },
     "mainDoc": {
-      "title": "Pangkalahatang-ideya ng AGV Protocol Global Management and Governance 2025",
-      "description": "Komprehensibong pangkalahatang-ideya ng pandaigdigang istruktura ng pamamahala at balangkas ng pamamahala ng AGV Protocol, kabilang ang mga tungkulin sa pamumuno at istruktura ng organisasyon."
+      "title": "Pangkalahatang-ideya ng AGV NEXRUR Global Management and Governance 2025",
+      "description": "Komprehensibong pangkalahatang-ideya ng pandaigdigang istruktura ng pamamahala at balangkas ng pamamahala ng AGV NEXRUR, kabilang ang mga tungkulin sa pamumuno at istruktura ng organisasyon."
     },
     "expertise": {
       "title": "Dalubhasa sa Koponan",

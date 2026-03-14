@@ -22,10 +22,18 @@ import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
  *   PGVT_ADDRESS=0x...      (deployed pGVT contract)
  *   SGVT_ADDRESS=0x...      (deployed sGVT contract)
  *
- * Pricing:
- *   pGVT = 0.005 USDT  →  100,000 pGVT : 500 USDT
- *   sGVT = 0.5   USDT  →  10,000  sGVT : 5,000 USDT
- *   Total USDT needed: 5,500 USDT
+ * Optional .env (LP amounts — defaults to standard plan if not set):
+ *   PGVT_LP_AMOUNT=100000   (pGVT tokens to add, whole units)
+ *   PGVT_USDT_AMOUNT=500    (USDT to pair with pGVT)
+ *   SGVT_LP_AMOUNT=10000    (sGVT tokens to add, whole units)
+ *   SGVT_USDT_AMOUNT=5000   (USDT to pair with sGVT)
+ *
+ * Presets:
+ *   Standard ($200):   20,000 pGVT + 100 USDT  |  200 sGVT + 100 USDT
+ *
+ * Pricing (ratio determines price, not absolute amount):
+ *   pGVT = PGVT_USDT / PGVT_LP  (default 0.005 USDT)
+ *   sGVT = SGVT_USDT / SGVT_LP  (default 0.5   USDT)
  */
 
 interface IPancakeRouter02 {
@@ -52,14 +60,11 @@ contract AddLiquidity is Script {
     address constant PANCAKE_ROUTER = 0x10ED43C718714eb63d5aA57B78B54704E256024E;
     address constant BSC_USDT       = 0x55d398326f99059fF775485246999027B3197955;
 
-    // ============ LP Amounts (adjust as needed) ============
-    // pGVT @ $0.005:  100,000 pGVT + 500 USDT
-    uint256 constant PGVT_LP_AMOUNT = 100_000 * 10 ** 18;
-    uint256 constant PGVT_USDT_AMOUNT = 500 * 10 ** 18;     // BSC USDT = 18 decimals
-
-    // sGVT @ $0.5:  10,000 sGVT + 5,000 USDT
-    uint256 constant SGVT_LP_AMOUNT = 10_000 * 10 ** 18;
-    uint256 constant SGVT_USDT_AMOUNT = 5_000 * 10 ** 18;
+    // ============ Default LP Amounts (overridable via .env) ============
+    uint256 constant DEFAULT_PGVT_LP     = 20_000;   // pGVT tokens (whole units)
+    uint256 constant DEFAULT_PGVT_USDT   = 100;      // USDT (whole units)
+    uint256 constant DEFAULT_SGVT_LP     = 200;      // sGVT tokens (whole units)
+    uint256 constant DEFAULT_SGVT_USDT   = 100;      // USDT (whole units)
 
     function run() external {
         uint256 deployerKey = vm.envUint("PRIVATE_KEY");
@@ -67,49 +72,58 @@ contract AddLiquidity is Script {
         address pgvt = vm.envAddress("PGVT_ADDRESS");
         address sgvt = vm.envAddress("SGVT_ADDRESS");
 
+        // Read LP amounts from .env (fallback to defaults)
+        uint256 pgvtLpAmount   = vm.envOr("PGVT_LP_AMOUNT",   DEFAULT_PGVT_LP)   * 10 ** 18;
+        uint256 pgvtUsdtAmount = vm.envOr("PGVT_USDT_AMOUNT", DEFAULT_PGVT_USDT) * 10 ** 18;
+        uint256 sgvtLpAmount   = vm.envOr("SGVT_LP_AMOUNT",   DEFAULT_SGVT_LP)   * 10 ** 18;
+        uint256 sgvtUsdtAmount = vm.envOr("SGVT_USDT_AMOUNT", DEFAULT_SGVT_USDT) * 10 ** 18;
+        uint256 totalUsdtNeeded = pgvtUsdtAmount + sgvtUsdtAmount;
+
         console.log("========== AddLiquidity (PancakeSwap V2) ==========");
         console.log("Wallet :", wallet);
         console.log("pGVT   :", pgvt);
         console.log("sGVT   :", sgvt);
         console.log("USDT   :", BSC_USDT);
         console.log("Router :", PANCAKE_ROUTER);
+        console.log("---------------------------------------------------");
+        console.log("pGVT LP: %s pGVT + %s USDT", pgvtLpAmount / 1e18, pgvtUsdtAmount / 1e18);
+        console.log("sGVT LP: %s sGVT + %s USDT", sgvtLpAmount / 1e18, sgvtUsdtAmount / 1e18);
+        console.log("Total USDT needed:", totalUsdtNeeded / 1e18);
         console.log("===================================================\n");
 
         // Check balances
         uint256 usdtBal = IERC20(BSC_USDT).balanceOf(wallet);
         uint256 pgvtBal = IERC20(pgvt).balanceOf(wallet);
         uint256 sgvtBal = IERC20(sgvt).balanceOf(wallet);
-        uint256 totalUsdtNeeded = PGVT_USDT_AMOUNT + SGVT_USDT_AMOUNT;
 
         console.log("Wallet USDT  balance:", usdtBal / 1e18);
         console.log("Wallet pGVT  balance:", pgvtBal / 1e18);
         console.log("Wallet sGVT  balance:", sgvtBal / 1e18);
-        console.log("Total  USDT  needed :", totalUsdtNeeded / 1e18);
 
         require(usdtBal >= totalUsdtNeeded, "Insufficient USDT");
-        require(pgvtBal >= PGVT_LP_AMOUNT,  "Insufficient pGVT");
-        require(sgvtBal >= SGVT_LP_AMOUNT,  "Insufficient sGVT");
+        require(pgvtBal >= pgvtLpAmount,    "Insufficient pGVT");
+        require(sgvtBal >= sgvtLpAmount,    "Insufficient sGVT");
 
         vm.startBroadcast(deployerKey);
 
         uint256 deadline = block.timestamp + 300; // 5 min
 
         // ---- 1. Approve Router ----
-        IERC20(pgvt).approve(PANCAKE_ROUTER, PGVT_LP_AMOUNT);
-        IERC20(sgvt).approve(PANCAKE_ROUTER, SGVT_LP_AMOUNT);
+        IERC20(pgvt).approve(PANCAKE_ROUTER, pgvtLpAmount);
+        IERC20(sgvt).approve(PANCAKE_ROUTER, sgvtLpAmount);
         IERC20(BSC_USDT).approve(PANCAKE_ROUTER, totalUsdtNeeded);
         console.log("\nApprovals done");
 
         // ---- 2. Add pGVT-USDT Liquidity ----
-        //    100,000 pGVT + 500 USDT → price = 500/100000 = 0.005 USDT/pGVT
+        //    price = pgvtUsdtAmount / pgvtLpAmount (default 0.005 USDT/pGVT)
         (uint256 amtA1, uint256 amtB1, uint256 lp1) = IPancakeRouter02(PANCAKE_ROUTER).addLiquidity(
             pgvt,
             BSC_USDT,
-            PGVT_LP_AMOUNT,
-            PGVT_USDT_AMOUNT,
-            PGVT_LP_AMOUNT * 95 / 100,    // 5% slippage
-            PGVT_USDT_AMOUNT * 95 / 100,
-            wallet,                         // LP tokens go to wallet
+            pgvtLpAmount,
+            pgvtUsdtAmount,
+            pgvtLpAmount * 95 / 100,    // 5% slippage
+            pgvtUsdtAmount * 95 / 100,
+            wallet,
             deadline
         );
         console.log("\npGVT-USDT LP added:");
@@ -118,14 +132,14 @@ contract AddLiquidity is Script {
         console.log("  LP tokens:", lp1);
 
         // ---- 3. Add sGVT-USDT Liquidity ----
-        //    10,000 sGVT + 5,000 USDT → price = 5000/10000 = 0.5 USDT/sGVT
+        //    price = sgvtUsdtAmount / sgvtLpAmount (default 0.5 USDT/sGVT)
         (uint256 amtA2, uint256 amtB2, uint256 lp2) = IPancakeRouter02(PANCAKE_ROUTER).addLiquidity(
             sgvt,
             BSC_USDT,
-            SGVT_LP_AMOUNT,
-            SGVT_USDT_AMOUNT,
-            SGVT_LP_AMOUNT * 95 / 100,
-            SGVT_USDT_AMOUNT * 95 / 100,
+            sgvtLpAmount,
+            sgvtUsdtAmount,
+            sgvtLpAmount * 95 / 100,
+            sgvtUsdtAmount * 95 / 100,
             wallet,
             deadline
         );

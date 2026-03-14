@@ -52,7 +52,7 @@ export function AdminSidebar({ isOpen, onClose }: AdminSidebarProps) {
               <div className="flex items-center space-x-3">
                 <Image
                   src="/logo.png"
-                  alt="AGV Protocol"
+                  alt="AGV NEXRUR"
                   width={32}
                   height={32}
                   className="rounded-lg"
@@ -116,7 +116,7 @@ export function AdminSidebar({ isOpen, onClose }: AdminSidebarProps) {
           <div className="border-t border-gray-200 p-4">
             {!collapsed && (
               <div className="text-xs text-gray-500">
-                <p>AGV Protocol</p>
+                <p>AGV NEXRUR</p>
                 <p>Admin Dashboard v1.0</p>
               </div>
             )}

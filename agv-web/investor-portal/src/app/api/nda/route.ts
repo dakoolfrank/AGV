@@ -67,7 +67,7 @@ export async function POST(request: NextRequest) {
     const emailContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #333; border-bottom: 2px solid #3399FF; padding-bottom: 10px;">
-          NDA Request - AGV Protocol
+          NDA Request - AGV NEXRUR
         </h2>
         
         <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
@@ -98,7 +98,7 @@ export async function POST(request: NextRequest) {
     `;
 
     const textContent = `
-      NDA Request - AGV Protocol
+      NDA Request - AGV NEXRUR
       
       Requestor Information:
       Name: ${name}
@@ -129,12 +129,12 @@ export async function POST(request: NextRequest) {
     const requesterEmailContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color: #333; border-bottom: 2px solid #3399FF; padding-bottom: 10px;">
-          NDA Document - AGV Protocol
+          NDA Document - AGV NEXRUR
         </h2>
         
         <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0;">
           <h3 style="color: #3399FF; margin-top: 0;">Dear ${name},</h3>
-          <p>Thank you for your interest in AGV Protocol. Please find attached the Non-Disclosure Agreement document for your review and signature.</p>
+          <p>Thank you for your interest in AGV NEXRUR. Please find attached the Non-Disclosure Agreement document for your review and signature.</p>
           <p>If you have any questions about the agreement or need further information, please don't hesitate to contact us.</p>
         </div>
         
@@ -150,18 +150,18 @@ export async function POST(request: NextRequest) {
         <div style="background-color: #fff3cd; padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #ffc107;">
           <h4 style="color: #856404; margin-top: 0;">Contact Information</h4>
           <p style="margin: 0; color: #856404; font-size: 14px;">
-            For any questions, please contact us at <strong>ir@agvprotocol.org</strong>
+            For any questions, please contact us at <strong>frank@agvnexrur.ai</strong>
           </p>
         </div>
       </div>
     `;
 
     const requesterTextContent = `
-      NDA Document - AGV Protocol
+      NDA Document - AGV NEXRUR
       
       Dear ${name},
       
-      Thank you for your interest in AGV Protocol. Please find attached the Non-Disclosure Agreement document for your review and signature.
+      Thank you for your interest in AGV NEXRUR. Please find attached the Non-Disclosure Agreement document for your review and signature.
       
       If you have any questions about the agreement or need further information, please don't hesitate to contact us.
       
@@ -170,7 +170,7 @@ export async function POST(request: NextRequest) {
       2. Sign and return the document to us
       3. We will process your request and provide access to confidential materials
       
-      For any questions, please contact us at ir@agvprotocol.org
+      For any questions, please contact us at frank@agvnexrur.ai
     `;
 
     // Send email to requester with NDA document when available. If the
@@ -178,12 +178,12 @@ export async function POST(request: NextRequest) {
     // requester receives confirmation and next steps.
     try {
       const requesterEmail = new brevo.SendSmtpEmail();
-      requesterEmail.subject = `NDA Document - AGV Protocol`;
+      requesterEmail.subject = `NDA Document - AGV NEXRUR`;
       requesterEmail.htmlContent = requesterEmailContent;
       requesterEmail.textContent = requesterTextContent;
       requesterEmail.sender = { 
-        name: "AGV Protocol", 
-        email: "ir@agvprotocol.org" 
+        name: "AGV NEXRUR", 
+        email: "frank@agvnexrur.ai" 
       };
       requesterEmail.to = [
         { 
@@ -215,19 +215,19 @@ export async function POST(request: NextRequest) {
       adminEmail.textContent = textContent;
       // Use a verified sender to avoid provider rejection; keep user in reply-to
       adminEmail.sender = { 
-        email: "ir@agvprotocol.org",
-        name: "AGV Protocol IR"
+        email: "frank@agvnexrur.ai",
+        name: "AGV NEXRUR IR"
       };
       adminEmail.to = [
         {
-          email: "ir@agvprotocol.org",
-          name: "AGV Protocol IR"
+          email: "frank@agvnexrur.ai",
+          name: "AGV NEXRUR IR"
         }
       ];
       adminEmail.cc = [
         { 
-          email: "contact@agvprotocol.org", 
-          name: "AGV Protocol Contact" 
+          email: "frank@agvnexrur.ai", 
+          name: "AGV NEXRUR Contact" 
         }
       ];
       adminEmail.replyTo = { 

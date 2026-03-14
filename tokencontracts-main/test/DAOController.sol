@@ -105,7 +105,7 @@ contract DAOControllerTest is Test {
         assertEq(uint256(dao.state(proposalId)), uint256(DAOController.ProposalState.Active));
     }
 
-    function testCastVote() public {
+    function testCastVoteRevertsUntilVotingPowerImplemented() public {
         // Create proposal
         address[] memory targets = new address[](1);
         targets[0] = address(dao);
@@ -121,24 +121,15 @@ contract DAOControllerTest is Test {
         // Fast forward to active state
         vm.roll(block.number + (1 days / 12) + 1);
 
-        // Vote
+        // Voting should revert — getVotingPower is not yet implemented (P0-01 fix)
         vm.prank(voter1);
-        dao.castVote(proposalId, 1); // Vote FOR
-
-        (
-            address proposerAddr,
-            DAOController.ProposalCategory category,
-            string memory description,
-            uint256 forVotes,
-            uint256 againstVotes,
-            uint256 abstainVotes,
-            DAOController.ProposalState currentState
-        ) = dao.getProposal(proposalId);
-
-        assertGt(forVotes, 0);
+        vm.expectRevert("Voting power not yet implemented");
+        dao.castVote(proposalId, 1);
     }
 
-    function testCannotVoteTwice() public {
+    function testCannotVoteTwiceRevertsOnFirstAttempt() public {
+        // With P0-01 fix, castVote reverts immediately since getVotingPower is not implemented.
+        // This test verifies the first vote attempt reverts (double-vote is unreachable).
         address[] memory targets = new address[](1);
         targets[0] = address(dao);
         uint256[] memory values = new uint256[](1);
@@ -152,12 +143,9 @@ contract DAOControllerTest is Test {
 
         vm.roll(block.number + (1 days / 12) + 1);
 
-        vm.startPrank(voter1);
+        vm.prank(voter1);
+        vm.expectRevert("Voting power not yet implemented");
         dao.castVote(proposalId, 1);
-
-        vm.expectRevert("Already voted");
-        dao.castVote(proposalId, 1);
-        vm.stopPrank();
     }
 
     function testCannotVoteWithInvalidSupport() public {
@@ -194,15 +182,11 @@ contract DAOControllerTest is Test {
         // Make it active
         vm.roll(block.number + (1 days / 12) + 1);
 
-        // Vote to pass (simplified - in production would need real voting power)
+        // With P0-01 fix, voting reverts since getVotingPower is not yet implemented.
+        // Once staking integration is complete, re-enable the full queue flow test.
         vm.prank(voter1);
+        vm.expectRevert("Voting power not yet implemented");
         dao.castVote(proposalId, 1);
-
-        // Fast forward past voting period
-        vm.roll(block.number + (7 days / 12) + 1);
-
-        // Note: This test assumes proposal would succeed with votes
-        // In reality, would need sufficient voting power
     }
 
     function testCancelProposal() public {

@@ -199,7 +199,7 @@ export function DashboardAccessWrapper({ children }: DashboardAccessWrapperProps
             </div>
             <CardTitle>Sign in to Admin Dashboard</CardTitle>
             <CardDescription>
-              Access the AGV Protocol admin panel
+              Access the AGV NEXRUR admin panel
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-4">

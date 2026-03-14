@@ -13,11 +13,11 @@ const inter = Inter({
   display: "swap",
 });
 export const metadata: Metadata = {
-  title: "AGV Protocol - Unlocking Real-World Assets On-Chain",
+  title: "AGV NEXRUR - Unlocking Real-World Assets On-Chain",
   description:
-    "AGV Protocol bridges real-world assets with blockchain through tokenization, asset-mapped NFTs, and a dual-token system. Mint SeedPass, TreePass, SolarPass, and ComputePass NFTs backed by real orchards, solar, and compute units.",
+    "AGV NEXRUR bridges real-world assets with blockchain through tokenization, asset-mapped NFTs, and a dual-token system. Mint SeedPass, TreePass, SolarPass, and ComputePass NFTs backed by real orchards, solar, and compute units.",
   keywords: [
-    "AGV Protocol",
+    "AGV NEXRUR",
     "real-world assets",
     "RWA",
     "blockchain",
@@ -32,26 +32,26 @@ export const metadata: Metadata = {
     "SolarPass",
     "ComputePass"
   ],
-  authors: [{ name: "AGV Protocol Official" }],
-  creator: "AGV Protocol",
-  publisher: "AGV Protocol",
+  authors: [{ name: "AGV NEXRUR Official" }],
+  creator: "AGV NEXRUR",
+  publisher: "AGV NEXRUR",
   formatDetection: { email: false, address: false, telephone: false },
-  metadataBase: new URL("https://agv-protocol.com"),
+  metadataBase: new URL("https://agvnexrur.ai"),
   openGraph: {
-    title: "AGV Protocol - Unlocking Real-World Assets On-Chain",
+    title: "AGV NEXRUR - Unlocking Real-World Assets On-Chain",
     description:
-      "Explore AGV Protocol: bridging DeFi and TradFi through tokenized real-world assets. Mint asset-backed NFTs like SeedPass, TreePass, SolarPass, and ComputePass today.",
+      "Explore AGV NEXRUR: bridging DeFi and TradFi through tokenized real-world assets. Mint asset-backed NFTs like SeedPass, TreePass, SolarPass, and ComputePass today.",
     type: "website",
     locale: "en_US",
-    url: "https://agv-protocol.com",
-    siteName: "AGV Protocol",
+    url: "https://agvnexrur.ai",
+    siteName: "AGV NEXRUR",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AGV Protocol - Unlocking Real-World Assets On-Chain",
+    title: "AGV NEXRUR - Unlocking Real-World Assets On-Chain",
     description:
-      "AGV Protocol makes real-world assets accessible via blockchain. Mint NFTs backed by orchards, solar power, and compute clusters. Join the future of inclusive finance.",
-    creator: "@AGVProtocol",
+      "AGV NEXRUR makes real-world assets accessible via blockchain. Mint NFTs backed by orchards, solar power, and compute clusters. Join the future of inclusive finance.",
+    creator: "@agvnexrur",
   },
   robots: {
     index: true,

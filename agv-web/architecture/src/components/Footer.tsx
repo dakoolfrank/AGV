@@ -48,10 +48,10 @@ export function Footer({ textColorClass = "text-white" }: FooterProps) {
   };
 
   const socialLinks = [
-    { name: "GitHub", href: "https://github.com/AGV-Protocol/", icon: Github },
-    { name: "Twitter", href: "https://x.com/AgvProtocol", icon: Twitter},
-    { name: "Discord", href: "https://discord.gg/JP9RtzM2SC", icon: MessageCircle },
-    { name: "Telegram", href: "https://t.me/agvprotocol", icon: Send },
+    { name: "GitHub", href: "https://github.com/dakoolfrank/AGV", icon: Github },
+    { name: "Twitter", href: "https://x.com/agvnexrur", icon: Twitter},
+    { name: "Discord", href: "https://discord.gg/mJKTyqWtKe", icon: MessageCircle },
+    { name: "Telegram", href: "https://t.me/agvnexrur_bot", icon: Send },
   ];
 
   const featureIcons = [Shield, Zap, Globe];

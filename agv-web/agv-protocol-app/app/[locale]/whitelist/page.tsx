@@ -172,7 +172,7 @@ export default function WhitelistPage() {
     // Custom validation for non-KOL users
     if (!isKOL) {
       if (!data.hearAbout || data.hearAbout.length === 0) {
-        toast.error("Please select how you heard about AGV Protocol");
+        toast.error("Please select how you heard about AGV NEXRUR");
         return;
       }
       if (!data.interests || data.interests.length === 0) {
@@ -228,7 +228,7 @@ export default function WhitelistPage() {
         <div className="max-w-2xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Join AGV Protocol Whitelist
+              Join AGV NEXRUR Whitelist
             </h1>
             <p className="text-xl text-gray-600">
               Be among the first to access our revolutionary agricultural blockchain platform
@@ -323,7 +323,7 @@ export default function WhitelistPage() {
                 {/* How did you hear about AGV? */}
                 {!isKOL && (
                   <div>
-                    <Label>How did you hear about AGV Protocol? *</Label>
+                    <Label>How did you hear about AGV NEXRUR? *</Label>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-2">
                       {HEAR_ABOUT_OPTIONS.map((option) => (
                         <div key={option} className="flex items-center space-x-2">

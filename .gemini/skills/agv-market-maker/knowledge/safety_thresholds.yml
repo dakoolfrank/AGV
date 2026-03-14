@@ -1,0 +1,66 @@
+# 三层安全护甲阈值配置
+# Layer 1: 滑点, Layer 2: MEV, Layer 3: TVL 熔断
+
+layer1_slippage:
+  max_slippage_pct: 0.02         # 2% 硬顶（不可被 LLM 覆盖）
+  dynamic_buffer_pct: 0.005      # 0.5% 额外缓冲
+  pre_check: true                # 每笔交易前必检
+
+layer2_mev:
+  mempool_scan: true
+  sandwich_detection: true
+  private_rpc_threshold_usd: 20.0   # > $20 走私有 RPC
+  tx_split_threshold_usd: 30.0      # > $30 拆分交易
+  max_split_parts: 3
+  jitter_blocks: 2
+
+layer3_tvl_breaker:
+  # 触发阈值
+  min_tvl_usd: 30.0                  # TVL < $30 → HALT_ALL
+  warn_tvl_usd: 80.0                 # TVL < $80 → REDUCE_ACTIVITY
+  critical_reserve_ratio: 0.10       # 单侧 reserve < 10% → HALT_ALL
+
+  # 恢复阈值（高于触发，防震荡）
+  recover_tvl_usd: 100.0             # TVL > $100 → 可恢复
+  recover_cooldown_minutes: 60       # 恢复后冷静 60 分钟
+
+  # 行为映射
+  actions:
+    NORMAL:
+      mm_campaign: active
+      arb_campaign: active
+    REDUCE_ACTIVITY:
+      mm_campaign: active            # 仅护盘
+      arb_campaign: suspended
+    HALT_ALL:
+      mm_campaign: monitor_only      # 仅监控，不交易
+      arb_campaign: suspended
+      allow_withdraw: true           # 仅允许撤 LP
+
+executor_safety:
+  # 单笔限制
+  max_single_trade_usd: 50.0
+  min_pool_depth_usd: 50.0
+
+  # 日限制
+  max_daily_volume_usd: 500.0
+  max_daily_gas_usd: 5.0
+  max_daily_trades: 100
+  max_daily_loss_usd: 50.0          # 日最大亏损
+
+  # 紧急
+  emergency_withdraw_enabled: true
+  emergency_cooldown_minutes: 30
+
+  # Approve 策略
+  approve_strategy: "demand_x2"      # 需求量 × 2（不用 MAX_UINT256）
+
+preauth:
+  approved_tokens:
+    - "0x8F9EC8107C126e94F5C4df26350Fb7354E0C8af9"  # pGVT
+    - "0x53e599211bF49Aa2336C3F839Ad57e20dE3662a3"  # sGVT
+    - "0x55d398326f99059fF775485246999027B3197955"  # USDT
+  approved_pools:
+    - "0x5558e43eE316C45e6C842bC7aC4B770EED03c5C0"  # pGVT-USDT
+    - "0xBE1B08D1743f2C158165472Fa2fEB038E8DfaA9d"  # sGVT-USDT
+  unapproved_action: "REJECT"

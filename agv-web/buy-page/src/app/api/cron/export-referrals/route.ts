@@ -278,11 +278,11 @@ export async function GET(request: NextRequest) {
     // Create email with attachments using SDK
     const sendSmtpEmail = new SendSmtpEmail();
     sendSmtpEmail.sender = {
-      name: 'AGV Protocol',
-      email: 'ir@agvprotocol.org',
+      name: 'AGV NEXRUR',
+      email: 'frank@agvnexrur.ai',
     };
     sendSmtpEmail.to = [
-      { email: 'bd@agvprotocol.org' },
+      { email: 'frank@agvnexrur.ai' },
       { email: 'ajibikeabdulqayyum04@gmail.com' },
     ];
     sendSmtpEmail.subject = `Referral Leaderboard Export - Week ${weekNumber} - ${exportDate}`;

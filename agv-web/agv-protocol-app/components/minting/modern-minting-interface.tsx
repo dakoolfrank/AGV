@@ -145,7 +145,7 @@ const SpendingCapModal = ({
             Estimated changes
           </h4>
           <p style={{ color: "#d1d5db", fontSize: "0.875rem", marginBottom: "1rem" }}>
-            You are giving AGV Protocol the permission to spend this amount from your account.
+            You are giving AGV NEXRUR the permission to spend this amount from your account.
           </p>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
             <span style={{ color: "#d1d5db", fontSize: "0.875rem" }}>Spending cap</span>
@@ -169,7 +169,7 @@ const SpendingCapModal = ({
             <span style={{ color: "#9ca3af", fontSize: "0.875rem" }}>Request from</span>
             <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
               <div style={{ width: "1rem", height: "1rem", borderRadius: "50%", backgroundColor: "#8b5cf6" }} />
-              <span style={{ color: "#fff", fontSize: "0.875rem" }}>mint.agvprotocol.org</span>
+              <span style={{ color: "#fff", fontSize: "0.875rem" }}>agvnexrur.ai/en/mint</span>
             </div>
           </div>
 
@@ -900,7 +900,7 @@ export default function ModernMintingInterface() {
             <div className="flex-1">
               <p className="font-semibold">Confirm USDT approval</p>
               <p className="text-xs text-white/70 mt-1">
-                Request from <span className="font-medium">mint.agvprotocol.org</span>{chainName ? ` • ${chainName}` : ""}
+                Request from <span className="font-medium">agvnexrur.ai/en/mint</span>{chainName ? ` • ${chainName}` : ""}
               </p>
               <div className="mt-3 flex items-center justify-between text-sm">
                 <span className="text-white/70">Spending cap</span>
@@ -1894,7 +1894,7 @@ export default function ModernMintingInterface() {
         onClose={handleSpendingCapClose}
         onConfirm={handleSpendingCapConfirm as any}
         spender={contractAddr ? `${contractAddr.slice(0, 6)}...${contractAddr.slice(-4)}` : ""}
-        requestFrom="mint.agvprotocol.org"
+        requestFrom="agvnexrur.ai/en/mint"
         spendingCap={totalCost.toFixed(2)}
         tokenSymbol="USDT"
         networkFee="~"

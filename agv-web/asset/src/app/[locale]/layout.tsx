@@ -7,7 +7,7 @@ import { locales, defaultLocale } from "../../../i18n";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Real World Assets - AGV Protocol",
+  title: "Real World Assets - AGV NEXRUR",
   description: "Asset registration and management platform for real-world assets",
   robots: {
     index: false,

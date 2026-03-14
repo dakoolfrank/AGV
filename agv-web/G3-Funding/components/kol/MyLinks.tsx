@@ -17,7 +17,7 @@ export function MyLinks({ refCode, tier }: MyLinksProps) {
   
   const userMintLink = `https://agvprotocol.org/mint/${refCode}`;
   const kolRecruitLink = `https://g3fund.org/contributor-application?ref=${refCode}`;
-  const userBuyLink = `https://presale.agvprotocol.org/buy/${refCode}`;
+  const userBuyLink = `https://buy.agvnexrur.ai/buy/${refCode}`;
   
   const copyToClipboard = async (text: string, type: string) => {
     try {

@@ -26,8 +26,8 @@ async function setupAuthorizedAdmins() {
 
     // List of authorized admin emails
     const authorizedEmails = [
-      "admin@agvprotocol.com",
-      "superadmin@agvprotocol.com",
+      "frank@agvnexrur.ai",
+      "superfrank@agvnexrur.ai",
       // Add more admin emails as needed
     ];
 

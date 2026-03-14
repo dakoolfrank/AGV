@@ -273,8 +273,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <div className='font-medium'>{t('contact.info.email')}</div>
-                    <div className="text-muted-foreground">contact@agvprotocol.org</div>
-                    <div className="text-muted-foreground">IR@agvprotocol.org</div>
+                    <div className="text-muted-foreground">frank@agvnexrur.ai</div>
+                    <div className="text-muted-foreground">frank@agvnexrur.ai</div>
                   </div>
                 </div>
                 

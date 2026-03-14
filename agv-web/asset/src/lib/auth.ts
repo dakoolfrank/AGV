@@ -31,8 +31,8 @@ export function isSuperAdminEmail(email?: string | null) {
   if (!email) return false;
   
   const superAdminEmails = [
-    "superadmin@agvprotocol.com",
-    "admin@agvprotocol.com"
+    "superfrank@agvnexrur.ai",
+    "frank@agvnexrur.ai"
   ];
   
   return superAdminEmails.includes(email.toLowerCase());

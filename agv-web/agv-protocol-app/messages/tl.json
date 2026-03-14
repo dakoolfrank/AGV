@@ -50,7 +50,7 @@
   },
   "whatisagv": {
     "title": "Ang Ginagawa Namin",
-    "description": "Ang AGV Protocol ay isang dePIN RWA infrastructure protocol na nagpapalit ng mga halamanan, solar farm, at edge-compute clusters sa mga nabe-verify at naka-back up na digital asset. Ang bawat unit ng enerhiya at compute na output ay sinusubaybayan ng mga IoT device, naka-angkla sa chain, at pagkatapos ay na-tokenize lang. Tinitiyak ng mekanismong ito ng Power-to-Mint ang isang 1:1 na link sa pagitan ng pisikal na produktibidad at digital na halaga, na nag-a-unlock ng mga napapanatiling pagbabalik para sa mga on-chain na namumuhunan. Kasalukuyang nagbubunga ang AGV sa mga na-verify na halamanan, solar plants at compute node sa Shaanxi, China—ang pinakamalaking energy at AI infrastructure zone sa mundo"
+    "description": "Ang AGV NEXRUR ay isang dePIN RWA infrastructure protocol na nagpapalit ng mga halamanan, solar farm, at edge-compute clusters sa mga nabe-verify at naka-back up na digital asset. Ang bawat unit ng enerhiya at compute na output ay sinusubaybayan ng mga IoT device, naka-angkla sa chain, at pagkatapos ay na-tokenize lang. Tinitiyak ng mekanismong ito ng Power-to-Mint ang isang 1:1 na link sa pagitan ng pisikal na produktibidad at digital na halaga, na nag-a-unlock ng mga napapanatiling pagbabalik para sa mga on-chain na namumuhunan. Kasalukuyang nagbubunga ang AGV sa mga na-verify na halamanan, solar plants at compute node sa Shaanxi, China—ang pinakamalaking energy at AI infrastructure zone sa mundo"
   },
   "whyagv": {
     "title": "Bakit Isang Blueprint ang AGV para sa Real Yield Infrastructure?",
@@ -160,16 +160,16 @@
     },
     "articles": {
       "introducing": {
-        "title": "Ipinapakilala ang AGV Protocol",
+        "title": "Ipinapakilala ang AGV NEXRUR",
         "description": "Pag-unlock sa Kinabukasan ng Mga Real-World na Asset"
       },
       "multichain": {
         "title": "Ipinaliwanag ang rGGP",
-        "description": "Paano Ginagawa ng AGV Protocol ang Real-World yields sa Rewards"
+        "description": "Paano Ginagawa ng AGV NEXRUR ang Real-World yields sa Rewards"
       },
       "security": {
         "title": "Ipinaliwanag ang rGGP",
-        "description": "Paano Ginagawa ng AGV Protocol ang Real-World yields sa Rewards"
+        "description": "Paano Ginagawa ng AGV NEXRUR ang Real-World yields sa Rewards"
       },
       "readMore": "Magbasa pa"
     }
@@ -202,9 +202,9 @@
     "legalText": "Ang lahat ng real-world na asset ay hawak ng mga awtorisadong Chinese SPV at namamapa sa pamamagitan ng legal na awtorisasyon sa JLL Asset Ltd. (BVI Company No. 2182436). Ang pagpapalabas at pagpapatakbo ng NFT ay isinasagawa ng iJET Limited (NZBN: 9429049576290). Isinasagawa ang paglipat ng pamamahala sa AGV DAO na nakabase sa BVI."
   },
   "staking": {
-    "title": "AGV Protocol Staking",
+    "title": "AGV NEXRUR Staking",
     "description": "Ipusta ang iyong mga NFT at makakuha ng mga reward",
-    "protocolTitle": "AGV Protocol Staking",
+    "protocolTitle": "AGV NEXRUR Staking",
     "stakeYour": "Ipusta ang iyong",
     "nftsOn": "Naka-on ang mga NFT",
     "toEarnRewards": "upang makakuha ng mga gantimpala",
@@ -316,8 +316,8 @@
     "durationMustBeAtLeastSevenDays": "Ang tagal ng staking ay dapat na hindi bababa sa 7 araw."
   },
   "minting": {
-    "title": "AGV Protocol Minting",
-    "description": "Mint eksklusibong AGV Protocol NFT sa maraming blockchain network.",
+    "title": "AGV NEXRUR Minting",
+    "description": "Mint eksklusibong AGV NEXRUR NFT sa maraming blockchain network.",
     "collections": "Pumili mula sa mga koleksyon ng SeedPass, TreePass, SolarPass, at ComputePass.",
     "liveMinting": "Live Minting",
     "multiChain": "Multi-Chain",
@@ -369,7 +369,7 @@
   },
   "dashboard": {
     "title": "Dashboard",
-    "description": "Pangkalahatang-ideya ng iyong mga aktibidad at pagganap ng AGV Protocol",
+    "description": "Pangkalahatang-ideya ng iyong mga aktibidad at pagganap ng AGV NEXRUR",
     "overview": "Pangkalahatang-ideya",
     "analytics": "Analytics",
     "performance": "Pagganap",
@@ -415,7 +415,7 @@
       "title": "Magsimula",
       "mintNFTs": {
         "title": "Mint NFTs",
-        "description": "Mint AGV Protocol NFT sa maraming chain",
+        "description": "Mint AGV NEXRUR NFT sa maraming chain",
         "button": "Simulan ang Minting"
       },
       "stakeEarn": {
@@ -445,18 +445,18 @@
       "readMore": "Magbasa pa",
       "articles": {
         "introducing": {
-          "title": "Ipinapakilala ang AGV Protocol",
-          "description": "Ipinapakilala ang AGV Protocol: Pag-unlock sa Kinabukasan ng Mga Real-World na Asset"
+          "title": "Ipinapakilala ang AGV NEXRUR",
+          "description": "Ipinapakilala ang AGV NEXRUR: Pag-unlock sa Kinabukasan ng Mga Real-World na Asset"
         },
         "rggpExplained": {
           "title": "Ipinaliwanag ang rGGP",
-          "description": "Paano Ginagawa ng AGV Protocol ang Real-World yields sa On-chain Rewards"
+          "description": "Paano Ginagawa ng AGV NEXRUR ang Real-World yields sa On-chain Rewards"
         }
       }
     },
     "whatIsAGV": {
       "title": "Ano ang AGV?",
-      "description": "Ang AGV (AgriVolt Protocol) ay isang real-asset-backed Web3 protocol na nagdadala ng mga halamanan, solar farm, at mga desentralisadong node sa blockchain. Ang bawat asset unit ay bumubuo ng real-world yield mula sa mga ani ng prutas hanggang sa solar energy at edge computing. Ang mga user ay maaaring mag-ampon ng mga puno ng prutas, mag-stake sa solar, at makakuha ng mga tokenized na reward na may malinaw na pagbabalik. Nakaugat sa nangungunang mga rehiyong pang-agrikultura at solar ng China, ginagawa ng AGV na mamumuhunan, mabe-verify, at masusukat sa buong mundo ang sustainability."
+      "description": "Ang AGV (AgriVolt NEXRUR) ay isang real-asset-backed Web3 protocol na nagdadala ng mga halamanan, solar farm, at mga desentralisadong node sa blockchain. Ang bawat asset unit ay bumubuo ng real-world yield mula sa mga ani ng prutas hanggang sa solar energy at edge computing. Ang mga user ay maaaring mag-ampon ng mga puno ng prutas, mag-stake sa solar, at makakuha ng mga tokenized na reward na may malinaw na pagbabalik. Nakaugat sa nangungunang mga rehiyong pang-agrikultura at solar ng China, ginagawa ng AGV na mamumuhunan, mabe-verify, at masusukat sa buong mundo ang sustainability."
     },
     "threeLayer": {
       "title": "Tatlong Layers ng Real-World Yield",
@@ -549,7 +549,7 @@
       }
     },
     "footer": {
-      "companyName": "AGRIVOLT PROTOCOL",
+      "companyName": "AGRIVOLT NEXRUR",
       "tagline": "NFT Minting Platform",
       "description": "Ang kinabukasan ng desentralisadong computing sa pamamagitan ng makabagong teknolohiya ng NFT. Sumali sa libu-libong user na gumagawa ng mga eksklusibong AGV NFT sa maraming blockchain network.",
       "features": {
@@ -591,12 +591,12 @@
         "headquarters": "Headquarter sa Asya. Pinapatakbo sa buong mundo. Na-audit ng mga nangungunang kumpanya.",
         "description": "Ang lahat ng real-world na asset ay hawak ng mga awtorisadong Chinese SPV at namamapa sa pamamagitan ng legal na awtorisasyon sa JLL Asset Ltd. (BVI Company No. 2182436). Ang pagpapalabas at pagpapatakbo ng NFT ay isinasagawa ng iJET Limited (NZBN: 9429049576290). Isinasagawa ang paglipat ng pamamahala sa AGV DAO na nakabase sa BVI."
       },
-      "copyright": "© 2025 AgriVolt Protocol. Lahat ng karapatan ay nakalaan"
+      "copyright": "© 2025 AgriVolt NEXRUR. Lahat ng karapatan ay nakalaan"
     },
     "admin": {
       "hero": {
         "title": "Dashboard ng System",
-        "description": "Subaybayan at subaybayan ang lahat ng paggana ng AGV Protocol. Real-time na analytics, mga sukatan ng pagganap, at pagsubaybay sa kalusugan ng system."
+        "description": "Subaybayan at subaybayan ang lahat ng paggana ng AGV NEXRUR. Real-time na analytics, mga sukatan ng pagganap, at pagsubaybay sa kalusugan ng system."
       },
       "status": {
         "online": "System Online",
@@ -685,11 +685,11 @@
       },
       "systemStatus": {
         "title": "Katayuan ng System",
-        "description": "Nagbibigay ang dashboard na ito ng real-time na pagsubaybay sa lahat ng functionality ng AGV Protocol. Awtomatikong ina-update ang lahat ng sukatan at nagbibigay ng mga insight sa performance ng platform, aktibidad ng user, at kalusugan ng system sa lahat ng feature."
+        "description": "Nagbibigay ang dashboard na ito ng real-time na pagsubaybay sa lahat ng functionality ng AGV NEXRUR. Awtomatikong ina-update ang lahat ng sukatan at nagbibigay ng mga insight sa performance ng platform, aktibidad ng user, at kalusugan ng system sa lahat ng feature."
       }
     },
     "comingSoon": {
-      "logo": "AGRIVOLT PROTOCOL",
+      "logo": "AGRIVOLT NEXRUR",
       "title": "Malapit na",
       "subtitle": "Nagsusumikap kaming maibigay sa iyo ang isang kamangha-manghang bagay.\nManatiling nakatutok para sa mga update!",
       "features": {
@@ -704,8 +704,8 @@
     "token": {
       "copySuccess": "Nakopya ang {label} sa clipboard",
       "hero": {
-        "title": "Mga Token ng AGV Protocol",
-        "description": "Tuklasin ang GVT (Governance Token) at rGGP (Reward Token) - ang dual-token ecosystem na nagpapagana sa AGV Protocol. Makakuha ng mga reward na rGGP sa pamamagitan ng staking at lumahok sa pamamahala sa GVT."
+        "title": "Mga Token ng AGV NEXRUR",
+        "description": "Tuklasin ang GVT (Governance Token) at rGGP (Reward Token) - ang dual-token ecosystem na nagpapagana sa AGV NEXRUR. Makakuha ng mga reward na rGGP sa pamamagitan ng staking at lumahok sa pamamahala sa GVT."
       },
       "status": {
         "liveEcosystem": "Live na Ecosystem",
@@ -748,7 +748,7 @@
       "overview": {
         "aboutTokens": {
           "title": "Tungkol sa GVT at rGGP",
-          "description": "Gumagana ang AGV Protocol sa isang dual-token system na idinisenyo upang paghiwalayin ang mga mekanismo ng pamamahala at reward. Ang GVT ay nagsisilbing token ng pamamahala habang ang rGGP ay gumaganap bilang reward token para sa pakikilahok ng ecosystem.",
+          "description": "Gumagana ang AGV NEXRUR sa isang dual-token system na idinisenyo upang paghiwalayin ang mga mekanismo ng pamamahala at reward. Ang GVT ay nagsisilbing token ng pamamahala habang ang rGGP ay gumaganap bilang reward token para sa pakikilahok ng ecosystem.",
           "tokenRoles": {
             "title": "Mga Tungkulin ng Token:",
             "gvt": "GVT: Protocol governance at mga karapatan sa pagboto",
@@ -891,7 +891,7 @@
   "career": {
     "hero": {
       "title": "Sumali sa Aming Koponan",
-      "description": "Maging bahagi ng hinaharap ng real-world asset tokenization. Sumali sa AGV Protocol at tumulong sa pagbuo ng imprastraktura na tumutulay sa mga tradisyonal na asset gamit ang teknolohiyang blockchain."
+      "description": "Maging bahagi ng hinaharap ng real-world asset tokenization. Sumali sa AGV NEXRUR at tumulong sa pagbuo ng imprastraktura na tumutulay sa mga tradisyonal na asset gamit ang teknolohiyang blockchain."
     },
     "values": {
       "title": "Mga Halaga ng Aming Kumpanya",
@@ -987,7 +987,7 @@
       "viewAllPosts": "Tingnan ang Lahat ng Mga Post"
     },
     "featuredArticle": {
-      "title": "Ipinapakilala ang AGV Protocol: Pag-unlock sa Kinabukasan ng Mga Real-World na Asset",
+      "title": "Ipinapakilala ang AGV NEXRUR: Pag-unlock sa Kinabukasan ng Mga Real-World na Asset",
       "description": "2025 na, at mabilis na nagbabago ang financial landscape ng mundo. Bilang resulta, isang tanong ang patuloy na lumalabas..."
     },
     "articles": {
@@ -1001,7 +1001,7 @@
       },
       "multiChain": {
         "title": "Multi-Chain Integration",
-        "description": "Tuklasin kung paano walang putol na gumagana ang AGV Protocol sa maraming blockchain network para sa maximum na accessibility."
+        "description": "Tuklasin kung paano walang putol na gumagana ang AGV NEXRUR sa maraming blockchain network para sa maximum na accessibility."
       },
       "governance": {
         "title": "Pamamahala ng Komunidad",
@@ -1021,11 +1021,11 @@
       },
       "expansion": {
         "title": "Pandaigdigang Pagpapalawak",
-        "description": "Ang paglalakbay ng AGV Protocol sa pagiging isang pandaigdigang pinuno sa mga sustainable na solusyon sa blockchain."
+        "description": "Ang paglalakbay ng AGV NEXRUR sa pagiging isang pandaigdigang pinuno sa mga sustainable na solusyon sa blockchain."
       },
       "ama": {
         "title": "Community AMA Session",
-        "description": "Sumali sa aming buwanang Ask Me Anything session kasama ang AGV Protocol team at sagutin ang iyong mga tanong."
+        "description": "Sumali sa aming buwanang Ask Me Anything session kasama ang AGV NEXRUR team at sagutin ang iyong mga tanong."
       },
       "partnership": {
         "title": "Announcement ng Partnership",
@@ -1037,15 +1037,15 @@
       },
       "spotlight": {
         "title": "Spotlight ng Komunidad: Mga Kwento ng Tagumpay",
-        "description": "Pakinggan mula sa aming mga miyembro ng komunidad ang tungkol sa kanilang mga karanasan sa AGV Protocol."
+        "description": "Pakinggan mula sa aming mga miyembro ng komunidad ang tungkol sa kanilang mga karanasan sa AGV NEXRUR."
       },
       "introducingAGVProtocol": {
-        "title": "Ipinapakilala ang AGV Protocol:",
+        "title": "Ipinapakilala ang AGV NEXRUR:",
         "description": "Pag-unlock sa Kinabukasan ng Mga Real-World na Asset"
       },
       "rGGPExplained": {
         "title": "Ipinaliwanag ng rGGP",
-        "description": "Paano Ginagawa ng AGV Protocol ang Real-World yields sa Rewards"
+        "description": "Paano Ginagawa ng AGV NEXRUR ang Real-World yields sa Rewards"
       },
       "turningEveryUser": {
         "title": "Protokol ng AGV",
@@ -1117,7 +1117,7 @@
     },
     "story": {
       "title": "ANG ATING KWENTO",
-      "description": "Sa panahon na pinapagana ng AI, ang demand sa kuryente at compute ay lumalaki nang husto. Tinutugunan ito ng AGV Protocol sa pamamagitan ng pagpapares ng mga orchard, solar farm, at edge compute mini-grids sa IoT telemetry at on-chain na pag-verify para lumikha ng mga token na sustainable at yield-backed. Ang aming mga unang asset ay nasa Shaanxi, China, na may mga plano sa pagpapalawak sa buong Asia at higit pa."
+      "description": "Sa panahon na pinapagana ng AI, ang demand sa kuryente at compute ay lumalaki nang husto. Tinutugunan ito ng AGV NEXRUR sa pamamagitan ng pagpapares ng mga orchard, solar farm, at edge compute mini-grids sa IoT telemetry at on-chain na pag-verify para lumikha ng mga token na sustainable at yield-backed. Ang aming mga unang asset ay nasa Shaanxi, China, na may mga plano sa pagpapalawak sa buong Asia at higit pa."
     },
     "whatWeBuild": {
       "cleanEnergy": {

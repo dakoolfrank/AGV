@@ -76,12 +76,12 @@ export async function POST(request: NextRequest) {
     };
     sendSmtpEmail.to = [
       { 
-        email: "contact@agvprotocol.org", 
-        name: "AGV Protocol Contact" 
+        email: "frank@agvnexrur.ai", 
+        name: "AGV NEXRUR Contact" 
       },
       { 
-        email: "IR@agvprotocol.org", 
-        name: "AGV Protocol IR" 
+        email: "frank@agvnexrur.ai", 
+        name: "AGV NEXRUR IR" 
       }
     ];
     sendSmtpEmail.replyTo = { 

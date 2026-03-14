@@ -719,6 +719,15 @@ contract SeedPassTest is Test {
         assertTrue(seedPass.supportsInterface(ACCESS_CONTROL_INTERFACE_ID));
     }
 
+    function test_SupportsInterface_ERC721() public view {
+        // ERC165
+        assertTrue(seedPass.supportsInterface(0x01ffc9a7), "should support ERC165");
+        // ERC721
+        assertTrue(seedPass.supportsInterface(0x80ac58cd), "should support ERC721");
+        // ERC721Metadata
+        assertTrue(seedPass.supportsInterface(0x5b5e139f), "should support ERC721Metadata");
+    }
+
     // --- Treasury Withdrawal Tests ---
 
     function test_WithdrawTreasury_USDT() public {

@@ -201,12 +201,12 @@ export default function AgentsPage() {
     // Extract 6-digit refCode from KOL ID (e.g., "AGV-KOL149154" -> "149154")
     const match = kolId.match(/AGV-KOL(\d{6})/);
     if (match && match[1]) {
-      return `https://presale.agvprotocol.org/buy/${match[1]}`;
+      return `https://buy.agvnexrur.ai/buy/${match[1]}`;
     }
     // Fallback: try to extract any 6-digit number
     const fallbackMatch = kolId.match(/(\d{6})/);
     if (fallbackMatch && fallbackMatch[1]) {
-      return `https://presale.agvprotocol.org/buy/${fallbackMatch[1]}`;
+      return `https://buy.agvnexrur.ai/buy/${fallbackMatch[1]}`;
     }
     return null;
   };

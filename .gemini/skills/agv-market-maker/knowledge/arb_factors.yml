@@ -1,0 +1,76 @@
+# Arb-Campaign 因子池定义
+# Phase 2 初始因子，后续可扩展
+
+factor_groups:
+  price:
+    description: "价格技术指标"
+    source: "GeckoTerminal OHLCV"
+    indicators:
+      - name: vwap
+        timeframes: [1m, 5m, 15m]
+      - name: bollinger_bands
+        params: {period: 20, std: 2}
+      - name: rsi
+        params: {period: 14}
+      - name: price_divergence
+        description: "跨池价差"
+        threshold: 0.015   # 1.5% 触发
+
+  liquidity:
+    description: "流动性深度指标"
+    source: "GeckoTerminal + 链上读取"
+    indicators:
+      - name: reserve_ratio
+        description: "两侧 reserve 比值"
+      - name: depth_2pct
+        description: "±2% 深度"
+      - name: slippage_curve
+        description: "滑点曲线（按金额）"
+
+  onchain_activity:
+    description: "链上活动指标"
+    source: "Moralis"
+    indicators:
+      - name: tx_count
+        timeframes: [5m, 1h, 24h]
+      - name: unique_wallets
+        timeframes: [1h, 24h]
+      - name: avg_trade_size
+        description: "平均交易金额（USD）"
+
+  lp_dynamics:
+    description: "LP 动态指标"
+    source: "Moralis LP events"
+    indicators:
+      - name: add_remove_frequency
+        description: "添加/移除事件频率"
+      - name: net_flow
+        description: "LP 净流入/流出"
+      - name: impermanent_loss
+        description: "无常损失估算"
+
+  sentiment:
+    description: "情绪指标（预留）"
+    source: "GeckoTerminal trending"
+    indicators:
+      - name: trending_rank
+        description: "趋势池排名"
+      - name: social_mentions
+        description: "社交提及（预留）"
+        status: placeholder
+
+strategy_types:
+  cross_pool_arbitrage:
+    required_factors: [price_divergence, reserve_ratio]
+    optional_factors: [depth_2pct, slippage_curve]
+    min_confidence: 0.85
+
+  volume_momentum:
+    required_factors: [tx_count, vwap]
+    optional_factors: [rsi, unique_wallets]
+    min_confidence: 0.80
+
+  lp_imbalance_arb:
+    required_factors: [reserve_ratio, net_flow]
+    optional_factors: [add_remove_frequency]
+    min_confidence: 0.85

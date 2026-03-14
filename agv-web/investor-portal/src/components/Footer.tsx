@@ -29,7 +29,7 @@ export default function Footer() {
               <div className="w-8 h-8 flex items-center justify-center">
                 <Image 
                   src="/logo.png" 
-                  alt="AGV Protocol Logo" 
+                  alt="AGV NEXRUR Logo" 
                   width={32}
                   height={32}
                   className="w-full h-full object-contain"
@@ -41,16 +41,16 @@ export default function Footer() {
               {t('footer.description')}
             </p>
             <div className="flex items-center space-x-2 sm:space-x-3">
-              <a href="https://discord.gg/JP9RtzM2SC" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-muted-foreground rounded-lg flex items-center justify-center hover:bg-muted-foreground/10 transition-colors">
+              <a href="https://discord.gg/mJKTyqWtKe" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-muted-foreground rounded-lg flex items-center justify-center hover:bg-muted-foreground/10 transition-colors">
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
               </a>
-              <a href="https://x.com/AgvProtocol" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-muted-foreground rounded-lg flex items-center justify-center hover:bg-muted-foreground/10 transition-colors">
+              <a href="https://x.com/agvnexrur" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-muted-foreground rounded-lg flex items-center justify-center hover:bg-muted-foreground/10 transition-colors">
                 <XIcon className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
               </a>
-              <a href="https://github.com/AGV-Protocol/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-muted-foreground rounded-lg flex items-center justify-center hover:bg-muted-foreground/10 transition-colors">
+              <a href="https://github.com/dakoolfrank/AGV" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-muted-foreground rounded-lg flex items-center justify-center hover:bg-muted-foreground/10 transition-colors">
                 <Github className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
               </a>
-              <a href="https://t.me/agvprotocol" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-muted-foreground rounded-lg flex items-center justify-center hover:bg-muted-foreground/10 transition-colors">
+              <a href="https://t.me/agvnexrur_bot" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-muted-foreground rounded-lg flex items-center justify-center hover:bg-muted-foreground/10 transition-colors">
                 <Send className="w-4 h-4 sm:w-5 sm:h-5 text-muted-foreground" />
               </a>
             </div>

@@ -1,0 +1,10 @@
+packages:
+  - "agv-protocol-app"
+  - "investor-portal"
+  - "G3-Funding"
+  - "buy-page"
+  - "asset"
+  - "architecture"
+  - "template"
+  # Vercel serverless — 独立依赖，不纳入 workspace
+  # - "public/agv-taskon-verification"

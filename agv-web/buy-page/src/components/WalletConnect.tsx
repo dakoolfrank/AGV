@@ -153,9 +153,9 @@ export function WalletConnect() {
             }}
             appMetadata={{
               name: "PreGVT",
-              url: typeof window !== "undefined" ? window.location.origin : "https://presale.agvprotocol.org",
+              url: typeof window !== "undefined" ? window.location.origin : "https://buy.agvnexrur.ai",
               description: "PreGVT Token Presale - Buy preGVT Tokens",
-              logoUrl: "https://presale.agvprotocol.org/agv-logo.png",
+              logoUrl: "https://buy.agvnexrur.ai/agv-logo.png",
             }}
             theme="dark"
             autoConnect={true}

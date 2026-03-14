@@ -14,8 +14,8 @@ export async function getDocumentsByCategory(category: string): Promise<Document
   const dummyData: Record<string, Document[]> = {
     tech: [
       {
-        title: "AGV Protocol Whitepaper",
-        description: "Detailed technical overview and system design of the AGV Protocol infrastructure.",
+        title: "AGV NEXRUR Whitepaper",
+        description: "Detailed technical overview and system design of the AGV NEXRUR infrastructure.",
         titleKey: "docs.tech.whitepaper.title",
         descriptionKey: "docs.tech.whitepaper.description",
         fileUrl: "https://drive.google.com/file/d/1ABC123DEF456GHI789JKL/view",
@@ -45,7 +45,7 @@ export async function getDocumentsByCategory(category: string): Promise<Document
         description: "Public repository containing core protocol implementations.",
         titleKey: "docs.tech.github.title",
         descriptionKey: "docs.tech.github.description",
-        fileUrl: "https://github.com/agv-protocol",
+        fileUrl: "https://github.com/dakoolfrank/AGV",
         category: "tech",
       },
     ],
@@ -262,7 +262,7 @@ export async function getDocumentsByCategory(category: string): Promise<Document
     "management-team": [
       {
         title: "AGV_Protocol_Global_Management_and_Governance_Overview_2025_1",
-        description: "Comprehensive overview of AGV Protocol's global management structure and governance framework.",
+        description: "Comprehensive overview of AGV NEXRUR's global management structure and governance framework.",
         titleKey: "docs.managementTeam.governance.title",
         descriptionKey: "docs.managementTeam.governance.description",
         fileUrl: "https://drive.google.com/file/d/1Pt78jE1fzzweAubx_7Q_WR4zQ21v3lv8/view",

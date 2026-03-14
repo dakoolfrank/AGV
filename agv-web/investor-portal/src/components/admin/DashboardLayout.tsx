@@ -126,7 +126,7 @@ export function DashboardLayout({ children, user, onSignOut, locale }: Dashboard
               <FiMenu className="h-6 w-6" />
             </button>
             <h1 className="text-2xl font-semibold text-gray-900">
-              AGV Protocol Admin
+              AGV NEXRUR Admin
             </h1>
           </div>
         </div>

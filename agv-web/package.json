@@ -1,7 +1,7 @@
 {
   "name": "agv-web",
   "private": true,
-  "description": "AGV Protocol Frontend Monorepo (pnpm workspace)",
+  "description": "AGV NEXRUR Frontend Monorepo (pnpm workspace)",
   "packageManager": "pnpm@9.15.4",
   "engines": {
     "node": ">=20.0.0"

@@ -223,7 +223,9 @@ contract TreePass is
         override(ERC721AUpgradeable, AccessControlUpgradeable, ERC2981Upgradeable)
         returns (bool)
     {
-        return super.supportsInterface(interfaceId);
+        return ERC721AUpgradeable.supportsInterface(interfaceId)
+            || AccessControlUpgradeable.supportsInterface(interfaceId)
+            || ERC2981Upgradeable.supportsInterface(interfaceId);
     }
 
     function getCurrentPhase() external view returns (string memory) {

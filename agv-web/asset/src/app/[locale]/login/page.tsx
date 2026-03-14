@@ -192,7 +192,7 @@ export default function LoginPage({ params }: LoginPageProps) {
                 <Input
                   id="email"
                   type="email"
-                  placeholder="admin@agvprotocol.com"
+                  placeholder="frank@agvnexrur.ai"
                   value={email}
                   className="text-black"
                   onChange={(e) => setEmail(e.target.value)}

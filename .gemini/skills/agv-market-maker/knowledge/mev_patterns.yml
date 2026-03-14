@@ -1,0 +1,68 @@
+# MEV 攻击模式库
+# BSC 链常见 MEV 攻击模式及检测规则
+
+patterns:
+  sandwich:
+    description: "三明治攻击 — front-run + victim + back-run"
+    detection:
+      - rule: "同区块内 3 笔 tx: buy → target_swap → sell"
+      - rule: "front-run 和 back-run 来自同一地址或关联地址"
+      - rule: "front-run 金额 > 池深度 5%"
+    defense:
+      - "使用 48Club 私有 RPC 提交交易"
+      - "BloXroute 加速（备用）"
+      - "拆分大额交易为 ≤3 笔"
+    severity: high
+
+  jit_liquidity:
+    description: "JIT Liquidity — 同区块 LP add + swap + LP remove"
+    detection:
+      - rule: "同区块内: addLiquidity → swap → removeLiquidity"
+      - rule: "LP add 和 remove 来自同一地址"
+      - rule: "LP 存在时间 < 1 区块"
+    defense:
+      - "时间抖动 ±2 区块"
+      - "检测到后延迟执行"
+    severity: medium
+
+  whale_dump:
+    description: "鲸鱼砸盘 — 单笔大额卖出"
+    detection:
+      - rule: "单笔卖出 > 池深度 30%"
+      - rule: "卖出地址为已知大户"
+      - rule: "连续 N 笔同方向交易"
+    defense:
+      - "自动撤 LP（先撤后观察）"
+      - "触发紧急模式"
+    severity: critical
+
+  lp_vampire:
+    description: "短周期 LP 吸血鬼 — 快速 add/harvest/remove"
+    detection:
+      - rule: "LP 添加 → 手续费收割 → 撤出（< 10 区块）"
+      - rule: "同一地址重复此模式 > 3 次"
+    defense:
+      - "记录 + 告警（当前规模无需主动防御）"
+    severity: low
+    note: "TVL > $10K 后再启用主动防御"
+
+bsc_defense_stack:
+  private_rpc:
+    primary: "48Club"
+    fallback: "BloXroute"
+    note: "BSC 最大矿池，接近 Flashbots 的保护效果"
+  tx_splitting:
+    enabled: true
+    max_parts: 3
+    jitter_blocks: 2
+  mempool_scan:
+    enabled: true
+    scan_interval_ms: 500
+    alert_threshold_pct: 0.05
+
+known_mev_bots:
+  # BSC 上已知的 MEV bot 地址（持续更新）
+  # 格式: 地址 → 类型
+  # 实际部署时从链上分析服务获取
+  update_frequency: "daily"
+  source: "链上分析 + 社区报告"

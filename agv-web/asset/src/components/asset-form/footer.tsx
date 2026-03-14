@@ -22,7 +22,7 @@ export function AssetFormFooter() {
               <div className="flex items-center space-x-2">
                 <Image
                   src="/footer-logo.png"
-                  alt="AGV Protocol"
+                  alt="AGV NEXRUR"
                   width={100}
                   height={100}
                   className="rounded-lg"
@@ -109,16 +109,16 @@ export function AssetFormFooter() {
           <div className="flex flex-col items-end justify-content-end">
             {/* Social Media Icons */}
             <div className="flex items-center space-x-2 sm:space-x-3 mb-4">
-              <a href="https://discord.gg/JP9RtzM2SC" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-white rounded-lg flex items-center justify-center hover:bg-white/90 transition-colors">
+              <a href="https://discord.gg/mJKTyqWtKe" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-white rounded-lg flex items-center justify-center hover:bg-white/90 transition-colors">
                 <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </a>
-              <a href="https://x.com/AgvProtocol" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-white rounded-lg flex items-center justify-center hover:bg-white/90 transition-colors">
+              <a href="https://x.com/agvnexrur" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-white rounded-lg flex items-center justify-center hover:bg-white/90 transition-colors">
                 <Twitter className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </a>
-              <a href="https://github.com/AGV-Protocol/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-white rounded-lg flex items-center justify-center hover:bg-white/90 transition-colors">
+              <a href="https://github.com/dakoolfrank/AGV" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-white rounded-lg flex items-center justify-center hover:bg-white/90 transition-colors">
                 <Github className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </a>
-              <a href="https://t.me/agvprotocol" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-white rounded-lg flex items-center justify-center hover:bg-white/90 transition-colors">
+              <a href="https://t.me/agvnexrur_bot" target="_blank" rel="noopener noreferrer" className="w-8 h-8 sm:w-10 sm:h-10 border border-white rounded-lg flex items-center justify-center hover:bg-white/90 transition-colors">
                 <Send className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
               </a>
             </div>

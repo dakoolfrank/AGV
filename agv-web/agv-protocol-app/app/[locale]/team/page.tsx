@@ -57,37 +57,37 @@ export default function CareerPage() {
     {
       icon: <Mail className="w-6 h-6" />,
       title: t('contact.general.title'),
-      email: "contact@agvprotocol.org",
+      email: "frank@agvnexrur.ai",
       description: t('contact.general.description')
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: t('contact.investor.title'),
-      email: "ir@agvprotocol.org",
+      email: "frank@agvnexrur.ai",
       description: t('contact.investor.description')
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: t('contact.business.title'),
-      email: "bd@agvprotocol.org",
+      email: "frank@agvnexrur.ai",
       description: t('contact.business.description')
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: t('contact.technology.title'),
-      email: "tech@agvprotocol.org",
+      email: "frank@agvnexrur.ai",
       description: t('contact.technology.description')
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: t('contact.onchain.title'),
-      email: "onchain@agvprotocol.org",
+      email: "frank@agvnexrur.ai",
       description: t('contact.onchain.description')
     },
     {
       icon: <Mail className="w-6 h-6" />,
       title: t('contact.external.title'),
-      email: "relations@agvprotocol.org",
+      email: "frank@agvnexrur.ai",
       description: t('contact.external.description')
     }
   ];
@@ -221,15 +221,15 @@ export default function CareerPage() {
               <div className="flex items-center space-x-2">
                 <Mail className="w-5 h-5 text-[#4FACFE]" />
                 <span className="text-[#4FACFE] font-semibold text-sm sm:text-base">
-                  contact@agvprotocol.org
+                  frank@agvnexrur.ai
                 </span>
                 <Button
                   variant="ghost"
                   size="sm"
-                  onClick={() => handleCopyEmail("contact@agvprotocol.org")}
+                  onClick={() => handleCopyEmail("frank@agvnexrur.ai")}
                   className="p-1 h-auto text-gray-500 hover:text-[#4FACFE] transition-colors duration-300"
                 >
-                  {copiedEmail === "contact@agvprotocol.org" ? (
+                  {copiedEmail === "frank@agvnexrur.ai" ? (
                     <Check className="w-4 h-4" />
                   ) : (
                     <Copy className="w-4 h-4" />

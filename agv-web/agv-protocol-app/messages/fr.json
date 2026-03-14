@@ -50,7 +50,7 @@
   },
   "whatisagv": {
     "title": "Ce que nous faisons",
-    "description": "AGV (AgriVolt Protocol) est un protocole Web3 adossé à des actifs réels qui intègre vergers, fermes solaires et nœuds décentralisés à la blockchain. Chaque unité d'actif génère un rendement réel, allant des récoltes fruitières à l'énergie solaire et à l'informatique de pointe."
+    "description": "AGV (AgriVolt NEXRUR) est un protocole Web3 adossé à des actifs réels qui intègre vergers, fermes solaires et nœuds décentralisés à la blockchain. Chaque unité d'actif génère un rendement réel, allant des récoltes fruitières à l'énergie solaire et à l'informatique de pointe."
   },
   "whyagv": {
     "title": "Pourquoi l’AGV est-il un modèle pour une infrastructure à rendement réel ?",
@@ -456,7 +456,7 @@
     },
     "whatIsAGV": {
       "title": "Qu'est-ce qu'un AGV ?",
-      "description": "AGV (AgriVolt Protocol) est un protocole Web3 adossé à des actifs réels qui intègre vergers, fermes solaires et nœuds décentralisés à la blockchain. Chaque unité d'actif génère un rendement réel, de la récolte de fruits à l'énergie solaire et à l'informatique de pointe. Les utilisateurs peuvent adopter des arbres fruitiers, investir dans l'énergie solaire et obtenir des récompenses tokenisées avec des rendements transparents. Implanté dans les principales régions agricoles et solaires de Chine, AGV rend le développement durable investissable, vérifiable et évolutif à l'échelle mondiale."
+      "description": "AGV (AgriVolt NEXRUR) est un protocole Web3 adossé à des actifs réels qui intègre vergers, fermes solaires et nœuds décentralisés à la blockchain. Chaque unité d'actif génère un rendement réel, de la récolte de fruits à l'énergie solaire et à l'informatique de pointe. Les utilisateurs peuvent adopter des arbres fruitiers, investir dans l'énergie solaire et obtenir des récompenses tokenisées avec des rendements transparents. Implanté dans les principales régions agricoles et solaires de Chine, AGV rend le développement durable investissable, vérifiable et évolutif à l'échelle mondiale."
     },
     "threeLayer": {
       "title": "Trois niveaux de rendement réel",
@@ -591,7 +591,7 @@
         "headquarters": "Siège social en Asie. Exploitation mondiale. Audité par des cabinets de renom.",
         "description": "Tous les actifs réels sont détenus par des SPV chinois agréés et rattachés, via une autorisation légale, à JLL Asset Ltd. (société des îles Vierges britanniques n° 2182436). L'émission et les opérations de NFT sont assurées par iJET Limited (NZBN : 9429049576290). La transition de la gouvernance vers l'AGV DAO basée aux îles Vierges britanniques est en cours."
       },
-      "copyright": "© 2025 AgriVolt Protocol. Tous droits réservés."
+      "copyright": "© 2025 AgriVolt NEXRUR. Tous droits réservés."
     },
     "admin": {
       "hero": {
@@ -1021,7 +1021,7 @@
       },
       "expansion": {
         "title": "Expansion mondiale",
-        "description": "Le parcours d'AGV Protocol pour devenir un leader mondial des solutions blockchain durables."
+        "description": "Le parcours d'AGV NEXRUR pour devenir un leader mondial des solutions blockchain durables."
       },
       "ama": {
         "title": "Session AMA communautaire",

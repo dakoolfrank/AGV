@@ -1,0 +1,46 @@
+# MM-Campaign 确定性规则引擎
+# 纯 if-else 规则，零 LLM 依赖
+
+price_deviation:
+  warn: 0.03          # 3% → 记录
+  act: 0.05           # 5% → 触发再平衡
+  emergency: 0.10     # 10% → 紧急撤流动性
+
+whale_trade:
+  warn_pct: 0.10      # 单笔 > 池子 10% → 警报
+  emergency_pct: 0.30  # 单笔 > 池子 30% → 紧急模式
+
+rebalance:
+  threshold: 0.05      # 两侧偏离 > 5% → 再平衡
+  max_amount_usd: 10.0 # 单次再平衡上限 $10
+
+heartbeat:
+  normal_interval_seconds: 30
+  degraded_interval_seconds: 300    # 连续无操作 1h 后降频
+  emergency_interval_seconds: 5
+  max_consecutive_noop: 120         # 120 次 noop → 降频
+
+daily_limits:
+  max_gas_usd: 5.0
+  max_trades: 50
+  max_rebalance_usd: 100.0
+
+state_transitions:
+  - from: IDLE
+    to: HEARTBEAT
+    trigger: timer
+  - from: HEARTBEAT
+    to: NOOP
+    trigger: no_anomaly
+  - from: HEARTBEAT
+    to: REBALANCE
+    trigger: price_deviation_act
+  - from: HEARTBEAT
+    to: EMERGENCY
+    trigger: price_deviation_emergency OR whale_trade_emergency
+  - from: EMERGENCY
+    to: COOLDOWN
+    trigger: withdraw_complete
+  - from: COOLDOWN
+    to: IDLE
+    trigger: cooldown_expired AND human_confirm

@@ -78,7 +78,7 @@ export function Footer({ backgroundClass = "bg-background", textColorClass = "te
             <div className="space-y-2">
               <h3 className="text-xl md:text-2xl font-bold">Stay Updated</h3>
               <p className="text-sm md:text-base text-muted-foreground">
-                Get the latest news, updates, and exclusive offers from AGV Protocol
+                Get the latest news, updates, and exclusive offers from AGV NEXRUR
               </p>
             </div>
             
@@ -109,13 +109,13 @@ export function Footer({ backgroundClass = "bg-background", textColorClass = "te
             <div className="flex items-center space-x-3">
               <Image
                 src="/logo.svg"
-                alt="AGV Protocol"
+                alt="AGV NEXRUR"
                 width={40}
                 height={40}
                 className="h-8 w-8 md:h-10 md:w-10"
               />
               <div>
-                <h2 className={`text-lg md:text-xl font-bold ${textColorClass}`}>AGV Protocol</h2>
+                <h2 className={`text-lg md:text-xl font-bold ${textColorClass}`}>AGV NEXRUR</h2>
                 <p className={`text-xs md:text-sm ${textColorClass === 'text-white' ? 'text-white/70' : 'text-muted-foreground'}`}>{t('footer.nftMinting')}</p>
               </div>
             </div>

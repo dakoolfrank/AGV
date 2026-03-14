@@ -33,12 +33,12 @@ contract DeployAgentRegistry is Script {
         AgentRegistry registry = new AgentRegistry(admin);
         console.log("AgentRegistry deployed at:", address(registry));
 
-        // 2. Register NFT contracts (grant NFT_CONTRACT_ROLE)
-        registry.registerNFTContract(computePass);
-        console.log("Registered ComputePass:", computePass);
+        // 2. Register NFT contracts with tokenId mapping (grant NFT_CONTRACT_ROLE)
+        registry.registerNFTContract(computePass, 1);
+        console.log("Registered ComputePass (tokenId=1):", computePass);
 
-        registry.registerNFTContract(solarPass);
-        console.log("Registered SolarPass:", solarPass);
+        registry.registerNFTContract(solarPass, 2);
+        console.log("Registered SolarPass (tokenId=2):", solarPass);
 
         vm.stopBroadcast();
 

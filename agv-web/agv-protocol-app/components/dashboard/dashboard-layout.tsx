@@ -390,7 +390,7 @@ export function DashboardLayout({
                 
                 <div className="flex items-center space-x-2">
                   <Shield className="h-6 w-6 text-primary" />
-                  <span className="font-bold text-xl hidden sm:block">AGV Protocol Admin</span>
+                  <span className="font-bold text-xl hidden sm:block">AGV NEXRUR Admin</span>
                   <span className="font-bold text-lg sm:hidden">AGV Admin</span>
                 </div>
               </div>

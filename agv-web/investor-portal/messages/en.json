@@ -29,11 +29,11 @@
     "overview": {
       "title": "Brand Overview",
       "visionTitle": "Vision",
-      "visionLine3": "AGV Protocol powers the world’s first decentralized AI Power ETF.",
+      "visionLine3": "AGV NEXRUR powers the world’s first decentralized AI Power ETF.",
       "visionLine1": "In the last century, oil fueled industrial wealth.",
       "visionLine2": "In this century, electricity + compute will fuel AI wealth.",
       "missionTitle": "Mission",
-      "missionText": "AGV Protocol redefines the Real-World Asset (RWA) category by bridging clean energy, artificial intelligence, and decentralized finance. More than a tokenized asset platform, AGV positions itself as the world's first decentralized AI Power ETF — an ecosystem where real electricity and compute capacity become liquid, yield-bearing digital assets.",
+      "missionText": "AGV NEXRUR redefines the Real-World Asset (RWA) category by bridging clean energy, artificial intelligence, and decentralized finance. More than a tokenized asset platform, AGV positions itself as the world's first decentralized AI Power ETF — an ecosystem where real electricity and compute capacity become liquid, yield-bearing digital assets.",
       "taglineTitle": "Brand Promise",
       "taglineLine1": "Energy x Compute",
       "taglineLine2": "Powering the AI Economy"
@@ -139,13 +139,13 @@
     "managementTeam": "Management Team"
   },
   "header": {
-    "title": "AGV Protocol",
+    "title": "AGV NEXRUR",
     "subtitle": "Investor Relations",
     "description": "Access exclusive investor resources, financial reports, and company updates"
   },
   "hero": {
     "title": "Investor Relations",
-    "subtitle": "AGV Protocol",
+    "subtitle": "AGV NEXRUR",
     "description": "Access exclusive investor resources, financial reports, and company updates",
     "loginButton": "Investor Login",
     "learnMore": "Learn More",
@@ -162,7 +162,7 @@
     "investmentMaterials": {
       "title": "Investment Materials",
       "subtitle": "Key Documents",
-      "description": "Review our comprehensive pitch deck and executive summary covering AGV Protocol's vision, technology, and market opportunity."
+      "description": "Review our comprehensive pitch deck and executive summary covering AGV NEXRUR's vision, technology, and market opportunity."
     },
     "execSummary": {
       "title": "Executive Summary",
@@ -181,7 +181,7 @@
     },
     "cta": {
       "title": "Ready to Invest in the Future?",
-      "description": "Join AGV Protocol in revolutionizing real-world asset tokenization through sustainable blockchain infrastructure.",
+      "description": "Join AGV NEXRUR in revolutionizing real-world asset tokenization through sustainable blockchain infrastructure.",
       "accessDataRoom": "Access Full Data Room"
     }
   },
@@ -208,9 +208,9 @@
     "brandkit": "Brand Kit",
     "contact": "Contact Us",
     "header": {
-      "title": "AGV Protocol Data Room",
+      "title": "AGV NEXRUR Data Room",
       "subtitle": "Investor Portal",
-      "description": "Comprehensive access to all AGV Protocol documentation, financial models, and investment materials."
+      "description": "Comprehensive access to all AGV NEXRUR documentation, financial models, and investment materials."
     },
     "overview": {
       "title": "Data Room Overview",
@@ -249,12 +249,12 @@
         },
         "decision": {
           "title": "Investment Decision",
-          "desc": "Finalize terms and join AGV Protocol"
+          "desc": "Finalize terms and join AGV NEXRUR"
         }
       }
     },
     "cta": {
-      "title": "Ready to Invest in AGV Protocol?",
+      "title": "Ready to Invest in AGV NEXRUR?",
       "description": "Join us in revolutionizing real-world asset tokenization through sustainable blockchain infrastructure.",
       "contact": "Contact Our Team",
       "viewFinancials": "View Financial Models"
@@ -279,8 +279,8 @@
   "docs": {
     "tech": {
       "whitepaper": {
-        "title": "AGV Protocol Whitepaper",
-        "description": "Detailed technical overview and system design of the AGV Protocol infrastructure."
+        "title": "AGV NEXRUR Whitepaper",
+        "description": "Detailed technical overview and system design of the AGV NEXRUR infrastructure."
       },
       "architectureDiagram": {
         "title": "System Architecture Diagram",
@@ -372,7 +372,7 @@
   "contact": {
     "title": "Contact & Investment Inquiries",
     "subtitle": "Get in Touch",
-    "description": "Ready to invest in AGV Protocol? Contact our team for detailed discussions and partnership opportunities.",
+    "description": "Ready to invest in AGV NEXRUR? Contact our team for detailed discussions and partnership opportunities.",
     "form": {
       "title": "Investment Inquiry Form",
       "firstName": "First Name",
@@ -421,7 +421,7 @@
   "nda": {
     "title": "NDA Request",
     "subtitle": "Request Non-Disclosure Agreement",
-    "description": "Request access to confidential AGV Protocol information by submitting an NDA request form.",
+    "description": "Request access to confidential AGV NEXRUR information by submitting an NDA request form.",
     "form": {
       "title": "NDA Request Form",
       "subtitle": "Request Non-Disclosure Agreement",
@@ -446,10 +446,10 @@
   "financials": {
     "title": "Financial Models & Projections",
     "subtitle": "Financial Documentation",
-    "description": "Access detailed financial models, valuation analyses, and revenue projections for AGV Protocol through comprehensive documentation.",
+    "description": "Access detailed financial models, valuation analyses, and revenue projections for AGV NEXRUR through comprehensive documentation.",
     "mainDocument": {
       "title": "Financial Audit and Valuation Index",
-      "description": "Comprehensive financial audit and valuation analysis for AGV Protocol, including detailed financial models, projections, and investment metrics."
+      "description": "Comprehensive financial audit and valuation analysis for AGV NEXRUR, including detailed financial models, projections, and investment metrics."
     },
     "metrics": {
       "title": "Key Financial Metrics",
@@ -461,9 +461,9 @@
     "documents": {
       "title": "Financial Documentation & Reports",
       "description": "Essential financial documents including token handbooks, integrated reports, cap tables, and whitepaper excerpts.",
-      "tokenHandbook": "AGV Protocol Token Handbook v2025",
-      "tokenHandbookDesc": "Comprehensive guide to AGV Protocol tokens, including utility, governance, and economic models.",
-      "integratedReport": "AGV Protocol – Integrated Financial & Valuation Report v2025.10",
+      "tokenHandbook": "AGV NEXRUR Token Handbook v2025",
+      "tokenHandbookDesc": "Comprehensive guide to AGV NEXRUR tokens, including utility, governance, and economic models.",
+      "integratedReport": "AGV NEXRUR – Integrated Financial & Valuation Report v2025.10",
       "integratedReportDesc": "Detailed integrated financial analysis and valuation report covering all aspects of the protocol's financial performance.",
       "capTable": "Cap Table BVI Shareholder Resolution V2025.10",
       "capTableDesc": "Official cap table documentation and shareholder resolution from BVI jurisdiction.",
@@ -505,7 +505,7 @@
     "header": {
       "title": "Technology & Architecture",
       "subtitle": "Technical Documentation",
-      "description": "Explore AGV Protocol's technical infrastructure, system architecture, and security audits through comprehensive documentation."
+      "description": "Explore AGV NEXRUR's technical infrastructure, system architecture, and security audits through comprehensive documentation."
     },
     "metrics": {
       "title": "Technical Metrics",
@@ -547,7 +547,7 @@
         "docs": {
           "powerToMint": {
             "title": "Power to Mint (Whitepaper Excerpt) V2025.10",
-            "description": "Technical whitepaper excerpt detailing the power to mint functionality and token generation mechanisms within the AGV Protocol ecosystem."
+            "description": "Technical whitepaper excerpt detailing the power to mint functionality and token generation mechanisms within the AGV NEXRUR ecosystem."
           },
           "rwaMapping": {
             "title": "RWA Mapping (Whitepaper Excerpt) v2025.10",
@@ -557,11 +557,11 @@
       },
       "github": {
         "title": "Links to GitHub (Smart Contracts)",
-        "description": "Access to smart contract repositories and development resources for AGV Protocol's blockchain infrastructure.",
+        "description": "Access to smart contract repositories and development resources for AGV NEXRUR's blockchain infrastructure.",
         "docs": {
           "profile": {
             "title": "GitHub Profile Link",
-            "description": "Direct access to AGV Protocol's GitHub profile containing smart contract repositories, development documentation, and source code."
+            "description": "Direct access to AGV NEXRUR's GitHub profile containing smart contract repositories, development documentation, and source code."
           }
         }
       },
@@ -570,20 +570,20 @@
         "description": "Comprehensive pitch deck collection covering different versions for business development, institutional investors, and specialized presentations.",
         "docs": {
           "bd": {
-            "title": "AGV Protocol Pitch Deck (BD-Version) v2025.10",
-            "description": "Business development focused pitch deck highlighting AGV Protocol's value proposition and market opportunities."
+            "title": "AGV NEXRUR Pitch Deck (BD-Version) v2025.10",
+            "description": "Business development focused pitch deck highlighting AGV NEXRUR's value proposition and market opportunities."
           },
           "institutional": {
-            "title": "AGV Protocol Pitch Deck (Institutional) v2025.10",
+            "title": "AGV NEXRUR Pitch Deck (Institutional) v2025.10",
             "description": "Institutional investor focused pitch deck with detailed financial projections and risk assessments."
           },
           "oilToAi": {
-            "title": "AGV Protocol Pitch Deck (Oil to AI Power Edition) v2025.10",
+            "title": "AGV NEXRUR Pitch Deck (Oil to AI Power Edition) v2025.10",
             "description": "Specialized pitch deck focusing on the transition from traditional oil-based power to AI-powered renewable energy solutions."
           },
           "general": {
-            "title": "AGV Protocol Pitch Deck v2025.10",
-            "description": "Comprehensive pitch deck covering all aspects of AGV Protocol including technology, market opportunity, and business model."
+            "title": "AGV NEXRUR Pitch Deck v2025.10",
+            "description": "Comprehensive pitch deck covering all aspects of AGV NEXRUR including technology, market opportunity, and business model."
           }
         }
       },
@@ -592,7 +592,7 @@
         "description": "Detailed technical documentation covering system architecture, process flows, and ecosystem design.",
         "docs": {
           "ecosystem": {
-            "title": "AGV Protocol Ecosystem V2025.10",
+            "title": "AGV NEXRUR Ecosystem V2025.10",
             "description": "Comprehensive ecosystem documentation covering technology architecture, process flows, and system integration points."
           }
         }
@@ -607,7 +607,7 @@
     "header": {
       "title": "Legal & Registration Documents",
       "subtitle": "Legal Documentation",
-      "description": "Review AGV Protocol's comprehensive legal structure, compliance status, and regulatory framework through detailed documentation."
+      "description": "Review AGV NEXRUR's comprehensive legal structure, compliance status, and regulatory framework through detailed documentation."
     },
     "compliance": {
       "title": "Compliance Status",
@@ -764,8 +764,8 @@
         "description": "Legal structure summary and verification documents including certified translations and legal summaries.",
         "docs": {
           "summary": {
-            "title": "AGV Protocol – Legal Structure Summary",
-            "description": "Comprehensive legal structure summary outlining the complete corporate and legal framework of AGV Protocol."
+            "title": "AGV NEXRUR – Legal Structure Summary",
+            "description": "Comprehensive legal structure summary outlining the complete corporate and legal framework of AGV NEXRUR."
           },
           "naati": {
             "title": "NAATI Certified Translator Chinese into English Certificate",
@@ -780,13 +780,13 @@
     }
   },
   "footer": {
-    "company": "AGV Protocol",
+    "company": "AGV NEXRUR",
     "description": "Bridging the gap between real-world assets and blockchain technology through innovative IoT integration and sustainable practices.",
     "quickLinks": "Quick Links",
     "resources": "Resources",
     "dataRoom": "Data Room",
     "privacyPolicy": "Privacy Policy",
-    "copyright": "© 2025 AGV Protocol. All rights reserved."
+    "copyright": "© 2025 AGV NEXRUR. All rights reserved."
   },
   "error": {
     "pageNotFound": "Page Not Found",
@@ -799,10 +799,10 @@
     "header": {
       "title": "DePIN Verification",
       "subtitle": "Decentralized Physical Infrastructure Network",
-      "description": "Comprehensive verification documentation of AGV Protocol's physical infrastructure development, agricultural implementation, and renewable energy integration through detailed visual and video evidence."
+      "description": "Comprehensive verification documentation of AGV NEXRUR's physical infrastructure development, agricultural implementation, and renewable energy integration through detailed visual and video evidence."
     },
     "main": {
-      "title": "DePIN Verification Index - AGV Protocol v2025.10",
+      "title": "DePIN Verification Index - AGV NEXRUR v2025.10",
       "description": "Comprehensive DePIN (Decentralized Physical Infrastructure Network) verification documentation covering land development, infrastructure implementation, and agricultural-photovoltaic integration processes."
     },
     "metrics": {
@@ -868,11 +868,11 @@
     "header": {
       "title": "ESG & Real-World Asset Proof",
       "subtitle": "Sustainability & Impact",
-      "description": "Explore AGV Protocol's environmental impact, sustainability initiatives, and real-world asset verification through comprehensive documentation."
+      "description": "Explore AGV NEXRUR's environmental impact, sustainability initiatives, and real-world asset verification through comprehensive documentation."
     },
     "main": {
       "title": "ESG & Sustainability Impact Report",
-      "description": "Comprehensive assessment of AGV Protocol's environmental impact, sustainability initiatives, and real-world asset verification."
+      "description": "Comprehensive assessment of AGV NEXRUR's environmental impact, sustainability initiatives, and real-world asset verification."
     },
     "metrics": {
       "title": "ESG Performance Metrics",
@@ -975,7 +975,7 @@
         "docs": {
           "energy": {
             "title": "Zhongnan Group Energy Cooperation Agreement",
-            "description": "Strategic energy cooperation agreement between AGV Protocol and Zhongnan Group."
+            "description": "Strategic energy cooperation agreement between AGV NEXRUR and Zhongnan Group."
           },
           "yichuan": {
             "title": "Zhongnan Group Yichuan Cooperation Agreement",
@@ -993,7 +993,7 @@
     "header": {
       "title": "Sales & Marketing",
       "subtitle": "Sales Strategy & Partnerships",
-      "description": "Explore AGV Protocol's sales strategies, market positioning, and strategic partnerships through comprehensive documentation."
+      "description": "Explore AGV NEXRUR's sales strategies, market positioning, and strategic partnerships through comprehensive documentation."
     },
     "mainDoc": {
       "title": "Product Timeline & Whitepaper Excerpts v2025.10",
@@ -1028,7 +1028,7 @@
         "docs": {
           "pusu": {
             "title": "朴素资本管理有限公司投资意向书",
-            "description": "Investment letter of intent from Pu Su Capital Management Co., Ltd. expressing interest in AGV Protocol investment opportunities."
+            "description": "Investment letter of intent from Pu Su Capital Management Co., Ltd. expressing interest in AGV NEXRUR investment opportunities."
           },
           "guopeng": {
             "title": "國鵬投資管理有限公司戰略合作意向書",
@@ -1042,11 +1042,11 @@
     "header": {
       "title": "Management Team",
       "subtitle": "Leadership & Governance",
-      "description": "Meet AGV Protocol's leadership team and explore our governance structure through comprehensive documentation."
+      "description": "Meet AGV NEXRUR's leadership team and explore our governance structure through comprehensive documentation."
     },
     "mainDoc": {
-      "title": "AGV Protocol Global Management and Governance Overview 2025",
-      "description": "Comprehensive overview of AGV Protocol's global management structure and governance framework, including leadership roles and organizational structure."
+      "title": "AGV NEXRUR Global Management and Governance Overview 2025",
+      "description": "Comprehensive overview of AGV NEXRUR's global management structure and governance framework, including leadership roles and organizational structure."
     },
     "expertise": {
       "title": "Team Expertise",

@@ -92,22 +92,22 @@ export default function FinancialsPage() {
         },
         {
           title: "Balance Sheet Original Copy.pdf",
-          description: "AGV Protocol balance sheet as of October 2025",
+          description: "AGV NEXRUR balance sheet as of October 2025",
           url: "https://drive.google.com/file/d/10ioydWY8LNwX8pX22nvFZeagNvR6P81j/view"
         },
         {
           title: "Balance Sheet OCT2025.pdf",
-          description: "AGV Protocol balance sheet as of October 2025",
+          description: "AGV NEXRUR balance sheet as of October 2025",
           url: "https://drive.google.com/file/d/1IJmdiazPVJuHNONdtlOEON20Zy9nQqmA/view"
         },
         {
           title: "Income Statement Original Copy.pdf",
-          description: "AGV Protocol income statement for the period ending October 2025",
+          description: "AGV NEXRUR income statement for the period ending October 2025",
           url: "https://drive.google.com/file/d/1WCPiUKrYpV5nkgERwuO546q9_WrloZJO/view"
         },
         {
           title: "Income Statement OCT2025.pdf",
-          description: "AGV Protocol income statement for the period ending October 2025",
+          description: "AGV NEXRUR income statement for the period ending October 2025",
           url: "https://drive.google.com/file/d/1k_RdnenfxfBXpvsZ1xEBo1pXPNLZIj-d/view"
         }
       ]
@@ -165,7 +165,7 @@ export default function FinancialsPage() {
         },
         {
           title: "AGV_Protocol_–_Integrated_Financial_&_Valuation_Report_v2025.10",
-          description: "Integrated financial and valuation report for AGV Protocol",
+          description: "Integrated financial and valuation report for AGV NEXRUR",
           url: "https://drive.google.com/file/d/116klZMugB6RTx48Ne0nsM-haU_I9T3Ei/view"
         }
       ]

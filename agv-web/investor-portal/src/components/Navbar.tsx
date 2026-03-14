@@ -34,13 +34,13 @@ export default function Navbar() {
             >
               <Image 
                 src="/logo.png" 
-                alt="AGV Protocol Logo" 
+                alt="AGV NEXRUR Logo" 
                 width={32}
                 height={32}
                 className="w-full h-full object-contain"
               />
             </motion.div>
-            <span className="text-xl font-semibold text-foreground">AGV Protocol</span>
+            <span className="text-xl font-semibold text-foreground">AGV NEXRUR</span>
           </Link>
 
           {/* Desktop Navigation */}

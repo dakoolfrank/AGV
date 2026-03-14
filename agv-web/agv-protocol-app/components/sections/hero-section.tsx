@@ -67,7 +67,7 @@ export function HeroSection({ className }: HeroSectionProps) {
               </Badge>
               
               <h1 className="text-4xl lg:text-6xl font-bold tracking-tight">
-                AGV Protocol
+                AGV NEXRUR
                 <span className="text-primary block">NFT Ecosystem</span>
               </h1>
               
@@ -120,14 +120,14 @@ export function HeroSection({ className }: HeroSectionProps) {
                       <div className="w-16 h-16 mx-auto rounded-full bg-primary/20 flex items-center justify-center">
                         <Image 
                           src="/logo.svg" 
-                          alt="AGV Protocol" 
+                          alt="AGV NEXRUR" 
                           width={32} 
                           height={32}
                           className="rounded-lg"
                         />
                       </div>
                       <div>
-                        <h3 className="font-semibold">AGV Protocol</h3>
+                        <h3 className="font-semibold">AGV NEXRUR</h3>
                         <p className="text-sm text-muted-foreground">NFT Minting Platform</p>
                       </div>
                     </div>

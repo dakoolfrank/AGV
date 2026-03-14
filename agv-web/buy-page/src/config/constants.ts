@@ -1,4 +1,4 @@
-// Configuration constants for the AGV Protocol Presale System
+// Configuration constants for the AGV NEXRUR Presale System
 
 export const CONFIG = {
   // Thirdweb Configuration

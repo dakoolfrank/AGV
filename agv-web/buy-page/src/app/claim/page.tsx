@@ -1481,7 +1481,7 @@ function ClaimPageContent() {
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center mt-6">
                       <a
-                        href="https://discord.com/invite/JP9RtzM2SC"
+                        href="https://discord.com/invite/mJKTyqWtKe"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setSocialsJoined(true)}
@@ -1493,7 +1493,7 @@ function ClaimPageContent() {
                         {t('step1.joinDiscord')}
                       </a>
                       <a
-                        href="https://x.com/AgvProtocol"
+                        href="https://x.com/agvnexrur"
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => setSocialsJoined(true)}

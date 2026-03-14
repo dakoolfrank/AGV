@@ -38,7 +38,7 @@ export function Header() {
             <div className="shrink-0 flex items-center">
               <Image
                 src="/agv-logo.png"
-                alt="AGV Protocol"
+                alt="AGV NEXRUR"
                 width={32}
                 height={32}
                 className="mr-2 sm:mr-3"

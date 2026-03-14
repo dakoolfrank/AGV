@@ -23,13 +23,13 @@ const lato = Lato({
 });
 
 export const metadata: Metadata = {
-  title: "AGV Protocol - Investor Portal",
-  description: "Access comprehensive documentation, financial models, and technical resources for AGV Protocol's innovative blockchain infrastructure.",
-  keywords: ["AGV Protocol", "blockchain", "IoT", "real-world assets", "investment", "sustainability"],
-  authors: [{ name: "AGV Protocol" }],
+  title: "AGV NEXRUR - Investor Portal",
+  description: "Access comprehensive documentation, financial models, and technical resources for AGV NEXRUR's innovative blockchain infrastructure.",
+  keywords: ["AGV NEXRUR", "blockchain", "IoT", "real-world assets", "investment", "sustainability"],
+  authors: [{ name: "AGV NEXRUR" }],
   openGraph: {
-    title: "AGV Protocol - Investor Portal",
-    description: "Access comprehensive documentation, financial models, and technical resources for AGV Protocol's innovative blockchain infrastructure.",
+    title: "AGV NEXRUR - Investor Portal",
+    description: "Access comprehensive documentation, financial models, and technical resources for AGV NEXRUR's innovative blockchain infrastructure.",
     type: "website",
   },
 };

@@ -264,7 +264,7 @@ contract BondingCurve is AccessControl, ReentrancyGuard, Pausable {
         uint256 maxVestingDays
     ) external onlyRole(DEFAULT_ADMIN_ROLE) {
         require(baseRatio > 0, "Invalid base ratio");
-        require(minVestingDays <= maxVestingDays, "Invalid vesting range");
+        require(minVestingDays < maxVestingDays, "Invalid vesting range");
         require(discount <= 2000, "Discount too high"); // Max 20%
 
         curveParams = CurveParams({

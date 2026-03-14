@@ -5,8 +5,8 @@ import { useSearchParams } from 'next/navigation';
 import { CheckCircledIcon } from '@radix-ui/react-icons';
 import { useTranslations } from '@/lib/translation-provider';
 
-const DISCORD_LINK = 'https://discord.com/invite/JP9RtzM2SC';
-const TWITTER_LINK = 'https://x.com/AgvProtocol';
+const DISCORD_LINK = 'https://discord.com/invite/mJKTyqWtKe';
+const TWITTER_LINK = 'https://x.com/agvnexrur';
 
 interface SocialVerificationProps {
   address: string;

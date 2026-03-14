@@ -23,7 +23,7 @@ export function HeaderWithLanguageSwitcher({
           <div className="h-8 w-8 rounded-lg bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
             <span className="text-white font-bold text-sm">AGV</span>
           </div>
-          <span className="text-xl font-bold text-gray-900">AGV Protocol</span>
+          <span className="text-xl font-bold text-gray-900">AGV NEXRUR</span>
         </div>
         
         {/* Navigation */}

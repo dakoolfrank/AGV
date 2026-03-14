@@ -201,7 +201,7 @@ export function AdminAuthWrapper({ children }: AdminAuthWrapperProps) {
                     id="email"
                     type="email"
                     className="text-black"
-                    placeholder="admin@agvprotocol.com"
+                    placeholder="frank@agvnexrur.ai"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     onKeyPress={(e) => e.key === 'Enter' && sendMagicLink()}

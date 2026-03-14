@@ -1,1 +1,1 @@
-{"installCommand":"pnpm install --no-frozen-lockfile"}
+{"installCommand":"npx pnpm@9 install --no-frozen-lockfile"}

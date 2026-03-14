@@ -1,18 +1,17 @@
 // api/verify-share-nft.js
-import { NextResponse } from "next/server";
 
-export async function POST(req) {
+export default async function handler(req, res) {
   try {
-    const { tweetUrl } = await req.json();
+    const { tweetUrl } = req.body || {};
 
     if (!tweetUrl) {
-      return NextResponse.json({ isValid: false, reason: "Missing tweetUrl" });
+      return res.status(400).json({ isValid: false, reason: "Missing tweetUrl" });
     }
 
     // Extract tweet ID from URL
     const match = tweetUrl.match(/status\/(\d+)/);
     if (!match) {
-      return NextResponse.json({ isValid: false, reason: "Invalid tweet URL" });
+      return res.status(400).json({ isValid: false, reason: "Invalid tweet URL" });
     }
     const tweetId = match[1];
 
@@ -28,7 +27,7 @@ export async function POST(req) {
 
     const tweet = await resp.json();
     if (!tweet?.data) {
-      return NextResponse.json({ isValid: false, reason: "Tweet not found" });
+      return res.status(400).json({ isValid: false, reason: "Tweet not found" });
     }
 
     const text = tweet.data.text.toLowerCase();
@@ -40,8 +39,8 @@ export async function POST(req) {
 
     const valid = hasHashtags && hasMention && hasMedia;
 
-    return NextResponse.json({ isValid: valid });
+    return res.status(200).json({ isValid: valid });
   } catch (err) {
-    return NextResponse.json({ isValid: false, error: err.message });
+    return res.status(500).json({ isValid: false, error: err.message });
   }
 }

@@ -156,7 +156,7 @@ export default function AboutPage() {
                   {t('about.story.title') || 'OUR STORY'}
                 </h2>
                 <p className="text-[#223256] text-sm sm:text-base leading-relaxed">
-                  {t('about.story.description') || 'In an AI-powered era, electricity and compute demand is growing exponentially. AGV Protocol addresses this by pairing orchards, solar farms, and edge compute mini-grids with IoT telemetry and on-chain verification to create sustainable, yield-backed tokens. Our initial assets are in Shaanxi, China, with expansion plans across Asia and beyond.'}
+                  {t('about.story.description') || 'In an AI-powered era, electricity and compute demand is growing exponentially. AGV NEXRUR addresses this by pairing orchards, solar farms, and edge compute mini-grids with IoT telemetry and on-chain verification to create sustainable, yield-backed tokens. Our initial assets are in Shaanxi, China, with expansion plans across Asia and beyond.'}
                 </p>
               </div>
             </div>

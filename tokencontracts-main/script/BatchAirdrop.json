@@ -1,0 +1,77 @@
+{
+  "_comment": "BatchAirdrop 收件人名单 — pgvt/sgvt 为整数（单位：个），name 仅备注用",
+  "recipients": [
+    {
+      "name": "李丹铃",
+      "wallet": "0x524fcd94927c29fe5e2ff3c4363b2be3c0fe3414",
+      "pgvt": 100000,
+      "sgvt": 100000
+    },
+    {
+      "name": "季青山",
+      "wallet": "0x91f72a1c738e67dc7f23cf10c1b621d24250a7f5",
+      "pgvt": 100000,
+      "sgvt": 100000
+    },
+    {
+      "name": "裴宇华",
+      "wallet": "0x2039f74e93528c1e434d7890ab57ea0ce94e042b",
+      "pgvt": 10000,
+      "sgvt": 10000
+    },
+    {
+      "name": "连晓艳",
+      "wallet": "0x01a00247dd0425c2f5b494e3fd7af9218cf2c7a8",
+      "pgvt": 10000,
+      "sgvt": 10000
+    },
+    {
+      "name": "樊志娟",
+      "wallet": "0x4d491e033fcb832624ced94bca4567cedf82202b",
+      "pgvt": 10000,
+      "sgvt": 10000
+    },
+    {
+      "name": "周大森",
+      "wallet": "0xa2b48c8b8dda001246c9f98815c3a851fde6a05e",
+      "pgvt": 100000,
+      "sgvt": 100000
+    },
+    {
+      "name": "吴丽莉",
+      "wallet": "0x1587932a6c2d90b7beb4536b63d3f17b7c1b1e46",
+      "pgvt": 100000,
+      "sgvt": 100000
+    },
+    {
+      "name": "赵晓宇",
+      "wallet": "0x1cc443605c98d951bcf4122a9168d8002ce92980",
+      "pgvt": 100000,
+      "sgvt": 100000
+    },
+    {
+      "name": "高凯",
+      "wallet": "0x77165b07a6a5392b28f2d2905b44453aaebf8026",
+      "pgvt": 100000,
+      "sgvt": 100000
+    },
+    {
+      "name": "柯兆民",
+      "wallet": "0xa61ce04e01943145626efdae37e72570ab5994e3",
+      "pgvt": 0,
+      "sgvt": 20000000
+    },
+    {
+      "name": "彭金平",
+      "wallet": "0x6a75dcdf3abf38c886f656d22e14d9a972dfca60",
+      "pgvt": 100000,
+      "sgvt": 200000
+    },
+    {
+      "name": "刘志钱",
+      "wallet": "0x199b5fcc49092de043397866b11008f4cb60ce3a",
+      "pgvt": 0,
+      "sgvt": 300000
+    }
+  ]
+}

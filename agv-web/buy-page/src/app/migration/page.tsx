@@ -554,7 +554,7 @@ export default function MigrationPage() {
                           </ol>
                           
                           <a
-                            href={`https://discord.com/channels/1408300019513294938/1410983530996961311`}
+                            href={`https://discord.gg/mJKTyqWtKe`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block w-full px-6 py-3 bg-indigo-500 text-white rounded-xl text-center font-semibold hover:bg-indigo-600 transition-all duration-300 mt-4"

@@ -50,7 +50,7 @@
   },
   "whatisagv": {
     "title": "Was wir tun",
-    "description": "AGV Protocol ist ein dePIN RWA-Infrastrukturprotokoll, das Obstgärten, Solarparks und Edge-Compute-Cluster in verifizierbare, ertragsbasierte digitale Assets verwandelt. Jede Energie- und Rechenleistung wird von IoT-Geräten überwacht, in der Blockchain verankert und erst dann tokenisiert. Dieser Power-to-Mint-Mechanismus gewährleistet eine 1:1-Verbindung zwischen physischer Produktivität und digitalem Wert und erschließt so nachhaltige Renditen für On-Chain-Investoren. AGV verankert derzeit Erträge in verifizierten Obstgärten, Solaranlagen und Rechenknoten in Shaanxi, China – der weltweit größten Energie- und KI-Infrastrukturzone."
+    "description": "AGV NEXRUR ist ein dePIN RWA-Infrastrukturprotokoll, das Obstgärten, Solarparks und Edge-Compute-Cluster in verifizierbare, ertragsbasierte digitale Assets verwandelt. Jede Energie- und Rechenleistung wird von IoT-Geräten überwacht, in der Blockchain verankert und erst dann tokenisiert. Dieser Power-to-Mint-Mechanismus gewährleistet eine 1:1-Verbindung zwischen physischer Produktivität und digitalem Wert und erschließt so nachhaltige Renditen für On-Chain-Investoren. AGV verankert derzeit Erträge in verifizierten Obstgärten, Solaranlagen und Rechenknoten in Shaanxi, China – der weltweit größten Energie- und KI-Infrastrukturzone."
   },
   "whyagv": {
     "title": "Warum ist AGV eine Blaupause für eine Infrastruktur mit echtem Ertrag?",
@@ -175,7 +175,7 @@
     }
   },
   "footer": {
-    "copyright": "© 2024 AGV Protocol. Alle Rechte vorbehalten.",
+    "copyright": "© 2024 AGV NEXRUR. Alle Rechte vorbehalten.",
     "privacy": "Datenschutzrichtlinie",
     "terms": "Servicebedingungen",
     "contact": "Kontaktieren Sie uns",
@@ -415,7 +415,7 @@
       "title": "Erste Schritte",
       "mintNFTs": {
         "title": "Mint NFTs",
-        "description": "Mint AGV Protocol NFTs über mehrere Ketten hinweg",
+        "description": "Mint AGV NEXRUR NFTs über mehrere Ketten hinweg",
         "button": "Beginnen Sie mit dem Prägen"
       },
       "stakeEarn": {
@@ -456,7 +456,7 @@
     },
     "whatIsAGV": {
       "title": "Was ist AGV?",
-      "description": "AGV (AgriVolt Protocol) ist ein realwertbasiertes Web3-Protokoll, das Obstgärten, Solarparks und dezentrale Knoten in die Blockchain integriert. Jede Anlageeinheit generiert reale Erträge von der Obsternte bis hin zu Solarenergie und Edge Computing. Nutzer können Obstbäume adoptieren, sich an Solarenergie beteiligen und tokenisierte Belohnungen mit transparenten Renditen erhalten. AGV ist in Chinas führenden Agrar- und Solarregionen verwurzelt und macht Nachhaltigkeit investierbar, überprüfbar und global skalierbar."
+      "description": "AGV (AgriVolt NEXRUR) ist ein realwertbasiertes Web3-Protokoll, das Obstgärten, Solarparks und dezentrale Knoten in die Blockchain integriert. Jede Anlageeinheit generiert reale Erträge von der Obsternte bis hin zu Solarenergie und Edge Computing. Nutzer können Obstbäume adoptieren, sich an Solarenergie beteiligen und tokenisierte Belohnungen mit transparenten Renditen erhalten. AGV ist in Chinas führenden Agrar- und Solarregionen verwurzelt und macht Nachhaltigkeit investierbar, überprüfbar und global skalierbar."
     },
     "threeLayer": {
       "title": "Drei Ebenen der realen Rendite",
@@ -1021,11 +1021,11 @@
       },
       "expansion": {
         "title": "Globale Expansion",
-        "description": "Der Weg von AGV Protocol zum weltweit führenden Anbieter nachhaltiger Blockchain-Lösungen."
+        "description": "Der Weg von AGV NEXRUR zum weltweit führenden Anbieter nachhaltiger Blockchain-Lösungen."
       },
       "ama": {
         "title": "Community-AMA-Sitzung",
-        "description": "Nehmen Sie an unserer monatlichen „Ask Me Anything“-Sitzung mit dem AGV Protocol-Team teil und erhalten Sie Antworten auf Ihre Fragen."
+        "description": "Nehmen Sie an unserer monatlichen „Ask Me Anything“-Sitzung mit dem AGV NEXRUR-Team teil und erhalten Sie Antworten auf Ihre Fragen."
       },
       "partnership": {
         "title": "Partnerschaftsankündigung",
@@ -1109,7 +1109,7 @@
     },
     "story": {
       "title": "UNSERE GESCHICHTE",
-      "description": "Im Zeitalter künstlicher Intelligenz wächst der Strom- und Rechenleistungsbedarf exponentiell. AGV Protocol begegnet diesem Problem, indem es Obstgärten, Solarparks und Edge-Computing-Mininetze mit IoT-Telemetrie und On-Chain-Verifizierung kombiniert, um nachhaltige, ertragsstarke Token zu schaffen. Unsere ersten Anlagen befinden sich in Shaanxi, China, und wir planen die Expansion in ganz Asien und darüber hinaus."
+      "description": "Im Zeitalter künstlicher Intelligenz wächst der Strom- und Rechenleistungsbedarf exponentiell. AGV NEXRUR begegnet diesem Problem, indem es Obstgärten, Solarparks und Edge-Computing-Mininetze mit IoT-Telemetrie und On-Chain-Verifizierung kombiniert, um nachhaltige, ertragsstarke Token zu schaffen. Unsere ersten Anlagen befinden sich in Shaanxi, China, und wir planen die Expansion in ganz Asien und darüber hinaus."
     },
     "whatWeBuild": {
       "cleanEnergy": {

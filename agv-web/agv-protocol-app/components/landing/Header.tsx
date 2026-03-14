@@ -17,13 +17,13 @@ export const Header: React.FC = () => {
           <FastLink href={`/${locale}/landing`} className="flex items-center space-x-2">
             <Image
               src="/logo.png"
-              alt="AGV Protocol"
+              alt="AGV NEXRUR"
               width={32}
               height={32}
               className="rounded-lg"
             />
           </FastLink>
-          <span className="text-white font-semibold text-sm sm:text-lg">AGRIVOLT PROTOCOL</span>
+          <span className="text-white font-semibold text-sm sm:text-lg">AGRIVOLT NEXRUR</span>
         </div>
 
         {/* Navigation */}

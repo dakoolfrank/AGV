@@ -52,6 +52,11 @@ export default function MintPage() {
           </div>
         </div>
 
+        {/* Add Token to Wallet — prominent position */}
+        <div className="max-w-6xl mx-auto mb-6 sm:mb-8 flex justify-center">
+          <AddTokenGroup />
+        </div>
+
         {/* Official Contract Addresses */}
         <div className="max-w-6xl mx-auto mb-6 sm:mb-8 rounded-2xl border border-white/10 bg-[#1a2a4a]/50 p-4 sm:p-6">
           <h3 className="text-sm sm:text-base font-semibold text-white mb-3">Official Contracts (BSC Mainnet)</h3>
@@ -79,7 +84,6 @@ export default function MintPage() {
               </a>
             </div>
           </div>
-          <AddTokenGroup className="mt-4" />
         </div>
 
         {/* Minting Interface */}

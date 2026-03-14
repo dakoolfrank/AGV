@@ -81,7 +81,7 @@ export const SpendingCapModal: React.FC<SpendingCapModalProps> = ({
             Estimated changes
           </h4>
           <p style={{ color: "#d1d5db", fontSize: "0.875rem", marginBottom: "1rem" }}>
-            You are giving AGV Protocol the permission to spend this amount from your account.
+            You are giving AGV NEXRUR the permission to spend this amount from your account.
           </p>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
             <span style={{ color: "#d1d5db", fontSize: "0.875rem" }}>Spending cap</span>

@@ -291,12 +291,14 @@ contract DAOController is AccessControl, Pausable {
     function getVotingPower(address account, ProposalCategory category) public view returns (uint256) {
         // For asset-level decisions, check NFT ownership
         if (category == ProposalCategory.ASSET_VERIFICATION) {
-            // TODO: Check NFT balance
-            return 1; // 1 vote per NFT
+            // TODO: Integrate with SeedPass/TreePass/SolarPass/ComputePass NFT contracts
+            // Should return: IERC721(nftContract).balanceOf(account)
+            revert("Voting power not yet implemented for ASSET_VERIFICATION");
         }
         // For protocol-level decisions, check GVT stake
-        // TODO: Check staked GVT balance
-        return 1000 * 10 ** 18; // Placeholder
+        // TODO: Integrate with GVT staking contract
+        // Should return: IStaking(stakingContract).stakedBalance(account)
+        revert("Voting power not yet implemented");
     }
 
     /**

@@ -68,7 +68,7 @@ contract AgentRegistryTest is Test {
     event QuotaBatchSet(address indexed nftContract, uint256 agentCount);
     event QuotaDeducted(address indexed agent, address indexed nftContract, uint256 amount, uint256 remaining);
     event AgentRevoked(address indexed agent, address indexed nftContract);
-    event NFTContractRegistered(address indexed nftContract);
+    event NFTContractRegistered(address indexed nftContract, uint256 indexed tokenId);
     event NFTContractUnregistered(address indexed nftContract);
 
     function setUp() public {
@@ -80,9 +80,9 @@ contract AgentRegistryTest is Test {
         mockNFT = new MockNFTContract(address(registry));
         mockNFT2 = new MockNFTContract(address(registry));
 
-        // Register mock NFT contracts
-        registry.registerNFTContract(address(mockNFT));
-        registry.registerNFTContract(address(mockNFT2));
+        // Register mock NFT contracts with tokenId mapping
+        registry.registerNFTContract(address(mockNFT), 1);
+        registry.registerNFTContract(address(mockNFT2), 2);
 
         vm.stopPrank();
     }
@@ -468,11 +468,13 @@ contract AgentRegistryTest is Test {
         MockNFTContract mockNFT3 = new MockNFTContract(address(registry));
 
         vm.prank(admin);
-        vm.expectEmit(true, false, false, false);
-        emit NFTContractRegistered(address(mockNFT3));
-        registry.registerNFTContract(address(mockNFT3));
+        vm.expectEmit(true, true, false, false);
+        emit NFTContractRegistered(address(mockNFT3), 3);
+        registry.registerNFTContract(address(mockNFT3), 3);
 
         assertTrue(registry.hasRole(NFT_CONTRACT_ROLE, address(mockNFT3)));
+        assertEq(registry.getTokenId(address(mockNFT3)), 3);
+        assertEq(registry.getNFTContract(3), address(mockNFT3));
     }
 
     function test_UnregisterNFTContract() public {
@@ -487,7 +489,27 @@ contract AgentRegistryTest is Test {
     function test_RegisterNFTContract_RevertsZeroAddress() public {
         vm.prank(admin);
         vm.expectRevert(AgentRegistry.ZeroAddress.selector);
-        registry.registerNFTContract(address(0));
+        registry.registerNFTContract(address(0), 3);
+    }
+
+    function test_RegisterNFTContract_RevertsInvalidTokenId() public {
+        MockNFTContract mockNFT3 = new MockNFTContract(address(registry));
+        vm.prank(admin);
+        vm.expectRevert(AgentRegistry.InvalidTokenId.selector);
+        registry.registerNFTContract(address(mockNFT3), 0);
+    }
+
+    function test_RegisterNFTContract_RevertsDuplicateNFT() public {
+        vm.prank(admin);
+        vm.expectRevert(abi.encodeWithSelector(AgentRegistry.NFTContractAlreadyRegistered.selector, address(mockNFT)));
+        registry.registerNFTContract(address(mockNFT), 99);
+    }
+
+    function test_RegisterNFTContract_RevertsDuplicateTokenId() public {
+        MockNFTContract mockNFT3 = new MockNFTContract(address(registry));
+        vm.prank(admin);
+        vm.expectRevert(abi.encodeWithSelector(AgentRegistry.TokenIdAlreadyRegistered.selector, 1));
+        registry.registerNFTContract(address(mockNFT3), 1);
     }
 
     // ════════════════════════════════════════════════════════════════════
@@ -557,6 +579,139 @@ contract AgentRegistryTest is Test {
         registry.setQuota(agentA, address(mockNFT), 5);
         assertEq(registry.getAgentCount(), 2);
         vm.stopPrank();
+    }
+
+    // ════════════════════════════════════════════════════════════════════
+    //                    ERC1155 CERTIFICATION TESTS
+    // ════════════════════════════════════════════════════════════════════
+
+    function test_SetQuota_MintsERC1155() public {
+        vm.prank(admin);
+        registry.setQuota(agentA, address(mockNFT), 10);
+        // agentA should now hold 1x tokenId=1 (mockNFT's tokenId)
+        assertEq(registry.balanceOf(agentA, 1), 1);
+        assertEq(registry.totalSupply(1), 1);
+    }
+
+    function test_SetQuota_DoesNotDoubleMint() public {
+        vm.startPrank(admin);
+        registry.setQuota(agentA, address(mockNFT), 10);
+        registry.setQuota(agentA, address(mockNFT), 20);
+        vm.stopPrank();
+        // Still only 1 token
+        assertEq(registry.balanceOf(agentA, 1), 1);
+        assertEq(registry.totalSupply(1), 1);
+    }
+
+    function test_SetQuota_MintsForEachNFTContract() public {
+        vm.startPrank(admin);
+        registry.setQuota(agentA, address(mockNFT), 10);
+        registry.setQuota(agentA, address(mockNFT2), 5);
+        vm.stopPrank();
+        // tokenId 1 for mockNFT, tokenId 2 for mockNFT2
+        assertEq(registry.balanceOf(agentA, 1), 1);
+        assertEq(registry.balanceOf(agentA, 2), 1);
+    }
+
+    function test_BatchSetQuota_MintsERC1155() public {
+        address[] memory agents = new address[](2);
+        agents[0] = agentA;
+        agents[1] = agentB;
+        uint256[] memory quotas = new uint256[](2);
+        quotas[0] = 10;
+        quotas[1] = 20;
+
+        vm.prank(admin);
+        registry.batchSetQuota(agents, address(mockNFT), quotas);
+
+        assertEq(registry.balanceOf(agentA, 1), 1);
+        assertEq(registry.balanceOf(agentB, 1), 1);
+        assertEq(registry.totalSupply(1), 2);
+    }
+
+    function test_RevokeAgent_BurnsERC1155() public {
+        vm.startPrank(admin);
+        registry.setQuota(agentA, address(mockNFT), 10);
+        assertEq(registry.balanceOf(agentA, 1), 1);
+
+        registry.revokeAgent(agentA, address(mockNFT));
+        vm.stopPrank();
+
+        assertEq(registry.balanceOf(agentA, 1), 0);
+        assertEq(registry.totalSupply(1), 0);
+    }
+
+    function test_RevokeAgent_PreservesOtherCertifications() public {
+        vm.startPrank(admin);
+        registry.setQuota(agentA, address(mockNFT), 10);
+        registry.setQuota(agentA, address(mockNFT2), 5);
+        registry.revokeAgent(agentA, address(mockNFT));
+        vm.stopPrank();
+
+        assertEq(registry.balanceOf(agentA, 1), 0); // burned
+        assertEq(registry.balanceOf(agentA, 2), 1); // untouched
+    }
+
+    function test_Soulbound_BlocksTransfer() public {
+        vm.prank(admin);
+        registry.setQuota(agentA, address(mockNFT), 10);
+
+        vm.prank(agentA);
+        vm.expectRevert(AgentRegistry.SoulboundTransfer.selector);
+        registry.safeTransferFrom(agentA, agentB, 1, 1, "");
+    }
+
+    function test_Soulbound_BlocksBatchTransfer() public {
+        vm.prank(admin);
+        registry.setQuota(agentA, address(mockNFT), 10);
+
+        uint256[] memory ids = new uint256[](1);
+        ids[0] = 1;
+        uint256[] memory values = new uint256[](1);
+        values[0] = 1;
+
+        vm.prank(agentA);
+        vm.expectRevert(AgentRegistry.SoulboundTransfer.selector);
+        registry.safeBatchTransferFrom(agentA, agentB, ids, values, "");
+    }
+
+    function test_SupportsInterface_ERC1155() public view {
+        // ERC1155 interface id = 0xd9b67a26
+        assertTrue(registry.supportsInterface(0xd9b67a26));
+    }
+
+    function test_SupportsInterface_AccessControl() public view {
+        // IAccessControl interface id = 0x7965db0b
+        assertTrue(registry.supportsInterface(0x7965db0b));
+    }
+
+    function test_TotalSupply_TracksActiveCerts() public {
+        vm.startPrank(admin);
+        registry.setQuota(agentA, address(mockNFT), 10);
+        registry.setQuota(agentB, address(mockNFT), 5);
+        assertEq(registry.totalSupply(1), 2);
+
+        registry.revokeAgent(agentA, address(mockNFT));
+        assertEq(registry.totalSupply(1), 1);
+        vm.stopPrank();
+    }
+
+    function test_TokenURI() public {
+        vm.startPrank(admin);
+        registry.setBaseURI("https://api.agv.io/cert/");
+        registry.setTokenURI(1, "compute.json");
+        vm.stopPrank();
+
+        assertEq(registry.uri(1), "https://api.agv.io/cert/compute.json");
+    }
+
+    function test_UnregisterNFTContract_ClearsMappings() public {
+        vm.prank(admin);
+        registry.unregisterNFTContract(address(mockNFT));
+
+        assertFalse(registry.hasRole(NFT_CONTRACT_ROLE, address(mockNFT)));
+        assertEq(registry.getTokenId(address(mockNFT)), 0);
+        assertEq(registry.getNFTContract(1), address(0));
     }
 
     // ════════════════════════════════════════════════════════════════════
@@ -679,9 +834,9 @@ contract AgentRegistryIntegrationTest is Test {
         computePass.grantAgentRole(agentB);
         solarPass.grantAgentRole(agentA);
 
-        // Register NFT contracts in AgentRegistry
-        registry.registerNFTContract(address(computePass));
-        registry.registerNFTContract(address(solarPass));
+        // Register NFT contracts in AgentRegistry with tokenId mapping
+        registry.registerNFTContract(address(computePass), 1);
+        registry.registerNFTContract(address(solarPass), 2);
 
         // Set agent quotas
         registry.setQuota(agentA, address(computePass), 5);

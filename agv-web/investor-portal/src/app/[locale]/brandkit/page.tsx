@@ -136,7 +136,7 @@ export default function BrandKitPage() {
                   <div className="bg-white/50 backdrop-blur-sm rounded-xl sm:rounded-2xl p-6 sm:p-8 border border-white/20">
                     <h4 className="text-lg sm:text-xl font-semibold mb-3 sm:mb-4 text-foreground">{t('brandkit.overview.missionTitle')}</h4>
                     <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
-                      AGV Protocol redefines the Real-World Asset (RWA) category by bridging
+                      AGV NEXRUR redefines the Real-World Asset (RWA) category by bridging
                       clean energy, artificial intelligence, and decentralized finance. More than a
                       tokenized asset platform, AGV positions itself as the world&apos;s first
                       decentralized AI Power ETF — an ecosystem where real electricity and
@@ -186,7 +186,7 @@ export default function BrandKitPage() {
                       <div className="w-32 h-32 sm:w-40 sm:h-40 bg-gradient-to-br from-white to-gray-50 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg border border-gray-200">
                         <Image
                           src="/assets/Agv-logo.png"
-                          alt="AGV Protocol Logomark"
+                          alt="AGV NEXRUR Logomark"
                           width={100}
                           height={100}
                           className="w-20 h-20 sm:w-24 sm:h-24 object-contain"
@@ -199,7 +199,7 @@ export default function BrandKitPage() {
                       <div className="w-48 h-24 sm:w-64 sm:h-32 bg-gradient-to-br from-white to-gray-50 rounded-2xl sm:rounded-3xl flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg border border-gray-200">
                         <Image
                           src="/assets/Agv-logo.png"
-                          alt="AGV Protocol Primary Logo"
+                          alt="AGV NEXRUR Primary Logo"
                           width={150}
                           height={75}
                           className="h-12 sm:h-16 object-contain"
@@ -219,7 +219,7 @@ export default function BrandKitPage() {
                       <div className="w-24 h-24 sm:w-32 sm:h-32 bg-white rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg border border-gray-200">
                         <Image
                           src="/assets/Agv-logo.png"
-                          alt="AGV Protocol on White"
+                          alt="AGV NEXRUR on White"
                           width={80}
                           height={80}
                           className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
@@ -232,7 +232,7 @@ export default function BrandKitPage() {
                       <div className="w-24 h-24 sm:w-32 sm:h-32 bg-[#223256] rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                         <Image
                           src="/assets/Agv-logo.png"
-                          alt="AGV Protocol on Navy"
+                          alt="AGV NEXRUR on Navy"
                           width={80}
                           height={80}
                           className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
@@ -245,7 +245,7 @@ export default function BrandKitPage() {
                       <div className="w-24 h-24 sm:w-32 sm:h-32 bg-[#4FACFE] rounded-xl sm:rounded-2xl flex items-center justify-center mx-auto mb-3 sm:mb-4 shadow-lg">
                         <Image
                           src="/assets/Agv-logo.png"
-                          alt="AGV Protocol on Sky Blue"
+                          alt="AGV NEXRUR on Sky Blue"
                           width={80}
                           height={80}
                           className="w-16 h-16 sm:w-20 sm:h-20 object-contain"
@@ -268,7 +268,7 @@ export default function BrandKitPage() {
                       <div className="w-16 h-16 sm:w-20 sm:h-20 bg-gradient-to-r from-[#223256] to-[#4FACFE] rounded-lg sm:rounded-xl flex items-center justify-center">
                         <Image
                           src="/assets/Agv-logo.png"
-                          alt="AGV Protocol"
+                          alt="AGV NEXRUR"
                           width={40}
                           height={40}
                           className="w-8 h-8 sm:w-10 sm:h-10 object-contain"
@@ -577,7 +577,7 @@ export default function BrandKitPage() {
                     <div className="relative w-full h-48 sm:h-64 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                       <Image
                         src="/photography/photo1.png"
-                        alt="AGV Protocol Photography Style 1"
+                        alt="AGV NEXRUR Photography Style 1"
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -588,7 +588,7 @@ export default function BrandKitPage() {
                     <div className="relative w-full h-48 sm:h-64 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                       <Image
                         src="/photography/photo2.png"
-                        alt="AGV Protocol Photography Style 2"
+                        alt="AGV NEXRUR Photography Style 2"
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -599,7 +599,7 @@ export default function BrandKitPage() {
                     <div className="relative w-full h-48 sm:h-64 rounded-xl sm:rounded-2xl overflow-hidden shadow-lg group-hover:shadow-xl transition-shadow duration-300">
                       <Image
                         src="/photography/photo3.png"
-                        alt="AGV Protocol Photography Style 3"
+                        alt="AGV NEXRUR Photography Style 3"
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-300"
                       />
@@ -630,7 +630,7 @@ export default function BrandKitPage() {
                     <div className="w-full h-48 sm:h-64 rounded-lg sm:rounded-xl overflow-hidden mb-3 sm:mb-4 shadow-lg">
                       <Image
                         src="/assets/brandkit-app-1.png"
-                        alt="AGV Protocol Brand Application - Water Bottle"
+                        alt="AGV NEXRUR Brand Application - Water Bottle"
                         fill
                         className="object-cover"
                       />
@@ -642,7 +642,7 @@ export default function BrandKitPage() {
                     <div className="w-full h-48 sm:h-64 rounded-lg sm:rounded-xl overflow-hidden mb-3 sm:mb-4 shadow-lg">
                       <Image
                         src="/assets/brandkit-app-3.png"
-                        alt="AGV Protocol Brand Application - Baseball Cap"
+                        alt="AGV NEXRUR Brand Application - Baseball Cap"
                         fill
                         className="object-cover"
                       />

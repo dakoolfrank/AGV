@@ -50,7 +50,7 @@
   },
   "whatisagv": {
     "title": "What We Do",
-    "description": "AGV Protocol is a dePIN RWA infrastructure protocol that transforms orchards, solar farms and edge-compute clusters into verifiable, yield‑backed digital assets. Every unit of energy and compute output is monitored by IoT devices, anchored on-chain, and only then tokenized. This Power-to-Mint mechanism ensures a 1:1 link between physical productivity and digital value, unlocking sustainable returns for on-chain investors. AGV currently anchors yield to verified orchards, solar plants and compute nodes in Shaanxi, China—the world's largest energy and AI infrastructure zone"
+    "description": "AGV NEXRUR is a dePIN RWA infrastructure protocol that transforms orchards, solar farms and edge-compute clusters into verifiable, yield‑backed digital assets. Every unit of energy and compute output is monitored by IoT devices, anchored on-chain, and only then tokenized. This Power-to-Mint mechanism ensures a 1:1 link between physical productivity and digital value, unlocking sustainable returns for on-chain investors. AGV currently anchors yield to verified orchards, solar plants and compute nodes in Shaanxi, China—the world's largest energy and AI infrastructure zone"
   },
   "whyagv": {
     "title": "Why AGV Is a Blueprint for Real Yield Infrastructure?",
@@ -198,22 +198,22 @@
     },
     "articles": {
       "introducing": {
-        "title": "Introducing AGV Protocol",
+        "title": "Introducing AGV NEXRUR",
         "description": "Unlocking the Future of Real-World Assets"
       },
       "multichain": {
         "title": "rGGP Explained",
-        "description": "How AGV Protocol Turns Real-World Yields into Rewards"
+        "description": "How AGV NEXRUR Turns Real-World Yields into Rewards"
       },
       "security": {
         "title": "rGGP Explained",
-        "description": "How AGV Protocol Turns Real-World Yields into Rewards"
+        "description": "How AGV NEXRUR Turns Real-World Yields into Rewards"
       },
       "readMore": "Read More"
     }
   },
   "footer": {
-    "copyright": " AGV Protocol. All rights reserved.",
+    "copyright": " AGV NEXRUR. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "contact": "Contact Us",
@@ -240,9 +240,9 @@
     "legalText": "All real-world assets are held by authorized Chinese SPVs and mapped via legal authorization to JLL Asset Ltd. (BVI Company No. 2182436). NFT issuance and operations are executed by iJET Limited (NZBN: 9429049576290). Governance transition to the BVI-based AGV DAO is in progress."
   },
   "staking": {
-    "title": "AGV Protocol Staking",
+    "title": "AGV NEXRUR Staking",
     "description": "Stake your NFTs and earn rewards",
-    "protocolTitle": "AGV Protocol Staking",
+    "protocolTitle": "AGV NEXRUR Staking",
     "stakeYour": "Stake your",
     "nftsOn": "NFTs on",
     "toEarnRewards": "to earn rewards",
@@ -503,8 +503,8 @@
     }
   },
   "minting": {
-    "title": "AGV Protocol Minting",
-    "description": "Mint exclusive AGV Protocol NFTs across multiple blockchain networks.",
+    "title": "AGV NEXRUR Minting",
+    "description": "Mint exclusive AGV NEXRUR NFTs across multiple blockchain networks.",
     "collections": "Choose from SeedPass, TreePass, SolarPass, and ComputePass collections.",
     "liveMinting": "Live Minting",
     "multiChain": "Multi-Chain",
@@ -556,7 +556,7 @@
   },
   "dashboard": {
     "title": "Dashboard",
-    "description": "Overview of your AGV Protocol activities and performance",
+    "description": "Overview of your AGV NEXRUR activities and performance",
     "overview": "Overview",
     "analytics": "Analytics",
     "performance": "Performance",
@@ -602,7 +602,7 @@
       "title": "Get Started",
       "mintNFTs": {
         "title": "Mint NFTs",
-        "description": "Mint AGV Protocol NFTs across multiple chains",
+        "description": "Mint AGV NEXRUR NFTs across multiple chains",
         "button": "Start Minting"
       },
       "stakeEarn": {
@@ -632,12 +632,12 @@
       "readMore": "Read More",
       "articles": {
         "introducing": {
-          "title": "Introducing AGV Protocol",
-          "description": "Introducing AGV Protocol: Unlocking the Future of Real-World Assets"
+          "title": "Introducing AGV NEXRUR",
+          "description": "Introducing AGV NEXRUR: Unlocking the Future of Real-World Assets"
         },
         "rggpExplained": {
           "title": "rGGP Explained",
-          "description": "How AGV Protocol Turns Real-World Yields into On-chain Rewards"
+          "description": "How AGV NEXRUR Turns Real-World Yields into On-chain Rewards"
         }
       }
     },
@@ -717,7 +717,7 @@
       }
     },
     "footer": {
-      "companyName": "AGRIVOLT PROTOCOL",
+      "companyName": "AGRIVOLT NEXRUR",
       "tagline": "NFT Minting Platform",
       "description": "The future of decentralized computing through innovative NFT technology. Join thousands of users minting exclusive AGV NFTs across multiple blockchain networks.",
       "features": {
@@ -759,12 +759,12 @@
         "headquarters": "Headquartered in Asia. Operated globally. Audited by top firms.",
         "description": "All real-world assets are held by authorized Chinese SPVs and mapped via legal authorization to JLL Asset Ltd. (BVI Company No. 2182436). NFT issuance and operations are executed by iJET Limited (NZBN: 9429049576290). Governance transition to the BVI-based AGV DAO is in progress."
       },
-      "copyright": "© 2025 AgriVolt Protocol. All rights reserved"
+      "copyright": "© 2025 AgriVolt NEXRUR. All rights reserved"
     },
     "admin": {
       "hero": {
         "title": "System Dashboard",
-        "description": "Monitor and track all AGV Protocol functionalities. Real-time analytics, performance metrics, and system health monitoring."
+        "description": "Monitor and track all AGV NEXRUR functionalities. Real-time analytics, performance metrics, and system health monitoring."
       },
       "status": {
         "online": "System Online",
@@ -853,11 +853,11 @@
       },
       "systemStatus": {
         "title": "System Status",
-        "description": "This dashboard provides real-time monitoring of all AGV Protocol functionalities. All metrics are updated automatically and provide insights into platform performance, user activity, and system health across all features."
+        "description": "This dashboard provides real-time monitoring of all AGV NEXRUR functionalities. All metrics are updated automatically and provide insights into platform performance, user activity, and system health across all features."
       }
     },
     "comingSoon": {
-      "logo": "AGRIVOLT PROTOCOL",
+      "logo": "AGRIVOLT NEXRUR",
       "title": "Coming Soon",
       "subtitle": "We're working hard to bring you something amazing.\nStay tuned for updates!",
       "features": {
@@ -872,8 +872,8 @@
     "token": {
       "copySuccess": "{label} copied to clipboard",
       "hero": {
-        "title": "AGV Protocol Tokens",
-        "description": "Discover GVT (Governance Token) and rGGP (Reward Token) - the dual-token ecosystem powering the AGV Protocol. Earn rGGP rewards through staking and participate in governance with GVT."
+        "title": "AGV NEXRUR Tokens",
+        "description": "Discover GVT (Governance Token) and rGGP (Reward Token) - the dual-token ecosystem powering the AGV NEXRUR. Earn rGGP rewards through staking and participate in governance with GVT."
       },
       "status": {
         "liveEcosystem": "Live Ecosystem",
@@ -916,7 +916,7 @@
       "overview": {
         "aboutTokens": {
           "title": "About GVT & rGGP",
-          "description": "The AGV Protocol operates on a dual-token system designed to separate governance and reward mechanisms. GVT serves as the governance token while rGGP functions as the reward token for ecosystem participation.",
+          "description": "The AGV NEXRUR operates on a dual-token system designed to separate governance and reward mechanisms. GVT serves as the governance token while rGGP functions as the reward token for ecosystem participation.",
           "tokenRoles": {
             "title": "Token Roles:",
             "gvt": "GVT: Protocol governance and voting rights",
@@ -1059,7 +1059,7 @@
   "career": {
     "hero": {
       "title": "Join Our Team",
-      "description": "Be part of the future of real-world asset tokenization. Join AGV Protocol and help build the infrastructure that bridges traditional assets with blockchain technology."
+      "description": "Be part of the future of real-world asset tokenization. Join AGV NEXRUR and help build the infrastructure that bridges traditional assets with blockchain technology."
     },
     "values": {
       "title": "Our Company Values",
@@ -1143,25 +1143,25 @@
       "viewAllPosts": "View All Posts"
     },
     "featuredArticle": {
-      "title": "Introducing AGV Protocol: Unlocking the Future of Real-World Assets",
+      "title": "Introducing AGV NEXRUR: Unlocking the Future of Real-World Assets",
       "description": "It's 2025, and the world's financial landscape is changing rapidly. As a result, one question keeps coming up..."
     },
     "articles": {
       "introducingAGVProtocol": {
-        "title": "Introducing AGV Protocol:",
+        "title": "Introducing AGV NEXRUR:",
         "description": "Unlocking the Future of Real-World Assets"
       },
       "rGGPExplained": {
         "title": "rGGP Explained",
-        "description": "How AGV Protocol Turns Real-World Yields into Rewards"
+        "description": "How AGV NEXRUR Turns Real-World Yields into Rewards"
       },
       "turningEveryUser": {
-        "title": "AGV Protocol",
+        "title": "AGV NEXRUR",
         "description": "Turning Every User into an AI Power Producer"
       },
       "multiChain": {
         "title": "Multi-Chain Integration",
-        "description": "Discover how AGV Protocol seamlessly operates across multiple blockchain networks for maximum accessibility."
+        "description": "Discover how AGV NEXRUR seamlessly operates across multiple blockchain networks for maximum accessibility."
       },
       "governance": {
         "title": "Community Governance",
@@ -1181,11 +1181,11 @@
       },
       "expansion": {
         "title": "Global Expansion",
-        "description": "AGV Protocol's journey to becoming a global leader in sustainable blockchain solutions."
+        "description": "AGV NEXRUR's journey to becoming a global leader in sustainable blockchain solutions."
       },
       "ama": {
         "title": "Community AMA Session",
-        "description": "Join our monthly Ask Me Anything session with the AGV Protocol team and get your questions answered."
+        "description": "Join our monthly Ask Me Anything session with the AGV NEXRUR team and get your questions answered."
       },
       "partnership": {
         "title": "Partnership Announcement",
@@ -1197,7 +1197,7 @@
       },
       "spotlight": {
         "title": "Community Spotlight: Success Stories",
-        "description": "Hear from our community members about their experiences with AGV Protocol."
+        "description": "Hear from our community members about their experiences with AGV NEXRUR."
       }
     }
   },
@@ -1212,7 +1212,7 @@
     },
     "story": {
       "title": "OUR STORY",
-      "description": "In an AI-powered era, electricity and compute demand is growing exponentially. AGV Protocol addresses this by pairing orchards, solar farms, and edge compute mini-grids with IoT telemetry and on-chain verification to create sustainable, yield-backed tokens. Our initial assets are in Shaanxi, China, with expansion plans across Asia and beyond."
+      "description": "In an AI-powered era, electricity and compute demand is growing exponentially. AGV NEXRUR addresses this by pairing orchards, solar farms, and edge compute mini-grids with IoT telemetry and on-chain verification to create sustainable, yield-backed tokens. Our initial assets are in Shaanxi, China, with expansion plans across Asia and beyond."
     },
     "whatWeBuild": {
       "title": "WHAT WE BUILD",

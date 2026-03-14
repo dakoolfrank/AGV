@@ -470,7 +470,7 @@ export default function DashboardPage() {
               )}
             </div>
             <p className="text-muted-foreground text-sm sm:text-base">
-              Welcome to the AGV Protocol admin dashboard
+              Welcome to the AGV NEXRUR admin dashboard
             </p>
             {who.authed && (
               <p className="text-xs text-muted-foreground mt-1">
