@@ -14,7 +14,7 @@ const PASS_CONFIG: Record<string, PassInfo> = {
   seedpass: {
     name: "Seed Pass",
     description:
-      "AGV Protocol Seed Pass — Entry-level membership granting access to the AGV ecosystem. Includes basic AI agent quota and community access.",
+      "AGV NEXRUR Seed Pass — Entry-level membership granting access to the AGV ecosystem. Includes basic AI agent quota and community access.",
     image: "/seedpass.jpg",
     price: "29 USDT",
     tier: "Seed",
@@ -23,7 +23,7 @@ const PASS_CONFIG: Record<string, PassInfo> = {
   treepass: {
     name: "Tree Pass",
     description:
-      "AGV Protocol Tree Pass — Growth-tier membership with expanded AI agent quota, priority support, and enhanced staking rewards.",
+      "AGV NEXRUR Tree Pass — Growth-tier membership with expanded AI agent quota, priority support, and enhanced staking rewards.",
     image: "/treepass.jpg",
     price: "59 USDT",
     tier: "Tree",
@@ -32,7 +32,7 @@ const PASS_CONFIG: Record<string, PassInfo> = {
   solarpass: {
     name: "Solar Pass",
     description:
-      "AGV Protocol Solar Pass — Premium membership unlocking advanced AI agents, dedicated compute resources, and governance voting rights.",
+      "AGV NEXRUR Solar Pass — Premium membership unlocking advanced AI agents, dedicated compute resources, and governance voting rights.",
     image: "/solarpass.jpg",
     price: "299 USDT",
     tier: "Solar",
@@ -41,7 +41,7 @@ const PASS_CONFIG: Record<string, PassInfo> = {
   computepass: {
     name: "Compute Pass",
     description:
-      "AGV Protocol Compute Pass — Elite membership providing maximum AI compute allocation, institutional-grade features, and top-tier agent licensing.",
+      "AGV NEXRUR Compute Pass — Elite membership providing maximum AI compute allocation, institutional-grade features, and top-tier agent licensing.",
     image: "/computepass.jpg",
     price: "899 USDT",
     tier: "Compute",
@@ -51,7 +51,7 @@ const PASS_CONFIG: Record<string, PassInfo> = {
   seedagent: {
     name: "Seed Agent License",
     description:
-      "AGV Protocol Seed Agent License — Soulbound authorization granting an agent the right to distribute Seed Pass NFTs on behalf of AGV Protocol.",
+      "AGV NEXRUR Seed Agent License — Soulbound authorization granting an agent the right to distribute Seed Pass NFTs on behalf of AGV NEXRUR.",
     image: "/seedagent.png",
     price: "N/A",
     tier: "Seed",
@@ -60,7 +60,7 @@ const PASS_CONFIG: Record<string, PassInfo> = {
   treeagent: {
     name: "Tree Agent License",
     description:
-      "AGV Protocol Tree Agent License — Soulbound authorization granting an agent the right to distribute Tree Pass NFTs on behalf of AGV Protocol.",
+      "AGV NEXRUR Tree Agent License — Soulbound authorization granting an agent the right to distribute Tree Pass NFTs on behalf of AGV NEXRUR.",
     image: "/treeagent.png",
     price: "N/A",
     tier: "Tree",
@@ -69,7 +69,7 @@ const PASS_CONFIG: Record<string, PassInfo> = {
   solaragent: {
     name: "Solar Agent License",
     description:
-      "AGV Protocol Solar Agent License — Soulbound authorization granting an agent the right to distribute Solar Pass NFTs on behalf of AGV Protocol.",
+      "AGV NEXRUR Solar Agent License — Soulbound authorization granting an agent the right to distribute Solar Pass NFTs on behalf of AGV NEXRUR.",
     image: "/solaragent.png",
     price: "N/A",
     tier: "Solar",
@@ -78,7 +78,7 @@ const PASS_CONFIG: Record<string, PassInfo> = {
   computeagent: {
     name: "Compute Agent License",
     description:
-      "AGV Protocol Compute Agent License — Soulbound authorization granting an agent the right to distribute Compute Pass NFTs on behalf of AGV Protocol.",
+      "AGV NEXRUR Compute Agent License — Soulbound authorization granting an agent the right to distribute Compute Pass NFTs on behalf of AGV NEXRUR.",
     image: "/computeagent.png",
     price: "N/A",
     tier: "Compute",

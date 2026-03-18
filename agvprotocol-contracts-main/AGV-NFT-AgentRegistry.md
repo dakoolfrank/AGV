@@ -1,7 +1,7 @@
 # NFT Pass & Distribution License 架构方案 — 可执行版
 
-> **文档版本**: v3.0  
-> **日期**: 2026-03-16  
+> **文档版本**: v3.1  
+> **日期**: 2026-03-18  
 > **适用仓库**: `agvprotocol-contracts-main`  
 > **定位**: NFT 产品线的架构演进、合约设计与链上状态（单一真相源）  
 > **姊妹文档**:  
@@ -9,6 +9,7 @@
 > - NFT 部署运维 → [AGV-NFT-RUN.md](AGV-NFT-RUN.md)  
 > - Token 部署运维 → [AGV-RUN.md](../tokencontracts-main/AGV-RUN.md)  
 > **变更**:  
+> - v3.1 — V3 BSC Mainnet 部署完成 + NFT Metadata API 上线 + 首枚 Agent License 铸造  
 > - v3.0 — V3 架构重构：废除三池三通道，改为单池 + Agent License 代理权模型（链下结算）  
 > - v2.x — Distribution License 设计（仅文档，未编码）  
 > - v2.3 — NFT 内容从 AGV-pGVT-sGVT.md 迁入，添加 §0.4 链上字节码 Agent 功能验证矩阵
@@ -51,11 +52,15 @@ AgentRegistry v2 (未部署)   → ERC1155 Soulbound，代码+237测试完成
 
 ═══ V3 AGV 新时代（owner = 0xAC38...，完全自主）═══
 
-Pass × 4 (待部署)
-    ├── SeedPass     1,000,000枚  $29   ┐
+Pass × 4 (✅ 已部署 2026-03-17, Block 87205718)
+    ├── SeedPass     1,000,000枚  $29   ┐ Proxy: 0x4d5c8A1f...AE5a0
     ├── TreePass     1,000,000枚  $59   ├─ 单池 MAX_SUPPLY + Agent License 代理权
     ├── SolarPass    1,000,000枚  $299  │  散客链上自购 / Agent 链下结算后 Admin 铸造
-    └── ComputePass  1,000,000枚  $899  ┘
+    └── ComputePass  1,000,000枚  $899  ┘ 8/8 BscScan Verified, 0.00074 BNB
+
+链上 NFT 状态 (2026-03-18):
+    SeedPass: totalSupply=2 (Collectible #1 + Agent License #2)
+    TreePass/SolarPass/ComputePass: totalSupply=0
 ```
 
 > V1/V2 旧架构详见下方 §1-12（保留作历史参考）
@@ -98,19 +103,43 @@ GenesisBadge1155 (2025-11-29) → 空投徽章，cap 2000，pGVT claim 前置步
 
 > 全部 5 个合约 (4 Pass + InstitutionalNFT) 的 BscScan verified 源码已归档至 `contracts/_archive/`
 
+#### V3 新合约（✅ 已部署 2026-03-17, Block 87205718）
+
+| 合约 | Proxy 地址 | Impl 地址 | totalSupply | 状态 |
+|------|-----------|-----------|:-----------:|------|
+| SeedPass | `0x4d5c8A1f66e63Af1d5a88fd1ceA77A61e86AE5a0` | `0xD5591Be97e66d8BF0F64593517f5Fd19D5BBcf1E` | 2 | ✅ Collectible #1 + License #2 |
+| TreePass | `0xB27A0EAD07E781b96dcac5965D7733B51D5EfAb1` | `0x0b940eC2D0C0D20e512d03c9A494F07f59A3B0b4` | 0 | ✅ 已部署 |
+| SolarPass | `0xeE899BaAfF934616760106620D6ad6CE379C5122` | `0xcE72fF8D798e17961668495D6295522999E93e16` | 0 | ✅ 已部署 |
+| ComputePass | `0xA9d26c79D78E16C8ca83cDF417E5487A171101e8` | `0x95082d1B986c94aDA7148Ace52346448aCAFC450` | 0 | ✅ 已部署 |
+
+> BscScan 8/8 Verified。Metadata API 已上线：`https://agvnexrur.ai/api/nft/{pass}/{id}`
+
+#### NFT Metadata API（Vercel 动态路由）
+
+| Pass 类型 | collectibleBaseURI | licenseBaseURI | 状态 |
+|-----------|-------------------|----------------|------|
+| SeedPass | `https://agvnexrur.ai/api/nft/seedpass/` | `https://agvnexrur.ai/api/nft/seedagent/` | ✅ 均已设置 |
+| TreePass | `https://agvnexrur.ai/api/nft/treepass/` | *(待设置)* | ✅ collectible |
+| SolarPass | `https://agvnexrur.ai/api/nft/solarpass/` | *(待设置)* | ✅ collectible |
+| ComputePass | `https://agvnexrur.ai/api/nft/computepass/` | *(待设置)* | ✅ collectible |
+
+> API 路由：`agv-web/agv-protocol-app/app/api/nft/[pass]/[id]/route.ts`
+> 支持 8 种类型：4 Collectible + 4 Agent License（seedagent/treeagent/solaragent/computeagent）
+
+#### 已授予的 Agent License
+
+| Pass | Agent 地址 | Token ID | Quota | Used | Active | 授予日期 |
+|------|-----------|:--------:|:-----:|:----:|:------:|----------|
+| SeedPass | `0xAC380431eC7F6E7c8F43D52F286f638fc9311Ca5` | 2 | 100 | 0 | ✅ | 2026-03-18 |
+
 #### 旧合约（已弃用）
 
 | 合约 | 地址 | 状态 | 替代方案 |
-|------|------|------|---------|
-| InstitutionalNFT (ERC1155) | `0x4C472a0888f09cC604e265de593FA913aCfAFf3E` | ⛔ **已弃用** | AgentRegistry v2 |
+|------|------|------|----------|
+| InstitutionalNFT (ERC1155) | `0x4C472a0888f09cC604e265de593FA913aCfAFf3E` | ⛔ **已弃用** | V3 内嵌 License |
+| AgentRegistry v2 | *(未部署)* | ⛔ **已取消** | V3 内嵌 License |
 
-> 源码已归档：`contracts/_archive/InstitutionalNFT_V1_OnChain.sol`
-
-#### AgentRegistry v2（待部署）
-
-- **状态**: 代码 + 237 测试全通过，待部署上线
-- **合约**: `contracts/AgentRegistry.sol`（ERC1155 Soulbound + AccessControl + Quota）
-- **测试**: `test/AgentRegistry.t.sol` — 237 assertions, 全绿
+> V2 源码已归档：`contracts/_archive/`
 
 ### 0.3 SeedPass on-chain vs 本地代码差异
 
@@ -1266,11 +1295,13 @@ agvprotocol-contracts-main/
 
 | 阶段 | 交付物 | 状态 |
 |------|--------|------|
-| **V3-P0 — 设计** | 架构方案 + 流程确认 | ✅ 本文档 |
-| **V3-P1 — 合约** | PassBase.sol + 4 子合约 + 测试（61 个） | ✅ 已完成 |
-| **V3-P2 — 图片** | 8 张图（4 Pass × 2 版本）+ IPFS 上传 | ⏳ 用户制作 |
-| **V3-P3 — 部署** | BSC Mainnet 部署 + grantLicense | ⏳ P2 完成后 |
-| **V3-P4 — 前端** | buy-page 对接新合约 | ⏳ P3 之后 |
+| **V3-P0 — 设计** | 架构方案 + 流程确认 | ✅ 完成 |
+| **V3-P1 — 合约** | PassBase.sol + 4 子合约 + 测试（61 个） | ✅ 完成 |
+| **V3-P2 — 图片** | 6/8 张完成（缺 treeagent.png + computeagent.png） | ⚠️ 2 张待制作 |
+| **V3-P3 — 部署** | BSC Mainnet 部署 + BscScan 8/8 Verified | ✅ 2026-03-17 Block 87205718 |
+| **V3-P3a — 元数据** | Metadata API + collectibleBaseURI ×4 + licenseBaseURI ×1 | ✅ 2026-03-18 |
+| **V3-P3b — 首铸** | Collectible #1 + Agent License #2 (SeedPass) | ✅ 2026-03-18 |
+| **V3-P4 — 前端** | buy-page 对接新合约地址 + ABI | ⏳ 待开始 |
 
 ### 13.13 V2 vs V3 架构对比
 

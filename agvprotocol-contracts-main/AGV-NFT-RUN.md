@@ -1,7 +1,7 @@
 # AGV-NFT-RUN.md — NFT 部署运维指南
 
-> **文档版本**: v3.0 (V3 单池 + Agent License，含部署准备)  
-> **日期**: 2026-03-17  
+> **文档版本**: v3.1 (V3 已部署 + Metadata API 上线 + Agent License 首铸)  
+> **日期**: 2026-03-18  
 > **适用仓库**: `agvprotocol-contracts-main`  
 > **姊妹文档**:  
 > - 架构设计 → [AGV-NFT-AgentRegistry.md](AGV-NFT-AgentRegistry.md) §13  
@@ -59,14 +59,23 @@ forge script 一键部署    上传图片到 IPFS/API         散客自购 mint(
 | 属性 | 值 | 说明 |
 |------|-----|------|
 | `saleActive` | `true` | 散客可立即购买 |
-| `totalSupply` | `0` | 未铸造 |
+| `totalSupply` | `0` → 见下方实际状态 | 部署时为 0 |
 | `MAX_SUPPLY` | `1,000,000` | 不可更改 |
 | `ADMIN_ROLE` | deployer | `0xAC38...` |
 | `TREASURER_ROLE` | treasury | `0xAC38...`（= deployer） |
-| `collectibleBaseURI` | 空 | 需后续 `setCollectibleBaseURI` |
-| `licenseBaseURI` | 空 | 需后续 `setLicenseBaseURI` |
+| `collectibleBaseURI` | ✅ 已设置（4 个合约） | `https://agvnexrur.ai/api/nft/{pass}/` |
+| `licenseBaseURI` | ✅ 已设置（SeedPass） | `https://agvnexrur.ai/api/nft/seedagent/` |
 | `metadataFrozen` | `false` | URI 可修改 |
 | Royalty | 5% → treasury | ERC2981 |
+
+**链上实际状态 (2026-03-18)**：
+
+| 合约 | totalSupply | collectibleBaseURI | licenseBaseURI | 已铸造明细 |
+|------|:-----------:|:------------------:|:--------------:|------------|
+| SeedPass | **2** | ✅ | ✅ | Collectible #1 + License #2 (admin, quota=100) |
+| TreePass | 0 | ✅ | *(待设置)* | — |
+| SolarPass | 0 | ✅ | *(待设置)* | — |
+| ComputePass | 0 | ✅ | *(待设置)* | — |
 
 ### 2.1 前置准备
 
@@ -350,18 +359,28 @@ cast send $SEEDPASS \
 
 ### 6.2 设置 BaseURI
 
+**已执行的 BaseURI 设置（2026-03-18）**：
+
+| 合约 | 类型 | BaseURI | Tx Hash |
+|------|------|---------|----------|
+| SeedPass | collectible | `https://agvnexrur.ai/api/nft/seedpass/` | `0xbc0200...` |
+| TreePass | collectible | `https://agvnexrur.ai/api/nft/treepass/` | `0x1b2ad9...` |
+| SolarPass | collectible | `https://agvnexrur.ai/api/nft/solarpass/` | `0x0a8b25...` |
+| ComputePass | collectible | `https://agvnexrur.ai/api/nft/computepass/` | `0x6d3dd3...` |
+| SeedPass | license | `https://agvnexrur.ai/api/nft/seedagent/` | `0x89887a...` |
+
 ```bash
-# 设置收藏品 BaseURI
+# 设置收藏品 BaseURI（示例）
 cast send $SEEDPASS \
     "setCollectibleBaseURI(string)" \
-    "https://api.agvnexrur.ai/metadata/seedpass/" \
+    "https://agvnexrur.ai/api/nft/seedpass/" \
     --private-key $PRIVATE_KEY \
     --rpc-url $BSC_RPC_URL
 
-# 设置 License BaseURI
+# 设置 License BaseURI（示例）
 cast send $SEEDPASS \
     "setLicenseBaseURI(string)" \
-    "https://api.agvnexrur.ai/metadata/seedpass-license/" \
+    "https://agvnexrur.ai/api/nft/seedagent/" \
     --private-key $PRIVATE_KEY \
     --rpc-url $BSC_RPC_URL
 ```
@@ -521,39 +540,41 @@ cast logs --from-block latest \
 - [x] `.env` 已创建（从 `tokencontracts-main/.env` 复用凭据）
 - [x] `.env.example` 已更新为 V3 模板
 - [x] `.gitignore` 包含 `.env`（不会误提交私钥）
-- [ ] USDT 地址正确（BSC: `0x55d398326f99059fF775485246999027B3197955`）
-- [ ] Treasury 地址正确
-- [ ] Deployer 钱包有足够 BNB 支付 gas（8 个合约部署约 0.1-0.3 BNB）
-- [ ] 价格正确（18 decimals: $29 = 29000000000000000000）
-- [ ] MAX_SUPPLY = 1,000,000
+- [x] USDT 地址正确（BSC: `0x55d398326f99059fF775485246999027B3197955`）
+- [x] Treasury 地址正确（`0xAC380431eC7F6E7c8F43D52F286f638fc9311Ca5`）
+- [x] Deployer 钱包有足够 BNB 支付 gas（实际消耗 0.00074 BNB）
+- [x] 价格正确（18 decimals: $29 = 29000000000000000000）
+- [x] MAX_SUPPLY = 1,000,000
 
-### 部署后（阶段 1 完成后立即验证）
+### 部署后（阶段 1 — ✅ 2026-03-17 完成）
 
-- [ ] `forge script` 输出 8 个地址（4 impl + 4 proxy）→ 记录到上方 §1 表格
-- [ ] BscScan 合约验证通过（`--verify` 自动提交）
-- [ ] `cast call $PROXY "price()"` 返回正确价格
-- [ ] `cast call $PROXY "supplyInfo()"` 返回 `(0, 1000000, 1000000)`
-- [ ] `cast call $PROXY "hasRole(bytes32,address)" $ADMIN_ROLE $ADMIN` 返回 `true`
-- [ ] 非 Admin 地址调 `adminMint` revert
+- [x] `forge script` 输出 8 个地址（4 impl + 4 proxy）→ 已记录到 §1 表格
+- [x] BscScan 合约验证通过（8/8 Verified）
+- [x] `cast call $PROXY "price()"` 返回正确价格 ✅
+- [x] `cast call $PROXY "supplyInfo()"` 返回 `(0, 1000000, 1000000)` ✅
+- [x] `cast call $PROXY "hasRole(bytes32,address)" $ADMIN_ROLE $ADMIN` 返回 `true` ✅
+- [x] 非 Admin 地址调 `adminMint` revert ✅
 
-### 元数据配置后（阶段 2）
+### 元数据配置后（阶段 2 — ✅ 2026-03-18 完成）
 
-- [ ] `setCollectibleBaseURI` 设置 4 个合约
-- [ ] `setLicenseBaseURI` 设置 4 个合约
-- [ ] `tokenURI(tokenId)` 返回正确 URL
+- [x] `setCollectibleBaseURI` 设置 4 个合约 ✅
+- [x] `setLicenseBaseURI` 设置 SeedPass ✅（其余 3 个待 Agent 需要时设置）
+- [x] `tokenURI(1)` 返回 `https://agvnexrur.ai/api/nft/seedpass/1` ✅
+- [x] `tokenURI(2)` 返回 `https://agvnexrur.ai/api/nft/seedagent/2` ✅
+- [x] Metadata API 返回 HTTP 200 + 完整 JSON ✅
 
-### 业务验证（阶段 3 开售前）
+### 业务验证（阶段 3 — 部分完成）
 
-- [ ] 散客 `mint(1)` 正确收取 USDT 并铸造
-- [ ] `grantLicense` 铸造 Soulbound License NFT 到 Agent 钱包
-- [ ] `adminMintForAgent` 扣减 Agent 额度并铸造给指定地址
-- [ ] `adminMint` 直接铸造（不影响 Agent 额度）
-- [ ] License token 不可转让（Soulbound — transfer revert）
-- [ ] 收藏品 token 可正常转让
-- [ ] `pause()` 阻断所有铸造
-- [ ] 超过 Agent quota 时 revert
-- [ ] 超过 MAX_SUPPLY 时 revert
-- [ ] 前端 `buy.agvnexrur.ai` 更新 V3 合约地址 + ABI
+- [ ] 散客 `mint(1)` 正确收取 USDT 并铸造（⏳ 待测试）
+- [x] `grantLicense` 铸造 Soulbound License NFT 到 Agent 钱包 ✅（SeedPass License #2, quota=100）
+- [ ] `adminMintForAgent` 扣减 Agent 额度并铸造给指定地址（⏳ 待测试）
+- [x] `adminMint` 直接铸造 ✅（SeedPass Collectible #1）
+- [ ] License token 不可转让（Soulbound — transfer revert）（⏳ 待测试）
+- [ ] 收藏品 token 可正常转让（⏳ 待测试）
+- [ ] `pause()` 阻断所有铸造（⏳ 待测试）
+- [ ] 超过 Agent quota 时 revert（⏳ 待测试）
+- [ ] 超过 MAX_SUPPLY 时 revert（⏳ 待测试）
+- [ ] 前端 `buy.agvnexrur.ai` 更新 V3 合约地址 + ABI（⏳ 待开始）
 
 > **foundry.toml 提示**：当前 `[rpc_endpoints]` 无 BSC，部署时通过 CLI `--rpc-url $BSC_RPC_URL` 传入即可。如需 `forge verify-contract` 单独验证，在 `[etherscan]` 中添加：
 > ```toml
