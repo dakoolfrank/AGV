@@ -5,12 +5,14 @@ libs = ["lib"]
 optimizer = true
 optimizer_runs = 200
 via_ir = true
-
 remappings = [
     "openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
     "openzeppelin-contracts/=lib/openzeppelin-contracts/",
     "ERC721A-Upgradeable/=lib/ERC721A-Upgradeable/",
 ]
+
+# Skip archived code — _archive/ (OZ 4.x BscScan source), v2/ tests & scripts (import paths stale)
+skip = ["contracts/_archive/**", "test/v2/**", "script/v2/**"]
 
 # File system permissions
 fs_permissions = [
