@@ -1,0 +1,117 @@
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+# AGV 分层策略 — nexrur PlatformPolicy 消费
+#
+# 层级: callers.<caller> > steps.<step> > defaults
+# ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+defaults:
+  max_retries: 2
+  backoff_base: 1.5
+  backoff_max: 30
+  llm_timeout_s: 60
+  mcp_timeout_s: 15
+  evidence_level: recommended
+  cache_ttl:
+    llm: -1
+    search: 3600       # GeckoTerminal / Moralis 1h
+    default: 7200
+
+  # RAG
+  embedding_backend: local
+  embedding_model: all-MiniLM-L6-v2
+  embedding_dimension: 384
+  rag_auto_index: false
+  rag_top_k: 3
+  rag_score_threshold: 0.5
+
+  # 路径
+  runs_root: "docs/ai-runs/agv-mm-scan"
+
+# ── 步骤级覆盖 ────────────────────────────────────────
+
+steps:
+  # === MM-Campaign (心跳护盘) ===
+  monitor:
+    evidence_level: required
+    heartbeat_normal_interval_s: 30
+    heartbeat_degraded_interval_s: 300
+    heartbeat_emergency_interval_s: 5
+    runs_root: "docs/ai-runs/agv-mm-scan"
+
+  detect:
+    evidence_level: required
+    price_deviation_warn: 0.03
+    price_deviation_act: 0.05
+    price_deviation_emergency: 0.10
+    whale_warn_pct: 0.10
+    whale_emergency_pct: 0.30
+
+  decide:
+    evidence_level: recommended
+    rebalance_threshold: 0.05
+    max_rebalance_amount_usd: 10.0
+
+  execute:
+    evidence_level: required
+    max_slippage_pct: 0.02
+    min_pool_depth_usd: 50.0
+    max_single_trade_usd: 50.0
+    use_private_rpc_above_usd: 20.0
+
+  # === Arb-Campaign (因子套利) ===
+  scan:
+    evidence_level: required
+    rag_auto_index: true
+    gecko_rate_limit: 30        # req/min
+    moralis_rate_limit: 25
+    min_tvl_usd: 10000
+    runs_root: "docs/ai-runs/agv-mm-scan"
+
+  curate:
+    evidence_level: recommended
+
+  dataset:
+    evidence_level: recommended
+
+  fix:
+    evidence_level: required
+    max_fix_attempts: 3
+
+  # === 共享步骤 ===
+  log:
+    evidence_level: audit_only
+
+# ── 安全硬顶 (不可被 LLM 覆盖) ─────────────────────
+
+safety:
+  daily_max_gas_usd: 5.0
+  daily_max_volume_usd: 500.0
+  daily_max_trades: 100
+  daily_max_loss_usd: 50.0
+  tvl_floor_usd: 30.0
+  mev_private_rpc_threshold_usd: 20.0
+
+# ── 门禁 (对齐 WQ-YI P3 evaluate gate) ─────────────
+
+gate:
+  blocking_codes:
+    - slippage_exceed
+    - mev_detected
+    - tvl_breaker
+    - tx_reverted
+    - preauth_rejected
+  acceptable_statuses:
+    - success
+    - partial
+
+# ── outcome reason codes 定义 ───────────────────────
+
+outcome_reason_codes:
+  monitor: [rpc_unreachable, pool_not_found, data_stale]
+  detect:  [no_anomaly, signal_conflict]
+  decide:  [budget_exceeded, preauth_rejected, emergency_cooldown]
+  execute: [slippage_exceed, mev_detected, tvl_breaker, gas_exceed, tx_reverted, approve_failed]
+  scan:    [no_opportunity, source_timeout, data_fusion_fail]
+  curate:  [factor_insufficient, confidence_low]
+  dataset: [liquidity_insufficient, pool_depth_low]
+  fix:     [strategy_exhausted, max_retries]

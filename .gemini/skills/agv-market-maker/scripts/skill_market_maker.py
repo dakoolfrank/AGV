@@ -43,6 +43,18 @@ try:
 except ImportError:
     _prompts = None
 
+# ── nexrur 底座（通过 AGV _shared adapter）──────────
+_NEXRUR_OK = False
+try:
+    from nexrur import RunContext, StepOutcome, AuditBus, EvidenceStore
+    from _shared.core.outcome import OUTCOME_REASON_CODES  # noqa: F401 — 注册 AGV reason codes
+    from _shared.core.policy import PlatformPolicy
+    _NEXRUR_OK = True
+except ImportError:
+    RunContext = None  # type: ignore[assignment,misc]
+    StepOutcome = None  # type: ignore[assignment,misc]
+    PlatformPolicy = None  # type: ignore[assignment,misc]
+
 
 # ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 #  配置数据类（对齐 DESIGN.md §5.4 / §7.3 / §8.2）
