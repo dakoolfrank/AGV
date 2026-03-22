@@ -1,0 +1,92 @@
+# scan 数据源配置
+#
+# GeckoTerminal + Moralis 双源配置（Phase 1 仅 BSC）
+
+gecko_terminal:
+  base_url: "https://api.geckoterminal.com/api/v2"
+  rate_limit: 30          # requests/minute (free tier)
+  network: "bsc"
+  default_timeframe: "minute"
+  default_aggregate: 5    # 5m candles
+
+moralis:
+  network: "bsc"
+  default_limit: 100
+
+dexscreener:
+  base_url: "https://api.dexscreener.com"
+  rate_limit: 300         # requests/minute (free tier, no API key)
+  network: "bsc"
+
+# 目标池（仅 MM Campaign 护盘心跳使用 — Arb scan 不读此配置）
+target_pools:
+  - name: "pGVT_USDT"
+    address: "0x5558e43eE316C45e6C842bC7aC4B770EED03c5C0"
+    base_token_address: "0x8F9EC8107C126e94F5C4df26350Fb7354E0C8af9"
+    quote_token_address: "0x55d398326f99059fF775485246999027B3197955"
+    priority: 1
+  - name: "sGVT_USDT"
+    address: "0xBE1B08D1743f2C158165472Fa2fEB038E8DfaA9d"
+    base_token_address: "0x53e599211bF49Aa2336C3F839Ad57e20dE3662a3"
+    quote_token_address: "0x55d398326f99059fF775485246999027B3197955"
+    priority: 2
+
+# 信号检测阈值
+signal_thresholds:
+  price_divergence_pct: 3.0     # 价差>3% 触发信号
+  volume_spike_ratio: 5.0       # 交易量 >5x 均值触发
+  lp_imbalance_ratio: 0.10      # 储备比 <10% 触发
+  whale_threshold_usd: 500.0    # >$500 视为大额
+  stale_data_seconds: 120.0     # 数据超过 2min 视为陈旧
+  # Step 2: 因子驱动信号阈值
+  onchain_activity_min_tx: 10       # ≥10 笔交易 = 活跃池
+  onchain_activity_min_wallets: 5   # ≥5 独立钱包 = 多样化参与
+  lp_outflow_threshold_usd: 1000.0  # LP 净流出 >$1000 = 资金外逃信号
+
+# ── Arb 全网发现配置 ─────────────────────────────────
+# ArbCollectSkill (skill_arb_collect.py) 使用，与 MM 的 target_pools 独立
+arb_discovery:
+  strategies:
+    - name: volume_ranked
+      enabled: true
+      max_pages: 5            # GeckoTerminal 分页数（每页 20 池）
+      max_pools: 100           # 最终保留上限
+      page_delay_sec: 1.5      # 分页间隔（避免 429）
+    - name: trending
+      enabled: true
+      max_pools: 20
+    - name: new_pool
+      enabled: true
+      max_pools: 10
+    - name: dexscreener
+      enabled: true
+      max_pools: 30
+
+  # enrich 阶段每池间隔（秒）— 避免 429
+  enrich_delay_sec: 1.5
+
+  # 量化策略过滤器（跨截面因子模型要求同一 quote token）
+  quote_token_filter:
+    enabled: true
+    # BSC 上 USDT 地址（Binance-Peg）
+    allowed_quotes:
+      - "0x55d398326f99059fF775485246999027B3197955"   # USDT
+    # 如需扩展可加入 USDC / BUSD
+
+  # 最低门槛（低于此值不值得套利）
+  min_tvl_usd: 10000
+  min_volume_24h_usd: 5000
+  max_fee_bps: 100
+
+  # 质量打分阈值 → 决定是否持久化
+  quality_thresholds:
+    strong:
+      min_signals: 2
+      min_score: 70
+    moderate:
+      min_signals: 1
+      min_score: 40
+
+  # 持久化路径（AGV 仓库内，对齐 WQ-YI docs/ai-skills/collect-papers）
+  output_root: "/workspaces/AGV/.docs/ai-skills/scan"
+  max_pending: 200

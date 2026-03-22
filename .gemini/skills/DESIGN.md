@@ -1,7 +1,7 @@
 # AGV Protocol — Agent-Driven Design Document
 
-> **版本**: v4.2  
-> **日期**: 2026-03-12  
+> **版本**: v4.4  
+> **日期**: 2026-03-22  
 > **定位**: 统一设计文档，替代原 `DESIGN.md` v2.0 + `ARCHITECTURE.md` v1.2  
 > **核心主张**: AGV 不是一个"用 AI 写代码"的项目，而是一个**用 Agent 替代运维人力**的 RWA 协议
 
@@ -32,7 +32,7 @@
 - [F. 代码完成度评估](#f-代码完成度评估)
 - [G. 测试覆盖概览](#g-测试覆盖概览)
 
-### Part 3: 4 主 Subagent 流水线架构
+### Part 3: 5 Subagent 流水线架构
 - [§1 架构演进：从碎片化到数据驱动流水线](#1-架构演进从碎片化到数据驱动流水线)
 - [§2 nexrur 底座：Agent 的大脑与神经系统](#2-nexrur-底座agent-的大脑与神经系统)
 - [§3 五步流水线总览](#3-五步流水线总览)
@@ -41,6 +41,7 @@
 - [§6 S3: Digital Ops — 数字化展现（L1 Web3 + L2 Web2）](#6-s3-digital-ops--数字化展现l1-web3--l2-web2)
 - [§7 S4: KOL Operations — 社区增长与传播](#7-s4-kol-operations--社区增长与传播)
 - [§8 安全边界与人工闸门](#8-安全边界与人工闸门)
+- [§9 S5: MarketMaker-Agent — 做市与套利（分支 Campaign）](#9-s5-marketmaker-agent--做市与套利分支-campaign)
 
 ### Part 4: 实施路线图
 - [R. 四阶段实施路线图](#r-四阶段实施路线图)
@@ -846,11 +847,13 @@ CampaignRunner: 精确回退到 S2 内部修复步骤
 
 DiagnosisEngine 在 WQ-YI 上经过 **5000+ 次 Alpha 诊断**验证，同一引擎通过 `DiagnosisProfile` 注入 AGV 领域知识即可复用。
 
-#### 能力 3：CampaignRunner — 循环编排 + 回退
+#### 能力 3：CampaignRunner — 循环编排 + 回退（self.orch 模式）
 
-CampaignRunner 不是"跑一次"，而是**持续循环直到目标达成或资源耗尽**：
+CampaignRunner 内部持有 Orchestrator (`self.orch`)，对齐 WQ-YI 架构：
 
-- **5 项终止条件**：目标达成 / 轮次上限 / 时间预算 / 连续失败 / 无进展
+- **Arb 模式**：`orch.run(end_step="execute")` → 诊断回退 → `orch.reset_from_step()` + `orch.resume()`
+- **MM 模式**：无 Orchestrator，纯确定性心跳（30s 循环，零 LLM）
+- **5 项终止条件**：目标达成 / 轮次上限 / 亏损熔断 / 连续失败 / 诊断停机
 
 #### 能力 4：ToolLoopRunner — 多轮工具状态机
 
@@ -1450,6 +1453,93 @@ steps:
 
 ---
 
+## §9 S5: MarketMaker-Agent — 做市与套利（分支 Campaign）
+
+> **详细设计**: [agv-mm-arb/DESIGN.md](agv-mm-arb/DESIGN.md) v1.5
+
+### 架构定位
+
+S5 是**从 S2 chain_ops 分叉的独立分支**，与 S3/S4 主干并行运行。
+它不参与 Orchestrator 编排，而是由独立的 CampaignRunner 实例驱动。
+
+```
+主干 (Orchestrator 编排):
+  S1 → S2 ─┬→ S3.L1 → S3.L2 → S4
+            │
+分支 (独立 CampaignRunner):
+            ├→ S5-Arb (scan→curate→dataset→execute→fix)  ← Arb 优先上线
+            └→ S5-MM  (monitor→detect→decide→execute→log) ← 随后跟进
+
+ForkPoint: chain_ops 之后，共享 lp_state 资产
+```
+
+### 双 Campaign 拓扑
+
+| Campaign | 模式 | 频率 | LLM | 用途 |
+|----------|------|------|-----|------|
+| **S5-Arb** | 因子驱动 5 步管线 | 1 分钟/循环 | 定期校准 | **主动套利收益** |
+| **S5-MM** | 确定性心跳 | 30 秒/心跳 | 零 | 被动护盘维稳 |
+
+### 关键设计决策（D1-D5, 2026-03-19 确定）
+
+| 编号 | 决策 | 结论 | 理由 |
+|------|------|------|------|
+| **D1** | Web3 库 | **web3.py** | BSC 生态最成熟，PancakeSwap V2 兼容 |
+| **D2** | 上线优先级 | **Arb 优先** | scan 已生产级（93 测试），主动收益 > 被动护盘 |
+| **D3** | 环境变量 | **AGV/.env + AGV/.env.s5** 双文件 | 做市私钥与 Web/合约凭据安全隔离 |
+| **D4** | 部署模型 | **supervisord** 进程管理 | 单机双 Campaign，无 K8s 开销 |
+| **D5** | 代码去重 | **toolloop_mm.py 为唯一真相源** | agent_ops_mm.py 薄桥接，禁止重复定义 Safety 类 |
+
+### 三层安全护甲
+
+| 层级 | 组件 | 阈值 |
+|------|------|------|
+| **Layer 1** | SlippageGuard | 2% 硬顶 |
+| **Layer 2** | MEVGuard | $20+ → 私有 RPC |
+| **Layer 3** | TVLBreaker | <$30 → HALT_ALL |
+
+### 预授权体系（PreAuth — 人工设限，Agent 不可覆盖）
+
+```yaml
+preauth:
+  arb:                                   # Arb 优先
+    max_single_trade_usd: 50.0
+    max_daily_volume_usd: 500.0
+    max_daily_loss_usd: 50.0              # 超出 → 自动暂停
+  mm:
+    max_single_rebalance_usd: 10.0
+    max_daily_gas_usd: 5.0
+  global:
+    approved_tokens: [pGVT, sGVT, USDT]
+    approved_pools: [pGVT-USDT, sGVT-USDT]
+    unapproved_pool_action: REJECT
+```
+
+### 实施路径（Arb 优先）
+
+| Phase | 内容 | 状态 |
+|-------|------|------|
+| **Phase 0** | nexrur 安装 + _shared 108 测试 | ✅ 全绿 |
+| **Phase 1** | D5 去重 + D3 统一 .env | ⏳ 待实施 |
+| **Phase 2** | PancakeV2Adapter (web3.py) — Arb+MM 共享基座 | ⏳ 待实施 |
+| **Phase 3** | Arb 端到端联调 (scan→curate→dataset→execute→fix) | ⏳ 待实施 |
+| **Phase 4** | Arb 上线（BSC Mainnet 极小额真实交易） | ⏳ |
+| **Phase 5** | MM 心跳联调 + 上线（复用 Phase 2 Adapter） | ⏳ |
+| **Phase 6** | supervisord 部署 + 通知渠道 (Telegram+Discord) | ⏳ |
+
+### 代码清单
+
+| 文件 | 行数 | 职责 | 测试 |
+|------|------|------|------|
+| `skill_mm_arb.py` | 435 | 配置中枢 + 编排入口 | 35 |
+| `toolloop_mm.py` | 564 | 共享执行层 + MM 心跳 | — |
+| `toolloop_arb.py` | 375 | Arb 5 步管线 + 三级回退 | — |
+| `modules/collect/` | ~1450 | GeckoTerminal + Moralis 双源融合 | 93 |
+| `_shared/engines/_profiles.py` | 370 | 3 Profile + Lifecycle + Registry | 108 |
+| **合计** | ~3194 | — | **236** |
+
+---
+
 # Part 4: 实施路线图
 
 ## R. 四阶段实施路线图
@@ -1660,6 +1750,8 @@ Phase 3 (自愈)                              ██████  ← Diagnosis 
 ---
 
 > **文档维护**：本文档由 S3 Digital Ops Agent 负责与代码保持同步。  
+> **v4.4 变更**：CampaignRunner self.orch 模式重写对齐 WQ-YI（Method B — CampaignRunner 内部持有 Orchestrator），322 测试全通过。  
+> **v4.3 变更**：新增 §9 S5 MarketMaker-Agent 分支 Campaign 章节（双 Campaign 拓扑 + D1-D5 设计决策 + Arb 优先路径 + 三层安全 + 预授权体系）；Part 3 标题从"4 主 Subagent"更新为"5 Subagent"；删除重复的 `_DESIGN.md`。  
 > **v4.2 变更**：新增 Σ.12 比特币信任模型对齐（S1→S2 投资者信任根基 / S2→S3 监管审计根基 / S4 纯效率）；Part 2 Section B 从旧 Layer 1/2/3 项目分层重写为 Subagent 数据流视角；C.1/C.2/C.3 标题标注 Subagent 归属。  
 > **v4.1 变更**：v4.0 从 S1-S8 碎片化 Agent 架构重写为 4 主 Subagent 数据驱动流水线；v4.1 清除 Part 1 旧模型残影、修复 STEP_ORDER 4→5 步 schema 对齐、路线图三→四阶段、新增运维职责映射表。  
 > 修改合约/前端/部署状态时，应同步更新对应章节。  

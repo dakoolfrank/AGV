@@ -1,0 +1,95 @@
+# arb_campaign.yml — S5-Arb Campaign CLI 默认配置
+# 此文件被 arb_campaign.py 作为 goal_config + campaign 覆盖读取。
+# policy.yml 中 campaign/safety 段是兜底默认值，此处仅覆盖当次运行的差异。
+#
+# 用法:
+#   python -m _shared.cli.arb_campaign                     # 使用此文件
+#   python -m _shared.cli.arb_campaign -c custom.yml       # 使用自定义 yml
+#   python -m _shared.cli.arb_campaign --simulate          # 模拟模式（默认）
+#   python -m _shared.cli.arb_campaign --live              # 实盘模式
+#   python -m _shared.cli.arb_campaign --dry-run           # 仅打印配置
+
+# ============================================================
+# goal — 传给 Orchestrator.run(goal_config=)
+#
+# 各 step 实际使用的 key:
+#   collect:  pair, min_tvl_usd, data_sources
+#   curate:   curate_strategy (WQ-YI KnowledgeBaseSkill domain=defi)
+#   dataset:  pyramid_strategy, l1_categories, l2_indicators
+#   execute:  simulate, amount_usd, max_slippage_pct
+#   fix:      retreat_level (由 DiagnosisEngine 填充)
+# ============================================================
+goal:
+  pair: pGVT_USDT                       # 目标交易对
+  strategy_id: arb_pGVT_USDT            # 策略标识（trace 关联）
+  simulate: true                         # 模拟模式（CLI --live 覆盖）
+  data_sources:                          # collect 数据源
+    - gecko_terminal
+    - pancakeswap_subgraph
+  min_tvl_usd: 30                        # 最低池深（低于此值不开仓）
+  curate_strategy: all                   # curate 策略: all=全量 / latest=最新 / explicit
+  pyramid_strategy: core_first           # core_first=只跑核心指标; all=全量
+
+# ============================================================
+# campaign — 覆盖 DEFAULT_ARB_CONFIG（仅差异项）
+#
+# DEFAULT_ARB_CONFIG 兜底值:
+#   max_cycles: 100
+#   cycle_interval_seconds: 60
+#   max_daily_usd: 500.0
+#   max_single_usd: 50.0
+#   budget_halt_ratio: 0.5
+#   max_consecutive_failures: 5
+#   cooldown_minutes: 30
+#   max_inner_retries: 3
+# ============================================================
+campaign:
+  max_cycles: 10                         # 调试期循环上限（生产改回 100）
+  cycle_interval_seconds: 60             # 1 分钟/cycle
+  max_daily_usd: 100.0                   # 调试期日交易量上限（生产 500）
+  max_single_usd: 20.0                   # 调试期单笔上限（生产 50）
+  budget_halt_ratio: 0.5                 # 亏损 > 50% 日预算 → 暂停
+  max_consecutive_failures: 3            # 调试期连续失败上限（生产 5）
+  cooldown_minutes: 15                   # 调试期缩短冷静期（生产 30）
+  max_inner_retries: 2                   # 调试期单策略回退次数（生产 3）
+
+# ============================================================
+# safety — 硬安全顶（不可被 LLM 覆盖，合并到 CampaignRunner.config）
+#
+# 匹配 policy.yml safety: 段
+# ============================================================
+safety:
+  daily_max_gas_usd: 5.0                 # 日 gas 硬顶
+  daily_max_volume_usd: 100.0            # 日交易量硬顶（与 campaign.max_daily_usd 取小）
+  daily_max_trades: 50                   # 日交易次数硬顶
+  daily_max_loss_usd: 25.0               # 日亏损硬顶
+  tvl_floor_usd: 30.0                    # 池深 < $30 → 全停
+  max_slippage_pct: 0.02                 # 滑点硬顶 2%
+  mev_private_rpc_threshold_usd: 20.0    # > $20 走私有 RPC
+
+# ============================================================
+# orchestrator — 编排器行为覆盖
+#
+# 5 步编排链:
+#   1.collect → 2.curate → 3.dataset → 4.execute → 5.fix
+#
+# fix 由 DiagnosisEngine 三级回退驱动:
+#   Level A → execute (参数调整)
+#   Level B → curate  (因子切换)
+#   Level C → collect (策略重构)
+# ============================================================
+orchestrator:
+  skip_steps: []                         # 额外跳过的 step（如 ["fix"]）
+  # start_step: collect                  # 首轮起始步（默认 collect）
+
+# ============================================================
+# diagnosis — DiagnosisEngine 覆盖
+#
+# 确定性检测器 → Flash 初判 → Pro 仲裁 (资金安全 Pro 始终运行)
+# ============================================================
+diagnosis:
+  flash_model: ""                        # 空=用 GEMINI_FLASH_MODEL 默认值
+  pro_model: ""                          # 空=用 GEMINI_MODEL 默认值
+  flash_temperature: 0.0                 # Flash 确定性
+  pro_temperature: 0.0                   # Pro 确定性
+  deterministic_only: false              # true=禁用 LLM，仅用确定性检测器

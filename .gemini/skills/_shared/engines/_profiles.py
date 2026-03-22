@@ -115,11 +115,11 @@ S5_MM_PROFILE = PipelineProfile(
     name="s5-mm",
     step_order=("monitor", "detect", "decide", "execute", "log"),
     step_to_skill={
-        "monitor": "agv-market-maker",
-        "detect":  "agv-market-maker",
-        "decide":  "agv-market-maker",
-        "execute": "agv-market-maker",
-        "log":     "agv-market-maker",
+        "monitor": "agv-mm-arb",
+        "detect":  "agv-mm-arb",
+        "decide":  "agv-mm-arb",
+        "execute": "agv-mm-arb",
+        "log":     "agv-mm-arb",
     },
     step_to_policy={
         "monitor": "monitor",
@@ -172,29 +172,29 @@ S5_MM_PROFILE = PipelineProfile(
 
 
 # ═══════════════════════════════════════════════════════════════
-# S5-Arb Profile  (scan→curate→dataset→execute→fix)
+# S5-Arb Profile  (collect→curate→dataset→execute→fix)
 # 因子驱动套利，CampaignRunner 编排，LLM 定期校准
 # ═══════════════════════════════════════════════════════════════
 S5_ARB_PROFILE = PipelineProfile(
     name="s5-arb",
-    step_order=("scan", "curate", "dataset", "execute", "fix"),
+    step_order=("collect", "curate", "dataset", "execute", "fix"),
     step_to_skill={
-        "scan":    "agv-market-maker",
-        "curate":  "agv-market-maker",
-        "dataset": "agv-market-maker",
-        "execute": "agv-market-maker",
-        "fix":     "agv-market-maker",
+        "collect":    "agv-mm-arb",
+        "curate":  "agv-mm-arb",
+        "dataset": "agv-mm-arb",
+        "execute": "agv-mm-arb",
+        "fix":     "agv-mm-arb",
     },
     step_to_policy={
-        "scan":    "scan",
+        "collect":    "collect",
         "curate":  "curate",
         "dataset": "dataset",
         "execute": "execute",
         "fix":     "fix",
     },
     step_deps={
-        "scan":    [],
-        "curate":  ["scan"],
+        "collect":    [],
+        "curate":  ["collect"],
         "dataset": ["curate"],
         "execute": ["dataset"],
         "fix":     ["execute"],
@@ -205,28 +205,28 @@ S5_ARB_PROFILE = PipelineProfile(
         "market_signal", "arb_strategy", "execution_result",
     }),
     step_produces={
-        "scan":    frozenset({"market_signal"}),
+        "collect":    frozenset({"market_signal"}),
         "curate":  frozenset({"arb_strategy"}),
         "dataset": frozenset(),                     # 参数集内联
         "execute": frozenset({"execution_result"}),
         "fix":     frozenset(),
     },
     step_consumes={
-        "scan":    frozenset({"lp_state"}),          # ← 从 S2 分叉消费
+        "collect":    frozenset({"lp_state"}),          # ← 从 S2 分叉消费
         "curate":  frozenset({"market_signal"}),
         "dataset": frozenset({"arb_strategy"}),
         "execute": frozenset({"arb_strategy"}),
         "fix":     frozenset({"execution_result"}),
     },
     upstream_chain={
-        "scan":    [],
-        "curate":  ["scan"],
-        "dataset": ["scan", "curate"],
-        "execute": ["scan", "curate", "dataset"],
-        "fix":     ["scan", "curate", "dataset", "execute"],
+        "collect":    [],
+        "curate":  ["collect"],
+        "dataset": ["collect", "curate"],
+        "execute": ["collect", "curate", "dataset"],
+        "fix":     ["collect", "curate", "dataset", "execute"],
     },
     step_evidence_level={
-        "scan":    "required",
+        "collect":    "required",
         "curate":  "recommended",
         "dataset": "recommended",
         "execute": "required",

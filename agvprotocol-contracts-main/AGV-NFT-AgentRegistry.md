@@ -1,7 +1,7 @@
 # NFT Pass & Distribution License 架构方案 — 可执行版
 
-> **文档版本**: v3.1  
-> **日期**: 2026-03-18  
+> **文档版本**: v3.2  
+> **日期**: 2026-03-19  
 > **适用仓库**: `agvprotocol-contracts-main`  
 > **定位**: NFT 产品线的架构演进、合约设计与链上状态（单一真相源）  
 > **姊妹文档**:  
@@ -9,6 +9,7 @@
 > - NFT 部署运维 → [AGV-NFT-RUN.md](AGV-NFT-RUN.md)  
 > - Token 部署运维 → [AGV-RUN.md](../tokencontracts-main/AGV-RUN.md)  
 > **变更**:  
+> - v3.2 — SeedPass 额度调整 + 柯兆民 License 授予 + SolarPass 9 人批量空投（21 笔链上操作）  
 > - v3.1 — V3 BSC Mainnet 部署完成 + NFT Metadata API 上线 + 首枚 Agent License 铸造  
 > - v3.0 — V3 架构重构：废除三池三通道，改为单池 + Agent License 代理权模型（链下结算）  
 > - v2.x — Distribution License 设计（仅文档，未编码）  
@@ -58,9 +59,11 @@ Pass × 4 (✅ 已部署 2026-03-17, Block 87205718)
     ├── SolarPass    1,000,000枚  $299  │  散客链上自购 / Agent 链下结算后 Admin 铸造
     └── ComputePass  1,000,000枚  $899  ┘ 8/8 BscScan Verified, 0.00074 BNB
 
-链上 NFT 状态 (2026-03-18):
-    SeedPass: totalSupply=2 (Collectible #1 + Agent License #2)
-    TreePass/SolarPass/ComputePass: totalSupply=0
+链上 NFT 状态 (2026-03-19):
+    SeedPass: totalSupply=4 (Collectible #1 + License #2 admin/79000 + License #3 柯兆民/79000 + Collectible #4 柯兆民)
+    TreePass: totalSupply=0
+    SolarPass: totalSupply=18 (Collectible #1-#9 + License #10-#18, 每人 quota=500)
+    ComputePass: totalSupply=0
 ```
 
 > V1/V2 旧架构详见下方 §1-12（保留作历史参考）
@@ -107,9 +110,9 @@ GenesisBadge1155 (2025-11-29) → 空投徽章，cap 2000，pGVT claim 前置步
 
 | 合约 | Proxy 地址 | Impl 地址 | totalSupply | 状态 |
 |------|-----------|-----------|:-----------:|------|
-| SeedPass | `0x4d5c8A1f66e63Af1d5a88fd1ceA77A61e86AE5a0` | `0xD5591Be97e66d8BF0F64593517f5Fd19D5BBcf1E` | 2 | ✅ Collectible #1 + License #2 |
+| SeedPass | `0x4d5c8A1f66e63Af1d5a88fd1ceA77A61e86AE5a0` | `0xD5591Be97e66d8BF0F64593517f5Fd19D5BBcf1E` | 4 | ✅ Collectible #1 + License #2 (admin/79000) + License #3 (柯兆民/79000) + Collectible #4 (柯兆民) |
 | TreePass | `0xB27A0EAD07E781b96dcac5965D7733B51D5EfAb1` | `0x0b940eC2D0C0D20e512d03c9A494F07f59A3B0b4` | 0 | ✅ 已部署 |
-| SolarPass | `0xeE899BaAfF934616760106620D6ad6CE379C5122` | `0xcE72fF8D798e17961668495D6295522999E93e16` | 0 | ✅ 已部署 |
+| SolarPass | `0xeE899BaAfF934616760106620D6ad6CE379C5122` | `0xcE72fF8D798e17961668495D6295522999E93e16` | 18 | ✅ Collectible #1-#9 + License #10-#18 |
 | ComputePass | `0xA9d26c79D78E16C8ca83cDF417E5487A171101e8` | `0x95082d1B986c94aDA7148Ace52346448aCAFC450` | 0 | ✅ 已部署 |
 
 > BscScan 8/8 Verified。Metadata API 已上线：`https://agvnexrur.ai/api/nft/{pass}/{id}`
@@ -120,7 +123,7 @@ GenesisBadge1155 (2025-11-29) → 空投徽章，cap 2000，pGVT claim 前置步
 |-----------|-------------------|----------------|------|
 | SeedPass | `https://agvnexrur.ai/api/nft/seedpass/` | `https://agvnexrur.ai/api/nft/seedagent/` | ✅ 均已设置 |
 | TreePass | `https://agvnexrur.ai/api/nft/treepass/` | *(待设置)* | ✅ collectible |
-| SolarPass | `https://agvnexrur.ai/api/nft/solarpass/` | *(待设置)* | ✅ collectible |
+| SolarPass | `https://agvnexrur.ai/api/nft/solarpass/` | `https://agvnexrur.ai/api/nft/solaragent/` | ✅ 均已设置 |
 | ComputePass | `https://agvnexrur.ai/api/nft/computepass/` | *(待设置)* | ✅ collectible |
 
 > API 路由：`agv-web/agv-protocol-app/app/api/nft/[pass]/[id]/route.ts`
@@ -128,9 +131,19 @@ GenesisBadge1155 (2025-11-29) → 空投徽章，cap 2000，pGVT claim 前置步
 
 #### 已授予的 Agent License
 
-| Pass | Agent 地址 | Token ID | Quota | Used | Active | 授予日期 |
-|------|-----------|:--------:|:-----:|:----:|:------:|----------|
-| SeedPass | `0xAC380431eC7F6E7c8F43D52F286f638fc9311Ca5` | 2 | 100 | 0 | ✅ | 2026-03-18 |
+| Pass | Agent 地址 | 持有人 | Token ID | Quota | Used | Active | 授予日期 |
+|------|-----------|--------|:--------:|:-----:|:----:|:------:|----------|
+| SeedPass | `0xAC380431eC7F6E7c8F43D52F286f638fc9311Ca5` | Admin | 2 | 79,000 | 0 | ✅ | 2026-03-18 (初始 100, adjustQuota→79000) |
+| SeedPass | `0xa61c5e3e01405EECf581Da41F31289Ba6c8E94e3` | 柯兆民 | 3 | 79,000 | 0 | ✅ | 2026-03-19 |
+| SolarPass | `0x524fcd94927c29fe5e2ff3c4363b2be3c0fe3414` | 李丹铃 | 10 | 500 | 0 | ✅ | 2026-03-19 |
+| SolarPass | `0x91f72a1c738e67dc7f23cf10c1b621d24250a7f5` | 季青山 | 11 | 500 | 0 | ✅ | 2026-03-19 |
+| SolarPass | `0xa2b48c8b8dda001246c9f98815c3a851fde6a05e` | 周大森 | 12 | 500 | 0 | ✅ | 2026-03-19 |
+| SolarPass | `0x1587932a6c2d90b7beb4536b63d3f17b7c1b1e46` | 吴丽莉 | 13 | 500 | 0 | ✅ | 2026-03-19 |
+| SolarPass | `0x1cc443605c98d951bcf4122a9168d8002ce92980` | 赵晓宇 | 14 | 500 | 0 | ✅ | 2026-03-19 |
+| SolarPass | `0x77165b07a6a5392b28f2d2905b44453aaebf8026` | 高凯 | 15 | 500 | 0 | ✅ | 2026-03-19 |
+| SolarPass | `0x6a75dcdf3abf38c886f656d22e14d9a972dfca60` | 彭金平 | 16 | 500 | 0 | ✅ | 2026-03-19 |
+| SolarPass | `0x199b5fcc49092de043397866b11008f4cb60ce3a` | 刘志钱 | 17 | 500 | 0 | ✅ | 2026-03-19 |
+| SolarPass | `0xAC380431eC7F6E7c8F43D52F286f638fc9311Ca5` | Admin | 18 | 500 | 0 | ✅ | 2026-03-19 |
 
 #### 旧合约（已弃用）
 

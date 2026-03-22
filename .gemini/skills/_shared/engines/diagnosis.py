@@ -5,7 +5,7 @@ DiagnosisEngine — S5 Arb-Campaign 三级回退诊断引擎
 诊断根因并产出 RepairDiagnosis，指导三级回退：
   Level A → execute (参数调整)
   Level B → curate  (因子切换)
-  Level C → scan    (策略重构)
+  Level C → collect    (策略重构)
 
 设计要点:
 - Flash 做快速初判，Pro **始终**做仲裁验证（涉及资金安全）
@@ -103,11 +103,11 @@ REASON_CODE_LEVEL: dict[str, str] = {
 LEVEL_TO_TARGET_STEP: dict[str, str] = {
     "A": "execute",   # 参数调整 → 同策略重试
     "B": "curate",    # 因子切换 → 重新组合
-    "C": "scan",      # 策略重构 → 从头扫描
+    "C": "collect",   # 策略重构 → 从头收集
 }
 
 # 合法的 target_step
-VALID_REPAIR_TARGETS: frozenset[str] = frozenset({"execute", "curate", "scan"})
+VALID_REPAIR_TARGETS: frozenset[str] = frozenset({"execute", "curate", "collect"})
 
 
 # ============================================================
@@ -294,15 +294,15 @@ def detect_tvl_drop(
     if tvl < tvl_floor:
         strategy_id = evidence.get("strategy_id", "unknown")
         return RepairDiagnosis(
-            diagnosis_id=make_diagnosis_id("STRUCTURAL_CHANGE", strategy_id, "scan"),
-            target_step="scan",
+            diagnosis_id=make_diagnosis_id("STRUCTURAL_CHANGE", strategy_id, "collect"),
+            target_step="collect",
             strategy_id=strategy_id,
             reason_code="STRUCTURAL_CHANGE",
             retreat_level="C",
             confidence=1.0,
             evidence_refs=["tvl_circuit_breaker"],
             why_not_others=f"池 TVL ${tvl:.0f} < 熔断线 ${tvl_floor:.0f}",
-            repair_hint="池深度不足，需从头扫描寻找替代池",
+            repair_hint="池深度不足，需从头收集寻找替代池",
         )
     return None
 
@@ -317,15 +317,15 @@ def detect_budget_exceeded(
     if loss > daily_cap * halt_ratio:
         strategy_id = evidence.get("strategy_id", "unknown")
         return RepairDiagnosis(
-            diagnosis_id=make_diagnosis_id("BUDGET_EXCEEDED", strategy_id, "scan"),
-            target_step="scan",
+            diagnosis_id=make_diagnosis_id("BUDGET_EXCEEDED", strategy_id, "collect"),
+            target_step="collect",
             strategy_id=strategy_id,
             reason_code="BUDGET_EXCEEDED",
             retreat_level="C",
             confidence=1.0,
             evidence_refs=["budget_monitor"],
             why_not_others=f"累计亏损 ${loss:.0f} > 阈值 ${daily_cap * halt_ratio:.0f}",
-            repair_hint="暂停所有策略，等待市场恢复后从头扫描",
+            repair_hint="暂停所有策略，等待市场恢复后从头收集",
         )
     return None
 

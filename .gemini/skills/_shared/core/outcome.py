@@ -20,7 +20,7 @@ if not OUTCOME_REASON_CODES:
             "gas_exceed", "tx_reverted", "approve_failed",
         ],
         # Arb-Campaign: 因子套利
-        "scan": [
+        "collect": [
             "no_opportunity", "source_timeout", "data_fusion_fail",
         ],
         "curate": [

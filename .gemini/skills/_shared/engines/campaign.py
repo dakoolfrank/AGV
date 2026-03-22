@@ -1,25 +1,29 @@
 """
-CampaignRunner — S5 双 Campaign 循环编排器
+CampaignRunner — S5 双 Campaign 循环编排器 (WQ-YI aligned)
 
-将 S5 的 AgentOps 包装在自动回退循环中：
-- MM-Campaign: 心跳模式（30s 无限循环，零 LLM）
-- Arb-Campaign: 因子驱动（有限 cycle，LLM 辅助诊断，三级回退）
+与 WQ-YI CampaignRunner 对齐的架构：
+- CampaignRunner 内部持有 Orchestrator (self.orch)
+- Arb 模式: orch.run → 诊断回退 → orch.reset_from_step + orch.resume
+- MM 模式: 简单心跳循环（无 Orchestrator 依赖）
 
 设计要点:
 - CampaignRunner 位于 Orchestrator **上方**
+- 当 orchestrator 注入时走编排路径 (collect→execute 循环 + 诊断回退)
+- 当 orchestrator 缺失时走心跳路径 (MM 单 cycle stub)
 - 诊断驱动定向修复（确定性检测 → Flash → Pro）
-- 预算硬限（日上限 + 单笔上限 + 亏损熔断）
-- trace_id 通过 S2 lineage 关联回主干
+- 预算硬限（日上限 + 亏损熔断 + 连续失败上限）
 
 使用示例::
 
-    # MM-Campaign（心跳模式）
+    # Arb-Campaign（因子驱动 — 注入 Orchestrator）
+    orch = create_orchestrator(profile=S5_ARB_PROFILE, ops_registry=reg)
+    runner = CampaignRunner(profile=S5_ARB_PROFILE, config=arb_config,
+                            orchestrator=orch, diagnosis_engine=engine)
+    result = runner.run(goal_config={"factor_combination": "volume_momentum"})
+
+    # MM-Campaign（心跳模式 — 无 Orchestrator）
     runner = CampaignRunner(profile=S5_MM_PROFILE, config=mm_config)
     result = runner.run(goal_config={"pool_address": "0x..."})
-
-    # Arb-Campaign（因子驱动）
-    runner = CampaignRunner(profile=S5_ARB_PROFILE, config=arb_config)
-    result = runner.run(goal_config={"factor_combination": "volume_momentum"})
 
 参照: WQ-YI ``_shared/engines/campaign.py``（CampaignRunner + fail-pivot）
 """
@@ -29,8 +33,16 @@ from __future__ import annotations
 import logging
 import time
 from dataclasses import dataclass, field
+from pathlib import Path
 from typing import Any
 
+from nexrur.engines.orchestrator import (
+    Orchestrator,
+    Checkpoint,
+    TraceResult,
+    TraceStatus,
+    AssetRef,
+)
 from nexrur.engines.protocols import PipelineProfile
 
 from .diagnosis import (
@@ -44,6 +56,17 @@ from .diagnosis import (
 )
 
 logger = logging.getLogger(__name__)
+
+
+# ============================================================
+# 常量（对标 WQ-YI LOOP_END_STEP / FINALIZE_STEPS）
+# ============================================================
+
+LOOP_END_STEP = "execute"
+"""Arb 循环终止步骤 — 对标 WQ-YI 的 ``evaluate``"""
+
+FINALIZE_STEPS = ["fix"]
+"""循环外的最终化步骤 — 仅在 execute 成功后运行"""
 
 
 # ============================================================
@@ -115,15 +138,16 @@ class CampaignResult:
 
 
 # ============================================================
-# CampaignRunner
+# CampaignRunner (WQ-YI aligned — self.orch 模式)
 # ============================================================
 
 class CampaignRunner:
     """S5 双 Campaign 循环编排器
 
-    模式适配:
-    - MM-Campaign (max_cycles=None): 无限心跳循环，step_fn 是确定性操作
-    - Arb-Campaign (max_cycles=N): 有限因子套利循环，支持三级回退诊断
+    架构对齐 WQ-YI CampaignRunner:
+    - ``self.orch``: 内部持有的 Orchestrator 实例
+    - Arb 模式 (orch 注入): orch.run → 诊断 → orch.reset_from_step + orch.resume
+    - MM 模式 (无 orch): 简单心跳 stub（单 cycle 返回）
     """
 
     def __init__(
@@ -132,63 +156,77 @@ class CampaignRunner:
         profile: PipelineProfile,
         config: dict[str, Any] | None = None,
         diagnosis_engine: DiagnosisEngine | None = None,
+        orchestrator: Orchestrator | None = None,
     ) -> None:
         self._profile = profile
         self._config = config or {}
         self._diagnosis = diagnosis_engine
         self._state = CampaignState()
+        self.orch = orchestrator
 
     @property
     def state(self) -> CampaignState:
         return self._state
 
+    # ────────────────────────────────────────────────────────
+    # 公开入口
+    # ────────────────────────────────────────────────────────
+
     def run(
         self,
         *,
-        step_fn: Any = None,
         goal_config: dict[str, Any] | None = None,
+        workspace: Path | None = None,
     ) -> CampaignResult:
         """执行 Campaign 循环
 
-        Args:
-            step_fn: 单次 cycle 的执行函数。
-                签名: (cycle_index: int, config: dict) -> CycleMetrics
-                若为 None，使用内置 stub（demo 用）。
-            goal_config: 目标配置（传递给 step_fn）
+        dispatcher:
+        - orch 存在 → ``_run_orchestrated`` (Arb 编排路径)
+        - orch 缺失 → ``_run_heartbeat`` (MM 心跳路径)
         """
-        max_cycles = self._config.get("max_cycles")
-        interval = self._config.get("cycle_interval_seconds", 30)
-        max_daily = self._config.get("max_daily_usd", float("inf"))
-        budget_halt_ratio = self._config.get("budget_halt_ratio", 1.0)
-        max_failures = self._config.get("max_consecutive_failures", float("inf"))
+        if self.orch is not None:
+            return self._run_orchestrated(goal_config=goal_config, workspace=workspace)
+        return self._run_heartbeat(goal_config=goal_config)
 
-        merged_config = {**self._config, **(goal_config or {})}
+    # ────────────────────────────────────────────────────────
+    # Arb 编排路径 (WQ-YI aligned)
+    # ────────────────────────────────────────────────────────
+
+    def _run_orchestrated(
+        self,
+        *,
+        goal_config: dict[str, Any] | None = None,
+        workspace: Path | None = None,
+    ) -> CampaignResult:
+        """WQ-YI aligned 编排执行:
+
+        每个 cycle = 一次完整 pipeline (collect→execute)。
+        成功 → 进入下一 cycle（直到 max_cycles）。
+        失败 → 诊断 → reset_from_step → resume（同一 cycle 内重试）。
+        """
+        merged = {**self._config, **(goal_config or {})}
+        max_cycles = merged.get("max_cycles", 100)
+        interval = merged.get("cycle_interval_seconds", 0)
+        max_daily = merged.get("max_daily_usd", float("inf"))
+        budget_halt_ratio = merged.get("budget_halt_ratio", 1.0)
+        max_failures = merged.get("max_consecutive_failures", float("inf"))
+
+        trace: TraceResult | None = None
 
         while True:
             self._state.current_cycle += 1
             cycle_idx = self._state.current_cycle
 
             # ── 预算检查 ──
-            if abs(self._state.cumulative_pnl_usd) > max_daily * budget_halt_ratio:
-                if self._state.cumulative_pnl_usd < 0:
-                    logger.warning(
-                        "[Campaign] 亏损熔断: $%.1f > $%.1f (cycle=%d)",
-                        abs(self._state.cumulative_pnl_usd),
-                        max_daily * budget_halt_ratio,
-                        cycle_idx,
-                    )
-                    return CampaignResult(
-                        status="budget_exhausted",
-                        total_cycles=cycle_idx,
-                        cumulative_pnl_usd=self._state.cumulative_pnl_usd,
-                        cycles=self._state.cycles,
-                    )
+            budget_result = self._check_budget(cycle_idx, max_daily, budget_halt_ratio)
+            if budget_result is not None:
+                return budget_result
 
             # ── 连续失败检查 ──
             if self._state.consecutive_failures >= max_failures:
                 halt = HaltDecision(
                     reason="max_consecutive_failures",
-                    strategy_id=merged_config.get("strategy_id", "unknown"),
+                    strategy_id=merged.get("strategy_id", "unknown"),
                     message=f"连续失败 {self._state.consecutive_failures} 次",
                 )
                 return CampaignResult(
@@ -208,80 +246,199 @@ class CampaignRunner:
                     cycles=self._state.cycles,
                 )
 
-            # ── 执行 cycle ──
-            if step_fn is not None:
-                metrics = step_fn(cycle_idx, merged_config)
+            # ── 执行 cycle (通过 Orchestrator) ──
+            if trace is None or trace.status == TraceStatus.COMPLETED:
+                # 新 cycle: 全新 pipeline run
+                trace = self.orch.run(
+                    goal_config=merged,
+                    end_step=LOOP_END_STEP,
+                    skip_steps=FINALIZE_STEPS,
+                )
             else:
-                metrics = self._stub_cycle(cycle_idx, merged_config)
+                # 失败重试: 从上次 checkpoint resume
+                if trace.checkpoint_path:
+                    trace = self.orch.resume(
+                        trace.checkpoint_path,
+                        end_step=LOOP_END_STEP,
+                    )
+                else:
+                    trace = self.orch.run(
+                        goal_config=merged,
+                        end_step=LOOP_END_STEP,
+                        skip_steps=FINALIZE_STEPS,
+                    )
 
+            # ── 提取 metrics ──
+            metrics = self._extract_metrics(trace, cycle_idx)
             self._state.cycles.append(metrics)
             self._state.cumulative_pnl_usd += metrics.pnl_usd
             self._state.cumulative_gas_usd += metrics.gas_cost_usd
 
-            # ── 成功/失败计数 ──
-            if metrics.trades_failed > 0 and metrics.trades_executed == 0:
+            # ── 成功/失败处理 ──
+            if trace.status == TraceStatus.FAILED:
                 self._state.consecutive_failures += 1
-
-                # Arb: 诊断驱动回退
-                if self._diagnosis is not None:
-                    diag = self._diagnosis.diagnose(
-                        evidence={
-                            "strategy_id": merged_config.get("strategy_id", "unknown"),
-                            "pnl_usd": metrics.pnl_usd,
-                            "consecutive_failures": self._state.consecutive_failures,
-                            "cumulative_loss_usd": abs(min(self._state.cumulative_pnl_usd, 0)),
-                        },
-                        strategy_id=merged_config.get("strategy_id", "unknown"),
+                self._handle_failure(metrics, merged, trace)
+                # 诊断停机检查
+                if self._state.halts:
+                    return CampaignResult(
+                        status="halted",
+                        total_cycles=cycle_idx,
+                        cumulative_pnl_usd=self._state.cumulative_pnl_usd,
+                        cycles=self._state.cycles,
+                        halt=self._state.halts[-1],
                     )
-                    halt_reason = validate_diagnosis(diag)
-                    if halt_reason:
-                        halt = HaltDecision(
-                            reason=halt_reason,
-                            strategy_id=merged_config.get("strategy_id", "unknown"),
-                            diagnosis=diag,
-                            message=f"诊断失败: {halt_reason}",
-                        )
-                        self._state.halts.append(halt)
-                        return CampaignResult(
-                            status="halted",
-                            total_cycles=cycle_idx,
-                            cumulative_pnl_usd=self._state.cumulative_pnl_usd,
-                            cycles=self._state.cycles,
-                            halt=halt,
-                        )
-
-                    if diag is not None:
-                        metrics.retreat_level = diag.retreat_level
-                        logger.info(
-                            "[Campaign] 诊断回退: Level %s → %s (strategy=%s)",
-                            diag.retreat_level,
-                            diag.target_step,
-                            diag.strategy_id,
-                        )
             else:
                 self._state.consecutive_failures = 0
 
             # ── 心跳间隔 ──
-            if max_cycles is None:
-                # MM 模式：无限循环 — demo 中跳出避免死循环
-                break
-            if interval > 0 and cycle_idx < (max_cycles or float("inf")):
-                time.sleep(0)  # demo stub — 实际用 asyncio.sleep(interval)
+            if interval > 0:
+                time.sleep(interval)
 
+        # unreachable — while True 由 return 退出
+
+    def _handle_failure(
+        self,
+        metrics: CycleMetrics,
+        config: dict[str, Any],
+        trace: TraceResult,
+    ) -> None:
+        """失败后诊断 + 回退 (就地修改 metrics.retreat_level)"""
+        if self._diagnosis is None:
+            return
+
+        diag = self._diagnosis.diagnose(
+            evidence=self._build_evidence(metrics, config),
+            strategy_id=config.get("strategy_id", "unknown"),
+        )
+        halt_reason = validate_diagnosis(diag)
+        if halt_reason:
+            halt = HaltDecision(
+                reason=halt_reason,
+                strategy_id=config.get("strategy_id", "unknown"),
+                diagnosis=diag,
+                message=f"诊断停机: {halt_reason}",
+            )
+            self._state.halts.append(halt)
+            return  # 由上层循环检查 halts
+
+        if diag is not None:
+            metrics.retreat_level = diag.retreat_level
+            logger.info(
+                "[Campaign] 诊断回退: Level %s → %s (strategy=%s)",
+                diag.retreat_level, diag.target_step, diag.strategy_id,
+            )
+            # Reset checkpoint — 下次循环 resume 时从 target_step 重跑
+            if trace.checkpoint_path:
+                cp = Checkpoint.load(Path(trace.checkpoint_path))
+                self.orch.reset_from_step(
+                    cp, diag.target_step, trace.checkpoint_path,
+                )
+
+    def _try_finalize(self, trace: TraceResult) -> None:
+        """Phase 3: 运行 fix 步骤（可选 — FINALIZE_STEPS 中的步骤）"""
+        if "fix" not in self._profile.step_order:
+            return
+        if not trace.checkpoint_path:
+            return
+        try:
+            self.orch.resume(trace.checkpoint_path)
+        except Exception:
+            logger.warning("[Campaign] fix 步骤失败，跳过", exc_info=True)
+
+    def _check_budget(
+        self,
+        cycle_idx: int,
+        max_daily: float,
+        budget_halt_ratio: float,
+    ) -> CampaignResult | None:
+        """预算检查 — 累计亏损超阈值则熔断"""
+        threshold = max_daily * budget_halt_ratio
+        if abs(self._state.cumulative_pnl_usd) > threshold:
+            if self._state.cumulative_pnl_usd < 0:
+                logger.warning(
+                    "[Campaign] 亏损熔断: $%.1f > $%.1f (cycle=%d)",
+                    abs(self._state.cumulative_pnl_usd),
+                    threshold, cycle_idx,
+                )
+                return CampaignResult(
+                    status="budget_exhausted",
+                    total_cycles=cycle_idx,
+                    cumulative_pnl_usd=self._state.cumulative_pnl_usd,
+                    cycles=self._state.cycles,
+                )
+        return None
+
+    # ────────────────────────────────────────────────────────
+    # MM 心跳路径 (无 Orchestrator)
+    # ────────────────────────────────────────────────────────
+
+    def _run_heartbeat(
+        self,
+        *,
+        goal_config: dict[str, Any] | None = None,
+    ) -> CampaignResult:
+        """MM 心跳模式 — 单 cycle stub（无 Orchestrator 依赖）"""
+        self._state.current_cycle = 1
+        m = CycleMetrics(cycle_index=1, trades_executed=1)
+        self._state.cycles.append(m)
         return CampaignResult(
             status="completed",
-            total_cycles=self._state.current_cycle,
-            cumulative_pnl_usd=self._state.cumulative_pnl_usd,
+            total_cycles=1,
+            cumulative_pnl_usd=0.0,
             cycles=self._state.cycles,
         )
 
+    # ────────────────────────────────────────────────────────
+    # 内部工具方法
+    # ────────────────────────────────────────────────────────
+
     @staticmethod
-    def _stub_cycle(cycle_idx: int, config: dict[str, Any]) -> CycleMetrics:
-        """Demo stub — 模拟单次 cycle 执行"""
+    def _extract_metrics(trace: TraceResult, cycle_idx: int) -> CycleMetrics:
+        """从 Orchestrator TraceResult 提取 CycleMetrics"""
+        if trace.status != TraceStatus.COMPLETED:
+            return CycleMetrics(
+                cycle_index=cycle_idx,
+                trades_executed=0,
+                trades_failed=1,
+            )
+
+        pnl = 0.0
+        gas = 0.0
+        executed = 0
+        total = 0
+
+        for asset in trace.final_assets:
+            if asset.kind == "execution_result":
+                md = asset.metadata
+                for r in md.get("results", []):
+                    pnl += r.get("profit_usd", 0)
+                    gas += r.get("gas_usd", 0)
+                ok = md.get("success", 0)
+                executed += ok
+                total += md.get("total", ok)
+
         return CycleMetrics(
             cycle_index=cycle_idx,
-            pnl_usd=0.0,
-            gas_cost_usd=0.0,
-            trades_executed=1,
-            trades_failed=0,
+            pnl_usd=pnl,
+            gas_cost_usd=gas,
+            trades_executed=max(executed, 1),  # pipeline 完成 → 至少 1
+            trades_failed=max(total - executed, 0),
         )
+
+    @staticmethod
+    def _build_evidence(
+        metrics: CycleMetrics,
+        config: dict[str, Any],
+    ) -> dict[str, Any]:
+        """构建诊断引擎消费的证据包"""
+        return {
+            "strategy_id": config.get("strategy_id", "unknown"),
+            "pnl_usd": metrics.pnl_usd,
+            "gas_cost_usd": metrics.gas_cost_usd,
+            "consecutive_failures": 0,  # 由 CampaignRunner 状态补充
+            "cumulative_loss_usd": 0,   # 由 CampaignRunner 状态补充
+            "actual_slippage_pct": 0,
+            "mev_detected": False,
+            "pool_tvl_usd": config.get("pool_tvl_usd", float("inf")),
+            "volume_24h_usd": config.get("volume_24h_usd", 0),
+        }

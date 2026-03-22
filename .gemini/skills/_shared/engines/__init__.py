@@ -35,6 +35,9 @@ from nexrur.engines import (  # noqa: F401
     create_tool_loop_runner,
 )
 
+# ── AGV clients ──
+from _shared.clients import GeminiLLMClient, LLMError  # noqa: F401
+
 # ── AGV profiles ──
 from _shared.engines._profiles import (  # noqa: F401
     AGV_TRUNK_PROFILE,
@@ -60,7 +63,7 @@ from _shared.engines.agent_ops_mm import (  # noqa: F401
     TVLCircuitBreaker,
 )
 from _shared.engines.agent_ops_arb import (  # noqa: F401
-    ScanOps,
+    CollectOps,
     CurateOps,
     DatasetOps,
     ArbExecuteOps,
@@ -94,4 +97,6 @@ from _shared.engines.campaign import (  # noqa: F401
     CycleMetrics,
     DEFAULT_MM_CONFIG,
     DEFAULT_ARB_CONFIG,
+    LOOP_END_STEP,
+    FINALIZE_STEPS,
 )

@@ -1,7 +1,7 @@
 # AGV-NFT-RUN.md — NFT 部署运维指南
 
-> **文档版本**: v3.1 (V3 已部署 + Metadata API 上线 + Agent License 首铸)  
-> **日期**: 2026-03-18  
+> **文档版本**: v3.2 (V3 已部署 + SolarPass 批量空投 + 柯兆民 License 授予)  
+> **日期**: 2026-03-19  
 > **适用仓库**: `agvprotocol-contracts-main`  
 > **姊妹文档**:  
 > - 架构设计 → [AGV-NFT-AgentRegistry.md](AGV-NFT-AgentRegistry.md) §13  
@@ -68,13 +68,13 @@ forge script 一键部署    上传图片到 IPFS/API         散客自购 mint(
 | `metadataFrozen` | `false` | URI 可修改 |
 | Royalty | 5% → treasury | ERC2981 |
 
-**链上实际状态 (2026-03-18)**：
+**链上实际状态 (2026-03-19)**：
 
 | 合约 | totalSupply | collectibleBaseURI | licenseBaseURI | 已铸造明细 |
 |------|:-----------:|:------------------:|:--------------:|------------|
-| SeedPass | **2** | ✅ | ✅ | Collectible #1 + License #2 (admin, quota=100) |
+| SeedPass | **4** | ✅ | ✅ | Collectible #1 + License #2 (admin, quota=79,000) + License #3 (柯兆民, quota=79,000) + Collectible #4 (柯兆民) |
 | TreePass | 0 | ✅ | *(待设置)* | — |
-| SolarPass | 0 | ✅ | *(待设置)* | — |
+| SolarPass | **18** | ✅ | ✅ | Collectible #1-#9 (9人空投) + License #10-#18 (每人 quota=500) |
 | ComputePass | 0 | ✅ | *(待设置)* | — |
 
 ### 2.1 前置准备
@@ -368,6 +368,7 @@ cast send $SEEDPASS \
 | SolarPass | collectible | `https://agvnexrur.ai/api/nft/solarpass/` | `0x0a8b25...` |
 | ComputePass | collectible | `https://agvnexrur.ai/api/nft/computepass/` | `0x6d3dd3...` |
 | SeedPass | license | `https://agvnexrur.ai/api/nft/seedagent/` | `0x89887a...` |
+| SolarPass | license | `https://agvnexrur.ai/api/nft/solaragent/` | `0xa2ab0c86...` |
 
 ```bash
 # 设置收藏品 BaseURI（示例）
@@ -566,9 +567,10 @@ cast logs --from-block latest \
 ### 业务验证（阶段 3 — 部分完成）
 
 - [ ] 散客 `mint(1)` 正确收取 USDT 并铸造（⏳ 待测试）
-- [x] `grantLicense` 铸造 Soulbound License NFT 到 Agent 钱包 ✅（SeedPass License #2, quota=100）
+- [x] `grantLicense` 铸造 Soulbound License NFT 到 Agent 钱包 ✅（SeedPass License #2 admin/79000 + #3 柯兆民/79000；SolarPass License #10-#18 ×9人/500）
+- [x] SeedPass Collectible #4 铸造给柯兆民 ✅（`0xa61c...94e3`, Token ID 4, 2026-03-19）
 - [ ] `adminMintForAgent` 扣减 Agent 额度并铸造给指定地址（⏳ 待测试）
-- [x] `adminMint` 直接铸造 ✅（SeedPass Collectible #1）
+- [x] `adminMint` 直接铸造 ✅（SeedPass Collectible #1 + SolarPass Collectible #1-#9）
 - [ ] License token 不可转让（Soulbound — transfer revert）（⏳ 待测试）
 - [ ] 收藏品 token 可正常转让（⏳ 待测试）
 - [ ] `pause()` 阻断所有铸造（⏳ 待测试）

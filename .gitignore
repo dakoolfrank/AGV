@@ -13,6 +13,7 @@ docs/
 
 # Dotenv file
 .env
+.env.s5
 
 # Deployments
 deployments/
@@ -48,9 +49,6 @@ Thumbs.db
 !README.md
 /*.md.bak
 agv-web/**/*.md
-
-# Internal docs (not shared)
-.docs/
 
 # Python cache
 __pycache__/

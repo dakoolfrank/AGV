@@ -3,7 +3,7 @@ AGV adapter: 证据拓扑
 
 双 Campaign 上游链：
   MM:  monitor → detect → decide → execute → log
-  Arb: scan → curate → dataset → execute → fix
+  Arb: collect → curate → dataset → execute → fix
 """
 from nexrur.core.evidence import *  # noqa: F401,F403
 from nexrur.core.evidence import EvidenceStore, EvidenceLevel  # noqa: F401
@@ -18,7 +18,7 @@ STEP_EVIDENCE_LEVEL: dict[str, EvidenceLevel] = {
     "execute": EvidenceLevel.REQUIRED,
     "log": EvidenceLevel.AUDIT_ONLY,
     # Arb-Campaign
-    "scan": EvidenceLevel.REQUIRED,
+    "collect": EvidenceLevel.REQUIRED,
     "curate": EvidenceLevel.RECOMMENDED,
     "dataset": EvidenceLevel.RECOMMENDED,
     "fix": EvidenceLevel.REQUIRED,
@@ -33,10 +33,10 @@ UPSTREAM_CHAIN: dict[str, list[str]] = {
     "execute": ["monitor", "detect", "decide"],
     "log": ["monitor", "detect", "decide", "execute"],
     # Arb-Campaign
-    "scan": [],
-    "curate": ["scan"],
-    "dataset": ["scan", "curate"],
-    # execute 在 Arb 可看到 scan→curate→dataset
+    "collect": [],
+    "curate": ["collect"],
+    "dataset": ["collect", "curate"],
+    # execute 在 Arb 可看到 collect→curate→dataset
     # (execute 被两个 Campaign 共用，取最大上游集)
-    "fix": ["scan", "curate", "dataset", "execute"],
+    "fix": ["collect", "curate", "dataset", "execute"],
 }
