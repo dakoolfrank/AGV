@@ -1,10 +1,10 @@
 """
 AGV clients — GeminiLLMClient
 
-适配 DiagnosisEngine.LLMClient Protocol，底层复用 brain_alpha.infra.llm。
+适配 DiagnosisEngine.LLMClient Protocol，底层复用 nexrur.clients.gemini。
 
 设计:
-- brain_alpha.infra.llm.GeminiClient 是纯 requests HTTP 客户端（零 SDK）
+- nexrur.clients.gemini.GeminiClient 是纯 requests HTTP 客户端（零 SDK）
 - 本模块做签名适配: diagnosis.py Protocol → GeminiClient.generate_text
 - JSON 提取/校验从 nexrur PlatformLLMClient 精简移植
 - 凭据从 brain_alpha.infra.settings 加载（PYTHONPATH 需包含 WQ-YI）
@@ -86,14 +86,14 @@ def _extract_json_robust(raw: str) -> dict[str, Any]:
 class GeminiLLMClient:
     """适配 DiagnosisEngine.LLMClient Protocol
 
-    底层: brain_alpha.infra.llm.GeminiClient (requests HTTP)
+    底层: nexrur.clients.gemini.GeminiClient (requests HTTP)
     签名: generate_json(system_prompt, user_prompt, ...) → dict
     """
 
     def __init__(self, client: Any, flash_client: Any | None = None):
         """
         Args:
-            client: brain_alpha.infra.llm.GeminiClient (Pro)
+            client: nexrur.clients.gemini.GeminiClient (Pro)
             flash_client: GeminiClient (Flash, 可选 — 用于快速初判)
         """
         self._client = client
@@ -101,25 +101,23 @@ class GeminiLLMClient:
 
     @classmethod
     def from_settings(cls) -> "GeminiLLMClient":
-        """从 brain_alpha settings 加载（需 PYTHONPATH 包含 WQ-YI）"""
+        """从 nexrur credentials 加载（读 .env + 环境变量）"""
         try:
-            from brain_alpha.infra.llm import (
-                load_gemini_client_from_settings,
-                load_gemini_flash_client,
-            )
+            from nexrur.clients import create_client, NexrurCredentials
         except ImportError as exc:
             raise LLMError(
-                "brain_alpha.infra.llm 不可用 — "
-                "请确保 PYTHONPATH 包含 WQ-YI 目录"
+                "nexrur.clients 不可用 — "
+                "请确保 nexrur 已安装 (pip install -e nexrur)"
             ) from exc
 
-        pro = load_gemini_client_from_settings()
+        creds = NexrurCredentials()
+        pro = create_client(creds, flash=False)
         if pro is None:
             raise LLMError(
                 "GeminiClient 初始化失败 — "
                 "检查 GEMINI_API_KEY / GEMINI_MODEL / AI_ENABLE"
             )
-        flash = load_gemini_flash_client()
+        flash = create_client(creds, flash=True)
         return cls(client=pro, flash_client=flash)
 
     @classmethod

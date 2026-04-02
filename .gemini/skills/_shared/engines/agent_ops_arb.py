@@ -952,23 +952,18 @@ class DatasetOps:
 
     @staticmethod
     def _load_ai_clients() -> tuple[Any, Any]:
-        """加载 Gemini Flash + Pro 客户端（委托 WQ-YI brain_alpha）"""
-        import sys
-        _wqyi_root = "/workspaces/WQ-YI"
-        if _wqyi_root not in sys.path:
-            sys.path.insert(0, _wqyi_root)
-        from brain_alpha.infra.llm import (
-            load_gemini_client_from_settings,
-            load_gemini_flash_client,
-        )
-        flash = load_gemini_flash_client()
+        """加载 Gemini Flash + Pro 客户端（via nexrur）"""
+        from nexrur.clients import create_client, NexrurCredentials
+
+        creds = NexrurCredentials()
+        flash = create_client(creds, flash=True)
         if flash is None:
-            flash = load_gemini_client_from_settings()
+            flash = create_client(creds, flash=False)
         if flash is None:
             raise RuntimeError(
                 "DeFi Dataset requires LLM — GEMINI_API_KEY not configured"
             )
-        pro = load_gemini_client_from_settings()
+        pro = create_client(creds, flash=False)
         return flash, pro
 
     @staticmethod
