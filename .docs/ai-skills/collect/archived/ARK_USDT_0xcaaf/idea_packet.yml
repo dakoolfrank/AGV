@@ -1,0 +1,275 @@
+pair_id: ARK_USDT_0xcaaf
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap_v2
+  pool_address: '0xcaaf3c41a40103a23eeaa4bba468af3cf5b0e0d8'
+  base_token:
+    symbol: ARK
+    address: '0xcae117ca6bc8a341d2e7207f30e180f0e5618b9d'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:36abafd80b0ec945
+  primary_excerpt: 'Pool ARK_USDT_0xcaaf on bsc/pancakeswap_v2. TVL: $80,806,210,
+    24h Volume: $6,237,294. lp_imbalance(str=93.8); whale_movement(str=53.5); whale_movement(str=27.0);
+    whale_movement(str=15.6); whale_movement(str=15.2)'
+market_data:
+  price_usd: 16.1222852904512
+  tvl_usd: 80806209.923
+  volume_24h_usd: 6237294.15644105
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 16.2994429155721
+    low: 15.8736946371547
+    close: 16.0986518215416
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 93.8
+  source: gecko
+  details:
+    reserve_ratio: 0.061964650403033984
+- signal_type: whale_movement
+  strength: 53.53
+  source: moralis
+  details:
+    tx_hash: '0xe01d3a7df81b50c5dc45fe7483f0da8dd27fd799f7fab001460655cd14bdca1e'
+    value_usd: 2676.299358214899
+- signal_type: whale_movement
+  strength: 27.0
+  source: moralis
+  details:
+    tx_hash: '0x0791ee60e0666bef68e477674685afb1240d34dbe90f82e1f58726532db0e74c'
+    value_usd: 1349.8808211007158
+- signal_type: whale_movement
+  strength: 15.56
+  source: moralis
+  details:
+    tx_hash: '0x432a7a1562df78487d3709b761e559a46c0427a46378bdcf255e049f6f900a43'
+    value_usd: 777.956851033235
+- signal_type: whale_movement
+  strength: 15.17
+  source: moralis
+  details:
+    tx_hash: '0xdb9e15191bfbbae5a768b7a6fb4996d9353bf91fa8f62c241759c5481ff2383c'
+    value_usd: 758.5079297574042
+- signal_type: whale_movement
+  strength: 15.1
+  source: moralis
+  details:
+    tx_hash: '0x11c075d1f69c38c08e5dc4faf84de2785ff9339b62422eb8cdbe82133d1c459a'
+    value_usd: 754.8340778693171
+- signal_type: whale_movement
+  strength: 11.74
+  source: moralis
+  details:
+    tx_hash: '0xdb78c7ded6cb51c186f8f8f4790d74a1c630862beea625d262e59b0081adbd27'
+    value_usd: 586.8511845724236
+- signal_type: whale_movement
+  strength: 10.37
+  source: moralis
+  details:
+    tx_hash: '0xbe46dddae920b52bd84b587bc20afdc9e73a56eb0dbf9660611aa42b684c4ecb'
+    value_usd: 518.7345292202673
+- signal_type: whale_movement
+  strength: 10.32
+  source: moralis
+  details:
+    tx_hash: '0x14403a0f1d4062189a15e58883b0cfb4a86fb0278035a80389771af2a4901366'
+    value_usd: 515.9131292944384
+- signal_type: whale_movement
+  strength: 10.11
+  source: moralis
+  details:
+    tx_hash: '0xf72ee63192c93b4e5efcdbc9b5fc744c1707974d9b3eb8bec13ced4aefabca8e'
+    value_usd: 505.5948667085496
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 48
+    avg_trade_size_usd: 186.27
+indicators:
+  rsi_14: 50.355828
+  ema_12: 16.092693
+  ema_26: 16.09321
+  vwap: 16.112021
+  bollinger_upper: 16.203701
+  bollinger_lower: 15.979212
+  bollinger_middle: 16.091456
+  macd_histogram: 0.003725
+  atr_14: 0.209821
+  onchain_tx_count: 100
+  onchain_unique_wallets: 48
+  onchain_avg_trade_size_usd: 186.27
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.062
+  depth_2pct_usd: 804021.79
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 11
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 96
+  status: validated
+  reasons:
+  - lp_imbalance strength=93.8
+  - whale_movement strength=53.5
+  - whale_movement strength=27.0
+  - whale_movement strength=15.6
+  - whale_movement strength=15.2
+  - whale_movement strength=15.1
+  - whale_movement strength=11.7
+  - whale_movement strength=10.4
+  - whale_movement strength=10.3
+  - whale_movement strength=10.1
+  - high_onchain_activity strength=100.0
+  - TVL $80.8M sufficient
+  - Volume $6237K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 100000
+    max_slippage_bps: 80
+    hold_blocks_max: 5
+llm_classification:
+  asset_class: mid_cap
+  amm_type: constant_product_v2
+  liquidity_profile: deep
+  activity_profile: normal
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.92
+  viable: true
+  reasoning: 储备金比例0.062属于极端失衡，PancakeSwap V2的恒定乘积公式会导致严重的单边滑点，为套利者提供巨大的价格修复空间。
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 100000
+    max_slippage_bps: 80
+    hold_blocks_max: 5
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.85
+  viable: true
+  reasoning: ARK主战场在CEX，链上80M的TVL与极低的储备比例暗示该池可能作为跨链桥的流动性终点，存在显著的跨市场价差。
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 50000
+    max_slippage_bps: 40
+    hold_blocks_max: 3
+- strategy_type: mean_reversion
+  pro_confidence: 0.25
+  viable: false
+  reasoning: 在极端流动性失衡背景下，价格更倾向于受外部套利驱动而非随机波动，均值回归策略极易遭遇单边行情导致的无常损失。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+llm_risk_flags:
+- extreme_reserve_imbalance
+- suspicious_tvl_activity_ratio
+- whale_signal_mismatch
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: constant_product_v2
+    liquidity_profile: deep
+    activity_profile: normal
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.88
+    reasoning: 储备金比例仅为0.062，存在极端严重的流动性失衡，预示着巨大的套利空间或价格回归需求。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: mean_reversion
+    confidence: 0.65
+    reasoning: RSI处于50.35中性区间，价格在布林带中轨波动，适合在当前窄幅震荡区间进行均值回归交易。
+    trigger_signals:
+    - rsi_14
+    - bollinger_middle
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.72
+    reasoning: 鉴于ARK为跨链资产且该池TVL巨大但比例失衡，PancakeSwap价格极可能偏离外部市场。
+    trigger_signals:
+    - lp_imbalance
+    - depth_2pct_usd
+  risk_flags:
+  - extreme_reserve_imbalance
+  - suspicious_tvl_activity_ratio
+  - whale_signal_mismatch
+  flash_score: 68
+  flash_verdict: moderate
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.92
+    viable: true
+    reasoning: 储备金比例0.062属于极端失衡，PancakeSwap V2的恒定乘积公式会导致严重的单边滑点，为套利者提供巨大的价格修复空间。
+    parameter_hints:
+      entry_threshold_pct: 1.2
+      max_position_usd: 100000
+      max_slippage_bps: 80
+      hold_blocks_max: 5
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.85
+    viable: true
+    reasoning: ARK主战场在CEX，链上80M的TVL与极低的储备比例暗示该池可能作为跨链桥的流动性终点，存在显著的跨市场价差。
+    parameter_hints:
+      entry_threshold_pct: 0.8
+      max_position_usd: 50000
+      max_slippage_bps: 40
+      hold_blocks_max: 3
+  - strategy_type: mean_reversion
+    pro_confidence: 0.25
+    viable: false
+    reasoning: 在极端流动性失衡背景下，价格更倾向于受外部套利驱动而非随机波动，均值回归策略极易遭遇单边行情导致的无常损失。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  pro_score: 52
+  pro_verdict: moderate
+  override_reason: 虽然TVL高达80M，但平均交易额仅$186且储备比例极度畸形，暗示流动性可能存在虚假成分或被锁定，实际可承载深度需警惕。将Flash评分下调以反映潜在的流动性陷阱风险。
+llm_verdict: moderate
+llm_score: 52
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

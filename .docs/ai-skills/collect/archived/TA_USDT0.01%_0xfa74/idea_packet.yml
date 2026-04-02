@@ -1,0 +1,219 @@
+pair_id: TA_USDT0.01%_0xfa74
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0xfa7421f1ed6ad1548316a847e8437af7219a8f18'
+  base_token:
+    symbol: TA
+    address: '0x539ae81a166e5e80aed211731563e549c411b140'
+  quote_token:
+    symbol: USDT 0.01%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:cbbb02102bb5dd73
+  primary_excerpt: 'Pool TA_USDT0.01%_0xfa74 on bsc/pancakeswap-v3-bsc. TVL: $238,687,
+    24h Volume: $7,161,012. price_divergence(str=3.8); lp_imbalance(str=94.8); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0517951818081703
+  tvl_usd: 238686.8332
+  volume_24h_usd: 7161011.9548983
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 0.0555369050712141
+    low: 0.0492920049650326
+    close: 0.0499163124298966
+    bar_count: 100
+signals:
+- signal_type: price_divergence
+  strength: 3.76
+  source: gecko
+  details:
+    price: 0.0517951818081703
+    last_close: 0.0499163124298966
+- signal_type: lp_imbalance
+  strength: 94.81
+  source: gecko
+  details:
+    reserve_ratio: 0.05193518370292002
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 25
+    avg_trade_size_usd: 77.78
+indicators:
+  rsi_14: 41.687259
+  ema_12: 0.050275
+  ema_26: 0.050416
+  vwap: 0.051696
+  bollinger_upper: 0.050875
+  bollinger_lower: 0.049857
+  bollinger_middle: 0.050366
+  macd_histogram: -1.1e-05
+  atr_14: 0.000741
+  onchain_tx_count: 100
+  onchain_unique_wallets: 25
+  onchain_avg_trade_size_usd: 77.78
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0519
+  depth_2pct_usd: 2374.93
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 3
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 83
+  status: validated
+  reasons:
+  - price_divergence strength=3.8
+  - lp_imbalance strength=94.8
+  - high_onchain_activity strength=100.0
+  - TVL $239K above minimum
+  - Volume $7161K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 1200
+    max_slippage_bps: 20
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: shallow
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.88
+  viable: true
+  reasoning: 储备金比例极度失衡(0.05)表明价格处于V3流动性区间边缘，存在极高的均值回归套利空间，但需注意单笔头寸上限。
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 800
+    max_slippage_bps: 30
+    hold_blocks_max: 5
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.9
+  viable: true
+  reasoning: 3.76%的价格偏离度远超0.01%的手续费成本，高频交易量证明了套利路径的活跃度。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 1200
+    max_slippage_bps: 20
+    hold_blocks_max: 2
+- strategy_type: volume_momentum
+  pro_confidence: 0.55
+  viable: false
+  reasoning: 平均交易额仅$77且成交量/TVL比率异常（30倍），极大概率为刷量行为或高频对冲，不具备趋势动量参考价值。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+llm_risk_flags:
+- extreme_lp_imbalance
+- low_depth_to_volume_ratio
+- high_slippage_risk
+- potential_wash_trading
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: shallow
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.92
+    reasoning: 极高的储备失衡信号(94.81)配合极低的2%深度，预示着巨大的套利空间以修复价格偏离。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: 价格偏离信号(3.76)与极高的交易量/TVL比率表明该池与外部市场存在显著价差。
+    trigger_signals:
+    - price_divergence
+    - high_onchain_activity
+  - strategy_type: volume_momentum
+    confidence: 0.78
+    reasoning: 24小时交易量超过TVL的30倍，且链上活动评分满分，适合捕捉短期波动动量。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - extreme_lp_imbalance
+  - low_depth_to_volume_ratio
+  - high_slippage_risk
+  - potential_wash_trading
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.88
+    viable: true
+    reasoning: 储备金比例极度失衡(0.05)表明价格处于V3流动性区间边缘，存在极高的均值回归套利空间，但需注意单笔头寸上限。
+    parameter_hints:
+      entry_threshold_pct: 1.5
+      max_position_usd: 800
+      max_slippage_bps: 30
+      hold_blocks_max: 5
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.9
+    viable: true
+    reasoning: 3.76%的价格偏离度远超0.01%的手续费成本，高频交易量证明了套利路径的活跃度。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 1200
+      max_slippage_bps: 20
+      hold_blocks_max: 2
+  - strategy_type: volume_momentum
+    pro_confidence: 0.55
+    viable: false
+    reasoning: 平均交易额仅$77且成交量/TVL比率异常（30倍），极大概率为刷量行为或高频对冲，不具备趋势动量参考价值。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  pro_score: 82
+  pro_verdict: moderate
+  override_reason: 虽然信号强度极高，但2%深度仅为$2374，相对于$7M的交易量极度脆弱。平均交易额过小暗示存在大量洗盘交易（Wash Trading），实际可承载的策略容量有限，故下调评分并建议严格限制头寸。
+llm_verdict: moderate
+llm_score: 82
+hypotheses:
+- hypothesis: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- claim_id: c2
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

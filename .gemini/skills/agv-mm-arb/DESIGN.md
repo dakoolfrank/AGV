@@ -1,19 +1,24 @@
 # S5 MarketMaker-Agent 详细设计
 
-> **文档版本**: v1.6  
-> **日期**: 2026-03-13 (v1.0) / 2026-03-14 (v1.1 实施对齐) / 2026-03-15 (v1.2 架构重构对齐) / 2026-03-19 (v1.3 Arb-first + D1-D5 共识) / 2026-03-20 (v1.4 Phase 4 通知系统实装) / 2026-03-22 (v1.5 curate 实装对齐) / 2026-03-22 (v1.6 CampaignRunner self.orch 重写对齐)  
+> **文档版本**: v2.2  
+> **日期**: 2026-03-13 (v1.0) / 2026-03-14 (v1.1 实施对齐) / 2026-03-15 (v1.2 架构重构对齐) / 2026-03-19 (v1.3 Arb-first + D1-D5 共识) / 2026-03-20 (v1.4 Phase 4 通知系统实装) / 2026-03-22 (v1.5 curate 实装对齐) / 2026-03-22 (v1.6 CampaignRunner self.orch 重写对齐) / 2026-03-23 (v1.7 curate+dataset 委托完全实装) / 2026-03-23 (v1.8 归档机制实装) / 2026-03-29 (v1.9 集成测试全面实装 + DESIGN_TODO 合并) / 2026-03-30 (v2.0 集成测试实单验证 + LLM 四步全覆盖确认) / 2026-03-31 (v2.1 三文件拆分 + execute 模式收敛 + .env.s5 + supervisord) / 2026-04-01 (v2.2 文件树与测试路径勘误 + BUG-5 simulate 归档修复记录)  
 > **定位**: S2 分叉分支 Subagent（双 Campaign 拓扑），消费 S2 链上状态，与 S3 主干并行  
 > **底座**: nexrur L0 Core + L1 Engines  
 > **前置文档**: [DESIGN.md](DESIGN.md) §Σ.4 / [SUBAGENT_KOL_DESIGN.md](SUBAGENT_KOL_DESIGN.md)
 >
+> **v2.0 集成测试实单验证 + LLM 四步全覆盖**：collect 集成实单验证（72 discovered / 48 persisted / ~23min），curate 集成 6/6 通过（修复 signal_strength 归一化 + _curate_ops_cache 单例），BUG-2 curate 通过率问题已解决。**确认 4 步管线全部使用 LLM**：collect（CollectLLMJudge Flash+Pro）、curate（WQ-YI KnowledgeBaseSkill）、dataset（WQ-YI L1/L2）、execute（执行决策 LLM）。测试 mock 527 (340+187) + 集成 19p/3s。
+> **v1.9 集成测试全面实装**：4 个 subagent 集成测试全部创建，DESIGN_TODO.md 5 阶段合并。
+> **v1.8 归档机制实装**：CampaignRunner 完成后自动归档已完结 pair（4 段链路物理搬迁），对齐 WQ-YI `registry.py` 设计。CLI 支持 `--revive` 复活 + `--status` 活跃/归档分组展示。  
+> **v1.7 curate+dataset 委托完全实装**：curate 和 dataset 步骤已完成 WQ-YI subagent 委托（live 模式），AGV 不再持有 L1/L2 副本（S5-R1）。simulate 模式保留本地确定性逻辑。  
 > **v1.5 curate 实装**：curate 步骤已完成 WQ-YI `brain-curate-knowledge` 对接（C1-C4 + DeFi 域适配），不再是 stub。collect 产出经 CurateOps 桥接层传入 `KnowledgeBaseSkill(domain="defi")`，产出策略骨架。  
-> **v1.2 重构摘要**：curate/dataset 模块拆分 — 计算逻辑归入 collect（就地）或迁移至 WQ-YI Skill（跨仓），dataset 步骤保留为 stub 等待 brain-dataset-explorer 接入。
+> **v1.2 重构摘要**：curate/dataset 模块拆分 — 计算逻辑归入 collect（就地）或迁移至 WQ-YI Skill（跨仓）。
 
 ---
 
 ## 目录
 
 - [§1 架构定位（双 Campaign 拓扑）](#1-架构定位双-campaign-拓扑)
+  - [§1.0 战略定位：因子驱动策略 ≠ 搬砖套利机器人](#10-战略定位因子驱动策略--搬砖套利机器人)
 - [§2 MM-Campaign 护盘（心跳模式 + 确定性管线）](#2-mm-campaign-护盘心跳模式--确定性管线)
 - [§3 Arb-Campaign 套利（完整 5 步：collect→curate→dataset→execute→fix）](#3-arb-campaign-套利完整-5-步collectcuratedatasetexecutefix)
 - [§4 数据源架构（GeckoTerminal + Moralis 双源互补）](#4-数据源架构geckoterminal--moralis-双源互补)
@@ -28,6 +33,41 @@
 ---
 
 ## §1 架构定位（双 Campaign 拓扑）
+
+### 1.0 战略定位：因子驱动策略 ≠ 搬砖套利机器人
+
+> **本节为 S5 Arb-Campaign 的根本设计哲学，所有后续实现决策均以此为锚。**
+
+**币圈「搬砖套利」的本质是速度竞赛**：在 A 交易所和 B 交易所之间发现价差 → 毫秒级下单 → 价差消失。竞争维度是延迟和资金量，利润空间持续被 MEV 基础设施碾压至零。这是一条「比速度」的红海赛道。
+
+**AGV Arb-Campaign 的本质是认知竞赛**：通过 AI 从链上数据/论坛/学术研究中发现**可复现的市场模式（因子）** → 提炼为可执行策略 → 在链上交易中利用该策略获取超额收益。竞争维度是研究能力和因子创新，与 WQ-YI 在股票市场的 Alpha 发现是**同一套方法论的 DeFi 移植**。
+
+```
+搬砖机器人:   价差扫描 → 抢跑下单 → 价差消失 → 换一个        (秒级生命周期，零壁垒)
+AGV Arb:     AI 因子发现 → 策略设计 → 指标绑定 → 持续执行    (周/月级有效期，知识壁垒)
+WQ-YI Alpha: 论文挖掘 → 骨架提取 → 字段绑定 → BRAIN 仿真    (同构管线，不同市场)
+```
+
+| 维度 | 搬砖套利机器人 | AGV Arb-Campaign |
+|------|-------------|------------------|
+| **竞争维度** | 速度（毫秒级抢跑） | 认知（AI 策略设计质量） |
+| **信号来源** | 跨所/跨池价差 | AI 因子发现（momentum、TVL 异常、链上行为模式） |
+| **技术门槛** | 资金量 + 低延迟网络 + MEV 基础设施 | 研究能力 + 因子创新 + 知识库积累 |
+| **信号有效期** | 秒级（价差瞬间消失） | 周/月级（因子失效慢） |
+| **护城河** | 几乎没有（谁都能扫描价差） | 深（因子知识库 + AI 策略管线 + 跨市场经验迁移） |
+| **与 WQ-YI 关系** | 无 | **同一套 4 步管线的 DeFi 版**（共享 curate + dataset 引擎） |
+| **失败模式** | 被更快的 bot 抢跑 | 因子失效（需 fix 步骤诊断 + curate 回退重构） |
+| **规模效应** | 资金到位即可（线性） | 因子库越大 → 策略越多 → 覆盖越广（指数） |
+
+**为什么这个区分是 S5 的根基**：
+
+1. **代码层面**：Arb collect 不扫描价差，而是收集市场情报（链上异常、论坛讨论、学术论文）→ 交给 AI 评估信号质量
+2. **架构层面**：Arb 复用 WQ-YI 的 curate/dataset 引擎（S5-R 委托规则），而非自建套利扫描器
+3. **执行层面**：Arb execute 的时机由**确定性规则**控制（LLM 不做实时交易决策），但**策略内容**来自 AI 四步管线
+4. **经济层面**：搬砖利润趋零（MEV 红海），因子策略利润取决于认知差（蓝海）
+5. **退出策略**：即使 DeFi 执行不可行，因子知识库仍可迁移到其他市场（WQ-YI Alpha 反向回流）
+
+**一句话总结**：搬砖机器人比的是谁更快，AGV Arb 比的是谁更聪明。
 
 ### 1.1 S5 = S2 分叉分支（非 S3 子步骤）
 
@@ -115,7 +155,19 @@ S5 和 S3 **共享同一上游**（S2 chain_ops），但互不阻塞：
 |-------|------|----------|------|---------|-------|
 | **L1** | 被动做市（护盘） | MM-Campaign | 秒级心跳 | 无 | Phase 1 ✅ |
 | **L2** | MEV 防御（反三明治） | MM-Campaign | 事件驱动 | 无 | Phase 1 ✅ |
-| **L3** | 因子驱动套利 | Arb-Campaign | 分钟级 | 定期校准 | Phase 2 ⏳ |
+| **L3** | 因子驱动套利 | Arb-Campaign | 分钟级 | 四步全用 LLM | Phase 2 ⏳ |
+
+**❗ LLM 四步全覆盖（v2.0 确认）**：
+
+| 步骤 | LLM | 运行位置 | 说明 |
+|------|:---:|---------|----- |
+| **collect** | ✅ | AGV 本地 | `CollectLLMJudge` — Flash+Pro 双层评估（信号质量 / 策略可行性 / 风险） |
+| **curate** | ✅ | WQ-YI 委托 | `KnowledgeBaseSkill(domain="defi")` — Flash preflight + 骨架提取 |
+| **dataset** | ✅ | WQ-YI 委托 | `DeFiL1Recommender` + `DeFiL2Binder` — Flash+Pro 5 阶段 Pipeline |
+| **execute** | ✅ | AGV 本地 | 执行决策 LLM — 策略参数调优 / 风控判断 |
+
+> **MM-Campaign (L1/L2) 不用 LLM**：护盘规则为确定性 if-else（零延迟）。  
+> **Arb-Campaign (L3) 四步全用 LLM**：但 LLM 不做实时交易决策（延迟太高），仅用于信号评估 / 骨架设计 / 指标绑定 / 策略校准。
 
 **Phase 1 门槛**：当前 LP TVL（~$100 级别）即可运行 L1+L2。  
 **Phase 2 门槛**：需要 TVL 增长 + 因子引擎完成移植。
@@ -212,7 +264,7 @@ mev_defense:
     max_parts: 3               # 大额拆为 ≤3 笔
     jitter_blocks: 2           # 时间抖动 ±2 区块
   detection:
-    mempool_scan: true         # 监控 pending transactions
+    mempool_inspect: true         # 监控 pending transactions
     sandwich_pattern: true     # 识别 front-run + back-run 组合
     alert_threshold: 0.05      # 异常交易 > 5% 池深度 → 告警
 ```
@@ -395,18 +447,29 @@ yi_templates:
   4. 人工确认（非紧急）或自动应用（置信度 > 0.90）
 ```
 
-### 3.4 Step 3: dataset（因子绑定）— stub，等待 brain-dataset-explorer
+### 3.4 Step 3: dataset（因子绑定）— 委托 WQ-YI brain-dataset-explorer
 
-> **v1.2 变更**：dataset 原有的 Python 逻辑（signal_scorer / trade_planner / risk_sizer）
-> 已迁移至 WQ-YI `brain-dataset-explorer` Skill，分别对应：
->
-> | 原 AGV 文件 | WQ-YI 目标 | 对应 WQ-YI 概念 |
-> |------------|-----------|----------------|
-> | `toolloop_signal_scorer.py` (297行) | `toolloop_arb_l1.py` | dataset L1 — 因子组推荐（slot → factor group） |
-> | `toolloop_trade_planner.py` (221行) + `toolloop_risk_sizer.py` (124行) | `toolloop_arb_l2.py` | dataset L2 — 具体指标绑定（factor group → indicator + params） |
-> | `arb_factors.yml` (99行) | `knowledge/arb_factors.yml` | dataset knowledge — 因子池定义 |
->
-> 当前 dataset 步骤是 **stub**，等待对接 WQ-YI `brain-dataset-explorer` Skill。
+> **v1.7 变更**：dataset 步骤已完成 WQ-YI `brain-dataset-explorer` 对接（D1-D4 + DeFi 域适配）。
+> AGV 不再持有 L1/L2 副本（S5-R1），必须委托 WQ-YI。
+
+#### D1-D4 集成阶段
+
+| 阶段 | 内容 | 实现 |
+|------|------|------|
+| **D1** | DatasetOps 桥接层 | `_load_modules()` 加载 WQ-YI `toolloop_arb_l1.py` + `toolloop_arb_l2.py` |
+| **D2** | Knowledge 委托 | `_knowledge_dir()` 指向 WQ-YI `knowledge/categories/_defi_*.yml` |
+| **D3** | 回退路径移除 | AGV 本地 L1/L2 文件已删除，WQ-YI 不可用时 fail-fast |
+| **D4** | simulate/live 分流 | simulate 模式本地确定性，live 模式委托 WQ-YI Flash+Pro |
+
+#### WQ-YI DeFi L1/L2 架构
+
+| 文件 | 行数 | 说明 |
+|------|------|------|
+| `toolloop_arb_l1.py` | 362 | DeFiL1Recommender — 5 阶段 Pipeline, Flash + Pro 仲裁 |
+| `toolloop_arb_l2.py` | 380 | DeFiL2Binder — 5 阶段 Pipeline, Flash + Pro 仲裁 |
+| `_defi_*.yml` (4 个) | 25KB | DeFi 因子知识库（70 个指标） |
+
+**S5-R1 规则（永久）**: AGV 不持有 `toolloop_arb_l1.py` / `toolloop_arb_l2.py` 副本。所有 L1/L2 逻辑由 WQ-YI subagent 提供。
 
 **WQ-YI 对称关系**：
 
@@ -414,8 +477,8 @@ yi_templates:
 |------------|---------|------|
 | category（BRAIN 数据集分类） | **factor_group**（市场因子分组） | 如 price/liquidity/on_chain/lp_dynamic/sentiment |
 | datafield（BRAIN 字段） | **indicator**（技术指标 / 链上指标） | 如 RSI/VWAP/reserve_ratio/tx_count |
-| L1 推荐 | 因子组初筛 | 确定性规则（`toolloop_arb_l1.py`） |
-| L2 绑定 | 指标精选 + 参数绑定 | 确定性 + 可选 LLM 仲裁（`toolloop_arb_l2.py`） |
+| L1 推荐 | 因子组初筛 | Flash 高召回 + Pro 仲裁 |
+| L2 绑定 | 指标精选 + 参数绑定 | Flash + Pro 仲裁（5 阶段 Pipeline） |
 
 **因子池**（定义在 `arb_factors.yml`，Phase 2 初始）：
 
@@ -669,9 +732,11 @@ class MoralisClient:
 
 ## §5 DexExecutor L2 适配层（PancakeSwap V2 封装）
 
+> **v2.1 更新**：三文件拆分后，DexExecutor 全系列（DexExecutor / PancakeV2Adapter / LiveDexExecutor / DryRunDexExecutor / ApproveManager / Guards）统一在 `toolloop_common.py`，MM 和 Arb 通过 import 共享。`simulate` 已统一映射到 `dry_run`——不再有独立 simulate 模式。
+
 ### 5.1 设计目标
 
-**统一的 DEX 执行接口，隔离链上操作细节**。MM-Campaign 和 Arb-Campaign 共享同一执行层。
+**统一的 DEX 执行接口，隔离链上操作细节**。MM-Campaign 和 Arb-Campaign 共享同一执行层（`toolloop_common.py`）。
 
 ```
            MM-Campaign ──┐
@@ -964,7 +1029,7 @@ class TVLCircuitBreaker:
 | nexrur 治理 | MM-Campaign 对应 | Arb-Campaign 对应 |
 |-------------|-----------------|------------------|
 | **P0 StepOutcome** | 每次心跳产出 outcome（noop/rebalance/emergency） | 每步产出 outcome（标准 5 步） |
-| **P1 Lineage** | `mm_heartbeat_id` → `mm_action_id` | `scan_run_id` → `curate_run_id` → ... → `fix_run_id` |
+| **P1 Lineage** | `mm_heartbeat_id` → `mm_action_id` | `collect_run_id` → `curate_run_id` → ... → `fix_run_id` |
 | **P2 RAG** | 异常模式积累（重复三明治攻击模式可检索） | 策略失败模式积累（跨 campaign 学习） |
 | **P3 Gate** | 无门禁（确定性管线不需要上游检查） | execute 前检查 collect+curate+dataset 状态 |
 
@@ -1101,6 +1166,63 @@ mm_config = {
     "max_single_usd": 10.0,         # 单次操作上限
 }
 ```
+
+### 7.3.5 归档机制（v1.8 — 对齐 WQ-YI `registry.py`）
+
+**Campaign 完成后自动将已穷尽的 pair 物理归档**，保证工作目录只包含活跃资产。
+
+#### 4 段链路
+
+```
+collect/pending/{PAIR}/   → collect/archived/{PAIR}/
+curate/staged/{PAIR}/     → curate/archived/{PAIR}/
+dataset/output/{PAIR}/    → dataset/archived/{PAIR}/
+execute/output/{PAIR}/    → execute/archived/{PAIR}/
+```
+
+所有路径基于 `asset_root / docs/ai-skills/`（双根模式下 = AGV 仓库根目录）。
+
+#### 终态与归档逻辑
+
+| 终态 | 含义 | 归档？ |
+|------|------|:---:|
+| `terminal_pass` | 所有步骤成功 | ❌ 保留（结果仍可用） |
+| `terminal_exhausted` | 预算/重试耗尽 | ✅ 归档 |
+| `terminal_interrupt` | 进程崩溃/用户中止 | ✅ 归档 |
+
+#### CampaignRunner 集成
+
+`_run_orchestrated()` 重写为两阶段：
+
+```python
+def _run_orchestrated(self, ...):
+    result = self._run_orchestrated_loop(...)  # 原有循环逻辑
+    self._archive_on_complete(result, workspace)  # 归档
+    return result
+```
+
+`_archive_on_complete()` 从 orchestrator trace 或磁盘扫描发现所有 pair，区分 qualified（成功）与 exhausted（失败），调用 `campaign_finalize()` 执行物理归档。
+
+#### CLI 命令
+
+```bash
+# 查看活跃/归档状态
+python -m _shared.cli.arb_campaign --status
+
+# 复活单个 pair
+python -m _shared.cli.arb_campaign --revive WBNB_USDT
+
+# 复活全部
+python -m _shared.cli.arb_campaign --revive ALL
+```
+
+#### 关键文件
+
+| 文件 | 职责 |
+|------|------|
+| `_shared/core/registry.py` | 4 段物理归档/恢复引擎（`_hard_archive_asset` / `_hard_unarchive_asset` / `campaign_finalize` / `revive_pairs`） |
+| `_shared/engines/campaign.py` | `_archive_on_complete()` 集成 |
+| `_shared/cli/arb_campaign.py` | `--revive` / `--status` CLI |
 
 ### 7.4 Outcome 扩展码
 
@@ -1257,9 +1379,10 @@ class NotificationRouter:
 
 ### 9.1 文件结构
 
+> **v2.2 更新**：文件树勘误 — `test/`(singular) 与 `tests/`(plural) 内容互换对齐磁盘实际，`modules/*/tests/` → `modules/*/test/` 路径修正，mock 测试统一在 `modules/tests/` 下。BUG-5 simulate 归档修复记录。
+> **v1.9 更新**：modules/curate/ 和 modules/dataset/ 已恢复（作为集成测试 holder），`_step_dataset()` 已实装。test/ 和 tests/ 新增集成测试文件。
 > **v1.5 更新**：curate 已完成 WQ-YI brain-curate-knowledge 对接（C1-C4 + DeFi 域适配），不再是 stub。  
-> **v1.2 更新**：curate/dataset 模块拆分——计算逻辑合入 collect 或迁移至 WQ-YI，
-> `modules/curate/` 和 `modules/dataset/` 目录已移除。dataset 步骤仍为 stub。
+> **v1.2 更新**：curate/dataset 模块拆分——计算逻辑合入 collect 或迁移至 WQ-YI。
 
 ```
 AGV/
@@ -1270,14 +1393,17 @@ AGV/
 │   ├── scripts/                          ← 核心脚本
 │   │   ├── skill_mm_arb.py               ← 主入口 + 配置中枢（ExecutorConfig/PreauthConfig/MMRules/BudgetTracker）
 │   │   │                                    + 双 Pipeline 描述 + run_mm/arb_campaign + CLI
-│   │   ├── toolloop_mm.py                ← 共享执行层 + MM心跳
+│   │   ├── toolloop_common.py            ← 共享基础设施（D5 唯一真相源）
 │   │   │   ├── DexExecutor               ←   统一 DEX 接口
 │   │   │   ├── PancakeV2Adapter          ←   PancakeSwap V2 适配（BSC Mainnet）
+│   │   │   ├── LiveDexExecutor           ←   真实链上执行（签名+广播）
+│   │   │   ├── DryRunDexExecutor          ←   无资金模拟（读储备+估算，不发 tx）
 │   │   │   ├── SlippageGuard             ←   Layer 1 滑点硬顶 2%
 │   │   │   ├── MEVGuard                  ←   Layer 2 MEV 防御
 │   │   │   ├── TVLBreaker + TVLState     ←   Layer 3 TVL 熔断三态
 │   │   │   ├── ApproveManager            ←   Token approve（需求×2，禁止 MAX_UINT256）
-│   │   │   ├── NotifyRouter              ←   通知路由（CRITICAL→双通道）
+│   │   │   └── NotifyRouter              ←   通知路由（CRITICAL→双通道）
+│   │   ├── toolloop_mm.py                ← MM-Campaign 心跳（MM-only + backward compat re-exports）
 │   │   │   ├── MMState                   ←   6 态状态机
 │   │   │   ├── PoolSnapshot              ←   链上池快照
 │   │   │   ├── HeartbeatDecision         ←   确定性决策
@@ -1289,21 +1415,38 @@ AGV/
 │   │   │   ├── DiagnosisProfile          ←   诊断配置
 │   │   │   ├── ArbCampaignLoop           ←   5步循环
 │   │   │   ├── (curate 已委托 CurateOps) ←   KnowledgeBaseSkill(domain="defi")
-│   │   │   └── _step_dataset() [STUB]    ←   等待 brain-dataset-explorer
+│   │   │   └── _step_dataset()           ←   已实装（v1.9），调用 DatasetOps
 │   │   └── toolloop_mm_collect.py              ← CollectLoop（collect 循环调度 + 原 curate 计算）
 │   │       ├── _compute_indicators()     ←   指标计算（RSI/VWAP/Bollinger/OBV/MACD）[原 curate]
 │   │       ├── _detect_amm_patterns()    ←   AMM 模式识别 [原 curate]
 │   │       └── _analyze_cross_pool()     ←   跨池分析 [原 curate]
 │   │
 │   ├── modules/
-│   │   └── collect/                          ← 数据源层（唯一保留的子模块）
-│   │       ├── scripts/
-│   │       │   └── skill_collect.py          ← GeckoTerminalClient + MoralisClient + DataFusion
-│   │       │                                 + CollectSkill + SignalBus [+ 原 curate skill 逻辑]
-│   │       ├── knowledge/
-│   │       │   └── collect_sources.yml       ← 数据源配置
-│   │       └── tests/
-│   │           └── test_collect.py           ← collect 模块测试
+│   │   ├── collect/                          ← 数据源层
+│   │   │   ├── __init__.py
+│   │   │   ├── scripts/
+│   │   │   │   ├── skill_collect.py          ← GeckoTerminalClient + MoralisClient + DataFusion
+│   │   │   │   │                             + CollectSkill + SignalBus [+ 原 curate skill 逻辑]
+│   │   │   │   └── toolloop_arb_collect.py   ← Arb collect 3-phase pipeline
+│   │   │   ├── knowledge/
+│   │   │   │   └── collect_sources.yml       ← 数据源配置
+│   │   │   └── test/                         ← collect 集成测试（singular = python 脚本）
+│   │   │       └── test_collect_integration.py ← collect 集成测试（python 直运行）
+│   │   │
+│   │   ├── curate/                           ← Curate 集成测试 holder（计算逻辑在 WQ-YI）
+│   │   │   └── test/                         ← curate 集成测试（singular = python 脚本）
+│   │   │       └── test_curate_integration.py  ← curate 集成测试（python 直运行）
+│   │   │
+│   │   ├── dataset/                          ← Dataset 集成测试 holder（计算逻辑在 WQ-YI）
+│   │   │   └── test/                         ← dataset 集成测试（singular = python 脚本）
+│   │   │       └── test_dataset_integration.py ← dataset 集成测试（python 直运行）
+│   │   │
+│   │   ├── tests/                            ← mock 单元测试（plural = pytest 自动发现）
+│   │   │   ├── conftest.py
+│   │   │   ├── test_arb_collect.py           ← arb collect pipeline 测试（118 个）
+│   │   │   └── test_collect.py              ← collect 模块单元测试（52 个）
+│   │   │
+│   │   └── conftest.py                      ← modules 共享 fixture
 │   │
 │   ├── knowledge/                         ← 知识文件（零 Python 依赖）
 │   │   ├── mm_rules.yml                   ← 护盘规则（价格偏移/鲸鱼/再平衡/心跳/日限）
@@ -1311,18 +1454,21 @@ AGV/
 │   │   ├── mev_patterns.yml               ← MEV 攻击模式库
 │   │   └── safety_thresholds.yml          ← 安全阈值（3 层护甲 + 执行器 + 预授权）
 │   │
-│   ├── test/                              ← 集成测试
+│   ├── test/                              ← execute 集成测试（singular = python 脚本，Layer 2）
+│   │   └── test_execute_integration.py    ← execute 集成测试（python 直运行）
+│   │
+│   ├── tests/                             ← mock + 单元测试（plural = pytest 自动发现，Layer 1）
+│   │   ├── conftest.py
+│   │   ├── test_arb_e2e.py                ← Arb 端到端（全 mock，75 个）
 │   │   ├── test_arb_pipeline.py           ← Arb 管线结构
 │   │   ├── test_data_fusion.py            ← 双源融合
 │   │   ├── test_mm_rules.py               ← MM 规则 YAML 校验
+│   │   ├── test_notify.py                 ← Telegram + Discord 通知（24 个）
+│   │   ├── test_pancake_adapter.py        ← PancakeV2Adapter（39 个）
 │   │   ├── test_slippage_guard.py         ← 滑点控制
 │   │   └── test_tvl_breaker.py            ← TVL 熔断
 │   │
 │   └── SKILL.md                           ← Prompt 模板（预留）
-│
-│   # ─── 以下目录已移除（v1.2）───
-│   # modules/curate/  → 计算合入 collect，curate 由 CurateOps → KnowledgeBaseSkill(domain="defi") 执行
-│   # modules/dataset/ → Python 逻辑迁移至 WQ-YI dataset，知识保留在顶层
 ```
 
 **WQ-YI 迁移目标（跨仓）**：
@@ -1345,12 +1491,15 @@ WQ-YI/
 
 | 文件 | 行数 | 职责 |
 |------|------|------|
-| `skill_mm_arb.py` | 435 | 配置中枢 + 编排入口 |
-| `toolloop_mm.py` | 564 | 共享执行层 + MM 心跳 |
-| `toolloop_arb.py` | ~375 | Arb 5步管线（curate 委托 CurateOps，dataset 为 stub） |
-| `toolloop_mm_collect.py` | ~750 | CollectLoop + 原 curate 计算（indicators/AMM/cross-pool） |
-| `modules/collect/skill_collect.py` | ~700 | 双源数据客户端 + 融合 + 原 curate skill 逻辑 |
-| **AGV 合计** | ~2824 | — |
+| `skill_mm_arb.py` | 510 | 配置中枢 + 编排入口 |
+| `toolloop_common.py` | 1059 | 共享基础设施（DexExecutor + LiveDex/DryRun + Guards + Notify） |
+| `toolloop_mm.py` | 333 | MM 心跳（MMState + MMHeartbeatLoop）+ backward compat re-exports |
+| `toolloop_arb.py` | 986 | Arb 5步管线（curate 委托 CurateOps，dataset 已实装 DatasetOps） |
+| `modules/collect/toolloop_mm_collect.py` | 666 | CollectLoop + 原 curate 计算（indicators/AMM/cross-pool） |
+| `modules/collect/toolloop_arb_collect.py` | 1696 | Arb collect 3-phase pipeline |
+| `modules/collect/skill_collect.py` | 1173 | 双源数据客户端 + 融合 + 原 curate skill 逻辑 |
+| `_shared/core/registry.py` | ~200 | 4 段物理归档/恢复引擎（对齐 WQ-YI） |
+| **AGV 合计** | ~6623 | — |
 | **WQ-YI 迁移** | ~740 | toolloop_arb_l1 + toolloop_arb_l2 + amm_operators + arb_factors |
 
 ### 9.2 实施路线图
@@ -1369,7 +1518,7 @@ Phase 0: 基础设施 ✅      Phase 1: 护盘上线 ✅/⏳     Phase 2: 套利
 ├── Moralis 接入     ✅   ├── MEV 防御                 ├── Arb-Campaign 5步
 │   ├── transfers    ✅   │   ├── mempool monitor ⏳   │   ├── collect (CollectSkill) ✅
 │   ├── LP events    ✅   │   ├── 48Club 私有RPC  ⏳   │   ├── curate           ✅ → CurateOps+KnowledgeBaseSkill
-│   └── holders      ✅   │   └── tx splitting    ⏳   │   ├── dataset (STUB)   ⏳ → brain-dataset-explorer
+│   └── holders      ✅   │   └── tx splitting    ⏳   │   ├── dataset          ✅ → DatasetOps (v1.9)
 │                         │                           │   ├── execute+preflight ✅
 ├── nexrur 集成            ├── 通知系统                 │   └── fix (3级回退)    ✅
 │   ├── PipelineDesc  ⏳  │   ├── Telegram Bot    ✅   │
@@ -1393,19 +1542,20 @@ Phase 0: 基础设施 ✅      Phase 1: 护盘上线 ✅/⏳     Phase 2: 套利
 │                                                          (需 TVL 增长)
 ```
 
-**实施进度摘要（v1.2）**：
+| **实施进度摘要（v1.9）**：
 
 | 模块 | 完成度 | 说明 |
 |------|--------|------|
 | 数据源层 (collect) | ✅ 95% | GeckoTerminal + Moralis + DataFusion + SignalBus + 原 curate 计算合入 |
-| 共享执行层 | ✅ 85% | DexExecutor + 三层安全 + Approve，链上交互方法为 stub |
+| 共享执行层 | ✅ 95% | DexExecutor + LiveDex/DryRun + 三层安全 + Approve，三文件拆分完成 |
 | MM-Campaign | ✅ 80% | 心跳状态机 + 确定性规则 + 三档频率，缺 mempool 真实扫描和通知真实发送 |
-| Arb-Campaign | ✅ 70% | 5 步管线 + 回退 + pre_flight，curate 已对接 CurateOps，dataset 为 stub |
+| Arb-Campaign | ✅ 85% | 5 步管线全部实装（含 dataset via DatasetOps），curate 已委托 CurateOps |
 | 配置中枢 | ✅ 90% | ExecutorConfig + PreauthConfig + MMRules + BudgetTracker，全部 from_yaml |
 | nexrur 底座 | ✅ 70% | CampaignRunner self.orch 模式对齐 WQ-YI + DiagnosisEngine 三级回退 + PipelineProfile 接入，待 PipelineDescriptor 完整接入 |
-| 通知系统 | ✅ 100% | TelegramNotifier + DiscordNotifier 实装（stdlib urllib），NotifyRouter 路由（CRITICAL→双通道，WARNING→TG，INFO→Discord），Arb 4 处通知点，24 个测试 |
+| 通知系统 | ✅ 100% | TelegramNotifier + DiscordNotifier 实装（stdlib urllib），NotifyRouter 路由，24 个测试 |
 | WQ-YI 迁移 | ✅ 100% | L1/L2 toolloop + amm_operators + arb_factors 已迁移 |
-| 测试 | ✅ 322 | _shared(109) + agv-mm-arb(173 → arb_e2e + pancake_adapter + notify + data_fusion + mm_rules + arb_pipeline + tvl_breaker + slippage_guard + campaign + diagnosis) |
+| 归档机制 | ✅ 100% | 4 段物理归档 + `campaign_finalize` + CLI `--revive`/`--status` |
+| 测试 | ✅ 580+ | mock 553 (agv-mm-arb 366 + _shared 187) + 集成 30p/4s (collect 1 + curate 6 + dataset 4p/2s + execute 19p/2s) |
 
 ### 9.3 Phase 依赖关系
 
@@ -1422,13 +1572,66 @@ Phase 0: 基础设施 ✅      Phase 1: 护盘上线 ✅/⏳     Phase 2: 套利
 
 ### 9.4 测试策略
 
-| 层级 | 方法 | 覆盖 |
-|------|------|------|
-| **单元测试** | pytest + mock | 规则引擎、滑点计算、熔断逻辑 |
-| **集成测试** | Fork BSC mainnet (`foundry fork`) | DexExecutor ↔ PancakeSwap 真实交互 |
-| **模拟测试** | mock data feed + mock executor | 全流程无资金测试 |
-| **Testnet** | BSC Testnet（PancakeSwap 有测试网） | Phase 1 上线前必过 |
-| **Mainnet 沙盒** | 极小额 ($1-$5) 真实交易 | Phase 1 最终验证 |
+> **v1.9 更新**：集成测试全面实装，三种测试方法已验证可用。
+
+#### 三种测试方法
+
+| 方法 | 命令 | 测试数 | 外部依赖 |
+|------|------|--------|---------|
+| **Mock 单元测试** | `pytest tests/ modules/tests/` | 366 passed | 无 |
+| **Subagent 集成测试** | `python modules/*/test/test_*_integration.py`（逐个运行） | 30 passed, 4 skipped | 网络/API/BSC RPC |
+| **CLI 全链路** | `python -m _shared.cli.arb_campaign --simulate --dry-run` | — | 按模式递增 |
+| **_shared AGV 扩展** | `pytest _shared/tests/test_{agv_shared,clients_cli,p0p1_simulate}.py` | 187 passed | 无 |
+
+#### 测试矩阵（按步骤 × 类型）
+
+| 步骤 | 单元测试 (mock) | 集成测试 | 说明 |
+|------|:-:|:-:|------|
+| **collect** | ✅ 170 个 | ✅ 1p (72 discovered, 48 persisted, ~23min) | GeckoTerminal/Moralis 真实 API（生产级实单） |
+| **curate** | ✅ (via mock e2e) | ✅ 6p / 0s | KnowledgeBaseSkill + Gemini（signal_strength + cache 修复后全通过） |
+| **dataset** | ✅ (via mock e2e) | ✅ 4p / 2s | DatasetOps → WQ-YI L1/L2（skipped 需 MCP） |
+| **execute** | ✅ 130 个 | ✅ 8p / 1s | PancakeV2Adapter + BSC RPC（skipped 需 live chain） |
+| **full pipeline** | ✅ 75 个 (arb_e2e) | — | CLI `--simulate` 覆盖 |
+
+#### 集成测试文件
+
+| 文件 | 位置 | 测试数 | 验证内容 |
+|------|------|--------|---------|
+| `test_collect_integration.py` | `modules/collect/test/` | 1 | GeckoTerminal API + Moralis + 3-phase collect（生产级实单） |
+| `test_curate_integration.py` | `modules/curate/test/` | 6 | KnowledgeBaseSkill DeFi 域 + idea_packet + LLM 调用 |
+| `test_dataset_integration.py` | `modules/dataset/test/` | 6 | DatasetOps → L1 推荐 → L2 绑定 → StrategyRef |
+| `test_execute_integration.py` | `test/` | 9 | pool_resolution + strategy_build + dry_run |
+
+#### CLI 运行模式
+
+```bash
+# 全量 mock（无外部依赖）
+cd /workspaces/AGV/.gemini/skills/agv-mm-arb
+python -m pytest tests/ modules/tests/ -v
+
+# 4 个 subagent 集成测试（逐个运行，须用户授权 — Layer 2）
+cd modules/collect/test && python test_collect_integration.py
+cd modules/curate/test && python test_curate_integration.py
+cd modules/dataset/test && python test_dataset_integration.py
+cd ../../test && python test_execute_integration.py
+
+# CLI 模拟
+PYTHONPATH=/workspaces/AGV/.gemini/skills python -m _shared.cli.arb_campaign --simulate --dry-run
+
+# CLI 真实数据（execute 仍模拟）
+PYTHONPATH=/workspaces/AGV/.gemini/skills python -m _shared.cli.arb_campaign --live-data
+
+# CLI 全真实（链上交易，需人工确认）
+PYTHONPATH=/workspaces/AGV/.gemini/skills python -m _shared.cli.arb_campaign --live
+```
+
+#### 已知遗留
+
+| 编号 | 问题 | 严重度 | 状态 |
+|------|------|--------|------|
+| BUG-2 | Curate 通过率 ~1.3%（78 pair → ~1 通过） | 中 | ✅ 已修复 — 6/6 集成测试通过（signal_strength 归一化 + _curate_ops_cache 单例修复） |
+| BUG-4 | Execute 链上交互为 simulate stub | 低 | ✅ 已修复 — LiveDexExecutor 完备，simulate 统一映射到 dry_run，PoolIncompatibleError 诊断 V3 池 |
+| BUG-5 | `--simulate` 模式触发物理归档 | 高 | ✅ 已修复（2026-03-31）— `_archive_on_complete()` 增加 simulate guard，simulate 模式下跳过归档。根因：simulate 与实盘共用归档路径，78 个 pending pair 被错误归档 |
 
 ---
 
@@ -1442,7 +1645,7 @@ Phase 0: 基础设施 ✅      Phase 1: 护盘上线 ✅/⏳     Phase 2: 套利
 | **D2** | 上线优先级 | **Arb 优先** | collect 模块已生产级（93 测试），主动套利收益优先于被动护盘 |
 | **D3** | 环境变量隔离 | **AGV/.env + AGV/.env.s5** | Web/合约凭据 `.env` + 做市独有凭据 `.env.s5`（私钥隔离，最小暴露面） |
 | **D4** | 部署模型 | **supervisord** | 单机双 Campaign 进程管理，拒绝 K8s 过度工程 |
-| **D5** | 代码去重 | **toolloop_mm.py 唯一真相源** | agent_ops_mm.py 为薄桥接（≤50 行/类），Safety 类禁止重复定义 |
+| **D5** | 代码去重 | **toolloop_common.py 唯一共享真相源** | 2026-03-31 三文件拆分：common(1059行共享) + mm(333行MM-only) + arb(986行)，mm 通过 re-export 保持向后兼容 |
 
 #### D3 环境变量两文件架构
 
@@ -1526,7 +1729,7 @@ stdout_logfile=/var/log/s5/mm.log
 | N2 | **不做跨链套利** | 复杂度过高，桥接风险 |
 | N3 | **不做借贷杠杆** | 仅有 $100 级别资金，加杠杆无意义 |
 | N4 | **不做 MEX/Bot 竞赛** | 无法与专业 MEV bot 竞争 |
-| N5 | **不依赖 LLM 实时决策** | 延迟太高（秒级 vs 毫秒级），仅定期校准 |
+| N5 | **不依赖 LLM 实时交易决策** | Arb 四步全用 LLM（信号评估/骨架/绑定/校准），但执行时机仍由确定性规则决定（LLM 延迟秒级，不适合实时交易） |
 | N6 | **不追求利润最大化** | Phase 1 目标是"池子不死"，不是"赚钱" |
 | N7 | **不在无深度池中交易** | TVL < $30 → 熔断，不尝试 |
 

@@ -1,0 +1,208 @@
+pair_id: PRL_USDT0.007%_0xb0ba
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0xb0bab780d44ca5245a4b6da9ea8fd79e04e7a92850cfc2b52a33c4d82463726b'
+  base_token:
+    symbol: PRL
+    address: '0xd20fb09a49a8e75fef536a2dbc68222900287bac'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:f51d807aa71fab7e
+  primary_excerpt: 'Pool PRL_USDT0.007%_0xb0ba on bsc/pancakeswap-infinity-clmm. TVL:
+    $1,324,932, 24h Volume: $39,319,376. whale_movement(str=10.0); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.151501116365607
+  tvl_usd: 1324931.9945
+  volume_24h_usd: 39319376.4334099
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 0.155544035620207
+    low: 0.144925033568569
+    close: 0.15035708311342
+    bar_count: 100
+signals:
+- signal_type: whale_movement
+  strength: 10.04
+  source: moralis
+  details:
+    tx_hash: '0xb1f5cabf22f96b045ee0e4ce07704c417fcebf69b9a24409d53ff05dcfb91996'
+    value_usd: 502.1515921834644
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 51
+    avg_trade_size_usd: 339.87
+indicators:
+  rsi_14: 51.122267
+  ema_12: 0.150247
+  ema_26: 0.150069
+  vwap: 0.149531
+  bollinger_upper: 0.15301
+  bollinger_lower: 0.147023
+  bollinger_middle: 0.150016
+  macd_histogram: -6.3e-05
+  atr_14: 0.003059
+  onchain_tx_count: 100
+  onchain_unique_wallets: 51
+  onchain_avg_trade_size_usd: 339.87
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.1521
+  depth_2pct_usd: 13183.07
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 2
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 76
+  status: validated
+  reasons:
+  - whale_movement strength=10.0
+  - high_onchain_activity strength=100.0
+  - TVL $1.3M sufficient
+  - Volume $39319K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 5000
+    max_slippage_bps: 30
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: shallow
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.75
+  viable: true
+  reasoning: 交易量极高但深度极浅，动能策略虽有效但需警惕刷量导致的虚假突破，建议配合成交分布分析。
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 2000
+    max_slippage_bps: 50
+    hold_blocks_max: 20
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.9
+  viable: true
+  reasoning: 2%深度仅$13k而日量近$40M，价格极易偏离公允值，跨池套利是捕捉该池低效性的核心手段。
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 5000
+    max_slippage_bps: 30
+    hold_blocks_max: 2
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.82
+  viable: true
+  reasoning: CLMM区间内频繁的价格往复提供了极佳的均值回归机会，适合高频小额对冲。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 3000
+    max_slippage_bps: 20
+    hold_blocks_max: 10
+llm_risk_flags:
+- extreme_volume_to_tvl_ratio
+- low_depth_relative_to_volume
+- potential_wash_trading_signature
+- high_slippage_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: shallow
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.92
+    reasoning: 24h交易量($39M)约为TVL($1.3M)的30倍，换手率极高，存在极强的动能趋势。
+    trigger_signals:
+    - high_onchain_activity
+    - extreme_volume_to_tvl_ratio
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: 2%深度仅为$13k，面对高频大额交易极易产生价格偏离，存在跨池套利空间。
+    trigger_signals:
+    - low_depth_high_slippage
+    - whale_movement
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.78
+    reasoning: 高频交易导致CLMM价格区间频繁移动，可利用价格回归进行池内平衡套利。
+    trigger_signals:
+    - high_frequency_trading
+    - bollinger_upper_touch
+  risk_flags:
+  - extreme_volume_to_tvl_ratio
+  - low_depth_relative_to_volume
+  - potential_wash_trading_signature
+  - high_slippage_risk
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.75
+    viable: true
+    reasoning: 交易量极高但深度极浅，动能策略虽有效但需警惕刷量导致的虚假突破，建议配合成交分布分析。
+    parameter_hints:
+      entry_threshold_pct: 1.5
+      max_position_usd: 2000
+      max_slippage_bps: 50
+      hold_blocks_max: 20
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.9
+    viable: true
+    reasoning: 2%深度仅$13k而日量近$40M，价格极易偏离公允值，跨池套利是捕捉该池低效性的核心手段。
+    parameter_hints:
+      entry_threshold_pct: 0.8
+      max_position_usd: 5000
+      max_slippage_bps: 30
+      hold_blocks_max: 2
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.82
+    viable: true
+    reasoning: CLMM区间内频繁的价格往复提供了极佳的均值回归机会，适合高频小额对冲。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 3000
+      max_slippage_bps: 20
+      hold_blocks_max: 10
+  pro_score: 82
+  pro_verdict: moderate
+  override_reason: 虽然交易活跃度极高，但Volume/TVL比率过大（30x）且2%深度极低，存在明显的刷量（Wash Trading）嫌疑，这会增加做市商的库存风险和滑点成本，故将评级下调至moderate。
+llm_verdict: moderate
+llm_score: 82
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

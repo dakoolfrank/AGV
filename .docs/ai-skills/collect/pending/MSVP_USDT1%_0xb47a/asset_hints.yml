@@ -1,0 +1,21 @@
+pair_id: MSVP_USDT1%_0xb47a
+pool_address: '0xb47afe51524ba76d9e2108558e04220d51b2c179'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: MSVP
+quote_token: USDT 1%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 100.0
+tvl_usd: 1766036.57
+volume_24h_usd: 132275.64
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0xb47afe51524ba76d9e2108558e04220d51b2c179'
+source_url: https://www.geckoterminal.com/bsc/pools/0xb47afe51524ba76d9e2108558e04220d51b2c179
+source_type: dex_pool
+asset_class: mid_cap
+liquidity_profile: thin_at_spot
+strategy_type: sandwich_defense
+strategy_confidence: 0.92
+llm_verdict: moderate
+llm_score: 72

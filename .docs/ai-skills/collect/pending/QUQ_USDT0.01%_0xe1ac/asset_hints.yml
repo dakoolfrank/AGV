@@ -1,0 +1,21 @@
+pair_id: QUQ_USDT0.01%_0xe1ac
+pool_address: '0xe1acb466421ed24dd8bd381d1205bad0ad43ca9c'
+network: bsc
+dex: uniswap-bsc
+base_token: quq
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 100.0
+tvl_usd: 2595657.23
+volume_24h_usd: 383218375.74
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0xe1acb466421ed24dd8bd381d1205bad0ad43ca9c'
+source_url: https://www.geckoterminal.com/bsc/pools/0xe1acb466421ed24dd8bd381d1205bad0ad43ca9c
+source_type: dex_pool
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.88
+llm_verdict: moderate
+llm_score: 68

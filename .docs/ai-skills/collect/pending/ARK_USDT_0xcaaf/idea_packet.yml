@@ -1,0 +1,203 @@
+pair_id: ARK_USDT_0xcaaf
+version: '1.0'
+source_evidence:
+  discovery_method: trending
+  network: bsc
+  dex: pancakeswap_v2
+  pool_address: '0xcaaf3c41a40103a23eeaa4bba468af3cf5b0e0d8'
+  base_token:
+    symbol: ARK
+    address: '0xcae117ca6bc8a341d2e7207f30e180f0e5618b9d'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:82b366ec3d9cd9ab
+  primary_excerpt: 'Pool ARK_USDT_0xcaaf on bsc/pancakeswap_v2. TVL: $79,438,960,
+    24h Volume: $6,120,434. lp_imbalance(str=93.5); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 15.5046440769458
+  tvl_usd: 79438960.0256
+  volume_24h_usd: 6120434.49544689
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 15.8666526908907
+    low: 15.2948566315842
+    close: 15.4658974331094
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 93.54
+  source: gecko
+  details:
+    reserve_ratio: 0.0645898134160497
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 54
+    avg_trade_size_usd: 46.39
+indicators:
+  rsi_14: 47.701577
+  ema_12: 15.490317
+  ema_26: 15.493644
+  vwap: 15.503572
+  bollinger_upper: 15.577618
+  bollinger_lower: 15.401131
+  bollinger_middle: 15.489375
+  macd_histogram: 0.002525
+  atr_14: 0.170408
+  onchain_tx_count: 100
+  onchain_unique_wallets: 54
+  onchain_avg_trade_size_usd: 46.39
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0646
+  depth_2pct_usd: 790417.65
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 2
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 76
+  status: validated
+  reasons:
+  - lp_imbalance strength=93.5
+  - high_onchain_activity strength=100.0
+  - TVL $79.4M sufficient
+  - Volume $6120K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 50000
+    max_slippage_bps: 30
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: mid_cap
+  amm_type: constant_product_v2
+  liquidity_profile: deep
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.92
+  viable: true
+  reasoning: 储备金比例 0.0646 意味着严重的价值偏离，考虑到 ARK 在 Binance 等中心化交易所的高流动性，该池存在极高的跨市套利空间。
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 50000
+    max_slippage_bps: 30
+    hold_blocks_max: 2
+- strategy_type: mean_reversion
+  pro_confidence: 0.55
+  viable: true
+  reasoning: RSI 和布林带指标显示价格处于震荡区间，但在极端失衡背景下，均值回归应作为套利后的辅助平仓逻辑。
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 10000
+    max_slippage_bps: 15
+    hold_blocks_max: 20
+- strategy_type: volume_momentum
+  pro_confidence: 0.45
+  viable: false
+  reasoning: 平均交易金额仅 $46.39，显示当前交易量主要由散户或小额机器人贡献，缺乏机构级趋势推动力。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+llm_risk_flags:
+- extreme_reserve_imbalance
+- fragmented_liquidity_depth
+- high_frequency_small_trades
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: constant_product_v2
+    liquidity_profile: deep
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.94
+    reasoning: 储备金比例严重失衡（0.0646），暗示池内价格与外部市场存在显著价差，套利空间巨大。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: mean_reversion
+    confidence: 0.68
+    reasoning: RSI处于中性区间且价格紧贴VWAP运行，在极端失衡修复后大概率回归均值。
+    trigger_signals:
+    - vwap
+    - rsi_14
+  - strategy_type: volume_momentum
+    confidence: 0.62
+    reasoning: 24h交易量突破600万美元且链上活动极度活跃，适合捕捉短期波动趋势。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - extreme_reserve_imbalance
+  - fragmented_liquidity_depth
+  - high_frequency_small_trades
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.92
+    viable: true
+    reasoning: 储备金比例 0.0646 意味着严重的价值偏离，考虑到 ARK 在 Binance 等中心化交易所的高流动性，该池存在极高的跨市套利空间。
+    parameter_hints:
+      entry_threshold_pct: 0.8
+      max_position_usd: 50000
+      max_slippage_bps: 30
+      hold_blocks_max: 2
+  - strategy_type: mean_reversion
+    pro_confidence: 0.55
+    viable: true
+    reasoning: RSI 和布林带指标显示价格处于震荡区间，但在极端失衡背景下，均值回归应作为套利后的辅助平仓逻辑。
+    parameter_hints:
+      entry_threshold_pct: 1.5
+      max_position_usd: 10000
+      max_slippage_bps: 15
+      hold_blocks_max: 20
+  - strategy_type: volume_momentum
+    pro_confidence: 0.45
+    viable: false
+    reasoning: 平均交易金额仅 $46.39，显示当前交易量主要由散户或小额机器人贡献，缺乏机构级趋势推动力。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  pro_score: 85
+  pro_verdict: strong
+  override_reason: 池深度极高（2% 深度达 79 万美元），但平均交易额极小，这暗示了流动性主要由协议或大户提供，而交易活动碎片化。核心机会在于储备金失衡引发的套利，而非趋势追踪。
+llm_verdict: strong
+llm_score: 85
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

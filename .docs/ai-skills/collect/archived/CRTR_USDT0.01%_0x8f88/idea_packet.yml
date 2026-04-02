@@ -1,0 +1,213 @@
+pair_id: CRTR_USDT0.01%_0x8f88
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0x8f889728c2a879b15936eecc38a61f03fcdc6818'
+  base_token:
+    symbol: CRTR
+    address: '0xb150e91cb40909f47d45115ee9e90667d807464b'
+  quote_token:
+    symbol: USDT 0.01%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:05c489c7f950904f
+  primary_excerpt: 'Pool CRTR_USDT0.01%_0x8f88 on bsc/pancakeswap-v3-bsc. TVL: $1,578,199,
+    24h Volume: $8,645,026. whale_movement(str=17.4); whale_movement(str=16.7); whale_movement(str=10.8);
+    high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.03636
+  tvl_usd: 1578199.33
+  volume_24h_usd: 8645026.3
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: 0.03
+    price_change_h1: 0.19
+    price_change_h6: 4.1
+    price_change_h24: 2.32
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 17.41
+  source: moralis
+  details:
+    tx_hash: '0x6697f9ee23aa90f6fabe3bc72c29ce5d8dd5a66b90e6d27e0d513bb16b5d657a'
+    value_usd: 870.2767978467589
+- signal_type: whale_movement
+  strength: 16.71
+  source: moralis
+  details:
+    tx_hash: '0xb8a33236b2643044a821283b1f3ee12dfe9ea7e81ed71e6c678101a6022e0a63'
+    value_usd: 835.6713585120539
+- signal_type: whale_movement
+  strength: 10.81
+  source: moralis
+  details:
+    tx_hash: '0x53652a485fa85b43d834ed3c335c1c85f414f3d74d5aad7bd55c705912daf7ce'
+    value_usd: 540.6237554652098
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 43
+    avg_trade_size_usd: 158.88
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 43
+  onchain_avg_trade_size_usd: 158.88
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 15703.08
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 4
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 93
+  status: validated
+  reasons:
+  - whale_movement strength=17.4
+  - whale_movement strength=16.7
+  - whale_movement strength=10.8
+  - high_onchain_activity strength=100.0
+  - TVL $1.6M sufficient
+  - Volume $8645K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 800
+    max_slippage_bps: 40
+    hold_blocks_max: 10
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: moderate
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.75
+  viable: true
+  reasoning: 成交量/TVL比率极高，动能显著，但需警惕刷量行为（Wash Trading）对真实需求的误导。
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 1200
+    max_slippage_bps: 60
+    hold_blocks_max: 40
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.88
+  viable: true
+  reasoning: 2%深度仅1.5万美元，相对于860万日交易量极度匮乏，小额订单即可造成显著价格偏离，套利空间大。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 800
+    max_slippage_bps: 40
+    hold_blocks_max: 10
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.6
+  viable: true
+  reasoning: V3池深度薄弱导致价格波动剧烈，与V2或其他DEX间存在高频瞬时价差机会。
+  parameter_hints:
+    entry_threshold_pct: 0.3
+    max_position_usd: 1500
+    max_slippage_bps: 30
+    hold_blocks_max: 5
+llm_risk_flags:
+- high_vol_tvl_ratio
+- thin_depth_relative_to_volume
+- potential_wash_trading_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.85
+    reasoning: 24小时交易量超过TVL的5倍，且价格在多周期内保持正向增长，动能极强。
+    trigger_signals:
+    - high_onchain_activity
+    - price_change_h6
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.72
+    reasoning: 2%深度仅为1.5万美元，相对于860万美元的日交易量极小，大额交易易引发价格失衡。
+    trigger_signals:
+    - whale_movement
+    - depth_2pct_usd
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.65
+    reasoning: 高频交易环境下，V3池与V2或其他DEX之间极易产生瞬时价差。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - high_vol_tvl_ratio
+  - thin_depth_relative_to_volume
+  - potential_wash_trading_risk
+  flash_score: 82
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.75
+    viable: true
+    reasoning: 成交量/TVL比率极高，动能显著，但需警惕刷量行为（Wash Trading）对真实需求的误导。
+    parameter_hints:
+      entry_threshold_pct: 1.2
+      max_position_usd: 1200
+      max_slippage_bps: 60
+      hold_blocks_max: 40
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.88
+    viable: true
+    reasoning: 2%深度仅1.5万美元，相对于860万日交易量极度匮乏，小额订单即可造成显著价格偏离，套利空间大。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 800
+      max_slippage_bps: 40
+      hold_blocks_max: 10
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.6
+    viable: true
+    reasoning: V3池深度薄弱导致价格波动剧烈，与V2或其他DEX间存在高频瞬时价差机会。
+    parameter_hints:
+      entry_threshold_pct: 0.3
+      max_position_usd: 1500
+      max_slippage_bps: 30
+      hold_blocks_max: 5
+  pro_score: 75
+  pro_verdict: moderate
+  override_reason: 虽然交易活跃度极高，但所谓‘鲸鱼交易’仅为800美元级别，说明池子实际承载力极弱且存在刷量嫌疑，将评级由Strong下调至Moderate以提示流动性风险。
+llm_verdict: moderate
+llm_score: 75
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

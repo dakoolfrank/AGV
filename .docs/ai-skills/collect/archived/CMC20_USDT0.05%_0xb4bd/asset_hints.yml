@@ -1,0 +1,18 @@
+pair_id: CMC20_USDT0.05%_0xb4bd
+pool_address: '0xb4bd7ec1df39806df478d0ce540580a118671eea'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: CMC20
+quote_token: USDT 0.05%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 99.28
+tvl_usd: 1673387.9161
+volume_24h_usd: 2954903.32738355
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: shallow
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.96
+llm_verdict: strong
+llm_score: 90

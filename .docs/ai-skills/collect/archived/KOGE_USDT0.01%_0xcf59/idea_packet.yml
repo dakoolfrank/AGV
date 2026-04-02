@@ -1,0 +1,353 @@
+pair_id: KOGE_USDT0.01%_0xcf59
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0xcf59b8c8baa2dea520e3d549f97d4e49ade17057'
+  base_token:
+    symbol: KOGE
+    address: '0xe6df05ce8c8301223373cf5b969afcb1498c5528'
+  quote_token:
+    symbol: USDT 0.01%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:944bcaa014b80eb4
+  primary_excerpt: 'Pool KOGE_USDT0.01%_0xcf59 on bsc/pancakeswap-v3-bsc. TVL: $6,135,789,
+    24h Volume: $10,484,229. lp_imbalance(str=97.9); whale_movement(str=100.0); whale_movement(str=100.0);
+    whale_movement(str=100.0); whale_movement(str=100.0)'
+market_data:
+  price_usd: 47.8451179894392
+  tvl_usd: 6135788.62
+  volume_24h_usd: 10484228.9791447
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 48.3749145263981
+    low: 47.4281808095739
+    close: 47.7877605114584
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 97.92
+  source: gecko
+  details:
+    reserve_ratio: 0.020832358689175722
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x166752735da8f94cb69d4496fceb8d1d49c7ef9c0442026c98761d86c8d31584'
+    value_usd: 24846.863131942144
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x178c745ea281346e2f578eb11fd2cac0505f4c83c1cd0ec606a3e695197936e2'
+    value_usd: 24844.38077487294
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xe736b287cbc3ca65822b4685384a5b70d4a2f3548548774463b1ccc864da4a61'
+    value_usd: 24843.388916344604
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x1e45f09fb37daf74654fbfd7b74dbe5b5d78a6bc1bdd79e73b37e5502f8c7709'
+    value_usd: 19817.858034037054
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xecca3e22e06c0d391caac1b41249b6eb82b001a857f925450ff765eb2dc7eb5f'
+    value_usd: 19815.87810603866
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xd440d7b2cd4740e6a18e6d531d33425edd4f5aeba303a55942549b6525ce9192'
+    value_usd: 19815.086999676456
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xad20d56847179e5b8bb0e39dbe82a69089e5da36376964f3f76f89a0c82c1911'
+    value_usd: 19303.59729169329
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xeba0fd57eaf1322f09a6411005e07e412c036b987f348e94d4af8861ed764ef3'
+    value_usd: 9185.378683026604
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x151ed78c3943133c30bccfc975706c1ceca4e6f970e6091cb07382b592905fa8'
+    value_usd: 9130.033879327078
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xf3b293a22a2b2c6d0477ec121d02297187f0736b5c82aaf6456cd6cc9de3f908'
+    value_usd: 9075.023656177438
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x2ca1cad2a854f8ac3233dd2478076849cf6cd7f73db954c9cfea824afd9220f1'
+    value_usd: 9020.500816901229
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x0680f6b817c7c9769fd8fa0e5067d690191462b64237cce420b728f28f236ffb'
+    value_usd: 8164.368832622642
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x9cba0e6c5a44ed185adf4b8ff548498c3c99d1cda839ba3cb330113b9821bcf0'
+    value_usd: 6449.2219847662345
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x1a98134347189a14c152d3f2914fca85f91053b726de718ad4a69c58428b0341'
+    value_usd: 6410.475782884266
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x16ea713cd383a3c639f155b82208078ecaeaa075d393fc0f8175cee8b4dea538'
+    value_usd: 6371.850644382369
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xc2fd68f27b474a4e738627dbd912b922bd9d6ab7b4c9315e6c91b2f902867828'
+    value_usd: 6333.459009646236
+- signal_type: whale_movement
+  strength: 81.64
+  source: moralis
+  details:
+    tx_hash: '0xbaa03c1679a1c4745d372d2c82ea6d64be8c96d227696eddd526e6b50fd519d5'
+    value_usd: 4082.1845535568636
+- signal_type: whale_movement
+  strength: 63.27
+  source: moralis
+  details:
+    tx_hash: '0xacbf8fe519b4abe4d0cddc312e77aae40787e02c988f5e547077e02cf3bc8121'
+    value_usd: 3163.6296726413816
+- signal_type: whale_movement
+  strength: 41.06
+  source: moralis
+  details:
+    tx_hash: '0x83822d7cdb415181f02b073b1a07ba65f8cae7983f6e22b7ee03a276d738bf16'
+    value_usd: 2053.051787247721
+- signal_type: whale_movement
+  strength: 40.96
+  source: moralis
+  details:
+    tx_hash: '0x908f4bdce1f9a3caa65dcd47f986b0dd1739e6e0f5f573fafcee0468b3b3b610'
+    value_usd: 2047.8397660061971
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 25
+    avg_trade_size_usd: 5377.95
+indicators:
+  rsi_14: 47.52759
+  ema_12: 47.886605
+  ema_26: 47.892397
+  vwap: 47.941806
+  bollinger_upper: 48.142965
+  bollinger_lower: 47.633957
+  bollinger_middle: 47.888461
+  macd_histogram: -0.005669
+  atr_14: 0.362213
+  onchain_tx_count: 100
+  onchain_unique_wallets: 25
+  onchain_avg_trade_size_usd: 5377.95
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0208
+  depth_2pct_usd: 61051.1
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 22
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 96
+  status: validated
+  reasons:
+  - lp_imbalance strength=97.9
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=81.6
+  - whale_movement strength=63.3
+  - whale_movement strength=41.1
+  - whale_movement strength=41.0
+  - high_onchain_activity strength=100.0
+  - TVL $6.1M sufficient
+  - Volume $10484K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.3
+    max_position_usd: 15000
+    max_slippage_bps: 15
+    hold_blocks_max: 10
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: moderate
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.95
+  viable: true
+  reasoning: 储备金比例 0.0208 属于极端失衡，在 V3 集中流动性中意味着价格已触及流动性密集区的边缘，套利空间极高且具备强烈的回归动力。
+  parameter_hints:
+    entry_threshold_pct: 0.3
+    max_position_usd: 15000
+    max_slippage_bps: 15
+    hold_blocks_max: 10
+- strategy_type: volume_momentum
+  pro_confidence: 0.82
+  viable: true
+  reasoning: 交易量/TVL 比率高达 1.7，且伴随密集的 20k USD 以上大额交易，动能信号极强，适合捕捉突破后的延续行情。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 25000
+    max_slippage_bps: 25
+    hold_blocks_max: 30
+- strategy_type: mean_reversion
+  pro_confidence: 0.78
+  viable: true
+  reasoning: 尽管交易活跃，但 RSI 处于中性且价格维持在布林带中轨附近，显示高频波动中的震荡特征，适合在 2% 深度范围内进行网格操作。
+  parameter_hints:
+    entry_threshold_pct: 0.4
+    max_position_usd: 10000
+    max_slippage_bps: 10
+    hold_blocks_max: 50
+llm_risk_flags:
+- extreme_reserve_imbalance
+- high_volume_to_tvl_ratio
+- concentrated_whale_activity
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.92
+    reasoning: 储备金比例仅为0.0208，表现出极端的流动性失衡，存在巨大的套利空间或价格回归需求。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: volume_momentum
+    confidence: 0.85
+    reasoning: 24小时交易量超过TVL，且伴随密集的巨鲸交易活动，动能极强。
+    trigger_signals:
+    - whale_movement
+    - high_onchain_activity
+  - strategy_type: mean_reversion
+    confidence: 0.7
+    reasoning: RSI处于中性区间且价格在布林带中轨波动，尽管交易量大但价格尚未突破，适合网格或回归策略。
+    trigger_signals:
+    - rsi_14
+    - bollinger_middle
+  risk_flags:
+  - extreme_reserve_imbalance
+  - high_volume_to_tvl_ratio
+  - concentrated_whale_activity
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.95
+    viable: true
+    reasoning: 储备金比例 0.0208 属于极端失衡，在 V3 集中流动性中意味着价格已触及流动性密集区的边缘，套利空间极高且具备强烈的回归动力。
+    parameter_hints:
+      entry_threshold_pct: 0.3
+      max_position_usd: 15000
+      max_slippage_bps: 15
+      hold_blocks_max: 10
+  - strategy_type: volume_momentum
+    pro_confidence: 0.82
+    viable: true
+    reasoning: 交易量/TVL 比率高达 1.7，且伴随密集的 20k USD 以上大额交易，动能信号极强，适合捕捉突破后的延续行情。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 25000
+      max_slippage_bps: 25
+      hold_blocks_max: 30
+  - strategy_type: mean_reversion
+    pro_confidence: 0.78
+    viable: true
+    reasoning: 尽管交易活跃，但 RSI 处于中性且价格维持在布林带中轨附近，显示高频波动中的震荡特征，适合在 2% 深度范围内进行网格操作。
+    parameter_hints:
+      entry_threshold_pct: 0.4
+      max_position_usd: 10000
+      max_slippage_bps: 10
+      hold_blocks_max: 50
+  pro_score: 92
+  pro_verdict: strong
+  override_reason: Flash 初判准确，该池子表现出极高的交易活跃度和严重的流动性偏斜，是量化套利和高频策略的理想目标。上调 pro_score
+    以反映信号的一致性和数据完整度。
+llm_verdict: strong
+llm_score: 92
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

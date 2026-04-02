@@ -1,0 +1,87 @@
+pair_id: WBNB_USDT_0x6fe9
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: uniswap
+  pool_address: '0x6fe9E9de56356F7eDBfcBB29FAB7cd69471a4869'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:8446d59443934ad4
+  primary_excerpt: 'Pool WBNB_USDT_0x6fe9 on bsc/uniswap. TVL: $2,728,117, 24h Volume:
+    $2,787,749. lp_imbalance(str=99.8)'
+market_data:
+  price_usd: 0.999049913805644
+  tvl_usd: 2728116.8297
+  volume_24h_usd: 2787749.01
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: -0.002
+    price_change_h1: -0.067
+    price_change_h6: -0.122
+    price_change_h24: -0.059
+    bar_count: 0
+signals:
+- signal_type: lp_imbalance
+  strength: 99.84
+  source: gecko
+  details:
+    reserve_ratio: 0.00161221023714502
+indicators:
+  onchain_tx_count: 0
+  onchain_unique_wallets: 0
+  onchain_avg_trade_size_usd: 0.0
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0016
+  depth_2pct_usd: 27144.76
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 1
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: moderate
+  score: 57
+  status: validated
+  reasons:
+  - lp_imbalance strength=99.8
+  - TVL $2.7M sufficient
+  - Volume $2788K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: medium
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: blue_chip
+  liquidity_profile: deep
+  amm_type: uniswap
+  activity_profile: active
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  confidence: 0.57
+  source: deterministic
+llm_risk_flags: []
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: moderate
+llm_score: 57
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7

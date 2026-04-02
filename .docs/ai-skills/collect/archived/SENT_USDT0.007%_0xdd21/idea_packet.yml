@@ -1,0 +1,230 @@
+pair_id: SENT_USDT0.007%_0xdd21
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0xdd21c2d2fbd1487605799fbaa5854411afccd3faa3460ffa7fc9dacff94cad49'
+  base_token:
+    symbol: SENT
+    address: '0x31138562aeb9706c7612e85d789581a21b5980a2'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:5ab1b66f05fab2fe
+  primary_excerpt: 'Pool SENT_USDT0.007%_0xdd21 on bsc/pancakeswap-infinity-clmm.
+    TVL: $968,635, 24h Volume: $9,585,656. lp_imbalance(str=98.1); whale_movement(str=12.1);
+    whale_movement(str=10.9); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0189325635930368
+  tvl_usd: 968634.9134
+  volume_24h_usd: 9585655.75161303
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 0.0191223154373568
+    low: 0.0179173647871937
+    close: 0.0184923802921699
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 98.12
+  source: gecko
+  details:
+    reserve_ratio: 0.018812337817290328
+- signal_type: whale_movement
+  strength: 12.09
+  source: moralis
+  details:
+    tx_hash: '0xd7133b0e3c326c99ab2e6c8778581eb6512eca7ea6b9f15ed3ec6bd65ce40623'
+    value_usd: 604.683097921988
+- signal_type: whale_movement
+  strength: 10.86
+  source: moralis
+  details:
+    tx_hash: '0x84c15abc17dd43f068631fd533c978fd33ac4822a943da654b8a2d5fcfc4fb19'
+    value_usd: 542.9299891709524
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 13
+    avg_trade_size_usd: 195.79
+indicators:
+  rsi_14: 51.416171
+  ema_12: 0.0185
+  ema_26: 0.018458
+  vwap: 0.018468
+  bollinger_upper: 0.018785
+  bollinger_lower: 0.018282
+  bollinger_middle: 0.018533
+  macd_histogram: -2.0e-05
+  atr_14: 0.00024
+  onchain_tx_count: 100
+  onchain_unique_wallets: 13
+  onchain_avg_trade_size_usd: 195.79
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0188
+  depth_2pct_usd: 9637.92
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 4
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 93
+  status: validated
+  reasons:
+  - lp_imbalance strength=98.1
+  - whale_movement strength=12.1
+  - whale_movement strength=10.9
+  - high_onchain_activity strength=100.0
+  - TVL $969K above minimum
+  - Volume $9586K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.45
+    max_position_usd: 2500
+    max_slippage_bps: 25
+    hold_blocks_max: 3
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: moderate
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.95
+  viable: true
+  reasoning: 极高的 lp_imbalance (98.12) 配合 V3 集中流动性特征，意味着价格极易偏离公允值，套利空间巨大且触发频繁。
+  parameter_hints:
+    entry_threshold_pct: 0.45
+    max_position_usd: 2500
+    max_slippage_bps: 25
+    hold_blocks_max: 3
+- strategy_type: volume_momentum
+  pro_confidence: 0.82
+  viable: true
+  reasoning: 24h 成交额接近 TVL 的 10 倍，换手率极高，适合捕捉由高频交易驱动的微趋势。
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 5000
+    max_slippage_bps: 40
+    hold_blocks_max: 12
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.75
+  viable: true
+  reasoning: 鉴于其在 PancakeSwap V3 的高活跃度，与 V2 或其他 DEX 之间必然存在毫秒级的价差。
+  parameter_hints:
+    entry_threshold_pct: 0.3
+    max_position_usd: 3000
+    max_slippage_bps: 15
+    hold_blocks_max: 2
+llm_risk_flags:
+- extreme_vol_tvl_ratio
+- significant_lp_imbalance
+- shallow_depth_relative_to_volume
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.92
+    reasoning: Detected extremely high lp_imbalance signal (98.12) suggesting significant
+      price deviation from reserve equilibrium.
+    trigger_signals:
+    - lp_imbalance
+    - reserve_ratio
+  - strategy_type: volume_momentum
+    confidence: 0.85
+    reasoning: 24h volume is nearly 10x the TVL, indicating massive fee generation
+      potential and high trend strength.
+    trigger_signals:
+    - high_onchain_activity
+    - vwap
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.78
+    reasoning: High volume and concentrated liquidity often create short-term price
+      lags against other BSC DEXs.
+    trigger_signals:
+    - high_onchain_activity
+    - bollinger_upper
+  risk_flags:
+  - extreme_vol_tvl_ratio
+  - significant_lp_imbalance
+  - shallow_depth_relative_to_volume
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.95
+    viable: true
+    reasoning: 极高的 lp_imbalance (98.12) 配合 V3 集中流动性特征，意味着价格极易偏离公允值，套利空间巨大且触发频繁。
+    parameter_hints:
+      entry_threshold_pct: 0.45
+      max_position_usd: 2500
+      max_slippage_bps: 25
+      hold_blocks_max: 3
+  - strategy_type: volume_momentum
+    pro_confidence: 0.82
+    viable: true
+    reasoning: 24h 成交额接近 TVL 的 10 倍，换手率极高，适合捕捉由高频交易驱动的微趋势。
+    parameter_hints:
+      entry_threshold_pct: 0.8
+      max_position_usd: 5000
+      max_slippage_bps: 40
+      hold_blocks_max: 12
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.75
+    viable: true
+    reasoning: 鉴于其在 PancakeSwap V3 的高活跃度，与 V2 或其他 DEX 之间必然存在毫秒级的价差。
+    parameter_hints:
+      entry_threshold_pct: 0.3
+      max_position_usd: 3000
+      max_slippage_bps: 15
+      hold_blocks_max: 2
+  pro_score: 85
+  pro_verdict: strong
+  override_reason: Flash 初判准确。调低 3 分 Pro Score 是因为 2% 深度仅为 $9637，相对于 $9.5M 的交易量显得过于单薄，执行大额订单时冲击成本极高，需严格限制单笔头寸。
+llm_verdict: strong
+llm_score: 85
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

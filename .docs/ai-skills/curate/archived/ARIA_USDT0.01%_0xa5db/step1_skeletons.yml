@@ -1,0 +1,178 @@
+# ==========================================
+# 第一层：元信息（必填）
+# 用途：追溯来源、版本管理、审计日志
+# ==========================================
+extraction_info:
+  source: ARIA_USDT0.01%_0xa5db
+  date: '2026-03-30'
+  domain: defi
+  total_skeletons: 2
+  tower_count: 2
+  yi_count: 0
+  extraction_date: '2026-03-30'
+  notes: '自动消毒 4 项: [slot_count] whale_follow_arb_01: None → 1 (from 0 standard placeholders);
+    [slot_count] volume_momentum_02: None → 1 (from 0 standard placeholders); [skeleton_id]
+    whale_follow_arb_01 → aria_usdt0.01%_0xa5db_whale_follow_arb_01 (补资产前缀)'
+  semantic_validation:
+    total_warnings: 0
+    warnings: []
+    total_repairs: 0
+    repairs: []
+  claim_validation:
+    total: 2
+    with_claims: 0
+    without_claims: 2
+    claim_evidence_missing: true
+    source_distribution:
+      structured: 2
+  parameter_fidelity:
+    total_skeletons_checked: 2
+    total_params_expected: 0
+    total_params_found: 0
+    global_fidelity_ratio: 1.0
+    skeletons_with_missing: 0
+    status_counts:
+      clean: 2
+    details: []
+
+# ==========================================
+# 第二层：核心结构分析（必填）
+# 用途：骨架族的共性分析，供 AI 和人类理解
+# ==========================================
+core_structure:
+  skeleton_family: batched_extraction
+  base_pattern: 分批提取合并
+  economic_story: ''
+  normalization_variants:
+    variant_1: rank
+    variant_2: ts_rank
+
+# ==========================================
+# 第三层：字段池定义（必填）
+# 用途：供 dataset-explorer 绑定具体字段
+# ==========================================
+field_pools:
+  main_pool:
+    description: 基础量价数据池
+    candidates:
+    - close
+    - open
+    - high
+    - low
+    - volume
+    - vwap
+    - returns
+
+# ==========================================
+# 第四层：仿真设置（必填）
+# 用途：默认回测参数，供引擎使用
+# ==========================================
+simulation_settings:
+  region: USA
+  universe: TOP3000
+  delay: 1
+  decay: 6
+  neutralization: SUBINDUSTRY
+  truncation: 0.08
+  pasteurization: 'ON'
+  nanHandling: 'ON'
+  unitHandling: VERIFY
+
+# ==========================================
+# 第七层：对比表（必填）
+# 用途：快速概览所有骨架的特点
+# ==========================================
+comparison_table:
+  headers:
+  - skeleton_id
+  - 特点
+  - 优先级
+  rows: []
+
+# ==========================================
+# 第五层：Tower 骨架列表（核心产出）
+# 用途：可执行骨架，供回测引擎和模板扩展
+# ==========================================
+tower_templates:
+- skeleton_id: aria_usdt0.01%_0xa5db_whale_follow_arb_01
+  strategy_type: whale_follow
+  description: 监控大额鲸鱼转账引发的短期价格冲击，利用 optimal_arb_size 算子进行滑点套利或动量跟随
+  pattern: 'if whale_movement.strength > min_strength and transfer_value_usd > min_value:
+    execute optimal_arb_size(target_price)'
+  trigger:
+    condition: 检测到高强度的鲸鱼大额转账信号（引发池内价格偏离）
+    params:
+      min_signal_strength: 50.0
+      min_transfer_usd: 3000.0
+  entry:
+    method: swap
+    pool_address: '0xa5dbeaf16fc031eae92175974f8d0a439be4ad17'
+    direction: buy
+  sizing:
+    method: optimal_arb
+    max_position_usd: 2000.0
+  exit:
+    take_profit_bps: 300
+    stop_loss_bps: 150
+    max_hold_seconds: 600
+  risk:
+    max_slippage_bps: 50
+    min_tvl_usd: 2000000.0
+    gas_budget_usd: 5.0
+  rationale: 鲸鱼大额交易会消耗池内深度（2% Depth约为4.2万美元），产生短期价格滑点与波动，通过 AMM 恒积公式计算最优套利量，捕捉价格回归或短期动量。
+  confidence: 0.6
+  claim_refs:
+  - '[c1]'
+  slot_count: 1
+  _claim_valid: false
+  _claim_refs: []
+  _claim_source: structured
+  _parameter_fidelity:
+    status: clean
+    reason: no_numeric_literals
+    claim_refs_checked:
+    - c[c1]
+- skeleton_id: aria_usdt0.01%_0xa5db_volume_momentum_02
+  strategy_type: volume_momentum
+  description: 基于链上活跃度飙升及短期价格强势（1h/24h连续上涨）的动量突破做多策略
+  pattern: 'if onchain_tx_count > min_tx and price_change_h1 > min_px_change: execute
+    swap(buy)'
+  trigger:
+    condition: 链上交易频次激增且1小时价格变化率呈正向突破
+    params:
+      min_tx_count: 80
+      min_price_change_h1_pct: 1.0
+  entry:
+    method: swap
+    pool_address: '0xa5dbeaf16fc031eae92175974f8d0a439be4ad17'
+    direction: buy
+  sizing:
+    method: fixed
+    max_position_usd: 1500.0
+  exit:
+    take_profit_bps: 500
+    stop_loss_bps: 200
+    max_hold_seconds: 3600
+  risk:
+    max_slippage_bps: 100
+    min_tvl_usd: 3000000.0
+    gas_budget_usd: 4.0
+  rationale: 该池24小时交易量高达2300万美元，且链上活跃度指标（onchain_tx_count=100）极高，配合1小时上涨1.45%、24小时上涨15.99%的趋势，预示新资金持续流入，适合顺势动量入场。
+  confidence: 0.5
+  claim_refs:
+  - '[c2]'
+  slot_count: 1
+  _claim_valid: false
+  _claim_refs: []
+  _claim_source: structured
+  _parameter_fidelity:
+    status: clean
+    reason: no_numeric_literals
+    claim_refs_checked:
+    - c[c2]
+
+# ==========================================
+# 第六层：Yi 多槽位骨架（可空）
+# 用途：slot_count > 3 的复杂骨架，供 yi 策略使用
+# ==========================================
+yi_templates: []

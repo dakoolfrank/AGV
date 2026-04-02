@@ -1,0 +1,22 @@
+domain: defi
+generated_at: '2026-04-02T05:08:26Z'
+strategy_bindings:
+- skeleton_id: aria_usdt0.01%_0xa5db_arb_cross_pool_01
+  strategy_type: cross_pool_arbitrage
+  recommended_categories:
+  - defi_price
+  - defi_liquidity
+  - defi_onchain
+  confidence: 0.95
+  reasoning: 该策略为跨池套利，核心触发条件依赖 defi_price 识别价差； rationale 中提到的 TVL 和深度评估需通过 defi_liquidity
+    确保 1.5 万美元交易的滑点在可控范围内；由于涉及闪电贷套利，需通过 defi_onchain 监控 Gas 价格和 MEV 活动以评估执行成本及被抢跑的风险。
+  pro_reviewed: false
+- skeleton_id: aria_usdt0.01%_0xa5db_mom_whale_follow_01
+  strategy_type: whale_follow
+  recommended_categories:
+  - defi_onchain
+  - defi_price
+  confidence: 0.95
+  reasoning: 策略核心逻辑为‘巨鲸跟随’与‘动量跟随’。defi_onchain 数据直接对应触发条件中的巨鲸变动强度和链上活跃度评分；defi_price
+    数据则是计算 ATR 波动率指标及识别小时级别动量信号的必要基础。
+  pro_reviewed: false

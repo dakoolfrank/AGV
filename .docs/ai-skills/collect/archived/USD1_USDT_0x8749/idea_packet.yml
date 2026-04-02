@@ -1,0 +1,149 @@
+pair_id: USD1_USDT_0x8749
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0x8749eb67c0de8c788fb736139c2363e0b57e7c29e107b470895df2146acf4b56'
+  base_token:
+    symbol: USD1
+    address: '0x8d0d000ee44948fc98c9b98a4fa4921476f08b0d'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:dd3e093f73fd37bb
+  primary_excerpt: 'Pool USD1_USDT_0x8749 on bsc/pancakeswap-infinity-clmm. TVL: $42,597,
+    24h Volume: $7,043,620. whale_movement(str=16.3); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 1.00183129542279
+  tvl_usd: 42597.3892
+  volume_24h_usd: 7043619.61667836
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 1.00690300997986
+    low: 0.988572428491857
+    close: 0.996068456044969
+    bar_count: 100
+signals:
+- signal_type: whale_movement
+  strength: 16.31
+  source: moralis
+  details:
+    tx_hash: '0xcafd3b05c3413a716dc898b014bff01c79805435700bfe6e7b65e7efc339759d'
+    value_usd: 815.5440896797742
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 44
+    avg_trade_size_usd: 56.19
+indicators:
+  rsi_14: 48.353078
+  ema_12: 0.99704
+  ema_26: 0.997582
+  vwap: 0.999295
+  bollinger_upper: 1.004234
+  bollinger_lower: 0.991256
+  bollinger_middle: 0.997745
+  macd_histogram: -0.000309
+  atr_14: 0.008954
+  onchain_tx_count: 100
+  onchain_unique_wallets: 44
+  onchain_avg_trade_size_usd: 56.19
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.9975
+  depth_2pct_usd: 423.84
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 2
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: moderate
+  score: 64
+  status: validated
+  reasons:
+  - whale_movement strength=16.3
+  - high_onchain_activity strength=100.0
+  - TVL $43K above minimum
+  - Volume $7044K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: medium
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: stablecoin_pair
+  amm_type: concentrated_v3
+  liquidity_profile: critical
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  confidence: 0.85
+  reasoning: 交易量与TVL比率极高（>160x），且价格在0.988-1.006之间剧烈波动，存在显著的套利空间。
+  trigger_signals:
+  - price_deviation_from_peg
+  - high_onchain_activity
+- strategy_type: lp_imbalance_arb
+  confidence: 0.72
+  reasoning: 2%深度仅为$423，极小的交易即可造成巨大价格冲击，适合捕捉瞬时失衡。
+  trigger_signals:
+  - depth_2pct_usd_low
+  - whale_movement
+llm_risk_flags:
+- extreme_volume_to_tvl_ratio
+- insufficient_depth_for_stablecoin
+- high_slippage_risk
+- potential_wash_trading_pattern
+llm_flash_raw:
+  pool_classification:
+    asset_class: stablecoin_pair
+    amm_type: concentrated_v3
+    liquidity_profile: critical
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: 交易量与TVL比率极高（>160x），且价格在0.988-1.006之间剧烈波动，存在显著的套利空间。
+    trigger_signals:
+    - price_deviation_from_peg
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.72
+    reasoning: 2%深度仅为$423，极小的交易即可造成巨大价格冲击，适合捕捉瞬时失衡。
+    trigger_signals:
+    - depth_2pct_usd_low
+    - whale_movement
+  risk_flags:
+  - extreme_volume_to_tvl_ratio
+  - insufficient_depth_for_stablecoin
+  - high_slippage_risk
+  - potential_wash_trading_pattern
+  flash_score: 45
+  flash_verdict: moderate
+llm_pro_final: {}
+llm_verdict: moderate
+llm_score: 45
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

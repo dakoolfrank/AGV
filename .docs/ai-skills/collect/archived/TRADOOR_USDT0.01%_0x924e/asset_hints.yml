@@ -1,0 +1,18 @@
+pair_id: TRADOOR_USDT0.01%_0x924e
+pool_address: '0x924e62a3689e7b94f397e61ac796dabfea32e93b'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: TRADOOR
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 20.89
+tvl_usd: 1845632.43
+volume_24h_usd: 13026406.25
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.82
+llm_verdict: moderate
+llm_score: 62

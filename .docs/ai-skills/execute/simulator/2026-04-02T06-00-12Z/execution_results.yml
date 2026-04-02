@@ -1,0 +1,115 @@
+run_timestamp: 2026-04-02T06-00-12Z
+cycle: 0
+total: 3
+success: 3
+blocked: 0
+errors: 0
+simulated: true
+results:
+- strategy_id: wbnb_usdt_0x16b9_arb_cross_pool_01
+  strategy_type: cross_pool_arbitrage
+  status: success
+  reason: null
+  tx_hash: dryrun-0001
+  gas_used: 130936
+  block_number: 90133809
+  simulated: true
+  amount_in: 10000000000000000000
+  amount_out: 16900795469034090
+  price_impact: 0.0030005835413301485
+  pnl:
+    gross_pnl_bps: 59.9099650400394
+    gas_cost_usd: 0.11784240000000001
+    net_pnl_usd: -0.1777523650400394
+    profitable: false
+    break_even_bps: 177.75236504003942
+    round_trip_out: 9940090034959960598
+    slippage_loss_bps: 59.9099650400394
+    amount_in_usd: 10.0
+    execution_cost_usd: 0.1777523650400394
+    round_trip_pnl_usd: -0.1777523650400394
+    breakeven_edge_pct: 1.7775236504003942
+    verdict: unprofitable
+  entry:
+    pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+    token_in: '0x55d398326f99059fF775485246999027B3197955'
+    token_out: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+    amount_in_wei: 10000000000000000000
+    amount_usd: 10.0
+    direction: buy
+  confidence: 0.9499999999999998
+- strategy_id: wbnb_usdt_0x16b9_whale_follow_01
+  strategy_type: whale_follow
+  status: success
+  reason: null
+  tx_hash: dryrun-0002
+  gas_used: 130936
+  block_number: 90133809
+  simulated: true
+  amount_in: 10000000000000000000
+  amount_out: 16900795469034090
+  price_impact: 0.0030005835413301485
+  pnl:
+    gross_pnl_bps: 59.9099650400394
+    gas_cost_usd: 0.11784240000000001
+    net_pnl_usd: -0.1777523650400394
+    profitable: false
+    break_even_bps: 177.75236504003942
+    round_trip_out: 9940090034959960598
+    slippage_loss_bps: 59.9099650400394
+    amount_in_usd: 10.0
+    execution_cost_usd: 0.1777523650400394
+    round_trip_pnl_usd: -0.1777523650400394
+    breakeven_edge_pct: 1.7775236504003942
+    verdict: unprofitable
+  entry:
+    pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+    token_in: '0x55d398326f99059fF775485246999027B3197955'
+    token_out: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+    amount_in_wei: 10000000000000000000
+    amount_usd: 10.0
+    direction: buy
+  confidence: 0.9499999999999998
+- strategy_id: wbnb_usdt_0x16b9_volume_momentum_01
+  strategy_type: volume_momentum
+  status: success
+  reason: null
+  tx_hash: dryrun-0003
+  gas_used: 130936
+  block_number: 90133809
+  simulated: true
+  amount_in: 10000000000000000000
+  amount_out: 16900795469034090
+  price_impact: 0.0030005835413301485
+  pnl:
+    gross_pnl_bps: 59.9099650400394
+    gas_cost_usd: 0.11784240000000001
+    net_pnl_usd: -0.1777523650400394
+    profitable: false
+    break_even_bps: 177.75236504003942
+    round_trip_out: 9940090034959960598
+    slippage_loss_bps: 59.9099650400394
+    amount_in_usd: 10.0
+    execution_cost_usd: 0.1777523650400394
+    round_trip_pnl_usd: -0.1777523650400394
+    breakeven_edge_pct: 1.7775236504003942
+    verdict: unprofitable
+  entry:
+    pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+    token_in: '0x55d398326f99059fF775485246999027B3197955'
+    token_out: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+    amount_in_wei: 10000000000000000000
+    amount_usd: 10.0
+    direction: buy
+  confidence: 0.875
+pnl_summary:
+  traded_count: 3
+  total_volume_usd: 30.0
+  total_execution_cost_usd: 0.5333
+  total_gas_cost_usd: 0.3535
+  total_round_trip_pnl_usd: -0.5333
+  avg_breakeven_edge_pct: 1.7775
+  verdicts:
+  - unprofitable
+  - unprofitable
+  - unprofitable

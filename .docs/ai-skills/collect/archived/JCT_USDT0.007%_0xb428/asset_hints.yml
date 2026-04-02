@@ -1,0 +1,18 @@
+pair_id: JCT_USDT0.007%_0xb428
+pool_address: '0xb428f9ab060a8381add435701ecf58af7f75f317e5d76a939fc03918158df44d'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: JCT
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 1436913.5204
+volume_24h_usd: 52215144.1808611
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: opportunistic
+strategy_confidence: 0.58
+llm_verdict: moderate
+llm_score: 58

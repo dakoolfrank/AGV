@@ -7,7 +7,7 @@ collect — 市场信号收集 + 指标提取 Skill
 
 调用方式对齐 WQ-YI:
   CollectSkill(ctx=ctx).run(pool_address)             # 原始信号
-  CurateArbSkill(ctx=ctx).run(scan_outputs)        # 指标提取（原 curate 模块）
+  CurateArbSkill(ctx=ctx).run(collect_outputs)        # 指标提取（原 curate 模块）
 
 Arb-Campaign 5 步管线:
   collect(AGV) → curate(WQ-YI agent-ops) → dataset(WQ-YI agent-ops) → execute(AGV) → fix(AGV)
@@ -971,11 +971,11 @@ class CollectSkill:
             token_address=token_address,
             thresholds=self._thresholds,
         )
-        # trending_momentum 由 scan_all_pools 统一检测
+        # trending_momentum 由 collect_all_pools 统一检测
         logger.info("collect pool=%s signals=%d", pool_address[:10], len(signals))
         return signals
 
-    async def scan_all_pools(self, pool_addresses: list[str]) -> list[dict]:
+    async def collect_all_pools(self, pool_addresses: list[str]) -> list[dict]:
         """批量扫描多个池 + 跨池 price_divergence + trending_momentum"""
         all_signals: list[dict] = []
 
@@ -1037,12 +1037,12 @@ class CollectSkill:
 try:
     from .toolloop_mm_collect import (
         PoolState, DivergenceResult, IndicatorSnapshot,
-        compute_all, scan_all_pairs, spread_zscore,
+        compute_all, compare_all_pairs, spread_zscore,
     )
 except ImportError:
     from toolloop_mm_collect import (  # type: ignore[no-redef]
         PoolState, DivergenceResult, IndicatorSnapshot,
-        compute_all, scan_all_pairs, spread_zscore,
+        compute_all, compare_all_pairs, spread_zscore,
     )
 
 
@@ -1072,10 +1072,10 @@ class CurateArbSkill:
     v1.2: 从 modules/curate/ 合并到 modules/collect/。
     计算层（toolloop_mm_collect.py）提供纯数学函数，本类做编排。
 
-    调用方式: CurateArbSkill(ctx=ctx).run(scan_outputs)
+    调用方式: CurateArbSkill(ctx=ctx).run(collect_outputs)
 
     Args:
-        scan_outputs: list[dict] — 每个 dict 包含:
+        collect_outputs: list[dict] — 每个 dict 包含:
             pool_address, price_usd, tvl, volume_24h, fee_bps, ohlcv_5m
     """
 
@@ -1083,13 +1083,13 @@ class CurateArbSkill:
         self._ctx = ctx
         self.config = config or {}
 
-    def run(self, scan_outputs: list[dict]) -> CuratedArbContext:
+    def run(self, collect_outputs: list[dict]) -> CuratedArbContext:
         """主入口 — collect 原始数据 → CuratedArbContext"""
         curated_pools: list[CuratedPool] = []
         pool_states: list[PoolState] = []
         warnings: list[str] = []
 
-        for raw in scan_outputs:
+        for raw in collect_outputs:
             pool = self._curate_single_pool(raw)
             if pool:
                 curated_pools.append(pool)
@@ -1099,7 +1099,7 @@ class CurateArbSkill:
                 warnings.append(f"skip pool {raw.get('pool_address', '?')}: insufficient data")
 
         # 跨池价差
-        divergences = scan_all_pairs(pool_states) if len(pool_states) >= 2 else []
+        divergences = compare_all_pairs(pool_states) if len(pool_states) >= 2 else []
 
         # 价差 Z-score（配对交易信号）
         spread_zscores = self._compute_spread_zscores(curated_pools)

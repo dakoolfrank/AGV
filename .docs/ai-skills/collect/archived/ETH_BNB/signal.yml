@@ -1,0 +1,24 @@
+collected_at: '2026-03-31T11:37:52Z'
+pair: ETH_BNB
+signal_count: 2
+signals:
+- divergence_pct: 0.8
+  pair: ETH_BNB
+  pool_address: '0x74E4716E431f45807DCF19f284c7aA99F18a4fbc'
+  price: 3800.0
+  reference_price: 3830.4
+  signal_id: ETH_BNB_price_divergence_1774957072
+  signal_type: price_divergence
+  source: mock
+  strength: 0.65
+  timestamp: '2026-03-31T11:37:52Z'
+- avg_volume_7d_usd: 5100000.0
+  pair: ETH_BNB
+  pool_address: '0x74E4716E431f45807DCF19f284c7aA99F18a4fbc'
+  signal_id: ETH_BNB_volume_spike_1774957072
+  signal_type: volume_spike
+  source: mock
+  spike_ratio: 1.67
+  strength: 0.45
+  timestamp: '2026-03-31T11:37:52Z'
+  volume_24h_usd: 8500000.0

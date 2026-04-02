@@ -1,0 +1,85 @@
+pair_id: SIREN_USDT0.18%_0x561e
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: uniswap-v4-bsc
+  pool_address: '0x561ed5157f4e94a5097d799274629e5dba380bae73ae20bf857b2ca509fa132a'
+  base_token:
+    symbol: SIREN
+    address: '0x997a58129890bbda032231a52ed1ddc845fc18e1'
+  quote_token:
+    symbol: USDT 0.18%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:85509b4acdc0ccb0
+  primary_excerpt: 'Pool SIREN_USDT0.18%_0x561e on bsc/uniswap-v4-bsc. TVL: $25,268,
+    24h Volume: $3,070,664. high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0
+  tvl_usd: 25268.1879
+  volume_24h_usd: 3070664.2170503
+  fee_bps: 25
+  ohlcv_summary: {}
+signals:
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 55
+    avg_trade_size_usd: 0.0
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 55
+  onchain_avg_trade_size_usd: 0.0
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 0.0
+cross_pool_analysis: {}
+validation:
+  dual_source_met: false
+  signal_count: 1
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - Gecko+DexScreener both unavailable, Moralis-only mode
+decision:
+  quality: moderate
+  score: 52
+  status: validated
+  reasons:
+  - high_onchain_activity strength=100.0
+  - TVL $25K above minimum
+  - Volume $3071K healthy
+execution_hints:
+  suggested_strategy: opportunistic
+  urgency: medium
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: small_cap
+  liquidity_profile: shallow
+  amm_type: uniswap-v4-bsc
+  activity_profile: active
+llm_strategies:
+- strategy_type: opportunistic
+  confidence: 0.52
+  source: deterministic
+llm_risk_flags:
+- low_tvl
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: moderate
+llm_score: 52
+hypotheses:
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

@@ -480,15 +480,17 @@ cast call $PGVT_ADDRESS "vestingSealed()(bool)" --rpc-url https://bsc-dataseed.b
 > 上币状态、CoinGecko 被拒根因和链上修复记录 → [AGV-pGVT-sGVT.md §10.5](AGV-pGVT-sGVT.md)  
 > NFT 部署运维 → *(待建 AGV-NFT-RUN.md)*，当前架构见 [AGV-NFT-AgentRegistry.md](../agvprotocol-contracts-main/AGV-NFT-AgentRegistry.md)
 
-### 7.1 CoinGecko 重审（pGVT — 目标 03/28）
+### 7.1 CoinGecko 重审（pGVT — 暂缓，等 Arb→MM 就位）
 
 | 序号 | 任务 | 状态 |
 |------|------|------|
 | 1 | 执行 7 笔 revokeRole（deployer 仅保留 DEFAULT_ADMIN + TREASURY） | ✅ 2026-03-13 |
-| 2 | 等待 14 天冷却期 | ⏳ → 03/28 可提交 |
+| 2 | 等待 14 天冷却期 | ✅ 已过（03/28+） |
 | 3 | 准备重审材料：7 笔 tx hash + BscScan Read Contract 截图 + 话术说明 | ⏳ |
-| 4 | 提交 CoinGecko 重审（附材料） | ⏳ |
-| 5 | 审核通过 → MetaMask 自动显示价格 | — |
+| 4 | **暂缓提交** — 链上已修复，但无 volume 支撑审核员不会认真看 | ⚠️ 等 Arb+MM |
+| 5 | Arb 实盘盈利 → MM 做量 → 重新提交 CoinGecko | — |
+
+> **战略判断**（2026-04-02）：CoinGecko 重审需要链上活跃度支撑，而活跃度来自 MM 做量，MM 资金来自 Arb 盈利。当前 P0 = Arb 实盘推进。
 
 ### 7.2 CoinGecko 重审（sGVT — 条件驱动）
 
@@ -500,13 +502,14 @@ cast call $PGVT_ADDRESS "vestingSealed()(bool)" --rpc-url https://bsc-dataseed.b
 
 **行动**：先满足上述条件后再重新提交。
 
-### 7.3 备选路径（并行）
+### 7.3 备选路径
 
-| 路径 | 说明 | 优先级 | 状态 |
-|------|------|--------|------|
-| **Trust Wallet assets repo** | 独立于 CoinGecko，直接提交 PR 申请 token 展示 | P1 | ✅ PR [#35878](https://github.com/trustwallet/assets/pull/35878) 已提交 (2026-03-15) |
-| **CoinMarketCap** | 单独申请（币安旗下，需 volume 证据） | P2 | ⏳ 待 volume 增加 |
-| **NFT 分发加速** | 通过 buy-page claim 增加链上交互和用户数 | P1 | ⏳ 可立即执行 |
+| 路径 | 说明 | 状态 |
+|------|------|------|
+| **Trust Wallet assets repo** | PR [#35878](https://github.com/trustwallet/assets/pull/35878) 已提交 (2026-03-15)，但 assets repo 收费太贵 | ⏳ **暂缓** |
+| **CoinMarketCap** | 单独申请（币安旗下，需 volume 证据） | ⏳ 等 volume |
+| **BscScan Token Info 更新** | 已通过审批，需更新邮箱+网址信息 | ⏳ P1 运维 |
+| **NFT 分发加速** | 通过 buy-page claim 增加链上交互和用户数 | ⏳ 可并行 |
 
 ### 7.4 TGE 转换（pGVT → GVT — 待 GVT 部署）
 

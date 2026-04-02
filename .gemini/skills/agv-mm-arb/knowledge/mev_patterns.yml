@@ -55,9 +55,9 @@ bsc_defense_stack:
     enabled: true
     max_parts: 3
     jitter_blocks: 2
-  mempool_scan:
+  mempool_inspect:
     enabled: true
-    scan_interval_ms: 500
+    inspect_interval_ms: 500
     alert_threshold_pct: 0.05
 
 known_mev_bots:

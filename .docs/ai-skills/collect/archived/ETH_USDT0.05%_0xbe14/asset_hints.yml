@@ -1,0 +1,18 @@
+pair_id: ETH_USDT0.05%_0xbe14
+pool_address: '0xbe141893e4c6ad9272e8c04bab7e6a10604501a5'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: ETH
+quote_token: USDT 0.05%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 99.95
+tvl_usd: 4861357.1448
+volume_24h_usd: 2624931.67824348
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: blue_chip
+liquidity_profile: moderate
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.95
+llm_verdict: strong
+llm_score: 92

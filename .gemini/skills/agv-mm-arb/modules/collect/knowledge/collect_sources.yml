@@ -1,4 +1,4 @@
-# scan 数据源配置
+# collect 数据源配置
 #
 # GeckoTerminal + Moralis 双源配置（Phase 1 仅 BSC）
 
@@ -18,7 +18,7 @@ dexscreener:
   rate_limit: 300         # requests/minute (free tier, no API key)
   network: "bsc"
 
-# 目标池（仅 MM Campaign 护盘心跳使用 — Arb scan 不读此配置）
+# 目标池（仅 MM Campaign 护盘心跳使用 — Arb collect 不读此配置）
 target_pools:
   - name: "pGVT_USDT"
     address: "0x5558e43eE316C45e6C842bC7aC4B770EED03c5C0"
@@ -88,5 +88,5 @@ arb_discovery:
       min_score: 40
 
   # 持久化路径（AGV 仓库内，对齐 WQ-YI docs/ai-skills/collect-papers）
-  output_root: "/workspaces/AGV/.docs/ai-skills/scan"
+  output_root: "/workspaces/AGV/.docs/ai-skills/collect"
   max_pending: 200

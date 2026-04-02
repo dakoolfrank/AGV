@@ -1,0 +1,18 @@
+pair_id: USDT_WBNB0.05%_0x6fe9
+pool_address: '0x6fe9e9de56356f7edbfcbb29fab7cd69471a4869'
+network: bsc
+dex: uniswap-bsc
+base_token: USDT
+quote_token: WBNB 0.05%
+signal_quality: moderate
+top_signal: lp_imbalance
+signal_strength: 99.84
+tvl_usd: 2725970.703
+volume_24h_usd: 2805439.11582713
+discovered_at: '2026-03-23T07:12:07Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.57
+llm_verdict: moderate
+llm_score: 57

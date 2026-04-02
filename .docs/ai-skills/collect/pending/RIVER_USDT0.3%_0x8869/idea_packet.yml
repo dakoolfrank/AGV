@@ -1,0 +1,218 @@
+pair_id: RIVER_USDT0.3%_0x8869
+version: '1.0'
+source_evidence:
+  discovery_method: trending
+  network: bsc
+  dex: uniswap-bsc
+  pool_address: '0x886928eb467ef5e69b4ebc2c8af4275b21af41bd'
+  base_token:
+    symbol: RIVER
+    address: '0xda7ad9dea9397cffddae2f8a052b82f1484252b3'
+  quote_token:
+    symbol: USDT 0.3%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:5985979f5b7682b1
+  primary_excerpt: 'Pool RIVER_USDT0.3%_0x8869 on bsc/uniswap-bsc. TVL: $895,787,
+    24h Volume: $2,776,561. price_divergence(str=4.5); lp_imbalance(str=93.3); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 14.9966497948586
+  tvl_usd: 895786.6667
+  volume_24h_usd: 2776561.27665788
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 15.5846905935222
+    low: 14.0955443413381
+    close: 14.3575288908264
+    bar_count: 100
+signals:
+- signal_type: price_divergence
+  strength: 4.45
+  source: gecko
+  details:
+    price: 14.9966497948586
+    last_close: 14.3575288908264
+- signal_type: lp_imbalance
+  strength: 93.35
+  source: gecko
+  details:
+    reserve_ratio: 0.0664527986595272
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 27
+    avg_trade_size_usd: 118.16
+indicators:
+  rsi_14: 38.071169
+  ema_12: 14.524793
+  ema_26: 14.768099
+  vwap: 15.048017
+  bollinger_upper: 15.754219
+  bollinger_lower: 13.929434
+  bollinger_middle: 14.841826
+  macd_histogram: -0.06138
+  atr_14: 0.285432
+  onchain_tx_count: 100
+  onchain_unique_wallets: 27
+  onchain_avg_trade_size_usd: 118.16
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0665
+  depth_2pct_usd: 8913.08
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 3
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 83
+  status: validated
+  reasons:
+  - price_divergence strength=4.5
+  - lp_imbalance strength=93.3
+  - high_onchain_activity strength=100.0
+  - TVL $896K above minimum
+  - Volume $2777K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 4500
+    max_slippage_bps: 60
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: shallow
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.95
+  viable: true
+  reasoning: 储备金比例极度失衡（0.066）且24h交易量远超TVL，表明该池处于高频套利窗口，流动性分布极度偏向一侧。
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 4500
+    max_slippage_bps: 60
+    hold_blocks_max: 2
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.88
+  viable: true
+  reasoning: 4.45%的价格偏离度在如此高的交易量下极不寻常，暗示存在持续的跨平台价格滞后。
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 8000
+    max_slippage_bps: 40
+    hold_blocks_max: 1
+- strategy_type: mean_reversion
+  pro_confidence: 0.55
+  viable: true
+  reasoning: RSI和VWAP显示超卖，但由于深度极浅（2%深度仅$8.9k），左侧交易风险较高，需严格止损。
+  parameter_hints:
+    entry_threshold_pct: 3.5
+    max_position_usd: 1500
+    max_slippage_bps: 100
+    hold_blocks_max: 40
+llm_risk_flags:
+- extreme_reserve_imbalance
+- low_depth_to_tvl_ratio
+- high_slippage_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: shallow
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.93
+    reasoning: 极端的储备比例 (0.0665) 显示流动性池严重失衡，存在巨大的套利空间以恢复价格平衡。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: 价格偏离度 (4.45) 结合高交易量，表明该池与外部市场价格存在滞后，适合跨池套利。
+    trigger_signals:
+    - price_divergence
+    - high_onchain_activity
+  - strategy_type: mean_reversion
+    confidence: 0.65
+    reasoning: RSI 处于 38 低位且价格低于 VWAP，在极度失衡后存在向均值回归的技术需求。
+    trigger_signals:
+    - rsi_14
+    - vwap
+  risk_flags:
+  - extreme_reserve_imbalance
+  - low_depth_to_tvl_ratio
+  - high_slippage_risk
+  flash_score: 82
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.95
+    viable: true
+    reasoning: 储备金比例极度失衡（0.066）且24h交易量远超TVL，表明该池处于高频套利窗口，流动性分布极度偏向一侧。
+    parameter_hints:
+      entry_threshold_pct: 1.2
+      max_position_usd: 4500
+      max_slippage_bps: 60
+      hold_blocks_max: 2
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.88
+    viable: true
+    reasoning: 4.45%的价格偏离度在如此高的交易量下极不寻常，暗示存在持续的跨平台价格滞后。
+    parameter_hints:
+      entry_threshold_pct: 0.8
+      max_position_usd: 8000
+      max_slippage_bps: 40
+      hold_blocks_max: 1
+  - strategy_type: mean_reversion
+    pro_confidence: 0.55
+    viable: true
+    reasoning: RSI和VWAP显示超卖，但由于深度极浅（2%深度仅$8.9k），左侧交易风险较高，需严格止损。
+    parameter_hints:
+      entry_threshold_pct: 3.5
+      max_position_usd: 1500
+      max_slippage_bps: 100
+      hold_blocks_max: 40
+  pro_score: 85
+  pro_verdict: strong
+  override_reason: Flash模型对失衡状态识别准确。鉴于Volume/TVL比率极高（>3），该池目前是纯粹的套利驱动型市场，建议优先执行原子套利策略。
+llm_verdict: strong
+llm_score: 85
+hypotheses:
+- hypothesis: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- claim_id: c2
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

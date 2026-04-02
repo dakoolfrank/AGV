@@ -1,0 +1,18 @@
+pair_id: LAB_USDT0.007%_0xd943
+pool_address: '0xd9434e63fe78a6e77dafe2abc504121bf8500822f6d3a59eccba577cf0a070f2'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: LAB
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 1587202.4666
+volume_24h_usd: 4699187.37322128
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: opportunistic
+strategy_confidence: 0.66
+llm_verdict: moderate
+llm_score: 66

@@ -1,0 +1,18 @@
+pair_id: FF_USDT0.01%_0x9f8f
+pool_address: '0x9f8f4615ff5143aee365fa34f34196fb85be7650'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: FF
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 92.91
+tvl_usd: 3844185.4223
+volume_24h_usd: 3147999.33359292
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.95
+llm_verdict: strong
+llm_score: 85

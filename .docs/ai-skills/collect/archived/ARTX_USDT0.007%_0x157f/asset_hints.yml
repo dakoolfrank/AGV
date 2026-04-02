@@ -1,0 +1,18 @@
+pair_id: ARTX_USDT0.007%_0x157f
+pool_address: '0x157f51edede49476dce22a3442d33d5752fc207541fd36f5904f4bded4d2769c'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: ARTX
+quote_token: USDT 0.007%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 26.68
+tvl_usd: 1085328.5798
+volume_24h_usd: 20657960.7824979
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: shallow
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.72
+llm_verdict: moderate
+llm_score: 52

@@ -1,0 +1,215 @@
+pair_id: ON_USDT0.01%_0x4620
+version: '1.0'
+source_evidence:
+  discovery_method: trending
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0x4620f5c127a6055fbebb1f71327d60ff079c9060'
+  base_token:
+    symbol: 'ON'
+    address: '0x0e4f6209ed984b21edea43ace6e09559ed051d48'
+  quote_token:
+    symbol: USDT 0.01%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:a5848ececf6f2f53
+  primary_excerpt: 'Pool ON_USDT0.01%_0x4620 on bsc/pancakeswap-v3-bsc. TVL: $612,183,
+    24h Volume: $3,320,849. whale_movement(str=14.8); whale_movement(str=14.4); whale_movement(str=10.1);
+    high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.07512
+  tvl_usd: 612182.61
+  volume_24h_usd: 3320848.86
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: -0.9
+    price_change_h1: -3.88
+    price_change_h6: -7.55
+    price_change_h24: -6.14
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 14.82
+  source: moralis
+  details:
+    tx_hash: '0x0554c533faa3232a072763f4db5d4c5cf36e755b796532226b034b0e00420290'
+    value_usd: 741.1359790586995
+- signal_type: whale_movement
+  strength: 14.43
+  source: moralis
+  details:
+    tx_hash: '0xda62c3a4246e0396828f3573216eb3e79a03fbec7e6edad1fe81906953d06cdc'
+    value_usd: 721.5863744916516
+- signal_type: whale_movement
+  strength: 10.06
+  source: moralis
+  details:
+    tx_hash: '0x117521dc5520981f751ae30774b9790dcf5d5999c92d6edec5d6eba1d045681a'
+    value_usd: 503.16452188396676
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 20
+    avg_trade_size_usd: 117.07
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 20
+  onchain_avg_trade_size_usd: 117.07
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 6091.22
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 4
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 90
+  status: validated
+  reasons:
+  - whale_movement strength=14.8
+  - whale_movement strength=14.4
+  - whale_movement strength=10.1
+  - high_onchain_activity strength=100.0
+  - TVL $612K above minimum
+  - Volume $3321K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.05
+    max_position_usd: 1200
+    max_slippage_bps: 15
+    hold_blocks_max: 5
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: thin_concentrated
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.75
+  viable: true
+  reasoning: 极高的换手率（5.4x）配合0.01%的极低费率，适合高频动量捕捉，但需严格限制单笔头寸以规避极薄的深度。
+  parameter_hints:
+    entry_threshold_pct: 0.15
+    max_position_usd: 800
+    max_slippage_bps: 30
+    hold_blocks_max: 20
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.85
+  viable: true
+  reasoning: 2%深度仅$6k而日交易量超$3M，意味着价格频繁发生剧烈偏移，套利空间巨大且触发频率极高。
+  parameter_hints:
+    entry_threshold_pct: 0.05
+    max_position_usd: 1200
+    max_slippage_bps: 15
+    hold_blocks_max: 5
+- strategy_type: mean_reversion
+  pro_confidence: 0.4
+  viable: false
+  reasoning: 在极低费率和高换手环境下，价格通常表现为强趋势或高频震荡，均值回归易被趋势突破导致严重亏损。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+llm_risk_flags:
+- high_slippage_risk
+- negative_price_momentum
+- low_depth_to_volume_ratio
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.82
+    reasoning: 24h交易量高达TVL的5.4倍，极高的换手率表明存在强烈的市场动能和手续费捕获机会。
+    trigger_signals:
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.68
+    reasoning: 2%价格深度仅为$6091，相对于其交易活跃度极低，大额订单易造成价格瞬间偏离。
+    trigger_signals:
+    - whale_movement
+  - strategy_type: mean_reversion
+    confidence: 0.55
+    reasoning: 价格在24h内持续下跌且伴随高交易量，可能在超卖区间出现短期反弹。
+    trigger_signals:
+    - price_change_h24
+  risk_flags:
+  - high_slippage_risk
+  - negative_price_momentum
+  - low_depth_to_volume_ratio
+  flash_score: 65
+  flash_verdict: moderate
+llm_pro_final:
+  agree_classification: false
+  revised_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: thin_concentrated
+    activity_profile: high_frequency
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.75
+    viable: true
+    reasoning: 极高的换手率（5.4x）配合0.01%的极低费率，适合高频动量捕捉，但需严格限制单笔头寸以规避极薄的深度。
+    parameter_hints:
+      entry_threshold_pct: 0.15
+      max_position_usd: 800
+      max_slippage_bps: 30
+      hold_blocks_max: 20
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.85
+    viable: true
+    reasoning: 2%深度仅$6k而日交易量超$3M，意味着价格频繁发生剧烈偏移，套利空间巨大且触发频率极高。
+    parameter_hints:
+      entry_threshold_pct: 0.05
+      max_position_usd: 1200
+      max_slippage_bps: 15
+      hold_blocks_max: 5
+  - strategy_type: mean_reversion
+    pro_confidence: 0.4
+    viable: false
+    reasoning: 在极低费率和高换手环境下，价格通常表现为强趋势或高频震荡，均值回归易被趋势突破导致严重亏损。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  pro_score: 58
+  pro_verdict: moderate
+  override_reason: Flash将流动性评为moderate有误。2%深度仅占TVL的1%，属于典型的流动性分布极度不均或头寸偏离，这种‘虚假TVL’环境下实盘滑点风险极高，必须下调评分并限制头寸上限。
+llm_verdict: moderate
+llm_score: 58
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

@@ -1,0 +1,18 @@
+pair_id: SIREN_USDT0.18%_0x561e
+pool_address: '0x561ed5157f4e94a5097d799274629e5dba380bae73ae20bf857b2ca509fa132a'
+network: bsc
+dex: uniswap-v4-bsc
+base_token: SIREN
+quote_token: USDT 0.18%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 25268.1879
+volume_24h_usd: 3070664.2170503
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: small_cap
+liquidity_profile: shallow
+strategy_type: opportunistic
+strategy_confidence: 0.52
+llm_verdict: moderate
+llm_score: 52

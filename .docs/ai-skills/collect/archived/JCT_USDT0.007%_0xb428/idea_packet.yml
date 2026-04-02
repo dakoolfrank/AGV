@@ -1,0 +1,84 @@
+pair_id: JCT_USDT0.007%_0xb428
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0xb428f9ab060a8381add435701ecf58af7f75f317e5d76a939fc03918158df44d'
+  base_token:
+    symbol: JCT
+    address: '0xea37a8de1de2d9d10772eeb569e28bfa5cb17707'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:09f16722b34e4141
+  primary_excerpt: 'Pool JCT_USDT0.007%_0xb428 on bsc/pancakeswap-infinity-clmm. TVL:
+    $1,436,914, 24h Volume: $52,215,144. high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0
+  tvl_usd: 1436913.5204
+  volume_24h_usd: 52215144.1808611
+  fee_bps: 25
+  ohlcv_summary: {}
+signals:
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 18
+    avg_trade_size_usd: 0.0
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 18
+  onchain_avg_trade_size_usd: 0.0
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 0.0
+cross_pool_analysis: {}
+validation:
+  dual_source_met: false
+  signal_count: 1
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - Gecko+DexScreener both unavailable, Moralis-only mode
+decision:
+  quality: moderate
+  score: 58
+  status: validated
+  reasons:
+  - high_onchain_activity strength=100.0
+  - TVL $1.4M sufficient
+  - Volume $52215K healthy
+execution_hints:
+  suggested_strategy: opportunistic
+  urgency: medium
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: blue_chip
+  liquidity_profile: deep
+  amm_type: pancakeswap-infinity-clmm
+  activity_profile: active
+llm_strategies:
+- strategy_type: opportunistic
+  confidence: 0.58
+  source: deterministic
+llm_risk_flags: []
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: moderate
+llm_score: 58
+hypotheses:
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

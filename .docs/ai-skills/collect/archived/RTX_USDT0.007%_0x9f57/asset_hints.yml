@@ -1,0 +1,18 @@
+pair_id: RTX_USDT0.007%_0x9f57
+pool_address: '0x9f57ccbb2a7a89120cbdc8dad277d6e82aa9b2c3925e148033963a22e1f57b5e'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: RTX
+quote_token: USDT 0.007%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 100.0
+tvl_usd: 1392511.8779
+volume_24h_usd: 6032426.77300353
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: opportunistic
+strategy_confidence: 0.93
+llm_verdict: strong
+llm_score: 93

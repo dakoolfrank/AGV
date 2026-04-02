@@ -1,0 +1,109 @@
+pair_id: WBNB_USDT_0x8840
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: biswap
+  pool_address: '0x8840C6252e2e86e545deFb6da98B2a0E26d8C1BA'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:9051492902f951a2
+  primary_excerpt: 'Pool WBNB_USDT_0x8840 on bsc/biswap. TVL: $417,013, 24h Volume:
+    $33,712. lp_imbalance(str=99.8); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 1.00287586041811
+  tvl_usd: 417012.5905
+  volume_24h_usd: 33711.81
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 1.00551679540334
+    low: 0.99386944098996
+    close: 1.00088024387033
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 99.83
+  source: gecko
+  details:
+    reserve_ratio: 0.00165007543985902
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 78
+    avg_trade_size_usd: 0.66
+indicators:
+  rsi_14: 50.90302
+  ema_12: 1.000722
+  ema_26: 1.000596
+  vwap: 1.000469
+  bollinger_upper: 1.003612
+  bollinger_lower: 0.99785
+  bollinger_middle: 1.000731
+  macd_histogram: -6.0e-05
+  atr_14: 0.002008
+  onchain_tx_count: 100
+  onchain_unique_wallets: 78
+  onchain_avg_trade_size_usd: 0.66
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0017
+  depth_2pct_usd: 4149.28
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 2
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 70
+  status: validated
+  reasons:
+  - lp_imbalance strength=99.8
+  - high_onchain_activity strength=100.0
+  - TVL $417K above minimum
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: mid_cap
+  liquidity_profile: moderate
+  amm_type: biswap
+  activity_profile: low
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  confidence: 0.7
+  source: deterministic
+llm_risk_flags: []
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: strong
+llm_score: 70
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

@@ -1,0 +1,205 @@
+pair_id: WKEYDAO2_USDT_0xb720
+version: '1.0'
+source_evidence:
+  discovery_method: trending
+  network: bsc
+  dex: pancakeswap_v2
+  pool_address: '0xb720ea2a201c03578cca05191e8b4ab859704cfe'
+  base_token:
+    symbol: wkeyDAO2
+    address: '0xe0a281deff5c9d8d67af09d39340e134ac81b82e'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:7c0b5f27e23f95e3
+  primary_excerpt: 'Pool WKEYDAO2_USDT_0xb720 on bsc/pancakeswap_v2. TVL: $47,615,766,
+    24h Volume: $10,938,091. whale_movement(str=80.5); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 3.35656719193177
+  tvl_usd: 47615765.5845
+  volume_24h_usd: 10938090.7401645
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 3.46027038081887
+    low: 3.3089608970345
+    close: 3.3458260709679
+    bar_count: 100
+signals:
+- signal_type: whale_movement
+  strength: 80.48
+  source: moralis
+  details:
+    tx_hash: '0xc27e72095c1eb0f9649a1682e48173c348113743637580149abac2a04ab5613d'
+    value_usd: 4024.2243280400044
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 60
+    avg_trade_size_usd: 93.39
+indicators:
+  rsi_14: 52.012771
+  ema_12: 3.337502
+  ema_26: 3.33928
+  vwap: 3.354409
+  bollinger_upper: 3.354222
+  bollinger_lower: 3.311134
+  bollinger_middle: 3.332678
+  macd_histogram: 0.002285
+  atr_14: 0.039179
+  onchain_tx_count: 100
+  onchain_unique_wallets: 60
+  onchain_avg_trade_size_usd: 93.39
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.2985
+  depth_2pct_usd: 473776.87
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 2
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 76
+  status: validated
+  reasons:
+  - whale_movement strength=80.5
+  - high_onchain_activity strength=100.0
+  - TVL $47.6M sufficient
+  - Volume $10938K healthy
+execution_hints:
+  suggested_strategy: volume_momentum
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 150000
+    max_slippage_bps: 15
+    hold_blocks_max: 200
+llm_classification:
+  asset_class: mid_cap
+  amm_type: constant_product_v2
+  liquidity_profile: deep
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.88
+  viable: true
+  reasoning: 24h交易量与TVL比例极佳，且持币地址活跃度高，VWAP位于布林带中轨上方，具备典型的趋势延续特征。
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 150000
+    max_slippage_bps: 15
+    hold_blocks_max: 200
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.78
+  viable: true
+  reasoning: Reserve ratio (0.2985) 偏离标准V2平衡点较大，暗示池内资产分布严重失衡，存在显著的套利回归空间。
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 80000
+    max_slippage_bps: 10
+    hold_blocks_max: 20
+- strategy_type: mean_reversion
+  pro_confidence: 0.45
+  viable: false
+  reasoning: RSI处于52中性区间且MACD柱状图接近零轴，缺乏明显的超买超卖动力，不建议在此时介入均值回归。
+  parameter_hints:
+    entry_threshold_pct: 2.5
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+llm_risk_flags:
+- whale_signal_sensitivity_low
+- potential_governance_token_volatility
+- high_volume_to_tvl_ratio
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: constant_product_v2
+    liquidity_profile: deep
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.85
+    reasoning: 24h交易量占TVL比例超过20%，且链上活跃地址数与交易频率极高，显示出强劲的市场热度。
+    trigger_signals:
+    - high_onchain_activity
+    - trending_discovery
+  - strategy_type: mean_reversion
+    confidence: 0.65
+    reasoning: 价格目前处于布林带上轨附近且RSI处于中性区间，若短期冲高受阻存在回调空间。
+    trigger_signals:
+    - bollinger_upper_touch
+    - rsi_neutral
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.55
+    reasoning: Reserve ratio显示存在一定程度的资产分布不均，可能存在微小的跨池套利空间。
+    trigger_signals:
+    - reserve_ratio_imbalance
+  risk_flags:
+  - whale_signal_sensitivity_low
+  - potential_governance_token_volatility
+  - high_volume_to_tvl_ratio
+  flash_score: 82
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.88
+    viable: true
+    reasoning: 24h交易量与TVL比例极佳，且持币地址活跃度高，VWAP位于布林带中轨上方，具备典型的趋势延续特征。
+    parameter_hints:
+      entry_threshold_pct: 0.8
+      max_position_usd: 150000
+      max_slippage_bps: 15
+      hold_blocks_max: 200
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.78
+    viable: true
+    reasoning: Reserve ratio (0.2985) 偏离标准V2平衡点较大，暗示池内资产分布严重失衡，存在显著的套利回归空间。
+    parameter_hints:
+      entry_threshold_pct: 1.2
+      max_position_usd: 80000
+      max_slippage_bps: 10
+      hold_blocks_max: 20
+  - strategy_type: mean_reversion
+    pro_confidence: 0.45
+    viable: false
+    reasoning: RSI处于52中性区间且MACD柱状图接近零轴，缺乏明显的超买超卖动力，不建议在此时介入均值回归。
+    parameter_hints:
+      entry_threshold_pct: 2.5
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  pro_score: 86
+  pro_verdict: strong
+  override_reason: Flash模型对流动性失衡（Reserve Ratio）的敏感度不足，该指标在$47M TVL的池子中是极高价值的套利信号。整体流动性极深，适合大资金量化介入。
+llm_verdict: strong
+llm_score: 86
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

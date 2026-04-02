@@ -197,10 +197,11 @@ class TestProfiles:
         assert "fix" in S5_ARB_PROFILE.optional_steps
 
     def test_s5_fork_from_s2(self):
-        """S5 MM 和 Arb 都消费来自 S2 的 lp_state"""
+        """S5 MM 消费来自 S2 的 lp_state; Arb collect 独立运行无上游依赖"""
         from _shared.engines._profiles import S5_MM_PROFILE, S5_ARB_PROFILE
         assert "lp_state" in S5_MM_PROFILE.step_consumes["monitor"]
-        assert "lp_state" in S5_ARB_PROFILE.step_consumes["collect"]
+        # Arb collect 独立模式：无 step_consumes（主干分叉时由 campaign 预注入）
+        assert S5_ARB_PROFILE.step_consumes["collect"] == frozenset()
 
     def test_all_profiles_dict(self):
         from _shared.engines._profiles import ALL_PROFILES
@@ -310,10 +311,11 @@ class TestArbOps:
         assert result.metadata["reason"] == "no_bindings"
 
     def test_arb_execute_ops_with_binding(self, tmp_path):
-        """execute 有 dataset_binding → 尝试执行（无 adapter 也返回结果）"""
+        """execute 有 dataset_binding → 兼容别名默认走 dry_run 调度"""
         import yaml
+        import unittest.mock as mock
         from nexrur.engines.orchestrator import AssetRef
-        from _shared.engines.agent_ops_arb import ArbExecuteOps, SafetyArmor
+        from _shared.engines.agent_ops_arb import ArbExecuteOps, SafetyArmor, StepResult
         # 创建 mock indicator_binding.yml
         out_dir = tmp_path / ".docs" / "ai-skills" / "dataset" / "output" / "test_pair"
         out_dir.mkdir(parents=True)
@@ -326,17 +328,27 @@ class TestArbOps:
         }))
         safety = SafetyArmor()
         ops = ArbExecuteOps(safety=safety)
-        result = ops(
-            pipeline_run_id="pipe-test",
-            step_run_id="step-004",
-            trace_id="trace-test",
-            assets_input=[AssetRef(
-                kind="dataset_binding", id="test_pair",
-                path=str(out_dir.relative_to(tmp_path)), metadata={},
+        with mock.patch.object(ops, "_execute_dry_run", return_value=StepResult(
+            success=True,
+            assets_produced=[AssetRef(
+                kind="execution_result",
+                id="test_pair",
+                path=".docs/ai-skills/execute/simulator/test_pair",
+                metadata={"dry_run": True},
             )],
-            config={},
-            workspace=tmp_path,
-        )
+            metadata={"mode": "dry_run"},
+        )):
+            result = ops(
+                pipeline_run_id="pipe-test",
+                step_run_id="step-004",
+                trace_id="trace-test",
+                assets_input=[AssetRef(
+                    kind="dataset_binding", id="test_pair",
+                    path=str(out_dir.relative_to(tmp_path)), metadata={},
+                )],
+                config={},
+                workspace=tmp_path,
+            )
         assert result.success
         assert any(a.kind == "execution_result" for a in result.assets_produced)
 

@@ -1,0 +1,204 @@
+pair_id: WBNB_USDT_0x47a9
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: uniswap
+  pool_address: '0x47a90A2d92A8367A91EfA1906bFc8c1E05bf10c4'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:38f19be0aa93602e
+  primary_excerpt: 'Pool WBNB_USDT_0x47a9 on bsc/uniswap. TVL: $614,087, 24h Volume:
+    $1,426,962. price_divergence(str=100.0); whale_movement(str=100.0); whale_movement(str=63.1);
+    whale_movement(str=29.9); whale_movement(str=26.6)'
+market_data:
+  price_usd: 622.45
+  tvl_usd: 614086.89
+  volume_24h_usd: 1426961.64
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 1.12173415650466
+    low: 0.993453853095117
+    close: 0.999259670191484
+    bar_count: 100
+signals:
+- signal_type: price_divergence
+  strength: 100.0
+  source: gecko
+  details:
+    price: 622.45
+    last_close: 0.999259670191484
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x1a94de8e813f633d5ebd17e501cd8ca0ff40dddc63bdbbc0da749c9229f3ffa1'
+    value_usd: 5323.990393375774
+- signal_type: whale_movement
+  strength: 63.11
+  source: moralis
+  details:
+    tx_hash: '0x2346bf1c8cc9a5fa7d24a36780371c1c7e417017b650f9013173cc3c1ccb229a'
+    value_usd: 3155.5796527525135
+- signal_type: whale_movement
+  strength: 29.87
+  source: moralis
+  details:
+    tx_hash: '0xd6753ed54d1de1e9be32cc2e49881c37587e182f17886f683554483556001016'
+    value_usd: 1493.5575549289374
+- signal_type: whale_movement
+  strength: 26.64
+  source: moralis
+  details:
+    tx_hash: '0x4715b57929bda961ea0e17391e51552e87efc1f78a28c8d34566ed31f8e91aaf'
+    value_usd: 1332.0430000000001
+- signal_type: whale_movement
+  strength: 21.16
+  source: moralis
+  details:
+    tx_hash: '0x28adb2c450a35fb5b1e6538cb848d12fac620db29f32a44522a0ea0481481d75'
+    value_usd: 1058.1454451103295
+- signal_type: whale_movement
+  strength: 19.92
+  source: moralis
+  details:
+    tx_hash: '0x763d3b341b272838813b86ec17a875d48ba5cb2d53c2d43fe05cf2f5b59366af'
+    value_usd: 995.7967442093259
+- signal_type: whale_movement
+  strength: 18.9
+  source: moralis
+  details:
+    tx_hash: '0x43c5d07752cf049da03ad6db42ce5f49d7cf6ac39ca67c57f8c8dc164a455dcb'
+    value_usd: 945.0656561802978
+- signal_type: whale_movement
+  strength: 16.61
+  source: moralis
+  details:
+    tx_hash: '0xfaf3efcca94eb5df076b12174ffcee0382ba43295c69b0c2f535a3949677c76e'
+    value_usd: 830.3439861922931
+- signal_type: whale_movement
+  strength: 14.83
+  source: moralis
+  details:
+    tx_hash: '0x33c22d97e17bcb7bc461438eb3436e912dfa52cab08bcac5530ce006accde8b3'
+    value_usd: 741.3229798684163
+- signal_type: whale_movement
+  strength: 13.68
+  source: moralis
+  details:
+    tx_hash: '0x15373f80eceaa51468263b0cc5c1a09529d8f866c70c344b91454e1efbcbe8e6'
+    value_usd: 683.9997422378431
+- signal_type: whale_movement
+  strength: 13.07
+  source: moralis
+  details:
+    tx_hash: '0xb5a41ca5d665d8f66e82381eb6a8c1cc462e50e346761b8047fee590f72101ec'
+    value_usd: 653.6575477438363
+- signal_type: whale_movement
+  strength: 12.25
+  source: moralis
+  details:
+    tx_hash: '0xc6a9bf6a38740fc771af43ac740d2194e072eb243c3adfe4ca8ac2c86d84010e'
+    value_usd: 612.5904613786468
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 68
+    avg_trade_size_usd: 332.11
+indicators:
+  rsi_14: 45.712627
+  ema_12: 0.999844
+  ema_26: 0.999873
+  vwap: 1.005004
+  bollinger_upper: 1.000674
+  bollinger_lower: 0.999155
+  bollinger_middle: 0.999914
+  macd_histogram: -3.3e-05
+  atr_14: 0.004987
+  onchain_tx_count: 100
+  onchain_unique_wallets: 68
+  onchain_avg_trade_size_usd: 332.11
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 6110.16
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 14
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 90
+  status: validated
+  reasons:
+  - price_divergence strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=63.1
+  - whale_movement strength=29.9
+  - whale_movement strength=26.6
+  - whale_movement strength=21.2
+  - whale_movement strength=19.9
+  - whale_movement strength=18.9
+  - whale_movement strength=16.6
+  - whale_movement strength=14.8
+  - whale_movement strength=13.7
+  - whale_movement strength=13.1
+  - whale_movement strength=12.2
+  - high_onchain_activity strength=100.0
+  - TVL $614K above minimum
+  - Volume $1427K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: mid_cap
+  liquidity_profile: moderate
+  amm_type: uniswap
+  activity_profile: active
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  confidence: 0.9
+  source: deterministic
+llm_risk_flags: []
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: strong
+llm_score: 90
+hypotheses:
+- hypothesis: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

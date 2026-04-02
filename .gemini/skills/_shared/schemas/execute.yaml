@@ -1,0 +1,109 @@
+# Schema: S5-Arb execute 步骤产出
+# 校验对象: .docs/ai-skills/execute/output/{pair_id}/execution_result.yml
+# 模式: strict=False（结果包含链上 tx 数据或模拟数据）
+
+type: object
+properties:
+  pair_id:
+    type: string
+    description: "交易对 ID"
+
+  strategy_id:
+    type: string
+    description: "执行的策略 ID"
+
+  mode:
+    type: string
+    enum: [dry_run, live, simulate]
+    description: "执行模式"
+
+  executed_at:
+    type: string
+    description: "执行时间 ISO-8601"
+
+  trades:
+    type: array
+    description: "交易记录列表"
+    items:
+      type: object
+      properties:
+        trade_id:
+          type: string
+          description: "交易唯一 ID"
+
+        action:
+          type: string
+          enum: [buy, sell, swap]
+          description: "交易方向"
+
+        token_in:
+          type: string
+          description: "输入 token"
+
+        token_out:
+          type: string
+          description: "输出 token"
+
+        amount_in:
+          type: number
+          minimum: 0
+          description: "输入数量"
+
+        amount_out:
+          type: number
+          minimum: 0
+          description: "输出数量"
+
+        price:
+          type: number
+          description: "成交价格"
+
+        gas_used:
+          type: integer
+          minimum: 0
+          description: "Gas 消耗"
+
+        tx_hash:
+          type: string
+          description: "链上交易哈希（dry_run 为 dryrun- 前缀，旧 simulate 为 sim_ 前缀）"
+
+        status:
+          type: string
+          enum: [success, failed, pending, simulated, reverted, error, blocked, delayed]
+          description: "交易状态"
+
+        slippage_bps:
+          type: number
+          description: "实际滑点 (基点)"
+
+      required:
+        - trade_id
+        - action
+        - status
+
+  summary:
+    type: object
+    description: "执行摘要"
+    properties:
+      total_trades:
+        type: integer
+        minimum: 0
+      successful:
+        type: integer
+        minimum: 0
+      failed:
+        type: integer
+        minimum: 0
+      total_gas:
+        type: integer
+        minimum: 0
+      net_pnl_usd:
+        type: number
+        description: "净盈亏 (USD)"
+
+required:
+  - pair_id
+  - strategy_id
+  - mode
+  - trades
+  - summary

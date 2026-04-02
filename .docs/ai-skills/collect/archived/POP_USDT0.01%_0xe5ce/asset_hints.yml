@@ -1,0 +1,18 @@
+pair_id: POP_USDT0.01%_0xe5ce
+pool_address: '0xe5ce5bc4785cd2a246151364f5a190cee3fdb142'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: POP
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 99.79
+tvl_usd: 564178.378
+volume_24h_usd: 2561284.482099
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: shallow
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.95
+llm_verdict: moderate
+llm_score: 72

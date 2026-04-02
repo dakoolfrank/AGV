@@ -1,5 +1,5 @@
 version: 1
-last_updated: '2026-03-21T03:48:12Z'
+last_updated: '2026-04-02T01:25:31Z'
 pools:
   PA_USDT_0x3563:
     pool_address: '0x35631f08f3b21fdd51af1c26ce683c10fa19ea21'
@@ -9,67 +9,11 @@ pools:
     quote_token: USDT
     discovered_date: '2026-03-21'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: strong
     last_scan: '2026-03-21T03:44:52Z'
     scan_count: 1
     dir: PA_USDT_0x3563
-    discovery_method: volume_ranked
-  QUQ_USDT0.01%_0xe1ac:
-    pool_address: '0xe1acb466421ed24dd8bd381d1205bad0ad43ca9c'
-    network: bsc
-    dex: uniswap-bsc
-    base_token: quq
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:44:57Z'
-    scan_count: 1
-    dir: QUQ_USDT0.01%_0xe1ac
-    discovery_method: volume_ranked
-  USDT_WBNB0.01%_0x172f:
-    pool_address: '0x172fcd41e0913e95784454622d1c3724f546f849'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: USDT
-    quote_token: WBNB 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:44:59Z'
-    scan_count: 1
-    dir: USDT_WBNB0.01%_0x172f
-    discovery_method: volume_ranked
-  WMTX_USDT0.01%_0xb656:
-    pool_address: '0xb65617850efd15a7b57af219109ba38d6c77d7a6'
-    network: bsc
-    dex: uniswap-bsc
-    base_token: WMTX
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:45:00Z'
-    scan_count: 1
-    dir: WMTX_USDT0.01%_0xb656
-    discovery_method: volume_ranked
-  USDT_USDC_0x8321:
-    pool_address: '0x8321c1f53959b14ece4b5400e60aeac59e7b6b8bac446f2f0a89b9e84e68a08a'
-    network: bsc
-    dex: uniswap-v4-bsc
-    base_token: USDT
-    quote_token: USDC
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:45:03Z'
-    scan_count: 1
-    dir: USDT_USDC_0x8321
     discovery_method: volume_ranked
   U_USDT_0x7a0e:
     pool_address: '0x7a0e5c79333345e5e36d57be224363ad7dbee8dd'
@@ -79,7 +23,7 @@ pools:
     quote_token: USDT
     discovered_date: '2026-03-21'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: moderate
     last_scan: '2026-03-21T03:45:05Z'
     scan_count: 1
@@ -91,97 +35,13 @@ pools:
     dex: uniswap-v4-bsc
     base_token: FF
     quote_token: USDT
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-23'
     lifecycle_state: pending
     status: pending
     signal_quality: moderate
-    last_scan: '2026-03-21T03:45:07Z'
-    scan_count: 1
+    last_check: '2026-03-23T07:38:00Z'
+    check_count: 1
     dir: FF_USDT_0x1e7e
-    discovery_method: volume_ranked
-  USDT_USDC_0x32a8:
-    pool_address: '0x32a805e65a3219a79707ab3e75443d75160d798de46613fc960d39cd4a96bb22'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: USDT
-    quote_token: USDC
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:45:09Z'
-    scan_count: 1
-    dir: USDT_USDC_0x32a8
-    discovery_method: volume_ranked
-  BSB_USDT0.007%_0x26a8:
-    pool_address: '0x26a8e4591b7a0efcd45a577ad0d54aa64a99efaf2546ad4d5b0454c99eb70eab'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: BSB
-    quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:45:11Z'
-    scan_count: 1
-    dir: BSB_USDT0.007%_0x26a8
-    discovery_method: volume_ranked
-  USDT_USDC_0x628e:
-    pool_address: '0x628ea54a6450645d2bb7b2911c8c6f3d7f3944c2f4703c259a1b85bf5569870b'
-    network: bsc
-    dex: uniswap-v4-bsc
-    base_token: USDT
-    quote_token: USDC
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:45:12Z'
-    scan_count: 1
-    dir: USDT_USDC_0x628e
-    discovery_method: volume_ranked
-  USDT_BTCB0.05%_0x46cf:
-    pool_address: '0x46cf1cf8c69595804ba91dfdd8d6b960c9b0a7c4'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: USDT
-    quote_token: BTCB 0.05%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:45:14Z'
-    scan_count: 1
-    dir: USDT_BTCB0.05%_0x46cf
-    discovery_method: volume_ranked
-  ARTX_USDT0.007%_0x157f:
-    pool_address: '0x157f51edede49476dce22a3442d33d5752fc207541fd36f5904f4bded4d2769c'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: ARTX
-    quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:45:16Z'
-    scan_count: 1
-    dir: ARTX_USDT0.007%_0x157f
-    discovery_method: volume_ranked
-  CRTR_USDT0.01%_0x8f88:
-    pool_address: '0x8f889728c2a879b15936eecc38a61f03fcdc6818'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: CRTR
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:45:18Z'
-    scan_count: 1
-    dir: CRTR_USDT0.01%_0x8f88
     discovery_method: volume_ranked
   GUA_USDT0.007%_0xb89d:
     pool_address: '0xb89dabc63fd0b83c29071bc4a52f1e8f42466810616e4c5c988965eef39a78ed'
@@ -189,69 +49,13 @@ pools:
     dex: pancakeswap-infinity-clmm
     base_token: GUA
     quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-23'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: moderate
-    last_scan: '2026-03-21T03:45:26Z'
-    scan_count: 1
+    last_check: '2026-03-23T06:41:30Z'
+    check_count: 1
     dir: GUA_USDT0.007%_0xb89d
-    discovery_method: volume_ranked
-  KOGE_USDT0.01%_0x81c7:
-    pool_address: '0x81c7294b66955824bc04acb642ae8dc58e6ce507'
-    network: bsc
-    dex: uniswap-bsc
-    base_token: KOGE
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:45:33Z'
-    scan_count: 1
-    dir: KOGE_USDT0.01%_0x81c7
-    discovery_method: volume_ranked
-  KOGE_USDT0.01%_0xcf59:
-    pool_address: '0xcf59b8c8baa2dea520e3d549f97d4e49ade17057'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: KOGE
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:45:37Z'
-    scan_count: 1
-    dir: KOGE_USDT0.01%_0xcf59
-    discovery_method: volume_ranked
-  WKEYDAO2_USDT_0xb720:
-    pool_address: '0xb720ea2a201c03578cca05191e8b4ab859704cfe'
-    network: bsc
-    dex: pancakeswap_v2
-    base_token: wkeyDAO2
-    quote_token: USDT
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:45:41Z'
-    scan_count: 1
-    dir: WKEYDAO2_USDT_0xb720
-    discovery_method: volume_ranked
-  RIVER_USDT0.3%_0x8869:
-    pool_address: '0x886928eb467ef5e69b4ebc2c8af4275b21af41bd'
-    network: bsc
-    dex: uniswap-bsc
-    base_token: RIVER
-    quote_token: USDT 0.3%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:45:44Z'
-    scan_count: 1
-    dir: RIVER_USDT0.3%_0x8869
     discovery_method: volume_ranked
   AIFI_USDT_0x2df4:
     pool_address: '0x2df4112ae096db33273ff8c4c58eb6c5e8461922'
@@ -259,69 +63,13 @@ pools:
     dex: pancakeswap_v2
     base_token: AiFi
     quote_token: USDT
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-23'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: strong
-    last_scan: '2026-03-21T03:45:48Z'
-    scan_count: 1
+    last_check: '2026-03-23T06:42:09Z'
+    check_count: 1
     dir: AIFI_USDT_0x2df4
-    discovery_method: volume_ranked
-  TRADOOR_USDT0.01%_0x924e:
-    pool_address: '0x924e62a3689e7b94f397e61ac796dabfea32e93b'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: TRADOOR
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:45:56Z'
-    scan_count: 1
-    dir: TRADOOR_USDT0.01%_0x924e
-    discovery_method: volume_ranked
-  KOGE_USDT0.001%_0xc012:
-    pool_address: '0xc012e144f83cd4c616704b5391205ad0dc19719ca9f89b739a67a9b1d5316f17'
-    network: bsc
-    dex: uniswap-v4-bsc
-    base_token: KOGE
-    quote_token: USDT 0.001%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:46:00Z'
-    scan_count: 1
-    dir: KOGE_USDT0.001%_0xc012
-    discovery_method: volume_ranked
-  RTX_USDT0.007%_0x9f57:
-    pool_address: '0x9f57ccbb2a7a89120cbdc8dad277d6e82aa9b2c3925e148033963a22e1f57b5e'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: RTX
-    quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:46:04Z'
-    scan_count: 1
-    dir: RTX_USDT0.007%_0x9f57
-    discovery_method: volume_ranked
-  DBT_USDT0.007%_0xba2e:
-    pool_address: '0xba2eab70102e8e1ca982dce825328cadf1cd33ca4e0d1bb4e7408fe9bcdecec4'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: DBT
-    quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:46:08Z'
-    scan_count: 1
-    dir: DBT_USDT0.007%_0xba2e
     discovery_method: volume_ranked
   GWEI_USDT0.007%_0x473e:
     pool_address: '0x473e34fad874524a146022cfd7c9df2af73988adeea0f21629dbb8c301305a17'
@@ -331,81 +79,11 @@ pools:
     quote_token: USDT 0.007%
     discovered_date: '2026-03-21'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: strong
     last_scan: '2026-03-21T03:46:12Z'
     scan_count: 1
     dir: GWEI_USDT0.007%_0x473e
-    discovery_method: volume_ranked
-  KITE_USDT0.007%_0xf99a:
-    pool_address: '0xf99ac6209c0413299383fd836f878372e6398e6d9da52cee18fbccb8d9e810e0'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: KITE
-    quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:46:16Z'
-    scan_count: 1
-    dir: KITE_USDT0.007%_0xf99a
-    discovery_method: volume_ranked
-  ETH_USDT0.01%_0x9f59:
-    pool_address: '0x9f599f3d64a9d99ea21e68127bb6ce99f893da61'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: ETH
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:46:19Z'
-    scan_count: 1
-    dir: ETH_USDT0.01%_0x9f59
-    discovery_method: volume_ranked
-  USDT_WBNB_0x16b9:
-    pool_address: '0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae'
-    network: bsc
-    dex: pancakeswap_v2
-    base_token: USDT
-    quote_token: WBNB
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:46:23Z'
-    scan_count: 1
-    dir: USDT_WBNB_0x16b9
-    discovery_method: volume_ranked
-  BEAT_USDT0.007%_0xb284:
-    pool_address: '0xb2842060d68177ff202e81b3bd8588630fe7ede60e1a19f4d327125f73ae92be'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: Beat
-    quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:46:27Z'
-    scan_count: 1
-    dir: BEAT_USDT0.007%_0xb284
-    discovery_method: volume_ranked
-  JCT_USDT0.007%_0xb428:
-    pool_address: '0xb428f9ab060a8381add435701ecf58af7f75f317e5d76a939fc03918158df44d'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: JCT
-    quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:46:31Z'
-    scan_count: 1
-    dir: JCT_USDT0.007%_0xb428
     discovery_method: volume_ranked
   USDT_WBNB0.05%_0x6fe9:
     pool_address: '0x6fe9e9de56356f7edbfcbb29fab7cd69471a4869'
@@ -413,69 +91,13 @@ pools:
     dex: uniswap-bsc
     base_token: USDT
     quote_token: WBNB 0.05%
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-23'
     lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:46:35Z'
-    scan_count: 1
+    status: terminal_exhausted
+    signal_quality: moderate
+    last_check: '2026-03-23T07:15:25Z'
+    check_count: 1
     dir: USDT_WBNB0.05%_0x6fe9
-    discovery_method: volume_ranked
-  ARK_USDT_0xcaaf:
-    pool_address: '0xcaaf3c41a40103a23eeaa4bba468af3cf5b0e0d8'
-    network: bsc
-    dex: pancakeswap_v2
-    base_token: ARK
-    quote_token: USDT
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:46:43Z'
-    scan_count: 1
-    dir: ARK_USDT_0xcaaf
-    discovery_method: volume_ranked
-  KOGE_USDT_0xed46:
-    pool_address: '0xed461e6026d36fa5c289a288cc450fb7556ad2e2642fcda0d173a284140d96bd'
-    network: bsc
-    dex: uniswap-v4-bsc
-    base_token: KOGE
-    quote_token: USDT
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:46:47Z'
-    scan_count: 1
-    dir: KOGE_USDT_0xed46
-    discovery_method: volume_ranked
-  USD1_USDT_0x8749:
-    pool_address: '0x8749eb67c0de8c788fb736139c2363e0b57e7c29e107b470895df2146acf4b56'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: USD1
-    quote_token: USDT
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:46:51Z'
-    scan_count: 1
-    dir: USD1_USDT_0x8749
-    discovery_method: volume_ranked
-  ARIA_USDT0.01%_0xa5db:
-    pool_address: '0xa5dbeaf16fc031eae92175974f8d0a439be4ad17'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: ARIA
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:46:55Z'
-    scan_count: 1
-    dir: ARIA_USDT0.01%_0xa5db
     discovery_method: volume_ranked
   USDT_USDC_0xefcb:
     pool_address: '0xefcb55270c5fe85fc8eb6a311dc5aa9479839f0d'
@@ -483,55 +105,13 @@ pools:
     dex: squadswap-v3-bsc
     base_token: USDT
     quote_token: USDC
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-23'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: strong
-    last_scan: '2026-03-21T03:46:59Z'
-    scan_count: 1
+    last_check: '2026-03-23T06:41:34Z'
+    check_count: 1
     dir: USDT_USDC_0xefcb
-    discovery_method: volume_ranked
-  KGEN_USDT0.007%_0xb9b4:
-    pool_address: '0xb9b436c3869da550f943d3493e262be84a20e53b22223810eb7aa12acb8b6d34'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: KGEN
-    quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:47:03Z'
-    scan_count: 1
-    dir: KGEN_USDT0.007%_0xb9b4
-    discovery_method: volume_ranked
-  BTR_USDT0.01%_0x787a:
-    pool_address: '0x787abd73593bed588852163402d191c302c7f8b6'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: BTR
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:47:07Z'
-    scan_count: 1
-    dir: BTR_USDT0.01%_0x787a
-    discovery_method: volume_ranked
-  USDT_USDC0.01%_0x92b7:
-    pool_address: '0x92b7807bf19b7dddf89b706143896d05228f3121'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: USDT
-    quote_token: USDC 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:47:11Z'
-    scan_count: 1
-    dir: USDT_USDC0.01%_0x92b7
     discovery_method: volume_ranked
   ETH_USDT0.05%_0xbe14:
     pool_address: '0xbe141893e4c6ad9272e8c04bab7e6a10604501a5'
@@ -539,12 +119,12 @@ pools:
     dex: pancakeswap-v3-bsc
     base_token: ETH
     quote_token: USDT 0.05%
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-30'
     lifecycle_state: pending
     status: pending
     signal_quality: strong
-    last_scan: '2026-03-21T03:47:15Z'
-    scan_count: 1
+    last_check: '2026-03-30T06:55:24Z'
+    check_count: 1
     dir: ETH_USDT0.05%_0xbe14
     discovery_method: volume_ranked
   OPN_USDT0.007%_0x3ce9:
@@ -555,7 +135,7 @@ pools:
     quote_token: USDT 0.007%
     discovered_date: '2026-03-21'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: moderate
     last_scan: '2026-03-21T03:47:18Z'
     scan_count: 1
@@ -567,12 +147,12 @@ pools:
     dex: pancakeswap-v3-bsc
     base_token: ASTER
     quote_token: USDT 0.05%
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-23'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: strong
-    last_scan: '2026-03-21T03:47:22Z'
-    scan_count: 1
+    last_check: '2026-03-23T05:25:11Z'
+    check_count: 1
     dir: ASTER_USDT0.05%_0x7e58
     discovery_method: volume_ranked
   USDT_USDC_0x1e40:
@@ -581,12 +161,12 @@ pools:
     dex: nomiswap_stable
     base_token: USDT
     quote_token: USDC
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-23'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: strong
-    last_scan: '2026-03-21T03:47:26Z'
-    scan_count: 1
+    last_check: '2026-03-23T05:25:03Z'
+    check_count: 1
     dir: USDT_USDC_0x1e40
     discovery_method: volume_ranked
   BTW_USDT0.007%_0x3122:
@@ -595,97 +175,27 @@ pools:
     dex: pancakeswap-infinity-clmm
     base_token: BTW
     quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-23'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: moderate
-    last_scan: '2026-03-21T03:47:30Z'
-    scan_count: 1
+    last_check: '2026-03-23T00:32:26Z'
+    check_count: 1
     dir: BTW_USDT0.007%_0x3122
-    discovery_method: volume_ranked
-  Q_USDT0.01%_0x8baf:
-    pool_address: '0x8bafe0bdd3eb9ae0539f5b32e771c1a72a189b7f'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: Q
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:47:34Z'
-    scan_count: 1
-    dir: Q_USDT0.01%_0x8baf
-    discovery_method: volume_ranked
-  YSDAO_USDT_0x24df:
-    pool_address: '0x24df7bdbc67b0eb03074ea9d8cbba0445fb35937'
-    network: bsc
-    dex: pancakeswap_v2
-    base_token: YSDAO
-    quote_token: USDT
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:47:38Z'
-    scan_count: 1
-    dir: YSDAO_USDT_0x24df
-    discovery_method: volume_ranked
-  FF_USDT0.01%_0x9f8f:
-    pool_address: '0x9f8f4615ff5143aee365fa34f34196fb85be7650'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: FF
-    quote_token: USDT 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:47:42Z'
-    scan_count: 1
-    dir: FF_USDT0.01%_0x9f8f
-    discovery_method: volume_ranked
-  CMC20_USDT0.05%_0xb4bd:
-    pool_address: '0xb4bd7ec1df39806df478d0ce540580a118671eea'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: CMC20
-    quote_token: USDT 0.05%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:47:46Z'
-    scan_count: 1
-    dir: CMC20_USDT0.05%_0xb4bd
-    discovery_method: volume_ranked
+    discovery_method: trending
   TRIA_USDT0.007%_0x01e1:
     pool_address: '0x01e1dd31be98b874ee414e5cacfc2b15a624b8968f55f849539d423f36d09b75'
     network: bsc
     dex: pancakeswap-infinity-clmm
     base_token: TRIA
     quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
+    discovered_date: '2026-03-23'
     lifecycle_state: pending
     status: pending
     signal_quality: moderate
-    last_scan: '2026-03-21T03:47:50Z'
-    scan_count: 1
+    last_check: '2026-03-23T07:32:23Z'
+    check_count: 1
     dir: TRIA_USDT0.007%_0x01e1
-    discovery_method: volume_ranked
-  USDT_BTCB0.01%_0x247f:
-    pool_address: '0x247f51881d1e3ae0f759afb801413a6c948ef442'
-    network: bsc
-    dex: pancakeswap-v3-bsc
-    base_token: USDT
-    quote_token: BTCB 0.01%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:47:54Z'
-    scan_count: 1
-    dir: USDT_BTCB0.01%_0x247f
     discovery_method: volume_ranked
   RIVER_USDT0.25%_0xb249:
     pool_address: '0xb249b6e4ac29301f680963a45fac7d09779ef980'
@@ -695,39 +205,11 @@ pools:
     quote_token: USDT 0.25%
     discovered_date: '2026-03-21'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: strong
     last_scan: '2026-03-21T03:47:58Z'
     scan_count: 1
     dir: RIVER_USDT0.25%_0xb249
-    discovery_method: volume_ranked
-  TFI_USDT_0xeab5:
-    pool_address: '0xeab58c74b222c0657ee16fba130fc117f9caca81'
-    network: bsc
-    dex: pancakeswap_v2
-    base_token: TFI
-    quote_token: USDT
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: strong
-    last_scan: '2026-03-21T03:48:02Z'
-    scan_count: 1
-    dir: TFI_USDT_0xeab5
-    discovery_method: volume_ranked
-  LAB_USDT0.007%_0xd943:
-    pool_address: '0xd9434e63fe78a6e77dafe2abc504121bf8500822f6d3a59eccba577cf0a070f2'
-    network: bsc
-    dex: pancakeswap-infinity-clmm
-    base_token: LAB
-    quote_token: USDT 0.007%
-    discovered_date: '2026-03-21'
-    lifecycle_state: pending
-    status: pending
-    signal_quality: moderate
-    last_scan: '2026-03-21T03:48:06Z'
-    scan_count: 1
-    dir: LAB_USDT0.007%_0xd943
     discovery_method: volume_ranked
   USDT_WBNB0.01%_0x47a9:
     pool_address: '0x47a90a2d92a8367a91efa1906bfc8c1e05bf10c4'
@@ -737,9 +219,933 @@ pools:
     quote_token: WBNB 0.01%
     discovered_date: '2026-03-21'
     lifecycle_state: pending
-    status: pending
+    status: terminal_exhausted
     signal_quality: strong
     last_scan: '2026-03-21T03:48:09Z'
     scan_count: 1
     dir: USDT_WBNB0.01%_0x47a9
     discovery_method: volume_ranked
+  OPENCLAW_USDT_0xe1f7:
+    pool_address: '0xe1f7850399d513305c886ea779857832dae07ae9'
+    network: bsc
+    dex: pancakeswap_v2
+    base_token: OpenClaw
+    quote_token: USDT
+    discovered_date: '2026-03-23'
+    lifecycle_state: pending
+    status: terminal_exhausted
+    signal_quality: strong
+    last_check: '2026-03-23T01:53:29Z'
+    check_count: 1
+    dir: OPENCLAW_USDT_0xe1f7
+    discovery_method: volume_ranked
+  POWER_USDT0.007%_0x00b4:
+    pool_address: '0x00b4bbb4eb17154b28642f2d42f45e2f5d226f3b7d89216e8bfb8f55a0884538'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: POWER
+    quote_token: USDT 0.007%
+    discovered_date: '2026-03-23'
+    lifecycle_state: pending
+    status: terminal_exhausted
+    signal_quality: moderate
+    last_check: '2026-03-23T06:42:33Z'
+    check_count: 1
+    dir: POWER_USDT0.007%_0x00b4
+    discovery_method: volume_ranked
+  DUSD_USDT0.01%_0xb67e:
+    pool_address: '0xb67e5eaf770a384ab28029d08b9bc5ebe32beb0f'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: DUSD
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-23'
+    lifecycle_state: pending
+    status: terminal_exhausted
+    signal_quality: strong
+    last_check: '2026-03-23T06:42:40Z'
+    check_count: 1
+    dir: DUSD_USDT0.01%_0xb67e
+    discovery_method: volume_ranked
+  SIREN_USDT0.18%_0x561e:
+    pool_address: '0x561ed5157f4e94a5097d799274629e5dba380bae73ae20bf857b2ca509fa132a'
+    network: bsc
+    dex: uniswap-v4-bsc
+    base_token: SIREN
+    quote_token: USDT 0.18%
+    discovered_date: '2026-03-23'
+    lifecycle_state: pending
+    status: terminal_exhausted
+    signal_quality: moderate
+    last_check: '2026-03-23T06:42:52Z'
+    check_count: 1
+    dir: SIREN_USDT0.18%_0x561e
+    discovery_method: volume_ranked
+  BR_USDT0.25%_0xa6ed:
+    pool_address: '0xa6ed9f4a42d0f47b088178bbdf3582a9a654db99'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: BR
+    quote_token: USDT 0.25%
+    discovered_date: '2026-03-23'
+    lifecycle_state: pending
+    status: terminal_exhausted
+    signal_quality: strong
+    last_check: '2026-03-23T06:42:48Z'
+    check_count: 1
+    dir: BR_USDT0.25%_0xa6ed
+    discovery_method: volume_ranked
+  USD1_USDT_0x502f:
+    pool_address: '0x502f1ac84586b80033c988f28838722e233720445b3eb029e512b5d0d79eabf5'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: USD1
+    quote_token: USDT
+    discovered_date: '2026-03-23'
+    lifecycle_state: pending
+    status: terminal_exhausted
+    signal_quality: strong
+    last_check: '2026-03-23T06:42:25Z'
+    check_count: 1
+    dir: USD1_USDT_0x502f
+    discovery_method: volume_ranked
+  WBNB_USDT_0xA95D:
+    pool_address: '0xA95D87b443e1929465931611b7951B92C1746dAe'
+    network: bsc
+    dex: squadswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:25:04Z'
+    check_count: 1
+    dir: WBNB_USDT_0xA95D
+    discovery_method: dexscreener
+  WBNB_USDT_0xC0E2:
+    pool_address: '0xC0E2792774b2F602F74f6056ED95AB958d253823'
+    network: bsc
+    dex: sushiswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:25:03Z'
+    check_count: 1
+    dir: WBNB_USDT_0xC0E2
+    discovery_method: dexscreener
+  WBNB_USDT_0x8840:
+    pool_address: '0x8840C6252e2e86e545deFb6da98B2a0E26d8C1BA'
+    network: bsc
+    dex: biswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:25:12Z'
+    check_count: 1
+    dir: WBNB_USDT_0x8840
+    discovery_method: dexscreener
+  WBNB_USDT_0x20bC:
+    pool_address: '0x20bCC3b8a0091dDac2d0BC30F68E6CBb97de59Cd'
+    network: bsc
+    dex: pancakeswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:25:28Z'
+    check_count: 1
+    dir: WBNB_USDT_0x20bC
+    discovery_method: dexscreener
+  WBNB_USDT_0x3daf:
+    pool_address: '0x3dafe6213fbdE2f74e7D5Be443d5d2AA258d74C7'
+    network: bsc
+    dex: '0x97bCD9BB482144291D77ee53bFa99317A82066E8'
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-03-22'
+    lifecycle_state: pending
+    status: terminal_exhausted
+    signal_quality: strong
+    last_check: '2026-03-22T23:38:42Z'
+    check_count: 1
+    dir: WBNB_USDT_0x3daf
+    discovery_method: dexscreener
+  OPENCLAW_USDT_0xddb2:
+    pool_address: '0xddb2f6114f5ecae24ab2bfd65d14402c47600375'
+    network: bsc
+    dex: pancakeswap_v2
+    base_token: OpenClaw
+    quote_token: USDT
+    discovered_date: '2026-03-23'
+    lifecycle_state: pending
+    status: terminal_exhausted
+    signal_quality: strong
+    last_check: '2026-03-23T06:39:58Z'
+    check_count: 1
+    dir: OPENCLAW_USDT_0xddb2
+    discovery_method: volume_ranked
+  SIREN_USDT_0x6350:
+    pool_address: '0x63506a61c433de9975340e60f7caf03645319b09'
+    network: bsc
+    dex: pancakeswap_v2
+    base_token: SIREN
+    quote_token: USDT
+    discovered_date: '2026-03-23'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: moderate
+    last_check: '2026-03-23T07:31:22Z'
+    check_count: 1
+    dir: SIREN_USDT_0x6350
+    discovery_method: volume_ranked
+  USDT_WBNB0.01%_0x172f:
+    pool_address: '0x172fcd41e0913e95784454622d1c3724f546f849'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: USDT
+    quote_token: WBNB 0.01%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:11:07Z'
+    check_count: 1
+    dir: USDT_WBNB0.01%_0x172f
+    discovery_method: volume_ranked
+  KOGE_USDT0.001%_0xc012:
+    pool_address: '0xc012e144f83cd4c616704b5391205ad0dc19719ca9f89b739a67a9b1d5316f17'
+    network: bsc
+    dex: uniswap-v4-bsc
+    base_token: KOGE
+    quote_token: USDT 0.001%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:39:49Z'
+    check_count: 1
+    dir: KOGE_USDT0.001%_0xc012
+    discovery_method: volume_ranked
+  PRL_USDT0.007%_0xb0ba:
+    pool_address: '0xb0bab780d44ca5245a4b6da9ea8fd79e04e7a92850cfc2b52a33c4d82463726b'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: PRL
+    quote_token: USDT 0.007%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:11:55Z'
+    check_count: 1
+    dir: PRL_USDT0.007%_0xb0ba
+    discovery_method: volume_ranked
+  USDT_USDC_0x8321:
+    pool_address: '0x8321c1f53959b14ece4b5400e60aeac59e7b6b8bac446f2f0a89b9e84e68a08a'
+    network: bsc
+    dex: uniswap-v4-bsc
+    base_token: USDT
+    quote_token: USDC
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:14:28Z'
+    check_count: 1
+    dir: USDT_USDC_0x8321
+    discovery_method: volume_ranked
+  BSB_USDT0.007%_0x26a8:
+    pool_address: '0x26a8e4591b7a0efcd45a577ad0d54aa64a99efaf2546ad4d5b0454c99eb70eab'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: BSB
+    quote_token: USDT 0.007%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:40:54Z'
+    check_count: 1
+    dir: BSB_USDT0.007%_0x26a8
+    discovery_method: volume_ranked
+  USDT_USDC_0x628e:
+    pool_address: '0x628ea54a6450645d2bb7b2911c8c6f3d7f3944c2f4703c259a1b85bf5569870b'
+    network: bsc
+    dex: uniswap-v4-bsc
+    base_token: USDT
+    quote_token: USDC
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:14:02Z'
+    check_count: 1
+    dir: USDT_USDC_0x628e
+    discovery_method: volume_ranked
+  USDT_USDC_0x32a8:
+    pool_address: '0x32a805e65a3219a79707ab3e75443d75160d798de46613fc960d39cd4a96bb22'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: USDT
+    quote_token: USDC
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:41:45Z'
+    check_count: 1
+    dir: USDT_USDC_0x32a8
+    discovery_method: volume_ranked
+  ARIA_USDT0.01%_0xa5db:
+    pool_address: '0xa5dbeaf16fc031eae92175974f8d0a439be4ad17'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: ARIA
+    quote_token: USDT 0.01%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:11:28Z'
+    check_count: 1
+    dir: ARIA_USDT0.01%_0xa5db
+    discovery_method: volume_ranked
+  USDT_BTCB0.05%_0x46cf:
+    pool_address: '0x46cf1cf8c69595804ba91dfdd8d6b960c9b0a7c4'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: USDT
+    quote_token: BTCB 0.05%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:13:28Z'
+    check_count: 1
+    dir: USDT_BTCB0.05%_0x46cf
+    discovery_method: volume_ranked
+  ARTX_USDT0.007%_0x157f:
+    pool_address: '0x157f51edede49476dce22a3442d33d5752fc207541fd36f5904f4bded4d2769c'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: ARTX
+    quote_token: USDT 0.007%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:43:00Z'
+    check_count: 1
+    dir: ARTX_USDT0.007%_0x157f
+    discovery_method: volume_ranked
+  WMTX_USDT0.01%_0xb656:
+    pool_address: '0xb65617850efd15a7b57af219109ba38d6c77d7a6'
+    network: bsc
+    dex: uniswap-bsc
+    base_token: WMTX
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: moderate
+    last_check: '2026-03-30T06:43:28Z'
+    check_count: 1
+    dir: WMTX_USDT0.01%_0xb656
+    discovery_method: volume_ranked
+  TRADOOR_USDT0.01%_0x924e:
+    pool_address: '0x924e62a3689e7b94f397e61ac796dabfea32e93b'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: TRADOOR
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:44:07Z'
+    check_count: 1
+    dir: TRADOOR_USDT0.01%_0x924e
+    discovery_method: volume_ranked
+  ON_USDT0.01%_0x4620:
+    pool_address: '0x4620f5c127a6055fbebb1f71327d60ff079c9060'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: 'ON'
+    quote_token: USDT 0.01%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:17:38Z'
+    check_count: 1
+    dir: ON_USDT0.01%_0x4620
+    discovery_method: trending
+  ZAMA_USDT0.007%_0xb399:
+    pool_address: '0xb39978347f071b74076be26d1445e2eccafe3557d2cdbc17e6c74d3ea883a4e0'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: ZAMA
+    quote_token: USDT 0.007%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: moderate
+    last_check: '2026-04-02T01:13:05Z'
+    check_count: 1
+    dir: ZAMA_USDT0.007%_0xb399
+    discovery_method: volume_ranked
+  KOGE_USDT0.01%_0xcf59:
+    pool_address: '0xcf59b8c8baa2dea520e3d549f97d4e49ade17057'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: KOGE
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:45:24Z'
+    check_count: 1
+    dir: KOGE_USDT0.01%_0xcf59
+    discovery_method: volume_ranked
+  KOGE_USDT0.01%_0x81c7:
+    pool_address: '0x81c7294b66955824bc04acb642ae8dc58e6ce507'
+    network: bsc
+    dex: uniswap-bsc
+    base_token: KOGE
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:46:07Z'
+    check_count: 1
+    dir: KOGE_USDT0.01%_0x81c7
+    discovery_method: volume_ranked
+  WKEYDAO2_USDT_0xb720:
+    pool_address: '0xb720ea2a201c03578cca05191e8b4ab859704cfe'
+    network: bsc
+    dex: pancakeswap_v2
+    base_token: wkeyDAO2
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:15:17Z'
+    check_count: 1
+    dir: WKEYDAO2_USDT_0xb720
+    discovery_method: trending
+  SENT_USDT0.007%_0xdd21:
+    pool_address: '0xdd21c2d2fbd1487605799fbaa5854411afccd3faa3460ffa7fc9dacff94cad49'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: SENT
+    quote_token: USDT 0.007%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:47:08Z'
+    check_count: 1
+    dir: SENT_USDT0.007%_0xdd21
+    discovery_method: volume_ranked
+  USDT_USDC_0x2589:
+    pool_address: '0x258907d03806aad208f23147bf05d4e5f69eaba5c6ded94f02d98445add62c31'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: USDT
+    quote_token: USDC
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:47:30Z'
+    check_count: 1
+    dir: USDT_USDC_0x2589
+    discovery_method: volume_ranked
+  CRTR_USDT0.01%_0x8f88:
+    pool_address: '0x8f889728c2a879b15936eecc38a61f03fcdc6818'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: CRTR
+    quote_token: USDT 0.01%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:17:12Z'
+    check_count: 1
+    dir: CRTR_USDT0.01%_0x8f88
+    discovery_method: trending
+  DBT_USDT0.007%_0xba2e:
+    pool_address: '0xba2eab70102e8e1ca982dce825328cadf1cd33ca4e0d1bb4e7408fe9bcdecec4'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: DBT
+    quote_token: USDT 0.007%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: moderate
+    last_check: '2026-03-30T06:48:22Z'
+    check_count: 1
+    dir: DBT_USDT0.007%_0xba2e
+    discovery_method: volume_ranked
+  TA_USDT0.01%_0xfa74:
+    pool_address: '0xfa7421f1ed6ad1548316a847e8437af7219a8f18'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: TA
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:48:41Z'
+    check_count: 1
+    dir: TA_USDT0.01%_0xfa74
+    discovery_method: volume_ranked
+  USD1_USDT_0x8749:
+    pool_address: '0x8749eb67c0de8c788fb736139c2363e0b57e7c29e107b470895df2146acf4b56'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: USD1
+    quote_token: USDT
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: moderate
+    last_check: '2026-03-30T06:49:03Z'
+    check_count: 1
+    dir: USD1_USDT_0x8749
+    discovery_method: volume_ranked
+  ARK_USDT_0xcaaf:
+    pool_address: '0xcaaf3c41a40103a23eeaa4bba468af3cf5b0e0d8'
+    network: bsc
+    dex: pancakeswap_v2
+    base_token: ARK
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:16:06Z'
+    check_count: 1
+    dir: ARK_USDT_0xcaaf
+    discovery_method: trending
+  ETH_USDT0.01%_0x9f59:
+    pool_address: '0x9f599f3d64a9d99ea21e68127bb6ce99f893da61'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: ETH
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:50:34Z'
+    check_count: 1
+    dir: ETH_USDT0.01%_0x9f59
+    discovery_method: volume_ranked
+  KGEN_USDT0.007%_0xb9b4:
+    pool_address: '0xb9b436c3869da550f943d3493e262be84a20e53b22223810eb7aa12acb8b6d34'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: KGEN
+    quote_token: USDT 0.007%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:50:58Z'
+    check_count: 1
+    dir: KGEN_USDT0.007%_0xb9b4
+    discovery_method: volume_ranked
+  KITE_USDT0.007%_0xf99a:
+    pool_address: '0xf99ac6209c0413299383fd836f878372e6398e6d9da52cee18fbccb8d9e810e0'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: KITE
+    quote_token: USDT 0.007%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:51:26Z'
+    check_count: 1
+    dir: KITE_USDT0.007%_0xf99a
+    discovery_method: volume_ranked
+  C_USDT0.01%_0x3030:
+    pool_address: '0x30305b22fc2830b42908993e668b31b7234a9737'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: C
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:51:48Z'
+    check_count: 1
+    dir: C_USDT0.01%_0x3030
+    discovery_method: volume_ranked
+  RIVER_USDT0.007%_0x35c7:
+    pool_address: '0x35c765765132d9ba94063a26d5eab98e9f005354b614d0e3f58ba1e7dc08a679'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: RIVER
+    quote_token: USDT 0.007%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:52:13Z'
+    check_count: 1
+    dir: RIVER_USDT0.007%_0x35c7
+    discovery_method: volume_ranked
+  USDT_WBNB_0x16b9:
+    pool_address: '0x16b9a82891338f9ba80e2d6970fdda79d1eb0dae'
+    network: bsc
+    dex: pancakeswap_v2
+    base_token: USDT
+    quote_token: WBNB
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:52:35Z'
+    check_count: 1
+    dir: USDT_WBNB_0x16b9
+    discovery_method: volume_ranked
+  USDT_BTCB0.01%_0x247f:
+    pool_address: '0x247f51881d1e3ae0f759afb801413a6c948ef442'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: USDT
+    quote_token: BTCB 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:52:57Z'
+    check_count: 1
+    dir: USDT_BTCB0.01%_0x247f
+    discovery_method: volume_ranked
+  TFI_USDT_0xeab5:
+    pool_address: '0xeab58c74b222c0657ee16fba130fc117f9caca81'
+    network: bsc
+    dex: pancakeswap_v2
+    base_token: TFI
+    quote_token: USDT
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:53:28Z'
+    check_count: 1
+    dir: TFI_USDT_0xeab5
+    discovery_method: volume_ranked
+  FF_USDT0.01%_0x9f8f:
+    pool_address: '0x9f8f4615ff5143aee365fa34f34196fb85be7650'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: FF
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:53:48Z'
+    check_count: 1
+    dir: FF_USDT0.01%_0x9f8f
+    discovery_method: volume_ranked
+  USDT_USDC0.01%_0x92b7:
+    pool_address: '0x92b7807bf19b7dddf89b706143896d05228f3121'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: USDT
+    quote_token: USDC 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:54:10Z'
+    check_count: 1
+    dir: USDT_USDC0.01%_0x92b7
+    discovery_method: volume_ranked
+  CMC20_USDT0.05%_0xb4bd:
+    pool_address: '0xb4bd7ec1df39806df478d0ce540580a118671eea'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: CMC20
+    quote_token: USDT 0.05%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:54:34Z'
+    check_count: 1
+    dir: CMC20_USDT0.05%_0xb4bd
+    discovery_method: volume_ranked
+  Q_USDT0.01%_0x8baf:
+    pool_address: '0x8bafe0bdd3eb9ae0539f5b32e771c1a72a189b7f'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: Q
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:54:57Z'
+    check_count: 1
+    dir: Q_USDT0.01%_0x8baf
+    discovery_method: volume_ranked
+  POP_USDT0.01%_0xe5ce:
+    pool_address: '0xe5ce5bc4785cd2a246151364f5a190cee3fdb142'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: POP
+    quote_token: USDT 0.01%
+    discovered_date: '2026-03-30'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-03-30T06:55:49Z'
+    check_count: 1
+    dir: POP_USDT0.01%_0xe5ce
+    discovery_method: volume_ranked
+  WBNB_USDT_0x172f:
+    pool_address: '0x172fcD41E0913e95784454622d1c3724f546f849'
+    network: bsc
+    dex: pancakeswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:24:48Z'
+    check_count: 1
+    dir: WBNB_USDT_0x172f
+    discovery_method: dexscreener
+  WBNB_USDT_0x16b9:
+    pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+    network: bsc
+    dex: pancakeswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:24:50Z'
+    check_count: 1
+    dir: WBNB_USDT_0x16b9
+    discovery_method: dexscreener
+  WBNB_USDT_0x7A3e:
+    pool_address: '0x7A3eb6E7FFbF9f8B65afD40c0Ab0ac2BAB0c5d8e'
+    network: bsc
+    dex: '0x8fdedcAb6Ff497f75a65B085Ce0C5d497F23fbd7'
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:24:54Z'
+    check_count: 1
+    dir: WBNB_USDT_0x7A3e
+    discovery_method: dexscreener
+  WBNB_USDT_0x3669:
+    pool_address: '0x36696169C63e42cd08ce11f5deeBbCeBae652050'
+    network: bsc
+    dex: pancakeswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:24:59Z'
+    check_count: 1
+    dir: WBNB_USDT_0x3669
+    discovery_method: dexscreener
+  WBNB_USDT_0xD405:
+    pool_address: '0xD405b976Ac01023c9064024880999fC450A8668b'
+    network: bsc
+    dex: thena
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:25:06Z'
+    check_count: 1
+    dir: WBNB_USDT_0xD405
+    discovery_method: dexscreener
+  WBNB_USDT_0x7862:
+    pool_address: '0x7862D9B4bE2156B15d54F41ee4EDE2d5b0b455e4'
+    network: bsc
+    dex: uniswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:25:17Z'
+    check_count: 1
+    dir: WBNB_USDT_0x7862
+    discovery_method: dexscreener
+  WBNB_USDT_0x4c2B:
+    pool_address: '0x4c2B1F4de009B58498B8b66e10A231A1B233277E'
+    network: bsc
+    dex: unchain-x
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:25:20Z'
+    check_count: 1
+    dir: WBNB_USDT_0x4c2B
+    discovery_method: dexscreener
+  WBNB_USDT_0x6fe9:
+    pool_address: '0x6fe9E9de56356F7eDBfcBB29FAB7cd69471a4869'
+    network: bsc
+    dex: uniswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:24:57Z'
+    check_count: 1
+    dir: WBNB_USDT_0x6fe9
+    discovery_method: dexscreener
+  WBNB_USDT_0x47a9:
+    pool_address: '0x47a90A2d92A8367A91EfA1906bFc8c1E05bf10c4'
+    network: bsc
+    dex: uniswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:24:52Z'
+    check_count: 1
+    dir: WBNB_USDT_0x47a9
+    discovery_method: dexscreener
+  WBNB_USDT_0x1401:
+    pool_address: '0x1401ff943D08a7E098328C1d3a9d388923B115D2'
+    network: bsc
+    dex: pancakeswap
+    base_token: WBNB
+    quote_token: USDT
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:25:14Z'
+    check_count: 1
+    dir: WBNB_USDT_0x1401
+    discovery_method: dexscreener
+  QUQ_USDT0.01%_0xe1ac:
+    pool_address: '0xe1acb466421ed24dd8bd381d1205bad0ad43ca9c'
+    network: bsc
+    dex: uniswap-bsc
+    base_token: quq
+    quote_token: USDT 0.01%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:10:44Z'
+    check_count: 1
+    dir: QUQ_USDT0.01%_0xe1ac
+    discovery_method: volume_ranked
+  MSVP_USDT1%_0xb47a:
+    pool_address: '0xb47afe51524ba76d9e2108558e04220d51b2c179'
+    network: bsc
+    dex: pancakeswap-v3-bsc
+    base_token: MSVP
+    quote_token: USDT 1%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:14:54Z'
+    check_count: 1
+    dir: MSVP_USDT1%_0xb47a
+    discovery_method: trending
+  SIREN_USDT0.209%_0x12a6:
+    pool_address: '0x12a67c47baf61c0d8d43870a1115ac683f1e5907c2653f08c69bd5ef794a23aa'
+    network: bsc
+    dex: uniswap-v4-bsc
+    base_token: SIREN
+    quote_token: USDT 0.209%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:15:43Z'
+    check_count: 1
+    dir: SIREN_USDT0.209%_0x12a6
+    discovery_method: trending
+  BASED_USDT0.007%_0xe85b:
+    pool_address: '0xe85bc115847d7106b6335d067c6d2cf9b837ce50626a1df3f01d0012681a5db4'
+    network: bsc
+    dex: pancakeswap-infinity-clmm
+    base_token: BASED
+    quote_token: USDT 0.007%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: moderate
+    last_check: '2026-04-02T01:16:30Z'
+    check_count: 1
+    dir: BASED_USDT0.007%_0xe85b
+    discovery_method: trending
+  RIVER_USDT0.3%_0x8869:
+    pool_address: '0x886928eb467ef5e69b4ebc2c8af4275b21af41bd'
+    network: bsc
+    dex: uniswap-bsc
+    base_token: RIVER
+    quote_token: USDT 0.3%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:16:49Z'
+    check_count: 1
+    dir: RIVER_USDT0.3%_0x8869
+    discovery_method: trending
+  SIREN_USDT0.209%_0xaf58:
+    pool_address: '0xaf58b1d938bb1f2d2255607d9489fd0baade39b93bfcf2bb8e2c7d6a2b5673f3'
+    network: bsc
+    dex: uniswap-v4-bsc
+    base_token: SIREN
+    quote_token: USDT 0.209%
+    discovered_date: '2026-04-02'
+    lifecycle_state: pending
+    status: pending
+    signal_quality: strong
+    last_check: '2026-04-02T01:18:06Z'
+    check_count: 1
+    dir: SIREN_USDT0.209%_0xaf58
+    discovery_method: trending

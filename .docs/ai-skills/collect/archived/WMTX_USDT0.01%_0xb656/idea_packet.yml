@@ -1,0 +1,162 @@
+pair_id: WMTX_USDT0.01%_0xb656
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: uniswap-bsc
+  pool_address: '0xb65617850efd15a7b57af219109ba38d6c77d7a6'
+  base_token:
+    symbol: WMTX
+    address: '0xdbb5cf12408a3ac17d668037ce289f9ea75439d7'
+  quote_token:
+    symbol: USDT 0.01%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:64491334ba99d0a4
+  primary_excerpt: 'Pool WMTX_USDT0.01%_0xb656 on bsc/uniswap-bsc. TVL: $28,709, 24h
+    Volume: $20,014,169. lp_imbalance(str=93.1); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0688003046694712
+  tvl_usd: 28709.1002
+  volume_24h_usd: 20014169.3807683
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 0.0700545042507096
+    low: 0.0672083562695211
+    close: 0.0676461728485574
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 93.09
+  source: gecko
+  details:
+    reserve_ratio: 0.06912526664776744
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 29
+    avg_trade_size_usd: 17.71
+indicators:
+  rsi_14: 44.059723
+  ema_12: 0.067898
+  ema_26: 0.068043
+  vwap: 0.069644
+  bollinger_upper: 0.068488
+  bollinger_lower: 0.06752
+  bollinger_middle: 0.068004
+  macd_histogram: -2.7e-05
+  atr_14: 0.000476
+  onchain_tx_count: 100
+  onchain_unique_wallets: 29
+  onchain_avg_trade_size_usd: 17.71
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0691
+  depth_2pct_usd: 285.66
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 2
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: moderate
+  score: 67
+  status: validated
+  reasons:
+  - lp_imbalance strength=93.1
+  - high_onchain_activity strength=100.0
+  - TVL $29K above minimum
+  - Volume $20014K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: medium
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: micro_cap
+  amm_type: concentrated_v3
+  liquidity_profile: critical
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  confidence: 0.88
+  reasoning: Reserve ratio of 0.069 and high imbalance signal strength (93.09) indicate
+    significant price dislocation from equilibrium.
+  trigger_signals:
+  - lp_imbalance
+- strategy_type: volume_momentum
+  confidence: 0.65
+  reasoning: Extreme 24h volume ($20M) relative to TVL ($28k) suggests high fee-earning
+    potential or intense speculative activity.
+  trigger_signals:
+  - high_onchain_activity
+- strategy_type: mean_reversion
+  confidence: 0.42
+  reasoning: Price is currently testing the lower Bollinger Band with a neutral RSI,
+    suggesting a potential bounce in a high-turnover environment.
+  trigger_signals:
+  - bollinger_lower
+  - rsi_14
+llm_risk_flags:
+- extreme_volume_to_tvl_ratio
+- critically_low_depth_2pct
+- potential_wash_trading_pattern
+- severe_reserve_imbalance
+llm_flash_raw:
+  pool_classification:
+    asset_class: micro_cap
+    amm_type: concentrated_v3
+    liquidity_profile: critical
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.88
+    reasoning: Reserve ratio of 0.069 and high imbalance signal strength (93.09) indicate
+      significant price dislocation from equilibrium.
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: volume_momentum
+    confidence: 0.65
+    reasoning: Extreme 24h volume ($20M) relative to TVL ($28k) suggests high fee-earning
+      potential or intense speculative activity.
+    trigger_signals:
+    - high_onchain_activity
+  - strategy_type: mean_reversion
+    confidence: 0.42
+    reasoning: Price is currently testing the lower Bollinger Band with a neutral
+      RSI, suggesting a potential bounce in a high-turnover environment.
+    trigger_signals:
+    - bollinger_lower
+    - rsi_14
+  risk_flags:
+  - extreme_volume_to_tvl_ratio
+  - critically_low_depth_2pct
+  - potential_wash_trading_pattern
+  - severe_reserve_imbalance
+  flash_score: 48
+  flash_verdict: moderate
+llm_pro_final: {}
+llm_verdict: moderate
+llm_score: 48
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.4
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.4
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

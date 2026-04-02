@@ -1,0 +1,18 @@
+pair_id: GUA_USDT0.007%_0xb89d
+pool_address: '0xb89dabc63fd0b83c29071bc4a52f1e8f42466810616e4c5c988965eef39a78ed'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: GUA
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 2312821.4968
+volume_24h_usd: 7485468.91591956
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: opportunistic
+strategy_confidence: 0.58
+llm_verdict: moderate
+llm_score: 58

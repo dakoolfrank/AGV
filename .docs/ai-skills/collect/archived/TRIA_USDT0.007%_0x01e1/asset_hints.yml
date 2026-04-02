@@ -1,0 +1,18 @@
+pair_id: TRIA_USDT0.007%_0x01e1
+pool_address: '0x01e1dd31be98b874ee414e5cacfc2b15a624b8968f55f849539d423f36d09b75'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: TRIA
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 1621673.7958
+volume_24h_usd: 5998109.56233116
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: opportunistic
+strategy_confidence: 0.58
+llm_verdict: moderate
+llm_score: 58

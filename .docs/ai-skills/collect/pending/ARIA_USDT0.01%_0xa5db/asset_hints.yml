@@ -1,0 +1,21 @@
+pair_id: ARIA_USDT0.01%_0xa5db
+pool_address: '0xa5dbeaf16fc031eae92175974f8d0a439be4ad17'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: ARIA
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: price_divergence
+signal_strength: 3.19
+tvl_usd: 4512794.5026
+volume_24h_usd: 43767915.173365
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0xa5dbeaf16fc031eae92175974f8d0a439be4ad17'
+source_url: https://www.geckoterminal.com/bsc/pools/0xa5dbeaf16fc031eae92175974f8d0a439be4ad17
+source_type: dex_pool
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.92
+llm_verdict: moderate
+llm_score: 75

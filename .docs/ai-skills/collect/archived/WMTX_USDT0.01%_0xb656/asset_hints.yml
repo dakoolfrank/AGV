@@ -1,0 +1,18 @@
+pair_id: WMTX_USDT0.01%_0xb656
+pool_address: '0xb65617850efd15a7b57af219109ba38d6c77d7a6'
+network: bsc
+dex: uniswap-bsc
+base_token: WMTX
+quote_token: USDT 0.01%
+signal_quality: moderate
+top_signal: lp_imbalance
+signal_strength: 93.09
+tvl_usd: 28709.1002
+volume_24h_usd: 20014169.3807683
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: micro_cap
+liquidity_profile: critical
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.88
+llm_verdict: moderate
+llm_score: 48

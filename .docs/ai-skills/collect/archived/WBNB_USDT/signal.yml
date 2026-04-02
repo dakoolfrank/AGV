@@ -1,0 +1,24 @@
+collected_at: '2026-03-31T11:37:52Z'
+pair: WBNB_USDT
+signal_count: 2
+signals:
+- divergence_pct: 0.8
+  pair: WBNB_USDT
+  pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+  price: 580.0
+  reference_price: 584.64
+  signal_id: WBNB_USDT_price_divergence_1774957072
+  signal_type: price_divergence
+  source: mock
+  strength: 0.65
+  timestamp: '2026-03-31T11:37:52Z'
+- avg_volume_7d_usd: 7200000.0
+  pair: WBNB_USDT
+  pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+  signal_id: WBNB_USDT_volume_spike_1774957072
+  signal_type: volume_spike
+  source: mock
+  spike_ratio: 1.67
+  strength: 0.45
+  timestamp: '2026-03-31T11:37:52Z'
+  volume_24h_usd: 12000000.0

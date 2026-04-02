@@ -1,0 +1,238 @@
+pair_id: WBNB_USDT_0xC0E2
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: sushiswap
+  pool_address: '0xC0E2792774b2F602F74f6056ED95AB958d253823'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:e331fe5ba03567bd
+  primary_excerpt: 'Pool WBNB_USDT_0xC0E2 on bsc/sushiswap. TVL: $22,475, 24h Volume:
+    $6,001. whale_movement(str=31.4); whale_movement(str=19.7); whale_movement(str=19.6);
+    whale_movement(str=15.8); whale_movement(str=12.6)'
+market_data:
+  price_usd: 615.96
+  tvl_usd: 22475.03
+  volume_24h_usd: 6000.56
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: -0.03
+    price_change_h1: -0.17
+    price_change_h6: 1.03
+    price_change_h24: 0.26
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 31.38
+  source: moralis
+  details:
+    tx_hash: '0x70e4925896122f1a8e05accb170844f697b49873a00532334b008cc4b3661bf1'
+    value_usd: 1568.9918391613746
+- signal_type: whale_movement
+  strength: 19.66
+  source: moralis
+  details:
+    tx_hash: '0x05389c6bbeb6e5388a0c817727317636c29bef588978e7589f96fde00dfc50e4'
+    value_usd: 982.944111399549
+- signal_type: whale_movement
+  strength: 19.64
+  source: moralis
+  details:
+    tx_hash: '0xfd8108bbbb7bd5f61dac63150469d5498b4b4ab7cd383bb13dd4e9435339a19b'
+    value_usd: 982.069239074416
+- signal_type: whale_movement
+  strength: 15.83
+  source: moralis
+  details:
+    tx_hash: '0x87ec3b5ea1650321c8d47e4b3324879be4060608f350e4bae301039e16c3c4d9'
+    value_usd: 791.4295409528858
+- signal_type: whale_movement
+  strength: 12.57
+  source: moralis
+  details:
+    tx_hash: '0x34676ce4aa5abe0f186054ef51b499ebf5ead31c5013f84d89304c3297c14ceb'
+    value_usd: 628.2537673241786
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 37
+    avg_trade_size_usd: 213.78
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 37
+  onchain_avg_trade_size_usd: 213.78
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 223.63
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 6
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 81
+  status: validated
+  reasons:
+  - whale_movement strength=31.4
+  - whale_movement strength=19.7
+  - whale_movement strength=19.6
+  - whale_movement strength=15.8
+  - whale_movement strength=12.6
+  - high_onchain_activity strength=100.0
+  - TVL $22K above minimum
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.85
+    max_position_usd: 250
+    max_slippage_bps: 30
+    hold_blocks_max: 1
+llm_classification:
+  asset_class: blue_chip
+  amm_type: constant_product_v2
+  liquidity_profile: shallow
+  activity_profile: normal
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.9
+  viable: true
+  reasoning: The extreme disparity between TVL ($22k) and 2% depth ($223) ensures
+    that even small retail trades trigger significant price deviations from the PancakeSwap
+    V3 reference price.
+  parameter_hints:
+    entry_threshold_pct: 0.85
+    max_position_usd: 250
+    max_slippage_bps: 30
+    hold_blocks_max: 1
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.8
+  viable: true
+  reasoning: Whale movements identified ($600-$1500) are 3x-7x the 2% depth, creating
+    massive immediate imbalances suitable for back-running.
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 400
+    max_slippage_bps: 50
+    hold_blocks_max: 2
+- strategy_type: mean_reversion
+  pro_confidence: 0.4
+  viable: false
+  reasoning: In high-frequency blue-chip pairs, arbitrageurs resolve deviations faster
+    than mean reversion signals can be profitably executed.
+  parameter_hints:
+    entry_threshold_pct: 2.0
+    max_position_usd: 100
+    max_slippage_bps: 100
+    hold_blocks_max: 10
+llm_risk_flags:
+- extremely_low_depth_ratio
+- high_slippage_risk
+- fragmented_liquidity
+llm_flash_raw:
+  pool_classification:
+    asset_class: blue_chip
+    amm_type: constant_product_v2
+    liquidity_profile: shallow
+    activity_profile: normal
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: WBNB/USDT is highly liquid on PancakeSwap; this shallow Sushiswap pool
+      ($223 depth) will frequently de-sync during market volatility.
+    trigger_signals:
+    - whale_movement
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.75
+    reasoning: Small whale trades (~$1.5k) represent over 5% of TVL, causing significant
+      reserve displacement and price impact.
+    trigger_signals:
+    - whale_movement
+  - strategy_type: mean_reversion
+    confidence: 0.6
+    reasoning: Price deviations in blue-chip pairs on secondary DEXs are typically
+      corrected by arbitrageurs back to the global index.
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - extremely_low_depth_ratio
+  - high_slippage_risk
+  - fragmented_liquidity
+  flash_score: 68
+  flash_verdict: moderate
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.9
+    viable: true
+    reasoning: The extreme disparity between TVL ($22k) and 2% depth ($223) ensures
+      that even small retail trades trigger significant price deviations from the
+      PancakeSwap V3 reference price.
+    parameter_hints:
+      entry_threshold_pct: 0.85
+      max_position_usd: 250
+      max_slippage_bps: 30
+      hold_blocks_max: 1
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.8
+    viable: true
+    reasoning: Whale movements identified ($600-$1500) are 3x-7x the 2% depth, creating
+      massive immediate imbalances suitable for back-running.
+    parameter_hints:
+      entry_threshold_pct: 1.5
+      max_position_usd: 400
+      max_slippage_bps: 50
+      hold_blocks_max: 2
+  - strategy_type: mean_reversion
+    pro_confidence: 0.4
+    viable: false
+    reasoning: In high-frequency blue-chip pairs, arbitrageurs resolve deviations
+      faster than mean reversion signals can be profitably executed.
+    parameter_hints:
+      entry_threshold_pct: 2.0
+      max_position_usd: 100
+      max_slippage_bps: 100
+      hold_blocks_max: 10
+  pro_score: 72
+  pro_verdict: moderate
+  override_reason: Flash score is slightly conservative; the high transaction count
+    (100) combined with extremely thin depth makes this a high-frequency, low-capacity
+    arbitrage goldmine. Verdict remains moderate due to low scalability per trade.
+llm_verdict: moderate
+llm_score: 72
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

@@ -1,0 +1,18 @@
+pair_id: KGEN_USDT0.007%_0xb9b4
+pool_address: '0xb9b436c3869da550f943d3493e262be84a20e53b22223810eb7aa12acb8b6d34'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: KGEN
+quote_token: USDT 0.007%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 42.34
+tvl_usd: 724663.0817
+volume_24h_usd: 5045606.85216603
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: volume_momentum
+strategy_confidence: 0.88
+llm_verdict: moderate
+llm_score: 72

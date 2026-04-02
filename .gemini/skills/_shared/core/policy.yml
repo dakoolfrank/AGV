@@ -25,7 +25,7 @@ defaults:
   rag_score_threshold: 0.5
 
   # 路径
-  runs_root: "docs/ai-runs/agv-mm-scan"
+  runs_root: "docs/ai-runs/agv-mm-collect"
 
 # ── 步骤级覆盖 ────────────────────────────────────────
 
@@ -36,7 +36,7 @@ steps:
     heartbeat_normal_interval_s: 30
     heartbeat_degraded_interval_s: 300
     heartbeat_emergency_interval_s: 5
-    runs_root: "docs/ai-runs/agv-mm-scan"
+    runs_root: "docs/ai-runs/agv-mm-collect"
 
   detect:
     evidence_level: required
@@ -59,13 +59,13 @@ steps:
     use_private_rpc_above_usd: 20.0
 
   # === Arb-Campaign (因子套利) ===
-  scan:
+  collect:
     evidence_level: required
     rag_auto_index: true
     gecko_rate_limit: 30        # req/min
     moralis_rate_limit: 25
     min_tvl_usd: 10000
-    runs_root: "docs/ai-runs/agv-mm-scan"
+    runs_root: "docs/ai-runs/agv-mm-collect"
 
   curate:
     evidence_level: recommended
@@ -111,7 +111,7 @@ outcome_reason_codes:
   detect:  [no_anomaly, signal_conflict]
   decide:  [budget_exceeded, preauth_rejected, emergency_cooldown]
   execute: [slippage_exceed, mev_detected, tvl_breaker, gas_exceed, tx_reverted, approve_failed]
-  scan:    [no_opportunity, source_timeout, data_fusion_fail]
+  collect: [no_opportunity, source_timeout, data_fusion_fail]
   curate:  [factor_insufficient, confidence_low]
   dataset: [liquidity_insufficient, pool_depth_low]
   fix:     [strategy_exhausted, max_retries]

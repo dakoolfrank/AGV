@@ -1,0 +1,227 @@
+pair_id: USDT_USDC0.01%_0x92b7
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0x92b7807bf19b7dddf89b706143896d05228f3121'
+  base_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  quote_token:
+    symbol: USDC 0.01%
+    address: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d'
+  raw_snapshot_hash: sha256:e23040ad95779386
+  primary_excerpt: 'Pool USDT_USDC0.01%_0x92b7 on bsc/pancakeswap-v3-bsc. TVL: $46,018,605,
+    24h Volume: $3,111,610. whale_movement(str=100.0); whale_movement(str=40.9); whale_movement(str=15.7);
+    whale_movement(str=11.0); whale_movement(str=10.9)'
+market_data:
+  price_usd: 0.9993
+  tvl_usd: 46018604.51
+  volume_24h_usd: 3111610.09
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: 0.0
+    price_change_h1: 0.0
+    price_change_h6: 0.0
+    price_change_h24: -0.01
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xec7401b3ff0896b4987e186b9f2ced10c3c43e77915e05eae7cecf3eb4733ade'
+    value_usd: 8186.2656
+- signal_type: whale_movement
+  strength: 40.92
+  source: moralis
+  details:
+    tx_hash: '0x000932c670edf21ef96bf179b802d320df80fa57da982f91f236c1ddf903086e'
+    value_usd: 2046.157194480541
+- signal_type: whale_movement
+  strength: 15.72
+  source: moralis
+  details:
+    tx_hash: '0x33d0fc053dce30befa4f765a8b306f9abf4236396cc0411f91267b2ade23d83a'
+    value_usd: 786.0562966435747
+- signal_type: whale_movement
+  strength: 10.96
+  source: moralis
+  details:
+    tx_hash: '0x23a81542ab9a995798c07fc93931b84d2d7dcb433e57be1e0bdc37b3cbb6cafb'
+    value_usd: 547.8956709220944
+- signal_type: whale_movement
+  strength: 10.95
+  source: moralis
+  details:
+    tx_hash: '0x298aa32b21eca5bcd091e302a466689ee0e5e3394061c0c4778c38ad58f33f00'
+    value_usd: 547.6689101288081
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 121
+    avg_trade_size_usd: 382.17
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 121
+  onchain_avg_trade_size_usd: 382.17
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 457885.11
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 6
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 93
+  status: validated
+  reasons:
+  - whale_movement strength=100.0
+  - whale_movement strength=40.9
+  - whale_movement strength=15.7
+  - whale_movement strength=11.0
+  - whale_movement strength=10.9
+  - high_onchain_activity strength=100.0
+  - TVL $46.0M sufficient
+  - Volume $3112K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.0005
+    max_position_usd: 1000000
+    max_slippage_bps: 1
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: stablecoin_pair
+  amm_type: concentrated_v3
+  liquidity_profile: deep
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.9
+  viable: true
+  reasoning: USDT/USDC 在 BSC 上的 0.01% 池子流动性极深，价格偏离 0.07% 已覆盖手续费成本，适合与 Binance CEX
+    或 Pancake V2 进行大额对冲套利。
+  parameter_hints:
+    entry_threshold_pct: 0.0005
+    max_position_usd: 1000000
+    max_slippage_bps: 1
+    hold_blocks_max: 2
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.85
+  viable: true
+  reasoning: V3 集中流动性在 1.00 附近极其密集，微小波动即可触发大量成交，适合通过主动提供流动性捕获再平衡过程中的价差。
+  parameter_hints:
+    entry_threshold_pct: 0.0003
+    max_position_usd: 500000
+    max_slippage_bps: 0.5
+    hold_blocks_max: 10
+- strategy_type: jit_liquidity
+  pro_confidence: 0.7
+  viable: true
+  reasoning: 针对 0.01% 低费率池，虽然单笔利润薄，但高频小额交易密集，可通过 JIT 策略在大型交易前注入流动性捕获手续费。
+  parameter_hints:
+    entry_threshold_pct: 0.001
+    max_position_usd: 2000000
+    max_slippage_bps: 0.1
+    hold_blocks_max: 1
+llm_risk_flags:
+- price_deviation_detected
+- fee_tier_discrepancy_0.01_vs_25bps
+llm_flash_raw:
+  pool_classification:
+    asset_class: stablecoin_pair
+    amm_type: concentrated_v3
+    liquidity_profile: deep
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: 当前价格$0.9993与1.00标准锚定存在偏离，且TVL巨大，适合与其它DEX或中心化交易所进行大额对冲套利。
+    trigger_signals:
+    - whale_movement
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.75
+    reasoning: V3集中流动性池在价格偏离时会产生极高的交易阻力，利用微小价差进行流动性重平衡套利空间稳定。
+    trigger_signals:
+    - price_change_h24
+  - strategy_type: sandwich_defense
+    confidence: 0.6
+    reasoning: 25 bps的费率对于稳定币对偏高，结合频繁的小额鲸鱼交易，存在MEV防护或JIT流动性介入机会。
+    trigger_signals:
+    - whale_movement
+  risk_flags:
+  - price_deviation_detected
+  - fee_tier_discrepancy_0.01_vs_25bps
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.9
+    viable: true
+    reasoning: USDT/USDC 在 BSC 上的 0.01% 池子流动性极深，价格偏离 0.07% 已覆盖手续费成本，适合与 Binance CEX
+      或 Pancake V2 进行大额对冲套利。
+    parameter_hints:
+      entry_threshold_pct: 0.0005
+      max_position_usd: 1000000
+      max_slippage_bps: 1
+      hold_blocks_max: 2
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.85
+    viable: true
+    reasoning: V3 集中流动性在 1.00 附近极其密集，微小波动即可触发大量成交，适合通过主动提供流动性捕获再平衡过程中的价差。
+    parameter_hints:
+      entry_threshold_pct: 0.0003
+      max_position_usd: 500000
+      max_slippage_bps: 0.5
+      hold_blocks_max: 10
+  - strategy_type: jit_liquidity
+    pro_confidence: 0.7
+    viable: true
+    reasoning: 针对 0.01% 低费率池，虽然单笔利润薄，但高频小额交易密集，可通过 JIT 策略在大型交易前注入流动性捕获手续费。
+    parameter_hints:
+      entry_threshold_pct: 0.001
+      max_position_usd: 2000000
+      max_slippage_bps: 0.1
+      hold_blocks_max: 1
+  pro_score: 92
+  pro_verdict: strong
+  override_reason: Flash 初判基本准确，但其推理中提到的 25bps 费率与池子实际 0.01% 费率不符，属于模型幻觉。修正为基于 0.01%
+    极低费率的套利逻辑。虽然信号显示有 Whale Movement，但实际金额（$8k）对 $46M 的池子影响微乎其微，策略应侧重于高频微利而非单笔大额冲击。
+llm_verdict: strong
+llm_score: 92
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

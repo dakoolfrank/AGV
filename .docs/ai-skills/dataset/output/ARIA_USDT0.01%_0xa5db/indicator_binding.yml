@@ -1,0 +1,164 @@
+domain: defi
+generated_at: '2026-04-02T05:09:05Z'
+indicator_bindings:
+- skeleton_id: aria_usdt0.01%_0xa5db_arb_cross_pool_01
+  category: defi_price
+  selected_indicators:
+  - token_price_usd
+  - pair_price_ratio
+  - oracle_price
+  - oracle_deviation
+  - twap_5min
+  - vwap
+  param_hints:
+    token_price_usd:
+      update_frequency: per_block
+    pair_price_ratio:
+      base_pool: '0xa5db'
+      quote_pool: target_arb_pool
+    oracle_price:
+      source: chainlink
+      heartbeat: 1h
+    oracle_deviation:
+      max_allowed_deviation_bps: 100
+    twap_5min:
+      window_seconds: 300
+    vwap:
+      window_seconds: 300
+      min_volume_threshold_usd: 5000
+  confidence: 0.95
+  reasoning: 针对跨池套利（cross_pool_arbitrage），核心需求是识别价差并确保其真实性与可执行性。token_price_usd 和
+    pair_price_ratio 用于实时计算两个池子间的绝对价差与比例，是触发逻辑的基础。oracle_price 与 oracle_deviation
+    作为安全校验，防止在预言机价格大幅偏离时进行错误套利。twap_5min 用于过滤单笔大额交易产生的瞬时价格噪声，确保价差具有持续性。vwap 结合了成交量权重，能更准确地评估
+    1.5 万美元闪电贷在当前深度下的实际执行价格，降低滑点风险。
+  pro_reviewed: false
+- skeleton_id: aria_usdt0.01%_0xa5db_arb_cross_pool_01
+  category: defi_liquidity
+  selected_indicators:
+  - tvl_usd
+  - depth_bid_usd
+  - depth_ask_usd
+  - price_impact_usd
+  - reserve_ratio
+  - bid_ask_spread
+  param_hints:
+    tvl_usd:
+      min_threshold: 4000000
+      observation_window: 1h
+    depth_bid_usd:
+      depth_range_pct: 2.0
+      min_liquidity_usd: 40000
+    depth_ask_usd:
+      depth_range_pct: 2.0
+      min_liquidity_usd: 40000
+    price_impact_usd:
+      trade_size_usd: 15000
+      max_impact_bps: 15
+    reserve_ratio:
+      deviation_threshold: 0.1
+      check_frequency: real-time
+    bid_ask_spread:
+      max_allowed_bps: 10
+  confidence: 0.95
+  reasoning: 针对1.5万美元的闪电贷跨池套利，首要任务是验证执行环境。tvl_usd 确保池子具备 4.5M 的承载力；depth_bid/ask_usd
+    验证 2% 深度是否足以覆盖交易额以防止剧烈滑点；price_impact_usd 直接模拟 1.5 万美元规模下的冲击成本，确保其低于 20bps 的止盈空间；reserve_ratio
+    用于监控池子平衡状态，防止因单边流动性枯竭导致的交易失败；bid_ask_spread 则确保入场摩擦成本不会侵蚀套利利润。
+  pro_reviewed: false
+- skeleton_id: aria_usdt0.01%_0xa5db_arb_cross_pool_01
+  category: defi_onchain
+  selected_indicators:
+  - gas_price_gwei
+  - gas_price_percentile
+  - mev_activity_score
+  - frontrun_risk
+  - volume_spike_ratio
+  - tx_frequency
+  - large_tx_threshold_usd
+  param_hints:
+    gas_price_gwei:
+      max_threshold: 30
+      check_interval: 10s
+    gas_price_percentile:
+      window: 1h
+      max_percentile: 80
+    mev_activity_score:
+      threshold: 0.6
+      window: 5m
+    frontrun_risk:
+      threshold: 0.5
+      sensitivity: high
+    volume_spike_ratio:
+      window: 1h
+      threshold: 2.5
+    tx_frequency:
+      window: 5m
+      min_frequency: 1
+    large_tx_threshold_usd:
+      value: 10000
+  confidence: 0.8
+  reasoning: 针对跨池套利策略，核心挑战在于执行成本（Gas）和竞争风险（MEV）。选择 gas_price_gwei 和 gas_price_percentile
+    是为了确保 50bps 的价差不会被 Gas 费吞噬，并避开网络拥堵期。mev_activity_score 和 frontrun_risk 用于评估被抢跑的风险，确保
+    1.5 万美元的闪电贷操作安全。volume_spike_ratio 和 tx_frequency 用于监测当前市场活跃度，判断价格偏离是否由异常大单引起或是否正处于剧烈波动中。large_tx_threshold_usd
+    设置为 10k，以监控与本策略规模（15k）相当的潜在竞争对手动向。
+  pro_reviewed: false
+- skeleton_id: aria_usdt0.01%_0xa5db_mom_whale_follow_01
+  category: defi_onchain
+  selected_indicators:
+  - whale_accumulation
+  - whale_transfer_volume
+  - tx_frequency
+  - volume_spike_ratio
+  - buy_sell_ratio
+  - large_swap_volume
+  param_hints:
+    whale_accumulation:
+      window: 1h
+      threshold_strength: 40.0
+    whale_transfer_volume:
+      window: 1h
+      min_usd: 2000
+    tx_frequency:
+      window: 1h
+      min_count: 100
+    volume_spike_ratio:
+      lookback_window: 4h
+      spike_threshold: 2.0
+    buy_sell_ratio:
+      window: 1h
+      min_ratio: 1.5
+    large_swap_volume:
+      window: 1h
+      min_swap_usd: 2000
+  confidence: 0.95
+  reasoning: 选择的指标直接对应策略的触发条件。whale_accumulation 和 whale_transfer_volume 用于量化巨鲸动向强度；tx_frequency
+    验证链上活跃度是否达标；volume_spike_ratio 和 buy_sell_ratio 用于确认小时级别动量的方向和爆发力，确保跟随的是真实的买入趋势而非随机波动；large_swap_volume
+    则细化了交易层面的大额买入行为。
+  pro_reviewed: false
+- skeleton_id: aria_usdt0.01%_0xa5db_mom_whale_follow_01
+  category: defi_price
+  selected_indicators:
+  - token_price_usd
+  - ema_12
+  - ema_26
+  - vwap
+  - vwap_deviation
+  - atr_14
+  - oracle_deviation
+  param_hints:
+    token_price_usd: {}
+    ema_12:
+      window: 12
+    ema_26:
+      window: 26
+    vwap:
+      window: 1h
+    vwap_deviation:
+      threshold: 0.015
+    atr_14:
+      window: 14
+    oracle_deviation:
+      max_allowed: 0.005
+  confidence: 0.8
+  reasoning: 该策略核心是跟随巨鲸动量。EMA 12/26 用于确认小时级别的趋势方向；VWAP 及其偏离度（vwap_deviation）用于判断当前价格是否偏离巨鲸平均成本过远，防止在动量末端追高；ATR
+    14 对应策略理由中的波动率监测，用于动态校验 80bps 止损的合理性；Oracle Deviation 用于确保 DEX 价格真实性，排除巨鲸活动引起的瞬时操纵或极端滑点风险。
+  pro_reviewed: false

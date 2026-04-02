@@ -1,0 +1,73 @@
+# Schema: S5-Arb dataset 步骤产出
+# 校验对象: .docs/ai-skills/dataset/output/{pair_id}/indicator_binding.yml
+# 模式: strict=False（模拟模式使用确定性指标，live 模式由 LLM 绑定）
+
+type: object
+properties:
+  pair_id:
+    type: string
+    description: "交易对 ID"
+
+  skeleton_id:
+    type: string
+    description: "关联的策略骨架 ID"
+
+  strategy_type:
+    type: string
+    description: "策略类型"
+
+  slot_categories:
+    type: array
+    description: "L1 推荐的指标类别"
+    items:
+      type: string
+    minItems: 1
+
+  bindings:
+    type: array
+    description: "L2 指标绑定列表"
+    minItems: 1
+    items:
+      type: object
+      properties:
+        indicator_name:
+          type: string
+          description: "指标名称，如 price_ema_12"
+
+        category:
+          type: string
+          description: "所属类别，如 price_feed"
+
+        source:
+          type: string
+          description: "数据来源"
+
+        delay_seconds:
+          type: integer
+          minimum: 0
+          description: "数据延迟 (秒)"
+
+        weight:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: "指标权重"
+
+      required:
+        - indicator_name
+        - category
+
+  bound_at:
+    type: string
+    description: "绑定时间 ISO-8601"
+
+  mode:
+    type: string
+    enum: [simulate, live]
+    description: "绑定模式"
+
+required:
+  - pair_id
+  - skeleton_id
+  - strategy_type
+  - bindings

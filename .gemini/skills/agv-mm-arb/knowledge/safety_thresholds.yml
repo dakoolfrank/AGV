@@ -7,7 +7,7 @@ layer1_slippage:
   pre_check: true                # 每笔交易前必检
 
 layer2_mev:
-  mempool_scan: true
+  mempool_inspect: true
   sandwich_detection: true
   private_rpc_threshold_usd: 20.0   # > $20 走私有 RPC
   tx_split_threshold_usd: 30.0      # > $30 拆分交易

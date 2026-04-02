@@ -1,0 +1,18 @@
+pair_id: CRTR_USDT0.01%_0x8f88
+pool_address: '0x8f889728c2a879b15936eecc38a61f03fcdc6818'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: CRTR
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 17.41
+tvl_usd: 1578199.33
+volume_24h_usd: 8645026.3
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.88
+llm_verdict: moderate
+llm_score: 75

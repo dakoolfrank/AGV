@@ -1,0 +1,245 @@
+pair_id: USDT_BTCB0.05%_0x46cf
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0x46cf1cf8c69595804ba91dfdd8d6b960c9b0a7c4'
+  base_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  quote_token:
+    symbol: BTCB 0.05%
+    address: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c'
+  raw_snapshot_hash: sha256:e3b428261b97d9b5
+  primary_excerpt: 'Pool USDT_BTCB0.05%_0x46cf on bsc/pancakeswap-v3-bsc. TVL: $18,096,904,
+    24h Volume: $28,835,417. lp_imbalance(str=100.0); whale_movement(str=18.5); whale_movement(str=18.3);
+    whale_movement(str=11.5); whale_movement(str=11.3)'
+market_data:
+  price_usd: 0.999014747432346
+  tvl_usd: 18096904.093
+  volume_24h_usd: 28835417.2700225
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 1.00602530267515
+    low: 0.990695985686389
+    close: 1.00248777526556
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 100.0
+  source: gecko
+  details:
+    reserve_ratio: 1.4634042382035025e-05
+- signal_type: whale_movement
+  strength: 18.52
+  source: moralis
+  details:
+    tx_hash: '0xf0d791ba796391b09afe11d648d56ab5713a72dcd1dae1b4a173b9f16052c722'
+    value_usd: 925.9575629495343
+- signal_type: whale_movement
+  strength: 18.3
+  source: moralis
+  details:
+    tx_hash: '0xf42d20b875ebc49e2cfba9ed12c97cf5b8bfdb40b5bf420483990b5032381ebf'
+    value_usd: 915.0043444730023
+- signal_type: whale_movement
+  strength: 11.51
+  source: moralis
+  details:
+    tx_hash: '0xacebb10191d317c8a05adc9dd3b2f4fe48966ce6f8bd92e4d44b196cf260212e'
+    value_usd: 575.3989625910336
+- signal_type: whale_movement
+  strength: 11.34
+  source: moralis
+  details:
+    tx_hash: '0x5c23d21b7bb8393b7bf7c1c9f96d3f7745d86f4e653802a448d0f5ac7613e666'
+    value_usd: 567.1844453278452
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 110
+    avg_trade_size_usd: 100.55
+indicators:
+  rsi_14: 55.146702
+  ema_12: 0.999286
+  ema_26: 0.998798
+  vwap: 0.999015
+  bollinger_upper: 1.00415
+  bollinger_lower: 0.993663
+  bollinger_middle: 0.998907
+  macd_histogram: 5.9e-05
+  atr_14: 0.00592
+  onchain_tx_count: 100
+  onchain_unique_wallets: 110
+  onchain_avg_trade_size_usd: 100.55
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0
+  depth_2pct_usd: 180064.2
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 6
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 96
+  status: validated
+  reasons:
+  - lp_imbalance strength=100.0
+  - whale_movement strength=18.5
+  - whale_movement strength=18.3
+  - whale_movement strength=11.5
+  - whale_movement strength=11.3
+  - high_onchain_activity strength=100.0
+  - TVL $18.1M sufficient
+  - Volume $28835K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 50000
+    max_slippage_bps: 20
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: blue_chip
+  amm_type: concentrated_v3
+  liquidity_profile: extreme_imbalance
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.85
+  viable: true
+  reasoning: 高换手率证实了套利流的存在，但价格数据（~1.0）与 BTCB 实际价值严重脱钩，需强制引入外部 Oracle 校验。
+  parameter_hints:
+    entry_threshold_pct: 0.1
+    max_position_usd: 100000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.95
+  viable: true
+  reasoning: 储备金比例极度失衡（1.46e-05），该池处于单边流动性枯竭状态，是典型的流动性修复套利机会。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 50000
+    max_slippage_bps: 20
+    hold_blocks_max: 2
+- strategy_type: mean_reversion
+  pro_confidence: 0.1
+  viable: false
+  reasoning: 在储备金极度失衡且价格数据疑似异常（BTCB 报价 1.0）的情况下，均值回归具有极高的爆仓风险。
+  parameter_hints:
+    entry_threshold_pct: 0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+llm_risk_flags:
+- reserve_ratio_extreme
+- price_data_anomaly_detected
+- high_volume_to_tvl_ratio
+llm_flash_raw:
+  pool_classification:
+    asset_class: blue_chip
+    amm_type: concentrated_v3
+    liquidity_profile: deep
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.92
+    reasoning: 24h交易量显著超过TVL（1.59x 换手率），表明该池是BSC链上主要的套利路径节点。
+    trigger_signals:
+    - high_onchain_activity
+    - volume_momentum
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.85
+    reasoning: 检测到100%强度的lp_imbalance信号，储备比例失衡为套利者提供了修正价差的机会。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: mean_reversion
+    confidence: 0.7
+    reasoning: 价格在0.99-1.006区间窄幅震荡，RSI处于中性区间，适合在布林带边界进行网格或均值回归交易。
+    trigger_signals:
+    - bollinger_lower
+    - rsi_14
+  risk_flags:
+  - reserve_ratio_extreme
+  - price_data_anomaly_detected
+  - high_volume_to_tvl_ratio
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: false
+  revised_classification:
+    asset_class: blue_chip
+    amm_type: concentrated_v3
+    liquidity_profile: extreme_imbalance
+    activity_profile: high_frequency
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.85
+    viable: true
+    reasoning: 高换手率证实了套利流的存在，但价格数据（~1.0）与 BTCB 实际价值严重脱钩，需强制引入外部 Oracle 校验。
+    parameter_hints:
+      entry_threshold_pct: 0.1
+      max_position_usd: 100000
+      max_slippage_bps: 5
+      hold_blocks_max: 1
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.95
+    viable: true
+    reasoning: 储备金比例极度失衡（1.46e-05），该池处于单边流动性枯竭状态，是典型的流动性修复套利机会。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 50000
+      max_slippage_bps: 20
+      hold_blocks_max: 2
+  - strategy_type: mean_reversion
+    pro_confidence: 0.1
+    viable: false
+    reasoning: 在储备金极度失衡且价格数据疑似异常（BTCB 报价 1.0）的情况下，均值回归具有极高的爆仓风险。
+    parameter_hints:
+      entry_threshold_pct: 0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  pro_score: 58
+  pro_verdict: moderate
+  override_reason: Flash 模型未识别出 BTCB/USDT 价格报 1.0 的严重数据异常（BTC 实际价格应为 60k+），且忽略了储备金比例接近
+    0 的极端风险，需下调评分并切换至纯套利逻辑。
+llm_verdict: moderate
+llm_score: 58
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

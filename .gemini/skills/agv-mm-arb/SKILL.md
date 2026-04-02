@@ -73,7 +73,7 @@
 失败级别：
 - A: 参数漂移（调整阈值/sizing，不换策略）
 - B: 因子耗尽（切换因子组合，回退到 curate）
-- C: 结构变化（暂停 + 全面诊断，回退到 scan）
+- C: 结构变化（暂停 + 全面诊断，回退到 collect）
 
 返回 JSON：
 {{
@@ -100,7 +100,7 @@
 诊断失败原因并建议修复方案。
 ```
 
-```prompt:scan_flash_classify_system
+```prompt:collect_flash_classify_system
 你是一名 DeFi 流动性池分析专家。你的任务是对 BSC 链上发现的流动性池进行快速分类和策略适配性评估。
 
 你必须返回 JSON 格式：
@@ -132,7 +132,7 @@
 - 若信号不足以判断任何策略 → flash_verdict = "reject"
 ```
 
-```prompt:scan_flash_classify_user
+```prompt:collect_flash_classify_user
 ## 池基本信息
 - pair_id: {pair_id}
 - DEX: {dex}
@@ -158,7 +158,7 @@
 请对此池进行分类和策略适配性评估。
 ```
 
-```prompt:scan_pro_arbitrate_system
+```prompt:collect_pro_arbitrate_system
 你是一名量化做市高级审核专家。你将收到 Flash 模型对一个 BSC 流动性池的初步分类结果，你的任务是仲裁其结论的准确性。
 
 你必须返回 JSON 格式：
@@ -193,7 +193,7 @@
 - 当数据严重不足（如 price=0, ohlcv 为空）时，降低 pro_score 至少 20 分
 ```
 
-```prompt:scan_pro_arbitrate_user
+```prompt:collect_pro_arbitrate_user
 ## 池基本信息
 - pair_id: {pair_id}
 - DEX: {dex}

@@ -1,0 +1,89 @@
+pair_id: LAB_USDT0.007%_0xd943
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0xd9434e63fe78a6e77dafe2abc504121bf8500822f6d3a59eccba577cf0a070f2'
+  base_token:
+    symbol: LAB
+    address: '0x7ec43cf65f1663f820427c62a5780b8f2e25593a'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:dbd8c177e8a5a2b6
+  primary_excerpt: 'Pool LAB_USDT0.007%_0xd943 on bsc/pancakeswap-infinity-clmm. TVL:
+    $1,587,202, 24h Volume: $4,699,187. high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.211884706682877
+  tvl_usd: 1587202.4666
+  volume_24h_usd: 4699187.37322128
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: 0.058
+    price_change_h1: -0.734
+    price_change_h6: -1.507
+    price_change_h24: -1.787
+    bar_count: 0
+signals:
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 24
+    avg_trade_size_usd: 100.58
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 24
+  onchain_avg_trade_size_usd: 100.58
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.2109
+  depth_2pct_usd: 15792.66
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 1
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: moderate
+  score: 66
+  status: validated
+  reasons:
+  - high_onchain_activity strength=100.0
+  - TVL $1.6M sufficient
+  - Volume $4699K healthy
+execution_hints:
+  suggested_strategy: opportunistic
+  urgency: medium
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: blue_chip
+  liquidity_profile: deep
+  amm_type: pancakeswap-infinity-clmm
+  activity_profile: active
+llm_strategies:
+- strategy_type: opportunistic
+  confidence: 0.66
+  source: deterministic
+llm_risk_flags: []
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: moderate
+llm_score: 66
+hypotheses:
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

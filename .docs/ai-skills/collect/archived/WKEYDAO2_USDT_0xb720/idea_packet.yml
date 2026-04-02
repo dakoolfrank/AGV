@@ -1,0 +1,197 @@
+pair_id: WKEYDAO2_USDT_0xb720
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap_v2
+  pool_address: '0xb720ea2a201c03578cca05191e8b4ab859704cfe'
+  base_token:
+    symbol: wkeyDAO2
+    address: '0xe0a281deff5c9d8d67af09d39340e134ac81b82e'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:b3e8da1ee43d820f
+  primary_excerpt: 'Pool WKEYDAO2_USDT_0xb720 on bsc/pancakeswap_v2. TVL: $53,977,372,
+    24h Volume: $9,688,648. high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 4.3173067196083
+  tvl_usd: 53977372.2171
+  volume_24h_usd: 9688648.44399874
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 4.48842123459318
+    low: 4.25686273850105
+    close: 4.42807466299748
+    bar_count: 100
+signals:
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 56
+    avg_trade_size_usd: 46.07
+indicators:
+  rsi_14: 52.323127
+  ema_12: 4.428278
+  ema_26: 4.419473
+  vwap: 4.359668
+  bollinger_upper: 4.452603
+  bollinger_lower: 4.397699
+  bollinger_middle: 4.425151
+  macd_histogram: -0.000355
+  atr_14: 0.059079
+  onchain_tx_count: 100
+  onchain_unique_wallets: 56
+  onchain_avg_trade_size_usd: 46.07
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.2316
+  depth_2pct_usd: 537074.85
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 1
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: moderate
+  score: 66
+  status: weak
+  reasons:
+  - high_onchain_activity strength=100.0
+  - TVL $54.0M sufficient
+  - Volume $9689K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: medium
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.25
+    max_position_usd: 10000
+    max_slippage_bps: 10
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: mid_cap
+  amm_type: constant_product_v2
+  liquidity_profile: deep
+  activity_profile: wash_trading
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.15
+  viable: false
+  reasoning: 件均交易额仅$46，与$54M的TVL极不匹配，成交量信号高度疑似刷量，动能突破极易产生假信号。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+- strategy_type: mean_reversion
+  pro_confidence: 0.65
+  viable: true
+  reasoning: 价格在布林带中轨窄幅震荡且RSI中性，适合在刷量维持的伪稳定区间内进行小额均值回归。
+  parameter_hints:
+    entry_threshold_pct: 0.6
+    max_position_usd: 5000
+    max_slippage_bps: 15
+    hold_blocks_max: 20
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.78
+  viable: true
+  reasoning: 高频小额交易特征符合套利机器人行为，V2池的定价延迟为跨池套利提供了高频微利机会。
+  parameter_hints:
+    entry_threshold_pct: 0.25
+    max_position_usd: 10000
+    max_slippage_bps: 10
+    hold_blocks_max: 2
+llm_risk_flags:
+- low_avg_trade_size_suspicion
+- potential_wash_trading
+- reserve_ratio_imbalance
+- high_tvl_low_depth_ratio
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: constant_product_v2
+    liquidity_profile: deep
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.85
+    reasoning: 24小时交易量接近1000万美元且交易频率极高，适合追踪成交量驱动的价格突破。
+    trigger_signals:
+    - high_onchain_activity
+    - vwap_cross
+  - strategy_type: mean_reversion
+    confidence: 0.72
+    reasoning: RSI处于中性区间且价格在布林带中轨附近震荡，显示短期内存在回归均值的震荡机会。
+    trigger_signals:
+    - rsi_14
+    - bollinger_middle
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.65
+    reasoning: 高频小额交易暗示存在大量机器人活动，V2池的价格延迟可能产生跨池套利空间。
+    trigger_signals:
+    - onchain_avg_trade_size_usd
+  risk_flags:
+  - low_avg_trade_size_suspicion
+  - potential_wash_trading
+  - reserve_ratio_imbalance
+  - high_tvl_low_depth_ratio
+  flash_score: 68
+  flash_verdict: moderate
+llm_pro_final:
+  agree_classification: false
+  revised_classification:
+    asset_class: mid_cap
+    amm_type: constant_product_v2
+    liquidity_profile: deep
+    activity_profile: wash_trading
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.15
+    viable: false
+    reasoning: 件均交易额仅$46，与$54M的TVL极不匹配，成交量信号高度疑似刷量，动能突破极易产生假信号。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  - strategy_type: mean_reversion
+    pro_confidence: 0.65
+    viable: true
+    reasoning: 价格在布林带中轨窄幅震荡且RSI中性，适合在刷量维持的伪稳定区间内进行小额均值回归。
+    parameter_hints:
+      entry_threshold_pct: 0.6
+      max_position_usd: 5000
+      max_slippage_bps: 15
+      hold_blocks_max: 20
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.78
+    viable: true
+    reasoning: 高频小额交易特征符合套利机器人行为，V2池的定价延迟为跨池套利提供了高频微利机会。
+    parameter_hints:
+      entry_threshold_pct: 0.25
+      max_position_usd: 10000
+      max_slippage_bps: 10
+      hold_blocks_max: 2
+  pro_score: 48
+  pro_verdict: weak
+  override_reason: 虽然TVL与深度数据匹配，但平均交易额极低（$46）暗示严重的刷量行为，Flash初判未识别出虚假交易量对动能策略的误导性，整体流动性质量评价应下调。
+llm_verdict: weak
+llm_score: 48
+hypotheses:
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

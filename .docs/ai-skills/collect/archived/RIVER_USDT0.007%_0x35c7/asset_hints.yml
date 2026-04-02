@@ -1,0 +1,18 @@
+pair_id: RIVER_USDT0.007%_0x35c7
+pool_address: '0x35c765765132d9ba94063a26d5eab98e9f005354b614d0e3f58ba1e7dc08a679'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: RIVER
+quote_token: USDT 0.007%
+signal_quality: strong
+top_signal: price_divergence
+signal_strength: 3.49
+tvl_usd: 1005092.93
+volume_24h_usd: 3995853.9859996
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: concentrated_imbalanced
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.92
+llm_verdict: moderate
+llm_score: 78

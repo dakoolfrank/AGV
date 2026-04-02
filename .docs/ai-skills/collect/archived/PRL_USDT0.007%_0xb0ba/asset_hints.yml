@@ -1,0 +1,18 @@
+pair_id: PRL_USDT0.007%_0xb0ba
+pool_address: '0xb0bab780d44ca5245a4b6da9ea8fd79e04e7a92850cfc2b52a33c4d82463726b'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: PRL
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 1351971.2009
+volume_24h_usd: 44267373.0143323
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: small_cap
+liquidity_profile: low_depth_high_turnover
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.65
+llm_verdict: weak
+llm_score: 52

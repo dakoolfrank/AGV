@@ -1,0 +1,18 @@
+pair_id: QUQ_USDT0.01%_0xe1ac
+pool_address: '0xe1acb466421ed24dd8bd381d1205bad0ad43ca9c'
+network: bsc
+dex: uniswap-bsc
+base_token: quq
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 99.79
+tvl_usd: 2423822.3022
+volume_24h_usd: 279383281.194682
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.96
+llm_verdict: strong
+llm_score: 96

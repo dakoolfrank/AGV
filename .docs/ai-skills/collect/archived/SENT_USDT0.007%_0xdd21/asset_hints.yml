@@ -1,0 +1,18 @@
+pair_id: SENT_USDT0.007%_0xdd21
+pool_address: '0xdd21c2d2fbd1487605799fbaa5854411afccd3faa3460ffa7fc9dacff94cad49'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: SENT
+quote_token: USDT 0.007%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 98.12
+tvl_usd: 968634.9134
+volume_24h_usd: 9585655.75161303
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.95
+llm_verdict: strong
+llm_score: 85

@@ -1,0 +1,21 @@
+pair_id: RIVER_USDT0.3%_0x8869
+pool_address: '0x886928eb467ef5e69b4ebc2c8af4275b21af41bd'
+network: bsc
+dex: uniswap-bsc
+base_token: RIVER
+quote_token: USDT 0.3%
+signal_quality: strong
+top_signal: price_divergence
+signal_strength: 4.45
+tvl_usd: 895786.6667
+volume_24h_usd: 2776561.27665788
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0x886928eb467ef5e69b4ebc2c8af4275b21af41bd'
+source_url: https://www.geckoterminal.com/bsc/pools/0x886928eb467ef5e69b4ebc2c8af4275b21af41bd
+source_type: dex_pool
+asset_class: mid_cap
+liquidity_profile: shallow
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.95
+llm_verdict: strong
+llm_score: 85

@@ -1,0 +1,45 @@
+# Schema: S5-Arb fix 步骤产出 (存根)
+# 校验对象: 策略修复后的诊断报告
+# 模式: strict=False（Phase C 实现后扩展）
+
+type: object
+properties:
+  pair_id:
+    type: string
+    description: "交易对 ID"
+
+  retreat_level:
+    type: string
+    enum: [A, B, C]
+    description: "回退级别: A=权重调整, B=curate回退, C=策略重构"
+
+  target_step:
+    type: string
+    enum: [execute, curate, collect]
+    description: "回退目标步骤"
+
+  diagnosis:
+    type: object
+    description: "诊断详情"
+    properties:
+      reason_code:
+        type: string
+      description:
+        type: string
+      evidence:
+        type: array
+        items:
+          type: string
+
+  fixed_at:
+    type: string
+    description: "修复时间 ISO-8601"
+
+  status:
+    type: string
+    enum: [success, partial, skipped]
+    description: "修复状态"
+
+required:
+  - pair_id
+  - status

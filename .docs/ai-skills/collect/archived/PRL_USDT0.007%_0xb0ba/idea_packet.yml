@@ -1,0 +1,180 @@
+pair_id: PRL_USDT0.007%_0xb0ba
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0xb0bab780d44ca5245a4b6da9ea8fd79e04e7a92850cfc2b52a33c4d82463726b'
+  base_token:
+    symbol: PRL
+    address: '0xd20fb09a49a8e75fef536a2dbc68222900287bac'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:3503efc099ffbab2
+  primary_excerpt: 'Pool PRL_USDT0.007%_0xb0ba on bsc/pancakeswap-infinity-clmm. TVL:
+    $1,351,971, 24h Volume: $44,267,373. high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0
+  tvl_usd: 1351971.2009
+  volume_24h_usd: 44267373.0143323
+  fee_bps: 25
+  ohlcv_summary: {}
+signals:
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 42
+    avg_trade_size_usd: 0.0
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 42
+  onchain_avg_trade_size_usd: 0.0
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 0.0
+cross_pool_analysis: {}
+validation:
+  dual_source_met: false
+  signal_count: 1
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - Gecko+DexScreener both unavailable, Moralis-only mode
+decision:
+  quality: moderate
+  score: 58
+  status: weak
+  reasons:
+  - high_onchain_activity strength=100.0
+  - TVL $1.4M sufficient
+  - Volume $44267K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: medium
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.15
+    max_position_usd: 10000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+llm_classification:
+  asset_class: small_cap
+  amm_type: concentrated_v3
+  liquidity_profile: low_depth_high_turnover
+  activity_profile: suspicious_high_frequency
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.2
+  viable: false
+  reasoning: 缺乏价格和OHLCV数据，无法建立动量模型，且极高换手率可能源于刷量。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.65
+  viable: true
+  reasoning: 0.007%的极低费率配合高交易量，暗示该池是套利路径的核心节点，但需外部喂价校验。
+  parameter_hints:
+    entry_threshold_pct: 0.15
+    max_position_usd: 10000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.55
+  viable: true
+  reasoning: V3池在极高换手率下Tick跳变频繁，存在捕获JIT或存量失衡的机会。
+  parameter_hints:
+    entry_threshold_pct: 0.3
+    max_position_usd: 5000
+    max_slippage_bps: 10
+    hold_blocks_max: 3
+llm_risk_flags:
+- extreme_volume_to_tvl_ratio
+- potential_wash_trading_risk
+- high_impermanent_loss_potential
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.92
+    reasoning: 24h交易量是TVL的32倍以上，换手率极高，适合捕捉波动率溢价。
+    trigger_signals:
+    - high_onchain_activity
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: V3池子在高频交易下容易产生瞬时价差，适合与V2或其他DEX进行套利。
+    trigger_signals:
+    - high_frequency_trading
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.75
+    reasoning: 极高的交易量可能导致集中流动性区间快速偏移，产生回补机会。
+    trigger_signals:
+    - volume_to_tvl_ratio_anomaly
+  risk_flags:
+  - extreme_volume_to_tvl_ratio
+  - potential_wash_trading_risk
+  - high_impermanent_loss_potential
+  flash_score: 82
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: false
+  revised_classification:
+    asset_class: small_cap
+    amm_type: concentrated_v3
+    liquidity_profile: low_depth_high_turnover
+    activity_profile: suspicious_high_frequency
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.2
+    viable: false
+    reasoning: 缺乏价格和OHLCV数据，无法建立动量模型，且极高换手率可能源于刷量。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.65
+    viable: true
+    reasoning: 0.007%的极低费率配合高交易量，暗示该池是套利路径的核心节点，但需外部喂价校验。
+    parameter_hints:
+      entry_threshold_pct: 0.15
+      max_position_usd: 10000
+      max_slippage_bps: 5
+      hold_blocks_max: 1
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.55
+    viable: true
+    reasoning: V3池在极高换手率下Tick跳变频繁，存在捕获JIT或存量失衡的机会。
+    parameter_hints:
+      entry_threshold_pct: 0.3
+      max_position_usd: 5000
+      max_slippage_bps: 10
+      hold_blocks_max: 3
+  pro_score: 52
+  pro_verdict: weak
+  override_reason: 数据严重缺失（price_usd与ohlcv均为无效），且Volume/TVL比率异常（32倍）伴随0.007%的非典型费率，存在极高的刷量风险或MEV机器人对冲风险，下调评级至weak。
+llm_verdict: weak
+llm_score: 52
+hypotheses:
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

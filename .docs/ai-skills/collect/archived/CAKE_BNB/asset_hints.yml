@@ -1,0 +1,9 @@
+max_trade_usd: 20.0
+min_trade_usd: 5.0
+pair: CAKE_BNB
+pool_address: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0'
+price: 2.85
+tvl_usd: 8500000.0
+viable_strategies:
+- cross_pool_arbitrage
+- volume_momentum

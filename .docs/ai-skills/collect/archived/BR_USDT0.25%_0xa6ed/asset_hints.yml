@@ -1,0 +1,18 @@
+pair_id: BR_USDT0.25%_0xa6ed
+pool_address: '0xa6ed9f4a42d0f47b088178bbdf3582a9a654db99'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: BR
+quote_token: USDT 0.25%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 83.93
+tvl_usd: 899986.7318
+volume_24h_usd: 3080630.10236025
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: opportunistic
+strategy_confidence: 0.73
+llm_verdict: strong
+llm_score: 73

@@ -1,0 +1,99 @@
+# Schema: S5-Arb curate 步骤产出
+# 校验对象: .docs/ai-skills/curate/staged/{pair_id}/step1_skeletons.yml
+# 模式: strict=True（骨架结构是下游的唯一输入）
+
+type: object
+properties:
+  tower_templates:
+    type: array
+    description: "策略骨架列表（DeFi arb 复用 tower_templates 键名以兼容 WQ-YI curate schema）"
+    minItems: 1
+    items:
+      type: object
+      properties:
+        skeleton_id:
+          type: string
+          description: "骨架唯一 ID，如 WBNB_USDT_cross_pool_arbitrage_1"
+
+        strategy_type:
+          type: string
+          description: "策略类型"
+
+        description:
+          type: string
+          description: "策略描述"
+
+        target_pair:
+          type: string
+          description: "目标交易对"
+
+        pool_address:
+          type: string
+          description: "目标池地址"
+
+        dex:
+          type: string
+          description: "DEX 名称"
+
+        chain:
+          type: string
+          description: "链名称"
+
+        entry_condition:
+          type: string
+          description: "入场条件表达式"
+
+        parameters:
+          type: object
+          description: "策略参数"
+          properties:
+            base_price:
+              type: number
+            tvl_usd:
+              type: number
+            signal_strength:
+              type: number
+              minimum: 0
+              maximum: 1
+            min_trade_usd:
+              type: number
+              minimum: 0
+            max_trade_usd:
+              type: number
+              minimum: 0
+          required:
+            - base_price
+
+      required:
+        - skeleton_id
+        - strategy_type
+        - target_pair
+
+  pair:
+    type: string
+    description: "交易对 ID"
+
+  pool_info:
+    type: object
+    description: "池基本信息"
+    properties:
+      pool_address:
+        type: string
+      price:
+        type: number
+      tvl_usd:
+        type: number
+
+  curated_at:
+    type: string
+    description: "策划时间 ISO-8601"
+
+  yi_templates:
+    type: array
+    description: "YI 模板（DeFi 模式下为空数组）"
+    items:
+      type: object
+
+required:
+  - tower_templates
+  - pair

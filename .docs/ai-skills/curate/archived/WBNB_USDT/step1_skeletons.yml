@@ -1,0 +1,58 @@
+curated_at: '2026-03-31T11:37:52Z'
+pair: WBNB_USDT
+pool_info:
+  pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+  price: 580.0
+  tvl_usd: 45000000.0
+tower_templates:
+- chain: BSC
+  description: Cross Pool Arbitrage on WBNB_USDT (signal strength=0.65)
+  dex: PancakeSwap V2
+  entry_condition: price_divergence > 0.65
+  parameters:
+    base_price: 580.0
+    max_trade_usd: 20.0
+    min_trade_usd: 5.0
+    signal_strength: 0.65
+    tvl_usd: 45000000.0
+  pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+  signal_ref:
+    divergence_pct: 0.8
+    pair: WBNB_USDT
+    pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+    price: 580.0
+    reference_price: 584.64
+    signal_id: WBNB_USDT_price_divergence_1774957072
+    signal_type: price_divergence
+    source: mock
+    strength: 0.65
+    timestamp: '2026-03-31T11:37:52Z'
+  skeleton_id: WBNB_USDT_cross_pool_arbitrage_1
+  strategy_type: cross_pool_arbitrage
+  target_pair: WBNB_USDT
+- chain: BSC
+  description: Volume Momentum on WBNB_USDT (signal strength=0.45)
+  dex: PancakeSwap V2
+  entry_condition: volume_spike > 0.45
+  parameters:
+    base_price: 580.0
+    max_trade_usd: 20.0
+    min_trade_usd: 5.0
+    signal_strength: 0.45
+    tvl_usd: 45000000.0
+  pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+  signal_ref:
+    avg_volume_7d_usd: 7200000.0
+    pair: WBNB_USDT
+    pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+    signal_id: WBNB_USDT_volume_spike_1774957072
+    signal_type: volume_spike
+    source: mock
+    spike_ratio: 1.67
+    strength: 0.45
+    timestamp: '2026-03-31T11:37:52Z'
+    volume_24h_usd: 12000000.0
+  skeleton_id: WBNB_USDT_volume_momentum_2
+  strategy_type: volume_momentum
+  target_pair: WBNB_USDT
+yi_templates: []

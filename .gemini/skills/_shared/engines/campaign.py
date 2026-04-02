@@ -54,6 +54,7 @@ from .diagnosis import (
     DIAGNOSIS_REASON_CODES,
     _load_campaign_prompts,
 )
+from ..core.registry import campaign_finalize as _campaign_finalize
 
 logger = logging.getLogger(__name__)
 
@@ -203,7 +204,22 @@ class CampaignRunner:
         每个 cycle = 一次完整 pipeline (collect→execute)。
         成功 → 进入下一 cycle（直到 max_cycles）。
         失败 → 诊断 → reset_from_step → resume（同一 cycle 内重试）。
+
+        Returns 前自动调用 ``_archive_on_complete()`` 归档产物。
         """
+        result = self._run_orchestrated_loop(
+            goal_config=goal_config, workspace=workspace,
+        )
+        self._archive_on_complete(result, workspace)
+        return result
+
+    def _run_orchestrated_loop(
+        self,
+        *,
+        goal_config: dict[str, Any] | None = None,
+        workspace: Path | None = None,
+    ) -> CampaignResult:
+        """Orchestrated 主循环（内部实现，由 _run_orchestrated 包装）。"""
         merged = {**self._config, **(goal_config or {})}
         max_cycles = merged.get("max_cycles", 100)
         interval = merged.get("cycle_interval_seconds", 0)
@@ -290,11 +306,104 @@ class CampaignRunner:
             else:
                 self._state.consecutive_failures = 0
 
+            # ── 已达上限则立即返回，不再 sleep ──
+            if max_cycles is not None and cycle_idx >= max_cycles:
+                return CampaignResult(
+                    status="completed",
+                    total_cycles=cycle_idx,
+                    cumulative_pnl_usd=self._state.cumulative_pnl_usd,
+                    cycles=self._state.cycles,
+                )
+
             # ── 心跳间隔 ──
             if interval > 0:
                 time.sleep(interval)
 
         # unreachable — while True 由 return 退出
+
+    # ────────────────────────────────────────────────────────
+    # 归档 (WQ-YI aligned — campaign_finalize)
+    # ────────────────────────────────────────────────────────
+
+    def _archive_on_complete(
+        self,
+        result: CampaignResult,
+        workspace: Path | None,
+    ) -> None:
+        """Campaign 结束后自动归档（对标 WQ-YI campaign_finalize）
+
+        - completed + 有成功 execute → terminal_pass (不归档)
+        - completed + 无成功 execute → terminal_exhausted (归档)
+        - halted / budget_exhausted → 全部 terminal_exhausted (归档)
+
+        **simulate 模式跳过归档** — simulate 仅模拟执行，不产生不可逆文件操作。
+        """
+        # ── simulate 模式安全门: 禁止归档生产数据 ──
+        if self._config.get("simulate", False):
+            logger.info("[archive] simulate 模式，跳过归档")
+            return
+
+        asset_root = getattr(self.orch, "asset_root", None) if self.orch else None
+        if asset_root is None:
+            asset_root = workspace
+        if asset_root is None:
+            logger.debug("[archive] 无 asset_root，跳过归档")
+            return
+
+        # 从 orchestrator 最新 trace 提取所有 pair_ids
+        all_pairs: list[str] = []
+        qualified_pairs: list[str] = []
+
+        if self.orch and hasattr(self.orch, "_last_trace_result"):
+            trace = self.orch._last_trace_result
+            if trace:
+                seen: set[str] = set()
+                for asset in trace.final_assets:
+                    if asset.id and asset.id not in seen:
+                        seen.add(asset.id)
+                        all_pairs.append(asset.id)
+                    if asset.kind == "execution_result":
+                        md = asset.metadata or {}
+                        if md.get("success", 0) > 0:
+                            qualified_pairs.append(asset.id)
+
+        # fallback: 扫磁盘
+        if not all_pairs:
+            all_pairs = self._discover_pairs_on_disk(asset_root)
+
+        if not all_pairs:
+            logger.debug("[archive] 无 pairs 可归档")
+            return
+
+        trace_id = None
+        if self.orch and hasattr(self.orch, "trace_id"):
+            trace_id = self.orch.trace_id
+
+        summary = _campaign_finalize(
+            asset_root=asset_root,
+            campaign_status=result.status,
+            all_pairs=all_pairs,
+            qualified_pairs=qualified_pairs,
+            trace_id=trace_id,
+        )
+
+        archived_count = len(summary.get("archived", []))
+        pass_count = len(summary.get("terminal_pass", []))
+        logger.info(
+            "[archive] campaign_finalize: pass=%d, exhausted=%d, archived=%d",
+            pass_count, len(summary.get("terminal_exhausted", [])), archived_count,
+        )
+
+    @staticmethod
+    def _discover_pairs_on_disk(asset_root: Path) -> list[str]:
+        """从 collect/pending/ 扫描存活 pair 目录名"""
+        pending = asset_root / ".docs/ai-skills/collect/pending"
+        if not pending.is_dir():
+            return []
+        return sorted(
+            d.name for d in pending.iterdir()
+            if d.is_dir() and d.name != "__pycache__"
+        )
 
     def _handle_failure(
         self,

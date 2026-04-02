@@ -1,0 +1,244 @@
+pair_id: USDT_USDC_0x8321
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: uniswap-v4-bsc
+  pool_address: '0x8321c1f53959b14ece4b5400e60aeac59e7b6b8bac446f2f0a89b9e84e68a08a'
+  base_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  quote_token:
+    symbol: USDC
+    address: '0x8ac76a51cc950d9822d68b83fe1ad97b32cd580d'
+  raw_snapshot_hash: sha256:d7e0f3a69f2a2d6a
+  primary_excerpt: 'Pool USDT_USDC_0x8321 on bsc/uniswap-v4-bsc. TVL: $330,331, 24h
+    Volume: $40,037,276. whale_movement(str=100.0); whale_movement(str=100.0); whale_movement(str=100.0);
+    whale_movement(str=19.6); whale_movement(str=11.6)'
+market_data:
+  price_usd: 1.00187951971814
+  tvl_usd: 330330.701
+  volume_24h_usd: 40037275.635113
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 1.0084136125966
+    low: 0.988344392831822
+    close: 1.00063818405263
+    bar_count: 100
+signals:
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x7ee53deba3022c716039873dd2c8793e9f254593d826ec3a84dcb7e03ad7f1f4'
+    value_usd: 8623.17702621403
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x4972954a1d054e447391100f22976a94a4b02c9e4fab8bb244058fc8a536a210'
+    value_usd: 6612.404830139724
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x81f080fbfcbffb3502b359deae7127d315b8aea9319401a49ba8d3b9339fd949'
+    value_usd: 6612.404830139724
+- signal_type: whale_movement
+  strength: 19.65
+  source: moralis
+  details:
+    tx_hash: '0x0bd038993c9f9d092ff13409d60721b239bf65da45a760b29e3fb61083cb9aa3'
+    value_usd: 982.3199362589654
+- signal_type: whale_movement
+  strength: 11.62
+  source: moralis
+  details:
+    tx_hash: '0x00a98f1a2c25e28ca538290d6efb173d094f87cc02041f16d441165adbcdeeaa'
+    value_usd: 581.0901214365213
+- signal_type: whale_movement
+  strength: 10.58
+  source: moralis
+  details:
+    tx_hash: '0x1e61fcefe192d7a15254b926b4b2f2791a4cf4e90fcf0f014d7d678d5932dd4c'
+    value_usd: 529.1897566765624
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 146
+    avg_trade_size_usd: 550.49
+indicators:
+  rsi_14: 52.191944
+  ema_12: 0.998532
+  ema_26: 0.998312
+  vwap: 0.999075
+  bollinger_upper: 1.003563
+  bollinger_lower: 0.993106
+  bollinger_middle: 0.998334
+  macd_histogram: 0.000103
+  atr_14: 0.008178
+  onchain_tx_count: 100
+  onchain_unique_wallets: 146
+  onchain_avg_trade_size_usd: 550.49
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.9978
+  depth_2pct_usd: 3286.79
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 7
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 90
+  status: validated
+  reasons:
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=19.6
+  - whale_movement strength=11.6
+  - whale_movement strength=10.6
+  - high_onchain_activity strength=100.0
+  - TVL $330K above minimum
+  - Volume $40037K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.0005
+    max_position_usd: 5000
+    max_slippage_bps: 5
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: stablecoin_pair
+  amm_type: concentrated_v3
+  liquidity_profile: shallow
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.92
+  viable: true
+  reasoning: 成交量/TVL比率高达121倍，表明该池是BSC链上USDT/USDC套利路径的核心节点，价格偏离1.0000提供了持续的套利空间。
+  parameter_hints:
+    entry_threshold_pct: 0.0005
+    max_position_usd: 5000
+    max_slippage_bps: 5
+    hold_blocks_max: 2
+- strategy_type: mean_reversion
+  pro_confidence: 0.65
+  viable: true
+  reasoning: 虽然稳定币具有回归属性，但2%深度仅$3286，均值回归过程中的冲击成本可能覆盖掉套利利润，需配合极低手续费层级。
+  parameter_hints:
+    entry_threshold_pct: 0.0015
+    max_position_usd: 2000
+    max_slippage_bps: 3
+    hold_blocks_max: 20
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.85
+  viable: true
+  reasoning: 大额订单（$500-$8000）相对于极浅的深度（$3286）会产生剧烈价格瞬间位移，适合捕获由于流动性不足导致的瞬时失衡。
+  parameter_hints:
+    entry_threshold_pct: 0.001
+    max_position_usd: 3000
+    max_slippage_bps: 10
+    hold_blocks_max: 1
+llm_risk_flags:
+- extreme_volume_to_tvl_ratio
+- insufficient_depth_for_stable_pair
+- high_fee_tier_for_stables
+- price_depeg_detected
+llm_flash_raw:
+  pool_classification:
+    asset_class: stablecoin_pair
+    amm_type: concentrated_v3
+    liquidity_profile: shallow
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.88
+    reasoning: 24h交易量远超TVL(约120倍)，且价格偏离1.0000，存在显著的跨池套利空间。
+    trigger_signals:
+    - high_onchain_activity
+    - whale_movement
+  - strategy_type: mean_reversion
+    confidence: 0.75
+    reasoning: 稳定币对价格偏离均值(1.0018)，在集中流动性池中具有回归属性。
+    trigger_signals:
+    - bollinger_upper
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.82
+    reasoning: 2%深度仅为$3286，极小的交易即可造成价格剧烈波动，适合捕捉瞬时失衡。
+    trigger_signals:
+    - depth_2pct_usd
+    - whale_movement
+  risk_flags:
+  - extreme_volume_to_tvl_ratio
+  - insufficient_depth_for_stable_pair
+  - high_fee_tier_for_stables
+  - price_depeg_detected
+  flash_score: 85
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.92
+    viable: true
+    reasoning: 成交量/TVL比率高达121倍，表明该池是BSC链上USDT/USDC套利路径的核心节点，价格偏离1.0000提供了持续的套利空间。
+    parameter_hints:
+      entry_threshold_pct: 0.0005
+      max_position_usd: 5000
+      max_slippage_bps: 5
+      hold_blocks_max: 2
+  - strategy_type: mean_reversion
+    pro_confidence: 0.65
+    viable: true
+    reasoning: 虽然稳定币具有回归属性，但2%深度仅$3286，均值回归过程中的冲击成本可能覆盖掉套利利润，需配合极低手续费层级。
+    parameter_hints:
+      entry_threshold_pct: 0.0015
+      max_position_usd: 2000
+      max_slippage_bps: 3
+      hold_blocks_max: 20
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.85
+    viable: true
+    reasoning: 大额订单（$500-$8000）相对于极浅的深度（$3286）会产生剧烈价格瞬间位移，适合捕获由于流动性不足导致的瞬时失衡。
+    parameter_hints:
+      entry_threshold_pct: 0.001
+      max_position_usd: 3000
+      max_slippage_bps: 10
+      hold_blocks_max: 1
+  pro_score: 82
+  pro_verdict: moderate
+  override_reason: 虽然Flash初判为strong，但考虑到2%深度极低且交易量巨大，该池极大概率被高频MEV机器人统治，普通做市策略面临极高的毒性流（Toxic
+    Flow）风险，故下调至moderate。
+llm_verdict: moderate
+llm_score: 82
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

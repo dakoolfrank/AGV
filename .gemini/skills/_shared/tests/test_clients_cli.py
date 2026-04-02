@@ -340,13 +340,12 @@ class TestCLIHelpers:
 
     def test_status_with_files(self, tmp_path):
         from _shared.cli.arb_campaign import _status
-        collect_dir = tmp_path / ".docs" / "ai-skills" / "collect" / "pending"
+        collect_dir = tmp_path / ".docs" / "ai-skills" / "collect" / "pending" / "WBNB_USDT"
         collect_dir.mkdir(parents=True)
         (collect_dir / "a.yml").write_text("x")
-        (collect_dir / "b.yml").write_text("x")
 
         info = _status(tmp_path)
-        assert info["collect"]["files"] == 2
+        assert info["collect"]["active"] == ["WBNB_USDT"]
 
 
 class TestBuildConfigs:
@@ -429,7 +428,7 @@ class TestDefaultYamlExists:
         path = _resolve_default_config()
         raw = _load_yaml(path)
         cfg = build_configs(raw)
-        assert cfg["pair"] == "pGVT_USDT"
+        assert cfg["strategy_id"] == "arb_external_bsc"
         assert cfg["simulate"] is True
         assert cfg["max_cycles"] == 10
         assert cfg["safety"]["tvl_floor_usd"] == 30.0
@@ -439,7 +438,7 @@ class TestDefaultYamlExists:
         rc = main(["--dry-run"])
         assert rc == 0
         out = capsys.readouterr().out
-        assert "pGVT_USDT" in out
+        assert "WBNB_USDT" in out
 
 
 class TestImports:

@@ -1,0 +1,18 @@
+pair_id: Q_USDT0.01%_0x8baf
+pool_address: '0x8bafe0bdd3eb9ae0539f5b32e771c1a72a189b7f'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: Q
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 99.06
+tvl_usd: 650380.1532
+volume_24h_usd: 2769973.57577475
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.85
+llm_verdict: moderate
+llm_score: 78

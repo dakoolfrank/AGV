@@ -1,0 +1,18 @@
+pair_id: KOGE_USDT0.01%_0x81c7
+pool_address: '0x81c7294b66955824bc04acb642ae8dc58e6ce507'
+network: bsc
+dex: uniswap-bsc
+base_token: KOGE
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 100.0
+tvl_usd: 5663317.22
+volume_24h_usd: 10327880.3
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: volume_momentum
+strategy_confidence: 0.95
+llm_verdict: strong
+llm_score: 92

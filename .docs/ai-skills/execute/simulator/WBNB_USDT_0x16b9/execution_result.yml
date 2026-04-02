@@ -1,0 +1,40 @@
+executed_at: '2026-04-02T06:00:12Z'
+mode: dry_run
+pair_id: WBNB_USDT_0x16b9
+strategy_id: wbnb_usdt_0x16b9_arb_cross_pool_01
+summary:
+  failed: 0
+  successful: 3
+  total_gas: 392808
+  total_trades: 3
+trades:
+- action: swap
+  amount_in: 10000000000000000000
+  amount_out: 16900795469034090
+  block_number: 90133809
+  dry_run: true
+  gas_used: 130936
+  revert_reason: null
+  status: success
+  trade_id: dryrun_WBNB_USDT_0x16b9_0
+  tx_hash: dryrun-0001
+- action: swap
+  amount_in: 10000000000000000000
+  amount_out: 16900795469034090
+  block_number: 90133809
+  dry_run: true
+  gas_used: 130936
+  revert_reason: null
+  status: success
+  trade_id: dryrun_WBNB_USDT_0x16b9_1
+  tx_hash: dryrun-0002
+- action: swap
+  amount_in: 10000000000000000000
+  amount_out: 16900795469034090
+  block_number: 90133809
+  dry_run: true
+  gas_used: 130936
+  revert_reason: null
+  status: success
+  trade_id: dryrun_WBNB_USDT_0x16b9_2
+  tx_hash: dryrun-0003

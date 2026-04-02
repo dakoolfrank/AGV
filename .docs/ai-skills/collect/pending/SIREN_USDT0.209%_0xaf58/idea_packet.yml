@@ -1,0 +1,236 @@
+pair_id: SIREN_USDT0.209%_0xaf58
+version: '1.0'
+source_evidence:
+  discovery_method: trending
+  network: bsc
+  dex: uniswap-v4-bsc
+  pool_address: '0xaf58b1d938bb1f2d2255607d9489fd0baade39b93bfcf2bb8e2c7d6a2b5673f3'
+  base_token:
+    symbol: SIREN
+    address: '0x997a58129890bbda032231a52ed1ddc845fc18e1'
+  quote_token:
+    symbol: USDT 0.209%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:73516f381fd68d74
+  primary_excerpt: 'Pool SIREN_USDT0.209%_0xaf58 on bsc/uniswap-v4-bsc. TVL: $45,529,
+    24h Volume: $8,937,258. price_divergence(str=4.4); whale_movement(str=43.0); whale_movement(str=27.4);
+    whale_movement(str=11.9); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.236522641663189
+  tvl_usd: 45529.0271
+  volume_24h_usd: 8937257.51689364
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 0.298389740584298
+    low: 0.220958241694138
+    close: 0.226626208400481
+    bar_count: 100
+signals:
+- signal_type: price_divergence
+  strength: 4.37
+  source: gecko
+  details:
+    price: 0.236522641663189
+    last_close: 0.226626208400481
+- signal_type: whale_movement
+  strength: 42.98
+  source: moralis
+  details:
+    tx_hash: '0x2b1254002e00e72ea0794eee6843ffdc1373da23b77105ffa29f886352e83a0f'
+    value_usd: 2149.0116089819026
+- signal_type: whale_movement
+  strength: 27.44
+  source: moralis
+  details:
+    tx_hash: '0x0cf3d7e3d1a39397d45d875f6dd8ea1b5cd0078ab887c10ccda899195876aaf8'
+    value_usd: 1371.9070335682356
+- signal_type: whale_movement
+  strength: 11.9
+  source: moralis
+  details:
+    tx_hash: '0x512400ede2312057c3456acfba918deb725d10758c5518f3a0cf57ed40afae13'
+    value_usd: 595.1291156673879
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 36
+    avg_trade_size_usd: 107.15
+indicators:
+  rsi_14: 37.842748
+  ema_12: 0.230569
+  ema_26: 0.233943
+  vwap: 0.251622
+  bollinger_upper: 0.242069
+  bollinger_lower: 0.224225
+  bollinger_middle: 0.233147
+  macd_histogram: -9.4e-05
+  atr_14: 0.006883
+  onchain_tx_count: 100
+  onchain_unique_wallets: 36
+  onchain_avg_trade_size_usd: 107.15
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.236
+  depth_2pct_usd: 453.01
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 5
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 87
+  status: weak
+  reasons:
+  - price_divergence strength=4.4
+  - whale_movement strength=43.0
+  - whale_movement strength=27.4
+  - whale_movement strength=11.9
+  - high_onchain_activity strength=100.0
+  - TVL $46K above minimum
+  - Volume $8937K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 50
+    max_slippage_bps: 100
+    hold_blocks_max: 1
+llm_classification:
+  asset_class: micro_cap
+  amm_type: concentrated_v3
+  liquidity_profile: critical
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.35
+  viable: false
+  reasoning: 196x的换手率极度疑似刷量（Wash Trading），动能信号在极浅深度下极易因单笔小额交易伪造。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.65
+  viable: true
+  reasoning: 4.37%的价差存在套利空间，但受限于$453的极浅深度，仅支持极小额原子套利。
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 50
+    max_slippage_bps: 100
+    hold_blocks_max: 1
+- strategy_type: mean_reversion
+  pro_confidence: 0.2
+  viable: false
+  reasoning: 深度不足以支撑均值回归所需的流动性，任何回归尝试都会因高滑点导致亏损。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+llm_risk_flags:
+- extreme_volume_to_tvl_ratio
+- critically_low_depth_2pct
+- high_slippage_risk
+- potential_wash_trading
+llm_flash_raw:
+  pool_classification:
+    asset_class: micro_cap
+    amm_type: concentrated_v3
+    liquidity_profile: critical
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.85
+    reasoning: 24h交易量接近TVL的200倍，换手率极高，存在极强的动量信号。
+    trigger_signals:
+    - high_onchain_activity
+    - whale_movement
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.72
+    reasoning: 检测到4.37含量的价格偏离，且流动性极浅，易产生跨平台价差。
+    trigger_signals:
+    - price_divergence
+  - strategy_type: mean_reversion
+    confidence: 0.65
+    reasoning: RSI处于37.8低位且价格低于VWAP，短期存在超卖反弹空间。
+    trigger_signals:
+    - rsi_14
+    - vwap
+  risk_flags:
+  - extreme_volume_to_tvl_ratio
+  - critically_low_depth_2pct
+  - high_slippage_risk
+  - potential_wash_trading
+  flash_score: 68
+  flash_verdict: moderate
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.35
+    viable: false
+    reasoning: 196x的换手率极度疑似刷量（Wash Trading），动能信号在极浅深度下极易因单笔小额交易伪造。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.65
+    viable: true
+    reasoning: 4.37%的价差存在套利空间，但受限于$453的极浅深度，仅支持极小额原子套利。
+    parameter_hints:
+      entry_threshold_pct: 1.5
+      max_position_usd: 50
+      max_slippage_bps: 100
+      hold_blocks_max: 1
+  - strategy_type: mean_reversion
+    pro_confidence: 0.2
+    viable: false
+    reasoning: 深度不足以支撑均值回归所需的流动性，任何回归尝试都会因高滑点导致亏损。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  pro_score: 42
+  pro_verdict: weak
+  override_reason: 交易量与TVL比例极端失衡（196倍），且2%深度仅$453，判定为高度刷量池。除极小额套利外，常规量化策略均不可行。
+llm_verdict: weak
+llm_score: 42
+hypotheses:
+- hypothesis: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.5
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.5
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

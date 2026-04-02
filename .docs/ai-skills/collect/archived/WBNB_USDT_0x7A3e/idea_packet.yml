@@ -1,0 +1,207 @@
+pair_id: WBNB_USDT_0x7A3e
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: '0x8fdedcAb6Ff497f75a65B085Ce0C5d497F23fbd7'
+  pool_address: '0x7A3eb6E7FFbF9f8B65afD40c0Ab0ac2BAB0c5d8e'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:02bd70b0822f8673
+  primary_excerpt: 'Pool WBNB_USDT_0x7A3e on bsc/0x8fdedcAb6Ff497f75a65B085Ce0C5d497F23fbd7.
+    TVL: $877,768, 24h Volume: $1,185,269. whale_movement(str=14.6); whale_movement(str=10.2);
+    high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 616.48
+  tvl_usd: 877767.81
+  volume_24h_usd: 1185268.68
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: 0.0
+    price_change_h1: -0.15
+    price_change_h6: 1.17
+    price_change_h24: 0.27
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 14.57
+  source: moralis
+  details:
+    tx_hash: '0xb54a3368e6c050bec17dd62c3920983628bce41981216cefd608e277f21b62a7'
+    value_usd: 728.4087648712019
+- signal_type: whale_movement
+  strength: 10.16
+  source: moralis
+  details:
+    tx_hash: '0xf05a6d0a41d181056f916ee916df1706cbefef12c8180a1170676bc775d270fa'
+    value_usd: 507.8487366063789
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 54
+    avg_trade_size_usd: 131.62
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 54
+  onchain_avg_trade_size_usd: 131.62
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 8733.79
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 3
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 80
+  status: validated
+  reasons:
+  - whale_movement strength=14.6
+  - whale_movement strength=10.2
+  - high_onchain_activity strength=100.0
+  - TVL $878K above minimum
+  - Volume $1185K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.15
+    max_position_usd: 3000
+    max_slippage_bps: 10
+    hold_blocks_max: 1
+llm_classification:
+  asset_class: blue_chip
+  amm_type: constant_product_v2
+  liquidity_profile: moderate
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.92
+  viable: true
+  reasoning: WBNB/USDT 是 BSC 上的核心套利对；该池 2% 深度仅为 $8.7k，远低于其 $877k 的 TVL 比例，意味着极易产生相对于
+    PancakeSwap V3 的价格偏离。
+  parameter_hints:
+    entry_threshold_pct: 0.15
+    max_position_usd: 3000
+    max_slippage_bps: 10
+    hold_blocks_max: 1
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.78
+  viable: true
+  reasoning: 日换手率超过 100% 且深度极浅，单笔 $500 的交易即可造成显著价格冲击，适合捕获池内失衡后的回归利润。
+  parameter_hints:
+    entry_threshold_pct: 0.25
+    max_position_usd: 1500
+    max_slippage_bps: 15
+    hold_blocks_max: 3
+- strategy_type: volume_momentum
+  pro_confidence: 0.6
+  viable: true
+  reasoning: 高频交易活动提供了充足的交易手续费，但需警惕在主流币波动剧烈时被套利者（Toxic Flow）榨取价值。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 5000
+    max_slippage_bps: 20
+    hold_blocks_max: 20
+llm_risk_flags:
+- high_volume_to_tvl_ratio
+- moderate_slippage_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: blue_chip
+    amm_type: constant_product_v2
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.88
+    reasoning: WBNB/USDT is highly liquid across BSC; price discrepancies between
+      this pool and PancakeSwap V3 are likely given the high volume-to-TVL ratio.
+    trigger_signals:
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.72
+    reasoning: 2% depth is relatively thin ($8.7k) compared to 24h volume, suggesting
+      frequent price impact and rebalancing opportunities.
+    trigger_signals:
+    - whale_movement
+  - strategy_type: volume_momentum
+    confidence: 0.65
+    reasoning: Daily turnover exceeds 100% of TVL, indicating strong fee generation
+      potential for active LP management.
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - high_volume_to_tvl_ratio
+  - moderate_slippage_risk
+  flash_score: 82
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.92
+    viable: true
+    reasoning: WBNB/USDT 是 BSC 上的核心套利对；该池 2% 深度仅为 $8.7k，远低于其 $877k 的 TVL 比例，意味着极易产生相对于
+      PancakeSwap V3 的价格偏离。
+    parameter_hints:
+      entry_threshold_pct: 0.15
+      max_position_usd: 3000
+      max_slippage_bps: 10
+      hold_blocks_max: 1
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.78
+    viable: true
+    reasoning: 日换手率超过 100% 且深度极浅，单笔 $500 的交易即可造成显著价格冲击，适合捕获池内失衡后的回归利润。
+    parameter_hints:
+      entry_threshold_pct: 0.25
+      max_position_usd: 1500
+      max_slippage_bps: 15
+      hold_blocks_max: 3
+  - strategy_type: volume_momentum
+    pro_confidence: 0.6
+    viable: true
+    reasoning: 高频交易活动提供了充足的交易手续费，但需警惕在主流币波动剧烈时被套利者（Toxic Flow）榨取价值。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 5000
+      max_slippage_bps: 20
+      hold_blocks_max: 20
+  pro_score: 85
+  pro_verdict: strong
+  override_reason: Flash 初判准确。该池表现出典型的高周转、低深度特征，是量化套利的理想场所。2% 深度数据揭示了该池在 V2 结构下的低效性，进一步增强了套利策略的可行性。
+llm_verdict: strong
+llm_score: 85
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

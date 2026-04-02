@@ -1,0 +1,21 @@
+pair_id: SIREN_USDT0.209%_0xaf58
+pool_address: '0xaf58b1d938bb1f2d2255607d9489fd0baade39b93bfcf2bb8e2c7d6a2b5673f3'
+network: bsc
+dex: uniswap-v4-bsc
+base_token: SIREN
+quote_token: USDT 0.209%
+signal_quality: strong
+top_signal: price_divergence
+signal_strength: 4.37
+tvl_usd: 45529.0271
+volume_24h_usd: 8937257.51689364
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0xaf58b1d938bb1f2d2255607d9489fd0baade39b93bfcf2bb8e2c7d6a2b5673f3'
+source_url: https://www.geckoterminal.com/bsc/pools/0xaf58b1d938bb1f2d2255607d9489fd0baade39b93bfcf2bb8e2c7d6a2b5673f3
+source_type: dex_pool
+asset_class: micro_cap
+liquidity_profile: critical
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.65
+llm_verdict: weak
+llm_score: 42

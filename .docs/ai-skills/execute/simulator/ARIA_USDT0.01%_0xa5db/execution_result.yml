@@ -1,0 +1,30 @@
+executed_at: '2026-04-02T05:30:08Z'
+mode: dry_run
+pair_id: ARIA_USDT0.01%_0xa5db
+strategy_id: aria_usdt0.01%_0xa5db_arb_cross_pool_01
+summary:
+  failed: 2
+  successful: 0
+  total_gas: 0
+  total_trades: 2
+trades:
+- action: swap
+  amount_in: 0
+  amount_out: 0
+  block_number: 0
+  dry_run: true
+  gas_used: 0
+  revert_reason: null
+  status: error
+  trade_id: dryrun_ARIA_USDT0.01%_0xa5db_0
+  tx_hash: ''
+- action: swap
+  amount_in: 0
+  amount_out: 0
+  block_number: 0
+  dry_run: true
+  gas_used: 0
+  revert_reason: null
+  status: error
+  trade_id: dryrun_ARIA_USDT0.01%_0xa5db_1
+  tx_hash: ''

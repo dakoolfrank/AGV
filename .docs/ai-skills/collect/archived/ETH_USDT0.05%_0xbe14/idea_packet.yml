@@ -1,0 +1,246 @@
+pair_id: ETH_USDT0.05%_0xbe14
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0xbe141893e4c6ad9272e8c04bab7e6a10604501a5'
+  base_token:
+    symbol: ETH
+    address: '0x2170ed0880ac9a755fd29b2688956bd959f933f8'
+  quote_token:
+    symbol: USDT 0.05%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:c3fe7ff27d74183c
+  primary_excerpt: 'Pool ETH_USDT0.05%_0xbe14 on bsc/pancakeswap-v3-bsc. TVL: $4,861,357,
+    24h Volume: $2,624,932. lp_imbalance(str=100.0); whale_movement(str=45.4); whale_movement(str=39.6);
+    whale_movement(str=21.2); whale_movement(str=16.0)'
+market_data:
+  price_usd: 2043.5862845272
+  tvl_usd: 4861357.1448
+  volume_24h_usd: 2624931.67824348
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 2055.14457358915
+    low: 1943.17397764838
+    close: 1989.23000779539
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 99.95
+  source: gecko
+  details:
+    reserve_ratio: 0.0004910227659325611
+- signal_type: whale_movement
+  strength: 45.35
+  source: moralis
+  details:
+    tx_hash: '0x2fbb66c8cbb847c8319bfc54485709d3be38aef704dd669f2060aadae3163de3'
+    value_usd: 2267.3360434779884
+- signal_type: whale_movement
+  strength: 39.65
+  source: moralis
+  details:
+    tx_hash: '0x0138d6fec638987bc0da3cc932bd6c6d428a06721b54a178132cefdbdc45cc19'
+    value_usd: 1982.2598949975663
+- signal_type: whale_movement
+  strength: 21.25
+  source: moralis
+  details:
+    tx_hash: '0x14c20608f5eb32508e3f95dc3b49bef2203fd54d60adf3bf60e13a5fbaa18f1c'
+    value_usd: 1062.7167410187178
+- signal_type: whale_movement
+  strength: 16.0
+  source: moralis
+  details:
+    tx_hash: '0xe7918533ef37e7fa2615c0dae3810a4a11aca5e621aaa13d504ec475dfee5e22'
+    value_usd: 800.1866455694704
+- signal_type: whale_movement
+  strength: 11.85
+  source: moralis
+  details:
+    tx_hash: '0xbe985e10f8067c2e5d86c2ed1c564c5b158995d49b94afa548f3ad548393d23f'
+    value_usd: 592.622325055664
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 52
+    avg_trade_size_usd: 108.03
+indicators:
+  rsi_14: 52.950625
+  ema_12: 1975.377085
+  ema_26: 1983.193889
+  vwap: 2001.139499
+  bollinger_upper: 1999.66168
+  bollinger_lower: 1957.505301
+  bollinger_middle: 1978.583491
+  macd_histogram: 0.235858
+  atr_14: 14.1116
+  onchain_tx_count: 100
+  onchain_unique_wallets: 52
+  onchain_avg_trade_size_usd: 108.03
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0005
+  depth_2pct_usd: 48370.5
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 7
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 96
+  status: validated
+  reasons:
+  - lp_imbalance strength=100.0
+  - whale_movement strength=45.4
+  - whale_movement strength=39.6
+  - whale_movement strength=21.2
+  - whale_movement strength=16.0
+  - whale_movement strength=11.8
+  - high_onchain_activity strength=100.0
+  - TVL $4.9M sufficient
+  - Volume $2625K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.12
+    max_position_usd: 25000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+llm_classification:
+  asset_class: blue_chip
+  amm_type: concentrated_v3
+  liquidity_profile: moderate
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.95
+  viable: true
+  reasoning: ETH/USDT是高频蓝筹对，0.0005的极低储备比率意味着该池价格已严重偏离外部市场或处于流动性区间边缘，存在确定性套利空间。
+  parameter_hints:
+    entry_threshold_pct: 0.12
+    max_position_usd: 25000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.9
+  viable: true
+  reasoning: V3池子储备极度失衡通常意味着当前价格触及了流动性密集区的边界，利用该池深度不足进行价格修正套利胜率极高。
+  parameter_hints:
+    entry_threshold_pct: 0.15
+    max_position_usd: 10000
+    max_slippage_bps: 8
+    hold_blocks_max: 2
+- strategy_type: mean_reversion
+  pro_confidence: 0.55
+  viable: true
+  reasoning: 价格虽处于布林带上轨且偏离VWAP，但在极度失衡状态下，均值回归往往被套利流直接消化，建议作为辅助信号。
+  parameter_hints:
+    entry_threshold_pct: 0.4
+    max_position_usd: 5000
+    max_slippage_bps: 15
+    hold_blocks_max: 20
+llm_risk_flags:
+- extreme_reserve_imbalance
+- liquidity_concentration_risk
+- price_slippage_high_relative_to_depth
+llm_flash_raw:
+  pool_classification:
+    asset_class: blue_chip
+    amm_type: concentrated_v3
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.92
+    reasoning: 极端的储备金比例 (0.0005) 表明流动性几乎完全偏向单边，存在显著的回归套利空间。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.88
+    reasoning: ETH/USDT 在主流交易所流动性极佳，当前池内价格与 OHLCV 均值存在偏离，适合跨平台对冲。
+    trigger_signals:
+    - price_divergence
+    - high_onchain_activity
+  - strategy_type: mean_reversion
+    confidence: 0.65
+    reasoning: 价格目前处于布林带上轨上方，且 RSI 处于中性区间，短期可能存在向 VWAP 回调的需求。
+    trigger_signals:
+    - bollinger_breakout
+  risk_flags:
+  - extreme_reserve_imbalance
+  - liquidity_concentration_risk
+  - price_slippage_high_relative_to_depth
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.95
+    viable: true
+    reasoning: ETH/USDT是高频蓝筹对，0.0005的极低储备比率意味着该池价格已严重偏离外部市场或处于流动性区间边缘，存在确定性套利空间。
+    parameter_hints:
+      entry_threshold_pct: 0.12
+      max_position_usd: 25000
+      max_slippage_bps: 5
+      hold_blocks_max: 1
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.9
+    viable: true
+    reasoning: V3池子储备极度失衡通常意味着当前价格触及了流动性密集区的边界，利用该池深度不足进行价格修正套利胜率极高。
+    parameter_hints:
+      entry_threshold_pct: 0.15
+      max_position_usd: 10000
+      max_slippage_bps: 8
+      hold_blocks_max: 2
+  - strategy_type: mean_reversion
+    pro_confidence: 0.55
+    viable: true
+    reasoning: 价格虽处于布林带上轨且偏离VWAP，但在极度失衡状态下，均值回归往往被套利流直接消化，建议作为辅助信号。
+    parameter_hints:
+      entry_threshold_pct: 0.4
+      max_position_usd: 5000
+      max_slippage_bps: 15
+      hold_blocks_max: 20
+  pro_score: 92
+  pro_verdict: strong
+  override_reason: Flash模型对储备失衡的敏感度抓取准确。鉴于ETH/USDT在BSC上的高流动性，该池的极端比例（0.0005）是极佳的套利信号，上调套利策略置信度。
+llm_verdict: strong
+llm_score: 92
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

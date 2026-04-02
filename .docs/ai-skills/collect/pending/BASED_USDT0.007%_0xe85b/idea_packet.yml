@@ -1,0 +1,176 @@
+pair_id: BASED_USDT0.007%_0xe85b
+version: '1.0'
+source_evidence:
+  discovery_method: trending
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0xe85bc115847d7106b6335d067c6d2cf9b837ce50626a1df3f01d0012681a5db4'
+  base_token:
+    symbol: BASED
+    address: '0x1d28d989f9e3ccb8b15d0cec601734514f958e4d'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:290c33a9fb795113
+  primary_excerpt: 'Pool BASED_USDT0.007%_0xe85b on bsc/pancakeswap-infinity-clmm.
+    TVL: $1,140,734, 24h Volume: $19,877,987. high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0
+  tvl_usd: 1140734.4635
+  volume_24h_usd: 19877986.8196413
+  fee_bps: 25
+  ohlcv_summary: {}
+signals:
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 31
+    avg_trade_size_usd: 0.0
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 31
+  onchain_avg_trade_size_usd: 0.0
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 0.0
+cross_pool_analysis: {}
+validation:
+  dual_source_met: false
+  signal_count: 1
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - Gecko+DexScreener both unavailable, Moralis-only mode
+decision:
+  quality: moderate
+  score: 58
+  status: validated
+  reasons:
+  - high_onchain_activity strength=100.0
+  - TVL $1.1M sufficient
+  - Volume $19878K healthy
+execution_hints:
+  suggested_strategy: volume_momentum
+  urgency: medium
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 5000
+    max_slippage_bps: 100
+    hold_blocks_max: 10
+llm_classification:
+  asset_class: meme
+  amm_type: concentrated_v3
+  liquidity_profile: moderate
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.65
+  viable: true
+  reasoning: 交易量/TVL比率极高（17x），显示出极强的动能潜力，但缺乏价格数据导致无法确认趋势方向。
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 5000
+    max_slippage_bps: 100
+    hold_blocks_max: 10
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.6
+  viable: true
+  reasoning: 高频交易环境下，CLMM池与外部市场（如CEX或其他DEX）极易产生价差，但需补全价格喂价。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 10000
+    max_slippage_bps: 30
+    hold_blocks_max: 2
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.55
+  viable: true
+  reasoning: CLMM在极高换手率下容易导致流动性分布与价格脱节，存在均值回归机会。
+  parameter_hints:
+    entry_threshold_pct: 2.0
+    max_position_usd: 8000
+    max_slippage_bps: 50
+    hold_blocks_max: 20
+llm_risk_flags:
+- high_volume_to_tvl_ratio
+- potential_wash_trading
+- clmm_high_il_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: meme
+    amm_type: concentrated_v3
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.92
+    reasoning: 24h交易量接近TVL的17倍，显示出极高的换手率和市场热度。
+    trigger_signals:
+    - high_onchain_activity
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: 高频交易环境下，CLMM池与V2池或中心化交易所之间极易产生价差。
+    trigger_signals:
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.78
+    reasoning: 集中流动性池在极端交易量下容易导致头寸偏离，产生回补机会。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - high_volume_to_tvl_ratio
+  - potential_wash_trading
+  - clmm_high_il_risk
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.65
+    viable: true
+    reasoning: 交易量/TVL比率极高（17x），显示出极强的动能潜力，但缺乏价格数据导致无法确认趋势方向。
+    parameter_hints:
+      entry_threshold_pct: 1.5
+      max_position_usd: 5000
+      max_slippage_bps: 100
+      hold_blocks_max: 10
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.6
+    viable: true
+    reasoning: 高频交易环境下，CLMM池与外部市场（如CEX或其他DEX）极易产生价差，但需补全价格喂价。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 10000
+      max_slippage_bps: 30
+      hold_blocks_max: 2
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.55
+    viable: true
+    reasoning: CLMM在极高换手率下容易导致流动性分布与价格脱节，存在均值回归机会。
+    parameter_hints:
+      entry_threshold_pct: 2.0
+      max_position_usd: 8000
+      max_slippage_bps: 50
+      hold_blocks_max: 20
+  pro_score: 63
+  pro_verdict: moderate
+  override_reason: 数据完整度严重不足：price_usd无效且ohlcv缺失，深度数据为0。虽然交易量巨大，但在缺乏实时价格和深度支撑的情况下，量化执行风险极高。根据规则扣除25分。
+llm_verdict: moderate
+llm_score: 63
+hypotheses:
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

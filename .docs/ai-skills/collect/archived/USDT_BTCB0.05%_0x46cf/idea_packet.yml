@@ -1,0 +1,289 @@
+pair_id: USDT_BTCB0.05%_0x46cf
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0x46cf1cf8c69595804ba91dfdd8d6b960c9b0a7c4'
+  base_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  quote_token:
+    symbol: BTCB 0.05%
+    address: '0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c'
+  raw_snapshot_hash: sha256:9157d5e97885876a
+  primary_excerpt: 'Pool USDT_BTCB0.05%_0x46cf on bsc/pancakeswap-v3-bsc. TVL: $17,840,702,
+    24h Volume: $21,389,549. lp_imbalance(str=100.0); whale_movement(str=100.0); whale_movement(str=100.0);
+    whale_movement(str=100.0); whale_movement(str=100.0)'
+market_data:
+  price_usd: 0.997141273988947
+  tvl_usd: 17840701.8775
+  volume_24h_usd: 21389548.5408582
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 1.0084136125966
+    low: 0.988136569581695
+    close: 0.995694869751598
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 100.0
+  source: gecko
+  details:
+    reserve_ratio: 1.4812703823344303e-05
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xaa9736d5b4d53e58fe52b277468da10e7c46689330d245424fcacf562d23e9ea'
+    value_usd: 33642.58785754218
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x8be7388d91f48a799f88109b25a07b51e2e72a57b5efc4d3b7f552a62b20c3dc'
+    value_usd: 20328.101604435542
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x2fb8ea21a76a53b5e8e99e02a1d6de0e22ac7a62a1bde8bb2e28349e049b5948'
+    value_usd: 13614.13662962509
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x4d5d4d47c81c9486689a1da3fb2154aa42ab3f60a3c4dd6ebd6dace99f61df91'
+    value_usd: 12868.96908112281
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x5f1df9199498a054da6d7a25156bfca9b4646ecb55e366bfa624e8426ceca9b9'
+    value_usd: 5202.896026175616
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x9498b4c19c26661d6c5447b02f98d73e2a749c2127b69ae9a73bf2b2cd61a00f'
+    value_usd: 5190.42916880169
+- signal_type: whale_movement
+  strength: 82.51
+  source: moralis
+  details:
+    tx_hash: '0xd3538aaf0eae46a90cfa0365e240d9d827f2dd61ad8b3795f2f7c16bf159acbf'
+    value_usd: 4125.469104728608
+- signal_type: whale_movement
+  strength: 35.98
+  source: moralis
+  details:
+    tx_hash: '0x67f55eb0659d32c31548c128c4e67ec2573f3a915cde35695abbb1fdd6bf557c'
+    value_usd: 1799.0953064446087
+- signal_type: whale_movement
+  strength: 24.48
+  source: moralis
+  details:
+    tx_hash: '0xf34acc01b0cf61afb304cf00b7f9c3370054a410c8735466c22e0c3f09256cae'
+    value_usd: 1224.22087906355
+- signal_type: whale_movement
+  strength: 20.54
+  source: moralis
+  details:
+    tx_hash: '0xc0ecc194e376da28cb944f6a7c6e27de698e896df1e1311b3f9cfe6c06482843'
+    value_usd: 1026.850149926981
+- signal_type: whale_movement
+  strength: 14.36
+  source: moralis
+  details:
+    tx_hash: '0x3f6e30b7cb47d9ff72cbda45f275813b3f97bb95f63db4ebabdf3048341e7b9d'
+    value_usd: 718.1001174024783
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 113
+    avg_trade_size_usd: 1797.38
+indicators:
+  rsi_14: 47.813329
+  ema_12: 0.996784
+  ema_26: 0.997123
+  vwap: 0.998614
+  bollinger_upper: 1.000636
+  bollinger_lower: 0.993034
+  bollinger_middle: 0.996835
+  macd_histogram: 9.2e-05
+  atr_14: 0.007497
+  onchain_tx_count: 100
+  onchain_unique_wallets: 113
+  onchain_avg_trade_size_usd: 1797.38
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0
+  depth_2pct_usd: 177514.98
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 13
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 96
+  status: validated
+  reasons:
+  - lp_imbalance strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=100.0
+  - whale_movement strength=82.5
+  - whale_movement strength=36.0
+  - whale_movement strength=24.5
+  - whale_movement strength=20.5
+  - whale_movement strength=14.4
+  - high_onchain_activity strength=100.0
+  - TVL $17.8M sufficient
+  - Volume $21390K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.15
+    max_position_usd: 100000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+llm_classification:
+  asset_class: blue_chip
+  amm_type: concentrated_v3
+  liquidity_profile: deep
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.95
+  viable: true
+  reasoning: BTCB/USDT是BSC链上核心交易对，其价格与Binance CEX高度挂钩，0.05%的低费率池极易产生跨平台套利机会。
+  parameter_hints:
+    entry_threshold_pct: 0.15
+    max_position_usd: 100000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.65
+  viable: true
+  reasoning: 虽然reserve_ratio显示极度失衡，但在V3集中流动性模型中，这往往是由于价格偏离流动性密集区导致，适合进行均值回归套利，但需警惕单边行情。
+  parameter_hints:
+    entry_threshold_pct: 0.4
+    max_position_usd: 50000
+    max_slippage_bps: 10
+    hold_blocks_max: 5
+- strategy_type: volume_momentum
+  pro_confidence: 0.82
+  viable: true
+  reasoning: 24h交易量超过TVL，且伴随频繁的中额交易（$1k-$30k），显示出强劲的链上换手动力，适合跟随趋势。
+  parameter_hints:
+    entry_threshold_pct: 0.3
+    max_position_usd: 30000
+    max_slippage_bps: 8
+    hold_blocks_max: 20
+llm_risk_flags:
+- extreme_reserve_imbalance
+- high_whale_concentration
+- concentrated_liquidity_volatility_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: blue_chip
+    amm_type: concentrated_v3
+    liquidity_profile: deep
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.92
+    reasoning: 高交易量与TVL比率以及频繁的大额交易暗示该池与中心化交易所或其他DEX间存在持续套利空间。
+    trigger_signals:
+    - whale_movement
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.85
+    reasoning: 检测到极高的流动性失衡信号（reserve_ratio极低），适合捕捉池内头寸回归均值的瞬时机会。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: volume_momentum
+    confidence: 0.78
+    reasoning: 24h交易量超过TVL，且伴随密集的鲸鱼活动，适合基于成交量激增的动量策略。
+    trigger_signals:
+    - high_onchain_activity
+    - whale_movement
+  risk_flags:
+  - extreme_reserve_imbalance
+  - high_whale_concentration
+  - concentrated_liquidity_volatility_risk
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.95
+    viable: true
+    reasoning: BTCB/USDT是BSC链上核心交易对，其价格与Binance CEX高度挂钩，0.05%的低费率池极易产生跨平台套利机会。
+    parameter_hints:
+      entry_threshold_pct: 0.15
+      max_position_usd: 100000
+      max_slippage_bps: 5
+      hold_blocks_max: 1
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.65
+    viable: true
+    reasoning: 虽然reserve_ratio显示极度失衡，但在V3集中流动性模型中，这往往是由于价格偏离流动性密集区导致，适合进行均值回归套利，但需警惕单边行情。
+    parameter_hints:
+      entry_threshold_pct: 0.4
+      max_position_usd: 50000
+      max_slippage_bps: 10
+      hold_blocks_max: 5
+  - strategy_type: volume_momentum
+    pro_confidence: 0.82
+    viable: true
+    reasoning: 24h交易量超过TVL，且伴随频繁的中额交易（$1k-$30k），显示出强劲的链上换手动力，适合跟随趋势。
+    parameter_hints:
+      entry_threshold_pct: 0.3
+      max_position_usd: 30000
+      max_slippage_bps: 8
+      hold_blocks_max: 20
+  pro_score: 85
+  pro_verdict: strong
+  override_reason: 池子基本面极佳，TVL与交易量匹配度高。下调分值主要因为reserve_ratio在V3池中可能存在统计口径偏差（0.0的极端值），但在主流币对中不影响核心套利逻辑。
+llm_verdict: strong
+llm_score: 85
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

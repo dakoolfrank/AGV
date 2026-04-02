@@ -1,0 +1,9 @@
+max_trade_usd: 20.0
+min_trade_usd: 5.0
+pair: ETH_BNB
+pool_address: '0x74E4716E431f45807DCF19f284c7aA99F18a4fbc'
+price: 3800.0
+tvl_usd: 22000000.0
+viable_strategies:
+- cross_pool_arbitrage
+- volume_momentum

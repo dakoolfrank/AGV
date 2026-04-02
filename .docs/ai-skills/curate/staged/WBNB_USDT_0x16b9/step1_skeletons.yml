@@ -1,0 +1,227 @@
+# ==========================================
+# 第一层：元信息（必填）
+# 用途：追溯来源、版本管理、审计日志
+# ==========================================
+extraction_info:
+  source: WBNB_USDT_0x16b9
+  date: '2026-04-02'
+  domain: defi
+  total_skeletons: 3
+  tower_count: 3
+  yi_count: 0
+  extraction_date: '2026-04-02'
+  notes: '自动消毒 6 项: [slot_count] arb_cross_pool_01: None → 1 (from 0 standard placeholders);
+    [slot_count] whale_follow_01: None → 1 (from 0 standard placeholders); [slot_count]
+    volume_momentum_01: None → 1 (from 0 standard placeholders)'
+  semantic_validation:
+    total_warnings: 0
+    warnings: []
+    total_repairs: 0
+    repairs: []
+  claim_validation:
+    total: 3
+    with_claims: 3
+    without_claims: 0
+    claim_evidence_missing: false
+    source_distribution:
+      structured: 3
+  parameter_fidelity:
+    total_skeletons_checked: 3
+    total_params_expected: 0
+    total_params_found: 0
+    global_fidelity_ratio: 1.0
+    skeletons_with_missing: 0
+    status_counts:
+      clean: 2
+      ungrounded_warning: 1
+    details:
+    - skeleton_id: wbnb_usdt_0x16b9_volume_momentum_01
+      status: ungrounded_warning
+      ungrounded_numbers:
+      - '14'
+
+# ==========================================
+# 第二层：核心结构分析（必填）
+# 用途：骨架族的共性分析，供 AI 和人类理解
+# ==========================================
+core_structure:
+  skeleton_family: batched_extraction
+  base_pattern: 分批提取合并
+  economic_story: ''
+  normalization_variants:
+    variant_1: rank
+    variant_2: ts_rank
+
+# ==========================================
+# 第三层：字段池定义（必填）
+# 用途：供 dataset-explorer 绑定具体字段
+# ==========================================
+field_pools:
+  main_pool:
+    description: 基础量价数据池
+    candidates:
+    - close
+    - open
+    - high
+    - low
+    - volume
+    - vwap
+    - returns
+
+# ==========================================
+# 第四层：仿真设置（必填）
+# 用途：默认回测参数，供引擎使用
+# ==========================================
+simulation_settings:
+  region: USA
+  universe: TOP3000
+  delay: 1
+  decay: 6
+  neutralization: SUBINDUSTRY
+  truncation: 0.08
+  pasteurization: 'ON'
+  nanHandling: 'ON'
+  unitHandling: VERIFY
+
+# ==========================================
+# 第七层：对比表（必填）
+# 用途：快速概览所有骨架的特点
+# ==========================================
+comparison_table:
+  headers:
+  - skeleton_id
+  - 特点
+  - 优先级
+  rows: []
+
+# ==========================================
+# 第五层：Tower 骨架列表（核心产出）
+# 用途：可执行骨架，供回测引擎和模板扩展
+# ==========================================
+tower_templates:
+- skeleton_id: wbnb_usdt_0x16b9_arb_cross_pool_01
+  strategy_type: cross_pool_arbitrage
+  description: 基于跨池价差的闪电贷无风险套利
+  pattern: cross_pool.price_divergence(pool_a, pool_b) > min_spread_bps
+  trigger:
+    condition: cross_pool.price_divergence(pool_a, pool_b) > (amm.fee_bps * 2 + gas_cost_bps)
+    params:
+      min_spread_bps: 60
+      fee_bps: 25
+      gas_cost_bps: 10
+  entry:
+    method: flash_loan
+    pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+    direction: buy
+  sizing:
+    method: optimal_arb_size
+    max_position_usd: 100000
+  exit:
+    take_profit_bps: 10
+    stop_loss_bps: 5
+    max_hold_seconds: 0
+  risk:
+    max_slippage_bps: 5
+    min_tvl_usd: 5000000
+    gas_budget_usd: 5.0
+  rationale: 目标池TVL高达$34.5M，深度极佳。当检测到与其他DEX/池的价差(price_divergence强度100.0)超过手续费与Gas成本时，通过AMM恒积公式计算最优套利量(optimal_arb_size)并使用闪电贷执行原子套利。
+  confidence: 0.8
+  claim_refs:
+  - c1
+  slot_count: 1
+  _claim_valid: true
+  _claim_refs:
+  - c1
+  _claim_source: structured
+  _parameter_fidelity:
+    status: clean
+    reason: no_numeric_literals
+    claim_refs_checked:
+    - c1
+- skeleton_id: wbnb_usdt_0x16b9_whale_follow_01
+  strategy_type: whale_follow
+  description: 跟随巨鲸大额转账的短期动量交易
+  pattern: whale_movement.value_usd > min_whale_usd
+  trigger:
+    condition: detect(whale_movement) AND whale_movement.value_usd > min_whale_usd
+    params:
+      min_whale_usd: 500
+  entry:
+    method: swap
+    pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+    direction: buy
+  sizing:
+    method: fixed
+    max_position_usd: 2000
+  exit:
+    take_profit_bps: 50
+    stop_loss_bps: 20
+    max_hold_seconds: 300
+  risk:
+    max_slippage_bps: 15
+    min_tvl_usd: 1000000
+    gas_budget_usd: 2.0
+  rationale: 监测到多次巨鲸异动信号(强度20.2, 15.6, 13.3)，巨鲸的大额资金进出容易在AMM池中造成短期价格冲击(price_impact)。策略在巨鲸买入后迅速跟随，并在价格冲高后快速止盈退出。
+  confidence: 0.6
+  claim_refs:
+  - c2
+  slot_count: 1
+  _claim_valid: true
+  _claim_refs:
+  - c2
+  _claim_source: structured
+  _parameter_fidelity:
+    status: clean
+    reason: no_numeric_literals
+    claim_refs_checked:
+    - c2
+- skeleton_id: wbnb_usdt_0x16b9_volume_momentum_01
+  strategy_type: volume_momentum
+  description: 基于链上活跃度飙升的趋势跟随策略
+  pattern: onchain_activity.tx_count > min_tx AND indicators.rsi(closes, 14) > rsi_threshold
+  trigger:
+    condition: high_onchain_activity(tx_count > min_tx, unique_wallets > min_wallets)
+      AND indicators.rsi(closes, 14) > rsi_threshold
+    params:
+      min_tx: 80
+      min_wallets: 50
+      rsi_threshold: 50
+  entry:
+    method: swap
+    pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+    direction: buy
+  sizing:
+    method: kelly
+    max_position_usd: 5000
+  exit:
+    take_profit_bps: 100
+    stop_loss_bps: 40
+    max_hold_seconds: 3600
+  risk:
+    max_slippage_bps: 20
+    min_tvl_usd: 2000000
+    gas_budget_usd: 3.0
+  rationale: 链上活跃度信号极强(强度100.0，tx_count=100, unique_wallets=82)，表明该交易对正处于高关注度阶段。结合RSI等技术指标确认动量方向，顺势建立头寸以捕捉资金流入带来的趋势性收益。
+  confidence: 0.5
+  claim_refs:
+  - c3
+  slot_count: 1
+  _claim_valid: true
+  _claim_refs:
+  - c3
+  _claim_source: structured
+  _parameter_fidelity:
+    status: ungrounded_warning
+    reason: pattern_nums_not_in_claims
+    claim_refs_checked:
+    - c3
+    pattern_numbers:
+    - '14'
+    ungrounded_numbers:
+    - '14'
+
+# ==========================================
+# 第六层：Yi 多槽位骨架（可空）
+# 用途：slot_count > 3 的复杂骨架，供 yi 策略使用
+# ==========================================
+yi_templates: []

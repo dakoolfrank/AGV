@@ -1,0 +1,18 @@
+pair_id: ON_USDT0.01%_0x4620
+pool_address: '0x4620f5c127a6055fbebb1f71327d60ff079c9060'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: 'ON'
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: price_divergence
+signal_strength: 13.32
+tvl_usd: 773307.3518
+volume_24h_usd: 11757966.2607964
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: shallow
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.72
+llm_verdict: moderate
+llm_score: 58

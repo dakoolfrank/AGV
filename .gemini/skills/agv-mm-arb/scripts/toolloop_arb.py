@@ -3,23 +3,29 @@ Arb-Campaign Tool Loop — 5 步管线 (DESIGN.md §3)
 
 collect → curate → dataset → execute → fix
 
+设计理念（路径 B — 因子驱动定向交易）:
+  ≠ 搬砖套利（比速度）
+  = AI 因子策略 → 信号评估 → 定向买入 → 持仓管理 → 止盈/止损（比脑子）
+
+  核心区分:
+    搬砖: 双池价差 → 原子交易 → 秒级 → 零壁垒
+    路径B: AI因子 → 信号判断 → 持仓周期 → 知识壁垒
+
+Execute 工作模式:
+  1. 取当前市场快照（价格/储备/链上活跃度）
+  2. 若无持仓 → SignalEvaluator 评估入场信号 → 满足则 BUY
+  3. 若有持仓 → 评估出场信号（止盈/止损/超时）→ 满足则 SELL
+  4. 记录持仓状态 + P&L
+
 调用方式对齐 WQ-YI:
-  WQ-YI 不使用 AgentOps。Skill 的调用方式是直接实例化类 + 调方法:
-    KnowledgeBaseSkill(paper_dict, ctx=ctx).run()
-    DatasetExplorerSkill(ctx=ctx).generate_all_L1(skeleton_file)
-    DatasetExplorerSkill(ctx=ctx).bind_all_l2_for_skeleton(skel_id)
   AGV 的 curate/dataset 步骤直接调用 WQ-YI 的 Skill 类，不经过 AgentOps。
 
 管线步骤:
   - collect:  modules/collect/ 子模块（自建 — GeckoTerminal + Moralis）
   - curate:  直接调 WQ-YI KnowledgeBaseSkill
   - dataset: 委托 DatasetOps (agent_ops_arb.py) — 唯一 L1+L2 真相源
-  - execute: 共享执行层（toolloop_mm.py 中的 DexExecutor）
+  - execute: SignalEvaluator + PositionManager + DexExecutor（因子驱动）
   - fix:     三级回退诊断
-
-AssetRef kind 映射（§3.7）:
-  collect → market_signal → curate → arb_skeleton → dataset → arb_strategy
-  → execute → execution_result → fix → fix_patch
 
 三级回退（§3.6）:
   A: 参数调整 → execute（同策略重试，零 LLM）
@@ -39,7 +45,7 @@ logger = logging.getLogger(__name__)
 
 # ── 共享执行层导入 ──────────────────────────────────
 try:
-    from toolloop_mm import (
+    from toolloop_common import (
         ROUTER, USDT, KNOWN_PAIRS, PANCAKE_V2_PAIR_ABI,
         SlippageGuard, MEVGuard, TVLBreaker,
         ApproveManager,
@@ -54,17 +60,12 @@ except ImportError:
     TVLBreaker = None  # type: ignore[assignment,misc]
     ApproveManager = None  # type: ignore[assignment,misc]
 
-# ── AGV 池 → Token 映射 ─────────────────────────────
+# ── 外部 DEX 池 → Token 映射（种子数据，collect 动态补充）──
 POOL_TOKEN_MAP: dict[str, dict[str, str]] = {
-    "0x5558e43eE316C45e6C842bC7aC4B770EED03c5C0": {
-        "base": "0x8F9EC8107C126e94F5C4df26350Fb7354E0C8af9",   # pGVT
+    "0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE": {
+        "base": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",   # WBNB
         "quote": "0x55d398326f99059fF775485246999027B3197955",  # USDT
-        "name": "pGVT_USDT",
-    },
-    "0xBE1B08D1743f2C158165472Fa2fEB038E8DfaA9d": {
-        "base": "0x53e599211bF49Aa2336C3F839Ad57e20dE3662a3",   # sGVT
-        "quote": "0x55d398326f99059fF775485246999027B3197955",  # USDT
-        "name": "sGVT_USDT",
+        "name": "WBNB_USDT",
     },
 }
 
@@ -78,6 +79,446 @@ RETREAT_LEVELS = {
     "B": {"target_step": "curate",  "llm": True,  "trigger": "factor_exhausted"},
     "C": {"target_step": "collect",  "llm": True,  "trigger": "structural_change"},
 }
+
+
+# ── P&L 计算工具 ─────────────────────────────────────
+
+
+# ── 市场快照（链上实时数据）─────────────────────────
+@dataclass
+class MarketSnapshot:
+    """单次链上采样 — 供 SignalEvaluator 判断入场/出场"""
+    pool_address: str
+    reserve_in: int = 0
+    reserve_out: int = 0
+    spot_price: float = 0.0      # reserve_out / reserve_in
+    timestamp: float = field(default_factory=time.time)
+    block_number: int = 0
+    # 可选扩展字段（由 _enrich_snapshot 填充）
+    price_change_pct: float = 0.0  # 相对于持仓入场价的变化
+    metadata: dict = field(default_factory=dict)
+
+    @property
+    def is_valid(self) -> bool:
+        return self.reserve_in > 0 and self.reserve_out > 0
+
+
+# ── 持仓记录 ─────────────────────────────────────────
+@dataclass
+class Position:
+    """单个持仓 — 记录买入时的状态"""
+    pool_address: str
+    strategy_id: str
+    token_held: str             # 持有的 token 地址（买入的 token_out）
+    token_quote: str            # 计价 token 地址（卖出时要换回的）
+    amount_held: int            # 持有数量（wei）
+    entry_price: float          # 入场价（spot_price at buy）
+    entry_amount_usd: float     # 入场金额（USD）
+    entry_time: float = field(default_factory=time.time)
+    entry_block: int = 0
+    entry_tx_hash: str = ""
+    # 策略参数（从 StrategyRef.exit_rules 复制）
+    take_profit_bps: float = 50.0   # 止盈 bps
+    stop_loss_bps: float = 20.0     # 止损 bps
+    max_hold_seconds: int = 300     # 最大持仓时间
+    metadata: dict = field(default_factory=dict)
+
+    @property
+    def age_seconds(self) -> float:
+        return time.time() - self.entry_time
+
+    def to_dict(self) -> dict:
+        return {
+            "pool_address": self.pool_address,
+            "strategy_id": self.strategy_id,
+            "token_held": self.token_held,
+            "token_quote": self.token_quote,
+            "amount_held": self.amount_held,
+            "entry_price": self.entry_price,
+            "entry_amount_usd": self.entry_amount_usd,
+            "entry_time": self.entry_time,
+            "entry_block": self.entry_block,
+            "entry_tx_hash": self.entry_tx_hash,
+            "take_profit_bps": self.take_profit_bps,
+            "stop_loss_bps": self.stop_loss_bps,
+            "max_hold_seconds": self.max_hold_seconds,
+        }
+
+    @classmethod
+    def from_dict(cls, d: dict) -> "Position":
+        return cls(**{k: v for k, v in d.items() if k in cls.__dataclass_fields__})
+
+
+class PositionManager:
+    """持仓管理器 — YAML 持久化，支持跨 Session 恢复
+
+    存储路径: .docs/ai-skills/execute/positions.yml
+    """
+
+    def __init__(self, workspace: Path | None = None):
+        self._workspace = workspace or Path.cwd()
+        self._positions: dict[str, Position] = {}  # pool_address → Position
+        self._closed: list[dict] = []               # 已平仓记录
+        self._load()
+
+    @property
+    def _positions_file(self) -> Path:
+        return self._workspace / ".docs" / "ai-skills" / "execute" / "positions.yml"
+
+    def _load(self) -> None:
+        f = self._positions_file
+        if not f.exists():
+            return
+        try:
+            import yaml
+            data = yaml.safe_load(f.read_text()) or {}
+            for k, v in (data.get("open", {}) or {}).items():
+                self._positions[k] = Position.from_dict(v)
+            self._closed = data.get("closed", []) or []
+        except Exception as exc:
+            logger.warning("PositionManager: load failed: %s", exc)
+
+    def save(self) -> None:
+        f = self._positions_file
+        f.parent.mkdir(parents=True, exist_ok=True)
+        import yaml
+        data = {
+            "open": {k: v.to_dict() for k, v in self._positions.items()},
+            "closed": self._closed[-50:],  # 保留最近 50 条
+        }
+        f.write_text(yaml.dump(data, default_flow_style=False, allow_unicode=True))
+
+    def has_position(self, pool_address: str) -> bool:
+        return pool_address in self._positions
+
+    def get_position(self, pool_address: str) -> Position | None:
+        return self._positions.get(pool_address)
+
+    def open_position(self, position: Position) -> None:
+        self._positions[position.pool_address] = position
+        self.save()
+        logger.info("position opened: %s @ %.6f (%s)",
+                     position.strategy_id, position.entry_price, position.pool_address[:10])
+
+    def close_position(self, pool_address: str, *, exit_price: float,
+                       exit_reason: str, pnl: dict | None = None) -> Position | None:
+        pos = self._positions.pop(pool_address, None)
+        if pos:
+            self._closed.append({
+                **pos.to_dict(),
+                "exit_price": exit_price,
+                "exit_reason": exit_reason,
+                "exit_time": time.time(),
+                "hold_seconds": pos.age_seconds,
+                "pnl": pnl,
+            })
+            self.save()
+            logger.info("position closed: %s reason=%s hold=%.0fs",
+                         pos.strategy_id, exit_reason, pos.age_seconds)
+        return pos
+
+    def list_open(self) -> list[Position]:
+        return list(self._positions.values())
+
+    @property
+    def open_count(self) -> int:
+        return len(self._positions)
+
+
+# ── 出场信号 ─────────────────────────────────────────
+@dataclass
+class ExitSignal:
+    """出场信号"""
+    should_exit: bool
+    reason: str                # take_profit / stop_loss / timeout / signal_reversal
+    current_price: float = 0.0
+    pnl_bps: float = 0.0      # 当前浮动收益 bps
+
+
+class SignalEvaluator:
+    """因子信号评估器 — 用 dataset 绑定的指标决定入场/出场
+
+    当前支持的因子:
+      - volume_momentum: 价格动量 + 链上活跃度（简化: 价格变化率）
+      - whale_follow: 巨鲸跟随（简化: 大额储备变化检测）
+
+    不支持 cross_pool_arbitrage（搬砖，不是我们的方向）。
+
+    入场逻辑:
+      - 取当前市场快照
+      - 与历史快照对比，计算价格变化率
+      - 变化率 > 阈值 → 入场信号
+
+    出场逻辑:
+      - 止盈: 价格相对入场价上涨 > take_profit_bps
+      - 止损: 价格相对入场价下跌 > stop_loss_bps
+      - 超时: 持仓时间 > max_hold_seconds
+    """
+
+    # 入场默認阈值
+    DEFAULT_MOMENTUM_ENTRY_BPS = 30    # 价格正向变化 > 0.3% → 入场
+    DEFAULT_VOLUME_SPIKE_RATIO = 1.5   # 储备变化 > 1.5x → 活跃度信号
+
+    def __init__(self, *, config: dict | None = None):
+        self.config = config or {}
+        self._price_history: dict[str, list[tuple[float, float]]] = {}  # pool → [(ts, price)]
+        self._reserve_history: dict[str, list[tuple[float, int, int]]] = {}  # pool → [(ts, r_in, r_out)]
+
+    def record_snapshot(self, snapshot: MarketSnapshot) -> None:
+        """记录市场快照 — 供后续信号计算使用"""
+        pool = snapshot.pool_address
+        if pool not in self._price_history:
+            self._price_history[pool] = []
+            self._reserve_history[pool] = []
+
+        self._price_history[pool].append((snapshot.timestamp, snapshot.spot_price))
+        self._reserve_history[pool].append(
+            (snapshot.timestamp, snapshot.reserve_in, snapshot.reserve_out)
+        )
+        # 保留最近 100 条
+        self._price_history[pool] = self._price_history[pool][-100:]
+        self._reserve_history[pool] = self._reserve_history[pool][-100:]
+
+    def evaluate_entry(self, strategy: "StrategyRef", snapshot: MarketSnapshot) -> dict:
+        """评估入场信号 — 返回 {should_enter, reason, confidence}
+
+        策略类型分发:
+          - volume_momentum → 短期价格动量 + 储备活跃度
+          - whale_follow → 储备突变检测
+          - cross_pool_arbitrage → 拒绝（不支持搬砖）
+        """
+        stype = strategy.strategy_type
+
+        if stype == "cross_pool_arbitrage":
+            return {"should_enter": False, "reason": "unsupported_strategy_type",
+                    "confidence": 0.0}
+
+        if not snapshot.is_valid:
+            return {"should_enter": False, "reason": "invalid_snapshot", "confidence": 0.0}
+
+        self.record_snapshot(snapshot)
+
+        if stype == "volume_momentum":
+            return self._eval_momentum_entry(strategy, snapshot)
+        elif stype == "whale_follow":
+            return self._eval_whale_entry(strategy, snapshot)
+        else:
+            return self._eval_momentum_entry(strategy, snapshot)  # fallback
+
+    def _eval_momentum_entry(self, strategy: "StrategyRef", snapshot: MarketSnapshot) -> dict:
+        """动量入场: 短期价格上涨 > 阈值"""
+        pool = snapshot.pool_address
+        history = self._price_history.get(pool, [])
+        if len(history) < 2:
+            return {"should_enter": False, "reason": "insufficient_history",
+                    "confidence": 0.0, "history_count": len(history)}
+
+        # 对比最近 vs 之前的均价
+        recent_price = snapshot.spot_price
+        lookback = min(10, len(history) - 1)
+        older_prices = [p for _, p in history[-lookback - 1:-1] if p > 0]
+        if not older_prices:
+            return {"should_enter": False, "reason": "no_valid_older_prices",
+                    "confidence": 0.0}
+        avg_older = sum(older_prices) / len(older_prices)
+
+        if avg_older <= 0:
+            return {"should_enter": False, "reason": "zero_avg_price", "confidence": 0.0}
+
+        change_bps = ((recent_price - avg_older) / avg_older) * 10000
+        threshold = self.config.get("momentum_entry_bps", self.DEFAULT_MOMENTUM_ENTRY_BPS)
+
+        trigger_params = getattr(strategy, "entry", {}) or {}
+        # 骨架可能在 trigger.params 中指定阈值
+        if isinstance(trigger_params, dict):
+            threshold = trigger_params.get("momentum_entry_bps", threshold)
+
+        should_enter = change_bps > threshold
+        confidence = min(1.0, abs(change_bps) / (threshold * 3)) if threshold > 0 else 0.0
+
+        return {
+            "should_enter": should_enter,
+            "reason": f"momentum {'triggered' if should_enter else 'below_threshold'}",
+            "change_bps": round(change_bps, 2),
+            "threshold_bps": threshold,
+            "confidence": round(confidence, 3),
+            "recent_price": recent_price,
+            "avg_older_price": avg_older,
+            "lookback": lookback,
+        }
+
+    def _eval_whale_entry(self, strategy: "StrategyRef", snapshot: MarketSnapshot) -> dict:
+        """巨鲸入场: 储备突变 → 大额资金进入"""
+        pool = snapshot.pool_address
+        reserve_hist = self._reserve_history.get(pool, [])
+        if len(reserve_hist) < 2:
+            return {"should_enter": False, "reason": "insufficient_reserve_history",
+                    "confidence": 0.0}
+
+        # 计算储备变化率
+        _, prev_r_in, prev_r_out = reserve_hist[-2]
+        curr_total = snapshot.reserve_in + snapshot.reserve_out
+        prev_total = prev_r_in + prev_r_out
+
+        if prev_total <= 0:
+            return {"should_enter": False, "reason": "zero_prev_reserves", "confidence": 0.0}
+
+        change_ratio = curr_total / prev_total
+        spike_threshold = self.config.get("volume_spike_ratio", self.DEFAULT_VOLUME_SPIKE_RATIO)
+
+        should_enter = change_ratio > spike_threshold
+        confidence = min(1.0, (change_ratio - 1.0) / (spike_threshold - 1.0)) if spike_threshold > 1 else 0.0
+
+        return {
+            "should_enter": should_enter,
+            "reason": f"whale {'detected' if should_enter else 'no_spike'}",
+            "reserve_change_ratio": round(change_ratio, 4),
+            "spike_threshold": spike_threshold,
+            "confidence": round(max(0.0, confidence), 3),
+        }
+
+    def evaluate_exit(self, position: Position, snapshot: MarketSnapshot) -> ExitSignal:
+        """评估出场信号 — 止盈/止损/超时"""
+        if not snapshot.is_valid:
+            return ExitSignal(should_exit=False, reason="invalid_snapshot")
+
+        current_price = snapshot.spot_price
+        entry_price = position.entry_price
+
+        if entry_price <= 0:
+            return ExitSignal(should_exit=False, reason="zero_entry_price")
+
+        # 浮动 P&L（bps）
+        pnl_bps = ((current_price - entry_price) / entry_price) * 10000
+
+        # 1. 止盈
+        if pnl_bps >= position.take_profit_bps:
+            return ExitSignal(
+                should_exit=True, reason="take_profit",
+                current_price=current_price, pnl_bps=pnl_bps,
+            )
+
+        # 2. 止损
+        if pnl_bps <= -position.stop_loss_bps:
+            return ExitSignal(
+                should_exit=True, reason="stop_loss",
+                current_price=current_price, pnl_bps=pnl_bps,
+            )
+
+        # 3. 超时
+        if position.max_hold_seconds > 0 and position.age_seconds > position.max_hold_seconds:
+            return ExitSignal(
+                should_exit=True, reason="timeout",
+                current_price=current_price, pnl_bps=pnl_bps,
+            )
+
+        return ExitSignal(
+            should_exit=False, reason="hold",
+            current_price=current_price, pnl_bps=pnl_bps,
+        )
+
+
+# ── P&L 计算工具 ─────────────────────────────────────
+
+def _calc_trade_pnl(
+    *,
+    amount_in_wei: int,
+    amount_out: int,
+    r_in: int,
+    r_out: int,
+    gas_used: int,
+    amount_in_usd: float,
+    gas_price_gwei: float = 3.0,  # BSC 默认 gas price
+    bnb_price_usd: float = 300.0,  # BNB/USD 价格
+) -> dict:
+    """计算 swap 交易的 P&L（往返成本 + gas）
+
+    AMM 往返逻辑:
+      1. 买入: amount_in → amount_out（已执行）
+      2. 卖出: amount_out → expected_back（理论计算）
+      3. 往返损失 = amount_in - expected_back
+
+    返回:
+      - gross_pnl_bps: 往返毛损失（basis points，万分比）
+      - gas_cost_usd: gas 成本（美元）
+      - net_pnl_usd: 净 P&L（美元，负数表示亏损）
+      - profitable: 是否有利可图（bool）
+      - break_even_bps: 盈亏平衡点（需要的最小价差 bps）
+    """
+    result = {
+        "gross_pnl_bps": 0.0,
+        "gas_cost_usd": 0.0,
+        "net_pnl_usd": 0.0,
+        "profitable": False,
+        "break_even_bps": 0.0,
+        "round_trip_out": 0,
+        "slippage_loss_bps": 0.0,
+    }
+
+    # ── 1. 计算往返输出（假设立即反向卖出）──
+    # 卖出后的新储备: r_in' = r_in - amount_in, r_out' = r_out + amount_out
+    # PancakeSwap 0.25% fee → 997/1000
+    if r_in <= 0 or r_out <= 0 or amount_out <= 0:
+        return result
+
+    # 买入后池子状态（简化：忽略手续费对储备的影响）
+    new_r_in = r_in + amount_in_wei
+    new_r_out = r_out - amount_out
+
+    if new_r_out <= 0:
+        # 抽干了池子（不可能发生，但防御）
+        return result
+
+    # 卖出 amount_out → 预期回收多少 quote
+    # getAmountOut: (amount_out * 997 * new_r_in) / (new_r_out * 1000 + amount_out * 997)
+    amount_out_with_fee = amount_out * 997
+    numerator = amount_out_with_fee * new_r_in
+    denominator = new_r_out * 1000 + amount_out_with_fee
+    round_trip_out = numerator // denominator if denominator > 0 else 0
+
+    result["round_trip_out"] = round_trip_out
+
+    # ── 2. 往返毛损失（basis points）──
+    if amount_in_wei > 0:
+        loss = amount_in_wei - round_trip_out
+        loss_ratio = loss / amount_in_wei
+        result["gross_pnl_bps"] = loss_ratio * 10000  # 转为 bps
+        result["slippage_loss_bps"] = result["gross_pnl_bps"]
+
+    # ── 3. Gas 成本（USD）──
+    gas_cost_wei = gas_used * int(gas_price_gwei * 1e9)
+    gas_cost_bnb = gas_cost_wei / 10**18
+    gas_cost_usd = gas_cost_bnb * bnb_price_usd
+    result["gas_cost_usd"] = gas_cost_usd
+
+    # ── 4. 净 P&L（USD）──
+    # 往返损失（USD）= 损失比例 × 输入金额
+    slippage_loss_usd = (result["gross_pnl_bps"] / 10000) * amount_in_usd
+    # 总损失 = 滑点 + gas
+    total_loss_usd = slippage_loss_usd + gas_cost_usd
+    result["net_pnl_usd"] = -total_loss_usd  # 负数表示亏损
+
+    # ── 5. 盈亏平衡点 ──
+    # 盈利需要的最小价差（bps）= (往返滑点 + gas) / 本金
+    if amount_in_usd > 0:
+        result["break_even_bps"] = (total_loss_usd / amount_in_usd) * 10000
+
+    # ── 6. 是否有利可图（纯往返永远亏，除非有套利机会）──
+    result["profitable"] = result["net_pnl_usd"] > 0
+
+    # ── 7. pnl_summary 所需的扩展字段 ──
+    result["amount_in_usd"] = amount_in_usd
+    result["execution_cost_usd"] = slippage_loss_usd + gas_cost_usd
+    result["round_trip_pnl_usd"] = result["net_pnl_usd"]
+    result["breakeven_edge_pct"] = result["break_even_bps"] / 100.0 if result["break_even_bps"] else 0.0
+    if result["profitable"]:
+        result["verdict"] = "profitable"
+    elif result["break_even_bps"] < 50:
+        result["verdict"] = "marginal"
+    else:
+        result["verdict"] = "unprofitable"
+
+    return result
 
 
 # ── 策略转换层（dataset 产出 → StrategyRef）──────────
@@ -94,7 +535,11 @@ def _resolve_pool_info(pair_id: str, workspace: Path | None = None) -> dict:
     pid_low = pair_id.lower()
     for addr, info in POOL_TOKEN_MAP.items():
         addr_low = addr.lower()
-        if addr_low[-6:] in pid_low or pid_low in info.get("name", "").lower():
+        name_low = info.get("name", "").lower()
+        # 双向匹配: 地址末 6 位在 pair_id 中 / name 是 pair_id 的子串 / pair_id 是 name 的子串
+        if (addr_low[-6:] in pid_low
+                or name_low in pid_low
+                or pid_low in name_low):
             return {
                 "pool_address": addr,
                 "token_in": info["quote"],
@@ -115,11 +560,15 @@ def _resolve_pool_info(pair_id: str, workspace: Path | None = None) -> dict:
             for yml_file in sorted(pair_dir.glob("*.yml"))[:5]:
                 try:
                     data = _yaml.safe_load(yml_file.read_text()) or {}
-                    if data.get("pool_address"):
+                    if not data.get("pool_address"):
+                        continue
+                    t_in = data.get("token0", data.get("quote", data.get("quote_token", "")))
+                    t_out = data.get("token1", data.get("base", data.get("base_token", "")))
+                    if t_in and t_out:
                         return {
                             "pool_address": data["pool_address"],
-                            "token_in": data.get("token0", data.get("quote", "")),
-                            "token_out": data.get("token1", data.get("base", "")),
+                            "token_in": t_in,
+                            "token_out": t_out,
                             "name": pair_id,
                         }
                 except Exception:
@@ -145,7 +594,7 @@ def build_strategies_from_binding(
     import yaml as _yaml
 
     data = _yaml.safe_load(Path(indicator_binding_file).read_text())
-    bindings = data.get("indicator_bindings", [])
+    bindings = data.get("indicator_bindings") or data.get("bindings", [])
     if not bindings:
         return []
 
@@ -159,15 +608,16 @@ def build_strategies_from_binding(
         except Exception:
             pass
 
-    # 按 skeleton_id 分组
+    # 按 skeleton_id 分组（条目级优先，回退到顶层）
+    top_skel_id = data.get("skeleton_id", "")
     skel_groups: dict[str, list[dict]] = {}
     for b in bindings:
-        sid = b.get("skeleton_id", "")
-        if sid:
-            skel_groups.setdefault(sid, []).append(b)
+        sid = b.get("skeleton_id") or top_skel_id or "default"
+        skel_groups.setdefault(sid, []).append(b)
 
     pool = pool_info or {}
     amount_wei = int(pool.get("amount_in_wei", default_amount_wei))
+    top_strategy_type = data.get("strategy_type", "unknown")
 
     strategies: list[StrategyRef] = []
     for skel_id, group in skel_groups.items():
@@ -186,7 +636,7 @@ def build_strategies_from_binding(
 
         strategies.append(StrategyRef(
             strategy_id=skel_id,
-            strategy_type=skel_type_map.get(skel_id, "unknown"),
+            strategy_type=skel_type_map.get(skel_id, top_strategy_type),
             confidence=avg_conf,
             entry={
                 "pool_address": pool.get("pool_address", ""),
@@ -268,6 +718,8 @@ class ArbCampaignLoop:
         mev_guard: Any = None,
         approve_manager: Any = None,
         workspace: Path | None = None,
+        position_manager: PositionManager | None = None,
+        signal_evaluator: SignalEvaluator | None = None,
     ):
         self.config = config or {}
         self._executor = executor
@@ -281,6 +733,9 @@ class ArbCampaignLoop:
         self._approve_manager = approve_manager
         self._workspace = workspace or Path.cwd()
         self._simulate = bool(config.get("simulate") if config else False)
+        # Path B: 信号评估 + 持仓管理
+        self._positions = position_manager or PositionManager(self._workspace)
+        self._signals = signal_evaluator or SignalEvaluator(config=self.config)
         # 运行状态
         self._running = False
         self._cycle_count = 0
@@ -389,11 +844,19 @@ class ArbCampaignLoop:
     def _write_execute_artifacts(
         self, results: list[dict], strategies: list[StrategyRef],
     ) -> Path | None:
-        """写执行产物到 .docs/ai-skills/execute/output/"""
+        """写执行产物到 .docs/ai-skills/execute/{simulator|output}/
+
+        路径由执行器类型决定（非 simulate 配置）：
+          - DryRunDexExecutor (is_live=False) → execute/simulator/
+          - LiveDexExecutor   (is_live=True)  → execute/output/
+        """
         import yaml as _yaml
         from datetime import datetime, timezone
 
-        output_root = self._workspace / ".docs" / "ai-skills" / "execute" / "output"
+        # 根据执行器类型选路径：DryRun→simulator, Live→output
+        is_live = getattr(self._executor, "is_live", True) if self._executor else False
+        subdir = "output" if is_live else "simulator"
+        output_root = self._workspace / ".docs" / "ai-skills" / "execute" / subdir
         output_root.mkdir(parents=True, exist_ok=True)
 
         ts = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H-%M-%SZ")
@@ -420,10 +883,28 @@ class ArbCampaignLoop:
                 "amount_out": r.get("amount_out"),
                 "price_impact": r.get("price_impact"),
             }
+            if r.get("pnl"):
+                record["pnl"] = r["pnl"]
             if s:
                 record["entry"] = s.entry
                 record["confidence"] = s.confidence
             records.append(record)
+
+        # P&L 汇总（仅统计有 pnl 的交易）
+        pnl_trades = [r["pnl"] for r in records if r.get("pnl")]
+        pnl_summary = None
+        if pnl_trades:
+            pnl_summary = {
+                "traded_count": len(pnl_trades),
+                "total_volume_usd": round(sum(p["amount_in_usd"] for p in pnl_trades), 4),
+                "total_execution_cost_usd": round(sum(p["execution_cost_usd"] for p in pnl_trades), 4),
+                "total_gas_cost_usd": round(sum(p["gas_cost_usd"] for p in pnl_trades), 4),
+                "total_round_trip_pnl_usd": round(sum(p["round_trip_pnl_usd"] for p in pnl_trades), 4),
+                "avg_breakeven_edge_pct": round(
+                    sum(p["breakeven_edge_pct"] for p in pnl_trades) / len(pnl_trades), 4
+                ),
+                "verdicts": [p["verdict"] for p in pnl_trades],
+            }
 
         summary = {
             "run_timestamp": ts,
@@ -435,6 +916,8 @@ class ArbCampaignLoop:
             "simulated": any(r.get("simulated") for r in records),
             "results": records,
         }
+        if pnl_summary:
+            summary["pnl_summary"] = pnl_summary
 
         artifact_path = run_dir / "execution_results.yml"
         artifact_path.write_text(
@@ -493,15 +976,30 @@ class ArbCampaignLoop:
 
     # ── Step 4: execute ──────────────────────────────
     async def _step_execute(self, strategies: list[StrategyRef]) -> list[dict]:
-        """执行（实盘或模拟） — DexExecutor + 三层安全护甲（§3.5）"""
-        results = []
+        """执行（因子驱动）— 信号评估 → 入场/出场/持仓 → DexExecutor + 三层安全护甲
+
+        Path B 流程:
+          1. 先检查已有持仓 — 是否需要出场（止盈/止损/超时）
+          2. 再评估新策略 — 信号是否触发入场
+        """
+        results: list[dict] = []
+
+        # Phase 1: 检查已有持仓的出场信号
+        for pos in self._positions.list_open():
+            exit_result = await self._evaluate_and_exit(pos)
+            if exit_result:
+                results.append(exit_result)
+
+        # Phase 2: 评估新策略的入场信号
         for strategy in strategies:
             result = await self._execute_single(strategy)
             results.append(result)
-        ok = sum(1 for r in results if r.get("status") == "success")
-        logger.info("execute: %d results (%d success)", len(results), ok)
 
-        # 写产物到 .docs/ai-skills/execute/output/
+        ok = sum(1 for r in results if r.get("status") == "success")
+        skipped = sum(1 for r in results if r.get("status") == "skipped")
+        logger.info("execute: %d results (%d success, %d skipped)", len(results), ok, skipped)
+
+        # 写产物到 .docs/ai-skills/execute/{simulator|output}/
         try:
             self._write_execute_artifacts(results, strategies)
         except Exception as exc:
@@ -509,8 +1007,57 @@ class ArbCampaignLoop:
 
         return results
 
+    async def _evaluate_and_exit(self, position: Position) -> dict | None:
+        """已有持仓 — 获取市场快照 → 评估出场信号 → SELL if triggered"""
+        pool_address = position.pool_address
+
+        # 获取市场快照
+        snapshot = await self._fetch_market_snapshot(pool_address, position.token_held)
+        if not snapshot.is_valid:
+            logger.warning("exit check: invalid snapshot for %s", pool_address[:10])
+            return None
+
+        exit_signal = self._signals.evaluate_exit(position, snapshot)
+        if not exit_signal.should_exit:
+            logger.debug("hold: %s pnl=%.1f bps", position.strategy_id, exit_signal.pnl_bps)
+            return None
+
+        logger.info("exit signal: %s reason=%s pnl=%.1f bps",
+                     position.strategy_id, exit_signal.reason, exit_signal.pnl_bps)
+
+        # 执行卖出 — token_held → token_quote
+        sell_result = await self._do_swap(
+            strategy_id=f"{position.strategy_id}_exit",
+            pool_address=pool_address,
+            token_in=position.token_held,
+            token_out=position.token_quote,
+            amount_in_wei=position.amount_held,
+        )
+
+        if sell_result.get("status") == "success":
+            pnl_data = sell_result.get("pnl")
+            self._positions.close_position(
+                pool_address,
+                exit_price=snapshot.spot_price,
+                exit_reason=exit_signal.reason,
+                pnl=pnl_data,
+            )
+            sell_result["exit_reason"] = exit_signal.reason
+            sell_result["hold_seconds"] = position.age_seconds
+            sell_result["floating_pnl_bps"] = exit_signal.pnl_bps
+
+        return sell_result
+
     async def _execute_single(self, strategy: StrategyRef) -> dict:
-        """单策略执行 — pre_flight → approve → swap → 记账"""
+        """单策略执行（Path B）— 信号评估 → 入场/跳过
+
+        流程:
+          1. Pre-flight 安全检查
+          2. 获取市场快照
+          3. 已有持仓 → skip（一池一仓）
+          4. 信号评估 → should_enter?
+          5. 入场: approve → swap → 建仓
+        """
         sid = strategy.strategy_id
         entry = strategy.entry
 
@@ -532,24 +1079,112 @@ class ArbCampaignLoop:
         if not self._executor:
             return {"strategy_id": sid, "status": "blocked", "reason": "no_executor"}
 
-        # 3. TVL breaker
+        # 3. 已有持仓 → skip（一池一仓原则）
+        if self._positions.has_position(pool_address):
+            return {"strategy_id": sid, "status": "skipped",
+                    "reason": "position_already_open"}
+
+        # 4. 获取市场快照 + 信号评估
+        snapshot = await self._fetch_market_snapshot(pool_address, token_in)
+
+        # force_entry: 跳过信号评估（DryRun 验证 swap 链路用）
+        force_entry = self.config.get("force_entry", False)
+        if force_entry:
+            signal_result = {"should_enter": True, "reason": "force_entry",
+                            "confidence": 1.0}
+        else:
+            signal_result = self._signals.evaluate_entry(strategy, snapshot)
+
+        if not signal_result.get("should_enter"):
+            return {
+                "strategy_id": sid,
+                "status": "skipped",
+                "reason": f"no_entry_signal:{signal_result.get('reason', 'unknown')}",
+                "signal": signal_result,
+            }
+
+        logger.info("entry signal: %s type=%s confidence=%.2f",
+                     sid, strategy.strategy_type, signal_result.get("confidence", 0))
+
+        # 5. 执行入场 swap
+        swap_result = await self._do_swap(
+            strategy_id=sid,
+            pool_address=pool_address,
+            token_in=token_in,
+            token_out=token_out,
+            amount_in_wei=amount_in_wei,
+            volume_usd=entry.get("amount_usd", amount_in_wei / 10**18),
+        )
+
+        # 6. 建仓记录
+        if swap_result.get("status") == "success":
+            exit_rules = strategy.exit_rules or {}
+            pos = Position(
+                pool_address=pool_address,
+                strategy_id=sid,
+                token_held=token_out,
+                token_quote=token_in,
+                amount_held=swap_result.get("amount_out", 0),
+                entry_price=snapshot.spot_price,
+                entry_amount_usd=entry.get("amount_usd", amount_in_wei / 10**18),
+                entry_block=swap_result.get("block_number", 0),
+                entry_tx_hash=swap_result.get("tx_hash", ""),
+                take_profit_bps=exit_rules.get("take_profit_bps", 50),
+                stop_loss_bps=exit_rules.get("stop_loss_bps", 20),
+                max_hold_seconds=exit_rules.get("max_hold_seconds", 300),
+            )
+            self._positions.open_position(pos)
+            swap_result["position_opened"] = True
+            swap_result["signal"] = signal_result
+
+        return swap_result
+
+    async def _fetch_market_snapshot(self, pool_address: str, token_in: str) -> MarketSnapshot:
+        """从链上获取市场快照 — reserves → spot_price"""
+        try:
+            r_in, r_out = await self._get_ordered_reserves(pool_address, token_in)
+            spot_price = r_out / r_in if r_in > 0 else 0.0
+            return MarketSnapshot(
+                pool_address=pool_address,
+                reserve_in=r_in,
+                reserve_out=r_out,
+                spot_price=spot_price,
+            )
+        except Exception as exc:
+            logger.warning("snapshot fetch failed: %s", exc)
+            return MarketSnapshot(pool_address=pool_address)
+
+    async def _do_swap(
+        self, *, strategy_id: str, pool_address: str,
+        token_in: str, token_out: str, amount_in_wei: int,
+        volume_usd: float = 0.0,
+    ) -> dict:
+        """底层 swap 执行 — 安全护甲 + approve + DexExecutor.swap()
+
+        从旧 _execute_single 提取的纯执行逻辑（无信号判断）。
+        """
+        # TVL breaker
         if self._tvl_breaker and not self._tvl_breaker.allows_arb():
-            return {"strategy_id": sid, "status": "blocked",
+            return {"strategy_id": strategy_id, "status": "blocked",
                     "reason": f"tvl_breaker:{self._tvl_breaker.halt_reason}"}
 
-        # 4. Get reserves + expected output
+        # Get reserves + expected output
         try:
             r_in, r_out = await self._get_ordered_reserves(pool_address, token_in)
         except Exception as exc:
-            return {"strategy_id": sid, "status": "error",
+            exc_name = type(exc).__name__
+            if exc_name == "PoolIncompatibleError":
+                return {"strategy_id": strategy_id, "status": "error",
+                        "reason": f"pool_incompatible:{exc}"}
+            return {"strategy_id": strategy_id, "status": "error",
                     "reason": f"get_reserves:{exc}"}
 
         expected_out = await self._executor.get_amount_out(amount_in_wei, r_in, r_out)
         if expected_out <= 0:
-            return {"strategy_id": sid, "status": "blocked",
+            return {"strategy_id": strategy_id, "status": "blocked",
                     "reason": "zero_expected_output"}
 
-        # 5. Slippage guard
+        # Slippage guard
         ideal_out = amount_in_wei * r_out // r_in if r_in > 0 else 0
         min_amount_out = expected_out * 98 // 100
         if self._slippage_guard:
@@ -558,16 +1193,16 @@ class ArbCampaignLoop:
                 ideal_out=ideal_out,
             )
             if not check["passed"]:
-                return {"strategy_id": sid, "status": "blocked",
+                return {"strategy_id": strategy_id, "status": "blocked",
                         "reason": f"slippage:{check['reason']}"}
             min_amount_out = check.get("min_amount_out", min_amount_out)
 
-        # 6. MEV guard
+        # MEV guard
         if self._mev_guard and await self._mev_guard.should_delay():
-            return {"strategy_id": sid, "status": "delayed",
+            return {"strategy_id": strategy_id, "status": "delayed",
                     "reason": "mev_cooldown"}
 
-        # 7. Ensure allowance
+        # Ensure allowance
         if self._approve_manager:
             try:
                 router = ROUTER
@@ -577,30 +1212,41 @@ class ArbCampaignLoop:
                     token_in, router, amount_in_wei,
                 )
             except Exception as exc:
-                return {"strategy_id": sid, "status": "error",
+                return {"strategy_id": strategy_id, "status": "error",
                         "reason": f"approve:{exc}"}
 
-        # 8. Execute swap
+        # Execute swap
         try:
             tx_result = await self._executor.swap(
                 token_in=token_in, token_out=token_out,
                 amount_in=amount_in_wei, min_amount_out=min_amount_out,
+                pair_address=pool_address,
             )
         except Exception as exc:
-            return {"strategy_id": sid, "status": "error",
+            return {"strategy_id": strategy_id, "status": "error",
                     "reason": f"swap:{exc}"}
 
-        # 9. Record budget
+        # Record budget
         status = tx_result.get("status", "unknown")
         if self._budget and status == "success":
             gas_usd = tx_result.get("gas_used", 0) * 3e-9 * 300
-            self._budget.record_trade(
-                gas_usd=gas_usd,
-                volume_usd=entry.get("amount_usd", 0),
+            self._budget.record_trade(gas_usd=gas_usd, volume_usd=volume_usd)
+
+        # P&L estimation
+        pnl = None
+        actual_out = tx_result.get("amount_out", 0) or 0
+        if status == "success" and actual_out > 0 and r_in > 0 and r_out > 0:
+            pnl = _calc_trade_pnl(
+                amount_in_wei=amount_in_wei,
+                amount_out=actual_out,
+                r_in=r_in,
+                r_out=r_out,
+                gas_used=tx_result.get("gas_used", 0),
+                amount_in_usd=amount_in_wei / 10**18,
             )
 
         return {
-            "strategy_id": sid,
+            "strategy_id": strategy_id,
             "status": status,
             "tx_hash": tx_result.get("tx_hash"),
             "gas_used": tx_result.get("gas_used"),
@@ -609,6 +1255,7 @@ class ArbCampaignLoop:
             "amount_in": tx_result.get("amount_in"),
             "amount_out": tx_result.get("amount_out"),
             "price_impact": tx_result.get("price_impact"),
+            "pnl": pnl,
         }
 
     # ── Step 5: fix ──────────────────────────────────

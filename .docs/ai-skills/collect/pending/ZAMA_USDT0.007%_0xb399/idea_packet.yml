@@ -1,0 +1,179 @@
+pair_id: ZAMA_USDT0.007%_0xb399
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0xb39978347f071b74076be26d1445e2eccafe3557d2cdbc17e6c74d3ea883a4e0'
+  base_token:
+    symbol: ZAMA
+    address: '0x6907a5986c4950bdaf2f81828ec0737ce787519f'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:e307ca91b2d2fdd1
+  primary_excerpt: 'Pool ZAMA_USDT0.007%_0xb399 on bsc/pancakeswap-infinity-clmm.
+    TVL: $947,827, 24h Volume: $33,056,473. high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0
+  tvl_usd: 947827.3579
+  volume_24h_usd: 33056473.180268
+  fee_bps: 25
+  ohlcv_summary: {}
+signals:
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 19
+    avg_trade_size_usd: 0.0
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 19
+  onchain_avg_trade_size_usd: 0.0
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 0.0
+cross_pool_analysis: {}
+validation:
+  dual_source_met: false
+  signal_count: 1
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - Gecko+DexScreener both unavailable, Moralis-only mode
+decision:
+  quality: moderate
+  score: 55
+  status: weak
+  reasons:
+  - high_onchain_activity strength=100.0
+  - TVL $948K above minimum
+  - Volume $33056K healthy
+execution_hints:
+  suggested_strategy: opportunistic
+  urgency: medium
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 5000
+    max_slippage_bps: 10
+    hold_blocks_max: 5
+llm_classification:
+  asset_class: high_risk_speculative
+  amm_type: concentrated_v3
+  liquidity_profile: unstable_high_volume
+  activity_profile: wash_trading_suspected
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.3
+  viable: false
+  reasoning: 24h交易量与钱包数严重失衡（19个钱包贡献3300万美金），洗盘交易（Wash Trading）风险极高，动量信号失效。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.2
+  viable: false
+  reasoning: 由于price_usd和ohlcv数据缺失，无法建立基准价格锚点，套利逻辑无法闭环。
+  parameter_hints:
+    entry_threshold_pct: 0.0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.4
+  viable: true
+  reasoning: 仅在能够获取实时Tick数据的前提下，利用V3池的高频波动进行极短线对冲，但需严控库存风险。
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 5000
+    max_slippage_bps: 10
+    hold_blocks_max: 5
+llm_risk_flags:
+- extreme_volume_to_tvl_ratio
+- low_wallet_diversity_relative_to_volume
+- potential_wash_trading_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.85
+    reasoning: 24h交易量与TVL比率极高（约35倍），显示出极强的市场热度和换手率。
+    trigger_signals:
+    - high_onchain_activity
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.7
+    reasoning: 高频交易环境下，V3池的价格更新可能与其他流动性来源产生瞬时价差。
+    trigger_signals:
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.6
+    reasoning: 集中流动性池在高波动下容易导致头寸偏离，产生再平衡机会。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - extreme_volume_to_tvl_ratio
+  - low_wallet_diversity_relative_to_volume
+  - potential_wash_trading_risk
+  flash_score: 72
+  flash_verdict: moderate
+llm_pro_final:
+  agree_classification: false
+  revised_classification:
+    asset_class: high_risk_speculative
+    amm_type: concentrated_v3
+    liquidity_profile: unstable_high_volume
+    activity_profile: wash_trading_suspected
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.3
+    viable: false
+    reasoning: 24h交易量与钱包数严重失衡（19个钱包贡献3300万美金），洗盘交易（Wash Trading）风险极高，动量信号失效。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.2
+    viable: false
+    reasoning: 由于price_usd和ohlcv数据缺失，无法建立基准价格锚点，套利逻辑无法闭环。
+    parameter_hints:
+      entry_threshold_pct: 0.0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.4
+    viable: true
+    reasoning: 仅在能够获取实时Tick数据的前提下，利用V3池的高频波动进行极短线对冲，但需严控库存风险。
+    parameter_hints:
+      entry_threshold_pct: 1.5
+      max_position_usd: 5000
+      max_slippage_bps: 10
+      hold_blocks_max: 5
+  pro_score: 42
+  pro_verdict: weak
+  override_reason: 数据完整度极低（价格与K线缺失），且存在明显的洗盘交易特征（Volume/TVL比率异常且用户数极少），Flash初判过于乐观，需大幅下调评分并限制策略执行。
+llm_verdict: weak
+llm_score: 42
+hypotheses:
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

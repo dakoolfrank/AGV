@@ -1,0 +1,18 @@
+pair_id: BSB_USDT0.007%_0x26a8
+pool_address: '0x26a8e4591b7a0efcd45a577ad0d54aa64a99efaf2546ad4d5b0454c99eb70eab'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: BSB
+quote_token: USDT 0.007%
+signal_quality: strong
+top_signal: price_divergence
+signal_strength: 16.95
+tvl_usd: 13099217.4422
+volume_24h_usd: 39702979.9256732
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: deep
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.92
+llm_verdict: strong
+llm_score: 82

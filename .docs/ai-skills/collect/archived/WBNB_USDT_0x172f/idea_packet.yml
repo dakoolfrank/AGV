@@ -1,0 +1,204 @@
+pair_id: WBNB_USDT_0x172f
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: pancakeswap
+  pool_address: '0x172fcD41E0913e95784454622d1c3724f546f849'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:0428919f2e4a227f
+  primary_excerpt: 'Pool WBNB_USDT_0x172f on bsc/pancakeswap. TVL: $16,549,995, 24h
+    Volume: $96,048,407. lp_imbalance(str=99.8); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.998911177321789
+  tvl_usd: 16549995.1117
+  volume_24h_usd: 96048406.73
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 1.00797782859549
+    low: 0.99283076624686
+    close: 1.00045450816951
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 99.84
+  source: gecko
+  details:
+    reserve_ratio: 0.00163000177165515
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 42
+    avg_trade_size_usd: 0.39
+indicators:
+  rsi_14: 53.172746
+  ema_12: 0.999542
+  ema_26: 0.999444
+  vwap: 0.999167
+  bollinger_upper: 1.001688
+  bollinger_lower: 0.996887
+  bollinger_middle: 0.999287
+  macd_histogram: 6.0e-05
+  atr_14: 0.004298
+  onchain_tx_count: 100
+  onchain_unique_wallets: 42
+  onchain_avg_trade_size_usd: 0.39
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0016
+  depth_2pct_usd: 164672.45
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 2
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 76
+  status: validated
+  reasons:
+  - lp_imbalance strength=99.8
+  - high_onchain_activity strength=100.0
+  - TVL $16.5M sufficient
+  - Volume $96048K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.05
+    max_position_usd: 150000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+llm_classification:
+  asset_class: blue_chip
+  amm_type: constant_product_v2
+  liquidity_profile: deep
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.95
+  viable: true
+  reasoning: 交易量/TVL比率极高，且作为BSC核心交易对，该池是全链套利路径的必然节点，适合捕获与其他DEX或CEX的价差。
+  parameter_hints:
+    entry_threshold_pct: 0.05
+    max_position_usd: 150000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.1
+  viable: false
+  reasoning: Flash模型误判了储备比例。0.0016的比例恰好对应WBNB/USDT约625美元的市场价格，并非流动性失衡，不具备逆向平账机会。
+  parameter_hints:
+    entry_threshold_pct: 0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+- strategy_type: mean_reversion
+  pro_confidence: 0.75
+  viable: true
+  reasoning: 高频微小交易（$0.39）暗示存在大量机器人噪音，适合利用布林带进行极短周期的均值回归或网格交易。
+  parameter_hints:
+    entry_threshold_pct: 0.12
+    max_position_usd: 50000
+    max_slippage_bps: 3
+    hold_blocks_max: 5
+llm_risk_flags:
+- extreme_low_avg_trade_size_0.39usd
+- high_volume_to_tvl_ratio
+- significant_reserve_imbalance
+llm_flash_raw:
+  pool_classification:
+    asset_class: blue_chip
+    amm_type: constant_product_v2
+    liquidity_profile: deep
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.92
+    reasoning: 交易量远超TVL且存在显著储备失衡，暗示该池正作为BSC链上WBNB/USDT路径的核心套利节点。
+    trigger_signals:
+    - lp_imbalance
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.85
+    reasoning: 储备比例信号强度极高(99.84)，存在明显的单边流动性偏离，适合进行逆向平衡套利。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: mean_reversion
+    confidence: 0.7
+    reasoning: 价格在1.00附近波动且RSI处于中性区间，适合在布林带上下轨之间进行高频网格交易。
+    trigger_signals:
+    - bollinger_lower
+    - rsi_14
+  risk_flags:
+  - extreme_low_avg_trade_size_0.39usd
+  - high_volume_to_tvl_ratio
+  - significant_reserve_imbalance
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.95
+    viable: true
+    reasoning: 交易量/TVL比率极高，且作为BSC核心交易对，该池是全链套利路径的必然节点，适合捕获与其他DEX或CEX的价差。
+    parameter_hints:
+      entry_threshold_pct: 0.05
+      max_position_usd: 150000
+      max_slippage_bps: 5
+      hold_blocks_max: 1
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.1
+    viable: false
+    reasoning: Flash模型误判了储备比例。0.0016的比例恰好对应WBNB/USDT约625美元的市场价格，并非流动性失衡，不具备逆向平账机会。
+    parameter_hints:
+      entry_threshold_pct: 0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  - strategy_type: mean_reversion
+    pro_confidence: 0.75
+    viable: true
+    reasoning: 高频微小交易（$0.39）暗示存在大量机器人噪音，适合利用布林带进行极短周期的均值回归或网格交易。
+    parameter_hints:
+      entry_threshold_pct: 0.12
+      max_position_usd: 50000
+      max_slippage_bps: 3
+      hold_blocks_max: 5
+  pro_score: 82
+  pro_verdict: strong
+  override_reason: Flash模型在储备失衡判定上存在逻辑缺陷，未考虑非稳定币对的天然价格比例（1/625≈0.0016），但该池极高的活跃度和深度仍使其成为顶级量化标的。
+llm_verdict: strong
+llm_score: 82
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

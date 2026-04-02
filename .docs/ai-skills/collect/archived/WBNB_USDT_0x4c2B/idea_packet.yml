@@ -1,0 +1,253 @@
+pair_id: WBNB_USDT_0x4c2B
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: unchain-x
+  pool_address: '0x4c2B1F4de009B58498B8b66e10A231A1B233277E'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:6483d0b665452c3b
+  primary_excerpt: 'Pool WBNB_USDT_0x4c2B on bsc/unchain-x. TVL: $87,731, 24h Volume:
+    $17,980. whale_movement(str=29.2); whale_movement(str=21.3); whale_movement(str=21.2);
+    whale_movement(str=20.9); whale_movement(str=18.8)'
+market_data:
+  price_usd: 617.081
+  tvl_usd: 87730.67
+  volume_24h_usd: 17979.67
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: -0.01
+    price_change_h1: -0.01
+    price_change_h6: 1.17
+    price_change_h24: 0.67
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 29.25
+  source: moralis
+  details:
+    tx_hash: '0xff4b2ee954cdf40ed469630a36fda83b4ac29471fbd564a81c94c6236a3c9af3'
+    value_usd: 1462.306289412201
+- signal_type: whale_movement
+  strength: 21.26
+  source: moralis
+  details:
+    tx_hash: '0xae7c07d7220ad71b08c924d2da49defeeea5f28bbe730a6cad8b5ccafb4a6924'
+    value_usd: 1063.053274778335
+- signal_type: whale_movement
+  strength: 21.24
+  source: moralis
+  details:
+    tx_hash: '0xab7b221ce3c019121258723a55ddba7917753083f45603491bafa7a9ee82f191'
+    value_usd: 1062.2445030498143
+- signal_type: whale_movement
+  strength: 20.9
+  source: moralis
+  details:
+    tx_hash: '0xa3bfdf1fc9add8f1623d9783171e7aef15337c52fbae6c82ee70469092585976'
+    value_usd: 1045.0493383766325
+- signal_type: whale_movement
+  strength: 18.82
+  source: moralis
+  details:
+    tx_hash: '0xcc0db12306d3526e7414ab86230d6225f05d54118174de8fa9db057d6e78251c'
+    value_usd: 941.1242593328001
+- signal_type: whale_movement
+  strength: 17.84
+  source: moralis
+  details:
+    tx_hash: '0x12c710b9e0fdac58b0c3896a28787850773b90146139dc9c1aa4ab57c1d96fc4'
+    value_usd: 892.019759110342
+- signal_type: whale_movement
+  strength: 16.21
+  source: moralis
+  details:
+    tx_hash: '0xbb34f199fe959f2d3529abb5205b1ef1464119e0df5a669ddb3c1d75d97d83bb'
+    value_usd: 810.3819661982751
+- signal_type: whale_movement
+  strength: 15.3
+  source: moralis
+  details:
+    tx_hash: '0x4b561adfadd7d6d059efb93d08a07673681b0241c556f365d75bcc7e9d9141e3'
+    value_usd: 765.18044
+- signal_type: whale_movement
+  strength: 12.78
+  source: moralis
+  details:
+    tx_hash: '0x386082a9be057b1cdd65fe00ad2071bc016af71ebdf4d301c9a2123a0b816d8f'
+    value_usd: 638.9845033549609
+- signal_type: whale_movement
+  strength: 11.73
+  source: moralis
+  details:
+    tx_hash: '0x62043edb8e4e78e335b4a8b855c9394c3450c425ab97a6279530edb1d137fcfd'
+    value_usd: 586.4737824
+- signal_type: whale_movement
+  strength: 10.77
+  source: moralis
+  details:
+    tx_hash: '0x97bd42075872295d77dbb708bde43f1268c2114aa016c1ac0b7f0adc42a3c104'
+    value_usd: 538.5132623089355
+- signal_type: whale_movement
+  strength: 10.77
+  source: moralis
+  details:
+    tx_hash: '0x66301ae670549feb908505ee9fb21907b1e3020d69b41af002f7d840363e70f7'
+    value_usd: 538.3728891660728
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 48
+    avg_trade_size_usd: 245.13
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 48
+  onchain_avg_trade_size_usd: 245.13
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 872.92
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 13
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 84
+  status: validated
+  reasons:
+  - whale_movement strength=29.2
+  - whale_movement strength=21.3
+  - whale_movement strength=21.2
+  - whale_movement strength=20.9
+  - whale_movement strength=18.8
+  - whale_movement strength=17.8
+  - whale_movement strength=16.2
+  - whale_movement strength=15.3
+  - whale_movement strength=12.8
+  - whale_movement strength=11.7
+  - whale_movement strength=10.8
+  - whale_movement strength=10.8
+  - high_onchain_activity strength=100.0
+  - TVL $88K above minimum
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.4
+    max_position_usd: 1200
+    max_slippage_bps: 10
+    hold_blocks_max: 1
+llm_classification:
+  asset_class: blue_chip
+  amm_type: constant_product_v2
+  liquidity_profile: shallow
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.9
+  viable: true
+  reasoning: WBNB/USDT 在 PancakeSwap 具有极高流动性，该池 2% 深度仅 $872，任何超过 $500 的交易均会产生可套利的价差。
+  parameter_hints:
+    entry_threshold_pct: 0.4
+    max_position_usd: 1200
+    max_slippage_bps: 10
+    hold_blocks_max: 1
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.82
+  viable: true
+  reasoning: 链上频繁出现 $500-$1400 的交易（Whale Movement），在极浅深度下会造成显著的价格偏离，适合执行 Backrun 策略。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 800
+    max_slippage_bps: 15
+    hold_blocks_max: 1
+llm_risk_flags:
+- extremely_low_depth_to_tvl_ratio
+- high_slippage_risk
+- fragmented_liquidity_on_minor_dex
+llm_flash_raw:
+  pool_classification:
+    asset_class: blue_chip
+    amm_type: constant_product_v2
+    liquidity_profile: shallow
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: WBNB/USDT 存在于所有主要 DEX，该池深度极浅（2% 深度仅 $872），极易与 PancakeSwap 产生价差。
+    trigger_signals:
+    - price_divergence
+    - whale_movement
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.72
+    reasoning: 检测到多笔 $500-$1400 的交易，相对于 $872 的深度会造成巨大滑点，产生即时套利空间。
+    trigger_signals:
+    - whale_movement
+  risk_flags:
+  - extremely_low_depth_to_tvl_ratio
+  - high_slippage_risk
+  - fragmented_liquidity_on_minor_dex
+  flash_score: 68
+  flash_verdict: moderate
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.9
+    viable: true
+    reasoning: WBNB/USDT 在 PancakeSwap 具有极高流动性，该池 2% 深度仅 $872，任何超过 $500 的交易均会产生可套利的价差。
+    parameter_hints:
+      entry_threshold_pct: 0.4
+      max_position_usd: 1200
+      max_slippage_bps: 10
+      hold_blocks_max: 1
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.82
+    viable: true
+    reasoning: 链上频繁出现 $500-$1400 的交易（Whale Movement），在极浅深度下会造成显著的价格偏离，适合执行 Backrun
+      策略。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 800
+      max_slippage_bps: 15
+      hold_blocks_max: 1
+  pro_score: 75
+  pro_verdict: moderate
+  override_reason: 由于资产为 WBNB/USDT 蓝筹对，库存风险极低，且 BSC 链上手续费低廉，该池的极浅深度提供了高频且稳定的套利机会。上调评分至
+    75，维持 moderate 评级主要受限于 minor DEX 的合约安全性及单笔利润上限。
+llm_verdict: moderate
+llm_score: 75
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

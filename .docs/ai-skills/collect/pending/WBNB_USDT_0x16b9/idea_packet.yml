@@ -1,0 +1,141 @@
+pair_id: WBNB_USDT_0x16b9
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: pancakeswap
+  pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:827bf50f0dcd56be
+  primary_excerpt: 'Pool WBNB_USDT_0x16b9 on bsc/pancakeswap. TVL: $34,524,723, 24h
+    Volume: $5,289,411. price_divergence(str=100.0); whale_movement(str=20.2); whale_movement(str=15.6);
+    whale_movement(str=13.3); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 606.19
+  tvl_usd: 34524722.68
+  volume_24h_usd: 5289411.41
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 1.02388104985753
+    low: 0.988653450205764
+    close: 0.996682311931474
+    bar_count: 100
+signals:
+- signal_type: price_divergence
+  strength: 100.0
+  source: gecko
+  details:
+    price: 606.19
+    last_close: 0.996682311931474
+- signal_type: whale_movement
+  strength: 20.25
+  source: moralis
+  details:
+    tx_hash: '0xb00da15e88113afc3df30449282616c32dd1b3ca479f53753b96ee14554fa3a4'
+    value_usd: 1012.3373
+- signal_type: whale_movement
+  strength: 15.58
+  source: moralis
+  details:
+    tx_hash: '0xc59e4354390f55282d03dec87e63e24d5e351ff68ff2c431791a87e1dfa837be'
+    value_usd: 778.95415
+- signal_type: whale_movement
+  strength: 13.31
+  source: moralis
+  details:
+    tx_hash: '0xd3047c1769bf6d29c9394853bb1f2e6d18fc1344bd491bb3a4224cfeccc8021e'
+    value_usd: 665.6398402983634
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 82
+    avg_trade_size_usd: 114.55
+indicators:
+  rsi_14: 46.798572
+  ema_12: 0.998328
+  ema_26: 0.998119
+  vwap: 0.998015
+  bollinger_upper: 1.003305
+  bollinger_lower: 0.992675
+  bollinger_middle: 0.99799
+  macd_histogram: -6.5e-05
+  atr_14: 0.006547
+  onchain_tx_count: 100
+  onchain_unique_wallets: 82
+  onchain_avg_trade_size_usd: 114.55
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 343520.99
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 5
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 93
+  status: validated
+  reasons:
+  - price_divergence strength=100.0
+  - whale_movement strength=20.2
+  - whale_movement strength=15.6
+  - whale_movement strength=13.3
+  - high_onchain_activity strength=100.0
+  - TVL $34.5M sufficient
+  - Volume $5289K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: blue_chip
+  liquidity_profile: deep
+  amm_type: pancakeswap
+  activity_profile: active
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  confidence: 0.93
+  source: deterministic
+llm_risk_flags: []
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: strong
+llm_score: 93
+hypotheses:
+- hypothesis: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

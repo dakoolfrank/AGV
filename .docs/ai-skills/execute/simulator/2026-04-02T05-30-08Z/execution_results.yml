@@ -1,0 +1,50 @@
+run_timestamp: 2026-04-02T05-30-08Z
+cycle: 0
+total: 2
+success: 0
+blocked: 0
+errors: 2
+simulated: false
+results:
+- strategy_id: aria_usdt0.01%_0xa5db_arb_cross_pool_01
+  strategy_type: cross_pool_arbitrage
+  status: error
+  reason: 'pool_incompatible:Pool 0xa5dbeaf1... is not PancakeSwap V2 compatible (getReserves
+    reverted). Likely a V3/concentrated-liquidity pool. Original error: (''execution
+    reverted: 0x'', ''0x'')'
+  tx_hash: null
+  gas_used: null
+  block_number: null
+  simulated: false
+  amount_in: null
+  amount_out: null
+  price_impact: null
+  entry:
+    pool_address: '0xa5dbeaf16fc031eae92175974f8d0a439be4ad17'
+    token_in: USDT 0.01%
+    token_out: ARIA
+    amount_in_wei: 10000000000000000000
+    amount_usd: 10.0
+    direction: buy
+  confidence: 0.9
+- strategy_id: aria_usdt0.01%_0xa5db_mom_whale_follow_01
+  strategy_type: whale_follow
+  status: error
+  reason: 'pool_incompatible:Pool 0xa5dbeaf1... is not PancakeSwap V2 compatible (getReserves
+    reverted). Likely a V3/concentrated-liquidity pool. Original error: (''execution
+    reverted: 0x'', ''0x'')'
+  tx_hash: null
+  gas_used: null
+  block_number: null
+  simulated: false
+  amount_in: null
+  amount_out: null
+  price_impact: null
+  entry:
+    pool_address: '0xa5dbeaf16fc031eae92175974f8d0a439be4ad17'
+    token_in: USDT 0.01%
+    token_out: ARIA
+    amount_in_wei: 10000000000000000000
+    amount_usd: 10.0
+    direction: buy
+  confidence: 0.875

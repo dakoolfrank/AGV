@@ -1,0 +1,18 @@
+pair_id: ZAMA_USDT0.007%_0xb399
+pool_address: '0xb39978347f071b74076be26d1445e2eccafe3557d2cdbc17e6c74d3ea883a4e0'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: ZAMA
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 949815.5475
+volume_24h_usd: 10867189.8226997
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.65
+llm_verdict: weak
+llm_score: 48

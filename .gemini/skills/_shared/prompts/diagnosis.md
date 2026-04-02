@@ -32,7 +32,7 @@ MM-Campaign 纯确定性（零 LLM），不使用本文件。
 - 因子相关性持续低于阈值
 - **LLM 辅助** — 需要切换因子组合
 
-### Level C: 策略重构（target_step = scan）
+### Level C: 策略重构（target_step = collect）
 - 累计亏损 > 日预算 50%
 - 市场结构变化（TVL 骤降 / 大额撤资 / 池子迁移）
 - 所有因子组合都无法盈利
@@ -60,7 +60,7 @@ MM-Campaign 纯确定性（零 LLM），不使用本文件。
 你必须从以下步骤中选择一个：
 - execute: Level A 参数调整（同策略重试）
 - curate: Level B 因子切换（切换因子组合）
-- scan: Level C 策略重构（从头扫描市场）
+- collect: Level C 策略重构（从头扫描市场）
 
 返回 JSON：
 {{

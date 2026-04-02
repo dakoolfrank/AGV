@@ -1,0 +1,27 @@
+[2026-03-28 18:27:49] INFO - [ETH_USDT0.01%_0x9f59] idea_packet 门禁通过: status=validated, excerpt=117chars, dual_source=True, claims=1
+[2026-03-28 18:27:49] INFO - ==================================================
+[2026-03-28 18:27:49] INFO - Step 1: AI 骨架提取
+[2026-03-28 18:27:49] INFO - ==================================================
+[2026-03-28 18:27:49] INFO - [ETH_USDT0.01%_0x9f59] idea_packet 内容构建: 3725 chars, claims=1, theory=0
+[2026-03-28 18:27:49] WARNING - 未提取到因子名，将进行单次完整提取
+[2026-03-28 18:27:49] INFO - ✓ 提取到 1 个因子名
+[2026-03-28 18:27:49] WARNING - Tool Loop 不可用（需要 M1 底座 + RunContext）
+[2026-03-28 18:27:49] INFO - ▶ 使用批量提取模式（batch_fallback_enabled=true）
+[2026-03-28 18:27:49] INFO - 分批大小: 10（可通过 EXTRACTION_BATCH_SIZE 配置）
+[2026-03-28 18:27:49] INFO - ━━━ [1/1] 处理因子: ['(全量提取)'] ━━━
+[2026-03-28 18:27:49] INFO - ✓ 从 SKILL.md 加载 prompt 模板 (1437 字符)
+[2026-03-28 18:27:49] INFO - 调用 gemini-3.1-pro-preview...
+[2026-03-28 18:28:15] INFO - [1/1] ✓ 提取 tower=1 yi=0
+[2026-03-28 18:28:15] INFO - 批次完成: 1/1 全部成功
+[2026-03-28 18:28:15] INFO - 合并结果: tower=1 yi=0 (去重前: 1/0)
+[2026-03-28 18:28:15] WARNING - ⚠️ 覆盖率检查: 1 个因子可能未落地: ['(全量提取)']
+[2026-03-28 18:28:15] INFO - [sanitize] 自动修复 3 项:
+[2026-03-28 18:28:15] INFO -   [slot_count] arb_lp_imbalance_01: None → 1 (from 0 standard placeholders)
+[2026-03-28 18:28:15] INFO -   [skeleton_id] arb_lp_imbalance_01 → eth_usdt0.01%_0x9f59_arb_lp_imbalance_01 (补资产前缀)
+[2026-03-28 18:28:15] INFO -   [extraction_info] notes 已自动填充
+[2026-03-28 18:28:15] INFO - [postloop-semantic] 未发现语义问题
+[2026-03-28 18:28:15] INFO - [postloop-claim-validate] 1/1 skeletons cite claims
+[2026-03-28 18:28:15] INFO - [param-fidelity] 所有骨架 pattern 均无数值字面量，无需校验 | {'clean': 1}
+[2026-03-28 18:28:15] INFO - ✓ SchemaValidator: step1_skeletons 校验通过 (external)
+[2026-03-28 18:28:15] INFO - ✓ AI 骨架提取完成: /tmp/tmpqp0h_al0/ETH_USDT0.01%_0x9f59/step1_skeletons.yml
+[2026-03-28 18:28:15] INFO - [ETH_USDT0.01%_0x9f59] domain=defi → 跳过 step2_validate

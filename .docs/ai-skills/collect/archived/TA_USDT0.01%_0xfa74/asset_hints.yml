@@ -1,0 +1,18 @@
+pair_id: TA_USDT0.01%_0xfa74
+pool_address: '0xfa7421f1ed6ad1548316a847e8437af7219a8f18'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: TA
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: price_divergence
+signal_strength: 3.76
+tvl_usd: 238686.8332
+volume_24h_usd: 7161011.9548983
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: shallow
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.9
+llm_verdict: moderate
+llm_score: 82

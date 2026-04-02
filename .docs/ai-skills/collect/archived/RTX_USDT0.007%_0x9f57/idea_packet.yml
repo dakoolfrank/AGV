@@ -1,0 +1,139 @@
+pair_id: RTX_USDT0.007%_0x9f57
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0x9f57ccbb2a7a89120cbdc8dad277d6e82aa9b2c3925e148033963a22e1f57b5e'
+  base_token:
+    symbol: RTX
+    address: '0x4829a1d1fb6ded1f81d26868ab8976648baf9893'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:91c519f07ac4c405
+  primary_excerpt: 'Pool RTX_USDT0.007%_0x9f57 on bsc/pancakeswap-infinity-clmm. TVL:
+    $1,392,512, 24h Volume: $6,032,427. whale_movement(str=100.0); whale_movement(str=11.7);
+    whale_movement(str=11.2); whale_movement(str=11.2); whale_movement(str=10.5)'
+market_data:
+  price_usd: 1.91473782329071
+  tvl_usd: 1392511.8779
+  volume_24h_usd: 6032426.77300353
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: 0.848
+    price_change_h1: 1.061
+    price_change_h6: -0.983
+    price_change_h24: -8.061
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0xdd04472f4c81ffd727e24ed0c3e6cdaa807a6b3e94c831f59623a399ac081aa1'
+    value_usd: 5993.70380824691
+- signal_type: whale_movement
+  strength: 11.67
+  source: moralis
+  details:
+    tx_hash: '0xc19350eb599036aa11c0b33f5668c55fdaea914e2542fd090b609dee083a3212'
+    value_usd: 583.2808376440984
+- signal_type: whale_movement
+  strength: 11.22
+  source: moralis
+  details:
+    tx_hash: '0x4a9304323a7567f29236a7605926c84e2f3415270b7b626735ce324bfa73828a'
+    value_usd: 560.9365608551275
+- signal_type: whale_movement
+  strength: 11.16
+  source: moralis
+  details:
+    tx_hash: '0x378f86ea28cfbcefbe91f1e01df2cfa23bedd1b7eebcc9f14e1949d9cad69913'
+    value_usd: 558.2202532801045
+- signal_type: whale_movement
+  strength: 10.47
+  source: moralis
+  details:
+    tx_hash: '0x4fa4efd223b185f4b476f368dca70de299b30db2ea203655dc75ff1c4bdf7e48'
+    value_usd: 523.2687587601612
+- signal_type: whale_movement
+  strength: 10.3
+  source: moralis
+  details:
+    tx_hash: '0xd62e455f53164ce049895b3fffc5d4eb05ce1cd466b94b6f785c8694735116f7'
+    value_usd: 515.0606517210681
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 36
+    avg_trade_size_usd: 157.38
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 36
+  onchain_avg_trade_size_usd: 157.38
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.52
+  depth_2pct_usd: 13855.49
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 7
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 93
+  status: validated
+  reasons:
+  - whale_movement strength=100.0
+  - whale_movement strength=11.7
+  - whale_movement strength=11.2
+  - whale_movement strength=11.2
+  - whale_movement strength=10.5
+  - whale_movement strength=10.3
+  - high_onchain_activity strength=100.0
+  - TVL $1.4M sufficient
+  - Volume $6032K healthy
+execution_hints:
+  suggested_strategy: opportunistic
+  urgency: high
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: blue_chip
+  liquidity_profile: deep
+  amm_type: pancakeswap-infinity-clmm
+  activity_profile: active
+llm_strategies:
+- strategy_type: opportunistic
+  confidence: 0.93
+  source: deterministic
+llm_risk_flags: []
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: strong
+llm_score: 93
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

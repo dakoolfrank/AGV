@@ -1,0 +1,21 @@
+pair_id: BASED_USDT0.007%_0xe85b
+pool_address: '0xe85bc115847d7106b6335d067c6d2cf9b837ce50626a1df3f01d0012681a5db4'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: BASED
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 1140734.4635
+volume_24h_usd: 19877986.8196413
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0xe85bc115847d7106b6335d067c6d2cf9b837ce50626a1df3f01d0012681a5db4'
+source_url: https://www.geckoterminal.com/bsc/pools/0xe85bc115847d7106b6335d067c6d2cf9b837ce50626a1df3f01d0012681a5db4
+source_type: dex_pool
+asset_class: meme
+liquidity_profile: moderate
+strategy_type: volume_momentum
+strategy_confidence: 0.65
+llm_verdict: moderate
+llm_score: 63

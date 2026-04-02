@@ -1,7 +1,7 @@
 # AGV-NFT-RUN.md — NFT 部署运维指南
 
-> **文档版本**: v3.2 (V3 已部署 + SolarPass 批量空投 + 柯兆民 License 授予)  
-> **日期**: 2026-03-19  
+> **文档版本**: v3.3 (V3 已部署 + SolarPass 批量空投 + 柯兆民 License 授予 + 完整持有人登记表)  
+> **日期**: 2026-04-02  
 > **适用仓库**: `agvprotocol-contracts-main`  
 > **姊妹文档**:  
 > - 架构设计 → [AGV-NFT-AgentRegistry.md](AGV-NFT-AgentRegistry.md) §13  
@@ -68,14 +68,16 @@ forge script 一键部署    上传图片到 IPFS/API         散客自购 mint(
 | `metadataFrozen` | `false` | URI 可修改 |
 | Royalty | 5% → treasury | ERC2981 |
 
-**链上实际状态 (2026-03-19)**：
+**链上实际状态 (2026-04-02)**：
 
 | 合约 | totalSupply | collectibleBaseURI | licenseBaseURI | 已铸造明细 |
 |------|:-----------:|:------------------:|:--------------:|------------|
-| SeedPass | **4** | ✅ | ✅ | Collectible #1 + License #2 (admin, quota=79,000) + License #3 (柯兆民, quota=79,000) + Collectible #4 (柯兆民) |
+| SeedPass | **4** | ✅ | ✅ | Collectible #1 (Admin) + License #2 (Admin, quota=79,000) + License #3 (柯兆民, quota=79,000) + Collectible #4 (柯兆民) |
 | TreePass | 0 | ✅ | *(待设置)* | — |
-| SolarPass | **18** | ✅ | ✅ | Collectible #1-#9 (9人空投) + License #10-#18 (每人 quota=500) |
+| SolarPass | **18** | ✅ | ✅ | Collectible #1-#9 (9人空投: 李丹铃/季青山/周大森/吴丽莉/赵晓宇/高凯/彭金平/刘志钱/Admin) + License #10-#18 (每人 quota=500) |
 | ComputePass | 0 | ✅ | *(待设置)* | — |
+
+> 完整的 Token ID × 地址 × 持有人映射见 [AGV-NFT-AgentRegistry.md §0.2a 完整 Token 持有人登记表](AGV-NFT-AgentRegistry.md#完整-token-持有人登记表2026-04-02)。
 
 ### 2.1 前置准备
 

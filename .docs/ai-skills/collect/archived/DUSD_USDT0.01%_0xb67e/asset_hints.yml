@@ -1,0 +1,18 @@
+pair_id: DUSD_USDT0.01%_0xb67e
+pool_address: '0xb67e5eaf770a384ab28029d08b9bc5ebe32beb0f'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: DUSD
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 99.94
+tvl_usd: 22321481.14
+volume_24h_usd: 3377135.85
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: opportunistic
+strategy_confidence: 0.93
+llm_verdict: strong
+llm_score: 93

@@ -1,0 +1,332 @@
+pair_id: ARIA_USDT0.01%_0xa5db
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0xa5dbeaf16fc031eae92175974f8d0a439be4ad17'
+  base_token:
+    symbol: ARIA
+    address: '0x5d3a12c42e5372b2cc3264ab3cdcf660a1555238'
+  quote_token:
+    symbol: USDT 0.01%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:bf4a390be98b82d5
+  primary_excerpt: 'Pool ARIA_USDT0.01%_0xa5db on bsc/pancakeswap-v3-bsc. TVL: $4,238,881,
+    24h Volume: $23,061,802. whale_movement(str=70.2); whale_movement(str=39.9); whale_movement(str=36.9);
+    whale_movement(str=36.9); whale_movement(str=30.8)'
+market_data:
+  price_usd: 0.3875
+  tvl_usd: 4238881.26
+  volume_24h_usd: 23061801.7
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: -0.15
+    price_change_h1: 1.45
+    price_change_h6: 5.11
+    price_change_h24: 15.99
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 70.22
+  source: moralis
+  details:
+    tx_hash: '0x48b32298424e22f0843d27b7b865eaa0178f23012ebea5c1628d3ce454d7abcd'
+    value_usd: 3511.098298502369
+- signal_type: whale_movement
+  strength: 39.93
+  source: moralis
+  details:
+    tx_hash: '0xdbe42de905a7b7bdf60efe00f84a9014172d8d0539cfd0ec7fa6db619fbfda62'
+    value_usd: 1996.36125
+- signal_type: whale_movement
+  strength: 36.94
+  source: moralis
+  details:
+    tx_hash: '0x17fecdc8ae6dfee460be82590a7372101dd91b07f407b7368722b000dd947b0b'
+    value_usd: 1847.1349999999998
+- signal_type: whale_movement
+  strength: 36.94
+  source: moralis
+  details:
+    tx_hash: '0xbe0f9ceccf336fbbdcf7c0788a8fc85f36c8dee4238be55dee26c5bdbcc62766'
+    value_usd: 1847.1349999999998
+- signal_type: whale_movement
+  strength: 30.8
+  source: moralis
+  details:
+    tx_hash: '0x9ffc181ab05d55dfdc09019f023a0e764f3c449971ecdf0d50956ebc78d5ea4b'
+    value_usd: 1539.9907758405784
+- signal_type: whale_movement
+  strength: 28.6
+  source: moralis
+  details:
+    tx_hash: '0x0dc00f24ed29d0ceeb512915a1efcd74035157f36f04729ce63fbf8b44c2eef5'
+    value_usd: 1429.8247391917923
+- signal_type: whale_movement
+  strength: 27.27
+  source: moralis
+  details:
+    tx_hash: '0x4343b3eb676abb93039d1fbd6b8c020aaf682cb2b520dda0c1ea1890f336a99b'
+    value_usd: 1363.4521287834893
+- signal_type: whale_movement
+  strength: 27.04
+  source: moralis
+  details:
+    tx_hash: '0xff6027b5c8d5f278951c773fe0a8e5de2ac7147bcb01e6fc4bfe75132247c75c'
+    value_usd: 1352.0593448852794
+- signal_type: whale_movement
+  strength: 26.88
+  source: moralis
+  details:
+    tx_hash: '0xbb3262c6dbb2a80016d2ea7381673a9f7176a0c7754a5bf3504b6102bcedf426'
+    value_usd: 1343.958555495025
+- signal_type: whale_movement
+  strength: 26.81
+  source: moralis
+  details:
+    tx_hash: '0x15a6cf04784a7ec50060400afa6d55745c68591578dec3d84a986ea587e932ea'
+    value_usd: 1340.469855124578
+- signal_type: whale_movement
+  strength: 25.32
+  source: moralis
+  details:
+    tx_hash: '0x5716c748f45f0e3ebebe181544a25d44f6742c7be30fb941e253bedbe559a877'
+    value_usd: 1265.7764064822916
+- signal_type: whale_movement
+  strength: 24.03
+  source: moralis
+  details:
+    tx_hash: '0x4b5ee27b6405370bef42865b41b6f56a03c1fb9cc1c3fdbb2a79de012d16936b'
+    value_usd: 1201.4497899713092
+- signal_type: whale_movement
+  strength: 23.63
+  source: moralis
+  details:
+    tx_hash: '0x6c17c3511935c93b249969f3b2b5a4c517b7477cc341dab7e341f37db9ed2ced'
+    value_usd: 1181.4813177863095
+- signal_type: whale_movement
+  strength: 23.34
+  source: moralis
+  details:
+    tx_hash: '0x5b1b8dd2ef2acf97c1eab7dfe1302041be7ea0f03d271f7c55a0b3c29e62a248'
+    value_usd: 1167.228106926586
+- signal_type: whale_movement
+  strength: 19.94
+  source: moralis
+  details:
+    tx_hash: '0xa6371468cda2561120013bb2e3194488a3807d8e98327e4a30b53d7321139240'
+    value_usd: 997.2002211527067
+- signal_type: whale_movement
+  strength: 19.84
+  source: moralis
+  details:
+    tx_hash: '0x72d25488d17d724da8936ffee6df4ac9c9228353803c256b4da11a545c939966'
+    value_usd: 992.1912142677414
+- signal_type: whale_movement
+  strength: 19.53
+  source: moralis
+  details:
+    tx_hash: '0xa5e52621464cb4ab1e974f56420f2fdd48b6eb982a634dfc19b84458932a1605'
+    value_usd: 976.398894758616
+- signal_type: whale_movement
+  strength: 19.41
+  source: moralis
+  details:
+    tx_hash: '0x0c51ae31f2b555b333173dffe3f8d88c4fa8a3e5acdd8a751af93a86310f861a'
+    value_usd: 970.6031163401539
+- signal_type: whale_movement
+  strength: 18.83
+  source: moralis
+  details:
+    tx_hash: '0xba99ddd306479bcdbdbc19a93d16bbeef1743fe05b0001ad2d808f8454aaf0dc'
+    value_usd: 941.3170472960377
+- signal_type: whale_movement
+  strength: 18.52
+  source: moralis
+  details:
+    tx_hash: '0xdc0132710a4ce959e8d6fe922e7888003112b279a6de1cf3afc091ef712de485'
+    value_usd: 925.9282095041004
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 19
+    avg_trade_size_usd: 655.2
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 19
+  onchain_avg_trade_size_usd: 655.2
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 42176.87
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 21
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 93
+  status: validated
+  reasons:
+  - whale_movement strength=70.2
+  - whale_movement strength=39.9
+  - whale_movement strength=36.9
+  - whale_movement strength=36.9
+  - whale_movement strength=30.8
+  - whale_movement strength=28.6
+  - whale_movement strength=27.3
+  - whale_movement strength=27.0
+  - whale_movement strength=26.9
+  - whale_movement strength=26.8
+  - whale_movement strength=25.3
+  - whale_movement strength=24.0
+  - whale_movement strength=23.6
+  - whale_movement strength=23.3
+  - whale_movement strength=19.9
+  - whale_movement strength=19.8
+  - whale_movement strength=19.5
+  - whale_movement strength=19.4
+  - whale_movement strength=18.8
+  - whale_movement strength=18.5
+  - high_onchain_activity strength=100.0
+  - TVL $4.2M sufficient
+  - Volume $23062K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 2000
+    max_slippage_bps: 30
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: moderate
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.88
+  viable: true
+  reasoning: 2%深度仅4.2万美元，相对于2300万美元的日成交量极度偏浅，价格极易因单笔交易产生大幅偏离，套利空间频发。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 2000
+    max_slippage_bps: 30
+    hold_blocks_max: 2
+- strategy_type: volume_momentum
+  pro_confidence: 0.62
+  viable: true
+  reasoning: 虽然成交量巨大，但19个独立地址贡献2300万交易量且平均单笔仅655美元，存在显著的刷量（Wash Trading）嫌疑，动量策略需严防虚假信号。
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 1500
+    max_slippage_bps: 50
+    hold_blocks_max: 10
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.75
+  viable: true
+  reasoning: V3池的集中流动性在浅深度下会放大价格波动，若ARIA在其他DEX有流动性，跨池套利机会极高。
+  parameter_hints:
+    entry_threshold_pct: 0.4
+    max_position_usd: 3000
+    max_slippage_bps: 20
+    hold_blocks_max: 1
+llm_risk_flags:
+- high_volume_to_tvl_ratio
+- shallow_depth_relative_to_volume
+- potential_wash_trading_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: moderate
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.92
+    reasoning: 24h交易量超过TVL的5倍，且价格处于上升趋势，量价配合极佳。
+    trigger_signals:
+    - high_onchain_activity
+    - price_change_h24
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.78
+    reasoning: 2%深度仅为4.2万美元，相对于2300万美元的日交易量极小，极易产生瞬时价格偏离。
+    trigger_signals:
+    - whale_movement
+    - high_onchain_activity
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.75
+    reasoning: 高频交易环境下，V3池的集中流动性会导致与外部市场产生频繁套利空间。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - high_volume_to_tvl_ratio
+  - shallow_depth_relative_to_volume
+  - potential_wash_trading_risk
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.88
+    viable: true
+    reasoning: 2%深度仅4.2万美元，相对于2300万美元的日成交量极度偏浅，价格极易因单笔交易产生大幅偏离，套利空间频发。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 2000
+      max_slippage_bps: 30
+      hold_blocks_max: 2
+  - strategy_type: volume_momentum
+    pro_confidence: 0.62
+    viable: true
+    reasoning: 虽然成交量巨大，但19个独立地址贡献2300万交易量且平均单笔仅655美元，存在显著的刷量（Wash Trading）嫌疑，动量策略需严防虚假信号。
+    parameter_hints:
+      entry_threshold_pct: 1.2
+      max_position_usd: 1500
+      max_slippage_bps: 50
+      hold_blocks_max: 10
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.75
+    viable: true
+    reasoning: V3池的集中流动性在浅深度下会放大价格波动，若ARIA在其他DEX有流动性，跨池套利机会极高。
+    parameter_hints:
+      entry_threshold_pct: 0.4
+      max_position_usd: 3000
+      max_slippage_bps: 20
+      hold_blocks_max: 1
+  pro_score: 72
+  pro_verdict: moderate
+  override_reason: Flash模型忽略了极高的成交量与极少的独立钱包数（19个）之间的矛盾，这暗示了严重的刷量风险。虽然流动性池真实存在且活跃，但策略执行需大幅收紧头寸上限以应对极浅的实际深度（2%深度仅占TVL的1%）。
+llm_verdict: moderate
+llm_score: 72
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

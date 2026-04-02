@@ -1,0 +1,84 @@
+pair_id: POWER_USDT0.007%_0x00b4
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0x00b4bbb4eb17154b28642f2d42f45e2f5d226f3b7d89216e8bfb8f55a0884538'
+  base_token:
+    symbol: POWER
+    address: '0x9dc44ae5be187eca9e2a67e33f27a4c91cea1223'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:ccebb96eab5b0d57
+  primary_excerpt: 'Pool POWER_USDT0.007%_0x00b4 on bsc/pancakeswap-infinity-clmm.
+    TVL: $904,310, 24h Volume: $3,536,265. high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0
+  tvl_usd: 904309.8086
+  volume_24h_usd: 3536265.47596743
+  fee_bps: 25
+  ohlcv_summary: {}
+signals:
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 21
+    avg_trade_size_usd: 0.0
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 21
+  onchain_avg_trade_size_usd: 0.0
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 0.0
+cross_pool_analysis: {}
+validation:
+  dual_source_met: false
+  signal_count: 1
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - Gecko+DexScreener both unavailable, Moralis-only mode
+decision:
+  quality: moderate
+  score: 55
+  status: validated
+  reasons:
+  - high_onchain_activity strength=100.0
+  - TVL $904K above minimum
+  - Volume $3536K healthy
+execution_hints:
+  suggested_strategy: opportunistic
+  urgency: medium
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: mid_cap
+  liquidity_profile: moderate
+  amm_type: pancakeswap-infinity-clmm
+  activity_profile: active
+llm_strategies:
+- strategy_type: opportunistic
+  confidence: 0.55
+  source: deterministic
+llm_risk_flags: []
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: moderate
+llm_score: 55
+hypotheses:
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

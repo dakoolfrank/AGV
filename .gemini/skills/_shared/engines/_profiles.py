@@ -37,7 +37,8 @@ _TRUNK_ASSET_KINDS = frozenset({
 _S5_ASSET_KINDS = frozenset({
     "lp_state",                                                      # 从 S2 分叉消费
     "pool_state", "anomaly_signal", "heartbeat_log", "tx_result",  # MM
-    "market_signal", "arb_strategy", "execution_result",            # Arb
+    "market_signal", "arb_strategy", "dataset_binding",             # Arb
+    "execution_result",
 })
 
 
@@ -202,20 +203,20 @@ S5_ARB_PROFILE = PipelineProfile(
     optional_steps=frozenset({"fix"}),
     asset_kinds=frozenset({
         "lp_state",  # 从 S2 分叉消费
-        "market_signal", "arb_strategy", "execution_result",
+        "market_signal", "arb_strategy", "dataset_binding", "execution_result",
     }),
     step_produces={
         "collect":    frozenset({"market_signal"}),
         "curate":  frozenset({"arb_strategy"}),
-        "dataset": frozenset(),                     # 参数集内联
+        "dataset": frozenset({"dataset_binding"}),
         "execute": frozenset({"execution_result"}),
         "fix":     frozenset(),
     },
     step_consumes={
-        "collect":    frozenset({"lp_state"}),          # ← 从 S2 分叉消费
+        "collect":    frozenset(),                      # 独立模式无上游；主干分叉时由 campaign 预注入 lp_state
         "curate":  frozenset({"market_signal"}),
         "dataset": frozenset({"arb_strategy"}),
-        "execute": frozenset({"arb_strategy"}),
+        "execute": frozenset({"dataset_binding"}),
         "fix":     frozenset({"execution_result"}),
     },
     upstream_chain={

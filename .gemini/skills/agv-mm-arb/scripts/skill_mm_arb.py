@@ -3,10 +3,10 @@ S5 MarketMaker-Agent — 主程序入口 + 配置中枢
 
 双 Campaign 拓扑（DESIGN.md §1）：
   - MM-Campaign: 护盘 + 反 MEV（心跳模式，确定性管线，零 LLM）
-  - Arb-Campaign: 因子驱动套利（scan→curate→dataset→execute→fix）
+  - Arb-Campaign: 因子驱动套利（collect→curate→dataset→execute→fix）
 
 架构关键点:
-  - scan / execute / fix = 自建（AGV 域）
+  - collect / execute / fix = 自建（AGV 域）
   - curate / dataset   = 直接调 WQ-YI Skill 类（对齐 WQ-YI 调用方式）
   - DexExecutor L2     = 两个 Campaign 共享（在 toolloop_mm.py 中）
 
@@ -339,9 +339,9 @@ MM_PIPELINE = {
 
 ARB_PIPELINE = {
     "name": "arb_factor",
-    "steps": ["scan", "curate", "dataset", "execute", "fix"],
+    "steps": ["collect", "curate", "dataset", "execute", "fix"],
     "step_to_skill": {
-        "scan": "market-maker",
+        "collect": "market-maker",
         "curate": "brain-curate-knowledge",       # WQ-YI 的 Skill
         "dataset": "brain-dataset-explorer",       # WQ-YI 的 Skill
         "execute": "market-maker",
@@ -349,7 +349,7 @@ ARB_PIPELINE = {
     },
     "optional_steps": ["fix"],
     "produces": {
-        "scan": ["market_signal"],
+        "collect": ["market_signal"],
         "curate": ["arb_skeleton"],
         "dataset": ["arb_strategy"],
         "execute": ["execution_result"],
@@ -394,7 +394,7 @@ def _build_web3():
 
 def _build_notify_router():
     """从 .env.s5 构建通知路由（凭据缺失 → 静默跳过）"""
-    from toolloop_mm import TelegramNotifier, DiscordNotifier, NotifyRouter
+    from toolloop_common import TelegramNotifier, DiscordNotifier, NotifyRouter
     tg = TelegramNotifier(
         bot_token=get_s5_env("TELEGRAM_BOT_TOKEN"),
         chat_id=get_s5_env("TELEGRAM_CHAT_ID"),
@@ -405,10 +405,11 @@ def _build_notify_router():
 
 async def run_mm_campaign(*, config: dict | None = None, workspace: Path | None = None):
     """启动 MM-Campaign（护盘 + 反 MEV）— §2"""
-    from toolloop_mm import (
+    from toolloop_common import (
         DexExecutor, PancakeV2Adapter, SlippageGuard, MEVGuard,
-        TVLBreaker, NotifyRouter, MMHeartbeatLoop,
+        TVLBreaker, NotifyRouter,
     )
+    from toolloop_mm import MMHeartbeatLoop
 
     cfg = config or {}
     executor_config = ExecutorConfig.from_yaml()
@@ -445,7 +446,7 @@ async def run_mm_campaign(*, config: dict | None = None, workspace: Path | None 
 async def run_arb_campaign(*, config: dict | None = None, workspace: Path | None = None):
     """启动 Arb-Campaign（因子驱动套利）— §3"""
     from toolloop_arb import ArbCampaignLoop
-    from toolloop_mm import (
+    from toolloop_common import (
         DexExecutor, PancakeV2Adapter, NotifyRouter,
         SlippageGuard, TVLBreaker, MEVGuard, ApproveManager,
     )

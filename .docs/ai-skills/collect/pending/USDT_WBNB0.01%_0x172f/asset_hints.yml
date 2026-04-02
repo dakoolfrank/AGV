@@ -1,0 +1,21 @@
+pair_id: USDT_WBNB0.01%_0x172f
+pool_address: '0x172fcd41e0913e95784454622d1c3724f546f849'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: USDT
+quote_token: WBNB 0.01%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 100.0
+tvl_usd: 16672382.65
+volume_24h_usd: 111803796.73
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0x172fcd41e0913e95784454622d1c3724f546f849'
+source_url: https://www.geckoterminal.com/bsc/pools/0x172fcd41e0913e95784454622d1c3724f546f849
+source_type: dex_pool
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.95
+llm_verdict: strong
+llm_score: 92

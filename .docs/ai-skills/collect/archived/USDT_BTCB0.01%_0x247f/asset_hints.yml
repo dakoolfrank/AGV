@@ -1,0 +1,18 @@
+pair_id: USDT_BTCB0.01%_0x247f
+pool_address: '0x247f51881d1e3ae0f759afb801413a6c948ef442'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: USDT
+quote_token: BTCB 0.01%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 100.0
+tvl_usd: 944429.4163
+volume_24h_usd: 3356620.33645052
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: blue_chip
+liquidity_profile: moderate
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.95
+llm_verdict: strong
+llm_score: 88

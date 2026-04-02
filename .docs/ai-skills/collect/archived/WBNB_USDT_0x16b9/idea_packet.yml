@@ -1,0 +1,224 @@
+pair_id: WBNB_USDT_0x16b9
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: pancakeswap
+  pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:c4e67cd5c9409acc
+  primary_excerpt: 'Pool WBNB_USDT_0x16b9 on bsc/pancakeswap. TVL: $34,787,871, 24h
+    Volume: $3,520,043. whale_movement(str=100.0); whale_movement(str=93.8); whale_movement(str=21.0);
+    whale_movement(str=18.9); whale_movement(str=11.8)'
+market_data:
+  price_usd: 615.014
+  tvl_usd: 34787871.3
+  volume_24h_usd: 3520043.16
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: 0.03
+    price_change_h1: -0.34
+    price_change_h6: 0.92
+    price_change_h24: 0.3
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x84c3bdabb057087ec74837353333b86d9571d3184b3077334b7c1c59e3038ae9'
+    value_usd: 7793.455673745172
+- signal_type: whale_movement
+  strength: 93.85
+  source: moralis
+  details:
+    tx_hash: '0x7ad05118de9e684b7f9eefc53300bc55960b5f7b7aeac2566d22ece945cede0d'
+    value_usd: 4692.350992685028
+- signal_type: whale_movement
+  strength: 20.98
+  source: moralis
+  details:
+    tx_hash: '0x32faab12c5cab008a218ca75bf958ad232e71a88cf9065677fd9150deee78ee7'
+    value_usd: 1048.9973384035347
+- signal_type: whale_movement
+  strength: 18.9
+  source: moralis
+  details:
+    tx_hash: '0x19722dc4283fef2ac95dbe44930037c8053d3115ad48f8af35f80e945974b958'
+    value_usd: 945.0240129093108
+- signal_type: whale_movement
+  strength: 11.85
+  source: moralis
+  details:
+    tx_hash: '0xe4a9f6f65a4bc299deb51075bfb26476938cfba479f8d38dc8d99b05628b8215'
+    value_usd: 592.5422751148413
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 39
+    avg_trade_size_usd: 431.34
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 39
+  onchain_avg_trade_size_usd: 431.34
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 346139.32
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 6
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 93
+  status: validated
+  reasons:
+  - whale_movement strength=100.0
+  - whale_movement strength=93.8
+  - whale_movement strength=21.0
+  - whale_movement strength=18.9
+  - whale_movement strength=11.8
+  - high_onchain_activity strength=100.0
+  - TVL $34.8M sufficient
+  - Volume $3520K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.08
+    max_position_usd: 100000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+llm_classification:
+  asset_class: blue_chip
+  amm_type: concentrated_v3
+  liquidity_profile: deep
+  activity_profile: normal
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.95
+  viable: true
+  reasoning: WBNB/USDT在Pancake V2/V3及各聚合器间流动性极深，价差极易被高频套利捕捉，是BSC链上最成熟的套利路径。
+  parameter_hints:
+    entry_threshold_pct: 0.08
+    max_position_usd: 100000
+    max_slippage_bps: 5
+    hold_blocks_max: 1
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.72
+  viable: true
+  reasoning: V3池在特定价格区间集中了大量流动性，虽然当前交易额较小，但在波动期利用Tick间流动性空隙进行统计套利依然可行。
+  parameter_hints:
+    entry_threshold_pct: 0.12
+    max_position_usd: 50000
+    max_slippage_bps: 10
+    hold_blocks_max: 3
+- strategy_type: mean_reversion
+  pro_confidence: 0.85
+  viable: true
+  reasoning: 极低的24h波动率（0.3%）配合深厚的2%深度（$346k），非常适合窄幅网格或做市策略获取手续费及微小回归收益。
+  parameter_hints:
+    entry_threshold_pct: 0.05
+    max_position_usd: 200000
+    max_slippage_bps: 2
+    hold_blocks_max: 50
+llm_risk_flags:
+- high_mev_competition
+- whale_activity_detected
+llm_flash_raw:
+  pool_classification:
+    asset_class: blue_chip
+    amm_type: concentrated_v3
+    liquidity_profile: deep
+    activity_profile: normal
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.92
+    reasoning: WBNB/USDT 是 BSC 核心交易对，在 PancakeSwap V2/V3 及其他 DEX 间存在极高频的价格套利空间。
+    trigger_signals:
+    - whale_movement
+    - high_onchain_activity
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.78
+    reasoning: 检测到多笔大额鲸鱼交易，集中流动性池在遭遇连续单向大额交易时易产生瞬时价格偏离。
+    trigger_signals:
+    - whale_movement
+  - strategy_type: mean_reversion
+    confidence: 0.65
+    reasoning: 24h 价格波动仅 0.3%，属于典型的震荡行情，适合在深度充足的池中进行网格或均值回归操作。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - high_mev_competition
+  - whale_activity_detected
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.95
+    viable: true
+    reasoning: WBNB/USDT在Pancake V2/V3及各聚合器间流动性极深，价差极易被高频套利捕捉，是BSC链上最成熟的套利路径。
+    parameter_hints:
+      entry_threshold_pct: 0.08
+      max_position_usd: 100000
+      max_slippage_bps: 5
+      hold_blocks_max: 1
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.72
+    viable: true
+    reasoning: V3池在特定价格区间集中了大量流动性，虽然当前交易额较小，但在波动期利用Tick间流动性空隙进行统计套利依然可行。
+    parameter_hints:
+      entry_threshold_pct: 0.12
+      max_position_usd: 50000
+      max_slippage_bps: 10
+      hold_blocks_max: 3
+  - strategy_type: mean_reversion
+    pro_confidence: 0.85
+    viable: true
+    reasoning: 极低的24h波动率（0.3%）配合深厚的2%深度（$346k），非常适合窄幅网格或做市策略获取手续费及微小回归收益。
+    parameter_hints:
+      entry_threshold_pct: 0.05
+      max_position_usd: 200000
+      max_slippage_bps: 2
+      hold_blocks_max: 50
+  pro_score: 90
+  pro_verdict: strong
+  override_reason: Flash分类准确。虽然信号中所谓的'鲸鱼交易'（约$7k）相对于$34M的TVL而言仅属常规交易，但高频的成交记录和极深的流动性深度证实了该池作为BSC核心资产对的高确定性，适合大资金量化介入。
+llm_verdict: strong
+llm_score: 90
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

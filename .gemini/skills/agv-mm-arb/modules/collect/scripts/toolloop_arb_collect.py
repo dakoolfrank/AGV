@@ -57,7 +57,7 @@ try:
         DivergenceResult,
         IndicatorSnapshot,
         compute_all,
-        scan_all_pairs,
+        compare_all_pairs,
         spread_zscore,
     )
 except ImportError:
@@ -79,7 +79,7 @@ except ImportError:
         DivergenceResult,
         IndicatorSnapshot,
         compute_all,
-        scan_all_pairs,
+        compare_all_pairs,
         spread_zscore,
     )
 
@@ -113,8 +113,8 @@ class PoolAsset:
     lifecycle_state: str = "pending"        # pending / curating / evaluated / terminal_*
     status: str = "pending"                 # pending / archived
     signal_quality: str = "none"            # strong / moderate / weak / none
-    scan_count: int = 0
-    last_scan: str = ""
+    check_count: int = 0
+    last_check: str = ""
     dir: str = ""                           # directory name in pending/
     tvl_usd: float = 0.0                    # discover 阶段预填
     volume_24h_usd: float = 0.0             # discover 阶段预填
@@ -160,6 +160,10 @@ class PoolHints:
     tvl_usd: float = 0.0
     volume_24h_usd: float = 0.0
     discovered_at: str = ""
+    # ── WQ-YI curate 推荐字段（source provenance） ──
+    canonical_id: str = ""            # 唯一标识 = pool_address
+    source_url: str = ""              # 来源 URL（GeckoTerminal pool 页）
+    source_type: str = ""             # dex_pool / cex_pair / ...
     # ── LLM 判断层（对齐 WQ-YI AssetHints） ──
     asset_class: str = ""             # stablecoin_pair / blue_chip / ...
     liquidity_profile: str = ""       # deep / moderate / shallow / critical
@@ -221,8 +225,8 @@ class ArbPoolRegistry:
             "lifecycle_state": asset.lifecycle_state,
             "status": asset.status,
             "signal_quality": asset.signal_quality,
-            "last_scan": asset.last_scan,
-            "scan_count": asset.scan_count,
+            "last_check": asset.last_check,
+            "check_count": asset.check_count,
             "dir": asset.dir,
             "discovery_method": asset.discovery_method,
         }
@@ -363,14 +367,14 @@ class CollectLLMJudge:
         indicators: dict,
     ) -> dict | None:
         """Flash LLM 快速分类"""
-        if not self._prompts or not self._prompts.has("scan_flash_classify_system"):
+        if not self._prompts or not self._prompts.has("collect_flash_classify_system"):
             return None
 
         ohlcv_summary = market_data.get("ohlcv_summary", {})
         ohlcv_text = json.dumps(ohlcv_summary, default=str) if ohlcv_summary else "(无数据)"
 
-        system_prompt = self._prompts.get("scan_flash_classify_system")
-        user_prompt = self._prompts.get("scan_flash_classify_user").format(
+        system_prompt = self._prompts.get("collect_flash_classify_system")
+        user_prompt = self._prompts.get("collect_flash_classify_user").format(
             pair_id=asset.pair_id,
             dex=asset.dex or "(未知)",
             base_token=asset.base_token,
@@ -411,14 +415,14 @@ class CollectLLMJudge:
         flash_result: dict,
     ) -> dict | None:
         """Pro LLM 仲裁"""
-        if not self._prompts or not self._prompts.has("scan_pro_arbitrate_system"):
+        if not self._prompts or not self._prompts.has("collect_pro_arbitrate_system"):
             return None
 
         price_usd = market_data.get("price_usd", 0)
         ohlcv = market_data.get("ohlcv_summary", {})
 
-        system_prompt = self._prompts.get("scan_pro_arbitrate_system")
-        user_prompt = self._prompts.get("scan_pro_arbitrate_user").format(
+        system_prompt = self._prompts.get("collect_pro_arbitrate_system")
+        user_prompt = self._prompts.get("collect_pro_arbitrate_user").format(
             pair_id=asset.pair_id,
             dex=asset.dex or "(未知)",
             tvl_usd=market_data.get("tvl_usd", 0),
@@ -1067,8 +1071,8 @@ class ArbCollectSkill:
 
         # 更新 asset
         asset.signal_quality = quality
-        asset.scan_count += 1
-        asset.last_scan = now
+        asset.check_count += 1
+        asset.last_check = now
 
         # 保存原始快照供 persist
         self._last_raw_snapshot = merged
@@ -1228,6 +1232,11 @@ class ArbCollectSkill:
             if conf > _best_strat_conf:
                 _best_strat_conf = conf
                 _best_strat_type = strat.get("strategy_type", "")
+        # canonical_id / source_url / source_type — curate 推荐字段
+        _gecko_url = (
+            f"https://www.geckoterminal.com/{asset.network}/pools/{asset.pool_address}"
+            if asset.pool_address else ""
+        )
         hints = PoolHints(
             pair_id=asset.pair_id,
             pool_address=asset.pool_address,
@@ -1241,6 +1250,9 @@ class ArbCollectSkill:
             tvl_usd=packet.market_data.get("tvl_usd", 0.0),
             volume_24h_usd=packet.market_data.get("volume_24h_usd", 0.0),
             discovered_at=asset.discovered_at,
+            canonical_id=asset.pool_address,
+            source_url=_gecko_url,
+            source_type="dex_pool",
             asset_class=packet.llm_classification.get("asset_class", ""),
             liquidity_profile=packet.llm_classification.get("liquidity_profile", ""),
             strategy_type=_best_strat_type or packet.execution_hints.get("suggested_strategy", ""),
@@ -1414,7 +1426,7 @@ class ArbCollectSkill:
         except Exception as exc:
             logger.error("arb collect failed: %s", exc)
             outcome.status = "failed"
-            outcome.reason_code = "scan_error"
+            outcome.reason_code = "collect_error"
 
         return outcome
 

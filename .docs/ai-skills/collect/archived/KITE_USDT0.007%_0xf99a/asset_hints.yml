@@ -1,0 +1,18 @@
+pair_id: KITE_USDT0.007%_0xf99a
+pool_address: '0xf99ac6209c0413299383fd836f878372e6398e6d9da52cee18fbccb8d9e810e0'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: KITE
+quote_token: USDT 0.007%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 100.0
+tvl_usd: 1715573.1871
+volume_24h_usd: 4441157.22376075
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: fragile
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.82
+llm_verdict: moderate
+llm_score: 62

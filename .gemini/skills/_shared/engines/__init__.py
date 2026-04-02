@@ -5,6 +5,10 @@ Re-export nexrur engines API + AGV-specific profiles, ops, campaign & diagnosis.
 """
 # ToolLoop schema 注册（幂等，确保在任何 engines 导入时生效）
 from . import _bootstrap_schema as _bootstrap_schema  # noqa: F401
+from ._bootstrap_schema import (  # noqa: F401
+    get_agv_validator,
+    validate_step_output,
+)
 
 # ── nexrur kernel re-exports ──
 from nexrur.engines import (  # noqa: F401

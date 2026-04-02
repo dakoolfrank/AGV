@@ -12,7 +12,7 @@ collect skill 消费此模块做指标计算 + 跨池分析。
 
 对齐关系:
   WQ-YI curate 步骤 → 从论文提取骨架 → standard_operators.yml 定义算子
-  AGV   scan  步骤 → 从链上提取指标 → 本文件实现算子
+  AGV   collect  步骤 → 从链上提取指标 → 本文件实现算子
 """
 from __future__ import annotations
 
@@ -579,9 +579,9 @@ def triangular_arb_check(
     )
 
 
-def scan_all_pairs(pools: list[PoolState],
+def compare_all_pairs(pools: list[PoolState],
                    min_net_spread: float = 0.001) -> list[DivergenceResult]:
-    """扫描所有池子两两组合，找出净价差 > 阈值的配对"""
+    """比较所有池子两两组合，找出净价差 > 阈值的配对"""
     results = []
     for i in range(len(pools)):
         for j in range(i + 1, len(pools)):
@@ -598,7 +598,7 @@ def scan_all_pairs(pools: list[PoolState],
 class SignalBus:
     """轻量级 pub-sub 信号总线
 
-    scan 产出的信号通过 publish() 分发给订阅者，
+    collect 产出的信号通过 publish() 分发给订阅者，
     同时缓存在 _buffer 中供 drain() 批量取走。
     """
 
@@ -623,7 +623,7 @@ class SignalBus:
 
 
 class CollectLoop:
-    """定时 scan 循环 — 自动降级空闲间隔"""
+    """定时 collect 循环 — 自动降级空闲间隔"""
 
     def __init__(
         self,
@@ -631,13 +631,13 @@ class CollectLoop:
         interval_seconds: float = 60.0,
         degraded_interval: float = 300.0,
         max_noop_before_degrade: int = 5,
-        scan_skill=None,
+        collect_skill=None,
         signal_bus: SignalBus | None = None,
     ) -> None:
         self._interval = interval_seconds
         self._degraded_interval = degraded_interval
         self._max_noop = max_noop_before_degrade
-        self._scan_skill = scan_skill
+        self._collect_skill = collect_skill
         self._signal_bus = signal_bus or SignalBus()
         self._cycle_count: int = 0
         self._noop_count: int = 0
@@ -650,9 +650,9 @@ class CollectLoop:
         return self._interval
 
     async def run_once(self, pools: list[str]) -> list[dict]:
-        if self._scan_skill is None:
-            raise RuntimeError("scan_skill not configured")
-        signals = await self._scan_skill.scan_all_pools(pools)
+        if self._collect_skill is None:
+            raise RuntimeError("collect_skill not configured")
+        signals = await self._collect_skill.collect_all_pools(pools)
         self._cycle_count += 1
         if signals:
             self._noop_count = 0

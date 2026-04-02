@@ -1,0 +1,18 @@
+pair_id: DBT_USDT0.007%_0xba2e
+pool_address: '0xba2eab70102e8e1ca982dce825328cadf1cd33ca4e0d1bb4e7408fe9bcdecec4'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: DBT
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 1881552.0108
+volume_24h_usd: 7302007.69967131
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.7
+llm_verdict: moderate
+llm_score: 52

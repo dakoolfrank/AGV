@@ -1,0 +1,18 @@
+pair_id: C_USDT0.01%_0x3030
+pool_address: '0x30305b22fc2830b42908993e668b31b7234a9737'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: C
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: price_divergence
+signal_strength: 3.9
+tvl_usd: 833696.486
+volume_24h_usd: 4410084.99960651
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: shallow
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.92
+llm_verdict: moderate
+llm_score: 78

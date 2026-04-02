@@ -20,8 +20,9 @@
 #   fix:      retreat_level (由 DiagnosisEngine 填充)
 # ============================================================
 goal:
-  pair: pGVT_USDT                       # 目标交易对
-  strategy_id: arb_pGVT_USDT            # 策略标识（trace 关联）
+  # target_pools 可覆盖默认外部池列表（默认: WBNB_USDT, CAKE_BNB, ETH_BNB）
+  # S5-R1: Arb 禁止 pGVT/sGVT 地址 — 外部池由 _DEFAULT_EXTERNAL_POOLS 定义
+  strategy_id: arb_external_bsc          # 策略标识（trace 关联）
   simulate: true                         # 模拟模式（CLI --live 覆盖）
   data_sources:                          # collect 数据源
     - gecko_terminal

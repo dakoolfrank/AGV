@@ -1,0 +1,18 @@
+pair_id: USDT_USDC0.01%_0x92b7
+pool_address: '0x92b7807bf19b7dddf89b706143896d05228f3121'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: USDT
+quote_token: USDC 0.01%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 100.0
+tvl_usd: 46018604.51
+volume_24h_usd: 3111610.09
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: stablecoin_pair
+liquidity_profile: deep
+strategy_type: cross_pool_arbitrage
+strategy_confidence: 0.9
+llm_verdict: strong
+llm_score: 92

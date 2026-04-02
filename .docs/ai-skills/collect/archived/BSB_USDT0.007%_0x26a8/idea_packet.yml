@@ -1,0 +1,205 @@
+pair_id: BSB_USDT0.007%_0x26a8
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-infinity-clmm
+  pool_address: '0x26a8e4591b7a0efcd45a577ad0d54aa64a99efaf2546ad4d5b0454c99eb70eab'
+  base_token:
+    symbol: BSB
+    address: '0x595deaad1eb5476ff1e649fdb7efc36f1e4679cc'
+  quote_token:
+    symbol: USDT 0.007%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:e2686aaa14ac3129
+  primary_excerpt: 'Pool BSB_USDT0.007%_0x26a8 on bsc/pancakeswap-infinity-clmm. TVL:
+    $13,099,217, 24h Volume: $39,702,980. price_divergence(str=16.9); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.227992589787705
+  tvl_usd: 13099217.4422
+  volume_24h_usd: 39702979.9256732
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 0.279347296771414
+    low: 0.225808262262527
+    close: 0.27453674982005
+    bar_count: 100
+signals:
+- signal_type: price_divergence
+  strength: 16.95
+  source: gecko
+  details:
+    price: 0.227992589787705
+    last_close: 0.27453674982005
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 36
+    avg_trade_size_usd: 108.21
+indicators:
+  rsi_14: 65.666672
+  ema_12: 0.267711
+  ema_26: 0.265513
+  vwap: 0.2578
+  bollinger_upper: 0.273208
+  bollinger_lower: 0.256801
+  bollinger_middle: 0.265005
+  macd_histogram: 0.000799
+  atr_14: 0.007624
+  onchain_tx_count: 100
+  onchain_unique_wallets: 36
+  onchain_avg_trade_size_usd: 108.21
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.2291
+  depth_2pct_usd: 130337.21
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 2
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 76
+  status: validated
+  reasons:
+  - price_divergence strength=16.9
+  - high_onchain_activity strength=100.0
+  - TVL $13.1M sufficient
+  - Volume $39703K healthy
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 2.5
+    max_position_usd: 30000
+    max_slippage_bps: 50
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: deep
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.92
+  viable: true
+  reasoning: 链上价格 ($0.274) 较外部市场 ($0.227) 溢价高达 17%，且池深 ($130k 2% depth) 足以支撑中等规模套利指令。
+  parameter_hints:
+    entry_threshold_pct: 2.5
+    max_position_usd: 30000
+    max_slippage_bps: 50
+    hold_blocks_max: 2
+- strategy_type: mean_reversion
+  pro_confidence: 0.6
+  viable: true
+  reasoning: 链上价格已突破布林带上轨 ($0.273)，存在向外部均值回归的强烈动力，但需警惕高波动下的单边行情。
+  parameter_hints:
+    entry_threshold_pct: 5.0
+    max_position_usd: 15000
+    max_slippage_bps: 30
+    hold_blocks_max: 20
+- strategy_type: volume_momentum
+  pro_confidence: 0.7
+  viable: true
+  reasoning: 24h 成交量远超 TVL，换手率极高，适合捕获由套利活动引发的波动率收益。
+  parameter_hints:
+    entry_threshold_pct: 1.5
+    max_position_usd: 20000
+    max_slippage_bps: 40
+    hold_blocks_max: 10
+llm_risk_flags:
+- significant_price_divergence
+- low_depth_to_tvl_ratio
+- high_volatility_atr
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: deep
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.88
+    reasoning: 检测到 16.95% 的价格偏离（Gecko 价格 $0.227 vs 链上收盘价 $0.274），存在显著套利空间。
+    trigger_signals:
+    - price_divergence
+  - strategy_type: mean_reversion
+    confidence: 0.75
+    reasoning: 当前价格 $0.227 远低于布林带下轨 $0.256 及 VWAP $0.257，处于超卖区域。
+    trigger_signals:
+    - bollinger_lower_breakout
+    - rsi_high
+  - strategy_type: volume_momentum
+    confidence: 0.65
+    reasoning: 24h 交易量接近 TVL 的 3 倍，且链上活跃度评分满分，适合捕获波动率收益。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - significant_price_divergence
+  - low_depth_to_tvl_ratio
+  - high_volatility_atr
+  flash_score: 85
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.92
+    viable: true
+    reasoning: 链上价格 ($0.274) 较外部市场 ($0.227) 溢价高达 17%，且池深 ($130k 2% depth) 足以支撑中等规模套利指令。
+    parameter_hints:
+      entry_threshold_pct: 2.5
+      max_position_usd: 30000
+      max_slippage_bps: 50
+      hold_blocks_max: 2
+  - strategy_type: mean_reversion
+    pro_confidence: 0.6
+    viable: true
+    reasoning: 链上价格已突破布林带上轨 ($0.273)，存在向外部均值回归的强烈动力，但需警惕高波动下的单边行情。
+    parameter_hints:
+      entry_threshold_pct: 5.0
+      max_position_usd: 15000
+      max_slippage_bps: 30
+      hold_blocks_max: 20
+  - strategy_type: volume_momentum
+    pro_confidence: 0.7
+    viable: true
+    reasoning: 24h 成交量远超 TVL，换手率极高，适合捕获由套利活动引发的波动率收益。
+    parameter_hints:
+      entry_threshold_pct: 1.5
+      max_position_usd: 20000
+      max_slippage_bps: 40
+      hold_blocks_max: 10
+  pro_score: 82
+  pro_verdict: strong
+  override_reason: Flash 初判的均值回归逻辑存在价格源混淆（误将外部低价判定为超卖，实则链上处于超买溢价状态），但套利机会极度显著，维持 strong
+    评级。
+llm_verdict: strong
+llm_score: 82
+hypotheses:
+- hypothesis: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

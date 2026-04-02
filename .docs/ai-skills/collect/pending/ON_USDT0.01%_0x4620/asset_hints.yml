@@ -1,0 +1,21 @@
+pair_id: ON_USDT0.01%_0x4620
+pool_address: '0x4620f5c127a6055fbebb1f71327d60ff079c9060'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: 'ON'
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: whale_movement
+signal_strength: 14.82
+tvl_usd: 612182.61
+volume_24h_usd: 3320848.86
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0x4620f5c127a6055fbebb1f71327d60ff079c9060'
+source_url: https://www.geckoterminal.com/bsc/pools/0x4620f5c127a6055fbebb1f71327d60ff079c9060
+source_type: dex_pool
+asset_class: mid_cap
+liquidity_profile: thin_concentrated
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.85
+llm_verdict: moderate
+llm_score: 58

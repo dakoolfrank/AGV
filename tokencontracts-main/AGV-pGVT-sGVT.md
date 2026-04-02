@@ -111,8 +111,8 @@ sGVT (机构凭证, 独立体系)
 
 | 资产 | 类型 | 地址 | 供应量 | 状态 |
 |------|------|------|--------|------|
-| **pGVT** | ERC20 | `0x8F9E...f9` | 3M/100M | ✅ 生产，CoinGecko 被拒→修复中 |
-| **sGVT** | ERC20 | `0x53e5...a3` | 30M/100M | ✅ 生产，CoinGecko 被拒→需增量 |
+| **pGVT** | ERC20 | `0x8F9E...f9` | 3M/100M | ✅ 生产，CoinGecko 被拒→已修复→等 Arb+MM 后重审 |
+| **sGVT** | ERC20 | `0x53e5...a3` | 30M/100M | ✅ 生产，CoinGecko 被拒→等 volume 增量 |
 | **GVT** | ERC20 | *(待部署)* | 0/1B | ⏳ TGE 时部署 |
 | **GenesisBadge** | ERC1155 | `0x704f...29` | 已 mint / 2000 | ✅ 已部署（pGVT claim 前置） |
 
@@ -730,7 +730,7 @@ tokencontracts-main/
 | **CoinGecko** | **❌ 被拒** | **❌ 被拒** | 见下方详情 |
 | CoinMarketCap | ⏳ 未申请 | ⏳ 未申请 | 待 CoinGecko 重审后评估 |
 | MetaMask 价格显示 | ❌ 无价格 | ❌ 无价格 | 依赖 CoinGecko 收录 |
-| Trust Wallet | ⏳ 未申请 | ⏳ 未申请 | 备选路径（独立于 CoinGecko） |
+| Trust Wallet | ⏳ 暂缓 | ⏳ 暂缓 | PR #35878 已提交，但 assets repo 收费太贵，暂放 |
 
 ### 10.8 CoinGecko 被拒详情与修复
 
@@ -768,8 +768,8 @@ tokencontracts-main/
 
 #### CoinGecko 重新申请时间窗口
 
-- **pGVT**: 14 天冷却期后（约 03/28）可重新提交
-- **sGVT**: 需先满足 volume / social sentiment 条件
+- **pGVT**: 14 天冷却期已过，但**暂缓重审**——链上已修复，但无 volume 支撑审核员不会认真看。等 Arb→MM 上线产出交易量后再提交
+- **sGVT**: 需先满足 volume / social sentiment 条件，前置 = Arb 实盘盈利 → MM 做量
 - **行动计划详见** [AGV-RUN.md §7 下一步战场](AGV-RUN.md)
 
 ### 10.6 MetaMask / Trust Wallet 价格显示

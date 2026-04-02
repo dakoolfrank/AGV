@@ -1,0 +1,254 @@
+domain: defi
+generated_at: '2026-04-02T05:45:28Z'
+indicator_bindings:
+- skeleton_id: wbnb_usdt_0x16b9_arb_cross_pool_01
+  category: defi_price
+  selected_indicators:
+  - token_price_base
+  - pair_price_ratio
+  - oracle_price
+  - oracle_deviation
+  - twap_5min
+  - vwap
+  param_hints:
+    token_price_base:
+      update_frequency: on_block
+    pair_price_ratio:
+      reference_pool: pool_b
+      target_pool: pool_a
+    oracle_price:
+      source: chainlink
+      heartbeat: 3600s
+    oracle_deviation:
+      max_allowed_bps: 100
+    twap_5min:
+      window_seconds: 300
+    vwap:
+      window_seconds: 300
+  confidence: 0.95
+  reasoning: 该套利策略核心在于捕捉跨池价差。token_price_base 和 pair_price_ratio 用于实时监测目标池与对比池的直接价差。oracle_price
+    与 oracle_deviation 作为安全机制，防止因单一池子遭受价格操纵（如三明治攻击）而导致的错误触发。twap_5min 用于平滑瞬时波动，确认价差的持续性而非随机噪声。vwap
+    则结合成交量权重，辅助计算 optimal_arb_size，确保在深度极佳的池中执行时滑点可控。
+  pro_reviewed: false
+- skeleton_id: wbnb_usdt_0x16b9_arb_cross_pool_01
+  category: defi_liquidity
+  selected_indicators:
+  - reserve0
+  - reserve1
+  - tvl_usd
+  - reserve_ratio
+  - slippage_pct_100usd
+  - price_impact_usd
+  param_hints:
+    reserve0:
+      window: 1
+      unit: token_amount
+    reserve1:
+      window: 1
+      unit: token_amount
+    tvl_usd:
+      min_threshold: 30000000
+      window: 1
+    reserve_ratio:
+      deviation_threshold: 0.05
+      window: 1
+    slippage_pct_100usd:
+      max_allowed: 0.0005
+      window: 1
+    price_impact_usd:
+      target_volume: 100000
+      max_impact_bps: 20
+  confidence: 0.95
+  reasoning: 针对跨池套利策略，reserve0和reserve1是计算恒定乘积公式及optimal_arb_size的核心输入。tvl_usd用于验证池子深度是否符合$34.5M的预期，确保大额交易不被拒绝。reserve_ratio监控池子平衡度，防止极端偏离导致的报价失效。slippage_pct_100usd和price_impact_usd用于实时评估执行成本，确保在扣除60bps价差、手续费和Gas后，仍能达成10bps的止盈目标。
+  pro_reviewed: false
+- skeleton_id: wbnb_usdt_0x16b9_arb_cross_pool_01
+  category: defi_onchain
+  selected_indicators:
+  - gas_price_gwei
+  - gas_price_percentile
+  - mev_activity_score
+  - frontrun_risk
+  - volume_spike_ratio
+  - large_swap_volume
+  param_hints:
+    gas_price_gwei:
+      max_threshold: 30
+      check_interval: real-time
+    gas_price_percentile:
+      window: 1h
+      max_allowed_percentile: 85
+    mev_activity_score:
+      window: 5m
+      threshold: 70
+    frontrun_risk:
+      threshold: 0.65
+      lookback_blocks: 5
+    volume_spike_ratio:
+      short_window: 5m
+      long_window: 1h
+      threshold: 2.0
+    large_swap_volume:
+      min_usd_threshold: 50000
+      target_pools:
+      - 0x16b9...
+  confidence: 0.95
+  reasoning: 该套利策略利润空间极窄（TP 10bps），因此执行成本和安全性是核心。gas_price_gwei 与 gas_price_percentile
+    用于实时核算 gas_cost_bps，防止高昂规费吞噬利润。mev_activity_score 和 frontrun_risk 用于评估当前区块的竞争烈度，避免在
+    MEV 高发期执行导致被抢跑失败。volume_spike_ratio 和 large_swap_volume 用于捕捉引发价差的大额交易信号，从而在价差出现的第一时间提高扫描频率，捕捉最优套利窗口。
+  pro_reviewed: false
+- skeleton_id: wbnb_usdt_0x16b9_whale_follow_01
+  category: defi_onchain
+  selected_indicators:
+  - large_tx_threshold_usd
+  - whale_transfer_volume
+  - volume_spike_ratio
+  - net_flow_usd
+  - gas_price_percentile
+  - frontrun_risk
+  param_hints:
+    large_tx_threshold_usd:
+      threshold: 500
+    whale_transfer_volume:
+      window: 5m
+      threshold_usd: 5000
+    volume_spike_ratio:
+      lookback_window: 24h
+      current_window: 15m
+      multiplier: 2.5
+    net_flow_usd:
+      window: 10m
+      min_positive_flow: 1000
+    gas_price_percentile:
+      max_percentile: 75
+      window: 1h
+    frontrun_risk:
+      max_allowed_score: 0.4
+  confidence: 0.95
+  reasoning: 该策略依赖于捕捉巨鲸交易引发的瞬时价格冲击。large_tx_threshold_usd 和 whale_transfer_volume
+    用于精准定义并量化巨鲸行为；volume_spike_ratio 确保该异动在统计学上具有显著性，非日常波动；net_flow_usd 验证资金流向为净买入以支撑看涨逻辑。由于止盈空间仅为
+    50bps，必须通过 gas_price_percentile 规避高额规费，并利用 frontrun_risk 降低被 MEV 机器人夹击导致滑点过大的风险。
+  pro_reviewed: false
+- skeleton_id: wbnb_usdt_0x16b9_whale_follow_01
+  category: defi_price
+  selected_indicators:
+  - token_price_usd
+  - vwap
+  - vwap_deviation
+  - ema_12
+  - twap_5min
+  - atr_14
+  param_hints:
+    token_price_usd:
+      source: dex_spot
+    vwap:
+      window: 15
+      unit: minutes
+    vwap_deviation:
+      window: 15
+      threshold: 0.001
+    ema_12:
+      smoothing: 2
+    twap_5min:
+      window: 5
+      unit: minutes
+    atr_14:
+      window: 14
+      unit: minutes
+  confidence: 0.95
+  reasoning: 该策略核心在于捕捉巨鲸交易产生的短期价格冲击。token_price_usd 提供实时入场参考；vwap 和 vwap_deviation
+    用于量化巨鲸交易对市场均价的偏离程度，确认 price_impact 的强度；ema_12 和 twap_5min 用于确认巨鲸推动的短期趋势动量，防止在价格回调时入场；atr_14
+    用于评估当前波动率，以判断 20bps 的止损设置是否过窄，确保策略在剧烈波动环境下的生存能力。
+  pro_reviewed: false
+- skeleton_id: wbnb_usdt_0x16b9_whale_follow_01
+  category: defi_liquidity
+  selected_indicators:
+  - price_impact_usd
+  - slippage_pct_100usd
+  - bid_ask_spread
+  - reserve_usd_total
+  - depth_score
+  param_hints:
+    price_impact_usd:
+      reference_amount: 500
+      impact_threshold_bps: 10
+    slippage_pct_100usd:
+      max_allowed_pct: 0.05
+    bid_ask_spread:
+      max_bps: 5
+      window: 1m
+    reserve_usd_total:
+      min_liquidity_usd: 1000000
+    depth_score:
+      min_threshold: 75
+      lookback_period: 5m
+  confidence: 0.95
+  reasoning: 由于该策略的止盈(50bps)和止损(20bps)空间极窄，交易成本控制是成败关键。选择 price_impact_usd 旨在量化巨鲸交易对价格的实际推升能力；slippage_pct_100usd
+    和 bid_ask_spread 用于确保策略自身入场时的磨损远低于止盈目标；reserve_usd_total 和 depth_score 则作为流动性门槛，确保在极端波动或触发止损时，池子有足够的深度支撑快速退出而不至于产生二次冲击。
+  pro_reviewed: false
+- skeleton_id: wbnb_usdt_0x16b9_volume_momentum_01
+  category: defi_price
+  selected_indicators:
+  - token_price_usd
+  - ema_12
+  - ema_26
+  - vwap
+  - vwap_deviation
+  - atr_14
+  - oracle_deviation
+  param_hints:
+    token_price_usd:
+      use_for: current_execution_price
+    ema_12:
+      window: 12
+      description: Short-term trend confirmation
+    ema_26:
+      window: 26
+      description: Medium-term trend baseline
+    vwap:
+      window: 24
+      description: Volume-weighted average price to align with volume momentum
+    vwap_deviation:
+      threshold: 0.01
+      description: Ensure entry is not too far from volume-weighted mean
+    atr_14:
+      window: 14
+      description: Volatility assessment to validate 40bps stop loss feasibility
+    oracle_deviation:
+      max_allowed: 0.005
+      description: Safety check against DEX price manipulation or flash crashes
+  confidence: 0.8
+  reasoning: 该策略核心是捕捉由高链上活跃度引发的动量。选择 EMA_12/26 用于确认价格趋势方向；VWAP 及其偏离度 (vwap_deviation)
+    是成交量动量策略的关键，确保价格在有成交量支撑的均值附近且未过度超买；ATR 用于评估当前波动率是否会轻易触发 40bps 的止损位；oracle_deviation
+    作为安全开关，防止在高波动期间因预言机价差过大而进行错误交易。
+  pro_reviewed: false
+- skeleton_id: wbnb_usdt_0x16b9_volume_momentum_01
+  category: defi_onchain
+  selected_indicators:
+  - volume_spike_ratio
+  - swap_count_1h
+  - buy_sell_ratio
+  - net_flow_usd
+  - whale_accumulation
+  - unique_traders_24h
+  param_hints:
+    volume_spike_ratio:
+      window_hours: 24
+      threshold: 1.5
+    swap_count_1h:
+      min_threshold: 30
+    buy_sell_ratio:
+      window_minutes: 60
+      threshold: 1.1
+    net_flow_usd:
+      window_hours: 4
+      min_positive_flow: 5000
+    whale_accumulation:
+      lookback_period: 24h
+      min_score: 0.6
+    unique_traders_24h:
+      min_threshold: 50
+  confidence: 0.95
+  reasoning: 所选指标旨在多维度验证链上活跃度的真实性与动量方向。volume_spike_ratio 和 swap_count_1h 用于捕捉瞬时的交易爆发，验证‘高关注度’；buy_sell_ratio
+    和 net_flow_usd 确保这种活跃度是由主动买盘和资金净流入驱动的，而非对倒或抛售；whale_accumulation 用于确认大户是否在同步建仓以增强趋势可靠性；unique_traders_24h
+    则直接对齐策略触发条件中的钱包数要求，防止单一地址刷单的误导。
+  pro_reviewed: false

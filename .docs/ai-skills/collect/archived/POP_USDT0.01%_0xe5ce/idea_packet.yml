@@ -1,0 +1,203 @@
+pair_id: POP_USDT0.01%_0xe5ce
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0xe5ce5bc4785cd2a246151364f5a190cee3fdb142'
+  base_token:
+    symbol: POP
+    address: '0xa3cfb853339b77f385b994799b015cb04b208fe6'
+  quote_token:
+    symbol: USDT 0.01%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:a2f32941e9eaf2e9
+  primary_excerpt: 'Pool POP_USDT0.01%_0xe5ce on bsc/pancakeswap-v3-bsc. TVL: $564,178,
+    24h Volume: $2,561,284. lp_imbalance(str=99.8); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.00209473756257952
+  tvl_usd: 564178.378
+  volume_24h_usd: 2561284.482099
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 0.00213497334575177
+    low: 0.00208303745444331
+    close: 0.00210879917297851
+    bar_count: 100
+signals:
+- signal_type: lp_imbalance
+  strength: 99.79
+  source: gecko
+  details:
+    reserve_ratio: 0.0020981346250445545
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 13
+    avg_trade_size_usd: 329.87
+indicators:
+  rsi_14: 51.239234
+  ema_12: 0.002108
+  ema_26: 0.002106
+  vwap: 0.002106
+  bollinger_upper: 0.002121
+  bollinger_lower: 0.002091
+  bollinger_middle: 0.002106
+  macd_histogram: 1.0e-06
+  atr_14: 2.5e-05
+  onchain_tx_count: 100
+  onchain_unique_wallets: 13
+  onchain_avg_trade_size_usd: 329.87
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0021
+  depth_2pct_usd: 5613.57
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 2
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 73
+  status: validated
+  reasons:
+  - lp_imbalance strength=99.8
+  - high_onchain_activity strength=100.0
+  - TVL $564K above minimum
+  - Volume $2561K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 2500
+    max_slippage_bps: 30
+    hold_blocks_max: 5
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: shallow
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.95
+  viable: true
+  reasoning: 储备金比例极度失衡（0.0021），说明价格处于V3流动性区间边缘，套利空间巨大且信号极强。
+  parameter_hints:
+    entry_threshold_pct: 0.5
+    max_position_usd: 2500
+    max_slippage_bps: 30
+    hold_blocks_max: 5
+- strategy_type: volume_momentum
+  pro_confidence: 0.65
+  viable: true
+  reasoning: 虽然交易量巨大，但仅13个独立钱包贡献了100笔交易，存在明显的刷量或高度集中的机器人行为，动能持续性存疑。
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 1500
+    max_slippage_bps: 50
+    hold_blocks_max: 20
+- strategy_type: sandwich_defense
+  pro_confidence: 0.88
+  viable: true
+  reasoning: 2%深度仅$5613，相对于$2.5M的日交易量，滑点极高，是MEV和夹心攻击的高发区，具备防御性套利空间。
+  parameter_hints:
+    entry_threshold_pct: 0.2
+    max_position_usd: 5000
+    max_slippage_bps: 10
+    hold_blocks_max: 1
+llm_risk_flags:
+- extreme_volume_to_tvl_ratio
+- shallow_depth_relative_to_tvl
+- high_reserve_imbalance
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: shallow
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.92
+    reasoning: lp_imbalance 信号强度极高 (99.79)，且 2% 深度仅占 TVL 的 1%，存在显著的价格偏离套利机会。
+    trigger_signals:
+    - lp_imbalance
+  - strategy_type: volume_momentum
+    confidence: 0.85
+    reasoning: 24h 交易量是 TVL 的 4.5 倍，换手率极高，适合基于成交量激增的动量策略。
+    trigger_signals:
+    - high_onchain_activity
+  - strategy_type: sandwich_defense
+    confidence: 0.75
+    reasoning: 高频交易且深度薄弱（2% 深度仅 $5613），极易发生大额滑点，适合监控夹心攻击机会。
+    trigger_signals:
+    - high_onchain_activity
+    - low_depth_2pct_usd
+  risk_flags:
+  - extreme_volume_to_tvl_ratio
+  - shallow_depth_relative_to_tvl
+  - high_reserve_imbalance
+  flash_score: 88
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.95
+    viable: true
+    reasoning: 储备金比例极度失衡（0.0021），说明价格处于V3流动性区间边缘，套利空间巨大且信号极强。
+    parameter_hints:
+      entry_threshold_pct: 0.5
+      max_position_usd: 2500
+      max_slippage_bps: 30
+      hold_blocks_max: 5
+  - strategy_type: volume_momentum
+    pro_confidence: 0.65
+    viable: true
+    reasoning: 虽然交易量巨大，但仅13个独立钱包贡献了100笔交易，存在明显的刷量或高度集中的机器人行为，动能持续性存疑。
+    parameter_hints:
+      entry_threshold_pct: 1.2
+      max_position_usd: 1500
+      max_slippage_bps: 50
+      hold_blocks_max: 20
+  - strategy_type: sandwich_defense
+    pro_confidence: 0.88
+    viable: true
+    reasoning: 2%深度仅$5613，相对于$2.5M的日交易量，滑点极高，是MEV和夹心攻击的高发区，具备防御性套利空间。
+    parameter_hints:
+      entry_threshold_pct: 0.2
+      max_position_usd: 5000
+      max_slippage_bps: 10
+      hold_blocks_max: 1
+  pro_score: 72
+  pro_verdict: moderate
+  override_reason: 由于独立钱包数（13）极低而交易量巨大，判定存在严重的人为刷量行为。虽然套利机会真实存在，但动能策略风险较高，故将评分从88下调至72，并将评级设为moderate。
+llm_verdict: moderate
+llm_score: 72
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

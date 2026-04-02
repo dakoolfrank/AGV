@@ -1,0 +1,18 @@
+pair_id: BEAT_USDT0.007%_0xb284
+pool_address: '0xb2842060d68177ff202e81b3bd8588630fe7ede60e1a19f4d327125f73ae92be'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: Beat
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 1252454.9546
+volume_24h_usd: 7894952.27394907
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: opportunistic
+strategy_confidence: 0.58
+llm_verdict: moderate
+llm_score: 58

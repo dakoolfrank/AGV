@@ -1,0 +1,33 @@
+domain: defi
+generated_at: '2026-04-02T05:44:24Z'
+strategy_bindings:
+- skeleton_id: wbnb_usdt_0x16b9_arb_cross_pool_01
+  strategy_type: cross_pool_arbitrage
+  recommended_categories:
+  - defi_price
+  - defi_liquidity
+  - defi_onchain
+  confidence: 0.95
+  reasoning: 该策略为跨池套利，核心依赖 defi_price 实时监控池间价差作为触发信号；利用 defi_liquidity 获取池子储备金和深度数据，以计算最优套利规模（optimal_arb_size）并预估滑点；同时需要
+    defi_onchain 数据来精确计算 Gas 成本并监控网络拥堵情况，确保扣除成本后仍有套利空间。
+  pro_reviewed: false
+- skeleton_id: wbnb_usdt_0x16b9_whale_follow_01
+  strategy_type: whale_follow
+  recommended_categories:
+  - defi_onchain
+  - defi_price
+  - defi_liquidity
+  confidence: 0.95
+  reasoning: 该策略的核心触发条件是监测巨鲸动向，因此 defi_onchain 是识别大额转账和链上异动的核心数据；策略逻辑依赖于捕捉巨鲸造成的短期价格冲击并快速止盈，这需要
+    defi_price 提供高频价格监控以确定入场和出场点；同时，rationale 中明确提到 price_impact，需要 defi_liquidity
+    数据来评估池子深度，以计算预期的价格冲击并确保交易执行的低滑点。
+  pro_reviewed: false
+- skeleton_id: wbnb_usdt_0x16b9_volume_momentum_01
+  strategy_type: volume_momentum
+  recommended_categories:
+  - defi_price
+  - defi_onchain
+  confidence: 0.95
+  reasoning: 该策略的触发条件直接依赖于价格数据（用于计算 RSI 指标以确认动量方向）以及链上活动数据（用于监测交易笔数 tx_count 和独立钱包数
+    unique_wallets 以验证活跃度信号），这两类数据是执行该量化逻辑的核心支撑。
+  pro_reviewed: false

@@ -1,0 +1,21 @@
+pair_id: USDT_BTCB0.05%_0x46cf
+pool_address: '0x46cf1cf8c69595804ba91dfdd8d6b960c9b0a7c4'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: USDT
+quote_token: BTCB 0.05%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 100.0
+tvl_usd: 18096904.093
+volume_24h_usd: 28835417.2700225
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0x46cf1cf8c69595804ba91dfdd8d6b960c9b0a7c4'
+source_url: https://www.geckoterminal.com/bsc/pools/0x46cf1cf8c69595804ba91dfdd8d6b960c9b0a7c4
+source_type: dex_pool
+asset_class: blue_chip
+liquidity_profile: extreme_imbalance
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.95
+llm_verdict: moderate
+llm_score: 58

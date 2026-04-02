@@ -1,0 +1,21 @@
+pair_id: ZAMA_USDT0.007%_0xb399
+pool_address: '0xb39978347f071b74076be26d1445e2eccafe3557d2cdbc17e6c74d3ea883a4e0'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: ZAMA
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 947827.3579
+volume_24h_usd: 33056473.180268
+discovered_at: '2026-04-02T01:10:37Z'
+canonical_id: '0xb39978347f071b74076be26d1445e2eccafe3557d2cdbc17e6c74d3ea883a4e0'
+source_url: https://www.geckoterminal.com/bsc/pools/0xb39978347f071b74076be26d1445e2eccafe3557d2cdbc17e6c74d3ea883a4e0
+source_type: dex_pool
+asset_class: high_risk_speculative
+liquidity_profile: unstable_high_volume
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.4
+llm_verdict: weak
+llm_score: 42

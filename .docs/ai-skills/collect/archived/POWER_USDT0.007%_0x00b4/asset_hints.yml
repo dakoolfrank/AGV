@@ -1,0 +1,18 @@
+pair_id: POWER_USDT0.007%_0x00b4
+pool_address: '0x00b4bbb4eb17154b28642f2d42f45e2f5d226f3b7d89216e8bfb8f55a0884538'
+network: bsc
+dex: pancakeswap-infinity-clmm
+base_token: POWER
+quote_token: USDT 0.007%
+signal_quality: moderate
+top_signal: high_onchain_activity
+signal_strength: 100.0
+tvl_usd: 904309.8086
+volume_24h_usd: 3536265.47596743
+discovered_at: '2026-03-23T06:39:46Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: opportunistic
+strategy_confidence: 0.55
+llm_verdict: moderate
+llm_score: 55

@@ -1,0 +1,18 @@
+pair_id: USDT_WBNB0.01%_0x172f
+pool_address: '0x172fcd41e0913e95784454622d1c3724f546f849'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: USDT
+quote_token: WBNB 0.01%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 99.84
+tvl_usd: 16572322.7186
+volume_24h_usd: 96379739.8747479
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: blue_chip
+liquidity_profile: deep
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.98
+llm_verdict: strong
+llm_score: 95

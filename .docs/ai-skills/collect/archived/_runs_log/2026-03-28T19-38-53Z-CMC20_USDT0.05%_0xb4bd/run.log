@@ -1,0 +1,56 @@
+[2026-03-28 19:39:04] INFO - [CMC20_USDT0.05%_0xb4bd] idea_packet 门禁通过: status=validated, excerpt=118chars, dual_source=True, claims=1
+[2026-03-28 19:39:04] INFO - ==================================================
+[2026-03-28 19:39:04] INFO - Step 1: AI 骨架提取
+[2026-03-28 19:39:04] INFO - ==================================================
+[2026-03-28 19:39:04] INFO - [CMC20_USDT0.05%_0xb4bd] idea_packet 内容构建: 3698 chars, claims=1, theory=0
+[2026-03-28 19:39:04] WARNING - 未提取到因子名，将进行单次完整提取
+[2026-03-28 19:39:04] INFO - ✓ 提取到 1 个因子名
+[2026-03-28 19:39:04] WARNING - Tool Loop 不可用（需要 M1 底座 + RunContext）
+[2026-03-28 19:39:04] INFO - ▶ 使用批量提取模式（batch_fallback_enabled=true）
+[2026-03-28 19:39:04] INFO - 分批大小: 10（可通过 EXTRACTION_BATCH_SIZE 配置）
+[2026-03-28 19:39:04] INFO - ━━━ [1/1] 处理因子: ['(全量提取)'] ━━━
+[2026-03-28 19:39:04] INFO - ✓ 从 SKILL.md 加载 prompt 模板 (1437 字符)
+[2026-03-28 19:39:04] INFO - 调用 gemini-3.1-pro-preview...
+[2026-03-28 19:39:27] INFO - [1/1] ✓ 提取 tower=1 yi=0
+[2026-03-28 19:39:27] INFO - 批次完成: 1/1 全部成功
+[2026-03-28 19:39:27] INFO - 合并结果: tower=1 yi=0 (去重前: 1/0)
+[2026-03-28 19:39:27] WARNING - ⚠️ 覆盖率检查: 1 个因子可能未落地: ['(全量提取)']
+[2026-03-28 19:39:27] INFO - [sanitize] 自动修复 3 项:
+[2026-03-28 19:39:27] INFO -   [slot_count] arb_lp_imbalance_01: None → 1 (from 0 standard placeholders)
+[2026-03-28 19:39:27] INFO -   [skeleton_id] arb_lp_imbalance_01 → cmc20_usdt0.05%_0xb4bd_arb_lp_imbalance_01 (补资产前缀)
+[2026-03-28 19:39:27] INFO -   [extraction_info] notes 已自动填充
+[2026-03-28 19:39:27] INFO - [postloop-semantic] 未发现语义问题
+[2026-03-28 19:39:27] INFO - [postloop-claim-validate] 1/1 skeletons cite claims
+[2026-03-28 19:39:27] INFO - [param-fidelity] 所有骨架 pattern 均无数值字面量，无需校验 | {'clean': 1}
+[2026-03-28 19:39:27] INFO - ✓ SchemaValidator: step1_skeletons 校验通过 (external)
+[2026-03-28 19:39:27] INFO - ✓ AI 骨架提取完成: /tmp/tmpahr9n2hk/CMC20_USDT0.05%_0xb4bd/step1_skeletons.yml
+[2026-03-28 19:39:27] INFO - [CMC20_USDT0.05%_0xb4bd] domain=defi → 跳过 step2_validate
+[2026-03-28 19:39:27] WARNING - [CMC20_USDT0.05%_0xb4bd] asset_hints 缺失推荐字段: ['canonical_id', 'source_url', 'source_type']
+[2026-03-28 19:39:38] INFO - [auto] 预检通过 (score=3.8)
+[2026-03-28 19:39:38] INFO - [CMC20_USDT0.05%_0xb4bd] idea_packet 门禁通过: status=validated, excerpt=118chars, dual_source=True, claims=1
+[2026-03-28 19:39:38] INFO - ==================================================
+[2026-03-28 19:39:38] INFO - Step 1: AI 骨架提取
+[2026-03-28 19:39:38] INFO - ==================================================
+[2026-03-28 19:39:38] INFO - [CMC20_USDT0.05%_0xb4bd] idea_packet 内容构建: 3698 chars, claims=1, theory=0
+[2026-03-28 19:39:38] WARNING - 未提取到因子名，将进行单次完整提取
+[2026-03-28 19:39:38] INFO - ✓ 提取到 1 个因子名
+[2026-03-28 19:39:38] WARNING - Tool Loop 不可用（需要 M1 底座 + RunContext）
+[2026-03-28 19:39:38] INFO - ▶ 使用批量提取模式（batch_fallback_enabled=true）
+[2026-03-28 19:39:38] INFO - 分批大小: 10（可通过 EXTRACTION_BATCH_SIZE 配置）
+[2026-03-28 19:39:38] INFO - ━━━ [1/1] 处理因子: ['(全量提取)'] ━━━
+[2026-03-28 19:39:38] INFO - ✓ 从 SKILL.md 加载 prompt 模板 (1437 字符)
+[2026-03-28 19:39:38] INFO - 调用 gemini-3.1-pro-preview...
+[2026-03-28 19:40:01] INFO - [1/1] ✓ 提取 tower=1 yi=0
+[2026-03-28 19:40:01] INFO - 批次完成: 1/1 全部成功
+[2026-03-28 19:40:01] INFO - 合并结果: tower=1 yi=0 (去重前: 1/0)
+[2026-03-28 19:40:01] WARNING - ⚠️ 覆盖率检查: 1 个因子可能未落地: ['(全量提取)']
+[2026-03-28 19:40:01] INFO - [sanitize] 自动修复 3 项:
+[2026-03-28 19:40:01] INFO -   [slot_count] arb_lp_imbalance_01: None → 1 (from 0 standard placeholders)
+[2026-03-28 19:40:01] INFO -   [skeleton_id] arb_lp_imbalance_01 → cmc20_usdt0.05%_0xb4bd_arb_lp_imbalance_01 (补资产前缀)
+[2026-03-28 19:40:01] INFO -   [extraction_info] notes 已自动填充
+[2026-03-28 19:40:01] INFO - [postloop-semantic] 未发现语义问题
+[2026-03-28 19:40:01] INFO - [postloop-claim-validate] 1/1 skeletons cite claims
+[2026-03-28 19:40:01] INFO - [param-fidelity] 所有骨架 pattern 均无数值字面量，无需校验 | {'clean': 1}
+[2026-03-28 19:40:01] INFO - ✓ SchemaValidator: step1_skeletons 校验通过 (external)
+[2026-03-28 19:40:01] INFO - ✓ AI 骨架提取完成: /tmp/tmp8knm33kn/CMC20_USDT0.05%_0xb4bd/step1_skeletons.yml
+[2026-03-28 19:40:01] INFO - [CMC20_USDT0.05%_0xb4bd] domain=defi → 跳过 step2_validate

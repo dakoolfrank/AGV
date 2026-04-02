@@ -1,0 +1,9 @@
+max_trade_usd: 20.0
+min_trade_usd: 5.0
+pair: WBNB_USDT
+pool_address: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE'
+price: 580.0
+tvl_usd: 45000000.0
+viable_strategies:
+- cross_pool_arbitrage
+- volume_momentum

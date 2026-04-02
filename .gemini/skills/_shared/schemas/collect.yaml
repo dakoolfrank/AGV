@@ -1,0 +1,73 @@
+# Schema: S5-Arb collect 步骤产出
+# 校验对象: .docs/ai-skills/collect/pending/{pair_id}/ 下的 pool_info.yml
+# 模式: strict=False（模拟/实盘共用）
+
+type: object
+properties:
+  pair_id:
+    type: string
+    description: "交易对 ID，如 WBNB_USDT"
+
+  pool_address:
+    type: string
+    description: "链上池合约地址"
+
+  base_token:
+    type: string
+    description: "Base token 地址"
+
+  quote_token:
+    type: string
+    description: "Quote token 地址"
+
+  base_symbol:
+    type: string
+    description: "Base token 符号，如 WBNB"
+
+  quote_symbol:
+    type: string
+    description: "Quote token 符号，如 USDT"
+
+  dex:
+    type: string
+    description: "DEX 名称"
+
+  chain:
+    type: string
+    description: "链名称"
+
+  chain_id:
+    type: integer
+    description: "链 ID"
+
+  price:
+    type: number
+    minimum: 0
+    description: "当前价格"
+
+  tvl_usd:
+    type: number
+    minimum: 0
+    description: "池 TVL (USD)"
+
+  volume_24h_usd:
+    type: number
+    minimum: 0
+    description: "24h 交易量 (USD)"
+
+  collected_at:
+    type: string
+    description: "采集时间 ISO-8601"
+
+  source:
+    type: string
+    enum: [mock, gecko_terminal, on_chain, manual]
+    description: "数据来源标识"
+
+required:
+  - pair_id
+  - pool_address
+  - price
+  - tvl_usd
+  - collected_at
+  - source

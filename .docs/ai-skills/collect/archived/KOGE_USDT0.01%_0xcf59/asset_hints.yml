@@ -1,0 +1,18 @@
+pair_id: KOGE_USDT0.01%_0xcf59
+pool_address: '0xcf59b8c8baa2dea520e3d549f97d4e49ade17057'
+network: bsc
+dex: pancakeswap-v3-bsc
+base_token: KOGE
+quote_token: USDT 0.01%
+signal_quality: strong
+top_signal: lp_imbalance
+signal_strength: 97.92
+tvl_usd: 6135788.62
+volume_24h_usd: 10484228.9791447
+discovered_at: '2026-03-30T06:38:16Z'
+asset_class: mid_cap
+liquidity_profile: moderate
+strategy_type: lp_imbalance_arb
+strategy_confidence: 0.95
+llm_verdict: strong
+llm_score: 92

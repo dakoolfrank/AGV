@@ -1,0 +1,246 @@
+pair_id: TFI_USDT_0xeab5
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap_v2
+  pool_address: '0xeab58c74b222c0657ee16fba130fc117f9caca81'
+  base_token:
+    symbol: TFI
+    address: '0xe1ed729ead2f59dbf643e011b606335f03fc5606'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:0956954c7992b292
+  primary_excerpt: 'Pool TFI_USDT_0xeab5 on bsc/pancakeswap_v2. TVL: $10,029,159,
+    24h Volume: $3,157,445. whale_movement(str=100.0); whale_movement(str=30.5); whale_movement(str=24.8);
+    whale_movement(str=19.8); whale_movement(str=13.5)'
+market_data:
+  price_usd: 3.21038991963948
+  tvl_usd: 10029158.8357
+  volume_24h_usd: 3157445.25802531
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 3.32495867101574
+    low: 3.10203248042883
+    close: 3.19183126156681
+    bar_count: 100
+signals:
+- signal_type: whale_movement
+  strength: 100.0
+  source: moralis
+  details:
+    tx_hash: '0x346552b65b36c069391f4988894ec667723b0753a50dc651df472eb0cef20d95'
+    value_usd: 26350.88046040085
+- signal_type: whale_movement
+  strength: 30.52
+  source: moralis
+  details:
+    tx_hash: '0xbe3d2007a03db35f0ebc7d9fb83e2ccc9061ca6ad36ccc15882f3e53229b9b75'
+    value_usd: 1525.8983288046447
+- signal_type: whale_movement
+  strength: 24.78
+  source: moralis
+  details:
+    tx_hash: '0xc959e2267a45bcddeca744af1c45e7c6f5cd0b7177895c88791d33c703d87ee3'
+    value_usd: 1239.0266716202734
+- signal_type: whale_movement
+  strength: 19.83
+  source: moralis
+  details:
+    tx_hash: '0x14b331a2ee89debdc07ce59911a6e69bbe159d31d745faa46e9842b7531d48f7'
+    value_usd: 991.2665526721304
+- signal_type: whale_movement
+  strength: 13.48
+  source: moralis
+  details:
+    tx_hash: '0xb8b4c6dd1cedb69ed5723839fcd72480a01837d6e07450dd18a04e201b490dbf'
+    value_usd: 674.1818831242907
+- signal_type: whale_movement
+  strength: 13.08
+  source: moralis
+  details:
+    tx_hash: '0x310abb4302d3a7e3e0368fa38d8451ce8d4742dfdb883ba2c7ea4de8d5c912d7'
+    value_usd: 653.956426630562
+- signal_type: whale_movement
+  strength: 13.0
+  source: moralis
+  details:
+    tx_hash: '0x40197c2fff4d2974b30cee99e1c2e0a7222a4c17777d8ceea573b043e0956c09'
+    value_usd: 650.1039587269946
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 56
+    avg_trade_size_usd: 360.64
+indicators:
+  rsi_14: 44.955155
+  ema_12: 3.226061
+  ema_26: 3.223752
+  vwap: 3.200722
+  bollinger_upper: 3.27901
+  bollinger_lower: 3.174421
+  bollinger_middle: 3.226716
+  macd_histogram: -0.001086
+  atr_14: 0.045465
+  onchain_tx_count: 100
+  onchain_unique_wallets: 56
+  onchain_avg_trade_size_usd: 360.64
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.3127
+  depth_2pct_usd: 99790.13
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 8
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 96
+  status: validated
+  reasons:
+  - whale_movement strength=100.0
+  - whale_movement strength=30.5
+  - whale_movement strength=24.8
+  - whale_movement strength=19.8
+  - whale_movement strength=13.5
+  - whale_movement strength=13.1
+  - whale_movement strength=13.0
+  - high_onchain_activity strength=100.0
+  - TVL $10.0M sufficient
+  - Volume $3157K healthy
+execution_hints:
+  suggested_strategy: volume_momentum
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 25000
+    max_slippage_bps: 15
+    hold_blocks_max: 40
+llm_classification:
+  asset_class: mid_cap
+  amm_type: constant_product_v2
+  liquidity_profile: deep
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: volume_momentum
+  pro_confidence: 0.88
+  viable: true
+  reasoning: 24h成交量占TVL比重达31%，且2%深度接近10万美元，足以支撑中等规模的动能跟进策略而不产生过大冲击。
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 25000
+    max_slippage_bps: 15
+    hold_blocks_max: 40
+- strategy_type: mean_reversion
+  pro_confidence: 0.75
+  viable: true
+  reasoning: 价格处于布林带中轨下方且接近下轨，RSI处于45附近，结合0.31的储备失衡率，存在较强的回归动力。
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 15000
+    max_slippage_bps: 10
+    hold_blocks_max: 60
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.7
+  viable: true
+  reasoning: 该币种在BSC链上具有显著流动性，高频交易产生的价差足以覆盖PancakeSwap V2的0.3%手续费。
+  parameter_hints:
+    entry_threshold_pct: 0.4
+    max_position_usd: 50000
+    max_slippage_bps: 5
+    hold_blocks_max: 2
+llm_risk_flags:
+- reserve_imbalance_detected
+- whale_concentration
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: constant_product_v2
+    liquidity_profile: deep
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: volume_momentum
+    confidence: 0.85
+    reasoning: 24h交易量占TVL约30%，且伴随高频大额订单，显示出极强的动量特征。
+    trigger_signals:
+    - whale_movement
+    - high_onchain_activity
+  - strategy_type: mean_reversion
+    confidence: 0.72
+    reasoning: 价格目前处于布林带中轨下方且接近下轨，RSI处于45左右，存在短期超卖反弹空间。
+    trigger_signals:
+    - bollinger_lower
+    - rsi_14
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.65
+    reasoning: 高交易量与深厚流动性通常伴随跨平台价差，适合捕获与其他DEX间的套利机会。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - reserve_imbalance_detected
+  - whale_concentration
+  flash_score: 82
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: volume_momentum
+    pro_confidence: 0.88
+    viable: true
+    reasoning: 24h成交量占TVL比重达31%，且2%深度接近10万美元，足以支撑中等规模的动能跟进策略而不产生过大冲击。
+    parameter_hints:
+      entry_threshold_pct: 0.8
+      max_position_usd: 25000
+      max_slippage_bps: 15
+      hold_blocks_max: 40
+  - strategy_type: mean_reversion
+    pro_confidence: 0.75
+    viable: true
+    reasoning: 价格处于布林带中轨下方且接近下轨，RSI处于45附近，结合0.31的储备失衡率，存在较强的回归动力。
+    parameter_hints:
+      entry_threshold_pct: 1.2
+      max_position_usd: 15000
+      max_slippage_bps: 10
+      hold_blocks_max: 60
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.7
+    viable: true
+    reasoning: 该币种在BSC链上具有显著流动性，高频交易产生的价差足以覆盖PancakeSwap V2的0.3%手续费。
+    parameter_hints:
+      entry_threshold_pct: 0.4
+      max_position_usd: 50000
+      max_slippage_bps: 5
+      hold_blocks_max: 2
+  pro_score: 85
+  pro_verdict: strong
+  override_reason: Flash初判准确，但低估了2%深度（约100k USD）对策略容量的支撑作用，上调Pro评分。储备比例失衡（0.31）是关键信号，暗示单边抛压或拉升后的套利空间。
+llm_verdict: strong
+llm_score: 85
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

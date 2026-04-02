@@ -1,0 +1,237 @@
+pair_id: WBNB_USDT_0x8840
+version: '1.0'
+source_evidence:
+  discovery_method: dexscreener
+  network: bsc
+  dex: biswap
+  pool_address: '0x8840C6252e2e86e545deFb6da98B2a0E26d8C1BA'
+  base_token:
+    symbol: WBNB
+    address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059fF775485246999027B3197955'
+  raw_snapshot_hash: sha256:2e4a766ae2dd9494
+  primary_excerpt: 'Pool WBNB_USDT_0x8840 on bsc/biswap. TVL: $420,434, 24h Volume:
+    $10,445. whale_movement(str=30.8); whale_movement(str=12.4); whale_movement(str=12.3);
+    whale_movement(str=12.2); whale_movement(str=12.1)'
+market_data:
+  price_usd: 616.61
+  tvl_usd: 420433.76
+  volume_24h_usd: 10444.96
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: 0.0
+    price_change_h1: -0.12
+    price_change_h6: 1.2
+    price_change_h24: 0.45
+    bar_count: 0
+signals:
+- signal_type: whale_movement
+  strength: 30.79
+  source: moralis
+  details:
+    tx_hash: '0x595ea1e4baac977b3afcdc08a10fb39ba0cf9db4d0fcf13d8b7ed8a6e6ca38bf'
+    value_usd: 1539.4903566046112
+- signal_type: whale_movement
+  strength: 12.39
+  source: moralis
+  details:
+    tx_hash: '0x3fd31ac471d9c2eff1ab090f38868e06146b57d8bfc9304150944767dd942cf1'
+    value_usd: 619.4436582005274
+- signal_type: whale_movement
+  strength: 12.33
+  source: moralis
+  details:
+    tx_hash: '0xbbbda167852fb681ddd1c3a09760c80f07d9bcb163816e9c6c29baea25dcd0ae'
+    value_usd: 616.61
+- signal_type: whale_movement
+  strength: 12.21
+  source: moralis
+  details:
+    tx_hash: '0x1e6351196664f269d3f4bba974c3c531cd067cd14760fc1c9552bdd224f7537a'
+    value_usd: 610.4439
+- signal_type: whale_movement
+  strength: 12.07
+  source: moralis
+  details:
+    tx_hash: '0x4ad6135264c7f8215f7524e5614ef0ef60358b74982ffef895784890266b1336'
+    value_usd: 603.3400580137446
+- signal_type: whale_movement
+  strength: 11.82
+  source: moralis
+  details:
+    tx_hash: '0x1b7b2f73c950c9552a2dc21bbef630dfcd089b0e8fcb09d63c2905e002837961'
+    value_usd: 590.874262513339
+- signal_type: whale_movement
+  strength: 11.11
+  source: moralis
+  details:
+    tx_hash: '0x27b12d8a96a4a1216cf32de360ba23cc1a19e4f72bd2cbd6c8edee5676de89a9'
+    value_usd: 555.503949
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 46
+    avg_trade_size_usd: 170.01
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 46
+  onchain_avg_trade_size_usd: 170.01
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 1.0
+  depth_2pct_usd: 4183.32
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 8
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings:
+  - GeckoTerminal unavailable, DexScreener fallback active
+decision:
+  quality: strong
+  score: 87
+  status: validated
+  reasons:
+  - whale_movement strength=30.8
+  - whale_movement strength=12.4
+  - whale_movement strength=12.3
+  - whale_movement strength=12.2
+  - whale_movement strength=12.1
+  - whale_movement strength=11.8
+  - whale_movement strength=11.1
+  - high_onchain_activity strength=100.0
+  - TVL $420K above minimum
+execution_hints:
+  suggested_strategy: cross_pool_arbitrage
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 0.35
+    max_position_usd: 800
+    max_slippage_bps: 10
+    hold_blocks_max: 2
+llm_classification:
+  asset_class: blue_chip
+  amm_type: constant_product_v2
+  liquidity_profile: moderate
+  activity_profile: normal
+llm_strategies:
+- strategy_type: cross_pool_arbitrage
+  pro_confidence: 0.88
+  viable: true
+  reasoning: WBNB/USDT 在 Biswap 上的交易量极低且深度较薄（2% 深度仅 $4k），极易与 PancakeSwap V3 或币安主站产生价格滞后，是典型的低频套利机会。
+  parameter_hints:
+    entry_threshold_pct: 0.35
+    max_position_usd: 800
+    max_slippage_bps: 10
+    hold_blocks_max: 2
+- strategy_type: mean_reversion
+  pro_confidence: 0.55
+  viable: true
+  reasoning: 由于深度不足，小额交易（如信号中的 $1500）即可造成显著价格偏离，套利者回归价格的过程表现为均值回归。
+  parameter_hints:
+    entry_threshold_pct: 0.6
+    max_position_usd: 500
+    max_slippage_bps: 15
+    hold_blocks_max: 5
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.45
+  viable: false
+  reasoning: V2 池体缺乏集中流动性特征，且当前交易量过低，单纯捕获流动性失衡的利润空间难以覆盖 Biswap 的交易手续费。
+  parameter_hints:
+    entry_threshold_pct: 0
+    max_position_usd: 0
+    max_slippage_bps: 0
+    hold_blocks_max: 0
+llm_risk_flags:
+- low_volume_to_tvl_ratio
+- fragmented_liquidity_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: blue_chip
+    amm_type: constant_product_v2
+    liquidity_profile: moderate
+    activity_profile: normal
+  strategy_candidates:
+  - strategy_type: cross_pool_arbitrage
+    confidence: 0.85
+    reasoning: WBNB/USDT 存在于所有主流 DEX，Biswap 的低交易量可能导致其价格与 PancakeSwap 或币安主站产生滞后价差。
+    trigger_signals:
+    - whale_movement
+    - high_onchain_activity
+  - strategy_type: mean_reversion
+    confidence: 0.65
+    reasoning: 蓝筹交易对价格波动通常围绕全网共识价，小规模冲击后的偏离具有回归特性。
+    trigger_signals:
+    - whale_movement
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.55
+    reasoning: 2% 深度仅为 $4183，即便 $1500 的交易也会产生约 0.7% 的价格冲击，存在瞬时套利空间。
+    trigger_signals:
+    - whale_movement
+  risk_flags:
+  - low_volume_to_tvl_ratio
+  - fragmented_liquidity_risk
+  flash_score: 72
+  flash_verdict: moderate
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: cross_pool_arbitrage
+    pro_confidence: 0.88
+    viable: true
+    reasoning: WBNB/USDT 在 Biswap 上的交易量极低且深度较薄（2% 深度仅 $4k），极易与 PancakeSwap V3 或币安主站产生价格滞后，是典型的低频套利机会。
+    parameter_hints:
+      entry_threshold_pct: 0.35
+      max_position_usd: 800
+      max_slippage_bps: 10
+      hold_blocks_max: 2
+  - strategy_type: mean_reversion
+    pro_confidence: 0.55
+    viable: true
+    reasoning: 由于深度不足，小额交易（如信号中的 $1500）即可造成显著价格偏离，套利者回归价格的过程表现为均值回归。
+    parameter_hints:
+      entry_threshold_pct: 0.6
+      max_position_usd: 500
+      max_slippage_bps: 15
+      hold_blocks_max: 5
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.45
+    viable: false
+    reasoning: V2 池体缺乏集中流动性特征，且当前交易量过低，单纯捕获流动性失衡的利润空间难以覆盖 Biswap 的交易手续费。
+    parameter_hints:
+      entry_threshold_pct: 0
+      max_position_usd: 0
+      max_slippage_bps: 0
+      hold_blocks_max: 0
+  pro_score: 68
+  pro_verdict: moderate
+  override_reason: 调低评分是因为 Volume/TVL 比率极低（约 2.4%），显示该池活跃度严重不足，虽有套利空间但机会频率可能较低。所谓的‘鲸鱼’交易实际上仅为千刀级别，反映出该池实际承载力较弱。
+llm_verdict: moderate
+llm_score: 68
+hypotheses:
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c2
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

@@ -1,0 +1,229 @@
+pair_id: YSDAO_USDT_0x24df
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap_v2
+  pool_address: '0x24df7bdbc67b0eb03074ea9d8cbba0445fb35937'
+  base_token:
+    symbol: YSDAO
+    address: '0xc036a13d7a6a84677dfccec483eed124654b7918'
+  quote_token:
+    symbol: USDT
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:77dc71334f037546
+  primary_excerpt: 'Pool YSDAO_USDT_0x24df on bsc/pancakeswap_v2. TVL: $20,322,717,
+    24h Volume: $2,756,005. lp_imbalance(str=95.5); whale_movement(str=28.7); whale_movement(str=28.7);
+    whale_movement(str=28.7); whale_movement(str=28.7)'
+market_data:
+  price_usd: 22.0958894732451
+  tvl_usd: 20322716.5035
+  volume_24h_usd: 2756005.29205097
+  fee_bps: 25
+  ohlcv_summary:
+    period: price_change_fallback
+    price_change_m5: 0.159
+    price_change_h1: -0.325
+    price_change_h6: -0.562
+    price_change_h24: 0.256
+    bar_count: 0
+signals:
+- signal_type: lp_imbalance
+  strength: 95.47
+  source: gecko
+  details:
+    reserve_ratio: 0.04533835406455027
+- signal_type: whale_movement
+  strength: 28.74
+  source: moralis
+  details:
+    tx_hash: '0xf9c30deca8f8b41684d7e54427eb00dc14d21756e9a3d5a9e0fe01c1780258f5'
+    value_usd: 1436.9671663607744
+- signal_type: whale_movement
+  strength: 28.74
+  source: moralis
+  details:
+    tx_hash: '0x17fc13775320030814ebb10da4869b2b0a10866caac71ea7c07b427dbb4eceb3'
+    value_usd: 1436.9046930738446
+- signal_type: whale_movement
+  strength: 28.73
+  source: moralis
+  details:
+    tx_hash: '0x81de5b5522bd72a026154eedcf9460f00ccbf93454818cf5a79fd4f92593bb3c'
+    value_usd: 1436.4592181561802
+- signal_type: whale_movement
+  strength: 28.73
+  source: moralis
+  details:
+    tx_hash: '0x13b53c27deec5ef6df97301530e08d4b7d2df48ff5f33e132a83082983479da6'
+    value_usd: 1436.4171893663768
+- signal_type: whale_movement
+  strength: 28.73
+  source: moralis
+  details:
+    tx_hash: '0xb94947e35bd6cfe1e4582d1e78d9286ed126bf759ac897b568fb6d2cdaa7a0df'
+    value_usd: 1436.3982639033313
+- signal_type: whale_movement
+  strength: 28.72
+  source: moralis
+  details:
+    tx_hash: '0xfb79cbe84bf289d23f850cef1f055b5d3fc7b4e7e4c857fa1d898b6d87f2facb'
+    value_usd: 1436.2420929794625
+- signal_type: whale_movement
+  strength: 28.72
+  source: moralis
+  details:
+    tx_hash: '0x6d9f5d8478145ec99b42f13d5269d077db048fc0663fe982144285bc3b998e79'
+    value_usd: 1436.215172102811
+- signal_type: whale_movement
+  strength: 28.72
+  source: moralis
+  details:
+    tx_hash: '0x2df49a1bb03313db7297d9be38fc68d43af73f217d9ba0861b6c9488e3abe44d'
+    value_usd: 1436.1834073993637
+- signal_type: whale_movement
+  strength: 28.72
+  source: moralis
+  details:
+    tx_hash: '0x59a0a1836e27d34ee4864a3f987b03950dc70c661f3e47d9c373d7971b399d72'
+    value_usd: 1436.154375197057
+- signal_type: whale_movement
+  strength: 28.72
+  source: moralis
+  details:
+    tx_hash: '0xdce04b04c2f7143baa02ddb0b276151f8fcbf61c5dbd38d9a055135d34fe7338'
+    value_usd: 1436.0378856370003
+- signal_type: whale_movement
+  strength: 28.72
+  source: moralis
+  details:
+    tx_hash: '0x565dc43adefd1505d120f51b79dfaa161fd4d1d6a5880d04110950a6255db4cf'
+    value_usd: 1436.0376581079558
+- signal_type: whale_movement
+  strength: 28.72
+  source: moralis
+  details:
+    tx_hash: '0xc49f6de181f5a0886c9f5d068fca8003098cf08aae7f3051143481aa8d0bb272'
+    value_usd: 1436.0132116545435
+- signal_type: whale_movement
+  strength: 28.72
+  source: moralis
+  details:
+    tx_hash: '0x67d7d3ce11f6828667115c67807fc39feaf8209dbc76d450eab20817653100e9'
+    value_usd: 1435.8359772201936
+- signal_type: whale_movement
+  strength: 24.62
+  source: moralis
+  details:
+    tx_hash: '0x5bf1361032e59e899976cfcfee0eec6a53e85ba96a9c5d981f7dbd253a9b468f'
+    value_usd: 1231.045673236284
+- signal_type: whale_movement
+  strength: 14.71
+  source: moralis
+  details:
+    tx_hash: '0xb68c48b062194c300c0f5e467bb0f3c467d07e0c229663ba1700aa8647f8d707'
+    value_usd: 735.263409155661
+- signal_type: whale_movement
+  strength: 14.62
+  source: moralis
+  details:
+    tx_hash: '0x75b142bf8e0db6b57afc1a99c3c4ac30c47dcb796b0bd43964f12eee1b5ed08d'
+    value_usd: 731.0696867067807
+- signal_type: whale_movement
+  strength: 12.06
+  source: moralis
+  details:
+    tx_hash: '0xbc1e9f364896dcc1de3dde71451a6afec6a9483827a68dbee157709c9c6ce697'
+    value_usd: 603.1714401511839
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 5
+    avg_trade_size_usd: 678.43
+indicators:
+  onchain_tx_count: 100
+  onchain_unique_wallets: 5
+  onchain_avg_trade_size_usd: 678.43
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0453
+  depth_2pct_usd: 202211.03
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 19
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 96
+  status: validated
+  reasons:
+  - lp_imbalance strength=95.5
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=28.7
+  - whale_movement strength=24.6
+  - whale_movement strength=14.7
+  - whale_movement strength=14.6
+  - whale_movement strength=12.1
+  - high_onchain_activity strength=100.0
+  - TVL $20.3M sufficient
+  - Volume $2756K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_flash
+llm_classification:
+  asset_class: blue_chip
+  liquidity_profile: deep
+  amm_type: pancakeswap_v2
+  activity_profile: active
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  confidence: 0.96
+  source: deterministic
+llm_risk_flags: []
+llm_flash_raw: {}
+llm_pro_final: {}
+llm_verdict: strong
+llm_score: 96
+hypotheses:
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c2
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c3
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

@@ -1,0 +1,242 @@
+pair_id: C_USDT0.01%_0x3030
+version: '1.0'
+source_evidence:
+  discovery_method: volume_ranked
+  network: bsc
+  dex: pancakeswap-v3-bsc
+  pool_address: '0x30305b22fc2830b42908993e668b31b7234a9737'
+  base_token:
+    symbol: C
+    address: '0xc32cc70741c3a8433dcbcb5ade071c299b55ffc8'
+  quote_token:
+    symbol: USDT 0.01%
+    address: '0x55d398326f99059ff775485246999027b3197955'
+  raw_snapshot_hash: sha256:ea81806f0aa99f11
+  primary_excerpt: 'Pool C_USDT0.01%_0x3030 on bsc/pancakeswap-v3-bsc. TVL: $833,696,
+    24h Volume: $4,410,085. price_divergence(str=3.9); lp_imbalance(str=91.8); whale_movement(str=44.9);
+    whale_movement(str=10.1); high_onchain_activity(str=100.0)'
+market_data:
+  price_usd: 0.0821988837318191
+  tvl_usd: 833696.486
+  volume_24h_usd: 4410084.99960651
+  fee_bps: 25
+  ohlcv_summary:
+    period: 5m x 100 bars
+    high: 0.0908719230931334
+    low: 0.0817443546182291
+    close: 0.0855373695263388
+    bar_count: 100
+signals:
+- signal_type: price_divergence
+  strength: 3.9
+  source: gecko
+  details:
+    price: 0.0821988837318191
+    last_close: 0.0855373695263388
+- signal_type: lp_imbalance
+  strength: 91.77
+  source: gecko
+  details:
+    reserve_ratio: 0.08233171782592079
+- signal_type: whale_movement
+  strength: 44.91
+  source: moralis
+  details:
+    tx_hash: '0xe6cc91c1a4b3a91f18a1b82827f3996b94cbc242253adb81eb14ed8a1f14969d'
+    value_usd: 2245.2707290230123
+- signal_type: whale_movement
+  strength: 10.07
+  source: moralis
+  details:
+    tx_hash: '0x693210600d2c07835a52531a68ed510989d2ff2eaa3cadfe44929d0bf3d02714'
+    value_usd: 503.67789257800206
+- signal_type: high_onchain_activity
+  strength: 100.0
+  source: moralis
+  details:
+    tx_count: 100
+    unique_wallets: 15
+    avg_trade_size_usd: 127.05
+indicators:
+  rsi_14: 44.745332
+  ema_12: 0.085982
+  ema_26: 0.086173
+  vwap: 0.086305
+  bollinger_upper: 0.087379
+  bollinger_lower: 0.085035
+  bollinger_middle: 0.086207
+  macd_histogram: -0.000106
+  atr_14: 0.001254
+  onchain_tx_count: 100
+  onchain_unique_wallets: 15
+  onchain_avg_trade_size_usd: 127.05
+  lp_add_count: 0
+  lp_remove_count: 0
+  lp_net_flow_usd: 0.0
+  lp_net_flow_direction: neutral
+  reserve_ratio: 0.0823
+  depth_2pct_usd: 8295.28
+cross_pool_analysis: {}
+validation:
+  dual_source_met: true
+  signal_count: 5
+  min_tvl_met: true
+  min_volume_met: true
+  data_freshness_seconds: 0
+  warnings: []
+decision:
+  quality: strong
+  score: 93
+  status: validated
+  reasons:
+  - price_divergence strength=3.9
+  - lp_imbalance strength=91.8
+  - whale_movement strength=44.9
+  - whale_movement strength=10.1
+  - high_onchain_activity strength=100.0
+  - TVL $834K above minimum
+  - Volume $4410K healthy
+execution_hints:
+  suggested_strategy: lp_imbalance_arb
+  urgency: high
+  strategy_source: llm_pro
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 5000
+    max_slippage_bps: 30
+    hold_blocks_max: 5
+llm_classification:
+  asset_class: mid_cap
+  amm_type: concentrated_v3
+  liquidity_profile: shallow
+  activity_profile: high_frequency
+llm_strategies:
+- strategy_type: lp_imbalance_arb
+  pro_confidence: 0.92
+  viable: true
+  reasoning: 价格偏离VWAP达4.7%且储备比例极度失衡，V3池子流动性聚集在远离现价区域，套利空间显著且具备高频触发条件。
+  parameter_hints:
+    entry_threshold_pct: 1.2
+    max_position_usd: 5000
+    max_slippage_bps: 30
+    hold_blocks_max: 5
+- strategy_type: mean_reversion
+  pro_confidence: 0.45
+  viable: false
+  reasoning: 尽管跌破布林带下轨，但RSI尚未进入超卖区且MACD动能向下，极度失衡的储备暗示可能存在持续性抛压而非短期波动。
+  parameter_hints:
+    entry_threshold_pct: 3.5
+    max_position_usd: 2000
+    max_slippage_bps: 50
+    hold_blocks_max: 50
+- strategy_type: volume_momentum
+  pro_confidence: 0.75
+  viable: true
+  reasoning: 成交量/TVL比率超过5倍，属于典型的高周转率资产，适合捕捉由大额订单引起的惯性位移。
+  parameter_hints:
+    entry_threshold_pct: 0.8
+    max_position_usd: 3000
+    max_slippage_bps: 20
+    hold_blocks_max: 15
+llm_risk_flags:
+- extreme_reserve_imbalance
+- thin_depth_relative_to_volume
+- significant_vwap_deviation
+- high_slippage_risk
+llm_flash_raw:
+  pool_classification:
+    asset_class: mid_cap
+    amm_type: concentrated_v3
+    liquidity_profile: shallow
+    activity_profile: high_frequency
+  strategy_candidates:
+  - strategy_type: lp_imbalance_arb
+    confidence: 0.88
+    reasoning: 极高的流动性不平衡信号 (91.77) 配合 2% 深度不足，预示着严重的单边抛压或价格脱锚，存在套利空间。
+    trigger_signals:
+    - lp_imbalance
+    - price_divergence
+  - strategy_type: mean_reversion
+    confidence: 0.72
+    reasoning: 当前价格 (0.082) 显著低于布林带下轨 (0.085) 和 VWAP (0.086)，存在超卖后的技术性反弹需求。
+    trigger_signals:
+    - price_divergence
+    - bollinger_lower_breach
+  - strategy_type: volume_momentum
+    confidence: 0.65
+    reasoning: 24h 交易量是 TVL 的 5 倍以上，且链上活动评分满分，显示该资产正处于高波动放量阶段。
+    trigger_signals:
+    - high_onchain_activity
+  risk_flags:
+  - extreme_reserve_imbalance
+  - thin_depth_relative_to_volume
+  - significant_vwap_deviation
+  - high_slippage_risk
+  flash_score: 82
+  flash_verdict: strong
+llm_pro_final:
+  agree_classification: true
+  revised_classification: null
+  strategy_verdict:
+  - strategy_type: lp_imbalance_arb
+    pro_confidence: 0.92
+    viable: true
+    reasoning: 价格偏离VWAP达4.7%且储备比例极度失衡，V3池子流动性聚集在远离现价区域，套利空间显著且具备高频触发条件。
+    parameter_hints:
+      entry_threshold_pct: 1.2
+      max_position_usd: 5000
+      max_slippage_bps: 30
+      hold_blocks_max: 5
+  - strategy_type: mean_reversion
+    pro_confidence: 0.45
+    viable: false
+    reasoning: 尽管跌破布林带下轨，但RSI尚未进入超卖区且MACD动能向下，极度失衡的储备暗示可能存在持续性抛压而非短期波动。
+    parameter_hints:
+      entry_threshold_pct: 3.5
+      max_position_usd: 2000
+      max_slippage_bps: 50
+      hold_blocks_max: 50
+  - strategy_type: volume_momentum
+    pro_confidence: 0.75
+    viable: true
+    reasoning: 成交量/TVL比率超过5倍，属于典型的高周转率资产，适合捕捉由大额订单引起的惯性位移。
+    parameter_hints:
+      entry_threshold_pct: 0.8
+      max_position_usd: 3000
+      max_slippage_bps: 20
+      hold_blocks_max: 15
+  pro_score: 78
+  pro_verdict: moderate
+  override_reason: Flash评分略高。虽然信号强烈，但2%深度仅为$8295，相对于$4.4M的交易量极度脆弱，存在极高的有毒流（Toxic Flow）风险，需严格限制单笔头寸。
+llm_verdict: moderate
+llm_score: 78
+hypotheses:
+- hypothesis: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- hypothesis: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- hypothesis: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- hypothesis: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5
+claims:
+- claim_id: c1
+  text: 跨池价差套利 — 同一 token 在不同 DEX/池存在价差
+  strategy: cross_pool_arbitrage
+  confidence: 0.8
+- claim_id: c2
+  text: LP 储备失衡 — 单边流动性偏移可能带来套利机会
+  strategy: lp_imbalance_arb
+  confidence: 0.7
+- claim_id: c3
+  text: 鲸鱼大额转账 — 可能引发短期价格波动或滑点套利机会
+  strategy: whale_follow
+  confidence: 0.6
+- claim_id: c4
+  text: 链上活跃度飙升 — 可能预示新资金流入或关注度上升
+  strategy: momentum_entry
+  confidence: 0.5

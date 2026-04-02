@@ -1,0 +1,24 @@
+collected_at: '2026-03-31T11:37:52Z'
+pair: CAKE_BNB
+signal_count: 2
+signals:
+- divergence_pct: 0.8
+  pair: CAKE_BNB
+  pool_address: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0'
+  price: 2.85
+  reference_price: 2.8728
+  signal_id: CAKE_BNB_price_divergence_1774957072
+  signal_type: price_divergence
+  source: mock
+  strength: 0.65
+  timestamp: '2026-03-31T11:37:52Z'
+- avg_volume_7d_usd: 1920000.0
+  pair: CAKE_BNB
+  pool_address: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0'
+  signal_id: CAKE_BNB_volume_spike_1774957072
+  signal_type: volume_spike
+  source: mock
+  spike_ratio: 1.67
+  strength: 0.45
+  timestamp: '2026-03-31T11:37:52Z'
+  volume_24h_usd: 3200000.0
