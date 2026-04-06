@@ -1,0 +1,7 @@
+model = "o4-mini"
+approval_policy = "on-request"
+sandbox_mode = "workspace-write"
+file_opener = "vscode"
+
+[windows]
+sandbox = "elevated"
