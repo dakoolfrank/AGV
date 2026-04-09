@@ -24,6 +24,17 @@ defaults:
   rag_top_k: 3
   rag_score_threshold: 0.5
 
+  # Memory (MP7/MP8 — 对齐 WQ-YI)
+  memory_read_enabled: true
+  memory_distill_enabled: true
+  memory_lesson_top_k: 5
+  memory_history_top_k: 3
+  memory_history_max_chars: 1500
+  memory_tier_boost:
+    A: 1.2          # execute 级回退 — 近期经验权重高
+    B: 1.0          # curate 级回退 — 标准权重
+    C: 0.8          # collect 级回退 — 结构性问题，历史借鉴有限
+
   # 路径
   runs_root: "docs/ai-runs/agv-mm-collect"
 

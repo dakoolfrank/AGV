@@ -1221,3 +1221,284 @@ class TestProfileRegistryReexport:
         from _shared.engines import create_agv_registry
         reg = create_agv_registry()
         assert len(reg) == 3
+
+
+# ═══════════════════════════════════════════════════════════════
+# Memory 集成测试 (MP5/MP7/MP8 — AGV campaign 记忆增强)
+# ═══════════════════════════════════════════════════════════════
+
+class _MockPolicy:
+    """Minimal PlatformPolicy mock — supports .get(key, step=...)"""
+
+    def __init__(self, overrides: dict | None = None):
+        self._defaults = {
+            "memory_read_enabled": True,
+            "memory_distill_enabled": True,
+            "memory_lesson_top_k": 5,
+            "memory_history_top_k": 3,
+            "memory_history_max_chars": 1500,
+            "memory_tier_boost": {"A": 1.2, "B": 1.0, "C": 0.8},
+        }
+        if overrides:
+            self._defaults.update(overrides)
+
+    def get(self, key, step="defaults"):
+        return self._defaults.get(key)
+
+
+class TestCampaignMemory:
+    """MP5/MP7/MP8: CampaignRunner 记忆注入 + 蒸馏"""
+
+    @staticmethod
+    def _make_runner(*, orch=None, diagnosis=None):
+        from _shared.engines.campaign import CampaignRunner
+        from _shared.engines._profiles import S5_ARB_PROFILE
+        return CampaignRunner(
+            profile=S5_ARB_PROFILE,
+            config={"max_cycles": 1, "cycle_interval_seconds": 0, "strategy_id": "test_arb"},
+            diagnosis_engine=diagnosis,
+            orchestrator=orch,
+        )
+
+    # ── MP7: retrieve_lessons 注入 ──
+
+    def test_enrich_injects_lessons(self):
+        """MP7: retrieve_lessons 结果注入 evidence['memory_lessons']"""
+        from _shared.engines.campaign import CampaignRunner
+        from unittest.mock import patch, MagicMock
+
+        runner = self._make_runner()
+        evidence = {"strategy_id": "test_arb", "pnl_usd": -1.0}
+        config = {"strategy_id": "test_arb"}
+
+        mock_lessons = [
+            {"lesson_id": "L1", "pattern": "slippage pattern", "detail": "full detail", "confidence": 0.9},
+        ]
+
+        with patch.object(runner, "_get_policy", return_value=_MockPolicy()), \
+             patch.object(runner, "_get_rag_pipeline", return_value=None), \
+             patch("_shared.engines.campaign.retrieve_lessons", return_value=mock_lessons) as mock_rl, \
+             patch("_shared.engines.campaign._HAS_MEMORY", True):
+            runner._enrich_evidence_with_memory(evidence, config)
+
+        mock_rl.assert_called_once()
+        assert "memory_lessons" in evidence
+        assert len(evidence["memory_lessons"]) == 1
+        assert evidence["memory_lessons"][0]["lesson_id"] == "L1"
+
+    # ── MP8: tier-boosted RAG history 注入 ──
+
+    def test_enrich_injects_history(self):
+        """MP8: RAG tier-boosted history 注入 evidence['memory_history']"""
+        from unittest.mock import patch, MagicMock
+
+        runner = self._make_runner()
+        evidence = {"strategy_id": "test_arb", "pnl_usd": -1.0, "retreat_level": "A"}
+        config = {"strategy_id": "test_arb"}
+
+        mock_rag = MagicMock()
+        mock_result = MagicMock()
+        mock_result.text = "previous diagnosis: slippage exceeded on BNB pool"
+        mock_rag.retrieve.return_value = [mock_result]
+
+        with patch.object(runner, "_get_policy", return_value=_MockPolicy()), \
+             patch.object(runner, "_get_rag_pipeline", return_value=mock_rag), \
+             patch("_shared.engines.campaign.retrieve_lessons", return_value=[]), \
+             patch("_shared.engines.campaign._HAS_MEMORY", True):
+            runner._enrich_evidence_with_memory(evidence, config)
+
+        mock_rag.retrieve.assert_called_once()
+        call_kwargs = mock_rag.retrieve.call_args
+        assert call_kwargs.kwargs.get("tier_boost") == 1.2  # retreat_level A → 1.2
+        assert "memory_history" in evidence
+        assert "slippage" in evidence["memory_history"]
+
+    # ── 跳过场景 ──
+
+    def test_enrich_skipped_when_disabled(self):
+        """memory_read_enabled=false → retrieve_lessons 不被调用"""
+        from unittest.mock import patch
+
+        runner = self._make_runner()
+        evidence = {"strategy_id": "test_arb"}
+        config = {"strategy_id": "test_arb"}
+
+        with patch.object(runner, "_get_policy", return_value=_MockPolicy({"memory_read_enabled": False})), \
+             patch("_shared.engines.campaign.retrieve_lessons") as mock_rl, \
+             patch("_shared.engines.campaign._HAS_MEMORY", True):
+            runner._enrich_evidence_with_memory(evidence, config)
+
+        mock_rl.assert_not_called()
+        assert "memory_lessons" not in evidence
+
+    def test_enrich_skipped_when_no_memory_module(self):
+        """_HAS_MEMORY=False → 所有记忆操作跳过"""
+        from unittest.mock import patch
+
+        runner = self._make_runner()
+        evidence = {"strategy_id": "test_arb"}
+        config = {"strategy_id": "test_arb"}
+
+        with patch("_shared.engines.campaign._HAS_MEMORY", False):
+            runner._enrich_evidence_with_memory(evidence, config)
+
+        assert "memory_lessons" not in evidence
+        assert "memory_history" not in evidence
+
+    def test_enrich_skipped_when_no_policy(self):
+        """policy 不可用 → 跳过"""
+        from unittest.mock import patch
+
+        runner = self._make_runner()
+        evidence = {"strategy_id": "test_arb"}
+        config = {"strategy_id": "test_arb"}
+
+        with patch.object(runner, "_get_policy", return_value=None), \
+             patch("_shared.engines.campaign._HAS_MEMORY", True):
+            runner._enrich_evidence_with_memory(evidence, config)
+
+        assert "memory_lessons" not in evidence
+
+    # ── 容错 ──
+
+    def test_enrich_graceful_on_retrieve_error(self):
+        """retrieve_lessons 抛异常 → 不崩溃、evidence 不被污染"""
+        from unittest.mock import patch
+
+        runner = self._make_runner()
+        evidence = {"strategy_id": "test_arb"}
+        config = {"strategy_id": "test_arb"}
+
+        with patch.object(runner, "_get_policy", return_value=_MockPolicy()), \
+             patch.object(runner, "_get_rag_pipeline", return_value=None), \
+             patch("_shared.engines.campaign.retrieve_lessons", side_effect=RuntimeError("boom")), \
+             patch("_shared.engines.campaign._HAS_MEMORY", True):
+            runner._enrich_evidence_with_memory(evidence, config)
+            # 不崩溃即通过
+
+        assert "memory_lessons" not in evidence
+
+    def test_enrich_graceful_on_rag_error(self):
+        """RAG retrieve 抛异常 → 不崩溃"""
+        from unittest.mock import patch, MagicMock
+
+        runner = self._make_runner()
+        evidence = {"strategy_id": "test_arb", "retreat_level": "B"}
+        config = {"strategy_id": "test_arb"}
+
+        mock_rag = MagicMock()
+        mock_rag.retrieve.side_effect = RuntimeError("rag boom")
+
+        with patch.object(runner, "_get_policy", return_value=_MockPolicy()), \
+             patch.object(runner, "_get_rag_pipeline", return_value=mock_rag), \
+             patch("_shared.engines.campaign.retrieve_lessons", return_value=[]), \
+             patch("_shared.engines.campaign._HAS_MEMORY", True):
+            runner._enrich_evidence_with_memory(evidence, config)
+
+        assert "memory_history" not in evidence
+
+    # ── MP5: distill_lessons ──
+
+    def test_distill_called_on_archive(self):
+        """MP5: _distill_lessons 对每个 pair 调用 distill_asset_lessons"""
+        from unittest.mock import patch, MagicMock
+        import tempfile
+
+        runner = self._make_runner()
+        # Mock orch with workspace
+        mock_orch = MagicMock()
+        mock_orch.workspace = Path(tempfile.mkdtemp())
+        mock_orch._ctx = MagicMock()
+        mock_orch._ctx.rag = None
+        runner.orch = mock_orch
+
+        with patch.object(runner, "_get_policy", return_value=_MockPolicy()), \
+             patch("_shared.engines.campaign.distill_asset_lessons", return_value=[{"lesson_id": "L1"}]) as mock_dal, \
+             patch("_shared.engines.campaign._HAS_MEMORY", True):
+            runner._distill_lessons(["WBNB_USDT", "CAKE_USDT"], mock_orch.workspace)
+
+        assert mock_dal.call_count == 2
+        call_args = [c.kwargs["asset_id"] for c in mock_dal.call_args_list]
+        assert "WBNB_USDT" in call_args
+        assert "CAKE_USDT" in call_args
+
+    def test_distill_skipped_when_disabled(self):
+        """memory_distill_enabled=false → distill_asset_lessons 不被调用"""
+        from unittest.mock import patch
+
+        runner = self._make_runner()
+
+        with patch.object(runner, "_get_policy", return_value=_MockPolicy({"memory_distill_enabled": False})), \
+             patch("_shared.engines.campaign.distill_asset_lessons") as mock_dal, \
+             patch("_shared.engines.campaign._HAS_MEMORY", True):
+            runner._distill_lessons(["WBNB_USDT"], Path("/tmp/fake"))
+
+        mock_dal.assert_not_called()
+
+    def test_distill_skipped_when_no_memory_module(self):
+        """_HAS_MEMORY=False → distill 全跳过"""
+        from unittest.mock import patch
+
+        runner = self._make_runner()
+
+        with patch("_shared.engines.campaign._HAS_MEMORY", False), \
+             patch("_shared.engines.campaign.distill_asset_lessons") as mock_dal:
+            runner._distill_lessons(["WBNB_USDT"], Path("/tmp/fake"))
+
+        mock_dal.assert_not_called()
+
+    def test_distill_graceful_per_pair_error(self):
+        """单个 pair 蒸馏失败不影响其余 pair"""
+        from unittest.mock import patch, MagicMock, call
+        import tempfile
+
+        runner = self._make_runner()
+        mock_orch = MagicMock()
+        mock_orch.workspace = Path(tempfile.mkdtemp())
+        mock_orch._ctx = MagicMock()
+        mock_orch._ctx.rag = None
+        runner.orch = mock_orch
+
+        # 第 1 个 pair 失败，第 2 个成功
+        def side_effect_fn(**kwargs):
+            if kwargs.get("asset_id") == "PAIR_A":
+                raise RuntimeError("distill fail")
+            return [{"lesson_id": "L2"}]
+
+        with patch.object(runner, "_get_policy", return_value=_MockPolicy()), \
+             patch("_shared.engines.campaign.distill_asset_lessons", side_effect=side_effect_fn) as mock_dal, \
+             patch("_shared.engines.campaign._HAS_MEMORY", True):
+            runner._distill_lessons(["PAIR_A", "PAIR_B"], mock_orch.workspace)
+
+        assert mock_dal.call_count == 2  # 两个都被尝试
+
+    # ── _get_rag_pipeline ──
+
+    def test_get_rag_from_orchestrator_ctx(self):
+        """_get_rag_pipeline 从 orch._ctx.rag 获取"""
+        from unittest.mock import patch, MagicMock
+
+        runner = self._make_runner()
+        mock_rag = MagicMock()
+        mock_orch = MagicMock()
+        mock_orch._ctx = MagicMock()
+        mock_orch._ctx.rag = mock_rag
+        runner.orch = mock_orch
+
+        with patch("_shared.engines.campaign._HAS_MEMORY", True):
+            result = runner._get_rag_pipeline()
+
+        assert result is mock_rag
+
+    def test_get_rag_returns_none_when_no_ctx(self):
+        """orch 无 _ctx → 返回 None"""
+        from unittest.mock import patch, MagicMock
+
+        runner = self._make_runner()
+        mock_orch = MagicMock(spec=[])  # no attributes
+        runner.orch = mock_orch
+
+        with patch("_shared.engines.campaign._HAS_MEMORY", True):
+            result = runner._get_rag_pipeline()
+
+        assert result is None

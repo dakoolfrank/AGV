@@ -45,6 +45,13 @@ from nexrur.engines.orchestrator import (
 )
 from nexrur.engines.protocols import PipelineProfile
 
+# Memory (MP7/MP8) — 可选导入，缺失时优雅降级
+try:
+    from nexrur.memory.pipeline import RAGPipeline, retrieve_lessons, distill_asset_lessons
+    _HAS_MEMORY = True
+except ImportError:
+    _HAS_MEMORY = False
+
 from .diagnosis import (
     DiagnosisEngine,
     HaltDecision,
@@ -394,6 +401,9 @@ class CampaignRunner:
             pass_count, len(summary.get("terminal_exhausted", [])), archived_count,
         )
 
+        # ── MP5: 经验蒸馏 — Campaign 终止时提炼可复用模式 ──
+        self._distill_lessons(all_pairs, asset_root)
+
     @staticmethod
     def _discover_pairs_on_disk(asset_root: Path) -> list[str]:
         """从 collect/pending/ 扫描存活 pair 目录名"""
@@ -405,18 +415,66 @@ class CampaignRunner:
             if d.is_dir() and d.name != "__pycache__"
         )
 
+    def _distill_lessons(
+        self, all_pairs: list[str], asset_root: Path,
+    ) -> None:
+        """MP5: Campaign 终止时对每个 pair 提炼可复用经验
+
+        对齐 WQ-YI campaign.py ``distill_asset_lessons()`` 写入路径。
+        """
+        if not _HAS_MEMORY:
+            return
+
+        policy = self._get_policy()
+        if policy and not policy.get("memory_distill_enabled", step="defaults"):
+            logger.debug("[MP5] memory_distill_enabled=false, 跳过蒸馏")
+            return
+
+        workspace = None
+        if self.orch and hasattr(self.orch, "workspace"):
+            workspace = self.orch.workspace
+        if workspace is None:
+            workspace = asset_root
+        if workspace is None:
+            return
+
+        rag = self._get_rag_pipeline()
+        distilled = 0
+        for pair_id in all_pairs:
+            try:
+                lessons = distill_asset_lessons(
+                    asset_id=pair_id,
+                    workspace=workspace,
+                    rag=rag,
+                    policy=policy,
+                )
+                distilled += len(lessons)
+            except Exception:
+                logger.debug("[MP5] distill 失败: %s", pair_id, exc_info=True)
+
+        if distilled:
+            logger.info("[MP5] 蒸馏 %d 条 lessons (pairs=%d)", distilled, len(all_pairs))
+
     def _handle_failure(
         self,
         metrics: CycleMetrics,
         config: dict[str, Any],
         trace: TraceResult,
     ) -> None:
-        """失败后诊断 + 回退 (就地修改 metrics.retreat_level)"""
+        """失败后诊断 + 回退 (就地修改 metrics.retreat_level)
+
+        MP7/MP8: 诊断前注入记忆 — retrieve_lessons + tier-boosted RAG history
+        """
         if self._diagnosis is None:
             return
 
+        evidence = self._build_evidence(metrics, config)
+
+        # ── MP7+MP8: 注入历史记忆到诊断证据 ──
+        self._enrich_evidence_with_memory(evidence, config)
+
         diag = self._diagnosis.diagnose(
-            evidence=self._build_evidence(metrics, config),
+            evidence=evidence,
             strategy_id=config.get("strategy_id", "unknown"),
         )
         halt_reason = validate_diagnosis(diag)
@@ -551,3 +609,99 @@ class CampaignRunner:
             "pool_tvl_usd": config.get("pool_tvl_usd", float("inf")),
             "volume_24h_usd": config.get("volume_24h_usd", 0),
         }
+
+    # ────────────────────────────────────────────────────────
+    # MP7+MP8: 记忆增强 (WQ-YI aligned)
+    # ────────────────────────────────────────────────────────
+
+    def _enrich_evidence_with_memory(
+        self,
+        evidence: dict[str, Any],
+        config: dict[str, Any],
+    ) -> None:
+        """注入 MP7 lessons + MP8 tier-boosted history 到证据包
+
+        对齐 WQ-YI campaign.py ``_diagnose_with_evidence()`` 的记忆注入模式。
+        依赖 policy.yml ``memory_read_enabled`` 总开关，缺失→跳过。
+        """
+        if not _HAS_MEMORY:
+            return
+
+        policy = self._get_policy()
+        if not policy:
+            return
+        if not policy.get("memory_read_enabled", step="defaults"):
+            return
+
+        strategy_id = config.get("strategy_id", "unknown")
+        rag = self._get_rag_pipeline()
+
+        # ── MP7: retrieve_lessons — 历史经验提取 ──
+        try:
+            lesson_top_k = policy.get("memory_lesson_top_k", step="defaults") or 5
+            lessons = retrieve_lessons(
+                query=strategy_id,
+                rag=rag,
+                top_k=lesson_top_k,
+                category="defi_diagnosis",
+            )
+            if lessons:
+                evidence["memory_lessons"] = lessons
+                logger.info("[MP7] 注入 %d 条 lessons (strategy=%s)", len(lessons), strategy_id)
+            else:
+                logger.debug("[MP7] 无匹配 lessons (strategy=%s)", strategy_id)
+        except Exception:
+            logger.debug("[MP7] retrieve_lessons 异常，跳过", exc_info=True)
+
+        # ── MP8: tier-boosted RAG history — 历史诊断检索 ──
+        if rag is None:
+            return
+        try:
+            tier_boost_map = policy.get("memory_tier_boost", step="defaults") or {}
+            retreat_level = evidence.get("retreat_level", "B")
+            tier_boost = tier_boost_map.get(retreat_level, 1.0)
+            history_top_k = policy.get("memory_history_top_k", step="defaults") or 3
+            max_chars = policy.get("memory_history_max_chars", step="defaults") or 1500
+
+            history = rag.retrieve(
+                f"diagnosis {strategy_id} retreat failure",
+                top_k=history_top_k,
+                tier_boost=tier_boost,
+            )
+            if history:
+                text = "\n".join(
+                    getattr(h, "text", str(h))[:max_chars // max(len(history), 1)]
+                    for h in history
+                )
+                evidence["memory_history"] = text
+                logger.info("[MP8] 注入 %d 条 history (tier_boost=%.1f)", len(history), tier_boost)
+            else:
+                logger.debug("[MP8] 无匹配 history (strategy=%s)", strategy_id)
+        except Exception:
+            logger.debug("[MP8] RAG retrieve 异常，跳过", exc_info=True)
+
+    def _get_policy(self):
+        """获取 policy — 从 profile 或 orchestrator"""
+        try:
+            if self.orch and hasattr(self.orch, "_policy"):
+                return self.orch._policy
+            if hasattr(self._profile, "policy"):
+                return self._profile.policy
+        except Exception:
+            pass
+        return None
+
+    def _get_rag_pipeline(self):
+        """获取 RAGPipeline 实例 — 优先从 orchestrator ctx 获取"""
+        if not _HAS_MEMORY:
+            return None
+        try:
+            # 优先: 从 orchestrator 的 RunContext 获取已初始化的 RAG
+            if self.orch and hasattr(self.orch, "_ctx"):
+                ctx = self.orch._ctx
+                if ctx and hasattr(ctx, "rag") and ctx.rag is not None:
+                    return ctx.rag
+            return None
+        except Exception:
+            logger.debug("[Memory] RAGPipeline 获取失败", exc_info=True)
+            return None
